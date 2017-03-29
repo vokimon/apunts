@@ -1,0 +1,882 @@
+# Deutsch
+
+
+## Adjetivos:
+
+schwer: hard/heavy
+normal: normal
+leicht: light
+einfach: easy
+klein: small
+groß: big
+lang: long
+kurz: curt
+weit: far, long
+hoch: high
+tief: deep
+rund: round
+stark: strong
+schwach: weak
+sauber: clean
+schmutzig: sucio
+richtig: correcto
+witzig: funny
+lustig: funny
+traurig: sad
+müde: tired
+jung: young
+neu: new
+alt: old
+kalt: cold
+warm: warm
+heiße: hot
+schnell: fast
+langsam: slow
+schön: beautiful
+gut: good
+süß: sweet (food), cute (beings)
+frisch: fresh
+lecker: delicious
+sauer: acidic
+salzig: salty
+scharf: spicy/strong/hot
+perfekt: perfect
+schlecht: sick, bad
+frei: gratis
+toll: great
+laut: loud
+ruhig: sereno
+leise: suave
+klar: clear
+fertig: done, ready
+wichtig: important
+teuer: expensive
+billig: cheap
+gratis: free (money)
+müde: tired
+reicht: enough 
+schwanger: pregnant
+scharf: spicy/strong/hot
+reich: rich
+ähnlich: similar
+
+grün: green
+schwarz: black
+rot: red
+weiß: white
+blau: blue
+gelb: yellow
+grau: grey
+braun: brown
+rosa: pink
+bunt: multicolored
+
+
+
+irgendwas something
+irgendwo: somewhere
+irgendwann: sometime
+irgendwer: someone
+irgendwie: somehow
+
+
+### Inflexiones:
+
+- Ninguna: en el predicado
+- Debil:
+	
+	- definites: das, den...
+	- demostratives 'dies-'
+	- jeglich- jed- jen-
+	- manch- solch- welch-
+	- alle derselb- derjenig-
+- Mixed:
+	- Singular Nom and Acu, like definite, rest with -en
+	- indefinte: ein- kein-
+	- posesives: mein- dein-...
+- Strong:
+	- declined like definite articles but with -en in masculine and neutral genitives.
+	- no article
+	- quantity specified
+	- etwas, mehr
+	- wenig- viel- mehrer- einig-
+	- phrases  ein paar ein bisschenn
+
+#### Strong
+
+
+g | Nom     | Acu     | Dat     | Gen
+--+---------+---------+---------+--------
+m | alt_er_ | alt_en_ | alt_em_ | *alt_en_*
+n | alt_es_ | alt_es_ | alt_em_ | *alt_en_*
+f | alt_e_  | alt_e_  | alt_er_ | alt_er_
+p | alt_e_  | alt_e_  | alt_en_ | alt_er_
+
+- most like like definite determinants
+- exceptions: gen m and n, which have _-en_
+
+#### Mixed
+
+
+g | Nom     | Acu     | Dat       | Gen
+--+---------+---------+-----------+--------
+m | alt_er_ | alt_en_ | *alt_en_* | *alt_en_*
+n | alt_es_ | alt_es_ | *alt_en_* | *alt_en_*
+f | alt_e_  | alt_e_  | *alt_en_* | *alt_en_*
+p |*alt_en_*|*alt_en_*| *alt_en_* | *alt_en_*
+
+- plural or dative or Genitive _en_
+- acusative and nominative singulars like determined articles
+
+#### Weak
+
+g | Nom     | Acu     | Dat     | Gen
+--+---------+---------+---------+--------
+m | alt_e_  | alt_en_ | alt_en_ | alt_en_
+n | alt_e_  | alt_e_  | alt_en_ | alt_en_
+f | alt_e_  | alt_e_  | alt_en_ | alt_en_
+p | alt_en_ | alt_en_ | alt_en_ | alt_en_
+
+- plural or genitive _-en_
+- acusative and masculine _-en_
+- rest _-e_
+
+
+
+## Verbos regulares
+
+renn*e*
+- ich (1a)
+
+renn*st*
+- du (2a informal)
+
+renn*t*
+- er/sie/es (3a)       (er like in 'ear')
+- ihr (2a p informal)  (ihr like in 'air')
+
+renn*en*
+- wir (2a p) 
+- sie (3a p)
+- Sie (2a p/s formal)
+
+
+trink: drink
+geh: go
+lauf: walk, run (läuft)
+renn: correr
+reich: bastar
+denk: think
+lern: learn
+beginn: start
+spiel: play
+lib: love
+leb: live
+fall: fall (fällt)  
+komm: come
+heiß: llamarse
+schmeck: saber (gusto)
+brauch: need
+trag: wear, carry (trägt)
+spiel: play
+mach: make  
+schlaf: sleep (schläft)
+hör: hear
+schreib: write
+kenn: know
+denk: thank
+schwimm: swimm
+bring: bring
+farh: drive
+bezahl: pagar/invitar
+wasch: wash (wäscht)
+pass: fit
+bau: build
+offne: open (offne, offnet..)
+frag: ask
+antworte: answer (e asimilada con -en -e)
+zähl: contar
+koch: cook
+kauf: buy
+enkauf: shop
+verkauf: sell
+kost: cost
+überweis: transfer
+gewinn: win
+besitz: own
+zeig: show
+sag: say
+folg: follow
+helf: help
+drucken: shake
+versteh: understand, listen
+sprech: speak
+
+
+
+
+### Iregulares
+
+ser: bin bist ist sind seid(ihr)
+comer: esse, isst, isst essen, esst(ihr)
+comer: fresse, frisst, frisst, fressen, fresst(irh)
+gustar: mag magst mag mögen mögt (ihr)
+(para verbos usar el adverbio 'gerne/gern'-'con placer')
+tener: habe hast hat haben, habt(ihr)
+leer: lese, liest, liest, lesen
+ver: sehe siehst sieht sehen
+querer: will willst will wollen
+dar: gebe, gebst, _gibt_, geben  (es gibt - hay)
+
+
+
+
+## Personal pronoums
+
+Nom | Acu  | Dat   | Gen     |
+----+------+-------+---------+
+ich | mich | mir   | mein/er | sing 1st
+du  | dich | dir   | dein/er | sing 2st
+er  | ihn  | ihm   | sein/er | sing 3st masculine
+sie | sie  | sie   | ihrer   | sing 3st femenine
+es  | es   | ihm   | sein/er | sing 3st neuter
+wir | uns  | uns   | unser   | pl 1st
+ihr | euch | euch  | euer    | pl 2nd
+sie | sie  | ihnen | ihrer   | pl 3st
+Sie | Sie  | ihnen | ihrer   | formal 2nd  
+
+
+## Definite determiners
+
+g | Nom | Acu | Dat | Gen |
+--+-----+-----+-----+-----+
+m | der | den | dem | des |
+n | das | das | dem | des |
+f | die | die | der | der |
+p | die | die | den | der |
+
+
+## Determiner
+
+g | Nom  | Acu   | Dat   | Gen
+--+------+-------+-------+-------
+m | ein  | einen | einem | eines
+n | ein  | ein   | ein   | eines
+f | eine | eine  | einer | einer
+p | eine | eine  | einen | einer  (just as ending)
+
+Negative (not a) same as above with a leading 'k'
+
+- kein, keine, keinen, keinem
+
+## Possessive determiner:
+
+Use the same endings as in ein with mein, dein, sein, ihr, unser, euer, Ihr
+
+my:   mein    - meine
+your: dein    - deine
+his:  sein    - seine
+our:  unser   - unsere
+yall: eure    - eure
+her:  ihr     - ihre    (or formal your)
+
+
+# Demostrative determiner
+
+g | Nom    | Acu    | Dat    | Gen
+--+--------+--------+--------+-------
+m | dieser | diesen | diesem | dieses
+n | dieses | dieses | diesem | dieses
+f | diese  | diese  | dieser | dieser
+p | diese  | diese  | diesen | dieser
+
+shorter 'dies' is often used instead 'dieses'
+
+
+### Pronoms
+
+alle: everyone
+alles: everything
+niemand: nobody
+jemand: anybody
+nichts: nothing
+keiner: nobody
+
+
+ein paar: a couple of
+ein Paar: a pair (exactly) of
+etwas: some (not much)
+manche: some (not many)
+viel: much, a lot of
+viele: many lots of (many)
+beiden: both
+jedes: each, everyone
+
+### Numerals
+
+They are adjectives, so inflected
+
+n      | 10+n       | 10*n
+-------+------------+-----------
+eins   | *elf*      | zehn
+zwei   | *zwölf*    | *zwanzig*
+drei   | dreizehn   | *dreißig*
+vier   | vierzehn   | vierzig
+fünh   | fünfzehn   | fünfzig
+sichs  | *sechzen*  | *sechzig*
+sieben | *siebzehn* | *siebzig*
+acht   | achtzehn   | achtzig
+neun   | neunzehn   | neunzig
+
+hundert:
+tausend:
+Millionent:
+Milliarden:
+
+Ordinals: -te (1-19) -ste (20-*)
+Exceptions: erste(1st), dritte(3rd) siebte (7th), achte(8th)
+
+
+## Preposiciones
+
+### acusative
+
+geghen: against
+durch: by means of, by, through
+ohne: without
+für: for, on behalf of, by the standards of
+um: around, about (es geht), at (time)
+bis: hasta, until by (time), to (place)
+
+
+### dative
+
+nach: towards
+zu: to
+aus: out
+außer: besides, apart from, sin contar con
+mit: with
+von: from (place), belonging to, by doer
+seit: since, for
+gegenüber: opposite, headed to, in front of
+bei: by, near
+
+### acusative and dative
+
+accusative: No movement on movement within same
+dative: movement from on place to another
+
+an:
+auf:
+entlang: along (acu, an + dative)
+hinter:
+in:
+neben:
+über:
+unter:
+vor:
+zwischen:
+
+
+### contractions
+
+
+
+
+## Adverbios
+
+niemals: never
+auch: tambien
+wirklich: really
+so: tan
+nur: only
+immer: always
+noch: still
+zu: too (demasiado)
+genug: enough
+immer notch: still
+sussammen: together
+vielleicht: maybe
+dran: on turn
+alleine: alone
+vieder: again
+sehr: very
+vielleicht: maybe
+
+
+## Position of Nicht
+
+- Precediendo el adjetivo o adverbio que niega
+- Sigue al verbo que niega si es conjugado "ich essen nich" No estoy comiendo.
+- Cuando niega la ocurrencia del pasado, delante del participio "ich habe nicht gegessen" No he comido.
+- Al final de la frase en interrogativas
+- Al final de la frase si el CD es 'mir'
+
+
+## Conjunciones
+
+### coordinating
+
+und: and
+oder: or
+aber: but
+denn: dado que
+sonderm: but rather (not A, x B)
+
+### subordinating
+
+weil: because
+wenn: when
+dass: that (que)
+obwohl [obful]: even though (aunque) - A, x b
+doch: though (aunque) 
+solange: as long as - x A, b
+da: since - x a, B - A, x b
+sobalt: as soon as - A, x b
+
+### correlative
+
+entweder ... oder: either ... or
+
+
+### Question words
+
+was: what? (declinable como 'das')
+    was (nom-acu)
+    wessen (gen)
+    x (dat) use wo/wor with prepositions
+        wohin: what... to
+        wofür: what... for
+        woüber: what... about
+        woran: what... of
+        womit: what... with
+wer: who? (declinable como 'der')
+    wer (nom): who called
+    wen (acu): who/whom you call
+    wem (dat): who/whom you say this to
+    wessen (gen): whose
+wieso: why?
+warum: why?
+wann: when?
+wo: where?
+woher: where...from?
+wohin: where... to?
+welches: which? (acusative?)
+welchen: which? 
+wie: how
+    wie lang: how long?
+    wie viel: how much?
+    wie viele: how many?
+    wie oft: how often?
+    wie weit: how far?
+
+
+
+## Names
+
+### Plural forms:
+
+Se añada sufijo o no puede cambiar de umlaut
+
+-e si es de una silaba
+-er (m,n)
+-en (f)
+-nen si acaba con el sufijo femenino -in: der Kotch-die Kotchin, die Kötche-die Kotchinnen
+(x) si acaba en -chen, -lein, -el, -er
+-s, -es si origen extrangero
+
+### Die Menschen
+
+die Menschen: people/mankind (p)
+der Mensch: human, person
+die Leute: person (p)
+die Frau: women (f)
+der Mann: man (m)
+der Junge (m)
+das Kind: kid (n)
+das Madchen: girl (n)
+der Herr: sir
+der Bürger: citizen
+die Gruppe: group
+die Erwachsene: adult (erwach=awaken)
+das Publikum: audience
+die Dame: lady
+Freund: friend
+Vorname: first name
+das Baby: bebe
+der Gast: guest
+das Geschlecht: gender
+Vegetarier
+der Gegner: oponent, rival
+der Feind: enemy
+der Besucher: visitor (suchen search)
+Mitglied: member
+Fan: fan
+der Anfänger: beginner
+der Nachbar: neighbor
+die Nachbarin: neighbor (f)
+
+## Die Familie
+
+Die Familie: familia
+
+die Eltern: parents (p)
+die Mutter: mother
+der Vater: father
+die Mama: mom
+der Papa: dad
+die Großeltern: grandparents (p)
+die Großmutter: grandmother
+der Großvater: grandfather
+die Oma: grandma
+der Opa: grandpa
+die Urgroßeltern: great-grandparents
+die Urgroßmutter: great grandmother
+der Urgroßvater: great grandfather
+
+die Tochter: daughter
+der Sohn: son
+der Enkel: grandson, grandchild
+die Enkelin: granddaughter
+der Urenkel: great-grandson, great-grandchild
+der Urenkeling: great-granddaughter
+
+die Schwester: sister
+der Bruder: brother
+der Geschwister: sibling
+
+der Halbbruder: hermanastro
+die Halbschwester: hermanastra
+der Zwilling: twin
+
+die Tante: aunt
+der Onkel: oncle
+
+die Nichte: niece (sobrina
+der Neffe: nefew (sobrino)
+die Verwandte: pariente
+der Cousin: cousin (m)
+die Cousine: cousin (f)
+
+die Hochzeit: wedding ("momento alto")
+
+die Beziehung: relation
+der Partner: associate
+die Partnerschaft: partnership
+
+
+### Die Natur
+
+der Himmel: sky
+der Mond: moon
+der Stern: star
+der Baum: tree
+der Wind: wind
+der Berg: mountain
+der Fluss: river
+
+die Sonne: sun (f)
+die Natur: nature 
+die Blume: flower
+die Erde: earth
+die Luft: air
+
+das Feuer: fire
+
+
+### Die Tiere
+
+das Tier: animal (n)
+das Haustier: pet
+
+die Maus: mouse
+die Katze: cat
+die Kuh: cow
+die Ente: duck
+
+der Hund: dog
+der Bär: bear
+der Pferd: horse
+der Schwein: pig
+
+Vogel: bird
+
+der Insekt: insect
+der Käfer: bettle
+die Biene: bee
+die Spinne: spider
+die Fliege: mosca
+
+## Objects
+
+die Zeitung: newspaper (f)
+das Buch: book (n)
+das Zeug: stuff
+das Feuerzeug: lighter
+das Spielzeug: toy
+das Fahrzeug: vehicle
+das Flugzeug: aeronave
+das Werkzeug: tool
+
+
+
+
+## Food
+
+das Essen: food
+das Frühstück: breakfast
+das Mittagessen: lunch (mit tag essen)
+der Abendessen: dinner (abend essen)
+die Speise: meal, course
+die Speisekarte: menu (speise karte)
+die Vorspeise: starters (vor speise)
+das Hauptgericht: main course (haupt-head gericht-dish)
+der Nachtisch: desert
+das Getränk: bebida
+das Rezept: recipe
+
+
+der Honig: honey
+die Milch: milk
+die Tomate: tomato
+der Apfel, die Äpfel
+das Brot: bread
+die Marmelade: jam
+der Käse: cheese
+der Gemüse: vegetable
+die Kartoffel: potato
+die Schokolade: chocolate
+der Zucker: sugar
+der Fleish: meat
+der Fisch: fish
+das Müsli: cereal
+die Butter: butter
+die Nuss: nut (pl Nüsse)
+das Ei: egg
+die Erdbeere: fresas
+das Salz: salt
+die Nudel: fideo (Nudeln fideos)
+das Öl: oil
+der Säft: juice
+der Obst: fruit 
+der Hunger: hambre
+die Suppe: soup
+der Tee: tea
+der Wein: wine
+der Durst: thirst
+der Bier: beer
+der Kaffee: coffee
+der Reis: rice
+das Hähnchen: pollo
+der Pilz: mushroom
+die Zitrone: lemon
+die Zwiebel: onion
+die Bohne: bean
+der Senf: mustard
+der Knoblauch: garlic
+der Kuchen: cake
+
+das Messer: knife
+der Löffel: spoon
+die Gabel: fork
+
+
+### Places
+
+das Restaurant (n)
+die Bibliotek (f)
+der Banhof: train station (m)
+die Schule: school
+das Haus: house
+die Bank: bank
+die Brücke: bridge
+der Markt: market
+der Garten: garden
+das Gebäude: building
+die Ecke: corner
+das Schloss: castle
+die Straße: street
+das Hotel: hotel
+die Stadt: city
+der Park: park
+das Dorf: village
+
+### Home
+
+das Zimmer: room
+das Wohnzimmer: sala
+das Schlafzimmer: bedroom
+die Küche: kitchen
+
+das Fenster: window
+die Tür: door
+das Dach: roof
+der Schlüssel: key
+die Wand: wall
+der Deck: cubierta (m)
+die Decke: techo (f)
+der Zaun: fence
+der Balcon: balcony
+die Wohnung: apartment (f?)
+der Keller: basement
+
+das Möbel: furniture, a
+der Tisch: table
+der Stuhl: chair
+das Sofa: couch
+der Schrank: cupboard
+die Lampe: lamp
+das Bett: bed
+das Licht: light
+der Teppich: carpet, rug
+die Steckdose: plug socket (steck-insert + dose-box)
+das Ladegerät: cargador (lade-load + gerate-device)
+
+### der Körper
+
+der Körper: body
+
+der Kopf: head
+das Auge: eye
+das Ohr: ear
+der Mund: mouth
+der Zahn: tooth
+die Nase: nose
+die Haare: hair
+der Hals: neck
+
+die Hand: hand
+der Arm: arm
+der Finger: finger
+
+der Rücken: back
+die Schulter: hombro
+das Herz: heart
+die Brust: chest
+der Magen: stomach
+die Haut: skin
+der Fuß: foot
+der Bein: leg
+das Blut: blood
+das Gesicht: face
+
+
+
+### Cloth
+
+der Rock: skirt (m)
+die Kleidung: cloth
+das Kleid: dress
+die Jacke: coat 
+die Tasche: bag
+der Ring: ring
+die Kosmetik: maquillaje
+der Schuh: shoe
+der Mantel: coat
+der Knopf: button
+der Schmuck: joya
+der Fleck: topo
+der Hut: hat
+das Hemd: camisa
+die Hose: pantalon
+
+### Language
+
+die Frage: question
+die Antwort: answer
+
+### Numbers, money, measures
+
+die Nummer: number
+die Zahl: number (numeral)
+der/das Liter: liter
+das Prozent: percent (plural just for several figures)
+Euro (plural for Euro coins, singular for quantity)
+Cent (plural pro Cent coins, singular for quantity)
+der Preis: price
+der Dollar: Dollar
+Geldautomat: ATM
+Schweizer Frank: swiss franks
+Dutzen: dozen
+die Summe: sum
+die Hälfte: half
+
+
+
+### Shopping
+
+der Lade: shop/store (smaller/closer)
+der Geschäft: store/shop (bigger/professional)
+der Marktplatz: marketplace
+die Markt: markt
+die Supermarkt: supermarket
+das Einkaufszentrum: mall
+die Bäckerei: backery
+die Apotheke: pharmacy
+
+der Kunde: client (m)
+die Kundin: client (f)
+der Einkaufswägen: shopping cart
+	(einkauf-es-wagen)
+die Tüte: shoping bag
+der Gutschein: coupon, voucher
+das Sonderangebot: bargain/ganga
+	(sonder/exclusive, angebot/offer)
+die Kasse: checkout (caja)
+
+
+### Farben/Colors
+
+
+die Farbe: color, dye
+
+
+### Travel
+
+der Zug: train (specially vagons)
+die Bahn: train (specially railway)
+der Urlaub: vacation
+das Fahrrad: bicycle
+das Motorrad: motorcycle
+das Auto: car
+der Bus: bus
+das Land: country (Länder)
+der Pass: passport
+das Visum: visa
+die Reise: trip
+die Fahrt: ride
+die Ferien: holidays (p)
+der Flug: flight
+das Taxi: taxi
+der Weg: way
+der Stadtplan: citymap
+der Reiseführer: tour guide
+die Sehenswürdigkeiten: sights
+	(sehen-s-wurdig-keiten see - worth - ness )
+Tourismus: tourism
+Schweizer: swiss
+der Verkehr: traffic
+Mietwagen: rental car (miet)
+die Strecke: distance
+
+
+die Schweiz: Schwitzerland (the only country being femenine and requiring article)
+
+Spanien: Spain
+Italien: Italy
+Frankreich: France
+Afrika: Africa
+Österreich: Austria
+Bayern: Bavaria/Baviera
+Wien: Vienna/Viena
+Deutschland: Germany
+
+
+
+
+
+
+
+
+
+
