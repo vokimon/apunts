@@ -211,7 +211,7 @@ helf: help
 drucken: shake
 versteh: understand, listen
 sprech: speak
-
+flieg: fly
 
 
 
@@ -840,6 +840,9 @@ das Fahrrad: bicycle
 das Motorrad: motorcycle
 das Auto: car
 der Bus: bus
+das Boot: boat
+
+
 das Land: country (Länder)
 der Pass: passport
 das Visum: visa
@@ -851,25 +854,38 @@ das Taxi: taxi
 der Weg: way
 der Stadtplan: citymap
 der Reiseführer: tour guide
-die Sehenswürdigkeiten: sights
-	(sehen-s-wurdig-keiten see - worth - ness )
-Tourismus: tourism
-Schweizer: swiss
+die Sehenswürdigkeit: sight
+	(sehen/see-s-wurdig/worth-keit/ness)
+der Tourismus: tourism
+der Schweizer: swiss
 der Verkehr: traffic
-Mietwagen: rental car (miet)
+der Mietwagen: rental car (miet/rent-wagen/car)
 die Strecke: distance
+das Abenteuer: adventure
+die Bushaltestelle: bus stop (bus/bus-halte/stop-stelle/position)
+der Besuch: visit (suchen search)
+die Verspätung: delay (ver/become-spat/be late-ung/ing)
 
 
-die Schweiz: Schwitzerland (the only country being femenine and requiring article)
-
+die Schweiz: Schwitzerland (special femenine and determiner required)
 Spanien: Spain
 Italien: Italy
+Großbritannien: Great Britain
 Frankreich: France
 Afrika: Africa
 Österreich: Austria
 Bayern: Bavaria/Baviera
 Wien: Vienna/Viena
 Deutschland: Germany
+Schweden: Sweden
+
+
+## afixes
+
+-keit: -ness (adjective -> noun quality of)
+-ung: -ing (verb -> noun the fact of doing)
+ver-:
+be-:
 
 
 
