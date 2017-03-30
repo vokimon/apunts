@@ -1,7 +1,7 @@
 # Deutsch
 
 
-## Adjetivos:
+## Adjectives:
 
 schwer: hard/heavy
 normal: normal
@@ -18,7 +18,7 @@ rund: round
 stark: strong
 schwach: weak
 sauber: clean
-schmutzig: sucio
+schmutzig: dirty
 richtig: correcto
 witzig: funny
 lustig: funny
@@ -44,6 +44,7 @@ perfekt: perfect
 schlecht: sick, bad
 frei: gratis
 toll: great
+super: great
 laut: loud
 ruhig: sereno
 leise: suave
@@ -58,7 +59,10 @@ reicht: enough
 schwanger: pregnant
 scharf: spicy/strong/hot
 reich: rich
-ähnlich: similar
+ähnlich: similar, alike
+leer: empty
+voll: full
+
 
 grün: green
 schwarz: black
@@ -73,18 +77,10 @@ bunt: multicolored
 
 
 
-irgendwas something
-irgendwo: somewhere
-irgendwann: sometime
-irgendwer: someone
-irgendwie: somehow
-
-
 ### Inflexiones:
 
 - Ninguna: en el predicado
 - Debil:
-	
 	- definites: das, den...
 	- demostratives 'dies-'
 	- jeglich- jed- jen-
@@ -204,6 +200,7 @@ kost: cost
 überweis: transfer
 gewinn: win
 besitz: own
+sitz: sit
 zeig: show
 sag: say
 folg: follow
@@ -212,21 +209,38 @@ drucken: shake
 versteh: understand, listen
 sprech: speak
 flieg: fly
+ruf: call
+bleib: stay
+leg: lay
+dusch: take a shower/ducharse
 
 
 
-### Iregulares
+### Presentes Irregulares
 
-ser: bin bist ist sind seid(ihr)
-comer: esse, isst, isst essen, esst(ihr)
-comer: fresse, frisst, frisst, fressen, fresst(irh)
-gustar: mag magst mag mögen mögt (ihr)
-(para verbos usar el adverbio 'gerne/gern'-'con placer')
-tener: habe hast hat haben, habt(ihr)
-leer: lese, liest, liest, lesen
-ver: sehe siehst sieht sehen
-querer: will willst will wollen
-dar: gebe, gebst, _gibt_, geben  (es gibt - hay)
+spanish: ich du er/sie/es wir/sie/Sie ihr
+
+ser: bin bist ist sind seid
+	imperative: sei
+comer: esse isst isst essen esst
+comer: fresse frisst frisst fressen fresst
+gustar: mag magst mag mögen mögt
+	(para verbos usar el adverbio 'gerne/gern'-'con placer')
+tener: habe hast hat haben, habt
+leer: lese liest liest lesen lest
+ver: sehe siehst sieht sehen seht
+querer: will willst will wollen wollt
+dar: gebe gebst _gibt_ geben gebt (es gibt - hay)
+take: nehme nimmst nimmt nehmen nehmt
+leave: lasse läst läst lassen last
+act: handele handelst handelt handeln
+
+
+### Imperativos
+
+Formal: trinken Sie es (Sie con predicado y sujeto invertidos)
+Singular: trink(e) es (se quita las terminaciones o se añade -e)
+Plural: trinkt es  (se usa la forma del 'ihr')
 
 
 
@@ -337,6 +351,13 @@ Ordinals: -te (1-19) -ste (20-*)
 Exceptions: erste(1st), dritte(3rd) siebte (7th), achte(8th)
 
 
+
+wegen: because of
+während: during/while
+oft: often
+einschließlich: including
+
+
 ## Preposiciones
 
 ### acusative
@@ -366,16 +387,15 @@ bei: by, near
 accusative: No movement on movement within same
 dative: movement from on place to another
 
-an:
-auf:
-entlang: along (acu, an + dative)
-hinter:
-in:
-neben:
-über:
-unter:
-vor:
-zwischen:
+auf: on/upon
+hinter: behind
+an: to/on
+unter: under/beneath/among
+neben: next to
+in: in/into
+über: over
+zwischen: between
+vor: before/in front of
 
 
 ### contractions
@@ -393,15 +413,27 @@ nur: only
 immer: always
 noch: still
 zu: too (demasiado)
-genug: enough
 immer notch: still
 sussammen: together
 vielleicht: maybe
 dran: on turn
 alleine: alone
 vieder: again
-sehr: very
 vielleicht: maybe
+schon: already
+normalerweise: normally usually (Ha invertido sujeto y predicado)
+gewönlich: usually
+
+ganz: entirely
+sehr: very
+ziemlich: pretty, fairly (seamsly)
+eher: rather
+genug: enough
+weniger: less
+mehr: more
+genau: exactly
+
+als: than(after comparative), as
 
 
 ## Position of Nicht
@@ -469,6 +501,13 @@ wie: how
     wie viele: how many?
     wie oft: how often?
     wie weit: how far?
+
+
+irgendwas something
+irgendwo: somewhere
+irgendwann: sometime
+irgendwer: someone
+irgendwie: somehow
 
 
 
@@ -606,6 +645,8 @@ der Käfer: bettle
 die Biene: bee
 die Spinne: spider
 die Fliege: mosca
+die Schneke: snail
+
 
 ## Objects
 
@@ -617,6 +658,37 @@ das Spielzeug: toy
 das Fahrzeug: vehicle
 das Flugzeug: aeronave
 das Werkzeug: tool
+die Batterie: bateria
+die Heizung: heater (heiz/heat-ung/ing)
+die Reiningung: cleaning
+die Tasse: cup
+der Rucksack: backpack (ruck/espalda-sack/bolsa)
+der Umzug: moving (um/hacia-zug/substativated)
+Gerät: device
+Haushalt: household, budget
+Schlaf: sleep/sueño
+Haushaltsgerat: home devices electrodomesticos
+die Schüssel: bowl bol tazón
+das Glas: glass (vaso)
+Zahnbrüste: tooth brush
+Zahnpasta: tooth paste
+der Raum: room space
+die Leiter: lader
+der Spiegel: mirror
+die Toilette: bathroom
+das Tor: goal (sports) different to Tür
+der Teller: plate, saucer
+der Kühlschrank: fridge (kuhl/frio-schrank/armario)
+der Karton: box, cardboard
+die Flasche: bottle
+die Seife: soap
+das Bad: bath
+Rasierer: razor shaver
+der Dusche: shower
+das Shampoo: shampoo
+Duschgel: shower gel/ bodywash
+das Tuch: cloth
+das Handtuch: towel (not needly a *hand* towel)
 
 
 
@@ -712,7 +784,7 @@ das Fenster: window
 die Tür: door
 das Dach: roof
 der Schlüssel: key
-die Wand: wall
+die Wand: wall (pared)
 der Deck: cubierta (m)
 die Decke: techo (f)
 der Zaun: fence
@@ -731,6 +803,7 @@ das Licht: light
 der Teppich: carpet, rug
 die Steckdose: plug socket (steck-insert + dose-box)
 das Ladegerät: cargador (lade-load + gerate-device)
+
 
 ### der Körper
 
@@ -780,10 +853,12 @@ der Hut: hat
 das Hemd: camisa
 die Hose: pantalon
 
+
 ### Language
 
 die Frage: question
 die Antwort: answer
+
 
 ### Numbers, money, measures
 
@@ -811,7 +886,7 @@ der Marktplatz: marketplace
 die Markt: markt
 die Supermarkt: supermarket
 das Einkaufszentrum: mall
-die Bäckerei: backery
+die Bäckerei: bakery
 die Apotheke: pharmacy
 
 der Kunde: client (m)
@@ -873,11 +948,105 @@ Italien: Italy
 Großbritannien: Great Britain
 Frankreich: France
 Afrika: Africa
+Asien: Asia
 Österreich: Austria
 Bayern: Bavaria/Baviera
 Wien: Vienna/Viena
 Deutschland: Germany
 Schweden: Sweden
+China: China
+
+
+
+### Jobs/Berufe
+
+der Beruf: job
+die Arbeit: work
+der Geschäftsführer: manager
+der Mitarbeiter: coworker (work with)
+der Arbeitnehmer: employee (work taker)
+der Arbeitgeber: employer (work giver)
+der Chef: boss (Chefin)
+der Meister: master, foreman
+
+der Bäcker: baker (Bäckeren, Bäckerin, Bäkerinnen)
+der Koch: cook (Köcke, Köchin, Köchinnen)
+der Arzt: doctor (Arzte, Ärztin, Ärztinnen)
+der Lehrer: (school) teacher (Lehrers, Lehrerin, Lehrerinnen)
+der Student: (university) student (Studenten, Studentin, Studentinnen)
+der Professor: (university) teacher (Professoren, Professorin, Professorinnen)
+der Schüler: pupil (Schülers, Schülerin, Schülerinnen)
+der Autor: author
+der Bauer: 
+der Trainer:
+der Bürgermeister: mayor
+der Senior: elder citizen
+der Händler: trader
+der Fahrer: driver
+der Verkäufer: seller
+die Bedienung: waiter
+der Architekt: architect
+Feuerwehr: fire brigade
+
+
+### Materials
+
+die Wolle: wool
+die Baumwolle: cotton (lana vegetal)
+die Mauer: wall (valla)
+
+der Sand: sand
+der Stein: rock
+der Beton: concrete
+der Stahl: steel
+
+das Gold: gold
+das Glas: glass (vidrio)
+das Plastik: plastic
+das Holz: wood
+das Leder: leather
+das Papier: paper
+das Silber: silver
+das Metall: metal
+das Kupfer: copper
+das Eisen: iron
+
+
+### Time
+
+der Tag: day
+der Werktag: workday
+die Woche: week
+das Wochenende: weekend
+
+der Anfang: start
+der Ende: end
+die Vergangenheit: past
+die Zukunft: future
+der Alltag: daily routine
+
+wochenlich: weekly
+täglich: daily
+endlich: finally
+bald: soon
+danach: then
+inzwischen: since then (in between)
+spätestens: at the latest (como muy tarde)
+
+Montag: Monday (Mond tag)
+Dienstag: Tuesday (Thingsus (god) day)
+Mittwoch: Wednesday (in the middle of the week)
+Donnerstag: Thursday (Thor Thonare donner day)
+Freitag: Friday (frigg/wife day)
+Samstag: Saturday (sabbath day)
+Sonntag: Sunday (sun day)
+
+
+
+komm an: arrive
+
+
+
 
 
 ## afixes
@@ -886,8 +1055,6 @@ Schweden: Sweden
 -ung: -ing (verb -> noun the fact of doing)
 ver-:
 be-:
-
-
 
 
 
