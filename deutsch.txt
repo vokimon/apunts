@@ -28,6 +28,7 @@ jung: young
 neu: new
 alt: old
 kalt: cold
+külh: cool
 warm: warm
 heiße: hot
 schnell: fast
@@ -55,13 +56,21 @@ teuer: expensive
 billig: cheap
 gratis: free (money)
 müde: tired
-reicht: enough 
+reicht: enough
 schwanger: pregnant
 scharf: spicy/strong/hot
 reich: rich
 ähnlich: similar, alike
 leer: empty
 voll: full
+letz: last
+vorbei: passed
+
+gesund: healthy (enjoy health or provide it)
+verheirated: married
+geheirated: married
+spät: late
+verspätet: delayed (ver-spat/-et/part)
 
 
 grün: green
@@ -213,8 +222,13 @@ ruf: call
 bleib: stay
 leg: lay
 dusch: take a shower/ducharse
+hilf: help
+gehör: belong to
+buch: book/reservar
 
-
+kennen gegen wissen:
+	wissen for facts, subjects, clauses (memory)
+	kennen for people, places, concepts (familiarity)
 
 ### Presentes Irregulares
 
@@ -232,8 +246,9 @@ ver: sehe siehst sieht sehen seht
 querer: will willst will wollen wollt
 dar: gebe gebst _gibt_ geben gebt (es gibt - hay)
 take: nehme nimmst nimmt nehmen nehmt
-leave: lasse läst läst lassen last
+leave/drop: lasse läst läst lassen last
 act: handele handelst handelt handeln
+saber: weiß weißt weiß wissen wisst
 
 
 ### Imperativos
@@ -257,7 +272,7 @@ es  | es   | ihm   | sein/er | sing 3st neuter
 wir | uns  | uns   | unser   | pl 1st
 ihr | euch | euch  | euer    | pl 2nd
 sie | sie  | ihnen | ihrer   | pl 3st
-Sie | Sie  | ihnen | ihrer   | formal 2nd  
+Sie | Sie  | ihnen | ihrer   | formal 2nd
 
 
 ## Definite determiners
@@ -323,7 +338,7 @@ etwas: some (not much)
 manche: some (not many)
 viel: much, a lot of
 viele: many lots of (many)
-beiden: both
+beide: both (nom,acu) beiden (dat) beider (gen)
 jedes: each, everyone
 
 ### Numerals
@@ -415,7 +430,6 @@ noch: still
 zu: too (demasiado)
 immer notch: still
 sussammen: together
-vielleicht: maybe
 dran: on turn
 alleine: alone
 vieder: again
@@ -424,17 +438,17 @@ schon: already
 normalerweise: normally usually (Ha invertido sujeto y predicado)
 gewönlich: usually
 
-ganz: entirely
+ganz: entirely, totally
 sehr: very
 ziemlich: pretty, fairly (seamsly)
 eher: rather
 genug: enough
+genau: exactly
 weniger: less
 mehr: more
-genau: exactly
 
 als: than(after comparative), as
-
+wie: like, as
 
 ## Position of Nicht
 
@@ -493,8 +507,7 @@ wann: when?
 wo: where?
 woher: where...from?
 wohin: where... to?
-welches: which? (acusative?)
-welchen: which? 
+welcher: which? declension like dieser: welche welchen welchem welches
 wie: how
     wie lang: how long?
     wie viel: how much?
@@ -537,10 +550,11 @@ das Madchen: girl (n)
 der Herr: sir
 der Bürger: citizen
 die Gruppe: group
-die Erwachsene: adult (erwach=awaken)
+der Erwachsene: adult (erwach=awaken)
 das Publikum: audience
 die Dame: lady
-Freund: friend
+der Freund: friend (m)
+der Freundin: friend (f)
 Vorname: first name
 das Baby: bebe
 der Gast: guest
@@ -638,7 +652,7 @@ der Bär: bear
 der Pferd: horse
 der Schwein: pig
 
-Vogel: bird
+der Vögel: bird
 
 der Insekt: insect
 der Käfer: bettle
@@ -730,7 +744,7 @@ das Salz: salt
 die Nudel: fideo (Nudeln fideos)
 das Öl: oil
 der Säft: juice
-der Obst: fruit 
+das Obst: fruit
 der Hunger: hambre
 die Suppe: soup
 der Tee: tea
@@ -747,6 +761,7 @@ die Bohne: bean
 der Senf: mustard
 der Knoblauch: garlic
 der Kuchen: cake
+der Spargel: aparagus
 
 das Messer: knife
 der Löffel: spoon
@@ -875,20 +890,29 @@ Schweizer Frank: swiss franks
 Dutzen: dozen
 die Summe: sum
 die Hälfte: half
+Geld: money
+Trinkgeld: tip
+
+Million
+die Milliarde: billion/millardo 10^9 eine millarde, zwei milliarden
+der Tausend: thousand (the amount) ein Tausend, zwei Tausende
+die Tausend: thousand (the figure) die Tausend
 
 
 
 ### Shopping
 
-der Lade: shop/store (smaller/closer)
+der Laden: shop/store (smaller/closer) Läden
 der Geschäft: store/shop (bigger/professional)
 der Marktplatz: marketplace
 die Markt: markt
 die Supermarkt: supermarket
 das Einkaufszentrum: mall
+	(Einkauf/purchase-s-zentrum/center)
 die Bäckerei: bakery
 die Apotheke: pharmacy
 
+der Einkauf: purchase/compra
 der Kunde: client (m)
 die Kundin: client (f)
 der Einkaufswägen: shopping cart
@@ -912,11 +936,11 @@ der Zug: train (specially vagons)
 die Bahn: train (specially railway)
 der Urlaub: vacation
 das Fahrrad: bicycle
-das Motorrad: motorcycle
+das Motorrad: motorcycle, bike
 das Auto: car
 der Bus: bus
 das Boot: boat
-
+die Fähre: ferry
 
 das Land: country (Länder)
 der Pass: passport
@@ -949,14 +973,16 @@ Großbritannien: Great Britain
 Frankreich: France
 Afrika: Africa
 Asien: Asia
+Europa: Europe
 Österreich: Austria
 Bayern: Bavaria/Baviera
+Schweden: Sweden (Suecia)
 Wien: Vienna/Viena
 Deutschland: Germany
-Schweden: Sweden
 China: China
 
-
+der Schwede: Sweden (sueco)
+die Schwedin: Sweden (sueca)
 
 ### Jobs/Berufe
 
@@ -969,6 +995,7 @@ der Arbeitgeber: employer (work giver)
 der Chef: boss (Chefin)
 der Meister: master, foreman
 
+der Hersteller: manufacturer
 der Bäcker: baker (Bäckeren, Bäckerin, Bäkerinnen)
 der Koch: cook (Köcke, Köchin, Köchinnen)
 der Arzt: doctor (Arzte, Ärztin, Ärztinnen)
@@ -1027,6 +1054,8 @@ der Alltag: daily routine
 
 wochenlich: weekly
 täglich: daily
+monatlich: monthly
+jahrlich: yearly
 endlich: finally
 bald: soon
 danach: then
@@ -1041,10 +1070,47 @@ Freitag: Friday (frigg/wife day)
 Samstag: Saturday (sabbath day)
 Sonntag: Sunday (sun day)
 
+Monat: month
 
+Jahr: year
+Quartal: quarter (trimester?)
+Jahreszeit: season
+Saison: seasons
+Jahrhundert: century
+Alter: age
 
+Frühling: spring
+Sommer: summer
+Der Herbst
+Winter: winter
+
+Januar: January
+Februar: Febrary
+Der Marz: march
+April: april
+Mai: may
+Juni: june
+Juli: july
+August: august
+September: september
+Oktober: october
+November: november
+December: december
+
+die Phase: phase
+
+Weihnachten: Christmas
+
+der Geburtstag: birthday
+der Kalender: calendar
+das Datum: date
+der Schluss: ending, conclusion
+
+fehl: be missing
 komm an: arrive
+ende: end
 
+die Große: size
 
 
 
@@ -1058,6 +1124,7 @@ be-:
 
 
 
+einer von uns: one among us
 
 
 
