@@ -5,7 +5,7 @@
 
 schwer: hard/heavy
 normal: normal
-leicht: light
+leicht: light, easy
 einfach: easy
 klein: small
 groß: big
@@ -65,12 +65,73 @@ leer: empty
 voll: full
 letz: last
 vorbei: passed
-
+fest: firm, stable, compact
+regional: regional, local
+komplett: complet (all included)
 gesund: healthy (enjoy health or provide it)
 verheirated: married
 geheirated: married
 spät: late
 verspätet: delayed (ver-spat/-et/part)
+ausgezeichnet: excellent great outstanding (aus/out-ge-zeich/marcar zeichnet/marcado)
+plötzlich: sudden
+automatisch: automatic
+hilfreich: helpful
+activ: active
+relativ: relative
+allgemein: general, universal
+extrem: extreme
+tatsächlich: actualy (based on facts)
+original: original
+seltsam: strange, odd
+wert: worth
+falsch: false, wrong
+beliebt: popular, admired
+echt: genuine true real
+wahr: true
+privat: privat
+sinnvoll: meaningfull (sinn/sense-woll/full)
+knapp: scarce	
+verantwortlich: responsible (ver-antwort-lich)
+bereit: ready
+egal: igual, sin importancia
+offen: open
+gemeinsam: common, mutual, shared
+zuständig: competent  responsible (zu/to-stand)
+komisch: comic, funny/weird
+genau: exact
+weich: soft
+hart: hard, severe
+kaputt: broken
+fit: fit, in good shape
+fühl: feel (reflexivo) ich fuhle mich
+
+notwendig: mandatory (wendig/flexible)
+selbstverständlich: selfexplanatory, intuitive (selb/self-verstehen/understand-lich/y)
+eindeutig: definido, inequivoco (ein/one-deuten/interpret-ig/ion)
+begeistert: entusiastic (geist/spirit)
+verfügbar: available
+zufrieden: content, satisfied
+sichtbar: visible
+unsichtbar: unvisible
+abhängig von: adicto a
+unabhängig: independent
+bekannt: known, familiar
+unbekannt unknown, unfamiliar
+nützlich: useful (nützen/to profit)
+möglich: likely, possible (mögen/may)
+unmöglich: imposible (can not happen at all)
+praktisch: practical
+persönlich: personal
+positiv: positive
+
+individuell: individual
+international: international
+verpflichtet: commited, obliged (pflicht/duty)
+kostenlos: gratis
+wahrscheinlich: likely, probable (wahr/true-schein/seem-lich/y)
+deutlich: claro, obvio, definido
+
 
 
 grün: green
@@ -83,7 +144,6 @@ grau: grey
 braun: brown
 rosa: pink
 bunt: multicolored
-
 
 
 ### Inflexiones:
@@ -211,6 +271,7 @@ gewinn: win
 besitz: own
 sitz: sit
 zeig: show
+zeig auf: point to
 sag: say
 folg: follow
 helf: help
@@ -225,6 +286,10 @@ dusch: take a shower/ducharse
 hilf: help
 gehör: belong to
 buch: book/reservar
+fehl: be missing
+komm an: arrive
+ende: end
+
 
 kennen gegen wissen:
 	wissen for facts, subjects, clauses (memory)
@@ -307,7 +372,9 @@ your: dein    - deine
 his:  sein    - seine
 our:  unser   - unsere
 yall: eure    - eure
-her:  ihr     - ihre    (or formal your)
+her:  ihr     - ihre
+they: ihr     - ihre
+you:  Ihr     - Ihre (formal)
 
 
 # Demostrative determiner
@@ -329,8 +396,8 @@ alles: everything
 niemand: nobody
 jemand: anybody
 nichts: nothing
-keiner: nobody
-
+keiner: nobody, noone
+wieder: back, again
 
 ein paar: a couple of
 ein Paar: a pair (exactly) of
@@ -340,6 +407,8 @@ viel: much, a lot of
 viele: many lots of (many)
 beide: both (nom,acu) beiden (dat) beider (gen)
 jedes: each, everyone
+zusammmen: together
+gemeinsam: together
 
 ### Numerals
 
@@ -371,6 +440,31 @@ wegen: because of
 während: during/while
 oft: often
 einschließlich: including
+
+hier: here (aqui)
+da: here/there (ahi)
+dort: there (alli)
+
+das hier: this (esto)
+das da: this/that (eso)
+das dort: that (aquello)
+
+das Buch hier: this (este libro)
+das Buch da: this/that (ese libro)
+das Buch dort: that (aquel libro)
+
+drüben: over there
+dort drüben: over there (en esa direccion)
+oben: upstairs, over, north
+unten: downstairs, under, south
+drinnen: indoors, inside
+draußen: outdoors, outside
+innen: inside
+außen: outside
+hinten: back, at the back
+vorne: front, in front of
+nebenan: next door
+überall: everywhere
 
 
 ## Preposiciones
@@ -437,6 +531,7 @@ vielleicht: maybe
 schon: already
 normalerweise: normally usually (Ha invertido sujeto y predicado)
 gewönlich: usually
+plötzlich: suddenly
 
 ganz: entirely, totally
 sehr: very
@@ -614,6 +709,7 @@ die Cousine: cousin (f)
 die Hochzeit: wedding ("momento alto")
 
 die Beziehung: relation
+Verbindung: relation
 der Partner: associate
 die Partnerschaft: partnership
 
@@ -675,30 +771,26 @@ das Werkzeug: tool
 die Batterie: bateria
 die Heizung: heater (heiz/heat-ung/ing)
 die Reiningung: cleaning
-die Tasse: cup
 der Rucksack: backpack (ruck/espalda-sack/bolsa)
-der Umzug: moving (um/hacia-zug/substativated)
-Gerät: device
+der Umzug: moving, parade (um/hacia-zug/substativated)
+das Gerät: device
 Haushalt: household, budget
 Schlaf: sleep/sueño
 Haushaltsgerat: home devices electrodomesticos
-die Schüssel: bowl bol tazón
-das Glas: glass (vaso)
-Zahnbrüste: tooth brush
-Zahnpasta: tooth paste
+die Zahnbrüste: tooth brush
+die Zahnpasta: tooth paste
 der Raum: room space
 die Leiter: lader
 der Spiegel: mirror
 die Toilette: bathroom
 das Tor: goal (sports) different to Tür
-der Teller: plate, saucer
 der Kühlschrank: fridge (kuhl/frio-schrank/armario)
 der Karton: box, cardboard
 die Flasche: bottle
 die Seife: soap
 das Bad: bath
 Rasierer: razor shaver
-der Dusche: shower
+die Dusche: shower
 das Shampoo: shampoo
 Duschgel: shower gel/ bodywash
 das Tuch: cloth
@@ -722,6 +814,7 @@ das Getränk: bebida
 das Rezept: recipe
 
 
+das? Wasser: water
 der Honig: honey
 die Milch: milk
 die Tomate: tomato
@@ -750,7 +843,7 @@ die Suppe: soup
 der Tee: tea
 der Wein: wine
 der Durst: thirst
-der Bier: beer
+das Bier: beer
 der Kaffee: coffee
 der Reis: rice
 das Hähnchen: pollo
@@ -766,6 +859,10 @@ der Spargel: aparagus
 das Messer: knife
 der Löffel: spoon
 die Gabel: fork
+der Teller: plate, saucer
+das Glas: glass (vaso)
+die Schüssel: bowl bol tazón
+die Tasse: cup
 
 
 ### Places
@@ -788,6 +885,39 @@ die Stadt: city
 der Park: park
 das Dorf: village
 
+die Unterkunft: lodging, accomodation
+der Platz: square, place
+die Insel: island
+
+der Ort: location, village, site
+die Kneipe: bar, pub
+die Pension: guest house, inn, b&b
+der Bereich: area, zone, field
+der Flughafen: airport
+das Bundesland: estado federado (bund/ligado-land/country)
+die Region: region
+der Grund: ground, land
+der Bezirk: district
+der Standort: location, place, site, base for a company
+der Hof: farm
+das Grundstück: land, property (solar, terreno)
+die Zentrale: headquarters
+das Zentrum: center
+die Halle: hall
+die Fläche: surface
+die Innenstadt: city center, downtown
+das Innere: inside
+die Umgebung: environment
+Ausland:
+Ferienhaus: vacation home
+die Heimat: homeland
+die Hauptstadt: capital city
+
+wohn: live (wohn in)
+wander: hike
+
+gegenüber: across the street
+
 ### Home
 
 das Zimmer: room
@@ -806,6 +936,7 @@ der Zaun: fence
 der Balcon: balcony
 die Wohnung: apartment (f?)
 der Keller: basement
+der Hof: courtyard (patio)
 
 das Möbel: furniture, a
 der Tisch: table
@@ -969,6 +1100,7 @@ die Verspätung: delay (ver/become-spat/be late-ung/ing)
 die Schweiz: Schwitzerland (special femenine and determiner required)
 Spanien: Spain
 Italien: Italy
+England: England
 Großbritannien: Great Britain
 Frankreich: France
 Afrika: Africa
@@ -1106,13 +1238,11 @@ der Kalender: calendar
 das Datum: date
 der Schluss: ending, conclusion
 
-fehl: be missing
-komm an: arrive
-ende: end
-
 die Große: size
 
+die Medizin: medicine
 
+die Entschuldigung: apology, excuse (ent/dis-schuld/guilt-ig/y-ung/ing)
 
 
 ## afixes
@@ -1125,6 +1255,7 @@ be-:
 
 
 einer von uns: one among us
+
 
 
 
