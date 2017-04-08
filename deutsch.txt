@@ -290,6 +290,46 @@ fehl: be missing
 komm an: arrive
 ende: end
 
+arbeit: work
+sing: sing
+hoffe: hope
+halt: hold, stop (hälte, hältst, hält, halten, haltet)
+pflanz: to plant
+münd: to flow into
+
+
+such: seek, search
+gefall: please
+änder: change (not anderen but andern)
+treff: hit
+glaub: believe, have faith
+wart: wait
+lieg: lie
+schein: seem
+stell: put, pose
+steh: stay stand
+erkenn: recognize (er/re-kenn/know)
+benutzt
+erweitern
+erlauben
+verpassen
+bestelle
+übernimmt
+schließt
+passiert
+akzeptieren
+abonnieren
+spazieren
+funktioniert
+prüft
+sammel: collect
+meint
+schaut
+steigt
+fehlt
+stiehlt
+
+
 
 kennen gegen wissen:
 	wissen for facts, subjects, clauses (memory)
@@ -313,7 +353,8 @@ dar: gebe gebst _gibt_ geben gebt (es gibt - hay)
 take: nehme nimmst nimmt nehmen nehmt
 leave/drop: lasse läst läst lassen last
 act: handele handelst handelt handeln
-saber: weiß weißt weiß wissen wisst
+saber: weiß weißt weiß wissen wisst (be aware of)
+poder: kann kannst kann können könt
 
 
 ### Imperativos
@@ -719,18 +760,44 @@ die Partnerschaft: partnership
 der Himmel: sky
 der Mond: moon
 der Stern: star
-der Baum: tree
 der Wind: wind
 der Berg: mountain
-der Fluss: river
+der Baum: tree
+der Wald: forest
+der Bach: brook, torrent
+der Fluss: river (mündet in Fluss/Strom)
+der Strom: stream (mündet in Meer)
+der Teich: pond/estanque
+der Stausee: dam/edam/mbalse
+der See: lake
+der Strand: beach
+der Bernstein: amber (bern/nacer??-stein/piedra)
 
-die Sonne: sun (f)
-die Natur: nature 
-die Blume: flower
+die Natur: nature
+die Welt: world
 die Erde: earth
+die Sonne: sun
+die Blume: flower
 die Luft: air
+die Welle: wave
+die Umwelt: ecosystem, medi
+die Tierwelt: animal kindom, fauna
+die Wiese: meadow (prado)
+die Wüste: desert
+die Landwirtschaft: agricultura
 
 das Feuer: fire
+das Rinnsal: trickle, arroyo
+das Gras: grass
+das All: cosmos
+das Klima: climate
+
+
+
+Rhein: Rhine river
+
+
+
 
 
 ### Die Tiere
@@ -908,7 +975,7 @@ die Fläche: surface
 die Innenstadt: city center, downtown
 das Innere: inside
 die Umgebung: environment
-Ausland:
+Ausland: abroad
 Ferienhaus: vacation home
 die Heimat: homeland
 die Hauptstadt: capital city
@@ -1034,7 +1101,7 @@ die Tausend: thousand (the figure) die Tausend
 ### Shopping
 
 der Laden: shop/store (smaller/closer) Läden
-der Geschäft: store/shop (bigger/professional)
+der Geschäft: business/store/shop (bigger/professional)
 der Marktplatz: marketplace
 die Markt: markt
 die Supermarkt: supermarket
@@ -1256,6 +1323,353 @@ be-:
 
 einer von uns: one among us
 
+
+### die Gesundheit / the health
+
+krank: sick
+gesund: healthy
+schlecht: bad, sick
+
+blut: bleed
+
+der Patient: patient
+das Medikament: medicament
+das Pflaster: plaster, tirita
+der Rollstuhl: wheel chair
+die Praxis: praxis
+die Gesundheit: salud
+die Untersuchung: examination, investigation
+das Formular: form
+die Krankheit: enfermedad
+die Medizin: medicina
+das Krankenhaus: hospital
+der Krankenwagen: ambulance
+die Krankenversicherung: health insurance
+der Unfall: accident
+der Notfall: emergency case (Not/emergency-Fall/case)
+das Opfer: victim
+der Zahnarzt: dentist (m)
+die Zahnärztin: dentist (f)
+die Klinik: clinic
+die Therapie: therapy
+der Alkohol: alcohol
+die Diät: diet
+die Ernährung: nutrition
+
+
+People 2
+Lesson 1
+Gemeinde, Vereine, Öffentlichkeit, Verbindung, verhältnisse, Nutzer
+Lesson 2
+Bevölkerung, Jugend, Einwohner, Paar, besucht, man
+
+
+
+Verbs Future 1
+Lesson 1
+wird, essen, gehen, reden, warten
+Lesson 2
+bleiben, vergessen, lieben, kosten, wissen, folgen
+Lesson 3
+testen, rufen, lösen, sprechen, handeln, zählen
+Lesson 4
+beraten, schützen, bieten, merken, erklären
+Tips and notes
+The future tense consists of a conjugated form of werden in the present tense and an infinitive (the base form of the verb).
+ich werde spielen (werde wirst wird werden werdet)
+
+Feelings
+Lesson 1
+Liebe, Traum, träumt, Not, Freude, Wunsch
+Lesson 2
+liebst, Spaß, Ernst, Angst, Eindruck, unheimlich
+Lesson 3
+Gedanken, Ruhe, Humor, Witz, interessant, langweilig
+Lesson 4
+Ärger, lieber, ehrlich, witzig, dumm, schlau
+Lesson 5
+stolz, hassen, Liebling, total, böse, nett, Lust
+Lesson 6
+tapfer, Verständnis, Schuld, lachen, schlimm, gar, glücke
+
+### Time
+
+die Zeit: time
+der Moment: moment
+der Augenblick: instant (eye blink)
+der Zeitpunkt: moment in time (time point)
+der Zeitraum: period
+die Dauer: duration
+der Termin: deadline
+das Mal: ocasion, occurrence
+die Uhrzeit: time of day
+die Uhr: hora, o'clock, watch
+die Stunde: hour
+die Minute: minute
+die Sekunde: second
+
+der Morgen: morning
+der Mittag: noon
+der Abend: evening (wider than in english, includes night til midnight)
+die Nacht: night, darkness
+die Mitternacht: midnight
+
+dann: then (A, dan b)
+dann: then (adv. at that time, after that, in that case)
+jetzt: now (A(past/future), now b(present))
+jetzt: now (adv. in the present)
+heute: today (adv)
+gestern: yesterday (adv)
+morgen: tomorrow (adv)
+nachts: at night
+sofort: inmediately, at once
+halb: partido en dos
+viertel: quarter of (un quart de)
+etwa: aproximately
+fast: almost, nearly
+gerade: justamente
+damals: then (at that past point of time)
+lange: for a long time
+
+früh: early
+spät: late, after deadline
+später: later, afterwards
+
+dauer: durar (dauere/dauer/daure dauerst dauert dauern dauert)
+
+
+Frequency
+Lesson 1
+mehr: more
+	kein X mehr (no longer a X)
+	nicht mehr X (not much X)
+	nichts mehr (nothing more)
+	nie mehr (never again)
+oft: often
+manchmal: sometimes
+wenig: few
+
+zahlreich: numerous
+häufig: frequent
+selten: sheldom
+ein bisschen: a bit (Bissen/bit-schen/diminutive)
+ob .. oder ...: whether a or b
+meist: mostly
+keinerlei: not (adj) whatsoever/at all
+meisten: superlative of viel
+je x desto y: the more x the y
+je x je y: the more x the more y
+
+Verbs: Modal
+
+wir mussen diese bucher lesen
+can: kann kannst kann können könt
+want: will willst will wollen wollt
+may: darf darfst darf dürfen dürft
+should: soll sollst soll sollen sollt
+must: musse musst musst müssen musst
+
+
+kann swimmen:
+muss weg: must go away (falta el geh??)
+sein:
+soll machen: should do
+
+ich will en Vater sein
+
+tun: do
+finde: find
+miet: rent
+bestatig: confirm
+möcht: would like (subjunctive mag)
+red: talk
+benutz: use
+weck: wake
+wiederhol: repeat
+
+mitmach: participar (mit/with-mach/make)
+teilnehm: join, take part (teil/part-nehm/take)
+registrier: register
+entscheid: judge, decide (ent/dis-scheid/split)
+ersetz: replace (er-setz/sit)
+spazier: walk
+vorstell: introduce (vor/first-stell/put)
+aussag: state (declarar) (say out)
+betracht: look, consider (be/previ a-tracht/try)
+
+der Verein: society, club, association
+
+bösse: angry
+ehrlich: honest
+
+Adverbs 2
+weder, sowohl, bereits, selbst, damit, darüber, allein
+nun, dabei, dazu, selber, zuerst, zuletzt, genauso
+daher, sonst, einmal, jedenfalls, völlig, durchaus, mindestens
+meistens, außerdem, besonders, kaum, überhaupt, jedoch, erneut
+
+
+Genitive Case
+
+Tips and notes
+The genitive case
+
+The genitive case is used to indicate possession.
+
+Das Fahrrad des Mannes ist schwarz.
+Das Fahrrad des Kindes ist blau.
+Das Fahrrad der Frau ist grün.
+	masculine 	neuter 	feminine
+nominative 	der 	das 	die
+accusative 	den 	das 	die
+dative 	dem 	dem 	der
+genitive 	des 	des 	der
+
+Das Fahrrad eines Mannes ist schwarz.
+Das Fahrrad eines Kindes ist blau.
+Das Fahrrad einer Frau ist grün.
+	masculine 	neuter 	feminine
+nominative 	ein 	ein 	eine
+accusative 	einen 	ein 	eine
+dative 	einem 	einem 	einer
+genitive 	eines 	eines 	einer
+Nouns
+
+Nouns consisting of one syllable tend to add -es in the masculine and neuter. The ending is often reduced to just -s, especially in colloquial speech.
+
+Nouns consisting of more than one syllable, tend to add just -s.
+
+Weak nouns add -n or -en in the genitive as well (all cases but the nominative), e.g. des Jungen and des Studenten.
+Genitive phrases have a fixed word order
+
+You can say das Fahrrad des Kindes, but you cannot say des Kindes Fahrrad. The latter word order used to be acceptable hundreds of years ago, and you may still occasionally find it in poetry, but it’s no longer used in contemporary Standard German .
+Proper names
+
+In contrast to common nouns, proper names precede the noun.
+
+Peters Fahrrad ist neu.
+
+Do not add an apostrophe unless the name already ends in -s or -z. In the latter case, the apostrophe comes at the very of the name.
+
+Hans’ Fahrrad ist alt.
+Adjectives
+
+Adjectives describing singular masculine and singular neuter nouns always add -en.
+
+Adjectives describing singular feminine nouns and plural nouns of any gender add -en (if preceded by an article) or -er (if not preceded by an article).
+	preceded by an article 	not preceded by an article
+masculine 	das Fahrrad des großen Mannes 	wegen neuen Termins
+feminine 	das Fahrrad der kleinen Frau 	trotz großer Freude
+neuter 	das Fahrrad des kleinen Kindes 	trotz ruhigen Wesens
+plural (any gender) 	das Fahrrad der kleinen Kinder 	wegen neuer Informationen
+Prepositions that take the genitive case
+
+The most common prepositions that take the genitive case are anstatt (instead of), aufgrund (because of), statt (instead of), trotz (despite/in spite of), während (during), and wegen (because of).
+
+In colloquial speech, some prepositions that are supposed to take the genitive sometimes take the dative.
+Verbs that take the genitive case
+
+There’s a small set of verbs that take genitive. Most of them are not used a lot in everyday speech and they may sound a bit stilted.
+The dative as an alternative
+
+As an alternative for the genitive, you can use von followed by the dative case, e.g. das Fahrrad von dem Mann, das Fahrrad von der Frau, das Fahrrad von dem Kind, das Fahrrad von Peter. Mind you, the genitive case is usually preferred in terms of style.
+
+Occupation 2
+Lesson 1
+Verfasser, Betreiber, Entwickler, personal, Empfänger, Teilnehmer
+Lesson 2
+Werkstatt, Handwerk, Schneider, Hersteller
+Lesson 3
+Richter, Spezialität, Richterin, Experten, rechtsanwälte
+
+
+
+Verbs: Perfect 1
+Lesson 1
+hat, gegessen, gesehen, gelernt, gelesen, geschlafen, gespielt
+Lesson 2
+behalten, erfahren, veröffentlicht, beraten, verbessert, besucht, gegeben
+Lesson 3
+geschrieben, ist, geschwommen, gelaufen, gekommen, geworden, gefragt, gestohlen
+Lesson 4
+interessiert, informiert, verletzt, gegangen, gefallen, erzählt, gerannt, gewesen
+Lesson 5
+getrunken, gehabt, gekocht, gesprochen, gemacht, gesucht, gefunden, überwiesen
+Lesson 6
+gesagt, gemocht, gestellt, verkauft, vergessen, bestellt, geladen, geschehen
+
+Tips and notes
+When is the Perfekt used?
+
+The Perfekt is used to describe past events. In spoken German, the Perfekt is preferred over the Präteritum. Using the Präteritum in normal conversation may sound unnatural or pretentious.
+
+There are a few exceptions to this rule of thumb. sein (to be), haben (to have), wissen (to know), and the modal auxiliaries dürfen (to be allowed to), können (to be able to), müssen (to have to), sollen (to be supposed to), wollen (to want to) are used in the Präteritum in informal contexts as well.
+
+In contrast to the English present perfect, the German Perfekt is not used to describe events that started in the past and are still ongoing. In such cases, German speakers use the present tense, e.g. I have been living here for three years translates to Ich lebe seit drei Jahren hier.
+How is the Perfekt formed?
+
+The Perfekt is formed by combining a conjugated form of haben (to have) or sein (to be) in the present tense with the past participle of the main verb.
+
+The vast majority of verbs take haben. Verbs that take sein have to be intransitive, i.e. they can't take an object, and they have to indicate a change of position or condition. sein (to be), bleiben (to stay), and passieren (to happen) take sein even though they don't indicate a change of position or condition.
+
+In order to form the past participle of a weak verb, add the prefix ge- and the suffix -t or -et to the stem, e.g. machen (to do/to make) becomes ge-mach-t.
+
+machen (to do/to make)
+Präsens 	Perfekt
+ich mache (I do/make) 	ich habe gemacht (I have done/made)
+du machst (you do/make) 	du hast gemacht (you have done/made)
+er/sie/es macht (he/she/it does/makes) 	er/sie/es hat gemacht (he/she/it has done/made)
+wir machen (we do/make) 	wir haben gemacht (we have done/made)
+ihr macht (you do/make) 	ihr habt gemacht (you have done/made)
+sie/Sie machen (they/you do/make) 	sie/Sie haben gemacht (they/you have done/made)
+
+laufen (to run/to walk)
+Präsens 	Perfekt
+ich laufe (I run) 	ich bin gelaufen (I ran/have run)
+du läufst (you run) 	du bist gelaufen (you ran/have run)
+er/sie/es läuft (he/she/it runs) 	er/sie/es ist gelaufen (he/she/it ran/has run)
+wir laufen (we run) 	wir sind gelaufen (we ran/have run)
+ihr lauft (you run) 	ihr seid gelaufen (you ran/have run)
+sie/Sie laufen (they/you run) 	sie/Sie sind gelaufen (they/you ran/have run)
+
+Strong verbs add the prefix ge-, change the stem vowel or the entire stem, and add the suffix -t, -et or -en, e.g. nennen (to call) becomes ge-nann-t, sein becomes ge-wes-en, sprechen (to speak/to talk) becomes ge-sproch-en. These forms are not quite predictable. You need to memorize them.
+
+A separable prefix will precede the ge- prefix, e.g. aufmachen (to open) becomes auf-ge-mach-t.
+
+An inseparable prefix will replace the ge- prefix, e.g. veröffentlichen (to publish) becomes ver-öffentlich-t.
+
+Verbs that end in -ieren will not be prefixed, e.g. informieren becomes informier-t.
+
+For complete conjugation charts, check out Canoo and Verbix.
+
+
+Adjectives: Nominative 1
+Lesson 1
+müde, größten, größte, öffentliche, neuen, letzter
+Lesson 2
+eigener, höheren, aktuelle, speziellen, gesamte, internationalen, hohen
+Lesson 3
+übrigen, öffentlichen, einzelnen, jugendliche, zusätzliche, alte
+Lesson 4
+notwendigen, hoher, nächster, neues, linken, hohe
+Lesson 5
+normalen, wichtigsten, richtige, internationale, private, zufälliger
+Lesson 6
+besonderen, passenden, weiterer, interessante, wichtigen, passende
+
+Adjectives: Accusative
+Lesson 1
+neue, neues, deutschen, nächsten, neuen, detaillierte
+Lesson 2
+langen, neuen, ganzen, neue, verschiedenen
+Lesson 3
+zuständigen, verschiedene, starken, lange, höhere, offenen, komplette
+Lesson 4
+weiteres, modernen, gemeinsame, alte, eigene, persönlichen, technischen, jungen
+Lesson 5
+weitere, vergangenen, einzige, eigene, hohe, zweite, wichtige
+Lesson 6
+eigenen, normalen, gleiche, kostenlose, ehemaligen, kostenlosen
 
 
 
