@@ -20,6 +20,7 @@ schwach: weak
 sauber: clean
 schmutzig: dirty
 richtig: correcto
+falsch: false, wrong
 witzig: funny
 lustig: funny
 traurig: sad
@@ -43,7 +44,11 @@ salzig: salty
 scharf: spicy/strong/hot
 perfekt: perfect
 schlecht: sick, bad
-frei: gratis
+teuer: expensive
+billig: cheap
+kostenlos: gratis
+gratis: free (money)
+frei: free (liberty)
 toll: great
 super: great
 laut: loud
@@ -52,9 +57,6 @@ leise: suave
 klar: clear
 fertig: done, ready
 wichtig: important
-teuer: expensive
-billig: cheap
-gratis: free (money)
 müde: tired
 reicht: enough
 schwanger: pregnant
@@ -85,7 +87,6 @@ tatsächlich: actualy (based on facts)
 original: original
 seltsam: strange, odd
 wert: worth
-falsch: false, wrong
 beliebt: popular, admired
 echt: genuine true real
 wahr: true
@@ -128,7 +129,6 @@ positiv: positive
 individuell: individual
 international: international
 verpflichtet: commited, obliged (pflicht/duty)
-kostenlos: gratis
 wahrscheinlich: likely, probable (wahr/true-schein/seem-lich/y)
 deutlich: claro, obvio, definido
 
@@ -475,7 +475,7 @@ Milliarden:
 Ordinals: -te (1-19) -ste (20-*)
 Exceptions: erste(1st), dritte(3rd) siebte (7th), achte(8th)
 
-
+unterweg: on the way
 
 wegen: because of
 während: during/while
