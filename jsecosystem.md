@@ -32,6 +32,18 @@ which are used on web and webapp development nowadays.
 * [Bootstrap](http://getbootstrap.com/)
 
 
+## Packaging, dependencies, preprocessing
+
+* Browserify
+* Webpack
+* Bower
+* npm
+* Grunt
+* Gulp
+* RequireJS
+
+
+
 
 
 
