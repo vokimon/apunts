@@ -14,8 +14,8 @@ Cabecera
 		Tamaño de la cabecera: Se elimina, ahora no hay extensiones ahora es fija
 		Solo el del payload
 		Flow label???
-	Extensiones, se añaden siguiente
-		Los nodos intermedios no necesitan conocerlas
+	Extensiones, se añaden en siguientes paquetes
+		Los nodos intermedios no necesitan conocerlas, las pasan como paquetes normales
 
 
 
