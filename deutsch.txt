@@ -10,7 +10,7 @@ einfach: easy
 klein: small
 groß: big
 lang: long
-kurz: curt
+kurz: short
 weit: far, long
 hoch: high
 tief: deep
@@ -467,10 +467,10 @@ sieben | *siebzehn* | *siebzig*
 acht   | achtzehn   | achtzig
 neun   | neunzehn   | neunzig
 
-hundert:
-tausend:
-Millionent:
-Milliarden:
+hundert: 100
+tausend: 1000
+Millionent: 1.000.000
+Milliarden: 1.000.000.000
 
 Ordinals: -te (1-19) -ste (20-*)
 Exceptions: erste(1st), dritte(3rd) siebte (7th), achte(8th)
@@ -559,7 +559,7 @@ niemals: never
 auch: tambien
 wirklich: really
 so: tan
-nur: only
+nur: only, just
 immer: always
 noch: still
 zu: too (demasiado)
@@ -611,7 +611,7 @@ weil: because
 wenn: when
 dass: that (que)
 obwohl [obful]: even though (aunque) - A, x b
-doch: though (aunque) 
+doch: though (aunque) y a pesar de ello
 solange: as long as - x A, b
 da: since - x a, B - A, x b
 sobalt: as soon as - A, x b
@@ -862,7 +862,7 @@ das Shampoo: shampoo
 Duschgel: shower gel/ bodywash
 das Tuch: cloth
 das Handtuch: towel (not needly a *hand* towel)
-
+Trepp: stair
 
 
 
