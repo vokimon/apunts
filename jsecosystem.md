@@ -82,7 +82,17 @@ which are used on web and webapp development nowadays.
 	- Includes most things an static website should have nowadays
 	- ganalitics, modernizer, jquery, normalize, htaccess, 404 page, 
 
-## Javascript Processors
+## Assets Processors
+
+- [CoffeScript](http://coffeescript.org)
+	- Language that transcompiles into Javascript
+	- Inspired by Ruby, Python, Haskell...
+
+- [TypeScript](https://www.typescriptlang.org/)
+	- Language that transcompiles into Javascript
+	- By Microsoft, embraced by Google's 
+
+- []
 
 
 ## Toolbox Libraries
@@ -135,6 +145,53 @@ Usually they use a Model-View-Controller like approach.
 
 * [Backbone](http://backbonejs.org/)
 	- MVC framework
+
+* [Vue](https://vuejs.org/)
+	- MVC framework
+
+
+
+## Other interesting libraries
+
+- jquery-tipsy
+	- Tooltips cutres tipo facebook
+	- http://onehackoranother.com/projects/jquery/tipsy/
+- jquery-infieldlabel
+	- Puts the labels of form fields inside them
+	- http://fuelyourcoding.com/scripts/infield/
+- jquery-showpassword
+	- Places a button on password fields to avoid the stars
+	- http://trevordavis.net/blog/jquery-show-password-plugin
+- minicolors
+	- color picker
+	- http://www.abeautifulsite.net/blog/2011/02/jquery-minicolors-a-color-selector-for-input-controls/
+- timepicker
+	- Chose time
+	- No idea on which one uses own cloud (many arround)
+- chosen
+	- User friendly selection boxes
+	- http://harvesthq.github.io/chosen/
+- fullcalendar
+	- Fullpage calendar
+	- http://arshaw.com/fullcalendar/
+- Ace Editor
+	- Text editor with syntax highlight
+	- http://ace.c9.io
+- Mousewheel
+	- cross browswer mousewheel support
+	- https://github.com/brandonaaron/jquery-mousewheel
+- lightbox
+	- Modal image visualization
+- Colorbox
+	- Visualization dialog (like lightbox)
+	- External pages, content and ajax
+	- Sequence, slideshow
+	- http://www.jacklmoore.com/colorbox/
+- js_tpl
+	- Javascript (client-side) templating
+	- <%= javascript expresion %>
+	- Solo en oc_bookmarks
+	- http://ejohn.org/blog/javascript-micro-templating/http://ejohn.org/blog/javascript-micro-templating/
 
 
 
