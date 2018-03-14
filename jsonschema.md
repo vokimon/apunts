@@ -8,9 +8,8 @@ From: https://datatracker.ietf.org/doc/draft-handrews-json-schema-validation/?in
 	- booleans validate always true or false
 	- an empty object validates true
 	- a non empty object validates if every keyword validates
-
 - Schema keywords:
-	- Annotations: Validate true but provides information
+	- Annotations: Always validate but provide information
 		- title: short one line description
 		- description: longer description
 		- readOnly: issuer authority provides this value and cannot be changed (ex. ids)
@@ -82,7 +81,7 @@ From: https://datatracker.ietf.org/doc/draft-handrews-json-schema-validation/?in
 		- additionalProperties: schema
 			- schema is applied to any key not matching properties or patternProperties
 			- false disallows
-		- dependencies: TODO
+		- dependencies: DEPRECATED use if/then/else
 		- propertyNames: a schema applied to he property names (so, applied to a string)
 	- Conditional schemas:
 		- if: schema
@@ -105,5 +104,19 @@ From: https://datatracker.ietf.org/doc/draft-handrews-json-schema-validation/?in
 		- not: schema
 			- Validates if the schema does not validate
 
+- Interoperability:
+	- Strings are valid JSON strings, might contain `\0x0000`
+	- Numbers are not constrained by magnitude or precission
+	- Regular expressions are ECMA 262. Recommended to limit to the following features:
+		- un anchored by default
+		- unicode
+		- character classes: [agx] one of those characters
+		- character ranges: [a-z] character range
+		- complement: [^agx] none of those character
+		- quantifier: `+` (one or more) `*` (zero or more) `?` (zero or one)
+		- range quantifiers: {n} (just n times), {n,m} (n to m times) {n,} (n or more times)
+		- lazy quantifiers: `+?`, `*?`, `??`, `{...}?` TODO
+		- anchors: `^` (to the beginnig) `$` (to the end)
+		- grouping: `(...)` and alternation: `|`
+		- TODO: Other features like `.`, escaping, and backslash codes forbiden? Not recommended?
 
-- 
