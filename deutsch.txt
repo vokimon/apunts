@@ -132,6 +132,8 @@ verpflichtet: commited, obliged (pflicht/duty)
 wahrscheinlich: likely, probable (wahr/true-schein/seem-lich/y)
 deutlich: claro, obvio, definido
 
+näscht: next
+zusätzlich: aditional
 
 
 grün: green
@@ -230,7 +232,7 @@ trink: drink
 geh: go
 lauf: walk, run (läuft)
 renn: correr
-reich: bastar
+reich: bastar, suffice
 denk: think
 lern: learn
 beginn: start
@@ -1047,7 +1049,6 @@ das Blut: blood
 das Gesicht: face
 
 
-
 ### Cloth
 
 der Rock: skirt (m)
@@ -1071,7 +1072,7 @@ die Hose: pantalon
 
 die Frage: question
 die Antwort: answer
-
+der Grund: reason (fig ground)
 
 ### Numbers, money, measures
 
@@ -1309,7 +1310,10 @@ die Große: size
 
 die Medizin: medicine
 
+
 die Entschuldigung: apology, excuse (ent/dis-schuld/guilt-ig/y-ung/ing)
+die Ordnung: order (ordnen(to order)-ung(ing)
+
 
 
 ## afixes
@@ -1382,7 +1386,9 @@ Feelings
 Lesson 1
 Liebe, Traum, träumt, Not, Freude, Wunsch
 Lesson 2
-liebst, Spaß, Ernst, Angst, Eindruck, unheimlich
+liebst, Spaß,
+ernst: serious
+Angst, Eindruck, unheimlich
 Lesson 3
 Gedanken, Ruhe, Humor, Witz, interessant, langweilig
 Lesson 4
@@ -1578,7 +1584,9 @@ Occupation 2
 Lesson 1
 Verfasser, Betreiber, Entwickler, personal, Empfänger, Teilnehmer
 Lesson 2
-Werkstatt, Handwerk, Schneider, Hersteller
+Werkstatt: Garage
+interessant: interesting
+Handwerk, Schneider, Hersteller
 Lesson 3
 Richter, Spezialität, Richterin, Experten, rechtsanwälte
 
@@ -1597,6 +1605,10 @@ Lesson 5
 getrunken, gehabt, gekocht, gesprochen, gemacht, gesucht, gefunden, überwiesen
 Lesson 6
 gesagt, gemocht, gestellt, verkauft, vergessen, bestellt, geladen, geschehen
+
+gescheh: happen, occur
+
+
 
 Tips and notes
 When is the Perfekt used?
@@ -1645,7 +1657,9 @@ For complete conjugation charts, check out Canoo and Verbix.
 
 Adjectives: Nominative 1
 Lesson 1
-müde, größten, größte, öffentliche, neuen, letzter
+müde, größten, größte
+öffentlich: public
+neuen, letzter
 Lesson 2
 eigener, höheren, aktuelle, speziellen, gesamte, internationalen, hohen
 Lesson 3
@@ -1671,7 +1685,32 @@ weitere, vergangenen, einzige, eigene, hohe, zweite, wichtige
 Lesson 6
 eigenen, normalen, gleiche, kostenlose, ehemaligen, kostenlosen
 
-
-
+Adverbs 3
+Lesson 1
+ansonsten: otherwise
+dafür: for this
+denn: then
+mal: time (ein oder zwai mal am tag)
+eigentlich: really
+natürlich: of course
+Lesson 2
+gleich
+soweit: as far as, ready
+übrigens: btw, besides
+wohl: expresses assumption (deberia, deduzco que)
+also: well, then, so
+trotzdem: anyway, nevertheless, though
+allerdings: however
+darum: because of that
+Lesson 3
+sogar
+zumindest: at least
+anders: otherwise, different
+daran: on that, at that
+darauf: over that, after (in time)
+davon: away from that (da von, from it)
+gleich: in a moment, alike
+Lesson 4
+drin, zugleich, deshalb, wenigstens, bisher, dadurch, herzlich
 
 
