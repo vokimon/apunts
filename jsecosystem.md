@@ -103,6 +103,37 @@ which are used on web and webapp development nowadays.
 	- Transcompiler to turn modern ES6 into ES5 which is compatible on most browsers
 
 
+### Python in browser
+
+- [Transcrypt](https://transcrypt.org/)
+	- Transcompiler for Python
+	- Py2/Py3
+	- Generates javascript code
+	- Uses Javascript libraries (not python ones)
+- [RapydScript](https://github.com/atsepkov/RapydScript)
+	- Transcompiler
+	- Python like syntax constructs for EcmaScript
+	- Not Python, new language
+- [skulpt](http://www.skulpt.org/)
+	- Client side python interpreter
+	- Py2
+	- Teaching tool
+	- Slow runtime (1/10 cpython)
+- [Brython](http://www.brython.info/)
+	- Client side python interpreter
+	- Adds a new script type
+	- 500k extra for the jit compiler
+- [Pypy.js](http://pypyjs.org/)
+	- Client side python interpreter
+	- Full Python interpret implementation in javascript
+	- Generated from PyPy by means of emscripten ()
+	- Big/slow download, fast runtime
+	- Full featured
+- [Batavia](https://batavia.readthedocs.io/en/latest/)
+	- Interprete de Python bytecode en el navegador
+	- Py3.4
+	- do not interpret python code, but bytecode
+	- Very preliminar version
 
 
 ## Toolbox Libraries
