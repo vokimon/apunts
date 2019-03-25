@@ -33,23 +33,30 @@ which are used on web and webapp development nowadays.
 	* [Authors indeed recommend](https://bower.io/blog/2017/how-to-migrate-away-from-bower/) webpack and yam, nowadays
 	* Manages in-browser dependencies different from npm build dependencies.
 	* Places ready to import optimized js inside `bower_components`
+* [Parcel](https://parceljs.org/)
+	* Assets bundler
+	* Zero configuration, via sane defaults
 * [Webpack](http://webpack.js.org)
 	* Assets bundler.
 	* You define dependencies, media... it compiles (process, optimize...) them and generate static files for he web.
-* [Grunt](http://gruntjs.com)
-	* Task runner to build web static assets.
-	* Tries to be declarative, at the end it is a configuration hell
-	* __Deprecated by Gulp__
-* [Gulp](https://gulpjs.com/)
-	* Task runner to build web static assets
-	* Pipe based and imperative
-	* __Deprecated by webpack__
-
+	* Solves modularization and dependency resolution using either require or import strategies
+	* Asset spliting and multiple inclusion methods (js, inline, asset inline...)
+	* Asset transcompilation via plugins
+	* __Deprecated by Parcel???__
 * [Brunch](http://brunch.io/)
 	* Task runner
 	* Declarative and simpler than gulp/grunt
 	* Alleged vs Webpack: faster, implicit compilation by type, 
 	* Not tried myself
+* [Gulp](https://gulpjs.com/)
+	* Task runner to build web static assets
+	* Pipe based and imperative
+	* __Deprecated by webpack__
+* [Grunt](http://gruntjs.com)
+	* Task runner to build web static assets.
+	* Tries to be declarative, at the end it is a configuration hell
+	* __Deprecated by Gulp__
+
 
 * [Nodejs](https://nodejs.org/)
 	- A webserver framework
