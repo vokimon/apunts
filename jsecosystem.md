@@ -191,6 +191,27 @@ Usually they use a Model-View-Controller like approach.
 	- MVC framework
 
 
+### Style preprocessors
+
+- [Stylus](http://learnboost.github.io/stylus/)
+	- Compact syntax, indentation based, no colons no semicolons
+	- Still css syntax is accepted
+	- Imports, variables, nesting, mixins, extends, color ops, math ops, conditions, loops
+- [Less](http://lesscss.org/)
+	- Imports, variables, nesting, mixins, extends, color ops, math ops, conditions, loops
+	- Conditions are declarative
+- [Sass](http://sass-lang.com/)
+	- Imports, variables, nesting, mixins, extends, color ops, math ops, conditions, loops
+	- Used by bootstrap, MDC4W...
+- [PostCSS](https://postcss.org/)
+	- API to process CSS rules from javascript
+	- Plugins use the API to perform stuff
+		- autoprefixer: adds webkit moz prefix when needed
+		- preset env: converts modern css4 features into old css
+		- linter: warns about css coding conventions
+		- Inline images
+		- optimizar reglas
+
 
 ## Other interesting libraries
 
