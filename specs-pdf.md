@@ -472,6 +472,69 @@ Que tiene una page?
 
 
 
+## Interactive forms
+
+Un documento puede tener un formulario asociado.
+Se referencia en el campo `AcroForm` del catálogo del documento que apunta al _diccionario de formulario_.
+El formulario del documento especifica cuales son los _Fields_, una array de referencias a _diccionarios de campo_, los campos.
+Un campo puede ser no-terminal y tener hijos (`Children`) o ser terminal y no tenerlos.
+
+Los no terminales son útiles para el nombrado de los campos
+y para definir los paràmetros de los campos en grupo vía herencia.
+
+Un campo se nombra completamente (_full name_)
+uniendo con un puntos (`.`) los nombres parciales (_partial names_)
+de los campos no-terminales que lo incluyen y el suyo propio.
+`Titularidad.Datos personales.Dirección.Código postal`
+
+Las propiedades especificadas en un nivel superior se heredan
+en los campos hijos.
+Los hijos lo pueden redefinir.
+
+### Diccionario de campo (campos comunes)
+
+- `FT`: Field type. Si es un no terminal, el tipo es para heredarlo, no el del campo en sí.
+	- `Btn` Botón
+	- `Ch` Choice
+	- `Tx` Free text
+	- `Sig` Signature
+- `Parent`: Referencia al nodo padre si lo hubiera
+- `Kids`: Array a referencias indirectas a los hijos inmediatos
+- `T`: Partial name
+- `TU`: Nombre para el usuario (Para mensajes de error y demas)
+- `TM`: Nombre de mapeo (usado para exportar la información
+- `Ff`: Field flags (heredado)
+	- 1: ReadOnly: No se puede editar
+	- 2: Required: No se puede enviar si no tiene valor
+	- 4: NoExport: El campo no se exporta
+- `V`: Field value (depende del tipo)
+- `DV`: Default value
+- `AA`: Additional actions (diccionari d'events amb accions)
+
+
+### Campos de texto
+
+Attributos adicionales si es campo de texto:
+
+- `DA`: Default Apperance, (requerido, heredado) bien
+	- a sequence of page content graphics or
+	- Text state operators 
+- `Q`: Quadding, justification (heredado)
+	- 0: left
+	- 1: center
+	- 2: right
+- `DS`: Default text style
+- `RV`: Contenido de texto enriquecido, si el texto esta enriquecido esto es un string o un stream con el texto (html)
+
+
+
+
+
+
+
+
+
+
 
 
 
