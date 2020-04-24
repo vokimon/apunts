@@ -1,5 +1,14 @@
 
-Producto (Product): Algo que se puede ofrecer al mercado para satisfacer un deseo o necesidad.
+Bien (good): Algo que satisface un deseo o una necesidad
+	Bien libre o no economicos: Sin dueño ni precio, abundante y sin proceso productivo para obtenerlo.
+	Bien escasos o económico: Bien adquirible en un mercado por un valor.
+
+Bien vs. Producto: El bien es algo que se tiene, el producto algo que se ofrece.
+	La mayoria de veces son ambas cosas a la vez.
+	Bienes se usa mas como generico en plural
+	Producto se usa para concretos 'este producto', no 'este bien'
+
+Producto (Product): Bien o servicio ofrecido al mercado con un proceso productivo para obtenerlo
 	Bienes: Producto material.
 	Servicio: Producto inmaterial.
 	Normalmente hay grises entre Bienes y Servicios.
@@ -7,17 +16,15 @@ Producto (Product): Algo que se puede ofrecer al mercado para satisfacer un dese
 Utilidad: Capacidad de un producto de satisfacer tal deseo o necesidad.
 
 Bien (Good): Objeto material, servicio inmaterial o derecho que és útil a quien lo usa o lo posee.
-	Diferencia con producto?
-Bien libre o no economicos: Sin dueño ni precio, abundante y sin proceso productivo para adquirirlo.
-Bien escasos o económico: Bien adquirible en un mercado por un valor.
 
 Segun su origen:
 	Bienes manufacturados (manufactured goods)
 	Materias primas (raw materials)
 
 Segun su destino:
-	Bienes de consumo: destino al mercado de masas ??
-	Bienes 
+	Bienes de consumo o finales: destino al mercado de masas, no crear otros bienes
+	Bienes intermedios: bienes que se usan para obtener otros bienes
+	Bienes comerciales: 
 
 Transabilidad: capacidad de ser movido y consumido en otro sitio
 	Bienes inmuebles: No transables. Casas, tierras...
@@ -42,11 +49,12 @@ Funcionalidad:
 Rivalidad: El consumo de un bien por un individuo impide el consumo simultaneo por parte de otro
 	Anti-rivalidad: El consumo de un bien por un individuo beneficia el consumo por parte
 	de otros consumidores. (lenguaje, FLOSS, telefonia)
-	TODO: Como se llama si se puede consumir no simultaneamente?
+	No-rival
+
 Excludibilidad: Se puede excluir a individuos de su consumo (si no pagan, por ejemplo) 
 	Bienes privados: Rivales y exclusibles
-	Bienes publicos: Ni rivalidad ni exclusividad. Conocimiento (sin patentes), lluvia, aire, luz solar...
-	Bienes comunes: Rivales pero no excludibles. (peces en el oceano, medio ambiente)
+	Bienes publicos: Ni rivalidad ni exclusividad. Conocimiento (sin patentes), television por antena, defensa nacional, lluvia, aire, luz solar...
+	Bienes comunes: Rivales pero no excludibles. No se puede excluir quien los usa pero son limitados. pesca, medio ambiente
 	Bienes club: No hay rivalidad pero si se limita el uso a pago (peajes, tele de pago
 
 Fungibilidad (1): Capacidad de un bien para ser substituido por otro equivalente
