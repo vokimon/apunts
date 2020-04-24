@@ -190,6 +190,19 @@ Usually they use a Model-View-Controller like approach.
 * [Vue](https://vuejs.org/)
 	- MVC framework
 
+## HTML Presentations
+
+- [Impress.js](http://impress.js.com)
+	- Somewhat slow compared to others
+	- 3d transforms
+	- Content written in markdown
+	- [Integration with pandoc](https://github.com/jgm/pandoc/wiki/Creating-impress.js-slide-shows-with-pandoc) by using
+	  [this template]()
+
+- [Reveal.js](https://revealjs.com/)
+	- Vertical and horizontal slider
+	- Transition effects
+	- Integrated with pandoc
 
 ### Style preprocessors
 
