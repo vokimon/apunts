@@ -252,7 +252,7 @@ if (std::regexp_search("estamos en 2015-23-22", match, rgx)) {
 
 
 
-# Cxx14
+# C++14
 
 - Literales binarios 0b0001001
 - Comilla ignorada en los literales para legibilidad:  10'200'231,0012
@@ -261,62 +261,43 @@ if (std::regexp_search("estamos en 2015-23-22", match, rgx)) {
 	- h, min, s, ms, us, ns -> std::chrono::duration
 	- i, il, is -> std::complex
 - get<type>(tuple) si solo hay un elemento de esa tipo en la tupla.
+- attributes:
+	- `[[deprecated]]` and [[deprecated("reason"]: warns if declaration used
+	- `[[noreturn]]` a function does not return to the caller (abort, exit...)
+	- `[[carries_dependency]]` extra information about dependency chains
+	- `[[deprecated]]` an entity is deprecated
+	- `[[deprecated("reason")]]` provides additional message about the deprecation
+- folding ops
+	- `args + ...` -> `(arg1 + (arg2 + (...)))`
+	- `... + args` -> `arg1 + (arg2 + (...)))`
+	- `val + ... + args` ->  (val + (arg1 + (arg2 +(...))))
+	- `args + ...` reduces (op may be `+ * & | , && ||`)
+	- `args + ...` -> `(arg1 + (arg2 + (...)))`
+	- when args empty, suitable default returns for the operator
+	- sizeof ...value
+- libreria standard
+	- `<filesystem>`: `path`!!!, `space_info`, `copy`...
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# C++17
+	
+- Templates:
+	- params of constructors can now be deduced: `pair a {34, 'mary's};`
+	- `auto` non-type template parameters adapts to whatever the type `template <auto value> decl`  
+- Structured binding `auto [a, b, c] = tuple, array, class or struct with 3 static public items.
+	- modifiers like `&` `&&` `const` `constexpr` `[[attr]]`... can be added outside the `[]`
+- init statement for if: like the one in `for` semicoloned between parenthesis, with scope...
+- Inline declaration of static members: `class A { static inline int seed = rand(); }`
+- Lambdas can be `constexpr`
+- Lambdas capturing this within a class: simplifies the idiom `[this=self] () { self->method() }` into `[*this] () { method()`
+- `from_chars` and `to_chars` fast and controllable serialization for ints and floats
+- nested namespace declaration `namespace A { namespace B { decl }}` can be compacted as `namespace A::B { decl }`
+- preprocessor `if __hasinclude(<include>)` to check for the existance of a header (can be "" for local headers)
+- new attributes:
+	- `[[falltrough]]` to note a switch case misses a break intentionally, avoids warning
+	- `[[maybeunused]]` to note a declaration might not be used, avoids warning
+	- `[[nodiscard]]` warns if the return value is not captured by the caller (ie. important error status, allocated resource...)
+	- `[[deprecated("reason"]] will show the reason if used
 
 
 
