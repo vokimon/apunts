@@ -114,6 +114,9 @@ Patron util usar las variables de entorno para modificar la configuración.
 Útil per a no incloure a la imatge final tot el que cal per construir l'aplicació,
 com ara l'es eines de build i les dependencies de desenvolupament (composer, babel, cython...).
 
+- Tamany: Ocupa menys
+- Seguretat: Es redueix la superficie d'atac
+
 Construim l'aplicació en una imatge i després copiem els fitxers construits a l'imatge final.
 
 ```dockerfile
@@ -136,21 +139,27 @@ RUN ...
 
 ## Xarxa
 
-Els ports d'escolta del container no estan exposats a l'exterior per defecte.
+Els ports d'escolta del container no son visibles a l'exterior per defecte.
 Tampoc colisionen, que això es bó.
-El Dockerfile de la imatge (o les que en depen) te, per exemple un `EXPOSE 80`
-podem publicar aquest port 80.
-Normalment volem fer-ho a un port concret: run amb `-p hostport:containerport`
+
+Un Dockerfile defineix un port publicable amb `EXPOSE`, pe `EXPOSE 80`.
+Això vol dir que podem mapejar aquest port a un port del host.
+
+L'opció `-P` mapeja tots els ports exposats a ports aleatoris del host.
+Podem esbrinar els ports mapejats amb `docker ps`.
+
+Normalment volem exposar-ho a un port concret: run amb `-p hostport:containerport`
 Si no ponem un `OUTER:`, s'assignen ports aleatoris.
-Podem veure aquest port amb `docker ps`.
-Podem mapejar tots els ports EXPOSEd aleatoriament amb `-P`.
+
+Els ports exposats s'hereten.
+Per exemple, les imatges oficials d'apache exposen el port 80.
+Els docker de que depenen de la imatge d'apache tambe el tindran.
 
 ## Reinici automàtic
 
 ```bash
 composer run --restart=no|always|onfailure:3|unless-stop
 ```
-
 
 ## Recursos
 
@@ -186,8 +195,8 @@ donde crea los dockers aunque no digamos nada en cli.
 
 ## Publicacion
 
-Crear una cuenta en docker hub
-En settings linkad con la cuenta del repo (github, bitbucket...)
+Crear una cuenta en docker hub.
+En settings linkad con la cuenta del repo (github, bitbucket...).
 
 ## Composición de servicios
 
