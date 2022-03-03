@@ -19,7 +19,7 @@ Docker afegeix una capa per sobre:
 Creem una container interactiu (-it) de docker, basant-nos en una imatge d'Ubuntu.
 
 ```bash
-docker -it ubuntu
+docker run -it ubuntu
 ```
 
 - Executa una comanda dintre d'un sistema de fitxers "copiat" de la imatge.
@@ -38,9 +38,11 @@ Podem fer servir tant els id's com els noms per referir-nos a les instàncies.
 
 ```bash
 docker log 5fabbdd99c65 # ens mostra la sortida estandard del procés principal, util sobretot si no l'hem executat interactiu o hem sortit
+docker log -f 5fabbdd99c65 # 'follow' sigue monitorizando lo que sale despues
 docker stop 5fabbdd99c65
 docker start -i 5fabbdd99c65 # para arrancarlo otra vez
 docker rm 5fabbdd99c65 # para borrarlo definitivamente del sistema
+docker run -it ubuntu # volveria a arrancar uno diferente
 ```
 
 ## Imatges
@@ -82,8 +84,13 @@ docker build -t myapp .
 
 La imatge es dirà _myapp_
 
-Per obrir i mapejar  ports -pOUTER:INNER
-Per esborrar el container en acabar el run, `--rm`
+```bash
+docker run -it --rm myapp -p8000:80
+```
+
+- Per obrir i mapejar  ports -pOUTER:INNER
+- Per esborrar el container en acabar el run, `--rm`
+- `-f mydockerfile` si el fichero no se llama `Dockerfile` (por ejemplo para tener varios en un directorio)
 
 ## Environ
 
