@@ -73,7 +73,8 @@ CMD ['/bin/bash']
 	- Sobreescribible por cli con el parametro del run
 - `ENTRYPOINT` fija el comando para arrancar el comando inicial `sh -c`
 	- Sobreescribible por cli con `--entrypoint`
-- `LABEL` metadata de la imagen  mylabel="value"a
+- `LABEL` metadata de la imagen  mylabel="value"
+	- maintaner, application...
 - `WORKDIR` cambia al directorio para los siguientes comandos
 
 Per a executar el Dockerfile
@@ -97,16 +98,16 @@ docker run -it --rm myapp -p8000:80
 Patron util usar las variables de entorno para modificar la configuración.
 
 - Se usa ENV en el Dockfile para definir el valor por defecto
-- Se sobrescribe en CLI docker run con la opcion `-e VAR=value`
+- Se sobrescribe en CLI `docker run` con la opcion `-e VAR=value`
+- Los programas lo cogen usando 
 - Se usa en los ficheros copiados substituyendo ${VAR}
-- TODO: No he entendido muy bien esto
-
 
 ## Cache
 
-Docker crea capas cada comando sacando el id.
-Se reaprovechan los pasos de anteriores ejecuciones.
-Interesa poner abajo los comandos que más a menudo vayan a alterar la imagen
+- Docker crea capas cada comando sacando el checksum como id.
+- Se reaprovechan los pasos de anteriores ejecuciones.
+- Interesa poner abajo los comandos que más a menudo vayan a alterar la imagen.
+- Puede interesarnos juntar varias sentencias RUN con `&&` para reducir las capas
 
 ## Multistage build
 
