@@ -9,6 +9,8 @@ Recursos:
 - Arabic Vowels (https://www.youtube.com/watch?v=F4IX3_IzE3M)
 - Arabic Spelling (https://www.youtube.com/watch?v=1x59AukUfF4)
 - [Correspondencia IPA con grafías àrabes](https://en.wikipedia.org/wiki/Help:IPA/Arabic)
+- [Saifi Institute - Arabic letters](https://www.youtube.com/watch?v=2hP4I3FHaAw&list=PLD3jN0Su8LEAXc258tycTUGbxk59WNmD0) (Transliteration)
+- [Saifi Institute - Urban arabic](https://www.youtube.com/watch?v=SqUcC8Mgsww&list=PLD3jN0Su8LEAl2MSyuLYSXybT2bqL7Hx9)
 
 Principios:
 
@@ -34,9 +36,9 @@ Principios:
 
 Vocales cortas: ejemplos de grafía con د (d) /d/ d (dental oclusiva)
 
-- da دَ (da) a corta (una ralla encima de la consonante) (pronunciada /æ/ como en Ann con excepciones /ɑ/)
-- di دِ (di) i corta (una ralla debajo de la consonante) (pronunciada /ɪ/ como _bit_ en inglés, a veces e abierta // o cerrada)
-- du دُ (du) u corta (un lazo encima de la consonante) (pronunciada /ʊ/ como _look_ en inglés, a veces o abierta o cerrada)
+- da دَ (da) a corta (una ralla encima de la consonante, fatjaa) (pronunciada /æ/ como en Ann con excepciones /ɑ/)
+- di دِ (di) i corta (una ralla debajo de la consonante, dumma) (pronunciada /ɪ/ como _bit_ en inglés, a veces e abierta // o cerrada)
+- du دُ (du) u corta (un lazo encima de la consonante, kasra) (pronunciada /ʊ/ como _look_ en inglés, a veces o abierta o cerrada)
 
 Vocales largas:
 
@@ -160,12 +162,15 @@ Digrafo: ل + ا = لا
 
 Aliph alternativa: ى como una yay sin dieresis. Para final de algunas palabras. No es intercambiable cada palabra escoge.
 
+Taa2 Marbuta (ة): Una taah conectada. Va al final de la palabra.
+Se usa entre otras cosas para femeninos.
+
 ## Diacriticos especiales
 
 https://en.wikipedia.org/wiki/Arabic_diacritics
 
 - hakarat: indicadores de vocales cortas
-- shadda: w inclinada encima de una consonante, indica su gemminacion (prolongacion)
+- shaddi: w inclinada encima de una consonante, indica su gemminacion (prolongacion)
 - sukun o: circulo encima de una consonante, indica que no hay una vocal implicita
 - maddah ~: glotal stop solo encima de aliph ﺍ
 - waslah  : cabeza de agila mirando ala izquierda, vocal elidible en medio de la frase (se pronuncia solo al principio)
@@ -202,52 +207,181 @@ Después de una consonante con enfasis faringeo, o velar o una r, las vocales se
 - "X es adjetivo" -> "X adjetivo"
 - "X es de Sitio" -> "X de Sitio" "X min Sitio", "min" se escribe: مِن
 - "X tiene Y" -> "Donde X Y" "2ind X Y", "2ind" se escribe: عِنْد 
+- "No tiene X -> Se añade la negación "laissa" لَيْسَ al inicio de la frase
+- "Yo/tu.. tiene X" -> "Donde mi/tu.. X" "2indii/ak/ik... X" (se añaden los sufijos posesivos)
+- "X esta en Y" -> "X fii Y". fii se escribe في
 - Género: todos los nombres tienen genero
 - Los adjetivos concuerdan con el género del nombre
 - Adjetivos femeninos acaban en ة /a/ (una ha pero con dos puntos)
 - Gentilicios añadiendo una yay.
   - Oman -> Omanii
   - Lubnaan -> Lubnaanii
-- Preguntas de si o no: "hal ...frase?" hal: هَل 
-  - "¿Rawad es feliz?" هَل رَواد سَعيد؟
+- Preguntas:
+	- De si o no: "hal ...frase?" hal: هَل 
+		- Ejemplo: "¿Rawad es feliz?" هَل رَواد سَعيد؟
+	- Donde: 2in أَيْن
+		- Ejemplo: Donde esta tu casa أَيْن 
+	- Que: ma ما
+		- Ejemplo:  ما اسْمَك يا أُسْتاذ؟ Cual es su nombre, señor?
+
 - Apelativo "ya David"  ya يا Al final de la frase (de momento donde lo he visto)
+- Articulos Posesivos:
+	- 'mi': añadir ي (ii) siempre que no acabe en ة. pe. بَيْت -> بَيْتي (casa -> mi casa)
+	- 'tu': añadri ـَك (ak) 'tu' es masculino, ـِك (-ik) si 'tu' es femenino
+		- Ojo: no se traduce con "tuyo" y "tuya"
+		- No es el genero de lo pertenecido, si no de la persona a la que pertenece
+	- 'su': añadir هُ (hu) si 'su' de él, ها (haa) si 'su' es de ella
+	- Si el nombre acaba en ة (a femenina) se transforma en اَت (-at-) (aliph es ocupa el lugar de la letra previa) antes de añadir el prefijo
+		- ciudad madina مَدينة -> madinatii مَدينَتي, madinatak مَدينَتَك, madinatik مَدينَتِك, madinathu مَدينَتهُ, madinathaa مَدينَتها
+		- vecina jaara جارة -> jaaratii جارَتي, jaaratak جارَتَك, jaaratik جارَتِك
+- Posesivos:
+	- "la casa de bob" -> "bait buub" (lo poseido va delante, el posesor detras como un adjetivo, "que es de boob")
+	- Cuando una cosa poseida acaba en ة se pronuncia 'at' aunque se escriba igual
+	- Las cosas poseidas no llevan articulo determinado
+- "Hay X" hunaak هُناك al principio de la frase si se usa en otro sitio "ahi". Con "Laissa" delante para decir "no hay"
+
+
 
 
 # Vokibulario
 
-Adjetivos:
+- laikenn لٰكِنّ pero
+- laissa no
+- qariib min قَريب مِن cerca de
+
+
+## Adjetivos:
 
 - jadid جديد nuevo
+- jadidda جَديدة nueva
 - kabyr كَبير grande
+- kabyra كَبيرة grande (f)
 - muntaz ممتاز excelente/cojonudo
 - munteza مُمْتازة cojonuda
 - berrid بارِد frío
 - 3aadi عادي normal
 - gharib غَريب extraño
 - ghariba غَريبة estraña
-- jaw-an جَوْعان hambriento
-- jaw-anna جَوْعانة hambrienta
+- jaw2an جَوْعان hambriento
+- jaw2anna جَوْعانة hambrienta
+- jaw جَوْعان
 - kariim كَريم generoso
 - sa3id سَعيد feliz
 - mumti3 مُمتِع divertido
 - dhakii ذَكِيّ listo
 - dhakiiya ذَكِيّة lista
 - sariya سَريع rápido
+- sariyat سَريعة rápida
 - jayiid جَيِّد bueno
 - jeyiida جَيِّدة buena
-- jamiil جَميل bonita
+- jamiil جَميل bonito
+- jamiila جَميلة bonita
 - jubde جِدّاً muy
+- warsiha واسِعة espaciosa
+- muhimm مُهِمّ importante (m)
+- muhimmat مُهِمّة importante (f)
+- sajl سَهْل fácil
+- sajla سَهْلة fácil (f)
+- mash-hura مَشْهورة famosa (f)
+- muzdahimat مُزْدَحِمة populada (f)
+- mag'ribiy
+- tagbeanaa تَعْبانة cansada
+- tagbean تَعْبان cansado
+- latwiifaa لَطيفة amable (f)
+- tatwiif لَطيف amable (m)
+- 3golii غالي caro (m)
+- 3golia غالْية cara (f)
+- waasi3 واسِع espacioso
+- waasi3gaa واسِعة espaciosa
+- qodiima قَديمة vieja (f)
+- qodiim قَديم viejo (m)
+- Soghira صَغيرة pequeña (f)
+- Soghir صَغير pequeño (m)
+- rojiS رَخيص barato
+- rojiSoa جِدّاً barata
+- qoSir قَصير corto (m)
+- shaqiil ثَقيل pesado
+- shaquiilla ثَقيلة pesada
+- Toyiib طَيِّب bueno
+- So2b صَعْب dificil (m)
+- So2baa صَعْبة dificil (f)
+- Tawiil طَويل largo, alto (m)
+- Tawiila طَوِيلَة‎ larga, alta (f) diferencia con taawila (mesa) la larga lleva acento
 
-Advervios
 
-- tamaamaan تَماماً absolutamente
-- jidde  جِدّاً muy
+### Colores
+
+- 2az-raq  أَزْرَق - azul - f zarqaa2 زَرْقاء
+- 2abeiB أَبْيَض - blanco - f beiBaa2 بَيْضاء 
+- bonnii بُنِّيّ - marron - bonniiya بُنِّيّة
+
+Adverbios
+
+- jiddaen  جِدّاً muy
 
 
 Vestuario:
 
 - jakit جاكيت chaqueta
 - jamaal جَمال belleza
+- tisheirt تي شيرْت camiseta (de tshirt)
+- wishaah وِشاح bufanda
+- tennuraa تَنّورة falda (f)
+- bluuzaa بَلوزة blusa (f)
+- meagTof مِعْطَف abrigo (m)
+- qubbaa قُبَّعة sombrero (f)
+
+
+Cosas:
+
+- shay2 شَيْء cosa (m)
+- Saiyaru سَيّارة coche (f)
+- madina مَدِينة ciudad (f)
+- lugha لُغة lenguage
+- raqam رَقَم número
+- haatif هاتِف telefono
+- raqam haatif رَقَم هاتِف número de telefono
+- qolam قَلَم lapiz
+- qolam roSooS قَلَم رَصاص boli
+- Soajiifaa صَحيفة periodico
+- jabar جَبَر algebra
+- jabr جَبْر algebra
+- shanToo شَنْطة bolsa
+- kitaab كِتاب libro
+- majfoBoo مَحْفَظة cartera
+- mashruub مَشْروب bebida
+- siidii سي دي CD
+- daftar دَفْتَر libreta
+- laabtoob لاب توب portatil (laptop)
+- miftah مِفْتاح llaves
+- 3ailka عِلْكة goma
+- noquud نُقود efectivo
+- 2amal عَمَل work
+- Sodiiq صَديق amigo
+- Sodiiqaa صَديقة amiga
+
+Ejemplos de posesivos
+
+- 2amalii عَمَلي my work
+- 2amalaw عَمَلهُ his work
+- 2amalaahaa عَمَلها her work
+- Sodiiqhoa صَديقها her amigo
+- Sodiiqhee صَديقها his amigo
+- Sodiiqhu صَديقهُ his amigo
+- Sodiiqaatii صَديقَتي my amiga
+- Sodiiqaatuhaa صَديقَتها her amiga
+- Sodiiqaatahuu صَديقَتهُ his amiga
+- jaraatuhaa جارَتها her vecina
+- jaraatuh جارَتهُ his vecina
+- beitihaa بَيْتها her house
+- ismii اِسْمي my name
+- ismak  you name (to a man)
+- ismik  you name (to a woman)
+- ismo اِسْمهُ his name
+- ismuhaa اِسْمها her name
+- beiteh(u) بَيْتهُ his house
+- beitehaa her house
+
 
 Vivienda:
 
@@ -256,65 +390,128 @@ Vivienda:
 - bayt بَيت casa
 - karaj كراج garaje
 - hammaam حَمّام baño
-- djaar جار vecino
-- zauj زَوج marido
-    
-Comida/Animales
+- burfat غُرْفة room
+- djaamiha جامِعة universidad (f)
+- binaya بِناية edificio (f)
+- ijer إيجار renta/alquiler
+- maTbej مَطْبَخ cocina (m)
+- jammaam حَمّام baño (m)
+- jadiiqa حَديقة jardin (f)
+- Saaluun صالون sala (m)
+- Toawilaa طاوِلة taula (f)
+- ja2iB حائِط wall (m)
+- gourfa غُرْفة room (f)
+- jaasuub حاسوب ordenador
+- maktab مَكْتَب oficina
+- kursii كُرْسي silla
+- azuura صّورة foto
 
-- jamal جَمَل camello
+Animales
+
+- kelb كَلْب perro (m)
+- qiTTaa قِطّة gato (f)
+- jamal جَمَل camello (m)
 - hamaam حَمام palomas
 - dajaaj دَجاج pollos o pollo (referido a la carne)
 - samaak سَمَك pescao
 - sammad سَمَّد abonar
 
+Comida
+
+- 2ekil أَكْل comida
+- maT2am مَطْعَم restaurant (metre?)
+- miuzaa  banana
+- kohwa  cafe
+- jalib  leche
+- maa2 ماء agua
+- rooz رُزّ arroz
+
+
+Familia
+
 Personas:
 
+- zauj زَوج esposo
+- zauja زَوْجة esposa
+- djaedd جَدّ abuelo
+- djaedda جَدّة abuela
+- 2ab أَب padre
+- 2umm أُمّ madre
+- ej أَخ hermano
+- 2ukht أُخْت hermana
+- ibn اِبْن hijo
+- bint بِنْت hija
+- bint بِنْت chica
+- walad وَلَد chico
 - inroea  امْرَأة mujer
 - rajol رَجُل hombre
-- walad وَلَد chico
-- bint بِنْت chica
+- djaar جار vecino
+- djaara جارة vecina
 - duktuur دُكتور doctor
 - ductuura دُكْتورة doctora
 - mutargin مُتَرجِم traductor
 - mutargina مُتَرْجِمةtraductora
-
-- arabi عَرَبِيّ arabe
-- muhallim مُعَلِّمة profesora
-- usterda أُسْتاذة proferora
+- arabii عَرَبِيّ arabe
+- muhallima مُعَلِّمة maestra
+- ustedh أُسْتاذ profesor
+- ustedha أُسْتاذة profesora
 - muhandis مُهَنْدِس ingeniero
 - muhandisa مُهَنْدِسة ingeniera
+- malika مَلِكة reina
+- muhami مُحامي abogado
+- muhaesib مُحاسِب contable (m)
+- muhaesibaa مُحاسِبة contable (f)
 
 Pronombres
 
-- 2nti أَنْتِ Tú
-- Ana أَنا Yo
+- 2nti أَنْتِ tú
+- Ana أَنا yo
 - heiya هِيَّ ella
 - howa هُوَّ el
+- haadhaa هٰذا este
+- heedhihi هٰذِهِ esta
 
-Nombres propios
+Si haadhaa o haadhihi van seguidos de un nombre con "al-cosa/o", se convierten en los determinante "este coso", o "esta cosa"
+
+Otros utiles
+
+- usted أُسْتاذ usted/sir (apelativo respetuoso, no pronombre) (m)
+- usteda أُسْتاذة usted/ma'am (apelativo respetuoso, no pronombre) (f)
+- ishm name
+
+Nombres propios masculinos
 
 - Dawood دَوود David
 - Rawead رَواد Rawad
-- Shadi شادي Shadi
 - Zayd زَيد Zayd Said
 - Seth سيث
 - Oumar عُمَر Omar
+- Ghassan غَسّان
+- Sam سام
+- Bashir بَشير
+- Mahmuud مَحْمود Mahmoud
+- Ibrahiim إِبْراهيم Abraham
+- Muhammad مُحَمَّد Mojamé
+- Taamir تامِر Támir
+- 2Alii عَلي Alí
+
+Nombres propios femeninos
+
+- Shadi شادي Shadi
 - Samia جَوْعان Samia
 - Ranya رانْيا Rania
-- Ghassan غَسّان
 - Arwa أَرْوى Aroa
-- Lemma لَمى Lema
+- Reem ريم Rim
+- Lemma لَمى Lama
 
 
 
+Toponimos - Gentilicios
 
-
-Sitios - Gentilicios
-
-
-- 2Ameriica أَمريكا America - 2Am-riki أَمريكِيّ
+- Islamiyya إِسْلامِيّة Islamica
+- 2Ameriica أَمريكا America - 2Am-riki أَمريكِيّ - 2 - Amerikiya - أَمْريكِيّة
 - Aomaan عُمان Oman - Aomaanii عُمانِيّ
-- Lubnaan لُبنان Libano - Lubnaanii لُبنانِيّ
+- Lubnaan لُبنان Libano - Lubnaanii لُبنانِيّ - Lubnaaniya لُبْنانِيّة
 - Tunees تونِس Tunez - 
 - Suria سوريا Siria - Surii سورِيّ
 - Holenda هولَنْدا Holanda - هولَنْدِيّ Houlandii
@@ -322,14 +519,12 @@ Sitios - Gentilicios
 - Ingiltraa إِنْجِلْتِرا Inglaterra - Ingilizii إِنْجِليزِيّ
 - Skutlanda إِسْكُتْلَنْدا Escocia - Skutlandii إِسْكُتْلَنْدِيّ
 - Francia - Faransii فَرَنْسِيّ faransiya فَرَنْسِيّة
+- Marruecos - magaribii مَغْرِبِيّ
+- Jordania - 2ordonii أُرْدُنِيّ - a2ordoniya أُرْدُنِيّة
+- Almanya أَلْمانْيا Alemania - 
+- ustraaliia أُسْتُرالْيا australia
 
 
-
-
-Otros
-
-- jabar جَبَر algebra
-- jabr جَبْر algebra
  
 
 
@@ -337,10 +532,46 @@ Otros
 
 ي و ه ن م ل ك ق ف غ ع ظ ط ض ص ش س ز ر ذ د خ ح ج ث ت ب ا
 
+## Expresiones
+
+- ilhamdu lilaa اَلْحَمْدُ لِله Gracias a Dios.
+- shukran شُكْراً Gracias
+- ahlaan أَهْلاً Hola
+- tamaamaan تَماماً absolutamente
+- 3af-uen عَفْواً de nada
+- de donde eres, Judy? min ein entii  مِن أَيْن أَنْتِ يا جودي
+- de donde eres, David? min ein entaa  مِن أَيْن أَنْتَ يا دَوود
 
 
 
+## Apelativos cariñosos
 
+Patron: Llamar a la otra persona como una parte de tí.
+Mi ojo, mis ojos, mi alma, mi vida, mi edad, mi corazon...
+Por ejemplo,
+
+- 2ain عَيْن (ojo) -> 2aini عَيْني (mi ojo).
+- 2ayuun عيون (ojos) -> 2ayuunii عيني (mis ojos)
+- qalb قلب (corazón) -> qalbii قلبي (mi corazón)
+- hayaah حَيَاة (vida) -> hayaatii حياتي (mi vida)
+- 2aumr ءُمر (edad) -> 2aumrii ءُمري (mi edad)
+- ruuh رِوح (alma) -> ruuhii رُوحي (mi alma)
+
+Patron: Le das mas enfasis si lo repites: Ojos de mis ojos.
+
+| urban | arabic | spanish |
+|:----|:--|:--|
+| 2ain 2ainii | عين عيني | ojo de mi ojo
+| 2ayuun 2ayuunii | عيون عيني | ojos de mis ojos
+| qalb qalbii | قلب قلبي | corazón de mi corazón
+| hayaah hayaati | حياة حياتي | vida de mi vida
+| 2aumr 2aumrii | ءُمر ءُمري | edad de mi ediad
+| ruuh ruuhii | رُوحْ رُوحي | alma de mi alma
+
+
+## Verbos
+
+I know - 3a2rif أَعْرِف
 
 
 
