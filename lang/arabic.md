@@ -19,7 +19,7 @@ Principios:
 - Cada letra representa un fonema, de hecho, a diferencia de otros idiomas, el mapeo fonético de las consonantes es casi unívoco
 - Las letras escritas en la linea base son las consonantes y las vocales largas
 - Arriba o abajo de esas letras base se le pueden añadir signos diacríticos que indican vocales cortas
-- Las vocales cortas se pronuncian después de la letra que adorna su diacrítico.
+- Esté arriba o abajo, el diacrítico de las vocales cortas se pronuncia después de la letra que adorna.
 - A menudo, los diacríticos de las vocales cortas no se indican, dejándose implícitos
 	- Conociendo el lexico, pds ntndr l txt sltndt ls vcls
 	- Se indican cuando se piensa que el lector puede no conocer el léxico (por ejemplo, aprendiendo el idioma)
@@ -30,6 +30,7 @@ Principios:
 - Solo hay 3 vocales gràficas (a,i,u), cada una de las tres en versión corta (diacríticos) y versión larga (letras).
 - Hay variaciones fonéticas por contacto con fonemas contiguos. También debidas al dialecto.
 	- Notablemente la 'i' pueden llegar a sonar como 'e' y la 'u' como 'o', no exactamente las castellanas.
+	- La 'a' que normalmente es una /æ/, al lado de algunas consonantes, se pronuncia como una a cerrada /ɑ/ de camino a una o abierta.
 	- A pesar de las variaciones, cada vocal gràfica se mantiene en su propia zona de fonación
 	- Te haces entender si te mantienes en ella (suena raro pero se entiende)
 	- Identificas las palabras si te mantienes en esa zona
@@ -65,7 +66,7 @@ Por similaridad caligráfica
 | Thaa | ث | ثثث | th  |  θ | z española, th en think
 | Nuun | ن | ننن | n  | n | alveolar nasal sonora
 | Yay  | ﻱ | ييي  | y  | j | palatal lateral/aproximant sonora
-| Hanza| ء | ئبئبئ * | ʾ  | ʔ | glotal stop
+| Hanza| ء | ئبئبئ * | ʾ/2  | ʔ | glotal stop
 | Daal | د | بد ** | d   | d | d dental oclusiva sonora
 | Dhaal| ذ | بذ ** | dh  | ð | th inglesa o una d intervocalica española (d fricada)
 | Raa  | ر | بر ** | r   | r | r de pera pero mas liquida (en la wikipedia dicen como la de perro pero escuchando nadie lo diria)
@@ -73,7 +74,7 @@ Por similaridad caligráfica
 | Jiin | ج | ججج | dj  | dʒ | ju**tg**e (ca) **y**o, con**y**uge (es)
 | Khaa | خ | خخخ | kh  | x  | j castellana
 | Haa  | ح | ححح | ḥ   | ħ | fricativa faringea sorda, h aspirada (como si echaras baho) lengua presionando en la epíglotis
-| Ayin | ع | ععع | ʿ   | ʕ | fricativa faringea sonora, partiendo de la /ħ/ hagamos presion hasta que vibre
+| Ayin | ع | ععع | ʿ/3   | ʕ | fricativa faringea sonora, partiendo de la /ħ/ hagamos presion hasta que vibre
 | Ghayn| غ | غغغ | gh   | ɣ | fricativa velar sonora (g intervocalica castellana)
 | Waaw | ﻭ | بَو | w/u  | w | labio-velar lateral/aproximant sonora, tambien vocal /u/ o alofonas /o/ o //
 | Faa  | ف | ففف | f   | f | fricativa labiodental sorda
@@ -94,7 +95,6 @@ Por similaridad caligráfica
 
 \*\* Estas grafías no tienen enlace posterior, para ilustrar el anterior la he precedido con una Baa.
 
-
 Enfasis faringeo: subir la lengua a la faringe mientras articulas la posición de la lengua del fonema base.
 
 Tabla por posición fonética:
@@ -105,11 +105,11 @@ TODO
 ### Ligaduras
 
 Cada letra puede tener 4 grafías diferentes.
-La mayoría de manuales, dicen que la grafía depende de la posición de la letra en la palabra:
+La mayoría de manuales, se lían llamando a cada grafía segun la posición en la palabra:
 Independiente, inicial, intermedia o final.
 Pero eso nos dará, luego, un monton de casos especiales
 que podemos simplificar si el criterio que definimos no es la posición en la palabra
-sinó de si tiene ligaduras con la letra anterior o con la letra posterior.
+sinó que tenga ligaduras o no con las letras anterior y posterior.
 
 Nombre clásico  | Ligadura anterior | Ligadura posterior |
 ---------|-------------------|--------------------|
@@ -125,28 +125,24 @@ Hasta aquí los dos criterios serian equivalentes.
 Los casos especiales vienen con una serie de letras que no se
 enlazan nunca con la siguiente: ﺩ ﺫ ﺯ ﺭ ﺍ ﻭ
 
-Estas letras sólo tienen dos grafías:
+Como no tienen enlace con la siguiente, estas letras sólo tienen dos grafías:
 
-- inicial y independiente son la misma: ﺩ ﺫ ﺯ ﺭ ﺍ ﻭ
-- final y intermedia son la misma: بَد  بَذ  بَر  بَز  بَا  بَو (enlazadas con _ba_ بَ)
+- sin ligadura anterior: inicial y independiente son la misma: ﺩ ﺫ ﺯ ﺭ ﺍ ﻭ
+- con ligadura anterior: final y intermedia son la misma: بَد  بَذ  بَر  بَز  بَا  بَو (enlazadas con _ba_ بَ)
 
-Además, fuerzan que la siguiente letra no tenga ligadura anterior,
-así que aunque la siguiente letra esté:
+**Como no enlazan la siguiente letra, la siguiente letra tampoco tendrá ligadura inicial.**
+De ello, se pueden deducir los casos especiales para la letra siguiente:
 
-- en una posición intermedia, queda la grafía inicial
-- en una posición final, queda la grafía independiente
-
-En el fondo, las reglas anteriores se pueden deducir naturalmente
-si en vez de considerar las grafías por posición en la palabra,
-las consideras por ligadura:
-
-> Como esas letras no se ligan con la siguiente, la siguiente no tiene ligadura inicial.
+- en una posición intermedia, queda la grafía inicial 
+	- Ejemplo: la segunda _ba_ de cada grupo: بَدبَبَ  بَذبَبَ  بَربَبَ  بَزبَبَ  بَابَبَ  بَوبَبَ
+- en una posición final, queda la grafía independiente x
+	- Ejemplo: la segunda _ba_ de cada grupo: بَدبَ  بَذبَ  بَربَ  بَزبَ  بَابَ  بَوبَ
 
 
-Para el resto, podemos aprendernos unas reglas generales, y unas pocas excepciones:
+Para aprender las formas, podemos aprendernos unas reglas generales, y unas pocas excepciones:
 
-1. Las letras que son como otras pero con una dieresis o similar, tienen formas anàlogas.
-2. Las formas sin ligadura final suelen acabar con una rúbrica, que no tienen las otras. Identifica la rúbrica y sabrás que eliminar cuando ligas al final.
+1. Las letras que son similares a otras variando una dieresis o similar, tienen formas anàlogas.
+2. Las formas sin ligadura final suelen acabar con una rúbrica, que no tienen las otras. Si identificas la rúbrica, sabrás qué eliminar en las formas con ligadura al final.
 3. Las formas con ligadura apenas añaden un segmento horizontal como ligadura.
 4. Las excepciones a estas normas son poquitas así que las aprendemos y ya está.
 5. Muchas letras en su forma ligada, al perder la rúbrica, se convierten en algo parecido a una i latina, para diferenciarlas, nos fijamos en los signos diacríticos
@@ -158,12 +154,13 @@ Para el resto, podemos aprendernos unas reglas generales, y unas pocas excepcion
 6. La Sii y la Shii ligadas, son muchas i latinas juntas. hay que fijarse que la Sii no lleva diacritico alguno y la Shi lleva los tres puntos como la Tha pero no se ponen sobre la primera 'i'
 
 
-Digrafo: ل + ا = لا
+Otras letras especiales:
 
-Aliph alternativa: ى como una yay sin dieresis. Para final de algunas palabras. No es intercambiable cada palabra escoge.
-
-Taa2 Marbuta (ة): Una taah conectada. Va al final de la palabra.
+- Digrafo: ل + ا = لا
+- Aliph alternativa: ى como una yay sin dieresis. Para final de algunas palabras. No es intercambiable cada palabra escoge.
+- Taa2 Marbuta (ة): Una taah conectada. Va al final de la palabra.
 Se usa entre otras cosas para femeninos.
+- 2aa آ sintetiza ءا (parada glotal y a larga)
 
 ## Diacriticos especiales
 
@@ -202,20 +199,39 @@ Después de una consonante con enfasis faringeo, o velar o una r, las vocales se
 
 # Gramatica
 
-- Adjetivos despues del nombre.
-- Lo que diriamos con un/una se dice sin determinante
-- "X es adjetivo" -> "X adjetivo"
-- "X es de Sitio" -> "X de Sitio" "X min Sitio", "min" se escribe: مِن
-- "X tiene Y" -> "Donde X Y" "2ind X Y", "2ind" se escribe: عِنْد 
-- "No tiene X -> Se añade la negación "laissa" لَيْسَ al inicio de la frase
-- "Yo/tu.. tiene X" -> "Donde mi/tu.. X" "2indii/ak/ik... X" (se añaden los sufijos posesivos)
-- "X esta en Y" -> "X fii Y". fii se escribe في
+- Artículos:
+  - Los indeterminados (un/una) no llevan determinante
+  - "al" se junta con la palabra
+  - Si la palabra empieza con una letra solar, la l no se pronuncia pero se dobla (pronunciada y escrita) dicha letra
+- Adjetivos:
+  - despues del nombre.
+  - los adjetivos que vallan con la palabra tambien llevan articulo (si no seria "la cosa es bonita" en vez de "la cosa bonita")
+  - esta distincion no se puede hacer con los determinados, asi que depende del contexto (otro verbo...)
 - Género: todos los nombres tienen genero
 - Los adjetivos concuerdan con el género del nombre
 - Adjetivos femeninos acaban en ة /a/ (una ha pero con dos puntos)
 - Gentilicios añadiendo una yay.
   - Oman -> Omanii
   - Lubnaan -> Lubnaanii
+- Posesivos:
+	- "la casa de bob" -> "bait buub" (lo poseido va delante, el posesor detras como un adjetivo, "que es de boob")
+	- Cuando una cosa poseida acaba en ة se pronuncia 'at' aunque se escriba igual
+	- Las cosas poseidas no llevan articulo determinado
+- Copulativas: por justaposicion
+	- "X es adjetivo" -> "X adjetivo" ej. Said Lubnaanii - Said es Libanes
+	- "X es de Sitio" -> "X de Sitio" "X min Sitio". "min" se escribe: مِن ej. Said min Lubnaan - Said es de Libano
+	- "X esta en Sitio" -> "X en Sitio" "X fii Sitio". "fii" se escribe في ej. Said fii Lubnaan - Said esta en el Libano.
+	- "Hay X" -> "ahi X" "hunaak X". "hunaak" se escribe هُناك al principio de la frase si se usa en otro sitio "ahi".
+	- "X tiene Y" -> "en X Y" "3ind X Y", "3ind" se escribe: عِنْد ej. 3ind Said beit - Said tiene casa
+	- Todas las anteriores, negación con "laissa" لَيْسَ al inicio de la frase
+	- Duda: cuando juxtapones varios apelativos, cuales son especificativos y cuales copulativos
+- Tener:
+	- Formas pronominales (siguen las terminaciones de los posesivos):
+		- 3indii عِنْدي tengo
+		- 3indik عِنْدِك tienes (f)
+		- 3indak عِنْدِك tienes (m)
+		- 3indhu عِنْدهُ tiene (m)
+		- 3indhaa عِنْدها tiene (f)
 - Preguntas:
 	- De si o no: "hal ...frase?" hal: هَل 
 		- Ejemplo: "¿Rawad es feliz?" هَل رَواد سَعيد؟
@@ -234,11 +250,27 @@ Después de una consonante con enfasis faringeo, o velar o una r, las vocales se
 	- Si el nombre acaba en ة (a femenina) se transforma en اَت (-at-) (aliph es ocupa el lugar de la letra previa) antes de añadir el prefijo
 		- ciudad madina مَدينة -> madinatii مَدينَتي, madinatak مَدينَتَك, madinatik مَدينَتِك, madinathu مَدينَتهُ, madinathaa مَدينَتها
 		- vecina jaara جارة -> jaaratii جارَتي, jaaratak جارَتَك, jaaratik جارَتِك
-- Posesivos:
-	- "la casa de bob" -> "bait buub" (lo poseido va delante, el posesor detras como un adjetivo, "que es de boob")
-	- Cuando una cosa poseida acaba en ة se pronuncia 'at' aunque se escriba igual
-	- Las cosas poseidas no llevan articulo determinado
-- "Hay X" hunaak هُناك al principio de la frase si se usa en otro sitio "ahi". Con "Laissa" delante para decir "no hay"
+- "I like" uhibb أُحِبّ
+- "I do not like" laa uhibb  لا أُحِبّ  I do not like
+- Verbo con Il delante, impersonal 'el correr' اَلْجَري elgerii
+- Asimilacion de 'al'
+  - la mitad de las letras enmudece la 'l' i se dobla la primera consonante.
+  - se escribe tanto la l como la dieresis de doblaje
+  - ta -> at-ta atun اَلتُّنّ‎ (at-tunn) altramuz 
+  - tha -> ath-Tha 
+  - ra -> ar-ra arrecife الرَصِيف‎ (ar-raṣīf)
+  - za -> az-za aceite اََلزَّيْت‎ (az-zayt)  azafrán اَلزَّعْفَرَان az-za`farān 
+  - sa -> as-sa azucar اَلسُّكَّر‎ (as-súkkar) (acicalar, acicate, acequia)
+  - sha -> ash-sha ajedrez الشَطْرَنْج‎ (aš-šaṭranj)
+  - da -> ad-da adalid اَلدَلِيل‎ (ad-dalīl) quien guia (aduana, adoquin)
+  - dha -> adh-dha
+  - la -> al-la alubia اللُوبِيَا‎ (al-lúbya)
+  - na -> an-na añil النيل‎ (an-nīl) azul oscuro
+  - Y todas las letras con enfasis faringeo:
+	-  adobe اَلطُّوب‎ (aṭ-ṭūb) ladrillo
+	- 
+  - el resto: alabama, albacete, alcalino, algeciras, aljibe, alhambra, algarve, alfanjor, alquimia, almudena, alicate
+  - aceite (z), atun (t), azucar (s)
 
 
 
@@ -246,8 +278,45 @@ Después de una consonante con enfasis faringeo, o velar o una r, las vocales se
 # Vokibulario
 
 - laikenn لٰكِنّ pero
-- laissa no
+- laissa no  (copulativo)
+- laa لا no (no copulativos)
+
+## Preposiciones
+
+- fii في en 
+- min ﻢِﻧ de (origen)
 - qariib min قَريب مِن cerca de
+- ma3a مَعَ con (compañia)
+- il·laa إِلى hacia
+- 2aan عَن about
+
+
+## Verbos
+
+- al-qiraa3a اَلْقِراءة reading
+- al-kitaaba الْكِتابة writing
+- el-lekil اَلْأَكْل comer
+- el-gerii اَلْجَري correr
+- an-naum الْنَّوْم   dormir (fer nones)
+- et-taSuiir اَلْتَّصْوير fotografiar
+- es-sibaaha اَلْسِّباحة nadar 
+- es-safar اَلْسَّفَر viajar (safari! mi viaje)
+- el-kalaam اَلْكَلام hablar
+
+
+## Adverbios
+
+- jiddaen  جِدّاً muy
+- kethiron صَباحاً mucho
+- eibon أَيْضاً también  (al final de la frase)
+- masaa2an مَساءً por la tarde (alfinal de la frase)
+- Sobaahaan صَباحاً por la mañana (al final de la frase)
+- bil·lail بِالْلَّيْل por la noche (al final de la frase)
+- bahd alDDouhr بَعْد اَلْظُّهْر   al atardecer (al final de la frase)
+- kathiraon كَثيراً  mucho (al final, con ugib)
+- hunac هُناك  ahi (al final de la frase)
+- hunaa هُنا aqui (al final de la frase)
+
 
 
 ## Adjetivos:
@@ -277,7 +346,6 @@ Después de una consonante con enfasis faringeo, o velar o una r, las vocales se
 - jamiil جَميل bonito
 - jamiila جَميلة bonita
 - jubde جِدّاً muy
-- warsiha واسِعة espaciosa
 - muhimm مُهِمّ importante (m)
 - muhimmat مُهِمّة importante (f)
 - sajl سَهْل fácil
@@ -306,18 +374,14 @@ Después de una consonante con enfasis faringeo, o velar o una r, las vocales se
 - So2b صَعْب dificil (m)
 - So2baa صَعْبة dificil (f)
 - Tawiil طَويل largo, alto (m)
-- Tawiila طَوِيلَة‎ larga, alta (f) diferencia con taawila (mesa) la larga lleva acento
+- Tawiila طَوِيلَة larga, alta (f) diferencia con taawila (mesa) la larga lleva acento
 
 
 ### Colores
 
 - 2az-raq  أَزْرَق - azul - f zarqaa2 زَرْقاء
 - 2abeiB أَبْيَض - blanco - f beiBaa2 بَيْضاء 
-- bonnii بُنِّيّ - marron - bonniiya بُنِّيّة
-
-Adverbios
-
-- jiddaen  جِدّاً muy
+- bonniy بُنِّيّ - marron - bonniiya بُنِّيّة
 
 
 Vestuario:
@@ -439,6 +503,7 @@ Personas:
 - 2umm أُمّ madre
 - ej أَخ hermano
 - 2ukht أُخْت hermana
+- khaal خال tio
 - ibn اِبْن hijo
 - bint بِنْت hija
 - bint بِنْت chica
@@ -464,8 +529,9 @@ Personas:
 
 Pronombres
 
-- 2nti أَنْتِ tú
-- Ana أَنا yo
+- aanaa أَنا yo
+- 2anti أَنْتِ tú (f)
+- 2anta أَنْتَ tú (m)
 - heiya هِيَّ ella
 - howa هُوَّ el
 - haadhaa هٰذا este
@@ -523,7 +589,7 @@ Toponimos - Gentilicios
 - Jordania - 2ordonii أُرْدُنِيّ - a2ordoniya أُرْدُنِيّة
 - Almanya أَلْمانْيا Alemania - 
 - ustraaliia أُسْتُرالْيا australia
-
+- iitoolia إيطالْيا Italia
 
  
 
