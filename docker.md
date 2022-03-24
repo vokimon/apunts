@@ -18,6 +18,16 @@ Docker afegeix una capa per sobre:
 
 Creem una container interactiu (-it) de docker, basant-nos en una imatge d'Ubuntu.
 
+- Imagen: definición de entorno (ficheros)
+	- Se identifican por un nombre
+	- Se montan una encima de otra (podemos hacer una imagen de mysql encima de una de Ubuntu)
+	- Hay un repositorio de imagenes construidas de donde bajarlas
+	- También podemos crearla con un Dockerfile
+- Container: instancia de una imagen
+	- Tienen un id
+	- Puede estar encendida o apagada
+	- Mantiene el estado entre encendidos si no la borramos
+
 ```bash
 docker run -it ubuntu
 ```
@@ -310,29 +320,27 @@ networks:
       name: myothernetwork
 ```
 
+## Docker en producción?
 
+- No es conveniente montar el docker compose con servicios que necesitan persistència.
+- Con docker-compose no podemos distribuir servicios. Para hacerlo asi necesitariamos herramientas tipo Kubernetes.
+- Si que puede ser útil montar el docker de la aplicación
 
+## Consejos
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+- Usar imagenes oficiales
+	- se ha trabajado en ellas para que ocupen lo menos posible
+	- al final lo importante es la version del servicio, no que OS hay por debajo
+	- perdemos la cache entre imagenes si son OS distinto
+- Usar la latest
+	- Siempre tengo la ultima version
+	- 
+- links vs dependson:
+	- links deprecado, decia que container habla con cual, con networks + dependson
+- ip's
+	- Las ips no tienen porque mantenerse, mejor usar los nombres
+- docker no espera a que el servicio esta disponilbe, simplemente la maquina
+	- diseño aplicaciones capaces de resistir a caida de servicios
+	- scripts para esperar que el servicio este levantado
 
 
