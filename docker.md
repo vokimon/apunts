@@ -43,6 +43,7 @@ docker stop 5fabbdd99c65
 docker start -i 5fabbdd99c65 # para arrancarlo otra vez
 docker rm 5fabbdd99c65 # para borrarlo definitivamente del sistema
 docker run -it ubuntu # volveria a arrancar uno diferente
+docker exec -it 5fabbdd99c65 ls -alF
 ```
 
 ## Imatges
@@ -183,14 +184,19 @@ para acelerar el flujo de desarrollo.
 ```bash
 docker volume ls # lista los volumentes
 docker volume create name #  crea un volumen especifico
+docker inspect -f  "{{json .Mounts}}" my-app  # Lista los volumenes montados por el container my-app
 ```
 
-Por defecto los guarda en un directorio de la aplicacion.
+Por defecto los guarda en un directorio de docker (var/lib/docker/).
 Podemos especificar el directorio que montamos.
 
 Tambien se puede especificar el VOLUME en el Dockerfile.
 En ese caso, si no le especificamos nada, docker lo creara
 donde crea los dockers aunque no digamos nada en cli.
+
+```dockerfile
+VOLUME 
+```
 
 
 ## Publicacion
@@ -211,35 +217,43 @@ Se define en el
 version: 2.3
 services:
   myservice:
-    images: ubuntu
-    volumes:
+    images: ubuntu         # Esta imagen la toma tal cual
+    volumes:               # Monta el directorio actual en /var/www/html
       -${PWD}:/var/www/html
     ports:
       - 8000:80
   myapp:
-    build:
-      context: ${PWD}
-      dockerfile: Dockerfile
-    ports:
+    build:                   # Esta imagen es construida
+      context: ${PWD}           # Path en el que se construira la imagen, tomamos PWD del entorno de usuario
+      dockerfile: Dockerfile    # Fichero Dockerfile para construir la imagen
+    ports:                   # Expondra el puerto 80 interno como 8001 en localhost
       - 8001:80
-    environment:
+    environment:             # Pasara estas variables de entorno
       - VAR=value
-    depends_on:
+    depends_on: # Esperara a que el otro servicio este levantado
       - myservice
 ```
  
-
+```bash
 docker-compose up -d 
+```
 
--d para detach (background)
+- `-d` para detach (background)
 
 Ofrece comandos que se aplican a la vez a todos los containers definidos en el fichero:
 
 - `docker-compose ps` Estado de los containers
 - `docker-compose log` Salida combinada de los containers
 - `docker-compose top` Top de procesos en los containers
+- `docker-compose stop` Para los procesos pero sin eliminarlos
+- `docker-compose down` Elimina los contenedores
+- `docker-compose build` Solo construye las imagenes
 
-La imagen construida se llama por defecto, como el directorio y el nombre del servicio: `myproject_myappp`
+
+La imagen construida se llama por defecto, como el directorio y el nombre del servicio: `myproject_myapp`.
+
+- `myproject` por el directorio en el que está el yaml
+- `myapp` por la etiqueta del servicio
 
 Las siguientes ejecuciones reusan la imagen creada.
 Hace falta forzar con `docker-compose up --build`
@@ -260,24 +274,27 @@ No es buena idea hardcodear el environment en el compose
 
 ## Networking en compose
 
-Por defecto cada docker tiene su propia red.
+Por defecto, con `docker-compose` cada docker tiene su propia red.
 Para que dos contenedores se vean, tienen que estar en la misma red.
 Podemos crear redes y mover contenedores entre ellas.
 En ese caso, el nombre de contenedor hace de servername.
+
+Utilidades de red:
 
 - `docker network ls`
 - `docker network create NETWORK`
 - `docker network connect NETWORK CONTAINER`
 - `docker network disconnect NETWORK CONTAINER`
 
-Los servicios en un docker-compose se levantan, por defecto, como hosts diferentes de la misma red local.
+Los servicios en un docker-compose se levantan, por defecto, como hosts diferentes de la misma red local `default`.
 Los composers se ven entre ellos usando como dns el nombre del servicio.
 Pero podemos crear estructuras de red mas complejas.
 Todos los contenedores se ven entre ellos si comparten red.
-Podemos gestionar las 
 
+Cada servicio define sus `networks` cuando queremos no ponerlas en `default`:
 
-Cada servicio define sus `networks`
+- Las aplicaciones solo se pueden ver si tienen una red en común.
+- Esto permite aislar servicios para más seguridad
 
 ```yaml
 ...
@@ -289,15 +306,10 @@ services:
 networks:
   mynetwork:
   myexistingnetwork:
-    external:
+    external:    # creada fuera del docker-compose con docker-network
       name: myothernetwork
 ```
 
-
-
-
-
-TODO: docker exec
 
 
 
