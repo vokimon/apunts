@@ -557,7 +557,7 @@ Para usar classes comunes con otros modules
   composes: otherClass from './other.component.css';
   color: red;
 }
-
+```
 
 ### Normalización de estilos
 
