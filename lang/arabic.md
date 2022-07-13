@@ -26,7 +26,8 @@
 	- "X es adjetivo" -> "X adjetivo" ej. Said Lubnaanii - Said es Libanes
 	- "X es de Sitio" -> "X de Sitio" "X min Sitio". "min" se escribe: مِن ej. Said min Lubnaan - Said es de Libano
 	- "X esta en Sitio" -> "X en Sitio" "X fii Sitio". "fii" se escribe في ej. Said fii Lubnaan - Said esta en el Libano.
-	- "Hay X" -> "ahi X" "hunaak X".
+	- "Hay X en Sitio" -> "Sitio X" ej. "hunaak X" (hunnak indica lugar generico "ahi") "(Ahi) hay X"
+		- Pueden ser otros lugares mas elaborados, ver abajo.
 	- "X esta ahi" -> "X ahi" "X hunaak".
 	- "X tiene Y" -> "en X Y" "3ind X Y", "3ind" se escribe: عِنْد ej. 3ind Said beit - Said tiene casa
 	- Todas las anteriores, negación con "laissa" لَيْسَ al inicio de la frase
@@ -54,35 +55,42 @@
 		- Ejemplo: Donde esta tu casa أَيْن 
 	- Que: ma ما
 		- Ejemplo:  ما اسْمَك يا أُسْتاذ؟ Cual es su nombre, señor?
+	- Quien: man مَن
+		- Ejemplo: مَن هُوَّ؟ Quien es él?
+	- Como: keif كَيْف
+		- Ejemplo: 
+	- Como: keifak: como estas كَيْفَك
+
+
 - Apelativo "ya David"  ya يا Al final de la frase (de momento donde lo he visto)
 - "I like" uhibb أُحِبّ
 - "I do not like" laa uhibb  لا أُحِبّ  I do not like
 - Verbo con Il delante, impersonal 'el correr' اَلْجَري elgerii
 - Asimilacion de 'al'
-  - la mitad de las letras enmudece la 'l' i se dobla la primera consonante.
-  - se escribe tanto la l como la dieresis de doblaje
-  - ta -> at-ta atun اَلتُّنّ‎ (at-tunn) altramuz 
-  - tha -> ath-Tha 
-  - ra -> ar-ra arrecife الرَصِيف‎ (ar-raṣīf)
-  - za -> az-za aceite اََلزَّيْت‎ (az-zayt)  azafrán اَلزَّعْفَرَان az-za`farān 
-  - sa -> as-sa azucar اَلسُّكَّر‎ (as-súkkar) (acicalar, acicate, acequia)
-  - sha -> ash-sha ajedrez الشَطْرَنْج‎ (aš-šaṭranj)
-  - da -> ad-da adalid اَلدَلِيل‎ (ad-dalīl) quien guia (aduana, adoquin)
-  - dha -> adh-dha
-  - la -> al-la alubia اللُوبِيَا‎ (al-lúbya)
-  - na -> an-na añil النيل‎ (an-nīl) azul oscuro
-  - Y todas las letras con enfasis faringeo:
-	-  adobe اَلطُّوب‎ (aṭ-ṭūb) ladrillo
-	- 
-  - el resto: alabama, albacete, alcalino, algeciras, aljibe, alhambra, algarve, alfanjor, alquimia, almudena, alicate
-  - aceite (z), atun (t), azucar (s)
+	- la mitad de las letras enmudece la 'l' i se dobla la primera consonante.
+	- se escribe tanto la l como la dieresis de doblaje
+		- ta -> at-ta atun اَلتُّنّ‎ (at-tunn)
+		- tha -> ath-tha 
+		- ra ->  ar-ra arroz اَلْرُّزّ (ar-ruzz) arrecife الرَصِيف‎ (ar-raṣīf)
+		- za -> az-za aceite اََلزَّيْت‎ (az-zayt)  azafrán اَلزَّعْفَرَان az-za`farān 
+		- sa -> as-sa azucar اَلسُّكَّر‎ (as-súkkar) (acicalar, acicate, acequia)
+		- sha -> ash-sha ajedrez الشَطْرَنْج‎ (aš-šaṭranj)
+		- da -> ad-da adalid اَلدَلِيل‎ (ad-dalīl) quien guia (aduana, adoquin)
+		- dha -> adh-dha
+		- la -> al-la alubia اللُوبِيَا‎ (al-lúbya)
+		- na -> an-na añil النيل‎ (an-nīl) azul oscuro
+		- Y todas las letras con enfasis faringeo:
+		-  adobe اَلطُّوب‎ (aṭ-ṭūb) ladrillo
+		- 
+	- aceite (z), atun (t), azucar (s), arroz (r), alubia (l), añil (n), ajedrez (sh), adalid (d), falta (dh)
+	- el resto: alabama, albacete, alcalino, algeciras, aljibe, alhambra, algarve, alfanjor, alquimia, almudena, alicate
 
-
+- bisabat بِسَبَب debido a, porque (X bisabat Y)
 
 
 # Vokibulario
 
-- laikenn لٰكِنّ pero
+- lakinn لٰكِنّ pero
 - laissa no  (copulativo)
 - laa لا no (no copulativos)
 
@@ -94,23 +102,24 @@
 - ma3a مَعَ con (compañia)
 - il·laa إِلى hacia
 - 2aan عَن about
-
-
-## Verbos
-
-- al-qiraa3a اَلْقِراءة reading
-- al-kitaaba الْكِتابة writing
-- el-lekil اَلْأَكْل comer
-- el-gerii اَلْجَري correr
-- an-naum الْنَّوْم   dormir (fer nones)
-- et-taSuiir اَلْتَّصْوير fotografiar
-- es-sibaaha اَلْسِّباحة nadar 
-- es-safar اَلْسَّفَر viajar (safari! mi viaje)
-- el-kalaam اَلْكَلام hablar
+- emeem أَمام en frente de X
+	- emem/ii/ik/ak/... en frente mio, tuyo...
+	- ememii أَمامي of me
+	- ememaah أَمامهُ of him
+- bigenib بِجانِب al lado de X
+	- bigenibak بِجانِبَك a tu (m) lado 
+	- bigenibiha بِجانِبها a su (f) lado
+- jolf خَلْف detras de X
+	- jolfii خَلْفي detras mío
+	- jolfik خَلْفِك detras tuyo (f)
+	- jolfahaa خَلْفها detras suyo (f)
 
 
 ## Adverbios
 
+
+- li-l-2asaf لِلْأَسَف lamentablemente ("lamentando", 2asaf lamentar)
+- de2imen دائِماً siempre (en medio)
 - jiddaen  جِدّاً muy
 - kethiron صَباحاً mucho
 - eibon أَيْضاً también  (al final de la frase)
@@ -121,8 +130,7 @@
 - kathiraon كَثيراً  mucho (al final, con ugib)
 - hunac هُناك  ahi (al final de la frase)
 - hunaa هُنا aqui (al final de la frase)
-
-
+- bihoir - بِخَيْر - bien
 
 ## Adjetivos:
 
@@ -142,6 +150,8 @@
 - kariim كَريم generoso
 - sa3id سَعيد feliz
 - mumti3 مُمتِع divertido
+- mudgeik مُضْحِك divertido (m) 
+- mudgika مُضْحِكة divertia (f)
 - dhakii ذَكِيّ listo
 - dhakiiya ذَكِيّة lista
 - sariya سَريع rápido
@@ -153,18 +163,24 @@
 - jubde جِدّاً muy
 - muhimm مُهِمّ importante (m)
 - muhimmat مُهِمّة importante (f)
-- sajl سَهْل fácil
-- sajla سَهْلة fácil (f)
+- mash-hur مَشْهور famoso (m)
 - mash-hura مَشْهورة famosa (f)
+- shaqiil ثَقيل pesado
+- shaquiilla ثَقيلة pesada
+- sajl سَهْل fácil (m)
+- sajla سَهْلة fácil (f)
+- So2b صَعْب dificil (m)
+- So2baa صَعْبة dificil (f)
+- mashghoula مَشْغولة atareada (f)
+- mashghoul مَشْغول atareado (m)
 - muzdahimat مُزْدَحِمة populada (f)
-- mag'ribiy
 - tagbeanaa تَعْبانة cansada
 - tagbean تَعْبان cansado
 - latwiifaa لَطيفة amable (f)
 - tatwiif لَطيف amable (m)
 - 3golii غالي caro (m)
 - 3golia غالْية cara (f)
-- waasi3 واسِع espacioso
+- waasi3a واسِع espacioso
 - waasi3gaa واسِعة espaciosa
 - qodiima قَديمة vieja (f)
 - qodiim قَديم viejo (m)
@@ -173,13 +189,25 @@
 - rojiS رَخيص barato
 - rojiSoa جِدّاً barata
 - qoSir قَصير corto (m)
-- shaqiil ثَقيل pesado
-- shaquiilla ثَقيلة pesada
 - Toyiib طَيِّب bueno
-- So2b صَعْب dificil (m)
-- So2baa صَعْبة dificil (f)
 - Tawiil طَويل largo, alto (m)
 - Tawiila طَوِيلَة larga, alta (f) diferencia con taawila (mesa) la larga lleva acento
+- mutenewag مُتَنَوِّع diverso (m)
+- munenewaga مُتَنَوِّعة diversa (f)
+- taariixii تاريخِيّ historico (m) (de tarij, historia)
+- taariixiiya تاريخية historica (f)
+- jafiifaa خَفيفة ligera (f)
+- jafif خَفيف ligero (m)
+- 3aalya عالْية alta (f)
+- ghaniyy غَنِيّ rico
+- ghaniyya غَنِيّة rica
+- mariD  مَريض enfermo
+- haziin حَزين triste (m)
+- sagiliya ساحِلِيّة costera (de la costa, sagil)
+- na3sen نَعْسان adormilado (de dormir naum)
+- na3sena نَعْسانة adormilada
+- mutahamis - مُتَحَمِّس - excitado
+- yella - يَلّا - bien (estar bien)
 
 
 ### Colores
@@ -205,7 +233,6 @@ Cosas:
 
 - shay2 شَيْء cosa (m)
 - Saiyaru سَيّارة coche (f)
-- madina مَدِينة ciudad (f)
 - lugha لُغة lenguage
 - raqam رَقَم número
 - haatif هاتِف telefono
@@ -228,6 +255,8 @@ Cosas:
 - 2amal عَمَل work
 - Sodiiq صَديق amigo
 - Sodiiqaa صَديقة amiga
+- xolfiyya خَلْفِيّة fondo (de 'jolf' detras)
+- akhbar أَخْبار noticia
 
 Ejemplos de posesivos
 
@@ -240,6 +269,7 @@ Ejemplos de posesivos
 - Sodiiqaatii صَديقَتي my amiga
 - Sodiiqaatuhaa صَديقَتها her amiga
 - Sodiiqaatahuu صَديقَتهُ his amiga
+- Sodiiquaiau صَديقَتهُ his amiga
 - jaraatuhaa جارَتها her vecina
 - jaraatuh جارَتهُ his vecina
 - beitihaa بَيْتها her house
@@ -272,7 +302,7 @@ Vivienda:
 - gourfa غُرْفة room (f)
 - jaasuub حاسوب ordenador
 - maktab مَكْتَب oficina
-- kursii كُرْسي silla
+- kursii كُرْسي silla 
 - azuura صّورة foto
 
 Animales
@@ -280,6 +310,7 @@ Animales
 - kelb كَلْب perro (m)
 - qiTTaa قِطّة gato (f)
 - jamal جَمَل camello (m)
+- assad أَسَد leon
 - hamaam حَمام palomas
 - dajaaj دَجاج pollos o pollo (referido a la carne)
 - samaak سَمَك pescao
@@ -289,7 +320,7 @@ Comida
 
 - 2ekil أَكْل comida
 - maT2am مَطْعَم restaurant (metre?)
-- miuzaa  banana
+- muza موزة banana (f)
 - kohwa  cafe
 - jalib  leche
 - maa2 ماء agua
@@ -298,8 +329,8 @@ Comida
 
 Familia
 
-Personas:
-
+- el-3a-ila - اَلْعائِلة - la familia
+- 3a-iletuha  عائِلَتها su(f) familia
 - zauj زَوج esposo
 - zauja زَوْجة esposa
 - djaedd جَدّ abuelo
@@ -317,11 +348,14 @@ Personas:
 - rajol رَجُل hombre
 - djaar جار vecino
 - djaara جارة vecina
+
+
+Profesiones
+
 - duktuur دُكتور doctor
 - ductuura دُكْتورة doctora
 - mutargin مُتَرجِم traductor
 - mutargina مُتَرْجِمةtraductora
-- arabii عَرَبِيّ arabe
 - muhallima مُعَلِّمة maestra
 - ustedh أُسْتاذ profesor
 - ustedha أُسْتاذة profesora
@@ -339,16 +373,19 @@ Pronombres
 - 2anta أَنْتَ tú (m)
 - heiya هِيَّ ella
 - howa هُوَّ el
-- heedhihi هٰذِهِ esta (f)
+- haadhihi هٰذِهِ esta (f)
 - haadhaa هٰذا este (m)
 
 Si haadhaa o haadhihi van seguidos de un nombre con "al-cosa/o", se convierten en los determinante "este coso", o "esta cosa"
+
+- kull shait كُلّ شَيْء todo (toda cosa)
 
 Otros utiles
 
 - usted أُسْتاذ usted/sir (apelativo respetuoso, no pronombre) (m)
 - usteda أُسْتاذة usted/ma'am (apelativo respetuoso, no pronombre) (f)
 - ishm name
+
 
 Nombres propios masculinos
 
@@ -374,11 +411,13 @@ Nombres propios femeninos
 - Arwa أَرْوى Aroa
 - Reem ريم Rim
 - Lemma لَمى Lama
-
+- Ziina زَيْنة Zeina
+- Sara سارة Sarah
 
 
 Toponimos - Gentilicios
 
+- arabii عَرَبِيّ arabe
 - Islamiyya إِسْلامِيّة Islamica
 - 2Ameriica أَمريكا America - 2Am-riki أَمريكِيّ - 2 - Amerikiya - أَمْريكِيّة
 - Aomaan عُمان Oman - Aomaanii عُمانِيّ
@@ -389,12 +428,99 @@ Toponimos - Gentilicios
 - Cánedaa كَنَدا - Canedii كَنَدِيّ
 - Ingiltraa إِنْجِلْتِرا Inglaterra - Ingilizii إِنْجِليزِيّ
 - Skutlanda إِسْكُتْلَنْدا Escocia - Skutlandii إِسْكُتْلَنْدِيّ
-- Francia - Faransii فَرَنْسِيّ faransiya فَرَنْسِيّة
+- Faronsa فَرَنْسا Francia - Faransii فَرَنْسِيّ faransiya فَرَنْسِيّة
 - Marruecos - magaribii مَغْرِبِيّ
 - Jordania - 2ordonii أُرْدُنِيّ - a2ordoniya أُرْدُنِيّة
 - Almanya أَلْمانْيا Alemania - 
 - ustraaliia أُسْتُرالْيا australia
 - iitoolia إيطالْيا Italia
+- aS-Sin  اَلْصّين China
+- el-yemen اَلْيَمَن Yemen
+- el-urddun اَلْأُرْدُن Jordania
+- es-suudaan اَلْسّودان Sudan
+- la-iraq وَالْعِراق Iraq
+- Faronsa فَرَنْسا Francia
+- filasTiin فِلَسْطين Palestina - filasTiniya فِلَسْطينِيّة
+- Bagdaah بَغْداد Baghad
+- elxartum اَلْخَرطوم Jartum (Khartum)
+- miSr مِصْر Egipto
+- elcaahiro اَلْقاهِرة El Cairo
+- elbaher elalbioB elmutawashiT اَلْبَحْر اَلْأَبْيَض اَلْمُتَوَسِّط  El mar blanco intermedio (Mediterraneo)
+- iliskandariya اَلْإِسْكَنْدَرِيّة Alejandria
+- dimashq دِمَشْق Damasco
+
+Geografia
+
+- jabal جَبَل montaña
+- sagil ساحِل costa
+- bahr بَحْر mar
+- maqen مَكان lugar
+- balad بَلَد country
+- wileia وِلاية estado/provincia (f)
+- madina مَدِينة ciudad (f)
+- 3aSuima عاصِمة capital
+- DHawaHi ضَواحي suburbio
+- qoria قَرْيَة pueblo
+- Tobi3aa طَّبيعة naturaleza
+- djazira جَزيرة isla
+
+
+
+
+
+
+- na3am نَعَم sí
+
+
+
+Tiempo
+
+- Toqs طَقْس tiempo (wheather, not time)
+- yaum يَوْم dia
+- robi3a رَّبيع Primavera (f)
+- Soif صَيْف Verano
+- shitaa2 شِتاء Invierno
+- xarif خَريف Otoño
+- mushsmish اَلْمُشْمِس soleado (adj m)
+- mum*p*er مُمْطِر lluvioso (adj m)
+- haar حارّ caluroso (adj m)
+- meDor مَطَر lluvia (n m)
+- rtuuBBa رُطوبة humedad (f)
+- eliown اَلْيَوْم hoy
+- elhomer اَلْقَمَر la luna
+- el·laan اَلآن ahora (adv)
+
+Lenguage
+
+- suu2el سُؤال pregunta
+
+
+## Numeros
+
+el2aded اَلْأَعْداد
+
+
+- 0 - ٠ - sifr - صِفْرٌ
+- 1 - ١ - wahid - واحد
+- 2 - ٢ - ithnan - إثنان
+- 3 - ٣ - thalatha - ثلاثة
+- 4 - ٤ - arba'a - أربع
+- 5 - ٥ - khamsa - خمسة
+- 6 - ٦ - sitta - ستة
+- 7 - ٧ - sab'a - سبعة
+- 8 - ٨ - thamaniya - ثمانية
+- 9 - ٩ - tis'a - تسعة
+- 10 - ١٠ - 'ashara - عشرة
+- 11 - ١١ - ahada 'ashar - احد عشر
+- 12 - ١٢ - ithna 'ashar - اثنا عشر
+- 13 - ١٣ - thalatha 'ashar - ثلاثة عشر
+- 14 - ١٤ - arba'a 'ashar - اربعة عشر
+- 15 - ١٥ - khamsa 'ashar - خمسة عشر
+- 16 - ١٦ - sitta 'ashar - ستة عشر
+- 17 - ١٧ - sab'a 'ashar - سبعة عشر
+- 18 - ١٨ - thamaniya 'ashar - ثمانية عشر
+- 19 - ١٩ - tis'a 'ashar - تسعة عشر
+- 20 - ٢٠ - 'ishrun - عشرون
 
 
 ## Expresiones
@@ -402,11 +528,30 @@ Toponimos - Gentilicios
 - ilhamdu lilaa اَلْحَمْدُ لِله Gracias a Dios.
 - shukran شُكْراً Gracias
 - ahlaan أَهْلاً Hola
+- hola - marhaben تَعُدّين
+- tamaam - ok vale - تَمام
 - tamaamaan تَماماً absolutamente
 - 3af-uen عَفْواً de nada
 - de donde eres, Judy? min ein entii  مِن أَيْن أَنْتِ يا جودي
 - de donde eres, David? min ein entaa  مِن أَيْن أَنْتَ يا دَوود
-
+- estoy bien - 2ana bekhoir - أَنا بِخَيْر
+- un placer conocerte - tesharrofna - تَشَرَّفْنا
+- estoy bien, gracias, y tu como estas? ana bijair shukraan ua enta keifak? أَنا بِخَيْر شُكْراً وَأَنْتَ كَيْفَك ؟
+- Good morning - Sobeah elkhoir -  صَباح اَلْخَيْر
+- Good morning  to you (m) - Sobeah ennur - صَباح اَلْنّور 
+- Good evening - masaa3 elkhir - مَساء اَلْخَيْر
+- Good evening to you (f) - masaa3 ennur - مَساء اَلْنّور
+- Como estas (f)? - keifik - كَيْفِك
+- Adios - bei - باي (barbarisme angles de bye?)
+- Cual es tu nombre - ma ismek - ما ٱسْمَك
+- Hasta la próxima (hasta el encuentro) - illae llaeqo2 - ٱلْلِّقاء (elalicoo3)
+- feliz dia - yaum sa3id - يَوْم سَعيد
+- godbye (con seguridad??) - ma essallam - مَعَ ٱلْسَّلامة
+- que hay de nuevo (que es nuevo) - ma elehber - ما ٱلْأَخْبار
+- como va el curo (como es curro) - keif el3amen - كَيْف اَلْعَمَل
+- que la paz sea contigo - essallam 3aeleikum - اَلْسَّلامُ عَلَيْكُم
+- y que contigo sea - ualeikum es-sallam - وَعَلَيْكُمُ ٱلْسَّلام
+- dios quiera que bien - in sha2 alla bijoir - إِنْ شاءَ  ٱلله بِخَيْر (sha2 quiso, bijoir bien, in que)
 
 
 ## Apelativos cariñosos
@@ -437,8 +582,37 @@ Patron: Le das mas enfasis si lo repites: Ojos de mis ojos.
 ## Verbos
 
 I know - 3a2rif أَعْرِف
+ella viste - 'levisa لابِسة
+tu(m) vistes - levis لابِس
+I count - audd أَعُدّ
+I live - askun - أَسْكُن
 
 
 
+- 2_     yo hago
+- t_     tu (m) haces
+- t_iim  tu (f) haces
+- y_     el hace
+- t_     ella hace (igual que tu(m))
 
+
+## Verbos
+
+- al-qiraa3a اَلْقِراءة reading
+- al-kitaaba الْكِتابة writing
+- el-lekil اَلْأَكْل comer
+- el-gerii اَلْجَري correr
+- an-naum الْنَّوْم   dormir (fer nones)
+- et-taSuiir اَلْتَّصْوير fotografiar
+- es-sibaaha اَلْسِّباحة nadar 
+- es-safar اَلْسَّفَر viajar (safari! mi viaje)
+- el-kalaam اَلْكَلام hablar
+- el-2aftaH abrir
+- i open - 2aftah - أَفْتَح
+- i know - 2a3rif - أَعْرِف 
+- you (f) know - ta3rifiin - تَعْرِفين
+- you (m) know - ta3rif - تَعْرِف
+- you count - taghudd - تَعُدّ
+- you (f) count - ta3udiin
+- el-3amel - trabajar - اَلْعَمَل
 

@@ -1,5 +1,7 @@
 # Arabic script
 
+Aviso: esto son los apuntes y mnemotécnicas de una persona que está aprendiendo. No lo tomes como fuente primaria.
+
 Recursos:
 
 - Arabic Alphabet (https://www.youtube.com/watch?v=ZX2Qw3SAmmo)
@@ -120,8 +122,8 @@ Es lógico pensar que las letras en los extremos de la palabra
 no tienen ligadura hacia fuera.
 Hasta aquí los dos criterios serian equivalentes.
 
-Los casos especiales vienen con una serie de letras que no se
-enlazan nunca con la siguiente: ﺩ ﺫ ﺯ ﺭ ﺍ ﻭ
+Los casos especiales vienen con una serie de letras que **no se
+enlazan nunca con la siguiente letra**: ﺩ ﺫ ﺯ ﺭ ﺍ ﻭ
 
 Como no tienen enlace con la siguiente, estas letras sólo tienen dos grafías:
 
@@ -129,7 +131,8 @@ Como no tienen enlace con la siguiente, estas letras sólo tienen dos grafías:
 - con ligadura anterior: final y intermedia son la misma: بَد  بَذ  بَر  بَز  بَا  بَو (enlazadas con _ba_ بَ)
 
 **Como no enlazan la siguiente letra, la siguiente letra tampoco tendrá ligadura inicial.**
-De ello, se pueden deducir los casos especiales para la letra siguiente:
+
+Los casos especiales para la letra siguiente se pueden deducir de la frase anterior:
 
 - en una posición intermedia, queda la grafía inicial 
 	- Ejemplo: la segunda _ba_ de cada grupo: بَدبَبَ  بَذبَبَ  بَربَبَ  بَزبَبَ  بَابَبَ  بَوبَبَ
@@ -140,7 +143,7 @@ De ello, se pueden deducir los casos especiales para la letra siguiente:
 Para aprender las formas, podemos aprendernos unas reglas generales, y unas pocas excepciones:
 
 1. Las letras que son similares a otras variando una dieresis o similar, tienen formas anàlogas.
-2. Las formas sin ligadura final suelen acabar con una rúbrica, que no tienen las otras. Si identificas la rúbrica, sabrás qué eliminar en las formas con ligadura al final.
+2. Las formas sin ligadura final suelen acabar con una rúbrica que no forma parte de las otras formas de la letra. Identificar la parte que es rúbrica ayuda a memorizarlas.
 3. Las formas con ligadura apenas añaden un segmento horizontal como ligadura.
 4. Las excepciones a estas normas son poquitas así que las aprendemos y ya está.
 5. Muchas letras en su forma ligada, al perder la rúbrica, se convierten en algo parecido a una i latina, para diferenciarlas, nos fijamos en los signos diacríticos
@@ -151,14 +154,13 @@ Para aprender las formas, podemos aprendernos unas reglas generales, y unas poca
 	- /j/ ⟨ـيـ⟩ ي.
 6. La Sii y la Shii ligadas, son muchas i latinas juntas. hay que fijarse que la Sii no lleva diacritico alguno y la Shi lleva los tres puntos como la Tha pero no se ponen sobre la primera 'i'
 
-
 Otras letras especiales:
 
 - Digrafo: ل + ا = لا
 - Aliph alternativa: ى como una yay sin dieresis. Para final de algunas palabras. No es intercambiable cada palabra escoge.
 - Taa2 Marbuta (ة): Una taah conectada. Va al final de la palabra.
 Se usa entre otras cosas para femeninos.
-- 2aa آ sintetiza ءا (parada glotal y a larga)
+- 2aa آ sintetiza ءا (parada glotal y a larga) (maddah)
 
 ## Diacriticos especiales
 
@@ -170,6 +172,7 @@ https://en.wikipedia.org/wiki/Arabic_diacritics
 - maddah ~: glotal stop solo encima de aliph ﺍ
 - waslah  : cabeza de agila mirando ala izquierda, vocal elidible en medio de la frase (se pronuncia solo al principio)
 - tanwin: doble i o a corta, o u corta con un monte despues, indica que se pronuncia con n final (in, an, un)
+- aliph: ' encima de la letra, es una a larga.
 - ijam: diferenciadores de consonantes con ligaduras a dos lados
 	- /b/ ⟨ـبـ⟩ ب,
 	- /t/ ⟨ـتـ⟩ ت,
