@@ -337,111 +337,36 @@ Skewness 0
 
 Given a population with a variable following a distribution with a finite variance,
 the distribution of the means of random samples of the population
-tends to be a normal distribution, whatever the original population ditribution
-If you get whatever population with finite variance,
-the distribution of the means of any sample of the population
-
-Distributions of the means, not the means individually.
-Sample distribution 
-
-Distribution of sample means:
-
-
+tends to be a normal distribution, whatever the original population ditribution,
+on increasing sample size.
 
 Central Limit Theorem:
-The distribution of sample means for na independent random variable
+The distribution of sample means for an independent random variable
 will get closer and closer to a normal distribution as the size of the sample
 gets bigger and bigger, even if the original population distribution isn't normal itself.
 
+The mean of the sample distribution is also getting closer to the population mean
+as we increase the sample.
 
 
+Standard Error (of the mean): 
+The standard deviation on 
 
+For larger samples, the standard error will be smaller
 
+Margin of error (2ð): have 99% of the means, so it is quite secure to state that the population mean will be within that margin.
 
 
 
+The central limit can be used on regressions...
 
+Estimation of the standard error:
 
+## Interval of confidence
 
+Confidence interval: An estimated range of values that seems reasonable for the population mean based on what we observed.
+Such an interval has the center on the sample mean and covers some room for uncertainty
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	
 
 
 
