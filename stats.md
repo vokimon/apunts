@@ -367,6 +367,12 @@ Estimation of the standard error:
 Confidence interval: An estimated range of values that seems reasonable for the population mean based on what we observed.
 Such an interval has the center on the sample mean and covers some room for uncertainty
 
+IE. A confidence interval of 95% means that if we take a sample of this same side we are missing the population mean 5% of the times.
+
+
+
+
+
 
 
 

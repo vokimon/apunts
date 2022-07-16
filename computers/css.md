@@ -67,4 +67,29 @@ dpcm: dots per cm
 dppx: dots per pixel unit
 
 
+## new functions
+
+- `calc(expression)`
+- `min(value, value, value...)`
+- `max(value, value, value...)`
+- `clamp(min, value, max)`
+- `attr(name units, fallback)` takes the value from named xml attribute of the target (no comma between attribute name and the units
+- `url(url)`
+- `rgb(r,g,b)`
+- `rgba(r,g,b,a)`
+- `hsl(hue, saturation, lightness)`
+  - hue 0/360 red, 120 green, 240 blue.
+  - saturation 100% is the full color, 0% a shade of gray
+  - lightness: 100% white, 50% normal, 0% black
+- `hsla(hue, saturation, lightness, alpha)`
+
+## new colors
+
+- currentColor: Inherited color
+- transparent: rgba(0,0,0,0)
+
+
+
+
+
 
