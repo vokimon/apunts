@@ -283,12 +283,261 @@ A learning system could infer the relationship of the dependant variables respec
 
 The commonly used is the linear regression that suposes a proportion or inverse proportion among variables.
 
+Example: Price of a house depending on the number of rooms, bathrooms and garage space (how many cars).
+
+Features, shape 3:
+
+- Number of rooms
+- Number of bathrooms
+- Number of cars in garage
+
+Outcome, shape 1:
+
+- House price
+
+Other parameters:
+
+- Hidden activation: ReLU (Rectified Linear Unit)
+- Option activation:
+- Loss function: Computes the error on the output
+  - (MSE) Mean Square Error
+  - (MAE) Mean Absolute error
+  - Huber (combination of MSE and MAE)
+- Optimizer: How to compute the next weights given the error
+  - SGD Stochastic Gradient Descent
+  - Adam Adaptative Moment Estimation
+- Evaluation metrics: Human indicator on how well works
 
 
 
+```
+# Set random seed
+
+tf.random.set_seed(42)
+
+# Create a model using the Sequential API
+model = tf.keras.Sequential([
+  tf.keras.layers.Dense(1)
+])
+
+# Compile the model
+model.compile(
+	loss=tf.keras.losses.mae, # mae is short for mean absolute error
+	optimizer=tf.keras.optimizers.SGD(), # SGD is short for stochastic gradient descent
+	metrics=["mae"]
+)
+
+# Fit the model
+# model.fit(X, y, epochs=5) # this will break with TensorFlow 2.7.0+
+model.fit(tf.expand_dims(X, axis=-1), y, epochs=5)
+
+model 
+```
+
+## Improving the model
+
+- Model definition:
+	- Number of layers
+	- Number of neurons per layer
+	- Activation function
+- Compilation:
+	- Optimization function
+	- Optimization rate
+- Fitting:
+	- Number of epochs
+	- More data
+
+
+## Evaluating
+
+Divide the data into 3 sets:
+
+- Training set: The model learns from this data (70-80%)
+- Validation set: To tune the parameters of the model (10-15%)
+- Test set: To know the final performance achieved (10-15%)
+
+Goal: Generalization: Perform well on data you haven't seen before.
+
+Layer `Dense` means that the layer connects to all the neurons of the previous level.
+
+Trainable parameters are one for input or output connection.
+
+A dense layer `i` with `n_i` nodes will have $$ n_{i-1}*n_i + n* n_{i+1} $$ learnable parameters
+
+A network may have non-trainable parameters if we freeze them.
+You want to do this if you are reusing an already learnt model
+within a bigger one.
+
+Metrics:
+
+- Mean absolute error MAE: Reduces the importance of outliers
+- Mean squared error MSE: Larger error are more significant than smaller errors
+- Huber: Inside ð, use the square, outside use a linear proportion adjusted to be continuous in ð
+
+Visualize:
+
+- Learning data
+- Model
+- Training
+- Predictions
+
+Twiking: Change one parameter at a time and evaluate using the metrics.
+
+Tip: Start small so that we can repeat experiments before they last so long.
+
+Evaluation Libraries
+
+- TensorBoard, web app to track experimentation with several models
+
+## Exporting and importing models
+
+
+`model.save('mymodel')`
+
+Saves
+
+- Model structure
+- Weights to predict
+- Optimizer status to resume fitting
+
+`tf.keras.models.load_model('mymodel')`
+
+Its a folder with structure. Some files are protobuffer format (`.pb`)
+
+If you use the '.h5' extension it will be saved in a single file using the HDF5 format.
+This format is uses to exchange data with other frameworks.
+
+How to visualize the training:
+
+```python
+history = model.fit(X_train, y_train, epochs=100)
+
+print(history.history)
+pd.DataFrame(history.history).plot()
+```
+
+## Normalize or standardize input data
+
+Convert the input data so that all features have the same scale.
+ML algorithms perform better if input is normalized.
+Ie errors add more if the feature has large numbers.
+
+Strategies:
+
+- MinMaxScaler: Scale linearly mapping min and max to 0 and 1
+- Standardizer: Remove the mean divide by the stddev
+
+You fit the column transformer to the training set,
+and then apply to both the training and the test set.
 
 
 
+## Classification with NN
+
+Binary classification: Two exclusive categories (Is it spam? yes or no)
+
+Multiclass classification: For each sample choose one of the categories
+
+Multilabel classification: When several labels can apply to a sample
+
+What is different?
+
+- Input Layer may hav structure
+- Output Layer, one by category (in binary just one)
+- Output Activation: Softmax (or Sigmoid for binary)
+- Loss Function: `tf.keras.losses.CategoricalCrossentropy` (or `BinaryCrossentropy` for binary)
+- Avaluation: accuracy
+
+### Inputs and outputs
+
+The outputs should have an output value for each category/label
+with a value from 0 to 1, ideally one-hot-encoding.
+
+### Activation
+
+Default is linear, good for the output but hard for non-linear problems like this one.
+
+
+http://playground.tensorflow.org
+
+
+- Linear: passthru f(x) = x
+- ReLU: linear but zero for negative f(x) = max(0,x)
+- Sigmoid: curved on onf f(x) = 1 / (1+exp(x))
+
+
+### Evaluation
+
+
+Cases:
+
+- True positive: predicted positive, and it was
+- True negative: predicted negative, and it was
+- False positive: predicted positive, but was negative
+- False negative: predicted negative, but was positive
+
+Metrics:
+
+- Accuracy:
+	- (tp + tn) / (total)
+	- `tf.keras.metrics.Accuracy`
+	- General purpose. Not best for imbalanced classes
+- Precission:
+	- tp / (tp + tn)
+	- `tf.keras.metrics.Precission`
+	- Leads to less false positives
+	- You want to confirm that you detect it is right
+	- You want apply experimental treatments just the ones that has Covid
+- Recall
+	- tp / (tp + fn)
+	- `tf.keras.metrics.Recall`
+	- Leads to less false negatives
+	- You want to catch any suspect
+	- You want to screen any Covid supect
+- F1-score:
+	- 2*(precission*recall)/(precission+recall) = tp / (tp + 1/2(fp+fn))
+	- `sklearn.metrics.f1_score` # not in tensorflow
+- Confusion matrix:
+	- Not a metric
+	- `sklearn.confusion_matrix()`
+	- Good with many classes.
+
+
+```python
+sklearn.metrics.confusion_matrix(truth, prediction)
+```
+
+# Multi-class classification
+
+
+
+## Process input data
+
+- Turn all your data into numbers
+- Make them have the proper shape
+- Normalize them
+
+
+# Internal representation
+
+Each layer has  NxM weights. N outer layer nodes, M number of nodes
+
+Every neuron has a bias parameter.
+Iniciatialized zero as default.
+The bias is applied (multiplied) to the output to all the neurons of the next layer.
+
+
+
+Weights are randomly initialized at the beginning.
+(`kernel_initizalizer` parameter, by default `glorot uniform`)
+
+Generates the outputs of the trained data
+
+If fails, the error is propagated back. How?
+
+```python
+
+```
 
 
 

@@ -1,0 +1,87 @@
+<style>
+body {
+	margin: 0
+}
+.container {
+	background: lightgray;
+	border-radius: 5pt;
+	margin: .5rem;
+	padding: .5rem;
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: [monday] 1fr [tuesday] 1fr [wednesday] 2fr [thursday] 2fr [friday];
+	grid-auto-rows: 10rem;
+	overflow: scroll;
+	scroll-snap-type: both mandatory;
+}
+.item {
+	min-height: 4rem;
+	border-radius: .5rem;
+	scroll-snap-align:  center;
+	background: olive;
+	border-color: 1pt solid orange;
+	text-align: center;
+	vertical-align: middle;
+
+}
+.container .item.c1e3 {
+	grid-column: monday / wednesday;
+	grid-row: 2 / 4;
+}
+.mygrid {
+	display: grid;
+	background: lightgray;
+	border-radius: 5pt;
+	margin: .5rem;
+	gap: .2rem;
+	padding: .5rem;
+	grid-template-columns: 1fr 1fr;
+	grid-auto-columns: 1fr;
+}
+</style>
+<body>
+	<div class='mygrid'>
+		<div class="item c1e1">boo1</div>
+		<div class="item c1e2">boo2</div>
+		<div class="item c1e3">boo3</div>
+		<div class="item c1e4">boo4</div>
+		<div class="item c1e5">boo5</div>
+		<div class="item c1e6">boo6</div>
+		<div class="item c1e7">boo7</div>
+		<div class="item c1e8">boo8</div>
+		<div class="item c1e9">boo9</div>
+		<div class="item c1e10">boo10</div>
+		<div class="item c1e11">boo11</div>
+		<div class="item c1e12">boo12</div>
+		<div class="item c1e13">boo13</div>
+		<div class="item c1e14">boo14</div>
+		<div class="item c1e15">boo15</div>
+		<div class="item c1e16">boo16</div>
+		<div class="item c1e17">boo17</div>
+		<div class="item c1e18">boo18</div>
+		<div class="item c1e19">boo19</div>
+	</div>
+	<div class='container'>
+		<div class="item c1e1">boo1</div>
+		<div class="item c1e2">boo2</div>
+		<div class="item c1e3">boo3</div>
+		<div class="item c1e4">boo4</div>
+		<div class="item c1e5">boo5</div>
+		<div class="item c1e6">boo6</div>
+		<div class="item c1e7">boo7</div>
+		<div class="item c1e8">boo8</div>
+		<div class="item c1e9">boo9</div>
+		<div class="item c1e10">boo10</div>
+		<div class="item c1e11">boo11</div>
+		<div class="item c1e12">boo12</div>
+		<div class="item c1e13">boo13</div>
+		<div class="item c1e14">boo14</div>
+		<div class="item c1e15">boo15</div>
+		<div class="item c1e16">boo16</div>
+		<div class="item c1e17">boo17</div>
+		<div class="item c1e18">boo18</div>
+		<div class="item c1e19">boo19</div>
+	</div>
+
+
+</body>
