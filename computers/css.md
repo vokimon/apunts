@@ -53,6 +53,7 @@ Font relatives:
 Parent relative lengths:
 
 - %: percent relative to the parent's size
+- fr: fraction of leftover space
 
 Viewport relative lengths:
 
