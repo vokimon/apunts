@@ -2,39 +2,221 @@
 
 ## In a nutshell
 
-- Enables setting page layouts with minimal css code.
+- Goal: Setting page layouts with minimal css code. How?
 - Establishes a grid with vertical and horizontal guidelines.
-- You can define areas (squares defined by those lines) where each children will be placed.
+- You can define areas (squares defined by those lines) where each children could be placed.
 - The placement of the lines can be fixed, relative, flexible or adaptable to the content.
-- Obsoletes css frameworks like bootstrap grid. They are more powerfull.
-- Supported by all major browsers since 2017 (when Edge got into)
+- Supported by all major browsers since 2017 (when Edge catch up)
+- Obsoletes css frameworks like bootstrap grid. They are more powerfull without utility classes.
 
 ## Grids vs Flexbox
 
 Although many people was using Flexbox to build grids,
 Flexbox still is relevant as it has its own niche.
-Which are the differences?
 
-- Grids are two dimensional, while Flexbox work in one dimension at a time.
-- Grids sets the frame and the children try to fit,
-while in flexbox sets the children and the layout adapt.
+What are the differences?
+
+- **Dimensionality:**
+  - A grid container controls child placement in two dimensions,
+  - A flexbox container just controls the children flow in one dimension.
+  - Yes, flexbox can wrap and constrain sizes to get a grid.
+  It is just harder and not the primary goal.
+- **Top down vs bottom up:**
+  - With grid you set the frame and the children fit.
+  - With flexbox, the children you include mandate their final layout.
+  - Yes, again. Grid can adapt to children, and flexbox can constraint them, but...
+
+Sane defaults for your purpose saves time.
+Choose the tool closer to your purpose.
+
+## Grids vs Bootstrap (and similar css grid frameworks)
+
+- Native support, less css bloat
+- Not limited to 12 columns system.
+- Mind blowing simple setup.
+- Grid assignment is done in css, bye utility classes bloat.
+- HTML just has semantic classes, css places each semantic block.
+- Responsive bloat also controlled in css with media queries.
+  - Ie. Html says: This is a "fancy-header".
+    CSS says: In mobile the "fancy-header" goes in this area,
+    while in tablet, we are using this other grid, and it goes in this other area.
 
 ## Glossary
 
-- Grid: Framework of horizontal and vertical lines to organize the layout of children elements
-- Track: Space between to parallel contiguous lines
-- Column: Vertical track
-- Row: Horizontal track
-- Area: Square delimited by two vertical and two horizontal lines of the grid
-- Gap: space between inner tracks
+- **Grid:** A set of horizontal and vertical lines to organize the layout of children elements within a container
+- **Track:** Space between two parallel contiguous lines. Just a generic for:
+  - **Column:** Vertical track
+  - **Row:** Horizontal track
+  - The final layout is determined by the size of the tracks
+- **Area:** Square delimited by two vertical and two horizontal lines of the grid
+  - An area can **span** one or several tracks in each direction
+  - The placement target of a children is an area.
+- **Gap:** space between tracks
 
-A grid layout sets a set of vertical and horizontal lines (like inkscape guides) delimitating tracks.
-Horizontal tracks are rows.
-Vertical tracks are columns.
-Each track can be either fixed size (percent, px, vh...) or flexible (fr) taking the proportional fraction of the remaining size.
 
-Items are positioned referencing start and end separation lines.
-Lines are indexed but can be also be named.
+![Grid Schema](css-grid.svg)
+
+
+## Defining the grid
+
+The grid is defined by defining the sizes of the tracks (columns and rows)
+
+```css
+.container {
+	grid-template-columns: 20rem 1fr 1f
+	grid-template-rows: 4rem repeat(3, 1fr 2fr)
+}
+```
+
+Each of those sizes can be defined either:
+
+- fixed (`rem`, `px`...)
+- relative (`%`, `vh`...) (to the parent, viewport...)
+- flexible (`fr`) taking a proportional fraction of the remaining size
+- content dependant (`max-content`, `min-content`...) (see below)
+- a mixture of the above with `max`, `min`, `calc`...
+
+Notice the `repeat` function. It just repeat as a macro the last parameter.
+In this case, will expand as `1fr 2fr 1fr 2fr 1fr 2fr`
+
+## Placing items
+
+In between the tracks there are the lines which are
+named by default sequentially in each direction by read order 1, 2, 3...
+
+Children can be placed by indicating an area defined by two
+vertical and two horizontal lines.
+
+```css
+.mychild {
+	grid-row: 1 / 5;      /* from the first to the fifth horizontal line */
+	grid-column: 2 / 4;   /* from the second to the fourth vertical line */
+}
+```
+or, in a less clear compact form:
+
+```css
+.mychild {
+	grid-area: 1 / 2 / 5 / 4;    /* row start, column start, row end, column end */
+}
+```
+or, further separated:
+
+```css
+.mychild {
+	grid-row-start: 1;     /* from the first horizontal line */
+	grid-row-end: 5;       /* to the fifth horizontal line */
+	grid-column-start: 2;  /* from the second vertical line */
+	grid-column-end: 4;    /* to the fourth vertical line */
+}
+```
+
+the end line can be also specified as an span.
+The same area could be expressed like:
+
+```css
+.mychild {
+	grid-row: 1 / span 4;      /* from the first horizontal line span 4 rows */
+	grid-column: 2 / span 2;   /* from the second vertical line span 2 columns */
+}
+```
+or you could also use it in the compact area declaration:
+
+```css
+.mychild {
+	grid-area: 1 / 2 / span 4/ span 3;  /* same compact mode */
+}
+```
+
+## Naming lines and areas
+
+Numbers are error prone and hard to maintain.
+Thats why you can also name the lines in the template and refer them instead the numbers.
+Line names are specified in square brackets between the track sizes.
+
+```css
+.container {
+	grid-template-columns: [sidebar-start] 20rem [sidebar-end content-start] 1fr [content-end] 1f;
+}
+```
+
+Notice that the second line has two names enclosed in the brackets:
+`sidebar-end` and `content-start`.
+This means that you can use either one to refer the same line..
+
+Also, if you name a line `xxxx-start` or `xxxx-end`,
+it will implicitly define an area named `xxxx`.
+This makes using `grid-area` much easier.
+
+So, using the former definition, two named areas are defined, and we could just state:
+
+```css
+.child1 { grid-area: sidebar; }
+.child2 { grid-area: content; }
+```
+
+So, having areas, simplifies child placement specification.
+Still there is a nicer way to define areas:
+
+```css
+.container {
+	grid-template-areas:
+		'header header header'
+		'sidebar content widgets'
+		'footer footer footer'
+}
+```
+
+By defining an area name `xxxx`, line names `xxxx-start` and `xxxx-end`
+are implicitly created for both directions.
+
+## Implicit placement
+
+`grid-area` sub-properties, `column/row-start/end`, by default take value `auto`.
+Is useful to know what it means,
+not just to skip them to have leaner definitions,
+but also to detect situations when we are mispelling the property.
+
+- for `column/row-end`, `auto` means `span 1`, just take one track size.
+- for `column/row-start`, `auto` means: looking for the next empty area on the flow order.
+
+The flow order, is controled by the container's `grid-auto-flow` property.
+By default, it is `row` that means find an area first in the row, reading order,
+and then in the next row.
+
+
+
+
+
+The auto flow is determined by the `grid-auto-flow` property of the container.
+
+- `row`, the default, means that auto children will take the next available area in the row
+and if no
+
+By default it is `row`, which means that auto placed children are placed:
+- Taking the next empty area in reading order that fits the requested span.
+- 
+will take the next space to fit in the row in reading order and then the next.
+
+
+
+
+## Adding children beyond the grid
+
+When children exhaust areas defined in the grid,
+new rows will be created implicitly.
+
+The default size 
+You can expliciitly size those tracks with:
+
+```css
+grid-auto-rows: size
+```
+  /* Successive rows and columns get this with */
+TODO: how to grow in columns? -> grid-auto-flow
+
+
+
 
 By default items take the next grid cell available
 
@@ -48,7 +230,7 @@ grid-template-rows: 4rem repeat(3, 1fr 2fr)
 
 grid-auto-columns/rows: size size Successive rows and columns get this with
 
-grid-template-rows/columns: subgrid // use parent grid
+grid-template-rows/columns: subgrid // use parent grid (Firefox only by 2022-07)
 
 align-items: on the parent for the children
 align-self: on the children within the parent
@@ -136,5 +318,5 @@ As maximum, max-content.
 
 `min/max-content` Adapts to the smaller/bigger content requirement in the track
 
-
+TODO: Que pasa cuando dos items se definen en la misma celda
 

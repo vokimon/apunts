@@ -22,11 +22,17 @@ body {
 	border-color: 1pt solid orange;
 	text-align: center;
 	vertical-align: middle;
-
+	transition: 2s;
 }
 .container .item.c1e3 {
 	grid-column: monday / wednesday;
+	grid-row: 2 / -1;
+	transition: 2s;
+}
+.container .item.c1e3:hover {
+	grid-column: monday / wednesday;
 	grid-row: 2 / 4;
+	animation: grid-row 2s;
 }
 .mygrid {
 	display: grid;
