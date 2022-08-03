@@ -4,7 +4,7 @@
 
 - Goal: Setting page layouts with minimal css code. How?
 - Establishes a grid with vertical and horizontal guidelines.
-- You can define areas (squares defined by those lines) where each children could be placed.
+- Children are placed in areas defined by two pairs of those lines.
 - The placement of the lines can be fixed, relative, flexible or adaptable to the content.
 - Supported by all major browsers since 2017 (when Edge catch up)
 - Obsoletes css frameworks like bootstrap grid. They are more powerfull without utility classes.
@@ -63,8 +63,8 @@ The grid is defined by defining the sizes of the tracks (columns and rows)
 
 ```css
 .container {
-	grid-template-columns: 20rem 1fr 1f
-	grid-template-rows: 4rem repeat(3, 1fr 2fr)
+	grid-template-columns: 20rem 1fr 1f;
+	grid-template-rows: 4rem repeat(3, 1fr 2fr);
 }
 ```
 
@@ -81,11 +81,13 @@ In this case, will expand as `1fr 2fr 1fr 2fr 1fr 2fr`
 
 ## Placing items
 
-In between the tracks there are the lines which are
-named by default sequentially in each direction by read order 1, 2, 3...
+Once we have stablished the grid, the next step is to place the children.
+
+We use as reference the divisions between tracks,
+which are numbered in each direction by read order: 1, 2, 3...
 
 Children can be placed by indicating an area defined by two
-vertical and two horizontal lines.
+vertical and two horizontal divisions.
 
 ```css
 .mychild {
@@ -93,14 +95,14 @@ vertical and two horizontal lines.
 	grid-column: 2 / 4;   /* from the second to the fourth vertical line */
 }
 ```
-or, in a less clear compact form:
+or, in a less clear but compact form:
 
 ```css
 .mychild {
 	grid-area: 1 / 2 / 5 / 4;    /* row start, column start, row end, column end */
 }
 ```
-or, further separated:
+or, in the other extreme, more verbose and explicit:
 
 ```css
 .mychild {
@@ -111,7 +113,9 @@ or, further separated:
 }
 ```
 
-the end line can be also specified as an span.
+## Span
+
+The end line can be also specified as an span.
 The same area could be expressed like:
 
 ```css
@@ -120,19 +124,20 @@ The same area could be expressed like:
 	grid-column: 2 / span 2;   /* from the second vertical line span 2 columns */
 }
 ```
-or you could also use it in the compact area declaration:
+or you could also use span in the compact (and messy) area declaration:
 
 ```css
 .mychild {
-	grid-area: 1 / 2 / span 4/ span 3;  /* same compact mode */
+	grid-area: 1 / 2 / span 4 / span 3;  /* same compact mode */
 }
 ```
 
 ## Naming lines and areas
 
-Numbers are error prone and hard to maintain.
-Thats why you can also name the lines in the template and refer them instead the numbers.
-Line names are specified in square brackets between the track sizes.
+Using numbers to refer the separators can lead to maintenance problems on the long term.
+Naming track divisions can ease the reading and maintenance of the css.
+
+You can name the track lines with [square brackets] when you specify the tamplate:
 
 ```css
 .container {
@@ -140,13 +145,18 @@ Line names are specified in square brackets between the track sizes.
 }
 ```
 
-Notice that the second line has two names enclosed in the brackets:
+Notice that the second line has two names enclosed in the brackets and space separated:
 `sidebar-end` and `content-start`.
 This means that you can use either one to refer the same line..
 
-Also, if you name a line `xxxx-start` or `xxxx-end`,
+```css
+.child1 { grid-column: sidebar-start / sidebar-end; }
+```
+
+We can use any name, but if you name a line `xxxx-start` or `xxxx-end`,
 it will implicitly define an area named `xxxx`.
 This makes using `grid-area` much easier.
+
 
 So, using the former definition, two named areas are defined, and we could just state:
 
@@ -155,34 +165,53 @@ So, using the former definition, two named areas are defined, and we could just 
 .child2 { grid-area: content; }
 ```
 
-So, having areas, simplifies child placement specification.
-Still there is a nicer way to define areas:
+Using areas like this is quite direct.
+But still, defining the start and end lines is quite tedious.
+There is another way of defining the areas:
 
 ```css
 .container {
 	grid-template-areas:
 		'header header header'
-		'sidebar content widgets'
+		'sidebar content ..... '
 		'footer footer footer'
+	;
 }
 ```
 
-By defining an area name `xxxx`, line names `xxxx-start` and `xxxx-end`
-are implicitly created for both directions.
+Each line is a row and each word is a column within the row.
+If you do not use a cell for any area you can use one or more dots like in the example.
 
-## Implicit placement
+As defining track separators as `xxxx-start/end` implicitly defines `xxxx` area,
+defining `xxxxx` area also implicitly defines the track separator names `xxxx-start/end`.
 
-`grid-area` sub-properties, `column/row-start/end`, by default take value `auto`.
-Is useful to know what it means,
-not just to skip them to have leaner definitions,
-but also to detect situations when we are mispelling the property.
 
-- for `column/row-end`, `auto` means `span 1`, just take one track size.
-- for `column/row-start`, `auto` means: looking for the next empty area on the flow order.
+## Implicit placement (`auto`)
 
-The flow order, is controled by the container's `grid-auto-flow` property.
-By default, it is `row` that means find an area first in the row, reading order,
-and then in the next row.
+When some of the `grid-area` sub-properties
+(`grid-column/row-start/end`)
+is not defined for a grid children,
+it takes, by default, the value `auto`.
+Notice that `auto` has different meanings for end and start properties.
+But, for both, has the common sense effect
+of filling successive cells in reading order.
+
+- for `grid-column/row-end`, `auto` means `span 1`, just one track size.
+- for `grid-column/row-start`, `auto` means: start at the first available cell in flow order.
+
+So, what is the so called _flow order_?
+
+By default, flow order is reading order
+(in latin `ltr` languages, left to right and then up down).
+
+This is controlled by the grid container property `grid-auto-flow`.
+
+You can specify `grid-auto-flow: row` to fill column wise and within the column row-wise.
+
+When placing auto children, the standard flow will skip
+any starting cell which has no room for the requested span,
+because the track ends or because an explicit children is already using it.
+
 
 
 

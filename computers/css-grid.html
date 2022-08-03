@@ -12,7 +12,12 @@ body {
 	grid-template-columns: [monday] 1fr [tuesday] 1fr [wednesday] 2fr [thursday] 2fr [friday];
 	grid-auto-rows: 10rem;
 	overflow: scroll;
+	transition: all 2s;
 	scroll-snap-type: both mandatory;
+	will-change: grid-template-columns;
+}
+.container:hover {
+	grid-template-columns: 4fr [monday] 4fr[tuesday] 1fr [wednesday] 2fr [thursday] 2fr [friday];
 }
 .item {
 	min-height: 4rem;
@@ -22,12 +27,25 @@ body {
 	border-color: 1pt solid orange;
 	text-align: center;
 	vertical-align: middle;
-	transition: 2s;
+	transition: all 2s;
+}
+
+.glassmorphism {
+      background: rgba( 255, 255, 255, 0.25 );
+      box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+      backdrop-filter: blur( 4px );
+      border-radius: 10px;
+      border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.container .item.c1e9 {
+	grid-column: monday / wednesday;
+	grid-row: 2 / -1;
+	transition: all 2s;
 }
 .container .item.c1e3 {
 	grid-column: monday / wednesday;
-	grid-row: 2 / -1;
-	transition: 2s;
+	grid-row: 2 / 5;
+	transition: all 2s;
 }
 .container .item.c1e3:hover {
 	grid-column: monday / wednesday;
@@ -50,7 +68,7 @@ body {
 		<div class="item c1e1">boo1</div>
 		<div class="item c1e2">boo2</div>
 		<div class="item c1e3">boo3</div>
-		<div class="item c1e4">boo4</div>
+		<div class="item c1e4 glassmorphism">boo4</div>
 		<div class="item c1e5">boo5</div>
 		<div class="item c1e6">boo6</div>
 		<div class="item c1e7">boo7</div>

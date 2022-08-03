@@ -15,6 +15,8 @@ Absolute lengths:
 - pt: points 1/72in 1/182.88cm 1.333px
   - often used for absolute font sizes
 - pc: picas 1/6in 16px 4.2mm
+- lh: line height, altura de linia del elemento (ideal para alturas donde quepan n lineas)
+- rlh: root line height, altura de linea del elemento raiz
 
 Rules of thumb for sizes:
 
@@ -59,6 +61,8 @@ Viewport relative lengths:
 
 - vw: percent relative to the view port width
 - vh: percent relative to the view port height
+- vi: percent relative to the view port line axis (horizontal for most, but vertical for some asian scripts)
+- vb: percent relative to the view port block axis (vertical for most, but horizontal for some asian scripts)
 - vmin: percent relative to the view port min axis (height or width)
 - vmax: percent relative to the view port max axis (height or width)
 
@@ -228,6 +232,11 @@ Principios:
 ## Tailwind
 
 
+
+# Resources
+
+- [Defensive programming](https://defensivecss.dev/tips)
+  Soluciones a cosas raras que suelen pasar con los estilos.
 
 
 
