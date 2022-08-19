@@ -8,7 +8,8 @@ El poster ![](https://css-tricks.com/wp-content/uploads/2022/02/css-flexbox-post
 
 Flexbox es uno de los varios sistemas en css para organizar la **disposición** (layout)
 de elementos **hijos** en un elemento **contenedor**.
-En concreto, es una generalización del sistema que se usa para los sistemas de escritura.
+Otros sistemas de layout son el Normal Flow, Grid, Multicolumn...
+En concreto, Flexbox es una generalización del sistema que se usa para los sistemas de escritura.
 
 Por ejemplo: Cuando escribimos con nuestro sistema de escritura, el latino,
 colocamos las palabras de izquierda a derecha 🡆 formando líneas.
