@@ -12,8 +12,8 @@ En concreto, es una generalización del sistema que se usa para los sistemas de 
 
 Por ejemplo: Cuando escribimos con nuestro sistema de escritura, el latino,
 colocamos las palabras de izquierda a derecha 🡆 formando líneas.
-A medida que completamos las líneas, añadimos nuevas líneas
-de arriba hacia abajo 🡇.
+Cuando ya no caben palabras a lo ancho, añadimos una nueva línea.
+Estas líneas se colocan ordenadas de arriba a abajo 🡇.
 
 Flexbox llamaría a la dirección de lectura **dirección principal**,
 cada linea seria una **pista**,
@@ -61,9 +61,9 @@ con la propiedad `flex-direction` en el contenedor:
 Estos valores estan definidos respecto a la direccion de lectura,
 que cambia según el idioma:
 
-- En idiomas que se escribe de derecha a izquierda (árabe, hebreo...)
+- En idiomas que se escriben de derecha a izquierda (árabe, hebreo...)
 `row` es 🡄
-- En idiomas que se escribe de arriba a abajo (chino, japones, vietnamita, coreano...),
+- En idiomas que se escriben de arriba a abajo (chino, japones, vietnamita, coreano...),
 `row` es 🡇, ¡son columnas!
 
 ¿Qué pasa cuando se llena la pista?
@@ -87,9 +87,8 @@ Se pueden juntar las propiedades `flex-direction` y `flex-wrap` en la propiedad 
 }
 ```
 
-Para aterrizar los ejemplos, supondremos un flujo `row wrap` en un script latino
-que es el que nos és más natural.
-Teniendo en cuenta que se puede generalizar.
+El flujo que llamabamos _normal_ seria el "`row wrap`", siempre que estemos en un script latino.
+Es diferene del flujo por defecto que es "`row nowrap`".
 
 ## Flexibilidad de los elementos
 
@@ -117,7 +116,7 @@ Ningún elemento se encogerá más allá de su `min-height/width`.
 
 La propiedad `flex-basis` de los elementos hijos define el tamaño en el eje principal
 que se tiene en cuenta para saber si sobra o falta espacio en la pista.
-También es el tamaño a partir del cual crece o encoge cada elemento.
+También es el tamaño a partir del cual crece o encoge el elemento.
 
 `flex-basis` puede tener estos valores:
 
@@ -127,6 +126,7 @@ También es el tamaño a partir del cual crece o encoge cada elemento.
 - `fit-content`: Todo el tamaño disponible hasta `max-width/heigh`
 - `content` adapt to children content (La diferencia con auto es que delega en los hijos del elemento y no en el elemento)
 - Cualquier otro tamaño en unidades que tambien pueden ser relativas al contenedor (%) o al view (vh,vw,vmin,vmax) o al espacio disponible (fr).
+- También se pueden usar funciones como `calc`, `min`, `max`, `minmax`, `clamp`...
 
 Se pueden juntar `flex-grow`, `flex-shrink` y `flex-basis` en la propiedad `flex`, donde se especifican por orden grow, shrink y basis.
 Ademas puede usar algunos valores de atajo:
@@ -168,7 +168,7 @@ En cada una de esas direcciones, podemos hablar de
 Como en Flexbox no hay pistas que atraviesen la dirección principal, `justify-items` no tiene sentido.
 En Grid sí, porque se definen pistas en las dos direcciones.
 
-Volviendo a Flexbox, `align-items` para una configuracion `row wrap`,
+Volviendo a Flexbox, `align-items` para un flujo `row wrap`,
 definiría como gestionar el espacio vertical de la linea que no llena el item.
 
 Una vez definido los espacios sobrantes que queremos gestionar,
@@ -231,4 +231,12 @@ La propiedad `order` permite sacar el item de la secuencia de declaracion.
 Por defecto, todos los items tienen `order: 0`.
 Dado varios items con el mismo `order`, como pasa por defecto,
 se colocan por orden de definición.
+
+
+## Dudas
+
+- Cómo combina `justify-content: stretch` y los `flex-grow`?
+- Qué es el `last/first-baseline`?
+- baseline en flow column?
+
 
