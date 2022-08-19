@@ -1,23 +1,38 @@
-# Flex box
+# Flexbox
 
 https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 
 El poster ![](https://css-tricks.com/wp-content/uploads/2022/02/css-flexbox-poster.png)
 
-## Concepto
+## Conceptos
 
-Flexbox es un sistema para organizar la disposición (layout)
-de unos elementos hijos en un elemento contenedor,
-de forma que los hijos se van ordenando primero en un eje principal
-y posiblemente en un eje secundario.
+Flexbox es uno de los varios sistemas en css para organizar la **disposición** (layout)
+de elementos **hijos** en un elemento **contenedor**.
+En concreto, es una generalización del sistema que se usa para los sistemas de escritura.
 
+Por ejemplo: Cuando escribimos con nuestro sistema de escritura, el latino,
+colocamos las palabras de izquierda a derecha 🡆 formando líneas.
+A medida que completamos las líneas, añadimos nuevas
+de arriba hacia abajo 🡇.
 
+Flexbox llama a la dirección de lectura **dirección principal**,
+cada linea seria una **pista**,
+y la direccion en la que vamos colocando las sucesivas lineas
+ sería la **dirección de cruce**.
 
-Por ejemplo cuando escribimos, (sistema latino de escritura),
-ponemos las letras de derecha a izquierda y cuando
-llenamos una linea empezamos una linea abajo.
+Más generalmente, decimos que flexbox dispone el contenido por orden,
+primero en una **direccion principal** formando una **pista** (track),
+y, a medida que las pistas se completan, se añaden nuevas pistas
+en orden en la **dirección de cruce**, perpendicular a la principal.
 
-Lo activamos definiendo el contenedor con `display: flex`
+Esta generalización permite que la dirección principal pueda ser hacia la derecha, izquierda, arriba o abajo,
+y que la dirección de cruce pueda ser, siempre perpendicular a la principal pero también en cualquiera de los dos sentidos.
+Hablar de pistas, nos libera de estar pensando si estamos apilando horizontalmente (lineas/filas) o verticalmente (columnas).
+Pero siempre va bien aterrizar los ejemplos, y para ello usaremos las direcciones de la escritura latina.
+
+## Activación del flexbox
+
+Activamos flexbox definiendo para el contenedor la propiedad `display: flex`
 o con `display: flex-inline`
 
 ```css
@@ -26,103 +41,174 @@ o con `display: flex-inline`
 }
 ```
 
+La diferencia entre `display: flex` y `display: flex-inline` es que `flex` se comporta
+dentro de su padre como un `display: block` (`div`),
+y `flex-inline` se comporta dentro de su padre como un `display: inline` (`span`).
+
+
 ## Controlando los ejes de apilamiento
 
 En un contenedor flexbox puedes definir cual es el eje y la direccion principal
 con la propiedad `flex-direction` en el contenedor:
 
-- `row`: writting direction (left to right, for us)
-- `row-reverse`: counter writting direction (right to left, for us)
-- `column`: block development direction (up down for us)
-- `column-reverse`: counter block development direction (down up for us)
+- `row`: (por defecto) dirección de lectura (script latino: 🡆)
+- `row-reverse`: dirección opuesta a la de lectura (script latino: 🡄)
+- `column`: dirección de añadir lineas en la lectura (script latino: 🡇)
+- `column-reverse`: counter block development direction (script latino: 🡅)
 
-Ojo, eso si es script latino ltr. Con otros scripts izquierda y derecha se intercambian.
-Lo importante es que row es el sentido de lectura horizontal,
-y row-reverse sentido al reves de la lectura.
+**Ojo:**
+Estos valores estan definidos respecto a la direccion de lectura,
+que cambia según el idioma:
 
-Que pasa cuando se llena la línia?
-Siguen poniendose elementos, hace `overflow`.
-Se puede configurar la propiedad del contenedor `flex-wrap` a `wrap`
-para que los hijos pasen a la siguiente linea si no caben.
+- En idiomas que se escribe de derecha a izquierda (árabe, hebreo...)
+`row` es 🡄
+- En idiomas que se escribe de arriba a abajo (chino, japones, vietnamita, coreano...),
+`row` es 🡇, ¡son columnas!
 
-También se pueden juntar `flex-direction` y `flex-wrap` en la propiedad fusionada `flex-flow` (direction, wrap)
+¿Qué pasa cuando se llena la pista?
+Ese comportamiento lo fija la propiedad `flex-wrap` del container.
 
-Si quieres que los elementos wrappeen en la otra dirección: `wrap-reverse`
+- Por defecto, (`nowrap`) siguen añadiendo elementos a la línea y hace `overflow`.
+- Si vale `wrap`, se crean nuevas pistas (lineas) en la dirección de cruce.
+- Si vale `wrap-reverse`, se crean nuevas pistas en la dirección opuesta a la de cruce.
+
+**Ojo!:**
+El uso de `wrap-reverse`, `row-reverse` y `column-reverse`
+puede ser contraproducente para usuarios de lectores de pantalla,
+puesto que el orden de lectura seguirá siendo el de los elementos en el html.
+No es que no se pueda usar, pero hay que tenerlo presente.
+
+Se pueden juntar las propiedades `flex-direction` y `flex-wrap` en la propiedad fusionada `flex-flow` (direction, wrap)
+
+```
+.container {
+    flex-flow: column wrap-reverse;
+}
+```
+
+Para aterrizar los ejemplos, supondremos un flujo `row wrap` en un script latino
+que es el que nos és más natural.
+Teniendo en cuenta que se puede generalizar.
 
 ## Flexibilidad de los elementos
 
-Por defecto:
+Una de las potencias del flexbox es la capacidad que da a
+los hijos para adaptarse al espacio existente **en la direccion principal**.
+Esto está controlado por tres propiedades de los hijos: `flex-basis`, `flex-grow`, `flex-shrink`.
 
-- Los elementos toman como base el tamaño en la dirección principal que requiere el contenido del elemento (propiedad `flex-basis` a `auto`)
-- Los elementos no se expanden en el eje principal más allá  de lo que pide su contenido si sobrara espacio (propiedad `flex-grow` a 0)
-- Si se pueden comprimir si no caben en una linia (propiedad `flex-shrink` del elemento a `1`)
-- Los elementos se estiraran en el eje secundario hasta alcanzar la altura del elemento mas alto (propiedad `item-align` a `stretch`)
+Una vez repartidos los items en cada pista, es posible que, en una pista, sobre o falte espacio.
 
-Como se pueden modificar estas propiedades?
+Si sobra espacio, se reparte proporcionalmente al valor de la propiedad `flex-grow` de cada elemento.
+Esta propiedad, por defecto, es 0, es decir que, si no especificamos un `flex-grow` el elemento no crecerá.
+El crecimiento está limitado por el `max-height/width` del elemento.
+
+¿Cómo funciona este reparto proporcional?
+Un ejemplo: Si en un track hay 4 elementos con grow 0, 1, 2 y, 2:
+
+- El primero no crecerá aunque sobre espacio
+- El segundo crecerá 1 píxel de cada 5 (0+1+2+2) píxeles sobrantes
+- El tercero y cuarto crecerán 2 píxeles de cada 5 píxeles sobrantes
+
+Si falta espacio, pasará lo anàlogo usando la propiedad `flex-shrink`,
+cada elemento se encogerá tantos pixeles proporcionalmente a su valor de `flex-shrink`.
+Esta propiedad, por defecto, es 1, es decir que, si no especificamos ningún `flex-shrink` todos los elementos se encogerán por igual.
+Ningún elemento se encogerá más allá de su `min-height/width`.
+
+La propiedad `flex-basis` de los elementos hijos define el tamaño en el eje principal
+que se tiene en cuenta para saber si sobra o falta espacio en la pista.
+También es el tamaño a partir del cual crece o encoge cada elemento.
+
+`flex-basis` puede tener estos valores:
+
+- `auto` (por defecto) usa el tamaño del width/height del elemento
+- `max-content`: El tamaño del contenido maximo de los hermanos en la direccion de cruce
+- `min-content`: El tamaño del contenido mínimo de los hermanos en la direccion de cruce
+- `fit-content`: Todo el tamaño disponible hasta `max-width/heigh`
+- `content` adapt to children content (La diferencia con auto es que delega en los hijos del elemento y no en el elemento)
+- Cualquier otro tamaño en unidades que tambien pueden ser relativas al contenedor (%) o al view (vh,vw,vmin,vmax) o al espacio disponible (fr).
+
+Se pueden juntar `flex-grow`, `flex-shrink` y `flex-basis` en la propiedad `flex`, donde se especifican por orden grow, shrink y basis.
+Ademas puede usar algunos valores de atajo:
+
+- `initial`: Equivalente a "`0 1 auto`". Los valores por defecto. No crecerá pero se puede encoger.
+- `auto`: Equivalente a "`1 1 auto`". Crecerá o encogerá según se requiera.
+- `none`: Equivalente a "`0 0 auto`". No se adaptará ni creciendo ni encogiendo.
+
+## Ajustando/alineando los elementos
+
+¿Qué hacer cuando el contenido no llena todo el espacio disponible?
+
+Por defecto, el comportamiento es:
+
+- Los elementos se apilarán al inicio de la pista en la dirección principal dejando cualquier espacio sobrante al final.
+  - En flujo `row wrap`: los elementos se apilan a la izquierda de la linea.
+  - `justify-content: flex-start`
+- Las pistas de elementos se wrappearan al inicio de la direccion de cruce dejando cualquier espacio sobrante al final.
+  - En flujo `row wrap`: las lineas se apilan arriba del contenedor.
+  - `align-content: flex-start`
+- Los elementos de cada pista se estiraran en el eje de cruce hasta alcanzar el tamaño del mayor elemento de la pista.
+  - En flujo `row wrap`: los elementos expandiran su altura a la del elemento más alto de cada linea.
+  - `align-items: stretch`
+
+El comportamiento esta gobernado por las propiedades `justify/align-content/items`.
+La propiedad `justify-items` no tiene sentido en Flexbox, pero sí se aplica en Grid.
+La incluyo porque sirve para entender la lógica en los nombres de las propiedades.
+
+Las propiedades empiezan por:
+
+- `justify-*` cuando hablan de espacio extra en la **dirección principal**
+- `align-*` cuando hablan de espacio extra en la **direccion de cruce**
+
+En cada una de esas direcciones, podemos hablar de
+
+- `*-content`: El espacio que sobra en la dirección, después de colocar todo el contenido
+- `*-item`: El espacio en la dirección que le sobra a cada elemento dentro de la pista que atraviesa la dirección
+
+Como en Flexbox no hay pistas que atraviesen la dirección principal, `justify-items` no tiene sentido.
+En Grid sí, porque se definen pistas en las dos direcciones.
+
+Volviendo a Flexbox, `align-items` para una configuracion `row wrap`,
+definiría como gestionar el espacio vertical de la linea que no llena el item.
+
+Una vez definido los espacios sobrantes que queremos gestionar,
+¿cómo lo hacemos? ¿qué valores les podemos dar?
+
+ Para`*-content`, el sobrante de todo el contenido en una dirección (`justify-content`, `align-content`):
+
+- `flex-start` (default) ajusta los elementos al inicio del eje
+- `flex-end` ajusta los elementos al final del eje
+- `center` deja el mismo espacio a los dos lados del eje
+- `stretch`: Se da el espacio extra a los items (en la principal, se reparte segun el grow)
+- `space-arround`: Añade espacio alrededor de cada item.
+    - Como si fuera un padding: en los extremos habrá la mitad de espacio que entre hijos.
+- `space-between`: Añade espacio solo entre los elementos interiores.
+- `space-evenly`: Añade el mismo espacio entre los elementos y en los extremos.
+
+Para `*-item`, alineando los items dentro de su track
+(~~`justify-items`~~, `align-items`):
+
+- `flex-start` (default) se mueve el elemento en la pista hacia el inicio del eje
+- `flex-end` se mueve e elemento en la pista hacia el final del eje
+- `center` se deja el elemento en el centro de la pista en la dirección del eje
+- `stretch`: Se estira el elemento para que ocupe toda la pista en la dirección del eje
+- `baseline`: Se alinea con el baseline del resto de los elementos en la pista
+- `first baseline`: TODO (no safari ni opera)
+- `last baseline`: TODO (no safari ni opera)
+- `safe <other>` if _other_ creates overflow, behave as `start` (solo firefox en 2022)
+- `unsafe <other>` even if _other_ creates overflow, respect _other_ (solo firefox en 2022)
 
 
-- `flex-grow`: if there is not enough space for the children, this is a number indicating the proportionality to shrink in respect to the other elements
-  - Por defecto 0
-- `flex-shrink`: if there is empty space to fill, this is a number indicating proportionality to grow in respect to the other elements
-  - Por defecto 1
-- `flex-basis`: is the size to grow or shrink the element from. By default, it is `auto`, meaning the size (width or height style of the element)
-  - `content` adapt to content
-  - size, could be relative to the parent.
-  - `max-content`: El tamaño del contenido maximo de los hermanos
-  - `min-content`: El tamaño del contenido mínimo de los hermanos
-  - `fit-content`: Just 
-
-Se pueden juntar los tres en la propiedad `flex`, donde se especifican por orden grow, shrink y basis.
-
-  - 'initial': Equivalent to `0 1 auto`. All the default values. Do not expand, but will shrink.
-  - 'auto': Equivalent to `1 1 auto`. Will adapt shrinking or growing as required
-  - 'flex': Equivalent to `1 1 auto`
-  - number: 
-
-## Ajustando/aliniando los elementos
-
-Por defecto los elementos se agrupan al inicio de la dirección principal (`justify-content` a `start` del contenedor),
-y se expanden en la direccion secundaria (`align-items` del contenedor).
-Los items se pueden expandir en la dirección secundaria
-
-- cuando el contenedor fija una tamaño mayor
-- cuando alguno de los hermanos es mayor
-
-La propiedad `align-items`? Es análogo a lo que hacemos al alineamiento de texto pero en el eje secundario.
-
-- `stretch`: Estira el tamaño en el eje secundario para que llegue a los dos extremes (equivalente a un justify)
-- `flex-start` ajusta los elementos al inicio del eje secundario (equivalente a un left)
-- `flex-end` ajusta los elementos al final del eje secundario (equivalente a un right)
-- `center` deja el mismo espacio a los dos lados del eje secundario (equivalente a un center)
-- `baseline` alinia los elementos en su linea base.
-
-La propiedad `justify-content` del contenedor se parece a la `align-items` pero de cara a justificar ahora tiene varias estrategias:
-
-- `space-arround`: Añade espacio alrededor de cada item (En los extremos habra la mitad porque en los intermedios habra dos)
-- `space-between`: Añade espacio solo entre los elementos interiores
-- `space-evenly`: Añade el mismo espacio entre los elementos y en los extremos
-- `flex-start` (default) ajusta los elementos al inicio del eje principal (equivalente a un left)
-- `flex-end` ajusta los elementos al final del eje principal (equivalente a un right)
-- `center` deja el mismo espacio a los dos lados del eje principal (equivalente a un center)
-
-`justify-items`
-
-`align-content` determina como alinear/justificar las lineas wrapeadas en el eje cruzado.
 
 
-`place-items` agrupa align-items y justify-items, en ese orden si se dan un valor para cada uno.
 
-Cuando hay wrapping 
+También tenemos propiedades de atajo:
 
+- `place-items: <align> <justify>;`
+- `place-content: <align> <justify>;`
 
-Haciendo el símil con el texto:
+Si los dos valores de align y justify son el mismo, se puede poner solo una vez.
 
-- `justify-content`: Justificación de los items en la direccion principal dentro de una linea. Seria el text alignment. Si a la derecha a la izquierda, centrado o insertando espacio.
-- `align-items`: Alineamiento en la dirección de cruze de los items dentro de su linea. Seria el vertical alignment. Si el elemento no es tan alto, para donde lo tiramos en vertical.
-- `align-content`: Alineamiento en la dirección de cruze de lineas wrappeadas.  Si las lineas se justifican arriba, abajo en el centro o insertando espacio.
-- `justify-items`: Existe pero se ignora en flexbox. A los items no se les assigna un espacio mas grande del que disponen en la dirección principal como podria ser en una tabla o en un grid.
-
-
+## Gaps
 
 Las propiedades `column-gap`, `row-gap` y la combinada `gap` (row column),
 indican un espacio minimo entre los elementos interiores.
@@ -134,9 +220,13 @@ toca mas espacio, se dará más espacio.
 
 A veces queremos que algún hijo concreto no siga la politica especificada en el padre.
 
-La propiedad `align-self` los hijos,
-permite controlar este alineado cruzado para elementos concretos,
-para que sea diferente del `align-items` del contenedor.
+La propiedad `align-items` en el contenedor afecta a todos los items.
+Si queremos que alguno se alinee de forma diferente,
+se puede definir para él la propiedad `align-self` con el valor específico.
+(En Grid pasarà lo mismo con `justify-self`)
 
 La propiedad `order` permite sacar el item de la secuencia de declaracion.
+Por defecto, todos los items tienen `order: 0`.
+Dado varios items con el mismo `order`, como pasa por defecto,
+se colocan por orden de definición.
 
