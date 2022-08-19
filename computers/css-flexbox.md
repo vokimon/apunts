@@ -12,23 +12,24 @@ En concreto, es una generalización del sistema que se usa para los sistemas de 
 
 Por ejemplo: Cuando escribimos con nuestro sistema de escritura, el latino,
 colocamos las palabras de izquierda a derecha 🡆 formando líneas.
-A medida que completamos las líneas, añadimos nuevas
+A medida que completamos las líneas, añadimos nuevas líneas
 de arriba hacia abajo 🡇.
 
-Flexbox llama a la dirección de lectura **dirección principal**,
+Flexbox llamaría a la dirección de lectura **dirección principal**,
 cada linea seria una **pista**,
 y la direccion en la que vamos colocando las sucesivas lineas
- sería la **dirección de cruce**.
+sería la **dirección de cruce**.
 
 Más generalmente, decimos que flexbox dispone el contenido por orden,
 primero en una **direccion principal** formando una **pista** (track),
 y, a medida que las pistas se completan, se añaden nuevas pistas
 en orden en la **dirección de cruce**, perpendicular a la principal.
 
-Esta generalización permite que la dirección principal pueda ser hacia la derecha, izquierda, arriba o abajo,
-y que la dirección de cruce pueda ser, siempre perpendicular a la principal pero también en cualquiera de los dos sentidos.
-Hablar de pistas, nos libera de estar pensando si estamos apilando horizontalmente (lineas/filas) o verticalmente (columnas).
-Pero siempre va bien aterrizar los ejemplos, y para ello usaremos las direcciones de la escritura latina.
+Un **flujo** (flow) es la combinación de una dirección principal (hacia la derecha, la izquierda, arriba o abajo)
+y una dirección de cruce (siempre perpendicular pero hay dos sentidos posibles).
+
+Estas generalizaciones nos permiten hablar de pistas sin pensar si son lineas/filas o columnas.
+Para los ejemplos, aterrizaremos la generalización en el llamado _flujo normal_ que es el de lectura, en nuestro caso, latina.
 
 ## Activación del flexbox
 
@@ -212,7 +213,8 @@ Si los dos valores de align y justify son el mismo, se puede poner solo una vez.
 
 Las propiedades `column-gap`, `row-gap` y la combinada `gap` (row column),
 indican un espacio minimo entre los elementos interiores.
-Es un margen, entre los elementos interiores que no afecta al margen de los elementos exteriores.
+No genera margen en los elementos exteriores.
+
 Es un espacio minimo, asi que si por  `space-between`, `space-evenly` o `space-arround`,
 toca mas espacio, se dará más espacio.
 
