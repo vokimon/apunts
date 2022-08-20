@@ -2,6 +2,11 @@
 
 Notes taken from https://www.youtube.com/watch?v=tpCFfeUEGs8
 
+Background:
+
+- [Lecture 1: A Brief History of Geometric Deep Learning - Michael Bronstein](https://www.youtube.com/watch?v=yuw_LwqHsgM)
+
+
 ## Definition of the field
 
 **Artificial Intelligence:**

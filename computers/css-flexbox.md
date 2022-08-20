@@ -34,29 +34,28 @@ Para los ejemplos, aterrizaremos la generalización en el llamado _flujo normal_
 
 ## Activación del flexbox
 
-Activamos flexbox definiendo para el contenedor la propiedad `display: flex`
-o con `display: flex-inline`
+Activamos flexbox definiendo para el contenedor la propiedad `display`
+a los valores `flex` o bien `flex-inline`
 
 ```css
 .container {
-  display: flex;           /* or flex-inline, see bellow */
+    display: flex;           /* o flex-inline */
 }
 ```
+La diferencia entre `flex` y `flex-inline`:
 
-La diferencia entre `display: flex` y `display: flex-inline` es que `flex` se comporta
-dentro de su padre como un `display: block` (`div`),
-y `flex-inline` se comporta dentro de su padre como un `display: inline` (`span`).
+- "`flex`" se comporta dentro de su padre como un `div` (`display: block`).
+- "`flex-inline`" se comporta dentro de su padre como un `span` (`display: inline`).
 
 
-## Controlando los ejes de apilamiento
+## Definiendo el flujo del contenedor
 
-En un contenedor flexbox puedes definir cual es el eje y la direccion principal
-con la propiedad `flex-direction` en el contenedor:
+Puedes definir la dirección principal de un contenedor definiéndole la propiedad `flex-direction`:
 
 - `row`: (por defecto) dirección de lectura (script latino: 🡆)
 - `row-reverse`: dirección opuesta a la de lectura (script latino: 🡄)
-- `column`: dirección de añadir lineas en la lectura (script latino: 🡇)
-- `column-reverse`: counter block development direction (script latino: 🡅)
+- `column`: dirección de añadir lineas en el script del idioma (script latino: 🡇)
+- `column-reverse`: dirección contraria a la de añadir líneas en el script del idioma (script latino: 🡅)
 
 **Ojo:**
 Estos valores estan definidos respecto a la direccion de lectura,
@@ -71,8 +70,8 @@ que cambia según el idioma:
 Ese comportamiento lo fija la propiedad `flex-wrap` del container.
 
 - Por defecto, (`nowrap`) siguen añadiendo elementos a la línea y hace `overflow`.
-- Si vale `wrap`, se crean nuevas pistas (lineas) en la dirección de cruce.
-- Si vale `wrap-reverse`, se crean nuevas pistas en la dirección opuesta a la de cruce.
+- Si vale `wrap`, se crean nuevas pistas (lineas) en la dirección perpendicular que no lleva `reverse`.
+- Si vale `wrap-reverse`, se crean nuevas pistas (líneas), en la dirección perpendicular con `reverse`.
 
 **Ojo!:**
 El uso de `wrap-reverse`, `row-reverse` y `column-reverse`
