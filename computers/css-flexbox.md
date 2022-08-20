@@ -175,6 +175,8 @@ definiría como gestionar el espacio vertical de la linea que no llena el item.
 Una vez definido los espacios sobrantes que queremos gestionar,
 ¿cómo lo hacemos? ¿qué valores les podemos dar?
 
+![content alignments/justifications](css-flexbox-justify-align-content.svg)
+
  Para`*-content`, el sobrante de todo el contenido en una dirección (`justify-content`, `align-content`):
 
 - `flex-start` (default) ajusta los elementos al inicio del eje
