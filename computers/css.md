@@ -1,3 +1,19 @@
+# CSS
+
+## Resources
+
+- [Defensive programming](https://defensivecss.dev/tips):
+  Soluciones a cosas raras que suelen pasar con los estilos.
+- [CSS Tricks](https://css-tricks.com/):
+  Artículos buenos sobre como usar CSS para conseguir según que resultados.
+- [MDN CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+  Documentación de Mozilla sobre CSS (tutoriales, referencia...)
+- [W3Schools CSS](https://www.w3schools.com/css/default.asp):
+  Documentación de W3Schools sobre CSS
+- [Can I Use](https://caniuse.com/):
+  Buscador mantenido por la comunidad para saber qué navegadores soportan una funcionalidad.
+
+
 ## Units
 
 Absolute lengths:
@@ -231,12 +247,6 @@ Principios:
 
 ## Tailwind
 
-
-
-# Resources
-
-- [Defensive programming](https://defensivecss.dev/tips)
-  Soluciones a cosas raras que suelen pasar con los estilos.
 
 
 
