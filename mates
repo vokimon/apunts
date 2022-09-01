@@ -2,7 +2,7 @@ Mathematical object: numbers, permutations, partitions, matrices, sets, function
 
 Property:
 	A function for a set of objects (of a given type) 
-    that renders true or false.
+	that renders true or false.
 		p: X -> {true, false}
 
 Relation:
@@ -40,9 +40,9 @@ Homomorphism: Exists a map (morphism) from one algebraic structure
 	there exists an operator \mu_B such that, that for any a_i€A,
 		f(\mu_a(a_1,..,a_n)) = \mu_b(f(a_1),..,f(a_n))
 	Other homomorphisms:
+		Epimorphism: Surjective (No element in the target gets unrelated)
+		Monomorphism: Injective (No element in the target gets related more than once)
 		Isomorphism: Bijective (Surjective and Injective)
-		Epimorphism: Surjective
-		Monomorphism: Injective
 		Endomorphism: Of an object to itself
 		Automorphism: (Bijective and Endomorphic)
 Isomorphism: When the map can be reversed by an homomorphic inverse map
@@ -50,6 +50,10 @@ Isomorphism: When the map can be reversed by an homomorphic inverse map
 Substructure: A subset of the structure that still fullfils axioms
 Product: "cartesian product of the set, redefining the ops"
 
+Why is that useful?
+
+Everything you learn about an algebraic structure
+you can also apply it to a different new one if the axioms are meet.
 
 Typical axioms for algebraic structures:
 	(Binary) Closure(S,%): %:X,X->X ~:X->X
