@@ -82,6 +82,15 @@ Viewport relative lengths:
 - vmin: percent relative to the view port min axis (height or width)
 - vmax: percent relative to the view port max axis (height or width)
 
+Container query relative lengths:
+
+- cqw: container query width per cent
+- cqh: container query height per cent
+- cqi: container query inline size (in ltr width, but changes with direction)
+- cqb: container query block size (in ltr height, but changes with direction)
+- cpmin: container query min of width and height
+- cpmax: container query max of width and height
+
 Angles:
 
 - turn: full turn
