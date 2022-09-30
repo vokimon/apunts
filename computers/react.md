@@ -278,6 +278,55 @@ function ThemedButton() {
 
 Los componentes que usan `useContext` se renderizaran siempre que el contexto cambie.
 
+## `useCallback`
+
+As the render function is called every time,
+any inner function defined inside is, by reference,
+a different function each time render is called.
+Even if the function has the same implementation each time,
+the references will be different.
+
+Any dependency on such a function will trigger each render.
+
+Also, when an inner function accesses variables from the scope where it is defined,
+what it is call a closure,
+former call version might not be the same behaviour than the current one.
+
+Both cases creates problems when passing such callbacks to the child components as attributes.
+Child component should react to the callback changing the scope variables,
+but not triggering changes every render.
+
+`useCallback(callback, dependencies)` is a wrapper that allows caching the reference
+to the first version of the inner function, providing an stable dependency.
+At the same time, the dependency list, allows to update the reference,
+whenever any  closure variable changes.
+
+
+
+
+```javascript
+const Parent = ({c}) => {
+  const c = parent;
+
+  adder = useCallback((a) => a+c, [c]) // Recomputes just when c changes
+
+  return <MyChild onAdd={adder} />
+a
+
+const MyChild = ({onAdd}} => {
+  [value, setValue] = useState()
+
+  useEffect(() => {
+    setValue(onAdd(4))
+  }, [onAdd])
+
+  return <div>value = {value}</div>
+}
+```
+
+
+
+
 
 ## Utility components
 
