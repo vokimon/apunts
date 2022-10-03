@@ -69,19 +69,18 @@
 - Asimilacion de 'al'
 	- la mitad de las letras enmudece la 'l' i se dobla la primera consonante.
 	- se escribe tanto la l como la dieresis de doblaje
-		- ta -> at-ta atun اَلتُّنّ‎ (at-tunn)
+		- ta -> at-ta atun اَلتُّنّ (at-tunn)
 		- tha -> ath-tha 
-		- ra ->  ar-ra arroz اَلْرُّزّ (ar-ruzz) arrecife الرَصِيف‎ (ar-raṣīf)
-		- za -> az-za aceite اََلزَّيْت‎ (az-zayt)  azafrán اَلزَّعْفَرَان az-za`farān 
-		- sa -> as-sa azucar اَلسُّكَّر‎ (as-súkkar) (acicalar, acicate, acequia)
-		- sha -> ash-sha ajedrez الشَطْرَنْج‎ (aš-šaṭranj)
-		- da -> ad-da adalid اَلدَلِيل‎ (ad-dalīl) quien guia (aduana, adoquin)
+		- ra ->  ar-ra arroz اَلْرُّزّ (ar-ruzz) arrecife الرَصِيف (ar-raṣīf)
+		- za -> az-za aceite اََلزَّيْت (az-zayt)  azafrán اَلزَّعْفَرَان az-za`farān 
+		- sa -> as-sa azucar اَلسُّكَّر (as-súkkar) (acicalar, acicate, acequia)
+		- sha -> ash-sha ajedrez الشَطْرَنْج (aš-šaṭranj)
+		- da -> ad-da adalid اَلدَلِيل (ad-dalīl) quien guia (aduana, adoquin)
 		- dha -> adh-dha
-		- la -> al-la alubia اللُوبِيَا‎ (al-lúbya)
-		- na -> an-na añil النيل‎ (an-nīl) azul oscuro
+		- la -> al-la alubia اللُوبِيَا (al-lúbya)
+		- na -> an-na añil النيل (an-nīl) azul oscuro
 		- Y todas las letras con enfasis faringeo:
-		-  adobe اَلطُّوب‎ (aṭ-ṭūb) ladrillo
-		- 
+		-  adobe اَلطُّوب (aṭ-ṭūb) ladrillo
 	- aceite (z), atun (t), azucar (s), arroz (r), alubia (l), añil (n), ajedrez (sh), adalid (d), falta (dh)
 	- el resto: alabama, albacete, alcalino, algeciras, aljibe, alhambra, algarve, alfanjor, alquimia, almudena, alicate
 
