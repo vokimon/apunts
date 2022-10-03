@@ -61,6 +61,11 @@ lat: Triticum turgitum
 	en: kamut (marca comercial)
 	es: trigo jorasán
 	
+lat: Fagopyrum esculentum
+	en: buckwheat
+	ca: fajol
+	es: trigo sarraceno, alforfón
+	Granos con tres aristas crecen de flores en ramilletes de flores
 
 	
 
