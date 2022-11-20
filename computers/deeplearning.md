@@ -5,6 +5,7 @@ Notes taken from https://www.youtube.com/watch?v=tpCFfeUEGs8
 Background:
 
 - [Lecture 1: A Brief History of Geometric Deep Learning - Michael Bronstein](https://www.youtube.com/watch?v=yuw_LwqHsgM)
+- [Full course for Begginners: How Deep Neural Networks Work](https://www.youtube.com/watch?v=dPWYUELwIdM)
 
 
 ## Definition of the field
@@ -543,6 +544,54 @@ If fails, the error is propagated back. How?
 ```python
 
 ```
+
+## Convolutional Neural Nets (ConvNets)
+
+The first layer are convolution kernels on a local region of the input.
+
+Have sense on data that has local connection: images (w,h), sound (f,t), text (t)
+
+Rule of thumb: Given a matrix of input data, if swapping rows or columns is meaningless, there is no point of using ConvNets.
+
+- Ex: a table of clients with columns (the order of clients is meaningless, the orded of columns as well)
+- Ex: Text with a matrix of time x words, words in a dictionary has no meaningful order, but still time dimension could be useful 
+
+
+## Recurrent Neural Nets
+
+If the previous result, has impact on the next.
+
+To expand memory beyond the last result, we need memory
+
+- Ignore network: decides what passes to the memory pipeline
+- Forget network: decides what is ignored for the next input
+- Selection network: decides what of the memory goes outside as output
+
+Applications: sequence based
+
+- text
+- speech
+- audio
+- video
+- robotics
+- physical process
+
+
+
+
+
+- Selection: 
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -278,6 +278,17 @@ function ThemedButton() {
 
 Los componentes que usan `useContext` se renderizaran siempre que el contexto cambie.
 
+## `useMemo`
+
+Caches the result of the function, calling it only when one of the dependencies changes.
+
+const value = useMemo(() => {
+  return valueHardTocompue()
+}, [deps])
+
+It is called on render time (not like useEffect which is called after mounting)
+
+
 ## `useCallback`
 
 As the render function is called every time,
@@ -311,7 +322,7 @@ const Parent = ({c}) => {
   adder = useCallback((a) => a+c, [c]) // Recomputes just when c changes
 
   return <MyChild onAdd={adder} />
-a
+
 
 const MyChild = ({onAdd}} => {
   [value, setValue] = useState()
@@ -323,6 +334,21 @@ const MyChild = ({onAdd}} => {
   return <div>value = {value}</div>
 }
 ```
+
+## `useRef`
+
+`useRef` keeps some state between renderings without 
+causing updates if it is modified.
+
+It encapsulates the value inside an object.
+
+
+const counter = useRef(0);
+useEffect(() => {
+  counter.current = counter.current + 1;
+})
+
+
 
 
 
