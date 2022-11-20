@@ -2,10 +2,10 @@ a x^2 + b x + c = 0
 
 Instead of solving it by the formula, here there is a rememberable procedure:
 
-1. Divide the equation by a
+1. Divide the equation by `a`
    - this will lead to  `x² + b' x + c' = 0` where `b' = b/a` and `c' = c/a`
 2. Consider the roots are equidistant to a central point m: (m+d) and (m-d) m+-d
-   - Then `x² + b' x  + c = 0 = (x -m -d)(x -m +d) = x² -2mx + (m² - d²)
+   - Then `x² + b' x  + c = 0 = (x -m -d)(x -m +d) = x² -2mx + (m² - d²)`
    - Then `m = -b'/2` and `d² = m²-c`
 
 Example with two real solutions:
@@ -43,13 +43,13 @@ Deducing the classic formula
 
 ```
 x = m +- d
-  = -b'/2 +-sqrt(m²-c`)
-  = (-b' +-2*sqrt(m²-c`)/2
-  = (-b' +-2*sqrt((-b'/2)²-c`)/2
-  = (-b' +-2*sqrt((b'²/4 -c`)/2
-  = (-b' +-sqrt((b'² -4c`)/2
-  = (-b/a +-sqrt((b'²/a² -4c/a)/2
-
+  = m +- sqrt(m²-c')                 # d²=m²-c'
+  = -b'/2 +- sqrt(b'²/4 - c')        # m = -b/2
+  = -b/2a +- sqrt(b²/4a² - c/a)      # m = -b/2
+  = -b/2a +- sqrt(b²/4a² - 4ac/4a²)  # multipy and divide c/a by 4a
+  = -b/2a +- sqrt(b² - 4ac)/2a       # extract 1/4a² out of the sqrt as 1/2a
+  = (-b +- sqrt(b² - 4ac))/2a        # common divisor 2a
+  = (b +- sqrt(b² - 4ac))/-2a        # sign moved to denominator (+- of second term unaltered)
 ```
 
 
