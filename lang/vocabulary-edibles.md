@@ -1,4 +1,5 @@
-
+::: figure trigo_cebada_centeno_avena.jpg
+	Diferencias fisicas entre cereales
 
 lat: Prunus espinosa
 	cat: aranyò, aranyoner (arbol) prunyoner, prinyoner, escanyagats, arç negre o barsa/barza
@@ -17,7 +18,7 @@ lat: Avena sativa
 	etimologia:
 		- cibata (lat) grano de cebo de animales
 		- sativa (lat) variedad que se cultiva (vs silvestris)
-		- avena (lat) 
+		- avena (lat) ya queria decir avena
 		- cuculus (lat) cuco (las simientes parecen picos de ave)
 
 lat: Hordeum vulgare
@@ -51,6 +52,10 @@ lat: Triticum durum
 	Tiene las barbas mas rectas que el trigo harinero
 	Semillas muy peladas
 	Etimologia: bladum (vulg lat) from Bled (frankish), Ble (cognate Frances) aestivum (de verano
+
+lat: Triticum aestivum
+	ca: blat xeixall o xeixa (balears)
+	variedad muy silvestre de trigo, con menos gluten y mas blando, origen de muchas otras
 
 lat: Triticum spelta
 	en: spelt
