@@ -2,28 +2,31 @@
 
 ## Notes
 
-- White keys on the piano are the notes forming the C Scale (Do Scale)
+- White keys:
+	- They are the notes forming the C Scale (Do Scale)
 	- In Solfege they are named: Do, Re, Mi, Fa, Sol, La, Si
 	- In Anglosaxon notation: C, D, E, F, G, A, B
-- Notes repeat in successive octaves:
+- Octaves:
+	- Notes repeat in successive octaves
 	- The same note doubles its frequency on the next octave
 	- We diferentiate notes in different scales with the number of the octave
 	- A4 is the A on the 4th octave (the middle A)
 	- Phisically there are infinite octaves up and down but not all of them are audible
-- What about the black keys?
-	- Notes within the C Scale (white keys) are not evenly distributed tones
-	- B-C and E-F intervals are smaller, a semitone
-	- The other intervals are a full tone away
-	- Piano black keys fill the gap between those full tone
+- Black keys:
+	- Tonal distance betweens succesive white notes is not uniform
+	- B-C and E-F intervals are half the interval between other succesive white keys
+	- Piano black keys fill the gap between those full tones
 	- Two ways of expressing them referring the neighbouring notes:
 		- As sharp notes: C#, D# and F#, G#, A#. The lower note up a semitone.
 		- As flat notes: Db, Eb and Gb, Ab, Bb. The higher note down a semitone.
-	- Black and white notes build a pattern in a keyboard
-		- `_x_x_ _x_x_x_`
-		- `C D E F G A B`
-		- Useful to locate the notes (start locating C)
-- Counting both, black and white notes, each octave has 12 semitones
-	- Playing them all in sequence is the _Chromatic scale_
+	- The black keys starting at F#/Gb form a _Major Pentatonic Scale_
+- Black and white notes build a pattern in a piano keyboard
+	- `_x_x_ _x_x_x_`
+	- `C D E F G A B`
+	- Useful to locate the notes (start locating C)
+	- Counting both, black and white notes, each octave has 12 semitones
+	- Playing them all in sequence is the _Chromatic Scale_
+
 
 ## Tones and frequencies
 
@@ -207,7 +210,23 @@ Triads in Pentatonics are limited as not all diatonic notes are available.
 - I, IIsus4, IIIsus4, Vsus4, vi (expressed in diatonic intervals)
 - C, Dsus4, Esus4, Gsus4, Amin (C transposition)
 
-Because these limitations pentatonic melodies are usually harmonized with diatonic chords.
+Because of these limitations pentatonic melodies are usually harmonized with diatonic chords.
+
+Also, pentatonics on C can be considered by the notes shared by three Diatonic Scales on C
+
+	| Ionian I | Lydian IV | Mixolydian V | CD_F_GA | Major Pentatonic I 
+	| Ionian I | Dorian II | Mixolydian V | CD*E*G_A_ | Blues Major Pentatonic IV
+	| Aeolian VI | Dorian II | Mixolydian V | C_D_EG*B* | Suspended Pentatonic II
+	| Aeolian VI | Dorian II | Mixolydian V | CE*F*GA | Minor Pentatonic VI
+
+	|-----|------------|---------------|---------------------|---------------|-------|-----|------|--------|----------
+	| I   | Ionian     | 2 2 1 2 2 2 1 | C D  E  F  G  A  B  | C D E F G A B | CMaj  | CM7 | GMaj | G7     | Major
+	| II  | Dorian     | 2 1 2 2 2 1 2 | C D  Eb F  G  A  Bb | D E F G A B C | Dmin  | Dm7 | Amin | Am7    | 
+	| III | Phrygian   | 1 2 2 2 1 2 2 | C Db Eb F  G  Ab Bb | E F G A B C D | Emin  | Em7 | Bdim | B∅7    | 
+	| IV  | Lydian     | 2 2 2 1 2 2 1 | C D  E  F# G  A  B  | F G A B C D E | FMaj  | FM7 | GMaj | GM7    | 
+	| V   | Mixolydian | 2 2 1 2 2 1 2 | C D  E  F  G  A  Bb | G A B C D E F | GMaj  | GM7 | Dmin | Gm7    | 
+	| VI  | Aeolian    | 2 1 2 2 1 2 2 | C D  Eb F  G  Ab Bb | A B C D E F G | Amin  | Am7 | Emin | Em7    | Natural Minor
+	| VII | Locrian    | 1 2 2 1 2 2 2 | C Db Eb F  Gb Ab Bb | B C D E F G A | Bdim  | B∅7 | FMaj | FM7    | 
 
 
 ## Chromatic and hexatonal
