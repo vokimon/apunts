@@ -2,7 +2,7 @@
 
 ## Notes
 
-- White keys:
+- White keys (natural notes):
 	- They are the notes forming the C Scale (Do Scale)
 	- In Solfege they are named: Do, Re, Mi, Fa, Sol, La, Si
 	- In Anglosaxon notation: C, D, E, F, G, A, B
@@ -12,7 +12,7 @@
 	- We diferentiate notes in different scales with the number of the octave
 	- A4 is the A on the 4th octave (the middle A)
 	- Phisically there are infinite octaves up and down but not all of them are audible
-- Black keys:
+- Black keys (altered notes):
 	- Tonal distance betweens succesive white notes is not uniform
 	- B-C and E-F intervals are half the interval between other succesive white keys
 	- Piano black keys fill the gap between those full tones
