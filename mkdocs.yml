@@ -1,0 +1,117 @@
+site_name: Apunts
+site_url: https://vokimon.github.io/apunts
+site_author: vokimon
+site_description: Apunts i notes de coses que aprenc
+repo_url: https://github.com/vokimon/apunts
+nav:
+  - README: README.md
+  - Computers:
+    - css:
+      - computers/css.md
+      - computers/css-boxmodel.md
+      - computers/css-normalflow.md
+      - computers/css-flexbox.md
+      - computers/css-grid.md
+      - computers/css-typography.md
+    - javascript:
+      - computers/jsecosystem.md
+      - computers/jsonschema.md
+      - computers/react-formik.md
+      - computers/react.md
+    - computers/android-glossary.md
+    - computers/cpp11.md
+    - computers/deeplearning.md
+    - computers/docker.md
+    - computers/ip6
+    - computers/specs-pdf.md
+    - computers/timewarrior.md
+    - computers/xpxplained.markdown
+  - Math:
+    - Math Foundations: math/mates-fundation.md
+    - Statistics: math/stats.md
+    - Half Derivatives: math/math-halfderivatives.md
+    - Quadratic Formula: math/math-quadraticformula-alternative.md
+    - Wavelets: math/math-wavelets.md
+    - Collatz Conjecture: math/math-3n1.md
+  - Music:
+    - music/music-harmony.md
+    - music/guitar-technics.md
+    - music/guitar-fret-navigation.md
+    - Pentatonicas: music/pentatonicas.txt
+    - music/songs.md
+    - music/ukelele.md
+  - Languages:
+    - Phonetics Consonants: lang/consonantes-afi.png
+    - Phonetics Vowels: lang/vowels.jpg
+    - lang/arabic-alphabet.md
+    - lang/arabic.md
+    - Deutsch: lang/deutsch.txt
+    - lang/english-expresions.md
+    - lang/english-old-pronoums.md
+    - lang/english-prepositions.md
+    - lang/english-tenses.md
+    - lang/vocabulary-somenergia.md
+    - lang/vocabulary-edibles.md
+  - Economics: economics.md
+
+markdown_extensions:
+  - customblocks
+  - def_list
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+extra_css:
+  - css/figure.css
+  - css/linkcard.css
+  - css/videowrapper.css
+  - #css/admonition.css
+theme:
+  logo: img/logo-customblocks-white.svg
+  name: material
+  language: en
+  extra:
+    include_toc: true
+  highlightjs: true
+  hljs_languages:
+    - yaml
+  palette:
+
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default 
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+
+extra:
+  version:
+    provider: mike
+  features:
+    - navigation.instant # load content instead of refreshing the page
+    - navigation.sections
+  plugins:
+    - mike:
+        # these fields are all optional; the defaults are as below...
+        version_selector: true   # set to false to leave out the version selector
+        css_dir: css             # the directory to put the version selector's CSS
+        javascript_dir: js       # the directory to put the version selector's JS
+        canonical_version: null  # the version for <link rel="canonical">; `null`
+         # uses the version specified via `mike deploy`
+    - offline 
+
+
