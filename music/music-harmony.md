@@ -1,4 +1,4 @@
-# Harmony: Notes, Scales and Chords
+# Harmony: Notes, Scales and Chords 🎶
 
 ## Notes
 
@@ -229,13 +229,33 @@ Also, pentatonics on C can be considered by the notes shared by three Diatonic S
 	| VII | Locrian    | 1 2 2 1 2 2 2 | C Db Eb F  Gb Ab Bb | B C D E F G A | Bdim  | B∅7 | FMaj | FM7    | 
 
 
-## Chromatic and hexatonal
+## Chromatic
 
 
+## Whole-tone hexatonic
 
+- Whole-tone hexatonic scale has just whole-tone intervals (6*2semitones=12)
+- Because the intervals are uniform, has no sense to talk about diferent modes
+- Just has two transpositions:
+	- The one with the lower keys of the scale in natural keys
+		- C D E F# G# A#
+	- The one with the lower keys of the scale in altered keys
+		- Db Eb F G A B
+- Only two triads are available.
+	- In C:
+		- Caug (Eaug and G#aug are just inversions)
+		- Daug (F#aug and A#aug are just inversions)
+	- In F:
+		- Faug (Aaug and Dbaug are just inversions)
+		- Gaug (Baug and Ebaug are just inversions)
+- Function and mood
+	- Because all the intervals are the same,
+	  a listener used to diatonic scale will not find the patterns and leading tones
+	- So, the scale has an unsettling and weird mood
+	- Also gives the sensation of being lost
+	- Used in horror movies, in the dream carrillion
 
-
-### Diatonic scale
+## Diatonic scale
 
 - A Diatonic Scale is an scale behaving like this: Transpositions and permutations of the C scale
 - Scale is
