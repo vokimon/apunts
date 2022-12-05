@@ -1,0 +1,1611 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Apunts i notes de coses que aprenc">
+      
+      
+        <meta name="author" content="vokimon">
+      
+      
+        <link rel="canonical" href="https://vokimon.github.io/apunts/computers/css-boxmodel/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.8">
+    
+    
+      
+        <title>El modelo de caja - Apunts</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.20d9efc8.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.815d1a91.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/figure.css">
+    
+      <link rel="stylesheet" href="../../css/linkcard.css">
+    
+      <link rel="stylesheet" href="../../css/videowrapper.css">
+    
+      <link rel="stylesheet" href="../..">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#el-modelo-de-caja" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Apunts" class="md-header__button md-logo" aria-label="Apunts" data-md-component="logo">
+      
+  <img src="../../img/logo-customblocks-white.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Apunts
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              El modelo de caja
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_3" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9h-1.9M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69m-9.15 3.96h2.3L12 9l-1.15 3.65Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_3">
+          
+            <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/vokimon/apunts" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Apunts" class="md-nav__button md-logo" aria-label="Apunts" data-md-component="logo">
+      
+  <img src="../../img/logo-customblocks-white.svg" alt="logo">
+
+    </a>
+    Apunts
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/vokimon/apunts" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        README
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Computers
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Computers" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Computers
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          css
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="css" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          css
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../css/" class="md-nav__link">
+        CSS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          El modelo de caja
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        El modelo de caja
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#elementos" class="md-nav__link">
+    Elementos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orientaciones-fisicas-y-logicas" class="md-nav__link">
+    Orientaciones físicas y lógicas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relleno-padding" class="md-nav__link">
+    Relleno (padding)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#borde-border" class="md-nav__link">
+    Borde (border)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#margen-margin" class="md-nav__link">
+    Margen (margin)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contornos-outline" class="md-nav__link">
+    Contornos (outline)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#margin" class="md-nav__link">
+    Margin
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../css-normalflow/" class="md-nav__link">
+        Flujo normal (normal flow)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../css-flexbox/" class="md-nav__link">
+        CSS Flexbox
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../css-grid/" class="md-nav__link">
+        CSS Grid
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../css-typography/" class="md-nav__link">
+        Css typography
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          javascript
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="javascript" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          javascript
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jsecosystem/" class="md-nav__link">
+        Jsecosystem
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jsonschema/" class="md-nav__link">
+        Jsonschema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../react-formik/" class="md-nav__link">
+        React formik
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../react/" class="md-nav__link">
+        React / Redux
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../android-glossary/" class="md-nav__link">
+        Android glossary
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cpp11/" class="md-nav__link">
+        New features of C++11 I should be starting to use:
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deeplearning/" class="md-nav__link">
+        Deep learning
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker/" class="md-nav__link">
+        Docker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ip6" class="md-nav__link">
+        None
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../specs-pdf/" class="md-nav__link">
+        Specs pdf
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../timewarrior/" class="md-nav__link">
+        TimeWarrior
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xpxplained/" class="md-nav__link">
+        El problema
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Math
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Math" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Math
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/mates-fundation/" class="md-nav__link">
+        Math Foundations
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/stats/" class="md-nav__link">
+        Statistics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/math-halfderivatives/" class="md-nav__link">
+        Half Derivatives
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/math-quadraticformula-alternative/" class="md-nav__link">
+        Quadratic Formula
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/math-wavelets/" class="md-nav__link">
+        Wavelets
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/math-3n1/" class="md-nav__link">
+        Collatz Conjecture
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Music
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Music" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Music
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../music/music-harmony/" class="md-nav__link">
+        Harmony: Notes, Scales and Chords 🎶
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../music/guitar-technics/" class="md-nav__link">
+        Técnica de Guitarra 🎸
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../music/guitar-fret-navigation/" class="md-nav__link">
+        Navegación en el mástil
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../music/pentatonicas.txt" class="md-nav__link">
+        Pentatonicas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../music/songs/" class="md-nav__link">
+        Songs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../music/ukelele/" class="md-nav__link">
+        Ukelele
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Languages
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Languages" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Languages
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/consonantes-afi.png" class="md-nav__link">
+        Phonetics Consonants
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/vowels.jpg" class="md-nav__link">
+        Phonetics Vowels
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/arabic-alphabet/" class="md-nav__link">
+        Arabic script
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/arabic/" class="md-nav__link">
+        Arabic
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/deutsch/" class="md-nav__link">
+        Deutsch
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/english-expresions/" class="md-nav__link">
+        English expresions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/english-old-pronoums/" class="md-nav__link">
+        English old pronoums
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/english-prepositions/" class="md-nav__link">
+        English prepositions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/english-tenses/" class="md-nav__link">
+        English tenses
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/vocabulary-somenergia/" class="md-nav__link">
+        English Vocabulary for SE enterviews
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/vocabulary-edibles/" class="md-nav__link">
+        Vocabulary edibles
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../economics/" class="md-nav__link">
+        Economics
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#elementos" class="md-nav__link">
+    Elementos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orientaciones-fisicas-y-logicas" class="md-nav__link">
+    Orientaciones físicas y lógicas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relleno-padding" class="md-nav__link">
+    Relleno (padding)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#borde-border" class="md-nav__link">
+    Borde (border)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#margen-margin" class="md-nav__link">
+    Margen (margin)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contornos-outline" class="md-nav__link">
+    Contornos (outline)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#margin" class="md-nav__link">
+    Margin
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <a href="https://github.com/vokimon/apunts/edit/master/docs/computers/css-boxmodel.md" title="Edit this page" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+<h1 id="el-modelo-de-caja">El modelo de caja</h1>
+<h2 id="elementos">Elementos</h2>
+<p>El modelo de caja, es la base para la maquetación (layout).</p>
+<p>Considera cada elemento una caja que tiene que albergar 4 niveles de espaciado:</p>
+<ul>
+<li>un contenido con un ancho y un alto</li>
+<li>un relleno (<code>padding</code>) dentro de la caja que no puede usar el contenido</li>
+<li>un borde (<code>border</code>) alrededor del padding que delimita la caja</li>
+<li>un margen (<code>margin</code>) alrededor del borde que no pueden invadir los bordes de otros bloques</li>
+</ul>
+<p>La caja también puede tener otros elementos
+que se ignoran de cara al layout:</p>
+<ul>
+<li>un contorno (<code>outline</code>) que hace de segundo borde por fuera</li>
+<li>una sombra (<code>box-shadow</code>) que replica de la forma de la caja desplazada y difuminada</li>
+</ul>
+<div style="float: right; display: flex; border: solid; margin: 5pt;">
+<div style="
+    margin: 15pt;
+    background: grey;
+    color: white;
+    padding: 10pt;
+    border: 10pt dashed blue;
+    outline: 10pt dotted red;
+    box-shadow: 5pt 5pt 1pt green;
+">Content</div>
+</div>
+
+<p>En este ejemplo, vemos
+la caja (gris) que incluye contenido, relleno y borde (en azul).
+Fuera de la caja, el contorno (rojo) y la sombra (verde) que queda por detrás.
+El margen no se pinta, mantiene al resto de elementos a 20px de distancia
+del contenido en gris incluido el borde del contenedor que es el que esta pintado de negro.
+Si el margen no superara el ancho del contorno o de la sombra,
+quedarian solapados por los elementos contiguos.</p>
+<div style="float: right; display: flex; border: solid; margin: 5pt;">
+<div style="
+    margin: 15pt;
+    background: grey;
+    color: white;
+    padding: 10pt;
+    border: 10pt dashed blue;
+    outline: 25pt dotted red;
+    box-shadow: 20pt 20pt 4pt green;
+">Content</div>
+</div>
+
+<p>En el siguiente ejemplo,
+hemos augmentado el contorno y la sombra de la caja,
+sin que haya efectos en el posicionamiento de la caja gris.
+Borde y sombra, al superar el margen, se solapan con el resto de elementos.</p>
+<h2 id="orientaciones-fisicas-y-logicas">Orientaciones físicas y lógicas</h2>
+<p>Las cuatro orientaciones físicas son <code>top</code>, <code>left</code>, <code>bottom</code> y <code>right</code>.</p>
+<p>En muchos casos, en qué dirección establecer un parámetro depende del modo de lectura.
+En el sistema de escritura latino
+escribimos las palabras <em>en líneas</em> de izquierda a derecha
+y añadimos las líneas de arriba abajo.
+Esto no siempre es así.
+Las escrituras semíticas (árabe, hebreo...) escriben de derecha a izquierda,
+y algunas asiàticas de arriba a abajo o incluso de abajo a arriba.
+Es lo que se llama el modo de lectura.</p>
+<p>Si queremos especificar las direcciones según el modo de lectura tenemos las direcciones <em>lógicas</em> (o <em>multiculti</em> que les llamo yo):</p>
+<p>| dirección logica | física en latino | fisica en semítico | física en oriental |
+| <code>block-start</code>   | <code>top</code> | <code>top</code> | <code>left</code></p>
+<ul>
+<li><code>block-start</code>, en latino, <code>top</code></li>
+<li><code>block-end</code>, en latino, <code>bottom</code></li>
+<li><code>inline-start</code>, en latino, <code>left</code></li>
+<li><code>inline-end</code>, en latino, <code>right</code></li>
+</ul>
+<p>Cuando implicitamente tengamos que especificar parametros en orden para las cuatro direcciones
+iran en orden de las manecillas del reloj empezando a las 12: <code>top</code> <code>left</code> <code>bottom</code> <code>right</code>.
+Con tres valores, van a <code>top</code>, <code>left-right</code> y <code>bottom</code>.
+Con dos valores, van a <code>top-bottom</code> y <code>left-right</code>.</p>
+<p>Si queremos que se asignen a las <em>direcciones lógicas</em> correspondientes, hay que preceder los parametros por <code>logical</code>.</p>
+<h2 id="relleno-padding">Relleno (<code>padding</code>)</h2>
+<p>El padding es un relleno o cojín entre el contenido y el borde de la caja.
+La metáfora sería el relleno que se pone en un paquete para que
+el contenido no dé golpes.</p>
+<p>Se puede especificar un relleno diferente en cada una de las cuatro direcciones.</p>
+<p>Formas de especificarlo:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">.</span><span class="nc">midiv</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="c">/* direcciones especificas */</span><span class="w"></span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="k">padding-top</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="k">padding-right</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="k">padding-bottom</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="k">padding-left</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="c">/* atajos */</span><span class="w"></span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="c">/* el mismo en las 4 direcciones */</span><span class="w"></span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="mi">2</span><span class="kt">px</span><span class="w"> </span><span class="mi">3</span><span class="kt">px</span><span class="w"> </span><span class="mi">4</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="c">/* top left bottom right, clock-wise order */</span><span class="w"></span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">px</span><span class="w"> </span><span class="mi">30</span><span class="kt">px</span><span class="p">;</span><span class="w">  </span><span class="c">/* top/bottom left/right */</span><span class="w"></span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">    </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">px</span><span class="w"> </span><span class="mi">30</span><span class="kt">px</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="p">;</span><span class="w">  </span><span class="c">/* top left/right bottom */</span><span class="w"></span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">    </span><span class="c">/* direcciones lógicas específicas */</span><span class="w"></span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">    </span><span class="k">padding-inline-start</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">rem</span><span class="p">;</span><span class="w"> </span><span class="c">/* inicio en dirección de linea (left para latino) */</span><span class="w"></span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">    </span><span class="k">padding-inline-end</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">rem</span><span class="p">;</span><span class="w"> </span><span class="c">/* final en dirección de linea (right para latino) */</span><span class="w"></span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">    </span><span class="k">padding-block-start</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">rem</span><span class="p">;</span><span class="w"> </span><span class="c">/* inicio en direción de bloque (top para latino) */</span><span class="w"></span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">    </span><span class="k">padding-block-end</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">rem</span><span class="p">;</span><span class="w"> </span><span class="c">/* fin en direción de bloque (bottom para latino) */</span><span class="w"></span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">    </span><span class="c">/* atajos direcciones lógicas */</span><span class="w"></span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">    </span><span class="k">padding-block</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="kt">rem</span><span class="p">;</span><span class="w"> </span><span class="c">/* a la vez direcciones de bloque (up y bottom para latino) */</span><span class="w"></span>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">    </span><span class="k">padding-inline</span><span class="p">:</span><span class="w"> </span><span class="mi">40</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="c">/* a la vez direcciones de linea (left y right para latino) */</span><span class="w"></span>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">    </span><span class="c">/* experimental */</span><span class="w"></span>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">    </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="n">logical</span><span class="w"> </span><span class="mi">2</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="c">/* el mismo en las 4 direcciones, no cal */</span><span class="w"></span>
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">    </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="n">logical</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="mi">2</span><span class="kt">px</span><span class="w"> </span><span class="mi">3</span><span class="kt">px</span><span class="w"> </span><span class="mi">4</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="c">/* block-start line-end block-end line-start, clock-wise order if latin */</span><span class="w"></span>
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">    </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="n">logical</span><span class="w"> </span><span class="mi">100</span><span class="kt">px</span><span class="w"> </span><span class="mi">30</span><span class="kt">px</span><span class="p">;</span><span class="w">  </span><span class="c">/* block inline */</span><span class="w"></span>
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="w">    </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="n">logical</span><span class="w"> </span><span class="mi">100</span><span class="kt">px</span><span class="w"> </span><span class="mi">30</span><span class="kt">px</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="p">;</span><span class="w">  </span><span class="c">/* block-start inline block-end */</span><span class="w"></span>
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Error típico</p>
+<p><em>Usar porcentajes para hacer el padding vertical proporcional a la altura del contenedor</em></p>
+<p>Cuando especificamos un padding vertical (block en multiculti) con un porcentage,
+no se toma el alto del contenedor como referencia,
+sinó su ancho (inline en multiculti).</p>
+<p><div style="
+    width: 100px;
+    height: 200px;
+    background: #f77;
+    float: right; margin-inline: 1rem; padding:2px;
+">
+<div style="background: #7f7; padding: 20% 20%;">XXXXX</div>
+</div></p>
+<p>En el siguiente ejemplo,
+el padding de la caja interna está fijado al 20% en todas las direcciones.
+Se observa que resulta el mismo padding horizontal y vertical,
+aunque la caja contenedora sea el doble de alta que de ancha.
+Se está tomando el 20% del ancho en todas las direcciones.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">&lt;</span><span class="nt">div</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="s">    background: #f77;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="s">    width: 100px;</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="s">    height: 200px;</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="s">    float: right; margin-inline: 1rem; padding:2px;</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="s">&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;background: #7f7; padding: 20% 20%;&quot;</span><span class="p">&gt;</span>XXXXX<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div></p>
+</div>
+<h2 id="borde-border">Borde (<code>border</code>)</h2>
+<p>El borde es una línea que decora el extremo de la caja marcando su límite.
+Está fuera del padding pero sigue siendo parte de la caja de cara al maquetado.</p>
+<p>También por ser parte de la caja,
+se le aplica el fondo (background) del elemento,
+aunque muchas veces no es visible.</p>
+<p>La línea de borde tiene 3 atributos: ancho <code>width</code>, estilo <code>style</code> y color <code>color</code>.</p>
+<p>El color por defecto es el <code>color</code> del elemento.
+La anchura puede ser una longitud o una de las palabras <code>thin</code>, <code>medium</code>, <code>thick</code>.
+La anchura por defecto es <code>medium</code> aunque no esta especificada a cuanto corresponde.</p>
+<p>El estilo es importante porque por defecto es <code>none</code> y si no lo cambiamos no se verá.</p>
+<p>Los estilos posibles son:</p>
+<ul>
+<li>Invisibles:<ul>
+<li><code>none</code>: Sin borde (por defecto).</li>
+<li><code>hidden</code>: Sin borde. Pero tiene prioridad cuando colapsa con otro.</li>
+</ul>
+</li>
+<li>Planas:<ul>
+<li><code>solid</code>: Una linea plana</li>
+<li><code>double</code>: Dos lineas paralelas</li>
+<li><code>dotted</code>: Puntos</li>
+<li><code>dashed</code>: Rayas</li>
+</ul>
+</li>
+<li>Sombreadas: Se crean oscureciendo o aclarando el color para generar efecto sombreado<ul>
+<li><code>ridge</code>: Simula un marco sobre saliente  <code>/\______/\</code></li>
+<li><code>groove</code>: Simula un surco alrededor del contenido <code>\/--------\/</code></li>
+<li><code>inset</code>: Simula que el contenido està hundido <code>\______/</code></li>
+<li><code>outset</code>: Simula que el contenido sobresale <code>/--------\</code></li>
+</ul>
+</li>
+</ul>
+<div style="color: #77f; display: flex; justify-content: space-between; gap: 5pt">
+<div style="border-style: none; border-width: 5pt">None</div>
+<div style="border-style: solid; border-width: 2.5pt">Solid</div>
+<div style="border-style: dotted; border-width: 5pt">Dotted</div>
+<div style="border-style: dashed; border-width: 5pt">Dashed</div>
+<div style="border-style: double; border-width: 5pt">Double</div>
+<div style="border-style: ridge; border-width: 5pt">Ridge</div>
+<div style="border-style: groove; border-width: 5pt">Groove</div>
+<div style="border-style: inset; border-width: 5pt">Inset</div>
+<div style="border-style: outset; border-width: 5pt">Outset</div>
+</div>
+
+<p>La línea del borde tiene 3 atributos (<code>width</code>, <code>style</code>, <code>color</code>)
+que se aplican en las cuatro direcciones con: <code>border{-direction}{-attribute}</code>.
+Las direcciones son las mismas que para el padding:
+<code>top</code>, <code>right</code>, <code>bottom</code>, <code>left</code>, las multicultis <code>inline/block[-start/end]</code>.</p>
+<p>Los atajos <code>border{-attribute}</code> permiten fijar el atributo en las cuatro direcciones a la vez.
+Se pueden usar 4, 3, 2 o 1 valores igual que con el padding:</p>
+<ul>
+<li>4: con las agujas del reloj empezando a las 12</li>
+<li>3: el left toma el valor del right</li>
+<li>2: block inline</li>
+<li>1: para todas las direcciones</li>
+</ul>
+<p>Los atajos <code>border{-direction}</code> permiten fijar los tres atributos a la vez en una direccion.</p>
+<p>El atajo <code>border</code> permite especificar los 3 atributos en las 4 direcciones a la vez,
+pero no permite especificar distintos atributos para cada dirección como permiten <code>padding</code> o <code>border{-attribute}</code>.</p>
+<p>El borde tiene anchura <code>width</code>, como el padding, pero ademas color y estilo.</p>
+<p>Por defecto, el color es el del contenido.</p>
+<p>También como el padding se puede especificar para las cuatro direcciones.
+Se fija con propiedades:</p>
+<p><code>border{-attribute}{-direction}</code></p>
+<p>A diferencia del padding, el shortcut <code>border</code> no sirve para especificar diferentes
+propiedades en cada dirección, solo para especificar las mismas propiedades a las cuatro.</p>
+<ul>
+<li>colapse</li>
+<li>radius</li>
+<li>image<ul>
+<li>setting border set border-image to none</li>
+</ul>
+</li>
+</ul>
+<h2 id="margen-margin">Margen (<code>margin</code>)</h2>
+<p>El margen es una distancia mínima de exclusión que se establece para un bloque en cada dirección
+desde el borde de la caja al borde de la caja adjacente en esa dirección.</p>
+<ul>
+<li>Es transparente, no se le aplica el background.<ul>
+<li>Al contrario del borde y el padding, que si se les aplica el background.</li>
+</ul>
+</li>
+<li>Los margenes de cajas adyacentes se solapan <strong>colapsandose</strong>.<ul>
+<li>De los dos, se toma el mas grande para separar.</li>
+<li>Da igual que sea de otro nivel, si hay no hay contenido en medio</li>
+<li>El margen no expande el contenedor</li>
+</ul>
+</li>
+</ul>
+<p>Formas de especificarlo:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">.</span><span class="nc">midiv</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="c">/* el mismo margen en las 4 direcciones */</span><span class="w"></span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="mi">2</span><span class="kt">px</span><span class="w"> </span><span class="mi">3</span><span class="kt">px</span><span class="w"> </span><span class="mi">4</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="c">/* top left bottom right, clock-wise order */</span><span class="w"></span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">px</span><span class="w"> </span><span class="mi">30</span><span class="kt">px</span><span class="p">;</span><span class="w">  </span><span class="c">/* vertical horizontal */</span><span class="w"></span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">px</span><span class="w"> </span><span class="mi">30</span><span class="kt">px</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="p">;</span><span class="w">  </span><span class="c">/* top horizontal bottom */</span><span class="w"></span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="k">margin-top</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="k">margin-right</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="k">margin-bottom</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">    </span><span class="k">margin-left</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<div style="background: green">
+    <div style="background: blue; margin: 0;">content</div>
+    <div style="background: red; margin: 10px 10px 20px 10px; border: solid 1pt black">content</div>
+    <div style="background: red; margin: 90px 10px; border: solid 1pt black">content</div>
+    <div style="background: blue; margin: 0;">
+        hola que tal esto es un texto largo
+        hola que tal esto es un texto largo
+        hola que tal esto es un texto largo
+        hola que tal esto es un texto largo
+        content</div>
+</div>
+
+<p>Los márgenes de dos bloques adjacentes <strong>se colapsan</strong>.
+Es decir, de los dos se toma el mayor.</p>
+<p>Cuando ponemos al lado dos márgenes, se colapsan en el más grande.</p>
+<h2 id="contornos-outline">Contornos (<code>outline</code>)</h2>
+<p>Otras cosas que añaden capas pero no pertenecen al box model y, por tanto,
+<strong>no se tienen en cuenta para calcular el maquetado</strong>:</p>
+<ul>
+<li>Outline:<ul>
+<li>Es un borde extra que se añade normalmente cuando el elemento esta en foco</li>
+<li>Tiene la misma sintaxis que <code>border</code> pero sin poder especificar por direcciones</li>
+<li>Pintado en rojo en el ejemplo.</li>
+<li>El borde en azul, esta dentro de la caja. El outline en rojo no se tiene en cuenta para el maquetado.</li>
+</ul>
+</li>
+<li>Box shadow: <ul>
+<li>El box shadow replica el volumen de la caja con un cierto offset, color y difusión.</li>
+<li>Tampoco se tiene en cuenta para calcular el </li>
+<li>En purpura en el ejemplo, con un offset de 5pt en cada direccion y una difusion de un punto.</li>
+</ul>
+</li>
+</ul>
+<p>La propiedad <code>outline-offset</code> permite definir una distancia de separación
+entre el border y el contorno.</p>
+<h2 id="margin">Margin</h2>
+<p>The margin </p>
+<ul>
+<li>Margenes entre bloques adyacentes (del nivel que sea) no se suman sino que colapsan al más grande.</li>
+<li>Excepciones:</li>
+<li>Si hay algo entre medias que tambien puede ser un borde o un padding</li>
+<li>Si hemos creado un contexto de flujo diferente (flex, grid, position...)</li>
+</ul>
+<p>Other</p>
+<ul>
+<li><code>width: auto</code> takes the available space without overflowing</li>
+<li><code>margin: auto</code> takes the availabel space</li>
+<li><code>width: max-content;</code> expands to the max content expans, but does not shrink</li>
+<li><code>width: min-content;</code> sets to the mininum width the content could shrink without over flowing content. (The longer word in a paragraph)</li>
+<li><code>width: fit-content;</code> expands between max and min content according to the available size</li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../css/" class="md-footer__link md-footer__link--prev" aria-label="Previous: CSS" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              CSS
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../css-normalflow/" class="md-footer__link md-footer__link--next" aria-label="Next: Flujo normal (normal flow)" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Flujo normal (normal flow)
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d6c3db9e.min.js"></script>
+      
+    
+  </body>
+</html>

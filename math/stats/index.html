@@ -1,0 +1,1749 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Apunts i notes de coses que aprenc">
+      
+      
+        <meta name="author" content="vokimon">
+      
+      
+        <link rel="canonical" href="https://vokimon.github.io/apunts/math/stats/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.8">
+    
+    
+      
+        <title>Statistics - Apunts</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.20d9efc8.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.815d1a91.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/figure.css">
+    
+      <link rel="stylesheet" href="../../css/linkcard.css">
+    
+      <link rel="stylesheet" href="../../css/videowrapper.css">
+    
+      <link rel="stylesheet" href="../..">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#data-visualization" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Apunts" class="md-header__button md-logo" aria-label="Apunts" data-md-component="logo">
+      
+  <img src="../../img/logo-customblocks-white.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Apunts
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Statistics
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_3" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9h-1.9M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69m-9.15 3.96h2.3L12 9l-1.15 3.65Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_3">
+          
+            <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/vokimon/apunts" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Apunts" class="md-nav__button md-logo" aria-label="Apunts" data-md-component="logo">
+      
+  <img src="../../img/logo-customblocks-white.svg" alt="logo">
+
+    </a>
+    Apunts
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/vokimon/apunts" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        README
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Computers
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Computers" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Computers
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          css
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="css" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          css
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/css/" class="md-nav__link">
+        CSS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/css-boxmodel/" class="md-nav__link">
+        El modelo de caja
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/css-normalflow/" class="md-nav__link">
+        Flujo normal (normal flow)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/css-flexbox/" class="md-nav__link">
+        CSS Flexbox
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/css-grid/" class="md-nav__link">
+        CSS Grid
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/css-typography/" class="md-nav__link">
+        Css typography
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          javascript
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="javascript" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          javascript
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/jsecosystem/" class="md-nav__link">
+        Jsecosystem
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/jsonschema/" class="md-nav__link">
+        Jsonschema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/react-formik/" class="md-nav__link">
+        React formik
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/react/" class="md-nav__link">
+        React / Redux
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/android-glossary/" class="md-nav__link">
+        Android glossary
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/cpp11/" class="md-nav__link">
+        New features of C++11 I should be starting to use:
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/deeplearning/" class="md-nav__link">
+        Deep learning
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/docker/" class="md-nav__link">
+        Docker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/ip6" class="md-nav__link">
+        None
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/specs-pdf/" class="md-nav__link">
+        Specs pdf
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/timewarrior/" class="md-nav__link">
+        TimeWarrior
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/xpxplained/" class="md-nav__link">
+        El problema
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Math
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Math" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Math
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mates-fundation/" class="md-nav__link">
+        Math Foundations
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Statistics
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Statistics
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#data-visualization" class="md-nav__link">
+    Data visualization
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-distribution" class="md-nav__link">
+    Data distribution
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#correlations" class="md-nav__link">
+    Correlations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#controlled-experiments" class="md-nav__link">
+    Controlled experiments
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#surveys" class="md-nav__link">
+    Surveys
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#science-journalism" class="md-nav__link">
+    Science Journalism
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ethicals-of-data-collection" class="md-nav__link">
+    Ethicals of data collection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#probability" class="md-nav__link">
+    Probability
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#binomial-statistics" class="md-nav__link">
+    Binomial statistics
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#geometric-distributions" class="md-nav__link">
+    Geometric distributions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#randomness" class="md-nav__link">
+    Randomness
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#z-score" class="md-nav__link">
+    Z-score
+  </a>
+  
+    <nav class="md-nav" aria-label="Z-score">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#normal-distributions" class="md-nav__link">
+    Normal distributions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interval-of-confidence" class="md-nav__link">
+    Interval of confidence
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../math-halfderivatives/" class="md-nav__link">
+        Half Derivatives
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../math-quadraticformula-alternative/" class="md-nav__link">
+        Quadratic Formula
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../math-wavelets/" class="md-nav__link">
+        Wavelets
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../math-3n1/" class="md-nav__link">
+        Collatz Conjecture
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Music
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Music" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Music
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../music/music-harmony/" class="md-nav__link">
+        Harmony: Notes, Scales and Chords 🎶
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../music/guitar-technics/" class="md-nav__link">
+        Técnica de Guitarra 🎸
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../music/guitar-fret-navigation/" class="md-nav__link">
+        Navegación en el mástil
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../music/pentatonicas.txt" class="md-nav__link">
+        Pentatonicas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../music/songs/" class="md-nav__link">
+        Songs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../music/ukelele/" class="md-nav__link">
+        Ukelele
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Languages
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Languages" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Languages
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/consonantes-afi.png" class="md-nav__link">
+        Phonetics Consonants
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/vowels.jpg" class="md-nav__link">
+        Phonetics Vowels
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/arabic-alphabet/" class="md-nav__link">
+        Arabic script
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/arabic/" class="md-nav__link">
+        Arabic
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/deutsch/" class="md-nav__link">
+        Deutsch
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/english-expresions/" class="md-nav__link">
+        English expresions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/english-old-pronoums/" class="md-nav__link">
+        English old pronoums
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/english-prepositions/" class="md-nav__link">
+        English prepositions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/english-tenses/" class="md-nav__link">
+        English tenses
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/vocabulary-somenergia/" class="md-nav__link">
+        English Vocabulary for SE enterviews
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/vocabulary-edibles/" class="md-nav__link">
+        Vocabulary edibles
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../economics/" class="md-nav__link">
+        Economics
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#data-visualization" class="md-nav__link">
+    Data visualization
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-distribution" class="md-nav__link">
+    Data distribution
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#correlations" class="md-nav__link">
+    Correlations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#controlled-experiments" class="md-nav__link">
+    Controlled experiments
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#surveys" class="md-nav__link">
+    Surveys
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#science-journalism" class="md-nav__link">
+    Science Journalism
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ethicals-of-data-collection" class="md-nav__link">
+    Ethicals of data collection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#probability" class="md-nav__link">
+    Probability
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#binomial-statistics" class="md-nav__link">
+    Binomial statistics
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#geometric-distributions" class="md-nav__link">
+    Geometric distributions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#randomness" class="md-nav__link">
+    Randomness
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#z-score" class="md-nav__link">
+    Z-score
+  </a>
+  
+    <nav class="md-nav" aria-label="Z-score">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#normal-distributions" class="md-nav__link">
+    Normal distributions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interval-of-confidence" class="md-nav__link">
+    Interval of confidence
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <a href="https://github.com/vokimon/apunts/edit/master/docs/math/stats.md" title="Edit this page" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+<p>Descriptive statistics
+- Cuando hay muchos datos y quieres simplificarla o extraer significado
+- Media, Varianza...</p>
+<p>Inferencial statistics:
+- Cuando no puedes comprobar todos los datos y tomas una muestra para extrapolar
+- Incluyen un margen de error</p>
+<p>Central tendency measures:</p>
+<ul>
+<li>
+<p>Expectation: </p>
+</li>
+<li>
+<p>Mean: sum(x)/len(x)</p>
+</li>
+<li>Normal: Simetrical distribution with a maximum in the average and symetrical </li>
+<li>Distribution: How often a value occurs in a data set (frequency)</li>
+<li>
+<p>Outliers: Data que se separa demasiado del rato, distorsionan la media</p>
+</li>
+<li>
+<p>Median: Valor que queda en el centro de los valores ordenados</p>
+<ul>
+<li>Quartile: Divide the sample on 4, like the median divides in 2</li>
+</ul>
+</li>
+<li>Mode: Valor que aparece mas en el data set<ul>
+<li>Bi/Multimodal: en la distribución de frecuencias hay mas de un pico</li>
+<li>Funciona con valores no numéricos</li>
+</ul>
+</li>
+</ul>
+<p>Media y median son la misma son identicas dicen que la distribucion es simetrica
+Skew: en uno de los lados hay valores extremos</p>
+<p>Spread measures:</p>
+<p>How much data diverges from the central tendency</p>
+<ul>
+<li>Range: distance between the extreme values</li>
+<li>Interquartile Range (IQR): Distance between extremes of the middle 50% of your data
+    Divide in quartiles (4 parts) and take the two middle ones</li>
+<li>Variance </li>
+<li>Deviation: separation of a data from the mean</li>
+<li>Squared deviation</li>
+<li>Standard deviation: square root of the Variance (en unidades del dominio, no el cuadrado)</li>
+</ul>
+<h2 id="data-visualization">Data visualization</h2>
+<p>Quantitive data: 
+- Consisten spacing</p>
+<p>Categorical data:</p>
+<p>Frequency table: How many data fits the category
+Relative frequency: How many data fits the category over the total (percent)</p>
+<p>Bar chart: Proportional bar height to the frequencies</p>
+<p>Pictograms: objects number or size proportional to the data</p>
+<p>Ojo con los radios, las superficies y lo ancho</p>
+<p>Binning: agrupar datos quantitativos en intervalos (bins/compartimentos) que seran las categorias
+Los compartimentos pueden no ser equidistantes
+Aunque ello puede estar justificado (juntar la gente mayor de 70 años, o que compra mas de 4l de aceite a la semana), tambien se puede usar para enmascarar datos.</p>
+<p>Histogram: Representacion en barras de un intervalo continuo haciendo binning</p>
+<ul>
+<li>
+<p>Steam and leaf plot: separar los digitos </p>
+</li>
+<li>
+<p>Box plot or  Box and wisker plot:</p>
+<ul>
+<li>A splitted box shows the mean and the main quartiles.</li>
+<li>The wisker</li>
+<li>Outliers may be displayed as x outside the wisker</li>
+</ul>
+</li>
+<li>
+<p>Cumulative frequency graph</p>
+<ul>
+<li>La integral de la frequencia</li>
+<li>Es mejor para representar pregutnas de menos que...</li>
+</ul>
+</li>
+</ul>
+<h2 id="data-distribution">Data distribution</h2>
+<p>El infinitesimal de un histograma cuando los bins se hacen pequeños</p>
+<p>Normal distribution:
+- Mean media and mode are the same  -&gt; simetrical
+- Defined by the mean and the stddev</p>
+<p>Uniform distribution:
+- Every possible value has the same probability</p>
+<h2 id="correlations">Correlations</h2>
+<p>Looking for relationships between two variables.</p>
+<p>Bivariate data: relationship between two variables</p>
+<p>Scatter plot: Visualizating two variables for each case as plots</p>
+<p>Allows to see clusters, tendencies...</p>
+<p>Regression line: is the line that minimizes the distance of the averall points</p>
+<p>Regression coefficient: Y = mX + b</p>
+<p>Correlatiation: The points relates
+- Positive the increment of one variable</p>
+<p>Correlation may often is due by causality,
+but VERY IMPORTANT, correlation may be due to:</p>
+<ul>
+<li>A couses B</li>
+<li>B causes A</li>
+<li>third cause causes A and B</li>
+<li>No causal relation, just random</li>
+</ul>
+<p>Squared correlation (r^2): How much of the variance of one variable can be explained by the other variable</p>
+<h2 id="controlled-experiments">Controlled experiments</h2>
+<ul>
+<li>Simulation:<ul>
+<li></li>
+</ul>
+</li>
+<li>Experiment<ul>
+<li>Taking cases from the real world and using </li>
+</ul>
+</li>
+<li>
+<p>Randomize block design: </p>
+</li>
+<li>
+<p>Selection Bias: Distortion of the results because how the sample is selected</p>
+<ul>
+<li>Sampling bias: The sampled population cannot be generalized to the rest of the population<ul>
+<li>ie: Calls to random land phones tends to select mature people homesa</li>
+<li>ie: Asking for polling at the exit of the train station</li>
+</ul>
+</li>
+<li>Interval bias: </li>
+<li>Volunteer bias: Because the sample is volunteers this </li>
+</ul>
+</li>
+<li>Allocation Bias: Distortion of the results because how the control and experimental groups are selected<ul>
+<li>Allocation concealment or blinding:  </li>
+</ul>
+</li>
+</ul>
+<p>Still the groups could be uneven -&gt; Replication</p>
+<p>Placebo: Just the action of taking a pill could make the person feel better</p>
+<ul>
+<li>Single blind study: Researchers knows the control groups, but the patients don't to avoid placebo</li>
+<li>
+<p>Double blind study: Prevents the researchers unconciously affect the subjects differently</p>
+</li>
+<li>
+<p>Twins experiments: Twins represent the same genetic background (not non-genetic)</p>
+</li>
+<li>Repeated measures design: Different treatments With the same subject one after another</li>
+</ul>
+<h2 id="surveys">Surveys</h2>
+<p>Non experimental way of getting statistical information</p>
+<p>Leading questions: 
+Biased questions:
+Non-response bias: People who are not responding 
+Voluntary response bias: People who response tend to be very positive or very negative</p>
+<p>Cooking: </p>
+<p>Cluster sampling: Select a random cluster of population, not individually (classrooms, medical centers...)</p>
+<p>Snowball sampling: The subjects are used to find more people of interest they might know
+    Useful to locate small target groups.</p>
+<p>Census: A survey of the entire population. Minimizes sampling error, and used as a benchmarch for later surveys.</p>
+<ul>
+<li>Biased polls</li>
+<li>Badly worded polls</li>
+<li>Fake pools</li>
+</ul>
+<h2 id="science-journalism">Science Journalism</h2>
+<p>When the study headline is catchy few journalism asks for the quality of the study.</p>
+<ul>
+<li>
+<p><em>Beer/Chocolate/... is good for your health</em></p>
+</li>
+<li>
+<p><em>Significant</em> does not mean important in statistics, but noticeable</p>
+</li>
+</ul>
+<p>Cuando leas science journalism</p>
+<ul>
+<li>Who wrote the article</li>
+<li>Who published the article</li>
+<li>Who made the study</li>
+<li>Who funded the study</li>
+</ul>
+<p>Foundations are funded.</p>
+<p>Journalist are under presure to catch your attention</p>
+<p>Non representative results:</p>
+<ul>
+<li>Reports on mice extrapolated to humans</li>
+<li>Petry dish studies: substances cannot be applied as directly to inner cells by ingestion or similar, and it could be dangerous</li>
+</ul>
+<p>Journals mentioning "Scientists have found...", "A new study says...", go to the source</p>
+<h2 id="ethicals-of-data-collection">Ethicals of data collection</h2>
+<p>Nuremberg Code:</p>
+<ul>
+<li>Informed consent:<ul>
+<li>Provide information in a comprehensive level to the target</li>
+<li>Not coerced in any way</li>
+</ul>
+</li>
+<li>Good for the society</li>
+<li>Basado en trabajo previo en laboratorio, con animales</li>
+<li>Diseñado para evitar daños físicos y psicologicos innecesarios</li>
+<li>Que no se pueda pensar a priori que conducira a la muerte o a daños permanentes (excepto si el sujeto es el propio experimentador!??)</li>
+<li>El riesgo no puede exceder del beneficio humanitario que se extraiga (como lo comparas?)</li>
+<li>Infrastructura establecida para minimizar los posibles daños</li>
+<li>Personal cualificado cientificamente y en cuidados</li>
+<li>Libertad de salirse del experimento en cualquier momento (limitado a que su estado mental o fisico haya empeorado?)</li>
+<li>Researchers should end the experiments if at any moment they foresee it will end in injury death or disability</li>
+</ul>
+<p>Se redactó a raiz de los juicios de Nuremberg a los nazis.</p>
+<p>New digital contexts not that regulated.</p>
+<h2 id="probability">Probability</h2>
+<p>Empirical probability: Occurrence in actual data</p>
+<p>Theoretical probability: Hidden true we cannot directly see</p>
+<p>Empirical probability is a good estimation of </p>
+<p>Exclusive events: P(a &amp; b) = 0
+Addition rule: When events are exclusive P(a | b) = P(a) + P(b)
+When not exclusive P(a or b) = P(a) + P(b) - P(a and b)
+we dicount the overlaping area of the wen diagram.</p>
+<p>Independent Events: Their occurence of one event is not affected by the occurence of the other</p>
+<p>Multiplication rule: For independent events P(a and b) = P(a) P(b)</p>
+<p>When they are not independents, means that conditional probability is different than the regular probability</p>
+<p>Conditional probability P(a|b): The probability of a given that b is happens</p>
+<p>P(a and b) = P(b) P(a|b) -&gt; P(a|b) = P(a and b) / P(b)</p>
+<p>They are not reciprocal.</p>
+<p>P(b|a) = P(a and b) / P(a)</p>
+<p>P(b|a) P(a) = P(a|b) P(b) Theorem of Bayes</p>
+<p>Base Rate: Probability in the population
+Sensitivity: True positives
+Specificity: True negatives</p>
+<h2 id="binomial-statistics">Binomial statistics</h2>
+<p>Binomial distribution:
+Given n repeated independent experiments
+chance to get k occurences of an event of probability p.</p>
+<p>Probability of a given combination (ie: FTTFF)</p>
+<p>P(a*k of N) = P(a)^k P(not a)^(n-k)</p>
+<p>Binomial coefficent:
+how many ordering combinations of k occurences out of N cases</p>
+<p>nCk = n! /( (n-k)! k!) = (</p>
+<p>binomial(n,k) = nCk P(a*k of N)</p>
+<p>Bernoulli distribution (binomial para n = 1 y k in (0,1))</p>
+<h2 id="geometric-distributions">Geometric distributions</h2>
+<p>Geometric distribution: La probabilitat que el primer caso se dé en el experimento k</p>
+<p>geom(k;p) = p (1-p)^k</p>
+<p>Cumulative geometric distributions: Useful to tell how much we should wait to get a result</p>
+<p>acumgeom(k;p) sum(geom(i;p) for i in range(k))</p>
+<p>Cumulative results may have anti-intuitive results:</p>
+<ul>
+<li>Shared birthday paradox: almost assured with 30 persons</li>
+<li>Lottery tickets: 15M tickets on average</li>
+</ul>
+<h1 id="randomness">Randomness</h1>
+<p>Expected value of a sample the mean</p>
+<p>First Moment / Mean</p>
+<p>Multiply each value by its frequency in the sample</p>
+<p>integral ( f(x)*x )</p>
+<p>Second Moment / Variance:
+the expectation of the difference to the first moment
+E(x-Mean)</p>
+<p>Third Moment / Skewness:
+How data frequency is more extreme on higher (positive) or lower values (negative)
+E (x-Mean)^3</p>
+<p>Fourth Moment / Kurtosis
+How thick the tails are 
+E (x-Mean)^4</p>
+<h1 id="z-score">Z-score</h1>
+<p>El z-score es una canonicalización de una función normal
+para que puedan ser comparada con valores de otra distribución normal.
+Se le resta la media y se divide por la desviacion standard.
+La media queda en 0 y la desviación estandard en +1 y -1.</p>
+<p>Percentile: what percent of the population is lower value than a given value of a distribution.</p>
+<p>Percentile tables of z-distributions
+(Accumulated z-score)</p>
+<table>
+<thead>
+<tr>
+<th align="right">zscore</th>
+<th align="right">percentile</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">-3ð</td>
+<td align="right">0.13%</td>
+</tr>
+<tr>
+<td align="right">-2ð</td>
+<td align="right">2.27%</td>
+</tr>
+<tr>
+<td align="right">-1ð</td>
+<td align="right">15.9%</td>
+</tr>
+<tr>
+<td align="right">0ð</td>
+<td align="right">50.0%</td>
+</tr>
+<tr>
+<td align="right">+1ð</td>
+<td align="right">84.1&amp;</td>
+</tr>
+<tr>
+<td align="right">+2ð</td>
+<td align="right">97.7%</td>
+</tr>
+<tr>
+<td align="right">+3ð</td>
+<td align="right">99.87%</td>
+</tr>
+</tbody>
+</table>
+<h2 id="normal-distributions">Normal distributions</h2>
+<p>Same value mean, mode and median
+Skewness 0</p>
+<p>Given a population with a variable following a distribution with a finite variance,
+the distribution of the means of random samples of the population
+tends to be a normal distribution, whatever the original population ditribution,
+on increasing sample size.</p>
+<p>Central Limit Theorem:
+The distribution of sample means for an independent random variable
+will get closer and closer to a normal distribution as the size of the sample
+gets bigger and bigger, even if the original population distribution isn't normal itself.</p>
+<p>The mean of the sample distribution is also getting closer to the population mean
+as we increase the sample.</p>
+<p>Standard Error (of the mean): 
+The standard deviation on </p>
+<p>For larger samples, the standard error will be smaller</p>
+<p>Margin of error (2ð): have 99% of the means, so it is quite secure to state that the population mean will be within that margin.</p>
+<p>The central limit can be used on regressions...</p>
+<p>Estimation of the standard error:</p>
+<h2 id="interval-of-confidence">Interval of confidence</h2>
+<p>Confidence interval: An estimated range of values that seems reasonable for the population mean based on what we observed.
+Such an interval has the center on the sample mean and covers some room for uncertainty</p>
+<p>IE. A confidence interval of 95% means that if we take a sample of this same side we are missing the population mean 5% of the times.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../mates-fundation/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Math Foundations" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Math Foundations
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../math-halfderivatives/" class="md-footer__link md-footer__link--next" aria-label="Next: Half Derivatives" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Half Derivatives
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d6c3db9e.min.js"></script>
+      
+    
+  </body>
+</html>

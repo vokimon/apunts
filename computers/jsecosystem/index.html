@@ -1,0 +1,1765 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Apunts i notes de coses que aprenc">
+      
+      
+        <meta name="author" content="vokimon">
+      
+      
+        <link rel="canonical" href="https://vokimon.github.io/apunts/computers/jsecosystem/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.8">
+    
+    
+      
+        <title>Jsecosystem - Apunts</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.20d9efc8.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.815d1a91.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/figure.css">
+    
+      <link rel="stylesheet" href="../../css/linkcard.css">
+    
+      <link rel="stylesheet" href="../../css/videowrapper.css">
+    
+      <link rel="stylesheet" href="../..">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#packaging-dependencies-preprocessing" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Apunts" class="md-header__button md-logo" aria-label="Apunts" data-md-component="logo">
+      
+  <img src="../../img/logo-customblocks-white.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Apunts
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Jsecosystem
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_3" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9h-1.9M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69m-9.15 3.96h2.3L12 9l-1.15 3.65Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_3">
+          
+            <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/vokimon/apunts" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Apunts" class="md-nav__button md-logo" aria-label="Apunts" data-md-component="logo">
+      
+  <img src="../../img/logo-customblocks-white.svg" alt="logo">
+
+    </a>
+    Apunts
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/vokimon/apunts" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        README
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Computers
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Computers" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Computers
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          css
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="css" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          css
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../css/" class="md-nav__link">
+        CSS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../css-boxmodel/" class="md-nav__link">
+        El modelo de caja
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../css-normalflow/" class="md-nav__link">
+        Flujo normal (normal flow)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../css-flexbox/" class="md-nav__link">
+        CSS Flexbox
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../css-grid/" class="md-nav__link">
+        CSS Grid
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../css-typography/" class="md-nav__link">
+        Css typography
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          javascript
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="javascript" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          javascript
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Jsecosystem
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Jsecosystem
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#packaging-dependencies-preprocessing" class="md-nav__link">
+    Packaging, dependencies, preprocessing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#browser-compatibility-adapters" class="md-nav__link">
+    Browser compatibility adapters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assets-processors" class="md-nav__link">
+    Assets Processors
+  </a>
+  
+    <nav class="md-nav" aria-label="Assets Processors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#python-in-browser" class="md-nav__link">
+    Python in browser
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#toolbox-libraries" class="md-nav__link">
+    Toolbox Libraries
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#application-frameworks" class="md-nav__link">
+    Application Frameworks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#html-presentations" class="md-nav__link">
+    HTML Presentations
+  </a>
+  
+    <nav class="md-nav" aria-label="HTML Presentations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#style-preprocessors" class="md-nav__link">
+    Style preprocessors
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-interesting-libraries" class="md-nav__link">
+    Other interesting libraries
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jsonschema/" class="md-nav__link">
+        Jsonschema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../react-formik/" class="md-nav__link">
+        React formik
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../react/" class="md-nav__link">
+        React / Redux
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../android-glossary/" class="md-nav__link">
+        Android glossary
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cpp11/" class="md-nav__link">
+        New features of C++11 I should be starting to use:
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deeplearning/" class="md-nav__link">
+        Deep learning
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker/" class="md-nav__link">
+        Docker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ip6" class="md-nav__link">
+        None
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../specs-pdf/" class="md-nav__link">
+        Specs pdf
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../timewarrior/" class="md-nav__link">
+        TimeWarrior
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xpxplained/" class="md-nav__link">
+        El problema
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Math
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Math" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Math
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/mates-fundation/" class="md-nav__link">
+        Math Foundations
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/stats/" class="md-nav__link">
+        Statistics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/math-halfderivatives/" class="md-nav__link">
+        Half Derivatives
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/math-quadraticformula-alternative/" class="md-nav__link">
+        Quadratic Formula
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/math-wavelets/" class="md-nav__link">
+        Wavelets
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/math-3n1/" class="md-nav__link">
+        Collatz Conjecture
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Music
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Music" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Music
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../music/music-harmony/" class="md-nav__link">
+        Harmony: Notes, Scales and Chords 🎶
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../music/guitar-technics/" class="md-nav__link">
+        Técnica de Guitarra 🎸
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../music/guitar-fret-navigation/" class="md-nav__link">
+        Navegación en el mástil
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../music/pentatonicas.txt" class="md-nav__link">
+        Pentatonicas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../music/songs/" class="md-nav__link">
+        Songs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../music/ukelele/" class="md-nav__link">
+        Ukelele
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Languages
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Languages" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Languages
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/consonantes-afi.png" class="md-nav__link">
+        Phonetics Consonants
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/vowels.jpg" class="md-nav__link">
+        Phonetics Vowels
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/arabic-alphabet/" class="md-nav__link">
+        Arabic script
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/arabic/" class="md-nav__link">
+        Arabic
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/deutsch/" class="md-nav__link">
+        Deutsch
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/english-expresions/" class="md-nav__link">
+        English expresions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/english-old-pronoums/" class="md-nav__link">
+        English old pronoums
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/english-prepositions/" class="md-nav__link">
+        English prepositions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/english-tenses/" class="md-nav__link">
+        English tenses
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/vocabulary-somenergia/" class="md-nav__link">
+        English Vocabulary for SE enterviews
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/vocabulary-edibles/" class="md-nav__link">
+        Vocabulary edibles
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../economics/" class="md-nav__link">
+        Economics
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#packaging-dependencies-preprocessing" class="md-nav__link">
+    Packaging, dependencies, preprocessing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#browser-compatibility-adapters" class="md-nav__link">
+    Browser compatibility adapters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assets-processors" class="md-nav__link">
+    Assets Processors
+  </a>
+  
+    <nav class="md-nav" aria-label="Assets Processors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#python-in-browser" class="md-nav__link">
+    Python in browser
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#toolbox-libraries" class="md-nav__link">
+    Toolbox Libraries
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#application-frameworks" class="md-nav__link">
+    Application Frameworks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#html-presentations" class="md-nav__link">
+    HTML Presentations
+  </a>
+  
+    <nav class="md-nav" aria-label="HTML Presentations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#style-preprocessors" class="md-nav__link">
+    Style preprocessors
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-interesting-libraries" class="md-nav__link">
+    Other interesting libraries
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <a href="https://github.com/vokimon/apunts/edit/master/docs/computers/jsecosystem.md" title="Edit this page" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+  <h1>Jsecosystem</h1>
+
+<p>This is a compilation of useful Javascript libraries
+which are used on web and webapp development nowadays.</p>
+<h2 id="packaging-dependencies-preprocessing">Packaging, dependencies, preprocessing</h2>
+<ul>
+<li><a href="http://npm.org">npm</a><ul>
+<li>Manages packages for nodejs projects.</li>
+<li>It's used beyond nodejs for any js program</li>
+<li>Most other frameworks are installed via npm</li>
+<li>A project relies on a <code>package.json</code> file with meta, dependencies, commands...</li>
+<li>It keeps a folder <code>node_modules</code> with the installed dependencies</li>
+<li>You can configure build commands</li>
+</ul>
+</li>
+<li><a href="https://yarnpkg.com/">yarn</a><ul>
+<li>Package manager.</li>
+<li>Tries to substitute npm (but uses npm to install itself)</li>
+<li>Uses the same package.json format and repositories than npm</li>
+<li>Faster dependency downloads, easier commands</li>
+<li>Besides loosy package.json version specs, it keeps an specific current version file, that can be shared among developers.</li>
+</ul>
+</li>
+<li><a href="http://requirejs.org/">Require.js</a><ul>
+<li>On browser dependency loader</li>
+<li>Manages javascript modules and dependencies and scopes their global variables to avoid conflicts.</li>
+<li>You configure requirejs on how to locate and dynamically load modules</li>
+<li>Out of order script loading, dependency driven script evaluation</li>
+<li>Lazy definition of modules inside functions, and use <code>require</code> function to actually load them</li>
+<li>Quite intrusive on the way you layout code</li>
+<li>Don't use this, mentioned because is influencial on later frameworks</li>
+</ul>
+</li>
+<li><a href="http://browserify.org">Browserify</a><ul>
+<li>Locates 'require' sentences in your code and builds a js bundle with all dependencies taken from npm repositories.</li>
+<li>The bundle is built with dependencies inside modules in requirejs way.</li>
+</ul>
+</li>
+<li><a href="https://bower.io">Bower</a><ul>
+<li>Manages runtime dependencies (in browser) for web projects</li>
+<li><a href="https://bower.io/blog/2017/how-to-migrate-away-from-bower/">Authors indeed recommend</a> webpack and yam, nowadays</li>
+<li>Manages in-browser dependencies different from npm build dependencies.</li>
+<li>Places ready to import optimized js inside <code>bower_components</code></li>
+</ul>
+</li>
+<li><a href="https://parceljs.org/">Parcel</a><ul>
+<li>Assets bundler</li>
+<li>Zero configuration, via sane defaults</li>
+</ul>
+</li>
+<li><a href="http://webpack.js.org">Webpack</a><ul>
+<li>Assets bundler.</li>
+<li>You define dependencies, media... it compiles (process, optimize...) them and generate static files for he web.</li>
+<li>Solves modularization and dependency resolution using either require or import strategies</li>
+<li>Asset spliting and multiple inclusion methods (js, inline, asset inline...)</li>
+<li>Asset transcompilation via plugins</li>
+<li><strong>Deprecated by Parcel???</strong></li>
+</ul>
+</li>
+<li><a href="http://brunch.io/">Brunch</a><ul>
+<li>Task runner</li>
+<li>Declarative and simpler than gulp/grunt</li>
+<li>Alleged vs Webpack: faster, implicit compilation by type, </li>
+<li>Not tried myself</li>
+</ul>
+</li>
+<li><a href="https://gulpjs.com/">Gulp</a><ul>
+<li>Task runner to build web static assets</li>
+<li>Pipe based and imperative</li>
+<li><strong>Deprecated by webpack</strong></li>
+</ul>
+</li>
+<li>
+<p><a href="http://gruntjs.com">Grunt</a></p>
+<ul>
+<li>Task runner to build web static assets.</li>
+<li>Tries to be declarative, at the end it is a configuration hell</li>
+<li><strong>Deprecated by Gulp</strong></li>
+</ul>
+</li>
+<li>
+<p><a href="https://nodejs.org/">Nodejs</a></p>
+<ul>
+<li>A webserver framework</li>
+<li>Event driven: Instead of one thread listening for a petition, running and responding, it enqueues petitions and get served as they go</li>
+<li>Pure javascript implementation</li>
+<li>You can use it as javascript terminal</li>
+<li>See npm</li>
+</ul>
+</li>
+</ul>
+<h2 id="browser-compatibility-adapters">Browser compatibility adapters</h2>
+<ul>
+<li>
+<p><a href="http://modernizr.com/">Modernizer</a></p>
+<ul>
+<li>Browser feature detector</li>
+<li>Once you detect a miss you can use one of the <a href="https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills">many browser compatibility layers</a></li>
+</ul>
+</li>
+<li>
+<p><a href="https://github.com/scottjehl/Respond/">Respond</a></p>
+<ul>
+<li>Transparently translates CSS files with CSS3 media queries to old IE&lt;7a</li>
+<li>This enables responsive designs without caring for lame browsers.</li>
+<li>Una alternativa más lenta pero mas robusta es <a href="http://code.google.com/p/css3-mediaqueries-js/">css3-mediaqueries.js</a></li>
+</ul>
+</li>
+<li>
+<p><a href="http://necolas.github.io/normalize.css/">Normalize.css</a></p>
+<ul>
+<li>Style reseter (css3/html5 ready)</li>
+<li>You start with a common ground in any browser</li>
+<li>CSS, no javascript.</li>
+</ul>
+</li>
+<li>
+<p><a href="https://github.com/afarkas/html5shiv">Html5shiv</a></p>
+<ul>
+<li>Allows styling new HTML5 elements in older versions of IE</li>
+</ul>
+</li>
+<li>
+<p><a href="http://html5boilerplate.com/">Html5 Boilerplate</a></p>
+<ul>
+<li>Static website template</li>
+<li>Includes most things an static website should have nowadays</li>
+<li>ganalitics, modernizer, jquery, normalize, htaccess, 404 page, </li>
+</ul>
+</li>
+</ul>
+<h2 id="assets-processors">Assets Processors</h2>
+<ul>
+<li>
+<p><a href="http://coffeescript.org">CoffeScript</a></p>
+<ul>
+<li>Language that transcompiles into Javascript</li>
+<li>Inspired by Ruby, Python, Haskell...</li>
+</ul>
+</li>
+<li>
+<p><a href="https://www.typescriptlang.org/">TypeScript</a></p>
+<ul>
+<li>Language that transcompiles into Javascript</li>
+<li>By Microsoft, embraced by Google's </li>
+</ul>
+</li>
+<li>
+<p><a href="https://babeljs.io">Babel</a></p>
+<ul>
+<li>Transcompiler to turn modern ES6 into ES5 which is compatible on most browsers</li>
+</ul>
+</li>
+</ul>
+<h3 id="python-in-browser">Python in browser</h3>
+<ul>
+<li><a href="https://transcrypt.org/">Transcrypt</a><ul>
+<li>Transcompiler for Python</li>
+<li>Py2/Py3</li>
+<li>Generates javascript code</li>
+<li>Uses Javascript libraries (not python ones)</li>
+</ul>
+</li>
+<li><a href="https://github.com/atsepkov/RapydScript">RapydScript</a><ul>
+<li>Transcompiler</li>
+<li>Python like syntax constructs for EcmaScript</li>
+<li>Not Python, new language</li>
+</ul>
+</li>
+<li><a href="http://www.skulpt.org/">skulpt</a><ul>
+<li>Client side python interpreter</li>
+<li>Py2</li>
+<li>Teaching tool</li>
+<li>Slow runtime (1/10 cpython)</li>
+</ul>
+</li>
+<li><a href="http://www.brython.info/">Brython</a><ul>
+<li>Client side python interpreter</li>
+<li>Adds a new script type</li>
+<li>500k extra for the jit compiler</li>
+</ul>
+</li>
+<li><a href="http://pypyjs.org/">Pypy.js</a><ul>
+<li>Client side python interpreter</li>
+<li>Full Python interpret implementation in javascript</li>
+<li>Generated from PyPy by means of emscripten ()</li>
+<li>Big/slow download, fast runtime</li>
+<li>Full featured</li>
+</ul>
+</li>
+<li><a href="https://batavia.readthedocs.io/en/latest/">Batavia</a><ul>
+<li>Interprete de Python bytecode en el navegador</li>
+<li>Py3.4</li>
+<li>do not interpret python code, but bytecode</li>
+<li>Very preliminar version</li>
+</ul>
+</li>
+</ul>
+<h2 id="toolbox-libraries">Toolbox Libraries</h2>
+<p>Improve the usability of standard javascript DOM api's and limitations of standard libraries.</p>
+<ul>
+<li>
+<p><a href="https://jquery.com/">jQuery</a></p>
+<ul>
+<li>Provides a nicer API for DOM acces (xpath and css like)</li>
+<li>async Web API queries</li>
+<li>Other tooling (foreach, apply, bind...)</li>
+</ul>
+</li>
+<li>
+<p><a href="http://underscorejs.org/">Underscore</a></p>
+<ul>
+<li>Basic functions missing in javascript</li>
+<li>Enables functional programming style</li>
+</ul>
+</li>
+<li>
+<p><a href="https://lodash.com/">Lo-dash</a></p>
+<ul>
+<li>Superset of Underscore</li>
+</ul>
+</li>
+<li>
+<p><a href="https://sugarjs.com/">Sugar</a></p>
+<ul>
+<li>Functions to operate nicely with standard objects</li>
+<li>Objects, Dates, Functions, Ranges, Regexp, Strings, Array...</li>
+</ul>
+</li>
+</ul>
+<h2 id="application-frameworks">Application Frameworks</h2>
+<p>Provide more foundation to the dynamic app building.
+Usually they use a Model-View-Controller like approach.</p>
+<ul>
+<li>
+<p><a href="http://getbootstrap.com/">Bootstrap</a></p>
+<ul>
+<li>Responsive layout and graphical components</li>
+<li>The one used by twitter</li>
+<li>Themable</li>
+</ul>
+</li>
+<li>
+<p><a href="https://angularjs.org/">Angular</a></p>
+<ul>
+<li>MVC framework</li>
+<li>I loved it until i started to use it version 1.x</li>
+<li>Component based approach improved on 2.x but i am in refractary</li>
+</ul>
+</li>
+<li>
+<p><a href="https://mithril.js.org/">Mithril</a></p>
+<ul>
+<li>MVC/Component framework</li>
+<li>Simplistic but powerfull and fast</li>
+<li>Models: bare javascript objects</li>
+<li>View building by <code>m</code> primitives <code>m('ul.myclas', m('li', 'content'))</code></li>
+<li>Efficiency: generates a Virtual DOM that is compared and updated to the real one</li>
+<li>Routing, async requests and data binders</li>
+<li>Component based. Component libraries available.</li>
+</ul>
+</li>
+<li>
+<p><a href="https://reactjs.org/">React</a></p>
+<ul>
+<li>Component Framework</li>
+<li>Developed by Facebook</li>
+</ul>
+</li>
+<li>
+<p><a href="http://backbonejs.org/">Backbone</a></p>
+<ul>
+<li>MVC framework</li>
+</ul>
+</li>
+<li>
+<p><a href="https://vuejs.org/">Vue</a></p>
+<ul>
+<li>MVC framework</li>
+</ul>
+</li>
+</ul>
+<h2 id="html-presentations">HTML Presentations</h2>
+<ul>
+<li>
+<p><a href="http://impress.js.com">Impress.js</a></p>
+<ul>
+<li>Somewhat slow compared to others</li>
+<li>3d transforms</li>
+<li>Content written in markdown</li>
+<li><a href="https://github.com/jgm/pandoc/wiki/Creating-impress.js-slide-shows-with-pandoc">Integration with pandoc</a> by using
+  <a href="">this template</a></li>
+</ul>
+</li>
+<li>
+<p><a href="https://revealjs.com/">Reveal.js</a></p>
+<ul>
+<li>Vertical and horizontal slider</li>
+<li>Transition effects</li>
+<li>Integrated with pandoc</li>
+</ul>
+</li>
+</ul>
+<h3 id="style-preprocessors">Style preprocessors</h3>
+<ul>
+<li><a href="http://learnboost.github.io/stylus/">Stylus</a><ul>
+<li>Compact syntax, indentation based, no colons no semicolons</li>
+<li>Still css syntax is accepted</li>
+<li>Imports, variables, nesting, mixins, extends, color ops, math ops, conditions, loops</li>
+</ul>
+</li>
+<li><a href="http://lesscss.org/">Less</a><ul>
+<li>Imports, variables, nesting, mixins, extends, color ops, math ops, conditions, loops</li>
+<li>Conditions are declarative</li>
+</ul>
+</li>
+<li><a href="http://sass-lang.com/">Sass</a><ul>
+<li>Imports, variables, nesting, mixins, extends, color ops, math ops, conditions, loops</li>
+<li>Used by bootstrap, MDC4W...</li>
+</ul>
+</li>
+<li><a href="https://postcss.org/">PostCSS</a><ul>
+<li>API to process CSS rules from javascript</li>
+<li>Plugins use the API to perform stuff<ul>
+<li>autoprefixer: adds webkit moz prefix when needed</li>
+<li>preset env: converts modern css4 features into old css</li>
+<li>linter: warns about css coding conventions</li>
+<li>Inline images</li>
+<li>optimizar reglas</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="other-interesting-libraries">Other interesting libraries</h2>
+<ul>
+<li>jquery-tipsy<ul>
+<li>Tooltips cutres tipo facebook</li>
+<li>http://onehackoranother.com/projects/jquery/tipsy/</li>
+</ul>
+</li>
+<li>jquery-infieldlabel<ul>
+<li>Puts the labels of form fields inside them</li>
+<li>http://fuelyourcoding.com/scripts/infield/</li>
+</ul>
+</li>
+<li>jquery-showpassword<ul>
+<li>Places a button on password fields to avoid the stars</li>
+<li>http://trevordavis.net/blog/jquery-show-password-plugin</li>
+</ul>
+</li>
+<li>minicolors<ul>
+<li>color picker</li>
+<li>http://www.abeautifulsite.net/blog/2011/02/jquery-minicolors-a-color-selector-for-input-controls/</li>
+</ul>
+</li>
+<li>timepicker<ul>
+<li>Chose time</li>
+<li>No idea on which one uses own cloud (many arround)</li>
+</ul>
+</li>
+<li>chosen<ul>
+<li>User friendly selection boxes</li>
+<li>http://harvesthq.github.io/chosen/</li>
+</ul>
+</li>
+<li>fullcalendar<ul>
+<li>Fullpage calendar</li>
+<li>http://arshaw.com/fullcalendar/</li>
+</ul>
+</li>
+<li>Ace Editor<ul>
+<li>Text editor with syntax highlight</li>
+<li>http://ace.c9.io</li>
+</ul>
+</li>
+<li>Mousewheel<ul>
+<li>cross browswer mousewheel support</li>
+<li>https://github.com/brandonaaron/jquery-mousewheel</li>
+</ul>
+</li>
+<li>lightbox<ul>
+<li>Modal image visualization</li>
+</ul>
+</li>
+<li>Colorbox<ul>
+<li>Visualization dialog (like lightbox)</li>
+<li>External pages, content and ajax</li>
+<li>Sequence, slideshow</li>
+<li>http://www.jacklmoore.com/colorbox/</li>
+</ul>
+</li>
+<li>js_tpl<ul>
+<li>Javascript (client-side) templating</li>
+<li>&lt;%= javascript expresion %&gt;</li>
+<li>Solo en oc_bookmarks</li>
+<li>http://ejohn.org/blog/javascript-micro-templating/http://ejohn.org/blog/javascript-micro-templating/</li>
+</ul>
+</li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../css-typography/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Css typography" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Css typography
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../jsonschema/" class="md-footer__link md-footer__link--next" aria-label="Next: Jsonschema" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Jsonschema
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d6c3db9e.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,2425 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Apunts i notes de coses que aprenc">
+      
+      
+        <meta name="author" content="vokimon">
+      
+      
+        <link rel="canonical" href="https://vokimon.github.io/apunts/math/math-3n1/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.8">
+    
+    
+      
+        <title>Collatz Conjecture - Apunts</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.20d9efc8.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.815d1a91.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/figure.css">
+    
+      <link rel="stylesheet" href="../../css/linkcard.css">
+    
+      <link rel="stylesheet" href="../../css/videowrapper.css">
+    
+      <link rel="stylesheet" href="../..">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#a-framework-to-drive-a-proof-or-refutation-of-the-collatz-conjecture" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Apunts" class="md-header__button md-logo" aria-label="Apunts" data-md-component="logo">
+      
+  <img src="../../img/logo-customblocks-white.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Apunts
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Collatz Conjecture
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_3" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9h-1.9M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69m-9.15 3.96h2.3L12 9l-1.15 3.65Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_3">
+          
+            <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/vokimon/apunts" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Apunts" class="md-nav__button md-logo" aria-label="Apunts" data-md-component="logo">
+      
+  <img src="../../img/logo-customblocks-white.svg" alt="logo">
+
+    </a>
+    Apunts
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/vokimon/apunts" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        README
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Computers
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Computers" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Computers
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          css
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="css" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          css
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/css/" class="md-nav__link">
+        CSS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/css-boxmodel/" class="md-nav__link">
+        El modelo de caja
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/css-normalflow/" class="md-nav__link">
+        Flujo normal (normal flow)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/css-flexbox/" class="md-nav__link">
+        CSS Flexbox
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/css-grid/" class="md-nav__link">
+        CSS Grid
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/css-typography/" class="md-nav__link">
+        Css typography
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          javascript
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="javascript" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          javascript
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/jsecosystem/" class="md-nav__link">
+        Jsecosystem
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/jsonschema/" class="md-nav__link">
+        Jsonschema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/react-formik/" class="md-nav__link">
+        React formik
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/react/" class="md-nav__link">
+        React / Redux
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/android-glossary/" class="md-nav__link">
+        Android glossary
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/cpp11/" class="md-nav__link">
+        New features of C++11 I should be starting to use:
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/deeplearning/" class="md-nav__link">
+        Deep learning
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/docker/" class="md-nav__link">
+        Docker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/ip6" class="md-nav__link">
+        None
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/specs-pdf/" class="md-nav__link">
+        Specs pdf
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/timewarrior/" class="md-nav__link">
+        TimeWarrior
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/xpxplained/" class="md-nav__link">
+        El problema
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Math
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Math" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Math
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mates-fundation/" class="md-nav__link">
+        Math Foundations
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stats/" class="md-nav__link">
+        Statistics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../math-halfderivatives/" class="md-nav__link">
+        Half Derivatives
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../math-quadraticformula-alternative/" class="md-nav__link">
+        Quadratic Formula
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../math-wavelets/" class="md-nav__link">
+        Wavelets
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Collatz Conjecture
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Collatz Conjecture
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-problem" class="md-nav__link">
+    The problem
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#toolbox" class="md-nav__link">
+    Toolbox
+  </a>
+  
+    <nav class="md-nav" aria-label="Toolbox">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#powers-of-three" class="md-nav__link">
+    Powers of three
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#boolean-with-integer-arithmetics" class="md-nav__link">
+    Boolean with integer arithmetics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oddity-of-algebraic-expressions" class="md-nav__link">
+    Oddity of algebraic expressions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unbranched-formula" class="md-nav__link">
+    Unbranched formula
+  </a>
+  
+    <nav class="md-nav" aria-label="Unbranched formula">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#additivesubstractive-view" class="md-nav__link">
+    Additive/Substractive view
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#strategies" class="md-nav__link">
+    Strategies
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solution-structure" class="md-nav__link">
+    Solution structure
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#empirical-observations" class="md-nav__link">
+    Empirical observations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#all-solutions-as-fkn-3bknk-ck" class="md-nav__link">
+    All solutions as fk(n) = 3^Bk*Nk + Ck
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ck-oddity" class="md-nav__link">
+    Ck Oddity
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-last-significative-bit" class="md-nav__link">
+    The last significative bit
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prunning-outcomes" class="md-nav__link">
+    Prunning outcomes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#constructive-aproach" class="md-nav__link">
+    Constructive aproach
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limiting-factor" class="md-nav__link">
+    Limiting factor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#expansion-depending-on-the-least-significative-bits" class="md-nav__link">
+    Expansion depending on the least significative bits
+  </a>
+  
+    <nav class="md-nav" aria-label="Expansion depending on the least significative bits">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#demonstrated-facts" class="md-nav__link">
+    Demonstrated facts
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Music
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Music" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Music
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../music/music-harmony/" class="md-nav__link">
+        Harmony: Notes, Scales and Chords 🎶
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../music/guitar-technics/" class="md-nav__link">
+        Técnica de Guitarra 🎸
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../music/guitar-fret-navigation/" class="md-nav__link">
+        Navegación en el mástil
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../music/pentatonicas.txt" class="md-nav__link">
+        Pentatonicas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../music/songs/" class="md-nav__link">
+        Songs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../music/ukelele/" class="md-nav__link">
+        Ukelele
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Languages
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Languages" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Languages
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/consonantes-afi.png" class="md-nav__link">
+        Phonetics Consonants
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/vowels.jpg" class="md-nav__link">
+        Phonetics Vowels
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/arabic-alphabet/" class="md-nav__link">
+        Arabic script
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/arabic/" class="md-nav__link">
+        Arabic
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/deutsch/" class="md-nav__link">
+        Deutsch
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/english-expresions/" class="md-nav__link">
+        English expresions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/english-old-pronoums/" class="md-nav__link">
+        English old pronoums
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/english-prepositions/" class="md-nav__link">
+        English prepositions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/english-tenses/" class="md-nav__link">
+        English tenses
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/vocabulary-somenergia/" class="md-nav__link">
+        English Vocabulary for SE enterviews
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/vocabulary-edibles/" class="md-nav__link">
+        Vocabulary edibles
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../economics/" class="md-nav__link">
+        Economics
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-problem" class="md-nav__link">
+    The problem
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#toolbox" class="md-nav__link">
+    Toolbox
+  </a>
+  
+    <nav class="md-nav" aria-label="Toolbox">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#powers-of-three" class="md-nav__link">
+    Powers of three
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#boolean-with-integer-arithmetics" class="md-nav__link">
+    Boolean with integer arithmetics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oddity-of-algebraic-expressions" class="md-nav__link">
+    Oddity of algebraic expressions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unbranched-formula" class="md-nav__link">
+    Unbranched formula
+  </a>
+  
+    <nav class="md-nav" aria-label="Unbranched formula">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#additivesubstractive-view" class="md-nav__link">
+    Additive/Substractive view
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#strategies" class="md-nav__link">
+    Strategies
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solution-structure" class="md-nav__link">
+    Solution structure
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#empirical-observations" class="md-nav__link">
+    Empirical observations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#all-solutions-as-fkn-3bknk-ck" class="md-nav__link">
+    All solutions as fk(n) = 3^Bk*Nk + Ck
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ck-oddity" class="md-nav__link">
+    Ck Oddity
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-last-significative-bit" class="md-nav__link">
+    The last significative bit
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prunning-outcomes" class="md-nav__link">
+    Prunning outcomes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#constructive-aproach" class="md-nav__link">
+    Constructive aproach
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limiting-factor" class="md-nav__link">
+    Limiting factor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#expansion-depending-on-the-least-significative-bits" class="md-nav__link">
+    Expansion depending on the least significative bits
+  </a>
+  
+    <nav class="md-nav" aria-label="Expansion depending on the least significative bits">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#demonstrated-facts" class="md-nav__link">
+    Demonstrated facts
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <a href="https://github.com/vokimon/apunts/edit/master/docs/math/math-3n1.md" title="Edit this page" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+<h1 id="a-framework-to-drive-a-proof-or-refutation-of-the-collatz-conjecture">A framework to drive a proof or refutation of the Collatz Conjecture</h1>
+<h2 id="the-problem">The problem</h2>
+<p>Given the function defined for the natural numbers:</p>
+<p>f(n) = (3n+1)/2 of n is odd n/2 if n is even
+(</p>
+<p>[/
+    f(n) = \begin{cases} \frac{n}{2} &amp;\text{if } n \equiv 0 \pmod{2}\[4px] \frack{3n+1}{2} &amp; \text{if } n\equiv 1 \pmod{2} .\end{cases}
+/]</p>
+<p>And its kth application f^k(n). By definition f^0(n) = n</p>
+<p>Notice that for odd branches we are using the shortcut version
+provided that 3n+1, being n odd is guaranteed to be even
+and the next step is always dividing by two.</p>
+<p>Let's define that a number n is <em>reductible</em> if it exist a finite k so that f^k(n)=1</p>
+<p>By brute force we know that all the first checked natural numbers are reductible.
+As for today this has been proved until 2^68 (David Bařina https://github.com/hellpig/collatz).</p>
+<p>The Collatz conjecture states that: all natural numbers are reductible.</p>
+<h2 id="toolbox">Toolbox</h2>
+<h3 id="powers-of-three">Powers of three</h3>
+<p>Given a base b:</p>
+<div class="highlight"><pre><span></span><code>b^n - 1 = (b-1) * sum[0&lt;=i&lt;n](b^i)
+</code></pre></div>
+<p>For b = 3:</p>
+<div class="highlight"><pre><span></span><code>3^n = 1 + 2*sum[0&lt;=i&lt;n](3^i)
+3^n = 1 + 2*(3^n-1 + 3^n-2 ... + 3 + 1)
+</code></pre></div>
+<p>This is also equivalent to those formulas:</p>
+<div class="highlight"><pre><span></span><code>(3^n - 1)/2 = (3^n-1 + 3^n-2 ... + 3 + 1)
+(3^n - 1)/2 = sum[0&lt;=i&lt;n](3^i)
+
+sum(3^k)[0&lt;=k&lt;n] = (3^n - 1) / 2
+
+(3^n + 1)/2 = 1 + (3^n-1 + 3^n-2 ... + 3 + 1)
+(3^n + 1)/2 = 1 + sum[0&lt;=i&lt;n](3^i)
+</code></pre></div>
+<p>We can also express</p>
+<div class="highlight"><pre><span></span><code>3^n = (2 + 1)^n
+3^n = sum[0&lt;=i&lt;=n]( 2^i * n! / (n-i)! / i! )
+3^n = sum[0&lt;=i&lt;=n]( 2^i * bincoef(i,n) )
+</code></pre></div>
+<h3 id="boolean-with-integer-arithmetics">Boolean with integer arithmetics</h3>
+<p>Enable us to integrate boolean conditions
+into natural numbers expresions.
+Useful to eliminate formula branching.</p>
+<p>Let's define a boolean integer as B€[0,1]</p>
+<p>Being a,b,c... boolean integers,
+we can represent boolean operations with integer algebra like this:</p>
+<ul>
+<li>not: not a = 1-a</li>
+<li>and: a and b = (a*b)<ul>
+<li>Properties:<ul>
+<li>a*1 = a</li>
+<li>a*0 = 0</li>
+<li>a*a = a   --- because both 1 and 0 multiplied by themselves return themselves</li>
+<li>a<em>(1-a) = a - a</em>a = a - a = 0</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>or: a or b = (a + b - a*b)<ul>
+<li>Properties:<ul>
+<li>a or 1 = a + 1 - 1*a = 1</li>
+<li>a or 0 = a + 0 - 0*a = a</li>
+<li>a or a = a + a - a*a = a</li>
+<li>a or not a = a + (1 -a) - a * (1-a) = a +1 -a -a +a*a = 1</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Other derived operators</p>
+<ul>
+<li>xor: a xor b = a<em>(1-b) + b</em>(1-a) = a-ab+b-ab = a+b-2ab = a<em>a +b</em>b -2ab = (a-b)^2<ul>
+<li>a xor 0 = (a-0)^2 = a</li>
+<li>a xor 1 = (a-1)^2 = a<em>a +1 - 2</em>a = 1-a = not a</li>
+<li>a xor a = (a-a)^2 = 0</li>
+<li>a xor not a = (a - (1-a))^2 = (2<em>a-1)^2 = 4</em>a + 1 - 4*a = 1</li>
+</ul>
+</li>
+<li>eq: a eq b = a<em>b + (1-a)</em>(1-b) = 2<em>a</em>b -a -b +1 = 1 - (a-b)^2 = not (a xor b)</li>
+</ul>
+<p>Be careful that a+b-ab is an OR while a+b-2ab is an XOR.</p>
+<p>Those operations ensure a closure among booleans integers.
+Meaning that while the operands are 0 or 1, the result will be also 0 or 1.</p>
+<p>So, how to use those boolean expresions inside an algebraic fórmula?
+We can make multiplication factors and addition terms optional.</p>
+<p>Being x and y natural numbers and
+'a' a boolean condition represented as integer,</p>
+<ul>
+<li>conditional addition of a term x:  a*x + y</li>
+<li>conditional multiplication by a factor x:  x^a * y</li>
+</ul>
+<h3 id="oddity-of-algebraic-expressions">Oddity of algebraic expressions</h3>
+<p>Oddity is a function that returns a boolean integer.
+Also useful to eliminate branching.</p>
+<p>Being a and b integer expressions:</p>
+<div class="highlight"><pre><span></span><code>odd(1) = 1
+odd(2*a) = 0
+odd(a+b) = odd(a) xor odd(b) = odd(a) + odd(b) - 2*odd(a)*odd(b) = (odd(a)-odd(b))^2
+odd(a*b) = odd(a) and odd(b) = odd(a)*odd(b)
+</code></pre></div>
+<p>Pair terms can be ignored for oddity:</p>
+<div class="highlight"><pre><span></span><code>odd(2*a + b) = odd(2*a) xor odd(b) = 0 xor odd(b) = odd(b)
+odd((1+2*a)**b) = 1
+odd((2*a)**b) = (b!=0)   --- TODO: which opp gives this?
+</code></pre></div>
+<h2 id="unbranched-formula">Unbranched formula</h2>
+<p>Unbranched formula for the generator function:</p>
+<div class="highlight"><pre><span></span><code>f(n) = 1/2 * (n*3^odd(n) + odd(n) )
+</code></pre></div>
+<p>Thus we can define the series recursively by:</p>
+<div class="highlight"><pre><span></span><code>f0(n) = n
+fk+1(n) = 1/2 * ( fk(n) * 3^(odd(fk(n))) + odd(fk(n)) )
+</code></pre></div>
+<p>Another formulation is:</p>
+<div class="highlight"><pre><span></span><code>fk+1(n) = 1/2 * ( fk(n) * (1 + 2*odd(fk(n))) + odd(fk(n)) )
+</code></pre></div>
+<p>Which can be convinient to extract factors of two.</p>
+<p>Lets define Ok as odd(fk(n)). Then we can express both formulations as</p>
+<div class="highlight"><pre><span></span><code>fk+1(n) = (3^Ok * fk(n) + Ok) / 2
+</code></pre></div>
+<p>Or also:</p>
+<div class="highlight"><pre><span></span><code>fk+1(n) = ((1+2*Ok) * fk(n) + Ok) / 2
+</code></pre></div>
+<p>For compactness, we will omit (n), so fk = fk(n)</p>
+<h3 id="additivesubstractive-view">Additive/Substractive view</h3>
+<div class="highlight"><pre><span></span><code>fk+1 - fk =
+= ((1+2*Ok) * fk(n) + Ok) / 2 - fk
+= ((1+2*Ok) * fk(n) + Ok - 2*fk) / 2
+= ((1+2*Ok-2) * fk(n) + Ok) / 2
+= ((2*Ok-1) * fk(n) + Ok) / 2
+= (2*Ok-1) * fk(n)/2 + Ok/2
+
+fk odd : +fk/2 + 1/2
+fk even: -fk/2
+</code></pre></div>
+<p><strong>Conclusión</strong>:
+Depending on the oddity of the previous result,
+we are adding or substracting half of the value,
+rounding up for odds.</p>
+<h2 id="strategies">Strategies</h2>
+<p>Hypothesis: Exists a first natural number A that it is not reductible.</p>
+<p><strong>Strategy 1:</strong> 
+If exists a first non reductible natural A implies that any n<A is reductible.
+Because A is not reductible, f_k(A)>=A for all k.
+Having f_k(A)&lt;A will contradict the hypothesis.
+If the hypothesis is true, it could lead to a search algorithm for A.</p>
+<p><strong>Suposition:</strong> The oddness of the f_k(n) just depends on the lower k+1 bits of n.</p>
+<p><strong>Strategy 2:</strong>
+Being A a finite number, at a given k all remaining bits are zero.
+Because the oddity of f_k(n) is inverted depending on the kth bit,
+maybe we could find a pattern for which appending 0 bits
+gets higher and higher or cyclic.</p>
+<p><strong>Strategy 3:</strong>
+Constructive.
+Requires demonstrating that kth bit of A controls oddity of f_k(x).
+Instead of starting with every number and apply the function to reduce it.
+Start on 1 and invert f so that we can get to that number by the odd and even formula.</p>
+<h2 id="solution-structure">Solution structure</h2>
+<p><strong>Theorem</strong>: All f^k(n) can be expressed as (an+b)/c being a and c extrictly positive integers, and b positive integer.</p>
+<p>Proof:</p>
+<div class="highlight"><pre><span></span><code>f^0(n) = n; (a=1, b=0, c=1)
+
+Given that f^k(n) can be expressed as (an +b)/c,
+can f^k+1(n) be expressed as (a&#39;n+b&#39;)/c&#39;?
+
+if f^k(n) is odd: f^k+1(n) = (3*a*n + 3*b + c)/2*c
+(a&#39;=3*a, b&#39;=3*b+c, c&#39;=2*c)
+
+if f^k(n) is even: f^k+1(n) = (a*n + b) /2*c
+(a&#39;=a, b&#39;=b, c&#39;=2*c)
+</code></pre></div>
+<p>qvd</p>
+<p>In single branch</p>
+<div class="highlight"><pre><span></span><code>f^k+1(n) = ( a + 2*Ok*a, b + 2*Ok*b + Ok, 2*c )
+
+a&#39;= (2*Ok +1) * a
+b&#39;= b + b*2*Ok + c * Ok
+c&#39;= 2*c
+</code></pre></div>
+<h2 id="empirical-observations">Empirical observations</h2>
+<p>Being nk the kth bit of n binary base representation.
+And Nk = N &gt;&gt; k, this is the integer division by 2^k.</p>
+<p>All developed solutions have the form:</p>
+<div class="highlight"><pre><span></span><code>fk(n) = 3^Bk*Nk + Ck
+</code></pre></div>
+<p>Where Bk and Ck depend only on bits nk-1 to n_0.
+0&lt;=Bk&lt;=k and 0&lt;=Ck&lt;3^Bk
+Indeed max(Ck)=3^Bk-1 and happens when the Bk <em>higher processed</em> bits are 1
+(Caution this has been observed just for the first 5 levels)</p>
+<p>Lets try to demonstrate those observations.</p>
+<h2 id="all-solutions-as-fkn-3bknk-ck">All solutions as fk(n) = 3^Bk*Nk + Ck</h2>
+<p>Hypothesis: solutions can be represented as:</p>
+<div class="highlight"><pre><span></span><code>fk(n) = Nk*3^Bk + Ck
+</code></pre></div>
+<p>So that:</p>
+<div class="highlight"><pre><span></span><code>0 &lt;= Bk &lt;= k
+0 &lt;= Ck &lt; 3^Bk
+
+for k=0, O0 = n0
+f0(n) = N0;  thus B0 = 1, C0 = 0
+
+for k=1
+f1(n) = (3^n0 * N0 + n0)/2
+f1(n) = (3^n0 * (2*N1+n0) + n0)/2    --- Expand N0=2*N1 + n_0
+f1(n) = (3^n0*2*N1 + 3^n0 * n0 + n0)/2    -- distribute 3^n0
+f1(n) = (3^n0*2*N1 + n0 * 3^n0 + n0)/2   -- reorder factors
+f1(n) = (3^n0*2*N1 + n0 * 3^n0 + n0)/2   -- 3^n0 = 1 + 2*n0 for n0€(0,1)
+f1(n) = (3^n0*2*N1 + n0 * (1+2*n0) + n0)/2   -- 3^n0 = 1 + 2*n0 for n0€(0,1)
+f1(n) = (3^n0*2*N1 + 2*n0 * 2*n0*n0 )/2   -- 3^n0 = 1 + 2*n0 for n0€(0,1)
+f1(n) = (3^n0*2*N1 + 4*n0 )/2   -- n0^2 = n0 for n0€(0,1)
+f1(n) = 3^n0*N1 + 2*n0 --  divide by 2
+f1(n) = N1 + 2*n0*N1 + 2*n0 --  3^n0 = 2*n0 + 1
+
+O1 = odd(f1(n)) = odd(N1 + 2*n0*N1 + 2*n0) = odd(N1) = n1
+</code></pre></div>
+<p>So for k=1, B1=n0 and C1 = 2*n0</p>
+<div class="highlight"><pre><span></span><code>0 &lt;= B1 = n0 &lt;= k = 1
+0 &lt;= C1 = 2*n0 &lt; 3^n0 = 1+2*n0
+</code></pre></div>
+<p>Now, suposing that:</p>
+<div class="highlight"><pre><span></span><code>fk = Nk*3^Bk + Ck
+0 &lt;= Bk &lt;= k
+0 &lt;= Ck &lt; 3^Bk
+</code></pre></div>
+<p>Let's demonstrate that:</p>
+<div class="highlight"><pre><span></span><code>fk+1(n) = (Nk+1)*3^Bk+1 + Ck+1
+0 &lt;= Bk &lt;= Bk+1 &lt;= k+1
+0 &lt;= Ck+1 &lt; 3^Bk+1
+
+Ok = odd(fk)
+= odd(Nk*3^Bk + Ck)
+= odd(Ck) + odd(Nk*3^Bk) -2*odd(Ck)*odd(Nk*3^Bk)   -- exclusive or
+= odd(Ck) + odd(Nk) - 2*odd(Ck)*odd(Nk)   --- odd(Nk*3^Bk) = odd(Nk) 
+= odd(Ck) + nk - 2*nk*odd(Ck)   --- odd(Nk) = odd(2*Nk+1 + nk) = nk
+
+fk+1 = (3^Ok*fk + Ok)/2    --- Single branch formula
+fk+1 = (3^Ok*(Nk*3^Bk + Ck) + Ok)/2    -- fk = Nk*3^Bk + Ck
+fk+1 = (3^Ok*Nk*3^Bk + 3^Ok*Ck + Ok)/2    -- distribute
+fk+1 = (3^(Bk+Ok)*Nk + Ck*3^Ok + Ok)/2    -- adding exponents
+fk+1 = (3^(Bk+Ok)*(2*Nk+1 + nk) + Ck*3^Ok + Ok)/2    -- Nk = 2*Nk+1 + nk 
+fk+1 = (3^(Bk+Ok)*2*Nk+1 + 3^(Ok+Bk)*nk + Ck*3^Ok + Ok)/2    -- distribute
+fk+1 = 3^(Bk+Ok)*Nk+1 + (3^(Ok+Bk)*nk + Ck*3^Ok + Ok)/2    -- divide Nk+1 term
+
+Bk+1 = Bk + Ok
+Bk+1 = Bk + nk + Odd(Ck) - 2*nk*Odd(Ck)
+
+2*Ck+1 =
+= 3^(Bk+Ok)*nk + Ck*3^Ok + Ok    -- from fk+1 expression
+= 3^Ok*3^Bk*nk + Ck*3^Ok + Ok    -- split powers
+= (2*Ok + 1)*3^Bk*nk + Ck*(2*Ok + 1) + Ok    -- 3^Ok = 2*Ok + 1
+= 2*Ok*3^Bk*nk + 3^Bk*nk + Ck*2*Ok + Ck + Ok    -- distribute
+= 2*(odd(Ck) + nk - 2*nk*odd(Ck))*3^Bk*nk + 3^Bk*nk + Ck*2*(odd(Ck) + nk - 2*nk*odd(Ck)) + Ck + (odd(Ck) + nk - 2*nk*odd(Ck))    -- expand Ok
+=    ---   just reorder
+    + 2*nk*3^Bk*(odd(Ck) + nk - 2*nk*odd(Ck))
+    + 3^Bk*nk
+    + Ck*2*(odd(Ck) + nk - 2*nk*odd(Ck))
+    + Ck
+    + (odd(Ck) + nk - 2*nk*odd(Ck))
+=    ---   distribute
+    + 2*nk*3^Bk*(odd(Ck))
+    + 2*nk*3^Bk*(nk)
+    + 2*nk*3^Bk*(- 2*nk*odd(Ck))
+    + 3^Bk*nk
+    + Ck*2*(odd(Ck))
+    + Ck*2*(nk)
+    + Ck*2*(- 2*nk*odd(Ck))
+    + Ck
+    + odd(Ck)
+    + nk
+    - 2*nk*odd(Ck)
+=    ---   distribute
+    + 2*nk*3^Bk*odd(Ck)
+    + 2*nk*3^Bk*nk
+    - 4*nk*3^Bk*nk*odd(Ck)
+    + 3^Bk*nk
+    + 2*Ck*odd(Ck)
+    + 2*Ck*nk
+    - 4*Ck*nk*odd(Ck)
+    + Ck
+    + odd(Ck)
+    + nk
+    - 2*nk*odd(Ck)
+=    ---   nk*nk = nk
+    + 2*nk*3^Bk*odd(Ck)
+    - 4*nk*3^Bk*odd(Ck)
+    + 2*nk*3^Bk
+    + 3^Bk*nk
+    + 2*Ck*odd(Ck)
+    + 2*Ck*nk
+    - 4*Ck*nk*odd(Ck)
+    + Ck
+    + odd(Ck)
+    + nk
+    - 2*nk*odd(Ck)
+=    ---   grouping factors
+    - 2*nk*3^Bk*odd(Ck)
+    + 3*nk*3^Bk
+    + nk
+    + 2*Ck*nk
+    - 4*Ck*nk*odd(Ck)
+    + 2*Ck*odd(Ck)
+    + Ck
+    + odd(Ck)
+    - 2*nk*odd(Ck)
+=    ---   grouping factors
+    + nk*3^Bk * (3 - 2*odd(Ck))
+    + nk
+    + 2*Ck*(nk + odd(ck) - 2*nk*odd(Ck)    
+    + Ck
+    + odd(Ck)
+    - 2*nk*odd(Ck)
+</code></pre></div>
+<p>In order to endup with a natural number 2*Ck+1 should be even:</p>
+<div class="highlight"><pre><span></span><code>odd(2*Ok*3^Bk*nk + 3^Bk*nk + Ck*2*Ok + Ck + Ok) =
+= odd(3^Bk*nk + Ck + Ok)           --- Removed even terms
+= odd(3^Bk*nk + Ck + odd(Ck) + nk - 2*nk*odd(Ck))  --- Ok = odd(Ck) + nk - 2*nk*odd(Ck)
+= odd(Ck + odd(Ck) - 2*nk*odd(Ck))   ---  odd(3^Bk*nk + nk) = 0
+= odd(Ck + odd(Ck))   ---  pair term ignored
+= odd(0)   ---  odd(Ck + odd(Ck)) = 0
+= 0  (qvd)
+</code></pre></div>
+<p>Ck+1 =
+    =   (  ---   grouping factors
+        + nk<em>3^Bk * (3 - 2</em>odd(Ck))
+        + 2<em>Ck</em>(nk + odd(ck) - 2<em>nk</em>odd(Ck)  <br />
+        + Ck
+        + nk
+        + odd(Ck)
+        - 2<em>nk</em>odd(Ck)
+    ) / 2</p>
+<p>By cases nk, odd(Ck).</p>
+<div class="highlight"><pre><span></span><code>nk=0; odd(Ck)=0; Bk+1=Bk*(1+2*Ok) = Bk
+    2*Ck+1 =
+    =
+        + nk*3^Bk * (3 - 2*odd(Ck))
+        + 2*Ck*(nk + odd(ck) - 2*nk*odd(Ck)    
+        + Ck
+        + nk
+        + odd(Ck)
+        - 2*nk*odd(Ck)
+    = Ck
+
+    Ck+1 = Ck/2 &lt; Ck &lt; 3^Bk = 3^Bk+1
+
+nk=0; odd(Ck)=1; Bk+1 = Bk + 1
+    2*Ck+1 =
+    =
+        + nk*3^Bk * (3 - 2*odd(Ck))
+        + 2*Ck*(nk + odd(ck) - 2*nk*odd(Ck)    
+        + Ck
+        + nk
+        + odd(Ck)
+        - 2*nk*odd(Ck)
+    = 3*Ck + 1
+    2*Ck+1 = 3*Ck + 1 &lt;? 2*3*3^Bk
+    3*Ck &lt;? 2*3*3^Bk -1
+    Ck &lt;? 2*3^Bk - 1/3
+    Ck &lt; 3^Bk &lt;! 2*3^Bk - 1/3
+
+nk=1; odd(Ck)=0
+    2*Ck+1 =
+    =
+        + nk*3^Bk * (3 - 2*odd(Ck))
+        + 2*Ck*(nk + odd(ck) - 2*nk*odd(Ck)    
+        + Ck
+        + nk
+        + odd(Ck)
+        - 2*nk*odd(Ck)
+    =
+        + 3^Bk * 3
+        + 3*Ck
+        + 1
+
+    2*Ck+1 = 3*3^Bk + 3*Ck + 1 &lt;? 2*3*3^Bk
+    3*Ck + 1 &lt;? 3*3^Bk
+    Ck &lt;? 3^Bk - 1/3
+
+nk=1; odd(Ck)=1
+    2*Ck+1 =
+    =
+        + nk*3^Bk * (3 - 2*odd(Ck))
+        + 2*Ck*(nk + odd(ck) - 2*nk*odd(Ck)    
+        + Ck
+        + nk
+        + odd(Ck)
+        - 2*nk*odd(Ck)
+    =
+        + 3^Bk
+        + Ck
+    2*Ck+1 = 3^Bk + Ck &lt;? 2*3^Bk
+    3^Bk + Ck &lt;? 2*3^Bk
+    Ck &lt;! 3^Bk
+</code></pre></div>
+<p><strong>Thus, it's demonstrated that for every k:</strong>       </p>
+<div class="highlight"><pre><span></span><code>fk(n) = Nk*3^Bk + Ck
+</code></pre></div>
+<p>Where:</p>
+<div class="highlight"><pre><span></span><code>0 &lt;= Bk &lt;= k
+0 &lt;= Ck &lt; 3^Bk
+</code></pre></div>
+<h2 id="ck-oddity">Ck Oddity</h2>
+<p>From the previous demonstration we got an expression of what feeds Cks from nks</p>
+<div class="highlight"><pre><span></span><code>Ck+1 =
+    =   (
+        + nk*3^Bk * (3 - 2*odd(Ck))
+        + 2*Ck*(nk + odd(ck) - 2*nk*odd(Ck)    
+        + Ck
+        + nk
+        + odd(Ck)
+        - 2*nk*odd(Ck)
+    ) / 2
+</code></pre></div>
+<p>It would be nice to have a generalization of Ck oddity</p>
+<div class="highlight"><pre><span></span><code>odd(Ck+1) =
+    odd((
+        + nk*3^Bk * (3 - 2*odd(Ck))
+        + 2*Ck*(nk + odd(ck) - 2*nk*odd(Ck))
+        + Ck
+        + nk
+        + odd(Ck)
+        - 2*nk*odd(Ck)
+    ) /2)
+</code></pre></div>
+<p>Again by cases:</p>
+<div class="highlight"><pre><span></span><code>odd(Ck) = 0; nk = 0
+    odd(Ck+1) =
+    =
+        odd((
+            + nk*3^Bk * (3 - 2*odd(Ck))
+            + 2*Ck*(nk + odd(ck) - 2*nk*odd(Ck))
+            + Ck
+            + nk
+            + odd(Ck)
+            - 2*nk*odd(Ck)
+        ) /2)
+    =                  --- nk = 0
+        odd((
+            + 2*Ck*odd(ck)
+            + Ck
+            + odd(Ck)
+        ) /2)
+    =                  --- odd(Ck) = 0
+        odd((
+            + Ck
+        ) /2)
+    =                  --- simplify
+        odd(Ck/2)
+
+odd(Ck) = 0; nk = 1
+    odd(Ck+1) =
+    =
+        odd((
+            + nk*3^Bk * (3 - 2*odd(Ck))
+            + 2*Ck*(nk + odd(ck) - 2*nk*odd(Ck))
+            + Ck
+            + nk
+            + odd(Ck)
+            - 2*nk*odd(Ck)
+        ) /2)
+    =                  --- odd(Ck) = 0
+        odd((
+            + nk*3^Bk * (3)
+            + 2*Ck*(nk)
+            + Ck
+            + nk
+        ) /2)
+    =                  --- nk = 1
+        odd((
+            + 3^Bk * (3)
+            + 2*Ck
+            + Ck
+            + 1
+        ) /2)
+
+    =                  --- even outside half
+        odd(
+            Ck + Ck/2 +
+            (
+            + 3^Bk * (3)
+            + 1
+            ) /2
+        )
+
+    =                  --- Ck being even does not affect overall oddity
+        odd(
+            Ck/2 +
+            (
+            + 3^Bk * (3)
+            + 1
+            ) /2
+        )
+    =                  --- factor of 
+        odd(
+            Ck/2 +
+            (
+            + 3^(Bk + 1)
+            + 1
+            ) /2
+        )
+
+odd(Ck) = 1; nk = 0
+    odd(Ck+1) =
+    =
+        odd((
+            + nk*3^Bk * (3 - 2*odd(Ck))
+            + 2*Ck*(nk + odd(ck) - 2*nk*odd(Ck))
+            + Ck
+            + nk
+            + odd(Ck)
+            - 2*nk*odd(Ck)
+        ) /2)
+
+odd(Ck) = 1; nk = 1
+    odd(Ck+1) =
+    =
+        odd((
+            + nk*3^Bk * (3 - 2*odd(Ck))
+            + 2*Ck*(nk + odd(ck) - 2*nk*odd(Ck))
+            + Ck
+            + nk
+            + odd(Ck)
+            - 2*nk*odd(Ck)
+        ) /2)
+</code></pre></div>
+<h2 id="the-last-significative-bit">The last significative bit</h2>
+<p>Let's define the upper Nk and lower bits Lk so that:</p>
+<div class="highlight"><pre><span></span><code>N0 = 2**k * Nk + Lk
+Lk = sum(ni * 2**i for i in range(k))
+Nk = sum(ni+k * 2**i for i in range(n-k))
+</code></pre></div>
+<p>For any finite number there exists a position of the most significative bit k
+so that nk=1 and ni=0 for any <code>i&gt;k</code>.</p>
+<p>Also Nk=1, Ni = 0 for <code>i&gt;k</code>.</p>
+<div class="highlight"><pre><span></span><code>fk(N0) = Nk * 3^Bk + Ck
+fk(N0) = 3^Bk + Ck
+
+fk(Lk) = Ck
+</code></pre></div>
+<p>Let's be N0 the first unreductible natural number.
+Because Lk = N0 - 2^k &lt; N0, both Lk and Ck are reductible</p>
+<div class="highlight"><pre><span></span><code>fk+1 = (Nk+1)*3^Bk + Ck+1 = Ck+1
+
+2*fk+1 = 2*Ck+1 =
+=
+    + nk*3^Bk * (3 - 2*odd(Ck))
+    + nk
+    + 2*Ck*(nk + odd(ck) - 2*nk*odd(Ck)    
+    + Ck
+    + odd(Ck)
+    - 2*nk*odd(Ck)
+=                        ---- nk = 1
+    + 3^Bk * (3 - 2*odd(Ck))
+    + 1
+    + 2*Ck*(1 + odd(ck) - 2*odd(Ck)    
+    + Ck
+    + odd(Ck)
+    - 2*odd(Ck)
+=                        ---- nk = 1
+    + 3^Bk * (3 - 2*odd(Ck))
+    + 1
+    + 2*Ck*(1 - odd(Ck))    
+    + Ck
+    - odd(Ck)
+=                        ---- split terms
+    + 3^Bk * (3 - 2*odd(Ck))
+    + 1
+    + 3*Ck
+    - 2*Ck*odd(Ck))    
+    - odd(Ck)
+
+For odd(Ck) = 1
+    2*fk+1 = 3^Bk + Ck
+    fk+1 = (3^Bk + Ck)/2
+    fk+1 = sum[0&lt;=i&lt;Bk](3^i) + (Ck + 1)/2
+
+For odd(Ck) = 0
+    2*fk+1 = 3*3^Bk + 3*Ck + 1
+    fk+1 = (3*3^Bk + 3*Ck +1)/2
+</code></pre></div>
+<h2 id="prunning-outcomes">Prunning outcomes</h2>
+<p>An outcome gets prunned whenever exists a k so that:</p>
+<div class="highlight"><pre><span></span><code>2^k * Nk + Lk &gt; 3^Bk * Nk + Ck
+
+Nk (2^k - 3^Bk) &gt; Ck - Lk
+</code></pre></div>
+<p>Beyond the most significative bit:</p>
+<div class="highlight"><pre><span></span><code>Ck &lt; Lk = N0   ## Nothing new apparently
+</code></pre></div>
+<p>For the most significative bit</p>
+<div class="highlight"><pre><span></span><code>Nk=1
+(2^k - 3^Bk) &gt; ( Ck - Lk)
+</code></pre></div>
+<p>For the less significative: Nk&gt;1</p>
+<div class="highlight"><pre><span></span><code>Nk &gt; ( Ck - Lk) / (2^k - 3^Bk)
+</code></pre></div>
+<p>Because Nk Can be discarded whenever the right side is negative:
+    - Lk &lt;= Ck   and  2^k &gt;= 3^Bk
+    - Lk &gt;= Ck   and  2^k &lt;= 3^Bk</p>
+<div class="highlight"><pre><span></span><code>3^h/2^n &lt; 2^h
+ln(3^h/2^n) &lt; ln(2^h)
+ln(3^h)-ln(2^n) &lt; ln(2^h)
+h*ln(3)-n*ln(2) &lt; h*ln(2)
+h*ln(3) &lt; h*ln(2)-n*ln(2)
+h*ln(3) &lt; (h-n)*ln(2)
+</code></pre></div>
+<hr />
+<p>B = A &gt;&gt; 1</p>
+<p>A Even, A = 2*B
+A:B0
+f^1(A) = B/2 = B</p>
+<p>A Odd, A = 2<em>B + 1
+A:B1
+f^1(A) = (3</em>A+1)/2 = (6<em>B+3+1)/2 = 3</em>B + 2
+So: f^1(A) = 3*B + 2   same oddity as B</p>
+<div class="highlight"><pre><span></span><code>C = B &gt;&gt; 1
+
+B Even, B = 2*C
+A:C01
+f^2(A) = f^1(3*B + 2) = (6*C + 2)/2 = 3*C + 1
+So: f^2(A) = 3*C + 1  (oposite oddity than C)
+
+    D = C &gt;&gt; 1
+
+    C Even, C = 2*D
+    A:D001
+    f^3(A) = f^1(3*C + 1) = f^1(6*D + 1) =  (18*D + 4)/2 = 9*D+2
+    So: f^3(A)  = 9*D + 2  (same odity)
+
+    C Odd, C = 2*D +1
+    A:D101
+    f^3(A) = f^1(3*C + 1) = f^1(6*D + 4) =  3*D + 2
+    So: f^3(A)  = 3*D + 2  (same odity)
+
+B Odd, B = 2*C +1
+A:C11
+f^2(A) = f^1(3*B + 2) = (9*B+6+1)/2 = (9*(2*C +1)+6+1)/2 = 9*C + 8
+So: f^2(A) = 9*C + 8  (same oddity as C)
+
+    D = C &gt;&gt; 1
+
+    C Even, C = 2*D
+    A:D011
+    f^3(A) = F^1(9*C + 8) = F^1(18*D+8) = (18D+8)/2 = 9*D +4
+    f^3(A) = 9*D + 4 (same oddity as C)
+
+    C Odd, C = 2*D + 1
+    A:D111
+    f^3(A) = F^1(9*C + 8) = F^1(18*D+17) = (3*18D+3*17 +1)/2 = 27*D +26
+    f^3(A) = 27*D +26 (same oddity as C)
+</code></pre></div>
+<ul>
+<li>Let be a_k the kth bit of the binary representation of A.</li>
+<li>Let be r_k = A&gt;&gt;(k) (the integer division of A by the n power of two)</li>
+</ul>
+<p>If r_0 is even, a_0 is 0, then f^1(r_0) = r_1 = A/2 &lt; A, thus imposible.
+Thus r_0 is odd. A = 2 r_1 + 1, a_0=1
+A odd means that bit 0 is 1.
+And then f^1(A) = 3A+1/2 = (6B+3+1)/2 = 3B + 2</p>
+<p>a_1=0 B even?
+If B was even, then f^2(A)=(3A+1)/4 &gt;= A (for A&gt;1) and A would be reductible.
+So B is odd, lets B=2C+1; A = 2(2C+1)+1 = 4C+3
+B odd means that bit 1 is 1.
+f^2(A) = 3((3A+1)/2)+1 = (9A+3)/2+1 = (9A+5)/2 = 18C + 16  so even
+f^3(A) = (9A+5)/4 = 9C+8</p>
+<p>aX+b</p>
+<p>a even, b even -&gt; even
+a even, b odd -&gt; odd
+a odd, b even -&gt; whatever X is
+a odd, b odd -&gt; whatever X is not</p>
+<p>Visualization:
+We will get a binary search tree, where each levels decide a bit of the number.
+We can prune the tree every time the function evaluates less than A.
+We evolve an expression for the f^n(A) in terms of A to get this comparision.
+We evolve an equivalent expresion for f^n(A) in terms of the undecided bits.
+If A is a finite number, beyond a given n, the undecided bits are always zero.
+Which pattern makes that even with zeros as undecided bits it keeps always&gt;=A?</p>
+<p>Note: If we can demostrate that in order not getting under A, we have to add bits for ever
+then we are demonstrating that the number is infinite.</p>
+<p>k even: f^3(n0) = (3n0+1)/4 &lt; n0</p>
+<p>k odd: k=2k'+1
+f^3(n0) = 3((3n0+1)/2)+1 = (9n0+3)/2 +1 = (9n0+5)
+f^3(n0) = 3(3k+2)+1 = 9k + 7 = 18k'</p>
+<p>Because n0 it is odd, n0 reduces to 3n0+1 = 6k+3+1 = 6k + 4 (even)
+Being even reduces to 3k+2</p>
+<h2 id="constructive-aproach">Constructive aproach</h2>
+<p>fodd^-1 = (2<em>n-1)/3
+feven^-1 = 2</em>n</p>
+<div class="highlight"><pre><span></span><code>1
+    1/3 X
+    2 10
+        1 loop
+        4 100
+            7/3 X
+            8 1000
+                5 101
+                    3 11
+                        5/3 X
+                        6 110
+                            11/3 X
+                            12 1100 ...
+                    10 1010
+                        19/3 X
+                        20 10100
+                            13 1101 ...
+                            40 101000 ...
+                16 10000
+                    31/3 X
+                    32 100000
+                        21 10101 ...
+                            41/3 X
+                            42 101010
+                                85/3 C
+                                84 1010100
+                        64 1000000 ...
+</code></pre></div>
+<h2 id="limiting-factor">Limiting factor</h2>
+<p>N0 will be reductible if for any k</p>
+<p>N0 &gt; 3^Bk<em>Nk + Ck
+Nk</em>2^k + sum(ni * 2^i)(0=i<k) > 3^Bk*Nk + Ck</p>
+<h2 id="expansion-depending-on-the-least-significative-bits">Expansion depending on the least significative bits</h2>
+<div class="highlight"><pre><span></span><code>0 N1 + 0
+    00 N2 + 0
+        000 N3 + 0
+            0000 N4 + 0
+                00000 N5 + 0
+                    000000 N6 + 0
+                    100000 3*N6 + 2
+                10000 3*N5 + 2
+                    010000 3*N6 + 1
+                    110000 9*N6 + 8
+            1000 3*N4 + 2
+                01000 3*N5 + 1
+                    001000 9*N6 + 2
+                    101000 3*N6 + 2
+                11000 9*N5 + 8
+                    011000 9*N6 + 4
+                    111000 27*N6 + 26
+        100 3*N3 + 2
+            0100 3*N4 + 1
+                00100 9*N5 + 2
+                    000100 9*N6 + 1
+                    100100 27*N6 + 17
+                10100 3*N5 + 2
+                    010100 3*N6 + 1
+                    110100 9*N6 + 8
+            1100 9*N4 + 8
+                01100 9*N5 + 4
+                    001100 9*N6 + 2
+                    101100 27*N6 + 20
+                11100 27*N5 + 26
+                    011100 27*N6 + 13
+                    111100 81*N6 + 80
+    10 3*N2 + 2
+        010 3*N3 + 1
+            0010 9*N4 + 2
+                00010 9*N5 + 1
+                    000010 27*N6 + 2
+                    100010 9*N6 + 5
+                10010 27*N5 + 17
+                    010010 81*N6 + 26
+                    110010 27*N6 + 22
+            1010 3*N4 + 2
+                01010 3*N5 + 1
+                    001010 9*N6 + 2
+                    101010 3*N6 + 2
+                11010 9*N5 + 8
+                    011010 9*N6 + 4
+                    111010 27*N6 + 26
+        110 9*N3 + 8
+            0110 9*N4 + 4
+                00110 9*N5 + 2
+                    000110 9*N6 + 1
+                    100110 27*N6 + 17
+                10110 27*N5 + 20
+                    010110 27*N6 + 10
+                    110110 81*N6 + 71
+            1110 27*N4 + 26
+                01110 27*N5 + 13
+                    001110 81*N6 + 20
+                    101110 27*N6 + 20
+                11110 81*N5 + 80
+                    011110 81*N6 + 40
+                    111110 243*N6 + 242
+1 3*N1 + 2
+    01 3*N2 + 1
+        001 9*N3 + 2
+            0001 9*N4 + 1
+                00001 27*N5 + 2
+                    000001 27*N6 + 1
+                    100001 81*N6 + 44
+                10001 9*N5 + 5
+                    010001 27*N6 + 8
+                    110001 9*N6 + 7
+            1001 27*N4 + 17
+                01001 81*N5 + 26
+                    001001 81*N6 + 13
+                    101001 243*N6 + 161
+                11001 27*N5 + 22
+                    011001 27*N6 + 11
+                    111001 81*N6 + 74
+        101 3*N3 + 2
+            0101 3*N4 + 1
+                00101 9*N5 + 2
+                    000101 9*N6 + 1
+                    100101 27*N6 + 17
+                10101 3*N5 + 2
+                    010101 3*N6 + 1
+                    110101 9*N6 + 8
+            1101 9*N4 + 8
+                01101 9*N5 + 4
+                    001101 9*N6 + 2
+                    101101 27*N6 + 20
+                11101 27*N5 + 26
+                    011101 27*N6 + 13
+                    111101 81*N6 + 80
+    11 9*N2 + 8
+        011 9*N3 + 4
+            0011 9*N4 + 2
+                00011 9*N5 + 1
+                    000011 27*N6 + 2
+                    100011 9*N6 + 5
+                10011 27*N5 + 17
+                    010011 81*N6 + 26
+                    110011 27*N6 + 22
+            1011 27*N4 + 20
+                01011 27*N5 + 10
+                    001011 27*N6 + 5
+                    101011 81*N6 + 56
+                11011 81*N5 + 71
+                    011011 243*N6 + 107
+                    111011 81*N6 + 76
+        111 27*N3 + 26
+            0111 27*N4 + 13
+                00111 81*N5 + 20
+                    000111 81*N6 + 10
+                    100111 243*N6 + 152
+                10111 27*N5 + 20
+                    010111 27*N6 + 10
+                    110111 81*N6 + 71
+            1111 81*N4 + 80
+                01111 81*N5 + 40
+                    001111 81*N6 + 20
+                    101111 243*N6 + 182
+                11111 243*N5 + 242
+                    011111 243*N6 + 121
+                    111111 729*N6 + 728
+</code></pre></div>
+<h3 id="demonstrated-facts">Demonstrated facts</h3>
+<div class="highlight"><pre><span></span><code>fk = Nk*3^Bk + Ck
+where
+    Nk = N0 &gt;&gt; k
+    0 &lt;= Ck &lt; 3^Bk
+    0 &lt;= Bk &lt;= k
+
+Bk = sum[0&lt;=i&lt;k](odd(fi))
+Ck also depends only on the kth lower bits of N0 (N0 - 2^k * Nk)
+Numbers sharing lower k bits share also the oddity of the kth first terms
+
+Bk+1 = Bk + odd(nk + Ck)
+
+Ck+1 = (
+    + nk*3^Bk * (3 - 2*odd(Ck))
+    + Ck* (1 + 2*odd(nk + Ck))
+    + odd(nk + Ck)
+) / 2
+
+2*Ck+1
+= (2*Ok + 1)*3^Bk*nk + Ck*(2*Ok + 1) + Ok    -- 3^Ok = 2*Ok + 1
+= 2*Ok*3^Bk*nk + 3^Bk*nk + Ck*2*Ok + Ck + Ok    -- distribute
+Ck+1 = Ok*(nk*3^Bk + Ck) + (nk*3^Bk + Ck + Ok)/2     --- divide by 2
+Ck+1 = Ok*(nk*3^Bk + Ck) + (nk*3^Bk + Ck + Ok)/2     --- Ok = nk + odd(Ck) - 2*nk*odd(Ck)
+Ck+1 = (nk + odd(Ck) -2*nk*odd(Ck)*(nk*3^Bk + Ck) + (nk*3^Bk + Ck + nk + odd(Ck) -2*nk*odd(Ck))/2     --- Ok = nk + odd(Ck) - 2*nk*odd(Ck)
+Ck+1 =                                    --- split in lines
+    + (nk + odd(Ck) -2*nk*odd(Ck)*(nk*3^Bk + Ck)
+    + (nk*3^Bk + Ck + nk + odd(Ck) -2*nk*odd(Ck))/2
+Ck+1 =                                    ---  distribute first term
+    + (nk + odd(Ck) -2*nk*odd(Ck))*nk*3^Bk
+    + (nk + odd(Ck) -2*nk*odd(Ck))*Ck
+    + (nk*3^Bk + Ck + nk + odd(Ck) -2*nk*odd(Ck))/2
+Ck+1 =                                    ---  nk*nk = nk
+    + (1 + odd(Ck) -2*odd(Ck))*nk*3^Bk
+    + (nk + odd(Ck) -2*nk*odd(Ck))*Ck
+    + (nk*3^Bk + Ck + nk + odd(Ck) -2*nk*odd(Ck))/2
+Ck+1 =                                    ---  nk*nk = nk
+    + (1 - odd(Ck))*nk*3^Bk
+    + (nk + odd(Ck) -2*nk*odd(Ck))*Ck
+    + (nk*3^Bk + Ck + nk + odd(Ck) -2*nk*odd(Ck))/2
+Ck+1 =                                    ---  group 3^Bk + 1
+    + (1 - odd(Ck))*nk*3^Bk
+    + (nk + odd(Ck) -2*nk*odd(Ck))*Ck
+    + (nk*(3^Bk + 1) + odd(Ck) + Ck -2*nk*odd(Ck))/2
+Ck+1 =                                    ---  split (3^Bk + 1)/2 term
+    + (1 - odd(Ck))*nk*3^Bk
+    + nk*(3^Bk + 1)/2
+    + (nk + odd(Ck) -2*nk*odd(Ck))*Ck
+    + (odd(Ck) + Ck -2*nk*odd(Ck))/2
+Ck+1 =                                    ---  (3^Bk + 1)/2 = 1 + sum[0&lt;=i&lt;k](3^Bi)
+    + (1 - odd(Ck))*nk*3^Bk
+    + nk*sum([0&lt;=i&lt;k](3^Bi)
+    + (nk + odd(Ck) -2*nk*odd(Ck))*Ck
+    + (odd(Ck) + Ck -2*nk*odd(Ck))/2
+Ck+1 =                                    ---  extract pair from division
+    + (1 - odd(Ck))*nk*3^Bk
+    + nk*sum([0&lt;=i&lt;k](3^Bi)
+    + (nk + odd(Ck) -2*nk*odd(Ck))*Ck
+    - nk*odd(Ck)
+    + (odd(Ck) + Ck)/2
+Ck+1 =                                    ---  extract pair from division
+    + nk*sum([0&lt;=i&lt;k+1-odd(Ck)](3^Bi)
+    + (nk + odd(Ck) -2*nk*odd(Ck))*Ck
+    + (odd(Ck) + Ck)/2
+    - nk*odd(Ck)
+Ck+1 =                                    ---  sum(3^k)[0&lt;=k&lt;n] = (3^n - 1) / 2
+    + (nk*3^(k+1-odd(Ck)) -nk)/2
+    + (nk + odd(Ck) -2*nk*odd(Ck))*Ck
+    + (odd(Ck) + Ck)/2
+    - nk*odd(Ck)
+</code></pre></div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../math-wavelets/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Wavelets" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Wavelets
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../music/music-harmony/" class="md-footer__link md-footer__link--next" aria-label="Next: Harmony: Notes, Scales and Chords 🎶" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Harmony: Notes, Scales and Chords 🎶
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d6c3db9e.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,2265 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Apunts i notes de coses que aprenc">
+      
+      
+        <meta name="author" content="vokimon">
+      
+      
+        <link rel="canonical" href="https://vokimon.github.io/apunts/computers/specs-pdf/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.8">
+    
+    
+      
+        <title>Specs pdf - Apunts</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.20d9efc8.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.815d1a91.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/figure.css">
+    
+      <link rel="stylesheet" href="../../css/linkcard.css">
+    
+      <link rel="stylesheet" href="../../css/videowrapper.css">
+    
+      <link rel="stylesheet" href="../..">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#lexico" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Apunts" class="md-header__button md-logo" aria-label="Apunts" data-md-component="logo">
+      
+  <img src="../../img/logo-customblocks-white.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Apunts
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Specs pdf
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_3" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9h-1.9M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69m-9.15 3.96h2.3L12 9l-1.15 3.65Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_3">
+          
+            <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/vokimon/apunts" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Apunts" class="md-nav__button md-logo" aria-label="Apunts" data-md-component="logo">
+      
+  <img src="../../img/logo-customblocks-white.svg" alt="logo">
+
+    </a>
+    Apunts
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/vokimon/apunts" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        README
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Computers
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Computers" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Computers
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          css
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="css" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          css
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../css/" class="md-nav__link">
+        CSS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../css-boxmodel/" class="md-nav__link">
+        El modelo de caja
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../css-normalflow/" class="md-nav__link">
+        Flujo normal (normal flow)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../css-flexbox/" class="md-nav__link">
+        CSS Flexbox
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../css-grid/" class="md-nav__link">
+        CSS Grid
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../css-typography/" class="md-nav__link">
+        Css typography
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          javascript
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="javascript" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          javascript
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jsecosystem/" class="md-nav__link">
+        Jsecosystem
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jsonschema/" class="md-nav__link">
+        Jsonschema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../react-formik/" class="md-nav__link">
+        React formik
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../react/" class="md-nav__link">
+        React / Redux
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../android-glossary/" class="md-nav__link">
+        Android glossary
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cpp11/" class="md-nav__link">
+        New features of C++11 I should be starting to use:
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deeplearning/" class="md-nav__link">
+        Deep learning
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker/" class="md-nav__link">
+        Docker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ip6" class="md-nav__link">
+        None
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Specs pdf
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Specs pdf
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#lexico" class="md-nav__link">
+    Lexico
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objetos" class="md-nav__link">
+    Objetos
+  </a>
+  
+    <nav class="md-nav" aria-label="Objetos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#booleanos" class="md-nav__link">
+    Booleanos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#null-object" class="md-nav__link">
+    Null object
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#numericos" class="md-nav__link">
+    Numericos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strings" class="md-nav__link">
+    Strings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nombres" class="md-nav__link">
+    Nombres
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arrays" class="md-nav__link">
+    Arrays
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dicts" class="md-nav__link">
+    Dicts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#streams" class="md-nav__link">
+    Streams
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#objetos-indirectos" class="md-nav__link">
+    Objetos indirectos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filtros" class="md-nav__link">
+    Filtros
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estructuras-de-datos-comunes" class="md-nav__link">
+    Estructuras de datos comunes
+  </a>
+  
+    <nav class="md-nav" aria-label="Estructuras de datos comunes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#strings_1" class="md-nav__link">
+    Strings
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estructura-de-fichero" class="md-nav__link">
+    Estructura de fichero
+  </a>
+  
+    <nav class="md-nav" aria-label="Estructura de fichero">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#header" class="md-nav__link">
+    Header
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file-body" class="md-nav__link">
+    File Body
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xref-table" class="md-nav__link">
+    XRef Table
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file-trailer" class="md-nav__link">
+    File Trailer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actualizaciones" class="md-nav__link">
+    Actualizaciones
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#object-streams" class="md-nav__link">
+    Object Streams
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cross-reference-stream" class="md-nav__link">
+    Cross reference stream
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xrefs-compatibles-hacia-atras" class="md-nav__link">
+    XRefs compatibles hacia atras
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cifrado" class="md-nav__link">
+    Cifrado
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estructura-de-documento" class="md-nav__link">
+    Estructura de documento
+  </a>
+  
+    <nav class="md-nav" aria-label="Estructura de documento">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#document-catalog" class="md-nav__link">
+    Document Catalog
+  </a>
+  
+    <nav class="md-nav" aria-label="Document Catalog">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pagetree" class="md-nav__link">
+    PageTree
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interactive-forms" class="md-nav__link">
+    Interactive forms
+  </a>
+  
+    <nav class="md-nav" aria-label="Interactive forms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diccionario-de-campo-campos-comunes" class="md-nav__link">
+    Diccionario de campo (campos comunes)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#campos-de-texto" class="md-nav__link">
+    Campos de texto
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../timewarrior/" class="md-nav__link">
+        TimeWarrior
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xpxplained/" class="md-nav__link">
+        El problema
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Math
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Math" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Math
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/mates-fundation/" class="md-nav__link">
+        Math Foundations
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/stats/" class="md-nav__link">
+        Statistics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/math-halfderivatives/" class="md-nav__link">
+        Half Derivatives
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/math-quadraticformula-alternative/" class="md-nav__link">
+        Quadratic Formula
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/math-wavelets/" class="md-nav__link">
+        Wavelets
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/math-3n1/" class="md-nav__link">
+        Collatz Conjecture
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Music
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Music" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Music
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../music/music-harmony/" class="md-nav__link">
+        Harmony: Notes, Scales and Chords 🎶
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../music/guitar-technics/" class="md-nav__link">
+        Técnica de Guitarra 🎸
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../music/guitar-fret-navigation/" class="md-nav__link">
+        Navegación en el mástil
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../music/pentatonicas.txt" class="md-nav__link">
+        Pentatonicas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../music/songs/" class="md-nav__link">
+        Songs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../music/ukelele/" class="md-nav__link">
+        Ukelele
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Languages
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Languages" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Languages
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/consonantes-afi.png" class="md-nav__link">
+        Phonetics Consonants
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/vowels.jpg" class="md-nav__link">
+        Phonetics Vowels
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/arabic-alphabet/" class="md-nav__link">
+        Arabic script
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/arabic/" class="md-nav__link">
+        Arabic
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/deutsch/" class="md-nav__link">
+        Deutsch
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/english-expresions/" class="md-nav__link">
+        English expresions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/english-old-pronoums/" class="md-nav__link">
+        English old pronoums
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/english-prepositions/" class="md-nav__link">
+        English prepositions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/english-tenses/" class="md-nav__link">
+        English tenses
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/vocabulary-somenergia/" class="md-nav__link">
+        English Vocabulary for SE enterviews
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/vocabulary-edibles/" class="md-nav__link">
+        Vocabulary edibles
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../economics/" class="md-nav__link">
+        Economics
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#lexico" class="md-nav__link">
+    Lexico
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objetos" class="md-nav__link">
+    Objetos
+  </a>
+  
+    <nav class="md-nav" aria-label="Objetos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#booleanos" class="md-nav__link">
+    Booleanos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#null-object" class="md-nav__link">
+    Null object
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#numericos" class="md-nav__link">
+    Numericos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strings" class="md-nav__link">
+    Strings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nombres" class="md-nav__link">
+    Nombres
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arrays" class="md-nav__link">
+    Arrays
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dicts" class="md-nav__link">
+    Dicts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#streams" class="md-nav__link">
+    Streams
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#objetos-indirectos" class="md-nav__link">
+    Objetos indirectos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filtros" class="md-nav__link">
+    Filtros
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estructuras-de-datos-comunes" class="md-nav__link">
+    Estructuras de datos comunes
+  </a>
+  
+    <nav class="md-nav" aria-label="Estructuras de datos comunes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#strings_1" class="md-nav__link">
+    Strings
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estructura-de-fichero" class="md-nav__link">
+    Estructura de fichero
+  </a>
+  
+    <nav class="md-nav" aria-label="Estructura de fichero">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#header" class="md-nav__link">
+    Header
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file-body" class="md-nav__link">
+    File Body
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xref-table" class="md-nav__link">
+    XRef Table
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file-trailer" class="md-nav__link">
+    File Trailer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actualizaciones" class="md-nav__link">
+    Actualizaciones
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#object-streams" class="md-nav__link">
+    Object Streams
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cross-reference-stream" class="md-nav__link">
+    Cross reference stream
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xrefs-compatibles-hacia-atras" class="md-nav__link">
+    XRefs compatibles hacia atras
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cifrado" class="md-nav__link">
+    Cifrado
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estructura-de-documento" class="md-nav__link">
+    Estructura de documento
+  </a>
+  
+    <nav class="md-nav" aria-label="Estructura de documento">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#document-catalog" class="md-nav__link">
+    Document Catalog
+  </a>
+  
+    <nav class="md-nav" aria-label="Document Catalog">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pagetree" class="md-nav__link">
+    PageTree
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interactive-forms" class="md-nav__link">
+    Interactive forms
+  </a>
+  
+    <nav class="md-nav" aria-label="Interactive forms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diccionario-de-campo-campos-comunes" class="md-nav__link">
+    Diccionario de campo (campos comunes)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#campos-de-texto" class="md-nav__link">
+    Campos de texto
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <a href="https://github.com/vokimon/apunts/edit/master/docs/computers/specs-pdf.md" title="Edit this page" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+<p>Los elementos básicos de un pdf son los <em>objetos</em>.
+Los hay de distintos tipos:</p>
+<ul>
+<li>array</li>
+<li>boolean</li>
+<li>dictionary</li>
+<li>integer</li>
+<li>name</li>
+<li>null</li>
+<li>real</li>
+<li>stream</li>
+<li>string</li>
+</ul>
+<p>La <em>estructura de fichero</em> es la que determina como
+los objetos se almacenan en el fichero.
+Disposicion, compresion, cifrado...
+Donde almacenarlos, donde irlos a buscar y como
+actualizarlos.</p>
+<p>La <em>estructura de documento</em> determina como los objetos
+construyen el documento formando paginas, fuentes...</p>
+<p>El <em>content stream</em> contiene los objetos con los
+datos que van en esa estructura.</p>
+<h2 id="lexico">Lexico</h2>
+<p>Los elementos estructurales estan limitados a ASCII,
+pero las strings y los streams pueden contener cualquier byte.</p>
+<p>White spaces: Son todos equivalentes fuera de comentarios, strings y streams. Separan tokens.</p>
+<ul>
+<li>0x00 \0 null</li>
+<li>0x09 \t tab</li>
+<li>0x0A \n line fed</li>
+<li>0x0C \f form feed</li>
+<li>0x0D \r carriage return</li>
+<li>0x20 ' ' space</li>
+</ul>
+<p>Aunque sintacticamente son equivalentes, a veces se requiere que un elemento empiece en nueva linia.</p>
+<p>Son marcadores EOL <code>\r</code>, <code>\n</code>, asi como la sequencia <code>\r\n</code> que se considera uno solo.</p>
+<p>Delimitadores: <code>[ ] { } ( ) &lt; &gt; / %</code></p>
+<p>El <code>%</code> se usa para comentarios hasta el siguiente EOL.
+El comentario es equivalente a un espacio.</p>
+<p>Hay dos comentarios especiales:</p>
+<ul>
+<li><code>%PDF-n.m</code>: magic que encabeza el fichero e indica la version</li>
+<li><code>%%EOF</code>: que indica el final del fichero</li>
+</ul>
+<p>Se llama <em>regular characters</em> a los que no son ni espacios ni delimitadores.</p>
+<h2 id="objetos">Objetos</h2>
+<h3 id="booleanos">Booleanos</h3>
+<p>Palabras clave <code>true</code> y <code>false</code></p>
+<h3 id="null-object">Null object</h3>
+<p>Palabra clave <code>null</code></p>
+<p>Tambien una indireccion fallida es <code>null</code></p>
+<h3 id="numericos">Numericos</h3>
+<ul>
+<li>Enteros: 4 +3 -4</li>
+<li>Reales: -.034 </li>
+</ul>
+<p>Donde se puede usar un real se puede usar un entero.
+Se habla de numeros cuando son reales,
+se especifica enteros cuando solo pueden ser enteros.</p>
+<p>Algunos writers no conformes escriben numeros con formato exponencial (<code>3.2E-123</code>) o con radix no decimal (<code>16#FFEA</code>)</p>
+<h3 id="strings">Strings</h3>
+<ul>
+<li>Literales: Entre <code>(parentesis)</code><ul>
+<li>Si contiene parentesis balanceados, ningun problema</li>
+<li>Cuando no estan balanceados podemos escaparlos con <code>\(</code> o <code>\)</code></li>
+<li>Otras sequencias de escape con <code>\</code>: <code>\n \r \t \b \f \\ \777</code></li>
+<li>Toda barra seguida de algo que no sea eso se ignora</li>
+<li>Un EOL precedido de <code>\</code> se ignora</li>
+<li>Cualquier EOL en un string se interpreta como <code>\n</code></li>
+<li>Los octales pueden ser <code>\004</code>, <code>\04</code> o <code>\4</code></li>
+<li>Ojo: <code>\0004</code> ya seria el '\0<code>seguido de un</code>4`</li>
+</ul>
+</li>
+<li>Hexadecimales: <code>&lt;FA4C&gt;</code><ul>
+<li>Si un byte no esta completo se llena por ceros a la derecha</li>
+<li>Puede incluir espacios (incluidos EOL)</li>
+</ul>
+</li>
+</ul>
+<h3 id="nombres">Nombres</h3>
+<ul>
+<li>Serie de caracteres, cuales quiera, que identifican algo de forma única.</li>
+<li>Puede ser cualquier tipo de caracter</li>
+<li>A la hora de representarlos en el fichero:<ul>
+<li>los precedemos de <code>/</code></li>
+<li>los separadores, espacios en blanco y el signo <code>#</code> los representamos con su hex precedidos de <code>#</code></li>
+<li>el resto de caracteres los podemos representar literalmente o tambien con <code>#hh</code></li>
+</ul>
+</li>
+<li>Aunque no limita a ello, cuando el nombre se tenga que representar se supone UTF8</li>
+</ul>
+<h3 id="arrays">Arrays</h3>
+<ul>
+<li>Arrays entre corchetes <code>[ ]</code></li>
+<li>Dentro otros objetos separados por espacios</li>
+<li>Se pueden anidar</li>
+</ul>
+<h3 id="dicts">Dicts</h3>
+<ul>
+<li>Dicts entre dobles angulos <code>&lt;&lt; &gt;&gt;</code></li>
+<li>Dentro parejas clave-valor</li>
+<li>Las claves han de ser todas nombres</li>
+<li>Un valor <code>null</code>, es como si su clave no existiera</li>
+<li>El orden de las claves ignorado</li>
+<li>Las claves han de ser unicas en el diccionario</li>
+<li>Un diccionario puede tener otros diccionarios (y arrays y ...)</li>
+<li>Ojo: los hex strings usan solo un angle bracket</li>
+<li>A menudo se usan las claves <code>Type</code> y <code>Subtype</code> (o su abreviatura  <code>S</code>) para indicar el tipo de objeto.</li>
+</ul>
+<h3 id="streams">Streams</h3>
+<p>Representan datos binarios grandes.
+Los strings y los names pueden estar limitados en longitud.
+Los streams no.</p>
+<p>Se compone de:</p>
+<ul>
+<li>Un diccionario:<ul>
+<li><code>Length</code>: Requerido. Numero de bytes del stream.</li>
+<li><code>Filter</code>: nombre del filtro o array de nombres de filtros que se aplicaran en orden al contenido</li>
+<li><code>DecodeParams</code>: diccionario o array de diccionarios con los parametros a aplicar a cada filtro.<ul>
+<li>Cada uno de los diccionarios puede ser un Null si no hay parametros</li>
+</ul>
+</li>
+<li><code>F</code>: Indica un fichero o ficheros de los que obtener el stream<ul>
+<li>Substituye al contenido entre <code>stream</code> y <code>endstream</code></li>
+<li>No quita que si hay bytes entre <code>stream</code> y <code>endstream</code> especifiquemos el tamaño.</li>
+</ul>
+</li>
+<li><code>FLength</code>, <code>FFilter</code>, <code>FDecodeParams</code>: lo propio para el <code>F</code>.</li>
+<li><code>DL</code>: Hint para el decoded length</li>
+</ul>
+</li>
+<li>Un tag <code>stream</code> posiblemente seguido de un eol ignorado</li>
+<li>Los bytes</li>
+<li>Un tag <code>endstream</code> posiblemente precedido de un EOL ignorado</li>
+</ul>
+<h3 id="objetos-indirectos">Objetos indirectos</h3>
+<ul>
+<li>Un objeto se puede etiquetar y despues referenciar posteriormente.</li>
+<li>Se identifica unicamente por dos números:<ul>
+<li>numero de objeto: un numero arbitrario (&gt;0)</li>
+<li>numero de generacion: indica secuencia de actualización del fichero</li>
+</ul>
+</li>
+<li>Se etiqueta
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>12 0 obj
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    (My texto)
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>endobj
+</code></pre></div></li>
+<li>Se referencia con los numeros y una R:
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>12 0 R
+</code></pre></div></li>
+<li>Una referencia a un objeto inexistente no es un error, si no que es null</li>
+</ul>
+<h3 id="filtros">Filtros</h3>
+<h2 id="estructuras-de-datos-comunes">Estructuras de datos comunes</h2>
+<h3 id="strings_1">Strings</h3>
+<p>Tiene subtipos:</p>
+<ul>
+<li>string type<ul>
+<li>text string<ul>
+<li>PDFDocEncoding: Latin1</li>
+<li>UTF16-BE con markador de encoding al inicio<ul>
+<li>puede tener marcadores de lenguage en medio</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>ascii string</li>
+<li>byte string<ul>
+<li>no tiene por que ser texto (pero puede)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>text stream: un stream que descodificado es un string type</p>
+</li>
+<li>
+<p>Date: <code>(D:YYYYMMDDHHmmSSOHH'mm)</code> pe. <code>D:199812231952-08'00</code></p>
+</li>
+<li>Rectangle: <code>[ xleft ybottom xright ytop ]</code></li>
+<li>Name Tree: Arbol de búsqueda<ul>
+<li>Las claves son strings y no names</li>
+<li>Valores son referencias indirectas</li>
+<li>Las claves aparecen lexicamente ordenadas</li>
+<li>Cada nodo tiene:<ul>
+<li><code>Kids</code>: array de claves valores que son RI a subnodos</li>
+<li><code>Names</code>: array de claves valores que son RI a objetos</li>
+<li><code>Limits</code>: en los nodos no root la primera y ultima clave contenida en los hijos</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Number Tree: Como el name tree pero con claves numéricas<ul>
+<li>En vez de <code>Names</code> tienes <code>Nums</code></li>
+</ul>
+</li>
+<li>
+<p>Functions: Funciones NxN (n variables, n salidas)</p>
+<ul>
+<li>Numericas</li>
+<li>Multivariables, Multivalor (R^n -&gt; R^n)</li>
+<li>Sin efectos laterales</li>
+<li>Domain (input interval) y Range (output interval, optional)</li>
+<li>Type0: Sampled (puntos) se interpolan los puntos intermedios</li>
+<li>No existe Type 1??</li>
+<li>Type2: Exponential interpolation (monomio + cte)<ul>
+<li>C0: valor para x=0</li>
+<li>C1: valor para x=1</li>
+<li>N: grado del exponente</li>
+</ul>
+</li>
+<li>Type3: Stitching (junta varias funciones)</li>
+<li>Type4: Postscript (adjunta un stream con codigo postscript)</li>
+</ul>
+</li>
+<li>
+<p>File specification strings:</p>
+<ul>
+<li>Es un string, entre parentesis, escaping</li>
+<li>Usa forward slashes para separar componentes</li>
+<li>Puede ser absoluta o relativa dependiendo si hay barra inicial</li>
+<li>El origen de los relativos es el contenedor del fichero (puede ser una URL o el file system)</li>
+<li>Puede usar el <code>..</code></li>
+<li>Se puede escapar la barra si forma parte del nombre con doble contrabarra (una para escapar la segunda, la segunda para interpretar el nombre)</li>
+</ul>
+</li>
+<li>File specification dict:<ul>
+<li>Type: FileSpec</li>
+<li>Permite cosas avanzadas:<ul>
+<li>especificar url's (<code>FS</code>: <code>URL</code>)</li>
+<li>especificar un nombre diferente dependiendo del sistema</li>
+<li>ficheros embedido</li>
+<li>referir ficheros relacionados</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="estructura-de-fichero">Estructura de fichero</h2>
+<p>Objetivo:</p>
+<ul>
+<li>Acceso aleatorio eficiente</li>
+<li>Actualización incremental</li>
+</ul>
+<p>Elementos:</p>
+<ul>
+<li>Header: identifica la version de especificación PDF</li>
+<li>Body: Objetos propios del documento</li>
+<li>Cross reference table: objetos indirectos</li>
+<li>Trailer: Contiene punteros la XRef y a ciertos objetos</li>
+<li>Objetos añadidos en actualizaciones posteriores</li>
+</ul>
+<h3 id="header">Header</h3>
+<ul>
+<li>Debe empezar por <code>%PDFn.m</code> donde n.m es la version de la especificacion (1.0 a 1.7 actualmente)</li>
+<li>La version efectiva no es esa, esta en el trailer, para poderse incrementar con actualizaciones</li>
+<li>Añadir un comentario con 4 bytes &gt; 128 para que se detecte como binario el fichero</li>
+</ul>
+<h3 id="file-body">File Body</h3>
+<ul>
+<li>Secuencia de indirect objects (y de streams con indirect objects) que forman el documento</li>
+</ul>
+<h3 id="xref-table">XRef Table</h3>
+<ul>
+<li>cross reference section<ul>
+<li><code>xref</code> eol</li>
+<li>subsections:<ul>
+<li>subsection header:<ul>
+<li>first object number</li>
+<li>count</li>
+<li>eol</li>
+</ul>
+</li>
+<li>referencias<ul>
+<li>10 digitos byte offset en el ¿stream decodificado?</li>
+<li>1 espacio</li>
+<li>5 digitos generationa</li>
+<li>1 espacio</li>
+<li><code>n</code></li>
+<li>\r\n  o <code>_\n</code> o <code>_\r</code></li>
+</ul>
+</li>
+<li>referencias libres<ul>
+<li>10 digitos object number del siguiente libre</li>
+<li>1 espacio</li>
+<li>5 digitos generationa</li>
+<li>1 espacio</li>
+<li><code>n</code></li>
+<li>\r\n  o <code>_\n</code> o <code>_\r</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="file-trailer">File Trailer</h3>
+<ul>
+<li><code>trailer</code></li>
+<li>dict</li>
+<li>`startxref</li>
+<li>byte offset of last xref section</li>
+<li>eol</li>
+<li><code>%%EOF</code></li>
+</ul>
+<p>El diccionario tiene lo siguinte:</p>
+<ul>
+<li><code>Size</code>: Numero de objetos</li>
+<li><code>Prev</code>: </li>
+<li><code>Root</code>: El diccionario de catalogo del documento (Requerido, indireccionable)</li>
+<li><code>Encrypt</code>: Diccionario de cifrado del documento (Requerido si hay encriptación)</li>
+<li><code>Info</code>: Diccionario de informacion (Opcional, indireccionable)</li>
+<li><code>ID</code>: Array de dos strings de bytes que identifican el documento (Requerido si hay cifrado)</li>
+<li><code>Next</code>: </li>
+</ul>
+<h3 id="actualizaciones">Actualizaciones</h3>
+<p>Se puede actualizar un fichero de forma aditiva manteniendo la versión anterior.
+Se añade detras del <code>%%EOF</code>:</p>
+<ul>
+<li>Otro Body con los objetos</li>
+<li>Una XRef section referenciando todos los objetos (mantenidos, borrados, actualizados...)</li>
+<li>Trailer actualizado apuntando a la ultima xref</li>
+</ul>
+<p>Se puede hacer n veces.</p>
+<h3 id="object-streams">Object Streams</h3>
+<p>Un stream que almacena una secuencia de objetos indirectos.
+Permite almacenar los objetos con los metodos de compresion de un stream.</p>
+<p>No se puede meter en un stream object:</p>
+<ul>
+<li>Streams objects</li>
+<li>Objetos de generacion distinta a la zero</li>
+<li>El diccionario de cifrado</li>
+<li>
+<p>Un objeto que represente el Length de del diccionario de otro object stream</p>
+</li>
+<li>
+<p>Igual que los otros streams es un objeto que empieza con el diccionario, seguido de <code>stream</code>, el contenido, y <code>endstream</code></p>
+</li>
+</ul>
+<p>El diccionario de un Object Stream añade los siguientes campos al de un Stream convencional:</p>
+<ul>
+<li><code>Type</code>: ha de ser <code>ObjStm</code></li>
+<li><code>N</code>: Número de objetos</li>
+<li><code>Offset</code>: El offset en los datos decodificados del primer objeto</li>
+<li><code>Extends</code>: (opcional), indica la referencia a otro ObjStm del cual este es continuacion</li>
+</ul>
+<p>El contenido sin codificar es:
+- una linia con una sequencia de pares de numeros
+    - Cada par correspondiendo a
+        - el numero de objeto
+        - su offset relativo al primero.
+    - El primer offset sera siempre 0
+    - La generacion hemos dicho que siempre 0 implicitamente
+- Le sigue una secuencia de objetos sin los tags <code>obj</code> y <code>endobj</code>.</p>
+<h3 id="cross-reference-stream">Cross reference stream</h3>
+<ul>
+<li>Representacion mas compacta</li>
+<li>Posibilidad de añadir tipos de objetos futuros</li>
+<li>Tambien son stream objects, con su diccionario y su seccion de stream data</li>
+<li>El diccionario contiene estos campos adicionales<ul>
+<li><code>Type</code>: <code>XRef</code></li>
+<li><code>Size</code>: numero de objetos mas uno.<ul>
+<li>Puede contener menos</li>
+<li>Ninguna reescritura puede contener mas</li>
+<li>Puede ser igual que el numero de objetos total indicado en el trailer</li>
+</ul>
+</li>
+<li><code>Index</code>: (Defecto <code>[0 Size]</code>) un para de numeros por cada subsseccion<ul>
+<li>El primer número indica el primer object number de cada subseccion</li>
+<li>El segundo indica el numero de objetos de la subsseccion</li>
+</ul>
+</li>
+<li><code>Prev</code>: indica el anterior xref stream (TODO: en mixtos con xrefs no stream no me queda claro)</li>
+<li><code>W</code>: array of 3 integers with the size in bytes of the fields<ul>
+<li>Un tamaño cero implica que no se indica y se usa el valor por defecto</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Siguen los datos que, decodificados tienen la siguiente estructura<ul>
+<li>Entradas de objetos libres<ul>
+<li>Tipo (0) (equivalente al  <code>f</code>)</li>
+<li>Object number del siguiente objeto libre</li>
+<li>Generacion que toca si este object number se vuelve a usar</li>
+</ul>
+</li>
+<li>Entradas a objetos en uso sin comprimir<ul>
+<li>Tipo (1) (equivalente al <code>n</code>)</li>
+<li>Byte offset dentro del fichero</li>
+<li>Generacion del objeto (default 0)</li>
+</ul>
+</li>
+<li>Entradas a objetos en uso comprimidos<ul>
+<li>Tipo (2)</li>
+<li>El object number del stream que lo contiene</li>
+<li>El indice del objeto en el object stream</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="xrefs-compatibles-hacia-atras">XRefs compatibles hacia atras</h3>
+<p>TODO: No me lo he leido</p>
+<h3 id="cifrado">Cifrado</h3>
+<p>TODO: Saltado</p>
+<h1 id="estructura-de-documento">Estructura de documento</h1>
+<p>Un documento es una jerarquia de objetos partiendo del Document Catalog.</p>
+<ul>
+<li>Document Catalog<ul>
+<li>Page Tree<ul>
+<li>Page<ul>
+<li>Content</li>
+<li>Thumbnail</li>
+<li>Annotations</li>
+</ul>
+</li>
+<li>Page<ul>
+<li>...</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Outline hierarchy<ul>
+<li>Outline entry</li>
+<li>Outline entry</li>
+<li>...</li>
+</ul>
+</li>
+<li>Article Thread<ul>
+<li>Thread<ul>
+<li>Bead</li>
+<li>Bead...</li>
+</ul>
+</li>
+<li>Thread...</li>
+</ul>
+</li>
+<li>Named destinations</li>
+<li>Interactive Form</li>
+</ul>
+</li>
+</ul>
+<h2 id="document-catalog">Document Catalog</h2>
+<p>Referenciado en el Trailer por la clave <code>Root</code></p>
+<p>Dictionary:</p>
+<ul>
+<li><code>Type</code>: <code>Catalog</code></li>
+<li><code>Version</code>: (Optional)</li>
+<li><code>Extensions</code>: (Optional) Diccionario de extensiones</li>
+<li><code>Pages</code>: Referencia indirecta o no al Page Tree</li>
+<li><code>PageLabels</code>: A Number Tree with page indices -&gt; page label dictionaries</li>
+<li><code>Names</code>: Name dict.</li>
+<li><code>Dests</code>: Named destinations dict. Nombres con destino.</li>
+<li><code>ViewerPreferences</code>: Viewer preferences diccionary. Sugerencias de presentación.</li>
+<li><code>PageLayout</code>: Como presentar las paginas de entrada:<ul>
+<li>SinglePage (default), OneColumn, TwoColumnsLeft (odd pages on the left), TwoColumnsRight, TwoPageLeft, TwoPageRight</li>
+</ul>
+</li>
+<li><code>PageMode</code>: Que cosas presentar a parte del contenido<ul>
+<li>UseNone (nada, default), UseOutlines, UseThumbs, Fullscreen, UseOc (content group??), UseAttachments</li>
+</ul>
+</li>
+<li><code>Outlines</code>: Diccionario representando el esquema del documento</li>
+<li><code>Threads</code>: Diccionario connectando los hilos de lectura</li>
+<li><code>OpenAction</code>: como abrir puede ser:<ul>
+<li>Un array de destinations</li>
+<li>Un action dict</li>
+</ul>
+</li>
+<li><code>AA</code>: diccionario con acciones adicionales a ejecutar cuando se disparan eventos concretos</li>
+<li><code>URI</code>: diccionario con acciones relacionadas con la activacion de URI a nivel de todo el documento</li>
+<li><code>AcroForm</code>: El formulario del documento</li>
+<li><code>Metadata</code>: dict con Metadatos del documento</li>
+<li><code>StructTreeRoot</code> Document Tree root Structure dict</li>
+<li><code>MarkInfo</code>: </li>
+<li>Lang: </li>
+<li>SpiderInfo: Diccionario con la lista de comandos para hacer la captura web para generar el documento</li>
+<li>OutputIntents: Especifica que perfiles de color usar para cada uso (impresora, pantalla...)</li>
+<li>PieceInfo: Datos privados ignorables por los visores que no los entiendan asociados con una pagina o xform</li>
+<li>OCProperties: Contenido opcional ???</li>
+<li>Perms: Acciones a las que tiene acceso un usuario no propietario</li>
+<li>Legal: Atestados de sobre el contenido firmado</li>
+<li>Requirements: Lista las features que usa el documento</li>
+<li>Collection: Diccionario para mejorar el renderizado de los attatchments</li>
+<li>NeedsRendering: Cuando hay XFA Forms, dice que el documento necesita rerenderizado cuando se abra</li>
+<li>...</li>
+</ul>
+<h3 id="pagetree">PageTree</h3>
+<p>PageTree -&gt; [PageNode] -&gt; Page</p>
+<p>Los campos que se definen arriba se heredan de los padres
+si no se especifican en los hijos.</p>
+<p>Que tiene una page?</p>
+<ul>
+<li>Varios rectangulos progresivos: si no se especifican uno, por defecto coge el valor del externo<ul>
+<li>Usualment se deja mínimo 3-5mm entre cada uno</li>
+<li>MediaBox: Rectangulo del medio (papel)</li>
+<li>CropBox: Rectangulo donde en el papel ira todo. Es el que se imprime y visualiza, incluye marcas de recorte e impresion. por defecto el MediaBox</li>
+<li>BleedBox: Espacio de recorte en produccion contiene fondo que hay que cortar , por defecto el CropBox</li>
+<li>TrimBox: Espacio de recorte para acabado (recortado), por defecto Bleed, si no se ha definido </li>
+<li>ArtBox: Rectangulo dentro del TrimBox con contenido (no incluiría los margenes), por defecto TrimBbox</li>
+</ul>
+</li>
+<li>Contents:</li>
+</ul>
+<h2 id="interactive-forms">Interactive forms</h2>
+<p>Un documento puede tener un formulario asociado.
+Se referencia en el campo <code>AcroForm</code> del catálogo del documento que apunta al <em>diccionario de formulario</em>.
+El formulario del documento especifica cuales son los <em>Fields</em>, una array de referencias a <em>diccionarios de campo</em>, los campos.
+Un campo puede ser no-terminal y tener hijos (<code>Children</code>) o ser terminal y no tenerlos.</p>
+<p>Los no terminales son útiles para el nombrado de los campos
+y para definir los paràmetros de los campos en grupo vía herencia.</p>
+<p>Un campo se nombra completamente (<em>full name</em>)
+uniendo con un puntos (<code>.</code>) los nombres parciales (<em>partial names</em>)
+de los campos no-terminales que lo incluyen y el suyo propio.
+<code>Titularidad.Datos personales.Dirección.Código postal</code></p>
+<p>Las propiedades especificadas en un nivel superior se heredan
+en los campos hijos.
+Los hijos lo pueden redefinir.</p>
+<h3 id="diccionario-de-campo-campos-comunes">Diccionario de campo (campos comunes)</h3>
+<ul>
+<li><code>FT</code>: Field type. Si es un no terminal, el tipo es para heredarlo, no el del campo en sí.<ul>
+<li><code>Btn</code> Botón</li>
+<li><code>Ch</code> Choice</li>
+<li><code>Tx</code> Free text</li>
+<li><code>Sig</code> Signature</li>
+</ul>
+</li>
+<li><code>Parent</code>: Referencia al nodo padre si lo hubiera</li>
+<li><code>Kids</code>: Array a referencias indirectas a los hijos inmediatos</li>
+<li><code>T</code>: Partial name</li>
+<li><code>TU</code>: Nombre para el usuario (Para mensajes de error y demas)</li>
+<li><code>TM</code>: Nombre de mapeo (usado para exportar la información</li>
+<li><code>Ff</code>: Field flags (heredado)<ul>
+<li>1: ReadOnly: No se puede editar</li>
+<li>2: Required: No se puede enviar si no tiene valor</li>
+<li>4: NoExport: El campo no se exporta</li>
+</ul>
+</li>
+<li><code>V</code>: Field value (depende del tipo)</li>
+<li><code>DV</code>: Default value</li>
+<li><code>AA</code>: Additional actions (diccionari d'events amb accions)</li>
+</ul>
+<h3 id="campos-de-texto">Campos de texto</h3>
+<p>Attributos adicionales si es campo de texto:</p>
+<ul>
+<li><code>DA</code>: Default Apperance, (requerido, heredado) bien<ul>
+<li>a sequence of page content graphics or</li>
+<li>Text state operators </li>
+</ul>
+</li>
+<li><code>Q</code>: Quadding, justification (heredado)<ul>
+<li>0: left</li>
+<li>1: center</li>
+<li>2: right</li>
+</ul>
+</li>
+<li><code>DS</code>: Default text style</li>
+<li><code>RV</code>: Contenido de texto enriquecido, si el texto esta enriquecido esto es un string o un stream con el texto (html)</li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../ip6" class="md-footer__link md-footer__link--prev" aria-label="Previous: None" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              None
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../timewarrior/" class="md-footer__link md-footer__link--next" aria-label="Next: TimeWarrior" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              TimeWarrior
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d6c3db9e.min.js"></script>
+      
+    
+  </body>
+</html>

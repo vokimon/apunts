@@ -1,0 +1,22 @@
+Cabecera
+	5 palabras de 64
+		1 Metadatos
+			version
+		2 Subred origen
+		3 Host origen
+		4 Subred destino
+		5 Host destino
+	Se eliminan
+		Check-sum: Ya se hace en otros niveles de la pila
+		Fragmentacion:
+			Diferente aproximacion
+			Si no caben por el MTU, se rebota un mensaje "Packet too big" con el mtu del camino y se reenvia
+		Tamaño de la cabecera: Se elimina, ahora no hay extensiones ahora es fija
+		Solo el del payload
+		Flow label???
+	Extensiones, se añaden en siguientes paquetes
+		Los nodos intermedios no necesitan conocerlas, las pasan como paquetes normales
+
+
+
+

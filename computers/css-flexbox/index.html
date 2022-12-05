@@ -1,0 +1,1532 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Apunts i notes de coses que aprenc">
+      
+      
+        <meta name="author" content="vokimon">
+      
+      
+        <link rel="canonical" href="https://vokimon.github.io/apunts/computers/css-flexbox/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.8">
+    
+    
+      
+        <title>CSS Flexbox - Apunts</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.20d9efc8.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.815d1a91.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/figure.css">
+    
+      <link rel="stylesheet" href="../../css/linkcard.css">
+    
+      <link rel="stylesheet" href="../../css/videowrapper.css">
+    
+      <link rel="stylesheet" href="../..">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#css-flexbox" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Apunts" class="md-header__button md-logo" aria-label="Apunts" data-md-component="logo">
+      
+  <img src="../../img/logo-customblocks-white.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Apunts
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              CSS Flexbox
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_3" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9h-1.9M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69m-9.15 3.96h2.3L12 9l-1.15 3.65Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_3">
+          
+            <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/vokimon/apunts" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Apunts" class="md-nav__button md-logo" aria-label="Apunts" data-md-component="logo">
+      
+  <img src="../../img/logo-customblocks-white.svg" alt="logo">
+
+    </a>
+    Apunts
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/vokimon/apunts" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        README
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Computers
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Computers" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Computers
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          css
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="css" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          css
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../css/" class="md-nav__link">
+        CSS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../css-boxmodel/" class="md-nav__link">
+        El modelo de caja
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../css-normalflow/" class="md-nav__link">
+        Flujo normal (normal flow)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          CSS Flexbox
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        CSS Flexbox
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#conceptos" class="md-nav__link">
+    Conceptos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#activacion-del-flexbox" class="md-nav__link">
+    Activación del flexbox
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definiendo-el-flujo-del-contenedor" class="md-nav__link">
+    Definiendo el flujo del contenedor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flexibilidad-de-los-elementos" class="md-nav__link">
+    Flexibilidad de los elementos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ajustandoalineando-los-elementos" class="md-nav__link">
+    Ajustando/alineando los elementos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gaps" class="md-nav__link">
+    Gaps
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hijos-discolos" class="md-nav__link">
+    Hijos díscolos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dudas" class="md-nav__link">
+    Dudas
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../css-grid/" class="md-nav__link">
+        CSS Grid
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../css-typography/" class="md-nav__link">
+        Css typography
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          javascript
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="javascript" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          javascript
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jsecosystem/" class="md-nav__link">
+        Jsecosystem
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jsonschema/" class="md-nav__link">
+        Jsonschema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../react-formik/" class="md-nav__link">
+        React formik
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../react/" class="md-nav__link">
+        React / Redux
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../android-glossary/" class="md-nav__link">
+        Android glossary
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cpp11/" class="md-nav__link">
+        New features of C++11 I should be starting to use:
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deeplearning/" class="md-nav__link">
+        Deep learning
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker/" class="md-nav__link">
+        Docker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ip6" class="md-nav__link">
+        None
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../specs-pdf/" class="md-nav__link">
+        Specs pdf
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../timewarrior/" class="md-nav__link">
+        TimeWarrior
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xpxplained/" class="md-nav__link">
+        El problema
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Math
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Math" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Math
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/mates-fundation/" class="md-nav__link">
+        Math Foundations
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/stats/" class="md-nav__link">
+        Statistics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/math-halfderivatives/" class="md-nav__link">
+        Half Derivatives
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/math-quadraticformula-alternative/" class="md-nav__link">
+        Quadratic Formula
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/math-wavelets/" class="md-nav__link">
+        Wavelets
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/math-3n1/" class="md-nav__link">
+        Collatz Conjecture
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Music
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Music" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Music
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../music/music-harmony/" class="md-nav__link">
+        Harmony: Notes, Scales and Chords 🎶
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../music/guitar-technics/" class="md-nav__link">
+        Técnica de Guitarra 🎸
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../music/guitar-fret-navigation/" class="md-nav__link">
+        Navegación en el mástil
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../music/pentatonicas.txt" class="md-nav__link">
+        Pentatonicas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../music/songs/" class="md-nav__link">
+        Songs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../music/ukelele/" class="md-nav__link">
+        Ukelele
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Languages
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Languages" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Languages
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/consonantes-afi.png" class="md-nav__link">
+        Phonetics Consonants
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/vowels.jpg" class="md-nav__link">
+        Phonetics Vowels
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/arabic-alphabet/" class="md-nav__link">
+        Arabic script
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/arabic/" class="md-nav__link">
+        Arabic
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/deutsch/" class="md-nav__link">
+        Deutsch
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/english-expresions/" class="md-nav__link">
+        English expresions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/english-old-pronoums/" class="md-nav__link">
+        English old pronoums
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/english-prepositions/" class="md-nav__link">
+        English prepositions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/english-tenses/" class="md-nav__link">
+        English tenses
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/vocabulary-somenergia/" class="md-nav__link">
+        English Vocabulary for SE enterviews
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/vocabulary-edibles/" class="md-nav__link">
+        Vocabulary edibles
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../economics/" class="md-nav__link">
+        Economics
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#conceptos" class="md-nav__link">
+    Conceptos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#activacion-del-flexbox" class="md-nav__link">
+    Activación del flexbox
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definiendo-el-flujo-del-contenedor" class="md-nav__link">
+    Definiendo el flujo del contenedor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flexibilidad-de-los-elementos" class="md-nav__link">
+    Flexibilidad de los elementos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ajustandoalineando-los-elementos" class="md-nav__link">
+    Ajustando/alineando los elementos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gaps" class="md-nav__link">
+    Gaps
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hijos-discolos" class="md-nav__link">
+    Hijos díscolos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dudas" class="md-nav__link">
+    Dudas
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <a href="https://github.com/vokimon/apunts/edit/master/docs/computers/css-flexbox.md" title="Edit this page" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+<h1 id="css-flexbox">CSS Flexbox</h1>
+<p>https://css-tricks.com/snippets/css/a-guide-to-flexbox/</p>
+<p>El poster <img alt="" src="https://css-tricks.com/wp-content/uploads/2022/02/css-flexbox-poster.png" /></p>
+<h2 id="conceptos">Conceptos</h2>
+<p>Flexbox es uno de los varios sistemas en css para organizar la <strong>disposición</strong> (layout)
+de elementos <strong>hijos</strong> en un elemento <strong>contenedor</strong>.
+Otros sistemas de layout son el Normal Flow, Grid, Multicolumn...
+En concreto, Flexbox es una generalización del sistema que se usa para los sistemas de escritura.</p>
+<p>Por ejemplo: Cuando escribimos con nuestro sistema de escritura, el latino,
+colocamos las palabras de izquierda a derecha 🡆 formando líneas.
+Cuando ya no caben palabras a lo ancho, añadimos una nueva línea.
+Estas líneas se colocan ordenadas de arriba a abajo 🡇.</p>
+<p>Flexbox llamaría a la dirección de lectura <strong>dirección principal</strong>,
+cada linea seria una <strong>pista</strong>,
+y la direccion en la que vamos colocando las sucesivas lineas
+sería la <strong>dirección de cruce</strong>.</p>
+<p>Más generalmente, decimos que flexbox dispone el contenido por orden,
+primero en una <strong>direccion principal</strong> formando una <strong>pista</strong> (track),
+y, a medida que las pistas se completan, se añaden nuevas pistas
+en orden en la <strong>dirección de cruce</strong>, perpendicular a la principal.</p>
+<p>Un <strong>flujo</strong> (flow) es la combinación de una dirección principal (hacia la derecha, la izquierda, arriba o abajo)
+y una dirección de cruce (siempre perpendicular pero hay dos sentidos posibles).</p>
+<p>Estas generalizaciones nos permiten hablar de pistas sin pensar si son lineas/filas o columnas.
+Para los ejemplos, aterrizaremos la generalización en el llamado <em>flujo normal</em> que es el de lectura, en nuestro caso, latina.</p>
+<h2 id="activacion-del-flexbox">Activación del flexbox</h2>
+<p>Activamos flexbox definiendo para el contenedor la propiedad <code>display</code>
+a los valores <code>flex</code> o bien <code>flex-inline</code></p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">.</span><span class="nc">container</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">flex</span><span class="p">;</span><span class="w">           </span><span class="c">/* o flex-inline */</span><span class="w"></span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+La diferencia entre <code>flex</code> y <code>flex-inline</code>:</p>
+<ul>
+<li>"<code>flex</code>" se comporta dentro de su padre como un <code>div</code> (<code>display: block</code>).</li>
+<li>"<code>flex-inline</code>" se comporta dentro de su padre como un <code>span</code> (<code>display: inline</code>).</li>
+</ul>
+<h2 id="definiendo-el-flujo-del-contenedor">Definiendo el flujo del contenedor</h2>
+<p>Puedes definir la dirección principal de un contenedor definiéndole la propiedad <code>flex-direction</code>:</p>
+<ul>
+<li><code>row</code>: (por defecto) dirección de lectura (script latino: 🡆)</li>
+<li><code>row-reverse</code>: dirección opuesta a la de lectura (script latino: 🡄)</li>
+<li><code>column</code>: dirección de añadir lineas en el script del idioma (script latino: 🡇)</li>
+<li><code>column-reverse</code>: dirección contraria a la de añadir líneas en el script del idioma (script latino: 🡅)</li>
+</ul>
+<p><strong>Ojo:</strong>
+Estos valores estan definidos respecto a la direccion de lectura,
+que cambia según el idioma:</p>
+<ul>
+<li>En idiomas que se escriben de derecha a izquierda (árabe, hebreo...)
+<code>row</code> es 🡄</li>
+<li>En idiomas que se escriben de arriba a abajo (chino, japones, vietnamita, coreano...),
+<code>row</code> es 🡇, ¡son columnas!</li>
+</ul>
+<p>¿Qué pasa cuando se llena la pista?
+Ese comportamiento lo fija la propiedad <code>flex-wrap</code> del container.</p>
+<ul>
+<li>Por defecto, (<code>nowrap</code>) siguen añadiendo elementos a la línea y hace <code>overflow</code>.</li>
+<li>Si vale <code>wrap</code>, se crean nuevas pistas (lineas) en la dirección perpendicular que no lleva <code>reverse</code>.</li>
+<li>Si vale <code>wrap-reverse</code>, se crean nuevas pistas (líneas), en la dirección perpendicular con <code>reverse</code>.</li>
+</ul>
+<p><strong>Ojo!:</strong>
+El uso de <code>wrap-reverse</code>, <code>row-reverse</code> y <code>column-reverse</code>
+puede ser contraproducente para usuarios de lectores de pantalla,
+puesto que el orden de lectura seguirá siendo el de los elementos en el html.
+No es que no se pueda usar, pero hay que tenerlo presente.</p>
+<p>Se pueden juntar las propiedades <code>flex-direction</code> y <code>flex-wrap</code> en la propiedad fusionada <code>flex-flow</code> (direction, wrap)</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>.container {
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    flex-flow: column wrap-reverse;
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>}
+</code></pre></div>
+<p>El flujo que llamabamos <em>normal</em> seria el "<code>row wrap</code>", siempre que estemos en un script latino.
+Es diferene del flujo por defecto que es "<code>row nowrap</code>".</p>
+<h2 id="flexibilidad-de-los-elementos">Flexibilidad de los elementos</h2>
+<p>Una de las potencias del flexbox es la capacidad que da a
+los hijos para adaptarse al espacio existente <strong>en la direccion principal</strong>.
+Esto está controlado por tres propiedades de los hijos: <code>flex-basis</code>, <code>flex-grow</code>, <code>flex-shrink</code>.</p>
+<p>Una vez repartidos los items en cada pista, es posible que, en una pista, sobre o falte espacio.</p>
+<p>Si sobra espacio, se reparte proporcionalmente al valor de la propiedad <code>flex-grow</code> de cada elemento.
+Esta propiedad, por defecto, es 0, es decir que, si no especificamos un <code>flex-grow</code> el elemento no crecerá.
+El crecimiento está limitado por el <code>max-height/width</code> del elemento.</p>
+<p>¿Cómo funciona este reparto proporcional?
+Un ejemplo: Si en un track hay 4 elementos con grow 0, 1, 2 y, 2:</p>
+<ul>
+<li>El primero no crecerá aunque sobre espacio</li>
+<li>El segundo crecerá 1 píxel de cada 5 (0+1+2+2) píxeles sobrantes</li>
+<li>El tercero y cuarto crecerán 2 píxeles de cada 5 píxeles sobrantes</li>
+</ul>
+<p>Si falta espacio, pasará lo anàlogo usando la propiedad <code>flex-shrink</code>,
+cada elemento se encogerá tantos pixeles proporcionalmente a su valor de <code>flex-shrink</code>.
+Esta propiedad, por defecto, es 1, es decir que, si no especificamos ningún <code>flex-shrink</code> todos los elementos se encogerán por igual.
+Ningún elemento se encogerá más allá de su <code>min-height/width</code>.</p>
+<p>La propiedad <code>flex-basis</code> de los elementos hijos define el tamaño en el eje principal
+que se tiene en cuenta para saber si sobra o falta espacio en la pista.
+También es el tamaño a partir del cual crece o encoge el elemento.</p>
+<p><code>flex-basis</code> puede tener estos valores:</p>
+<ul>
+<li><code>auto</code> (por defecto) usa el tamaño del width/height del elemento</li>
+<li><code>max-content</code>: El tamaño del contenido maximo de los hermanos en la direccion de cruce</li>
+<li><code>min-content</code>: El tamaño del contenido mínimo de los hermanos en la direccion de cruce</li>
+<li><code>fit-content</code>: Todo el tamaño disponible hasta <code>max-width/heigh</code></li>
+<li><code>content</code> adapt to children content (La diferencia con auto es que delega en los hijos del elemento y no en el elemento)</li>
+<li>Cualquier otro tamaño en unidades que tambien pueden ser relativas al contenedor (%) o al view (vh,vw,vmin,vmax) o al espacio disponible (fr).</li>
+<li>También se pueden usar funciones como <code>calc</code>, <code>min</code>, <code>max</code>, <code>minmax</code>, <code>clamp</code>...</li>
+</ul>
+<p>Se pueden juntar <code>flex-grow</code>, <code>flex-shrink</code> y <code>flex-basis</code> en la propiedad <code>flex</code>, donde se especifican por orden grow, shrink y basis.
+Ademas puede usar algunos valores de atajo:</p>
+<ul>
+<li><code>initial</code>: Equivalente a "<code>0 1 auto</code>". Los valores por defecto. No crecerá pero se puede encoger.</li>
+<li><code>auto</code>: Equivalente a "<code>1 1 auto</code>". Crecerá o encogerá según se requiera.</li>
+<li><code>none</code>: Equivalente a "<code>0 0 auto</code>". No se adaptará ni creciendo ni encogiendo.</li>
+</ul>
+<h2 id="ajustandoalineando-los-elementos">Ajustando/alineando los elementos</h2>
+<p>¿Qué hacer cuando el contenido no llena todo el espacio disponible?</p>
+<p>Por defecto, el comportamiento es:</p>
+<ul>
+<li>Los elementos se apilarán al inicio de la pista en la dirección principal dejando cualquier espacio sobrante al final.</li>
+<li>En flujo <code>row wrap</code>: los elementos se apilan a la izquierda de la linea.</li>
+<li><code>justify-content: flex-start</code></li>
+<li>Las pistas de elementos se wrappearan al inicio de la direccion de cruce dejando cualquier espacio sobrante al final.</li>
+<li>En flujo <code>row wrap</code>: las lineas se apilan arriba del contenedor.</li>
+<li><code>align-content: flex-start</code></li>
+<li>Los elementos de cada pista se estiraran en el eje de cruce hasta alcanzar el tamaño del mayor elemento de la pista.</li>
+<li>En flujo <code>row wrap</code>: los elementos expandiran su altura a la del elemento más alto de cada linea.</li>
+<li><code>align-items: stretch</code></li>
+</ul>
+<p>El comportamiento esta gobernado por las propiedades <code>justify/align-content/items</code>.
+La propiedad <code>justify-items</code> no tiene sentido en Flexbox, pero sí se aplica en Grid.
+La incluyo porque sirve para entender la lógica en los nombres de las propiedades.</p>
+<p>Las propiedades empiezan por:</p>
+<ul>
+<li><code>justify-*</code> cuando hablan de espacio extra en la <strong>dirección principal</strong></li>
+<li><code>align-*</code> cuando hablan de espacio extra en la <strong>direccion de cruce</strong></li>
+</ul>
+<p>En cada una de esas direcciones, podemos hablar de</p>
+<ul>
+<li><code>*-content</code>: El espacio que sobra en la dirección, después de colocar todo el contenido</li>
+<li><code>*-item</code>: El espacio en la dirección que le sobra a cada elemento dentro de la pista que atraviesa la dirección</li>
+</ul>
+<p>Como en Flexbox no hay pistas que atraviesen la dirección principal, <code>justify-items</code> no tiene sentido.
+En Grid sí, porque se definen pistas en las dos direcciones.</p>
+<p>Volviendo a Flexbox, <code>align-items</code> para un flujo <code>row wrap</code>,
+definiría como gestionar el espacio vertical de la linea que no llena el item.</p>
+<p>Una vez definido los espacios sobrantes que queremos gestionar,
+¿cómo lo hacemos? ¿qué valores les podemos dar?</p>
+<p><img alt="content alignments/justifications" src="../css-flexbox-justify-align-content.svg" /></p>
+<p>Para<code>*-content</code>, el sobrante de todo el contenido en una dirección (<code>justify-content</code>, <code>align-content</code>):</p>
+<ul>
+<li><code>flex-start</code> (default) ajusta los elementos al inicio del eje</li>
+<li><code>flex-end</code> ajusta los elementos al final del eje</li>
+<li><code>center</code> deja el mismo espacio a los dos lados del eje</li>
+<li><code>stretch</code>: Se da el espacio extra a los items (en la principal, se reparte segun el grow)</li>
+<li><code>space-arround</code>: Añade espacio alrededor de cada item.<ul>
+<li>Como si fuera un padding: en los extremos habrá la mitad de espacio que entre hijos.</li>
+</ul>
+</li>
+<li><code>space-between</code>: Añade espacio solo entre los elementos interiores.</li>
+<li><code>space-evenly</code>: Añade el mismo espacio entre los elementos y en los extremos.</li>
+</ul>
+<p>Para <code>*-item</code>, alineando los items dentro de su track
+(~~<code>justify-items</code>~~, <code>align-items</code>):</p>
+<ul>
+<li><code>flex-start</code> (default) se mueve el elemento en la pista hacia el inicio del eje</li>
+<li><code>flex-end</code> se mueve e elemento en la pista hacia el final del eje</li>
+<li><code>center</code> se deja el elemento en el centro de la pista en la dirección del eje</li>
+<li><code>stretch</code>: Se estira el elemento para que ocupe toda la pista en la dirección del eje</li>
+<li><code>baseline</code>: Se alinea con el baseline del resto de los elementos en la pista</li>
+<li><code>first baseline</code>: TODO (no safari ni opera)</li>
+<li><code>last baseline</code>: TODO (no safari ni opera)</li>
+<li><code>safe &lt;other&gt;</code> if <em>other</em> creates overflow, behave as <code>start</code> (solo firefox en 2022)</li>
+<li><code>unsafe &lt;other&gt;</code> even if <em>other</em> creates overflow, respect <em>other</em> (solo firefox en 2022)</li>
+</ul>
+<p>También tenemos propiedades de atajo:</p>
+<ul>
+<li><code>place-items: &lt;align&gt; &lt;justify&gt;;</code></li>
+<li><code>place-content: &lt;align&gt; &lt;justify&gt;;</code></li>
+</ul>
+<p>Si los dos valores de align y justify son el mismo, se puede poner solo una vez.</p>
+<h2 id="gaps">Gaps</h2>
+<p>Las propiedades <code>column-gap</code>, <code>row-gap</code> y la combinada <code>gap</code> (row column),
+indican un espacio minimo entre los elementos interiores.
+No genera margen en los elementos exteriores.</p>
+<p>Es un espacio minimo, asi que si por  <code>space-between</code>, <code>space-evenly</code> o <code>space-arround</code>,
+toca mas espacio, se dará más espacio.</p>
+<h2 id="hijos-discolos">Hijos díscolos</h2>
+<p>A veces queremos que algún hijo concreto no siga la politica especificada en el padre.</p>
+<p>La propiedad <code>align-items</code> en el contenedor afecta a todos los items.
+Si queremos que alguno se alinee de forma diferente,
+se puede definir para él la propiedad <code>align-self</code> con el valor específico.
+(En Grid pasarà lo mismo con <code>justify-self</code>)</p>
+<p>La propiedad <code>order</code> permite sacar el item de la secuencia de declaracion.
+Por defecto, todos los items tienen <code>order: 0</code>.
+Dado varios items con el mismo <code>order</code>, como pasa por defecto,
+se colocan por orden de definición.</p>
+<h2 id="dudas">Dudas</h2>
+<ul>
+<li>Cómo combina <code>justify-content: stretch</code> y los <code>flex-grow</code>?</li>
+<li>Qué es el <code>last/first-baseline</code>?</li>
+<li>baseline en flow column?</li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../css-normalflow/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Flujo normal (normal flow)" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Flujo normal (normal flow)
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../css-grid/" class="md-footer__link md-footer__link--next" aria-label="Next: CSS Grid" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              CSS Grid
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d6c3db9e.min.js"></script>
+      
+    
+  </body>
+</html>

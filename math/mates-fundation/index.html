@@ -1,0 +1,1519 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Apunts i notes de coses que aprenc">
+      
+      
+        <meta name="author" content="vokimon">
+      
+      
+        <link rel="canonical" href="https://vokimon.github.io/apunts/math/mates-fundation/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.8">
+    
+    
+      
+        <title>Math Foundations - Apunts</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.20d9efc8.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.815d1a91.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/figure.css">
+    
+      <link rel="stylesheet" href="../../css/linkcard.css">
+    
+      <link rel="stylesheet" href="../../css/videowrapper.css">
+    
+      <link rel="stylesheet" href="../..">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Apunts" class="md-header__button md-logo" aria-label="Apunts" data-md-component="logo">
+      
+  <img src="../../img/logo-customblocks-white.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Apunts
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Math Foundations
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_3" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9h-1.9M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69m-9.15 3.96h2.3L12 9l-1.15 3.65Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_3">
+          
+            <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/vokimon/apunts" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Apunts" class="md-nav__button md-logo" aria-label="Apunts" data-md-component="logo">
+      
+  <img src="../../img/logo-customblocks-white.svg" alt="logo">
+
+    </a>
+    Apunts
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/vokimon/apunts" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        README
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Computers
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Computers" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Computers
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          css
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="css" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          css
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/css/" class="md-nav__link">
+        CSS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/css-boxmodel/" class="md-nav__link">
+        El modelo de caja
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/css-normalflow/" class="md-nav__link">
+        Flujo normal (normal flow)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/css-flexbox/" class="md-nav__link">
+        CSS Flexbox
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/css-grid/" class="md-nav__link">
+        CSS Grid
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/css-typography/" class="md-nav__link">
+        Css typography
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          javascript
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="javascript" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          javascript
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/jsecosystem/" class="md-nav__link">
+        Jsecosystem
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/jsonschema/" class="md-nav__link">
+        Jsonschema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/react-formik/" class="md-nav__link">
+        React formik
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/react/" class="md-nav__link">
+        React / Redux
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/android-glossary/" class="md-nav__link">
+        Android glossary
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/cpp11/" class="md-nav__link">
+        New features of C++11 I should be starting to use:
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/deeplearning/" class="md-nav__link">
+        Deep learning
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/docker/" class="md-nav__link">
+        Docker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/ip6" class="md-nav__link">
+        None
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/specs-pdf/" class="md-nav__link">
+        Specs pdf
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/timewarrior/" class="md-nav__link">
+        TimeWarrior
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/xpxplained/" class="md-nav__link">
+        El problema
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Math
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Math" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Math
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Math Foundations
+      </a>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stats/" class="md-nav__link">
+        Statistics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../math-halfderivatives/" class="md-nav__link">
+        Half Derivatives
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../math-quadraticformula-alternative/" class="md-nav__link">
+        Quadratic Formula
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../math-wavelets/" class="md-nav__link">
+        Wavelets
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../math-3n1/" class="md-nav__link">
+        Collatz Conjecture
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Music
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Music" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Music
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../music/music-harmony/" class="md-nav__link">
+        Harmony: Notes, Scales and Chords 🎶
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../music/guitar-technics/" class="md-nav__link">
+        Técnica de Guitarra 🎸
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../music/guitar-fret-navigation/" class="md-nav__link">
+        Navegación en el mástil
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../music/pentatonicas.txt" class="md-nav__link">
+        Pentatonicas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../music/songs/" class="md-nav__link">
+        Songs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../music/ukelele/" class="md-nav__link">
+        Ukelele
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Languages
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Languages" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Languages
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/consonantes-afi.png" class="md-nav__link">
+        Phonetics Consonants
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/vowels.jpg" class="md-nav__link">
+        Phonetics Vowels
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/arabic-alphabet/" class="md-nav__link">
+        Arabic script
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/arabic/" class="md-nav__link">
+        Arabic
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/deutsch/" class="md-nav__link">
+        Deutsch
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/english-expresions/" class="md-nav__link">
+        English expresions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/english-old-pronoums/" class="md-nav__link">
+        English old pronoums
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/english-prepositions/" class="md-nav__link">
+        English prepositions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/english-tenses/" class="md-nav__link">
+        English tenses
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/vocabulary-somenergia/" class="md-nav__link">
+        English Vocabulary for SE enterviews
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/vocabulary-edibles/" class="md-nav__link">
+        Vocabulary edibles
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../economics/" class="md-nav__link">
+        Economics
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <a href="https://github.com/vokimon/apunts/edit/master/docs/math/mates-fundation.md" title="Edit this page" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+  <h1>Math Foundations</h1>
+
+<p>Mathematical object: numbers, permutations, partitions, matrices, sets, functions, relations...</p>
+<p>Property:
+    A function for a set of objects (of a given type) 
+    that renders true or false.
+        p: X -&gt; {true, false}</p>
+<p>Relation:
+    A property assigned tuples of objects.
+    Holds true or not for a given tuple of objects.
+        r: x1,x2,..,xn -&gt; {true, false}
+    Arity: number of objects in the tuple</p>
+<p>Set: Object related to other objects by a membership/inclusion relation.
+    Inclusion: a relation holded between a set and its members
+    Cardinality: number of included objects
+        Same if bijection relation can be stablished
+    Subset S1&lt;S2: all elements in S1 are also in S2
+        Any set S has {} and S as subsets
+    Powerset P(S): The set of all the subsets of S</p>
+<p>Mathematical structure:
+    Defined in a type/set and several related mathematical objects:
+    measures, algebraic structures, topologies, metrics measures,
+    orders, equivalence relation, differential structures...
+    By mapping one set to another but also mapping the structure
+    we can extrapolate the properties of the structure.</p>
+<p>Algebraic structure:
+    A set closed under a collection of operations defined by axioms.
+    Operations take 0 to inf elements and return an element a.
+    By reducing the axiomatic requirements of one structure to get its
+    properties, we ease mapping those properties from one known
+    set to a new unknown one.
+    wp:Algebraic_structure</p>
+<p>Homomorphism: Exists a map (morphism) from one algebraic structure
+    to another so that the algebraic structure is preserved.
+    A function f:A-&gt;B such that, for any n-ary op \mu, 
+    there exists an operator \mu_B such that, that for any a_i€A,
+        f(\mu_a(a_1,..,a_n)) = \mu_b(f(a_1),..,f(a_n))
+    Other homomorphisms:
+        Epimorphism: Surjective (No element in the target gets unrelated)
+        Monomorphism: Injective (No element in the target gets related more than once)
+        Isomorphism: Bijective (Surjective and Injective)
+        Endomorphism: Of an object to itself
+        Automorphism: (Bijective and Endomorphic)
+Isomorphism: When the map can be reversed by an homomorphic inverse map</p>
+<p>Substructure: A subset of the structure that still fullfils axioms
+Product: "cartesian product of the set, redefining the ops"</p>
+<p>Why is that useful?</p>
+<p>Everything you learn about an algebraic structure
+you can also apply it to a different new one if the axioms are meet.</p>
+<p>Typical axioms for algebraic structures:
+    (Binary) Closure(S,%): %:X,X-&gt;X ~:X-&gt;X
+    Totality: Defined for any element in the domain
+    Conmutativity: a%b=b%a
+    Absortion law: a$(a%b)=a%(a$b)=a  (like in boolean)
+    Associativity of %: (a%b)%c=a%(b%c)
+    Distributivity % over $: a$(b%c)=(a%b)$(a%c)
+        No conmutative -&gt; left, right, two-sided (above is left)
+    Identity: Exists a I so that a%I=a fore every a
+        No conmutative -&gt; left, right or two-sided identity (above right)
+    Invertibility: For each a, exist b | a%b=I
+        No conmutative -&gt; left (a) and right (b) inverses
+        No associative, left or right inverses might not be unique
+        R,+ negation
+        R(but 0),· inverse
+    Idempotence Unary: f(f(a))=f(a), f(a,a)=a
+        ie. I(a), constantK(a), abs(a)
+        If it just applies to some elements a, a is an idempotent element
+    Idempotence (version 2): f(f(a))=a 
+        ie. complex negation, conjugation, multiplicative inversion...
+    Cancelation: a%b=a%c -&gt; b=c (generalizes invertivility)
+        No conmutative, left, rigth or two-side cancellable (above left)</p>
+<p>Closure operator C(S) on a operator %:
+    C$(S) = {
+    Gives minimum set that is closed for a given operation that 
+    includes S.
+    ie. Closure of naturals respect the substraction operator is the integer set
+Inverse operator of an operation:</p>
+<p>Single binary op structures:
+    Magma: {S,+} + binary
+        Closure
+    Semigroup: (S, ·_S)
+        Closure, Associativity
+    Monoid: Algebraic structure of a set S and an operation $ with axioms:
+        Closure, Associative, Identity
+    Group: Algebraic structure of a set S and an operation $ with axioms:
+        Closure, Associability, Identity, Invertibility
+    Abelian group:
+        Closure, Associability, Identity, Invertibility, Conmutative</p>
+<p>Two binary ops structures:
+    Ring: Algrebraic structure with notion of +,-
+        Abelian group for +
+        Monoid for ·
+        Distributibity on · over +</p>
+<p>Conmutative Ring:
+    Ring
+    Conmutative ·</p>
+<p>Field: Algebraic structure with notion of +,-,·,/. and 
+    Closure on + and ·
+    Associativity on + and ·
+    Additive (O) and multiplicative (I) identities (O!=I)
+    Additive (-x) and multiplicative (1/x) inverses (implies - and / ops)
+    Distributivity of · over +
+    Examples:
+        Naturals (N): 0,1,2,3... (NOOO!)
+        Integers (Z): ...,-3,-2,-1,0,1,2,3,...
+        Rational (Q): 
+        Algebraic (A):
+        Complex: (C): </p>
+<p>Product space: TODO</p>
+<p>Vector space over a field F: {V,F,+,·}
+        V is the space
+        F is a field (naming F·, F+, F1, F0)
+        + is a binary operator VxV-&gt;V
+        · is a binary operator FxV-&gt;V
+    Math. structure, formed by a collection of objects (called vectors)
+    that can be added each other and multiplied by a member of the
+    field (called scalar) with the following axioms:
+    Abelian {V,+}
+        Associativity +: u+(v+w)=(u+v)+w
+        Conmutativity +: u+v=v+u
+        Identity +: u+0=u, 0 is zero vector
+        Invertibility on +: foreach v, exist w | v+w=0. v additive inverse of w
+    Ring Homoformism f (·) from F to endomorphism ring of the V
+        Distributivity of · respect +: a·(v+w) = (a·v)+(a·w)
+        Distributivity of · respect F+: (a+b)·v = (a·v)+(b·v)
+        Compatibility of · with F·: a·(b·v) = (a·b)v
+        Identity on ·: FI·v = v</p>
+<div class="highlight"><pre><span></span><code>TODO: wp:vector space
+</code></pre></div>
+<p>Vector space does not imply: nearness, angles, distances</p>
+<p>Metric space: A set where the notion of distance is introduced
+    (M,d), distance function d:MxM-&gt;R, with axiomas:
+    1 Non-negativity: d(x,y)&gt;=0
+    2 Identity of indiscernibles: d(x,y)=0 &lt;-&gt; x=y
+    3 Symmetry: d(x,y)=d(y,x)
+    4 Triangle inequality: d(x,z) &lt;= d(x,y) + d(y,z)
+    You can get 1 from 2+3+4 but often we drop one to form
+        Pseudometric: dropping 2
+        Quasimetric: dropping 3 (d'x,y=(dxy+dyx)/2 to get a metric)
+        semimetric: dropping 4</p>
+<div class="highlight"><pre><span></span><code>A map f is an isometry if d2(f(y),f(x)) = d1(x,y)
+</code></pre></div>
+<p>Complete metric space: </p>
+<p>Normed vector space: (V,||·||) an V.S. with notion of length of vector
+    ||.||:V-&gt;F, a norm in V (F is C or R), axioms
+    1. Positive definitenes: ||x||=0 &lt;-&gt; x=0
+    2. Positive homogeneity: ||ax|| = |a| ||x||
+    3. Triangle inequality: ||x+y|| &lt;= ||x||+||y||
+    1+2 -&gt; p(v)&gt;=0 &lt;-&gt; v!=0
+    Aka Euclidean vector space
+    Dropping 1 we have a seminormed space and the seminorm</p>
+<p>Inner product space: (V,&lt;·,·&gt;)
+    Vector Space with an inner product &lt;·,·&gt;
+    &lt;·,·&gt;: VxV-&gt;F, with axioms:
+    1. Conjugate (Hermitian) symmetry: <x,y> = \overline{<y,x>}
+    2. Linearity in the first argument (Sesquilinearity):
+        <ax, y> = \overline{a}<x,y>,  <x+y,z>=<x,z>+<y,z>
+    3. Positive definitenes: <x,x> &gt; 0, if x!=0
+    * Properties:
+    Implies 1,3: <x,x>=0 &lt;-&gt; x=0
+    Implies 1,2: <x,ay>=\overline{x}<x,y>
+    Implies 1,2: <x,y+z>=<x,y>+<x,z>
+    ||x|| := sqrt(<x,x>) is a norm so is a Normed Vector Space
+    So sesquilinear and hermitian symmetric with F being C
+    So biliniar and symmetric with F being R
+    angle(x,y)=arcos(<x,y>/sqrt(<x,x><em>&lt;y,y))
+    x and y are orthogonal when <x,y>=0 (linear independence)
+    * Notes:
+    Phisics and matrix algebra &lt;|&gt; is defined with Sesquilinearity on the second argument instead of the first.
+    for V=C^n, <x,y> = y</em>·M·x where 
+        M is a Hermitian matrix (TODO)
+        y* is the conjugate transpose of y
+    For V=C^R (functions)</p>
+<p>Completely normed space:
+    TODO: Que no viene a ser una esponja?</p>
+<p>Euclidean space: </p>
+<p>Hilbert space: Inner product space over R or C with its 
+    norm definned by ||x||=sqrt(<x,x>)
+Bannach space: Completely normed space over R or C</p>
+<p>Preorder: binary relation (&lt;~) on a set X which is:
+    Reflexive: a&lt;~a
+    Transitive: a&lt;~b&lt;~c -&gt; a&lt;~c
+    Examples:
+        Logical implication x-&gt;y
+        Nets
+        x&lt;=y &lt;=&gt; f(x)&lt;=f(y) f:X-&gt;Y and Y is POset
+Equivalence: binary relation (~) on a set X which is:
+    Preorder (Reflexive and Transitive props)
+    Symetric: a~b &lt;-&gt; b~a
+    "A given common trait"
+    Examples: congruence
+    Equivalence class of a: [a] = {x€X|x~a} (Set of equivalent to a)
+    Quotient set: X/~ := {[x]|x€X} (the set of classes of X on ~)
+    Projection: \pi: X -&gt; X/~  (maps an element to its class)
+    Equivalence kernel of a function x~y &lt;=&gt; f(x)~f(y)
+Equality: binary operation (=) which is:
+    Equivalence (Reflexive, Transitive, Symetric)
+    Anti-symmetric: a=b and b=a -&gt; a'='b
+    * For all property P, P(x) &lt;=&gt; P(y) (not identity but 
+Partial order: binary relation (&lt;=) on a set X which is:
+    Preorder:
+        Reflexive: a&lt;=a
+        Transitive: a&lt;=b&lt;=c -&gt; a&lt;=c
+    Anti-symmetric: a&lt;=b and b&lt;=a -&gt; a=b
+Strict partial order (&lt;):
+    Irreflexivity: no x&lt;x
+    Asymmetry: x&lt;y &lt;-&gt; no y&lt;x
+    Transivity: x&lt;y, y<z -> x&lt;z
+    * Follows:
+    Trichotomous: Either one of a&lt;b, b&lt;a, a=b is true
+Strict and non-strict PO's correspond 1-to-1 by:
+    a&lt;b  &lt;=&gt;  a ≤ b and not a=b
+    a&lt;=b  &lt;=&gt;  a&lt;b or a=b
+The inverse relation of &lt;= is &gt; which is a strict PO
+Thi inverse relation of &lt; is &gt;= which is a weak PO
+So, defining one of the four operators defines the other three.</p>
+<p>Total order: a partial order which also fullfils:
+    Totality: a&lt;=b or b&lt;=a (if not it is a partial order)
+    Totality implies reflexivility, so no need to check
+    Examples non-total orders but still partial:
+    - Subset €=: Not being a subset does not imply being a superset
+    - Divisible a|b: Not being divisible does not imply being a multiple</p>
+<p>Partially ordered set (poset): {P,&lt;=
+Interval: a subset of a partially ordered set so that
+    its members </p>
+<p>Ordered field: A field which is total ordering and axioms:
+    a&lt;=b -&gt; a+c&lt;=b+c
+    0&lt;=a and 0&lt;=b -&gt; 0&lt;=a·b
+    * Follows:
+        -a&lt;=0&lt;=a or -a&lt;=0&lt;=a
+        a&lt;=b and c&lt;=d -&gt; a+c&lt;=b+d
+        a&lt;=b and c&lt;=0 -&gt; ac &lt;= bc</p>
+<p>Ordinal number: The one used to describe the position of a term in a sequence
+Cardinal number: The one used to describe the size of a set
+    Size(S1)&lt;=Size(S2) if exists injective mapping S1-&gt;S2</p>
+<p>Lattice (Reticulo): a poset (L,&lt;=,v,^) that fullfils:
+    Two definitions: 
+        by axioms and infering &lt;=
+        by &lt;= and deducing axioms as properties
+    A join (avb) (supremum) is defined for every a,b€L
+        Commutative xvy=yvx
+        Associative xv(yvz) = (xvy)vz
+        Idempotency xvx=x
+        Consequences, we can define x&lt;=y &lt;=&gt; xvy=y
+    A meet (a^b) (infimum) LxL-&gt;L
+        Conmutativity x^y=y^x
+        Associativity  x\land(y\land z)=(x\land y)\land z
+        Idempotency: x^x=x
+    Join/meet Semilatices: just one of the two.
+Completeness:
+    The existence of a? supremum and and infimum whithin the set
+Interval: A subset I containing all the elements of a set S
+    which has a supremum and an infima in S
+    Open or closed depending on the infima/supremum being also in I</p>
+<p>Sequence: an ordered list of objects (called terms)
+    A function from N+-&gt;S,
+    Finite: (a1,a2,...,an) a function s:Z+-&gt;S
+    Infinite: (a1,a2,...)
+    (an)
+Subsequence: removing terms without altering relative order
+Directed set:
+    A Preorder set (reflexive, transitive)
+    Every pair of elements have an upper bound 
+    * UB but not least UB, as join latices
+    * Generalizes sequences</p>
+<p>Sigma-Algebra: Subset Σ of the power set of X so that 
+    1. Not empty
+    2. Closed under complements
+    3. Closed under countable unions</p>
+<p>Measure space: (X,Σ,μ)
+    Measure: μ:Σ-&gt;RU{+-inf}
+    Measurable sets: Σ is a σ-algebra on X, and
+    1. Non-negativity: μ(E)&gt;=0
+    2. Null empty set: μ(Ø)=0
+    3. Countable additivity: Ei are countable disjounts sets in Σ
+        the measure of the union is the sum of the measures
+    Related:
+    Measurable space: (X,Σ)
+    Signed measure, if the first axiom is out
+    Probability space: (X,Σ,μ) so that μ(X)=1 (prob. measure)
+    * Properties
+    Monotonicity E1€=E2 -&gt; mu(E1)&lt;=mu(E2)
+    See wp:Measure for more</p>
+<p>Topological Space:
+    Allow formal definition of: convergence, connectedness, continuity.
+    A set X and a collection T of subsets on X, so that:
+        The empty set is in T
+        The union of any collection of sets in T is also in T
+        The intersection of any collection of sets in T is also in T
+    T is named a topology on X
+    Neighbourhood of a point x: any set in the topology that cointains x
+    Neighbourhood system of x: Any set that is neighbourhood of x
+Net: any function from some directed set A to a topological space X
+Directed set: A set with a reflexive and transitive binary relation &lt;=,
+    so that every pair of elements has an upper bound</p>
+<p>Continuity of a map f:X-&gt;Y at x:
+    Given a neighbourhood of V€Y of f(x) exist a neighbourhood U€X
+    so that f(U)€V.
+    Generalizes real functions continuity without involving distances.
+    * Properties given f:X-&gt;Y, g:Y-&gt;z continuous:
+        gof:X-&gt;Z is cont.
+        X compact -&gt; f(X) compact
+        X connected -&gt; f(X) connected
+        X path-connected -&gt; f(X) path-connected</p>
+<p>Coordinate space F^n: Space of the tuples of n objects of the field F
+    n is finite
+    Alternative def: TODO: Product space? of F over a finite index set J
+    Elements can be seen as functions from index in J to values in F,
+        f: J-&gt;F
+    Element notation x^ = (x_1, x_2,...,x_n) 
+    Also as row or column vector in matrix algebra
+    Coordinate space forms a vector space by defining
+    x^ + y^ = (x_1+y_1, ..., x_2+y_2)
+    a·x = (a·x_1,...,a·x_2)
+    0^ = (0,...,0)
+    -x^ = -1·x^</p>
+<p>Every n-Dimensional vector space V over F is isomorphic to F^n
+Not a canonical isomorphism, it depends on the chosen basis
+to make the map.</p>
+<p>Function space:</p>
+<p>Euclidean Vector: </p>
+<p>Linear map f:X1-&gt;X2, X1 and X2 vector spaces over the same field K
+    Additivity: f(x+y) = f(x)+f(y)
+    Homogeneity of degree 1: f(ax) = af(x)
+    Follows: f(a1x1+a2x2+...+anxn)=a1f(x1)+...+anf(xn)
+    Follows: f(0)=0</p>
+<p>K-Linear map: X1, X2 are vector spaces over different fields and K is the one so that the scalars in 
+A linear map f can be represented by a matrix nxm </p>
+<p>Linear functional: A linear map from a function to its Field
+    Rieman (definite) integral over the functional vector space
+    Evaluation of polinomials Pn
+    Distributions</p>
+<p>Lie Algebra: Vector space R over some field F with op [·,·] such that:
+    1 Bilinearity: [ax+by,z] = [ax,z] + [by,z]
+    2 Anticonmutative: [x,y] = -[y,x]
+    3 Jacobi Identity: [x,[y,z]] + [y,[z,x]] + [z,[x,y]] = 0
+    Follows:
+    4 From 2: Alternating: [x,x] = 0
+    Examples: 
+        R3 and vectorial product</p>
+<p>TODO: wp:quaternion</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../../computers/xpxplained/" class="md-footer__link md-footer__link--prev" aria-label="Previous: El problema" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              El problema
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../stats/" class="md-footer__link md-footer__link--next" aria-label="Next: Statistics" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Statistics
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d6c3db9e.min.js"></script>
+      
+    
+  </body>
+</html>

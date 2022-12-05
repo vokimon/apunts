@@ -1,0 +1,1916 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Apunts i notes de coses que aprenc">
+      
+      
+        <meta name="author" content="vokimon">
+      
+      
+        <link rel="canonical" href="https://vokimon.github.io/apunts/computers/xpxplained/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.8">
+    
+    
+      
+        <title>El problema - Apunts</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.20d9efc8.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.815d1a91.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/figure.css">
+    
+      <link rel="stylesheet" href="../../css/linkcard.css">
+    
+      <link rel="stylesheet" href="../../css/videowrapper.css">
+    
+      <link rel="stylesheet" href="../..">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#el-problema" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Apunts" class="md-header__button md-logo" aria-label="Apunts" data-md-component="logo">
+      
+  <img src="../../img/logo-customblocks-white.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Apunts
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              El problema
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_3" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9h-1.9M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69m-9.15 3.96h2.3L12 9l-1.15 3.65Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_3">
+          
+            <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/vokimon/apunts" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Apunts" class="md-nav__button md-logo" aria-label="Apunts" data-md-component="logo">
+      
+  <img src="../../img/logo-customblocks-white.svg" alt="logo">
+
+    </a>
+    Apunts
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/vokimon/apunts" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        README
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Computers
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Computers" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Computers
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          css
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="css" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          css
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../css/" class="md-nav__link">
+        CSS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../css-boxmodel/" class="md-nav__link">
+        El modelo de caja
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../css-normalflow/" class="md-nav__link">
+        Flujo normal (normal flow)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../css-flexbox/" class="md-nav__link">
+        CSS Flexbox
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../css-grid/" class="md-nav__link">
+        CSS Grid
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../css-typography/" class="md-nav__link">
+        Css typography
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          javascript
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="javascript" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          javascript
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jsecosystem/" class="md-nav__link">
+        Jsecosystem
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jsonschema/" class="md-nav__link">
+        Jsonschema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../react-formik/" class="md-nav__link">
+        React formik
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../react/" class="md-nav__link">
+        React / Redux
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../android-glossary/" class="md-nav__link">
+        Android glossary
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cpp11/" class="md-nav__link">
+        New features of C++11 I should be starting to use:
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deeplearning/" class="md-nav__link">
+        Deep learning
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker/" class="md-nav__link">
+        Docker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ip6" class="md-nav__link">
+        None
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../specs-pdf/" class="md-nav__link">
+        Specs pdf
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../timewarrior/" class="md-nav__link">
+        TimeWarrior
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          El problema
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        El problema
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#riscos-del-programari" class="md-nav__link">
+    Riscos del programari
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#el-dia-a-dia" class="md-nav__link">
+    El dia a dia
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#economia-del-programari" class="md-nav__link">
+    Economia del programari
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-variables-dels-projectes" class="md-nav__link">
+    4 variables dels projectes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cost-del-canvi" class="md-nav__link">
+    Cost del canvi
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#els-quatre-valors" class="md-nav__link">
+    Els quatre valors
+  </a>
+  
+    <nav class="md-nav" aria-label="Els quatre valors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comunicacio" class="md-nav__link">
+    Comunicació
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simplicitat" class="md-nav__link">
+    Simplicitat
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#realimentacio" class="md-nav__link">
+    Realimentació
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#coratge" class="md-nav__link">
+    Coratge
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interaccions-positives-entre-els-valors" class="md-nav__link">
+    Interaccions positives entre els valors
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#principis" class="md-nav__link">
+    Principis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#activitats-basiques" class="md-nav__link">
+    Activitats bàsiques
+  </a>
+  
+    <nav class="md-nav" aria-label="Activitats bàsiques">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#codificar" class="md-nav__link">
+    Codificar
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testejar" class="md-nav__link">
+    Testejar
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#escoltar" class="md-nav__link">
+    Escoltar
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dissenyar" class="md-nav__link">
+    Dissenyar
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Math
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Math" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Math
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/mates-fundation/" class="md-nav__link">
+        Math Foundations
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/stats/" class="md-nav__link">
+        Statistics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/math-halfderivatives/" class="md-nav__link">
+        Half Derivatives
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/math-quadraticformula-alternative/" class="md-nav__link">
+        Quadratic Formula
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/math-wavelets/" class="md-nav__link">
+        Wavelets
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/math-3n1/" class="md-nav__link">
+        Collatz Conjecture
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Music
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Music" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Music
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../music/music-harmony/" class="md-nav__link">
+        Harmony: Notes, Scales and Chords 🎶
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../music/guitar-technics/" class="md-nav__link">
+        Técnica de Guitarra 🎸
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../music/guitar-fret-navigation/" class="md-nav__link">
+        Navegación en el mástil
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../music/pentatonicas.txt" class="md-nav__link">
+        Pentatonicas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../music/songs/" class="md-nav__link">
+        Songs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../music/ukelele/" class="md-nav__link">
+        Ukelele
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Languages
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Languages" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Languages
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/consonantes-afi.png" class="md-nav__link">
+        Phonetics Consonants
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/vowels.jpg" class="md-nav__link">
+        Phonetics Vowels
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/arabic-alphabet/" class="md-nav__link">
+        Arabic script
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/arabic/" class="md-nav__link">
+        Arabic
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/deutsch/" class="md-nav__link">
+        Deutsch
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/english-expresions/" class="md-nav__link">
+        English expresions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/english-old-pronoums/" class="md-nav__link">
+        English old pronoums
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/english-prepositions/" class="md-nav__link">
+        English prepositions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/english-tenses/" class="md-nav__link">
+        English tenses
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/vocabulary-somenergia/" class="md-nav__link">
+        English Vocabulary for SE enterviews
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/vocabulary-edibles/" class="md-nav__link">
+        Vocabulary edibles
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../economics/" class="md-nav__link">
+        Economics
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#riscos-del-programari" class="md-nav__link">
+    Riscos del programari
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#el-dia-a-dia" class="md-nav__link">
+    El dia a dia
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#economia-del-programari" class="md-nav__link">
+    Economia del programari
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-variables-dels-projectes" class="md-nav__link">
+    4 variables dels projectes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cost-del-canvi" class="md-nav__link">
+    Cost del canvi
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#els-quatre-valors" class="md-nav__link">
+    Els quatre valors
+  </a>
+  
+    <nav class="md-nav" aria-label="Els quatre valors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comunicacio" class="md-nav__link">
+    Comunicació
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simplicitat" class="md-nav__link">
+    Simplicitat
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#realimentacio" class="md-nav__link">
+    Realimentació
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#coratge" class="md-nav__link">
+    Coratge
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interaccions-positives-entre-els-valors" class="md-nav__link">
+    Interaccions positives entre els valors
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#principis" class="md-nav__link">
+    Principis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#activitats-basiques" class="md-nav__link">
+    Activitats bàsiques
+  </a>
+  
+    <nav class="md-nav" aria-label="Activitats bàsiques">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#codificar" class="md-nav__link">
+    Codificar
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testejar" class="md-nav__link">
+    Testejar
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#escoltar" class="md-nav__link">
+    Escoltar
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dissenyar" class="md-nav__link">
+    Dissenyar
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <a href="https://github.com/vokimon/apunts/edit/master/docs/computers/xpxplained.markdown" title="Edit this page" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+<h1 id="el-problema">El problema</h1>
+<h2 id="riscos-del-programari">Riscos del programari</h2>
+<ul>
+<li>Objectiu: evitar els riscos del programari</li>
+<li>En concret:<ul>
+<li>Fora de termini: Hem de dir al client que no arribem a data</li>
+<li>Cancel·lació del projecte: tants terminis fora al final es cancela abans d'entrar a producció</li>
+<li>Programari feixuc: El sistema es feixuc de mantenir i corregir</li>
+<li>Programari defectuós: Alta tasa de falles</li>
+<li>Negoci malentés: No s'ha entés el negoci i no soluciona el problema</li>
+<li>Negoci canviant: El negoci canvia i quan entra a producció el sistema ja és vell</li>
+<li>Sobredisseny: S'han implementat funcionalitats divertides de programar, inútils pel client</li>
+<li>Fugida de cervells: Els programadors bons, s'agobien del projecte i s'en van a d'altres més engrescadors </li>
+</ul>
+</li>
+<li>Solucions XP:<ul>
+<li>Fora de termini:<ul>
+<li>Cicles curts, d'abast limitat</li>
+<li>Tasques comprehensibles i detallades</li>
+<li>Prioritzacio amb el client</li>
+<li>Les tasques que queden fora son les menys prioritaries</li>
+</ul>
+</li>
+<li>Cancel·lació del projecte:<ul>
+<li>El client escull quin és el conjunt mínim de funcionalitats que poden fer una release útil.</li>
+<li>Això màximitza el valor de la feina des de l'inici</li>
+</ul>
+</li>
+<li>Programari feixuc:<ul>
+<li>Test unitaris cobrint el programari</li>
+<li>S'executen continuament</li>
+<li>No s'acomula el codi brossa</li>
+</ul>
+</li>
+<li>Programari defectuós:<ul>
+<li>Programadors testejen a baix nivell</li>
+<li>Clients defineixen testos a nivell de funcionalitat</li>
+</ul>
+</li>
+<li>Negoci malentés:<ul>
+<li>El client s'integra en l'equip</li>
+<li>L'especificació es refina amb l'aprenentatge dels desenvolupadors</li>
+</ul>
+</li>
+<li>Negoci canviant:<ul>
+<li>Cicles curts redueixen la possibilitat de que canviin mentres ho fem</li>
+<li>El client és benvingut a canviar l'especificacio del que s'esta fent al cicle</li>
+<li>Això fa que l'equip treballi amb requeriments nous com si fossin vells.</li>
+</ul>
+</li>
+<li>Sobredisseny:<ul>
+<li>Només es fa el que es decideix que és prioritari</li>
+</ul>
+</li>
+<li>Fugida de cervells:<ul>
+<li>Programaires prenen la responsabilitat de estimar i finalitzar el seu treball</li>
+<li>Aprenen de les seves estimacions</li>
+<li>No se li demanen terminis impossibles i fustrants</li>
+<li>Força interacció amb companys i clients, reduint la solitud</li>
+<li>Formació contínuada incoorporada al treball</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="el-dia-a-dia">El dia a dia</h2>
+<ul>
+<li>Parelles de programaires programen junts</li>
+<li>Desenvolupament dirigit per testos<ul>
+<li>Primer fas el test, després el codi que el fa passar (no codi sense test)</li>
+<li>Quan no pots pensar un test que falli, ja estàs (no sobretesteix)</li>
+</ul>
+</li>
+<li>Refactoring:<ul>
+<li>En paral·lel als testos que afegeixen funcionalitat, modifiquen el codi per millorar el disseny</li>
+<li>El codi que toca una parella no està restringit en abast</li>
+</ul>
+</li>
+<li>Integració contínua:<ul>
+<li>La integració es fa seguidament del codi</li>
+<li>Test d'integració inclosos</li>
+</ul>
+</li>
+</ul>
+<h2 id="economia-del-programari">Economia del programari</h2>
+<ul>
+<li>Generar beneficis el més abans possible, generar costos el més tard possible</li>
+<li>
+<p>Allargar la vida productiva del projecte per arribar a amortitzar-ho</p>
+</li>
+<li>
+<p>Opcions:</p>
+<ul>
+<li>Abandonar: Millor si podem obtindre valor d'un projecte tot i abandonar-ho</li>
+<li>Dredreçar: Millor com més sovint i violentament podem redreçar el projecte</li>
+<li>Retardar: Millor si podem retrasar la inversió sense perdre l'oportunitat d'invertir</li>
+<li>Creixer: Millor si podem escalar amb més inversió si hi ha més demanda</li>
+</ul>
+</li>
+<li>
+<p>Valor de les opcions:</p>
+<ul>
+<li>Inversió requerida</li>
+<li>Benefici obtingut</li>
+<li>Valor actual del benefici obtingut</li>
+<li>Finestra temporal on es viable</li>
+<li>Incertesa sobre el valor del benefici en el futur</li>
+</ul>
+</li>
+<li>Normalment domina la incertesa en el valor</li>
+</ul>
+<h2 id="4-variables-dels-projectes">4 variables dels projectes</h2>
+<ul>
+<li>
+<p>Cost, Temps, Qualitat, Abast (agafa'n 3... o 2... o 1)</p>
+</li>
+<li>
+<p>Cost:</p>
+<ul>
+<li>Ha de ser suficient, pero massa diners massa d'hora no sol ser bo</li>
+<li>No sempre els diners aconsegueixen reduir el temps<ul>
+<li>9 dones no fan un nen en un mes</li>
+</ul>
+</li>
+<li>Es pot invertir en millors eines, infrastructura o especialistes</li>
+</ul>
+</li>
+<li>Time:<ul>
+<li>Amb més temps pots incrementar la qualitat i l'abast.</li>
+<li>Massa temps sense arribar a producció, no rebem feedback i pot tenir impacte a la qualitat</li>
+<li>No donar suficient va en detriment de les altres</li>
+<li>Sovint es una restriccio externa</li>
+</ul>
+</li>
+<li>Quality:<ul>
+<li>No paga controlar el projecte amb aquesta variable</li>
+<li>Podem reduir el temps reduint qualitat pero a la llarga ho paguem.</li>
+<li>Sovint exigint mes qualitat els projectes acaben abans: testing, coding standards...</li>
+<li>A vegades les restriccions de qualitat es poden relaxar</li>
+<li>Treure coses amb qualitat dona moral</li>
+</ul>
+</li>
+<li>
+<p>Abast:</p>
+<ul>
+<li>Tenint cobertes les necessitats ens permet controlar molt be el temps i els costos amb alta qualitat</li>
+</ul>
+</li>
+<li>
+<p>Focalitzar en l'abast</p>
+<ul>
+<li>Amb un abast més curt els clients poden reaccionar, al començament, potser les idees no estan clares</li>
+<li>La indefinició dels requeriments es una oportunitat, no un problema</li>
+<li>El definim poc a poc, maximitzant les altres variables</li>
+<li>Definim l'scope donades les altres tres variables</li>
+<li>Ho fem amb el client al costat per maximitzar el valor</li>
+<li>Com evitar defraudar al client<ul>
+<li>El client prioritza les funcionalitats que vol ficar</li>
+<li>Anar aprenent a estimar per definir quant entra, per minimitzar les funcionalitats que cauen</li>
+<li>Dintre de la iteració fer primer les tasques prioritaries, si cal deixar caure, que sigui lo menys important</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="cost-del-canvi">Cost del canvi</h2>
+<ul>
+<li>Quant costa fer un canvi?</li>
+<li>Teoria clasica:<ul>
+<li>model cascada: Analisis-Disseny-Implementacio-Testeig-Implantacio</li>
+<li>el cost dels canvis implica revisar decissions previes, creix exponencialment</li>
+</ul>
+</li>
+<li>Actualitat<ul>
+<li>Hi ha eines (tecnologies, pràctiques) per controlar el cost dels canvis</li>
+<li>Orientacio a objectes per abstreure i desacoblar implementacions</li>
+<li>Disseny el més simple possible que fa la funcionalitat</li>
+<li>Tests de regressió per fer canvis amb confiança </li>
+<li>Constant refactoring to improve the design</li>
+</ul>
+</li>
+</ul>
+<h2 id="els-quatre-valors">Els quatre valors</h2>
+<h3 id="comunicacio">Comunicació</h3>
+<ul>
+<li>
+<p>Els problemes als projectes sovint es poden reseguir fins a algu no parlant amb algu altres</p>
+<ul>
+<li>Un canvi en el disseny no comunicat</li>
+<li>Un desenvolupador no preguntant alguna cosa al client</li>
+<li>Un gestor fent la pregunta equivocada als programadors i obtenint un informe de progrés erroni</li>
+<li>...</li>
+</ul>
+</li>
+<li>
+<p>Coses que minen la comuniciació</p>
+<ul>
+<li>Un programador dona males notítices al seu cap i el cap li castiga, això fa que les males notícies futures no arribin a temps en el futur</li>
+<li>Un desenvolupador ignorant alguna cosa que li ha dit el client</li>
+<li>...</li>
+</ul>
+</li>
+<li>
+<p>XP força la comunicació introduint práctiques que requereixen comunicació entre desenvolupadors, clients i gestors.</p>
+</li>
+<li>XP introdueix la figura </li>
+</ul>
+<h3 id="simplicitat">Simplicitat</h3>
+<ul>
+<li>Quina es la solució més simple que funciona</li>
+<li>Com no avançar-se als problemes de demà si ens han acollonit amb el cost exponencial dels projectes</li>
+<li>XP fa una aposta:<ul>
+<li>Millor invertir poc ara i asumir cost del canvi posterior</li>
+<li>que invertir molt ara i arriscar-se a que no sigui útil demà</li>
+</ul>
+</li>
+</ul>
+<h3 id="realimentacio">Realimentació</h3>
+<ul>
+<li>"No m'ho preguntis a mi, pregunta-ho al sistema"</li>
+<li>Es posa en valor tenir una visió real de l'estat del sistema (testos, progres, estimacions...)</li>
+<li>Les pràctiques XP donen resposta a les accions que fem:<ul>
+<li>Els testos sobre els canvis que anem fent al codi</li>
+<li>La planificacio sobre el progres de les tasques</li>
+<li>El planning game sobre el cost de les funcionalitats</li>
+<li>Testos funcionals per cada història (cas d'us simplificat) </li>
+<li>Posar d'hora les funcionalitats a producció </li>
+</ul>
+</li>
+</ul>
+<h3 id="coratge">Coratge</h3>
+<ul>
+<li>Els altres valors permeten tenir coratge per fer coses que sense elles no en tindries</li>
+<li>Però de fet, sovint els temors heredats a fer segons quines coses ens dominen, cal tenir coratge</li>
+<li>Exemples:<ul>
+<li>Començar a implementar sense tenir una visió completa del problema</li>
+<li>Tirar codi que ja no es fa servir</li>
+<li>Intentar una solucio que simplifica el sistema</li>
+</ul>
+</li>
+</ul>
+<h3 id="interaccions-positives-entre-els-valors">Interaccions positives entre els valors</h3>
+<ul>
+<li>(Com-&gt;Sim) Com més <em>comuniqueu</em>, millor veieu el que cal i el que no cal en un sistema i podeu <em>simplificar</em></li>
+<li>(Sim-&gt;Com) Com més <em>simple</em> és el sistema, més fàcil és <em>comunicar</em></li>
+<li>(Com-&gt;Cor) Si <em>comuniqueu</em> bé, aquests canvis els podeu fer amb més confiança, més <em>coratge</em></li>
+<li>(Com-&gt;Cor) Quan <em>comuniquem</em> bé obrim la porta al <em>coratge</em> perque podem comunicar més obertament a idees d'experiments que tenim que suposen alt risk i alta recompensa.</li>
+<li>(Sim-&gt;Cor) Quan la solució és <em>simple</em> també, tindreu més <em>coratge</em> per fer canvis.</li>
+<li>(Fb-&gt;Cor) Quan tenim feedback ens permet ser coratjosos perque si la caguem ens adonem d'hora i podem tirar enrera</li>
+<li>(Fb-&gt;Com) Quan tenim molt feedback es molt més fàcil comunicar: Si detectes un flaw en un codi, fas un test</li>
+<li>(Com-&gt;Fb) Si comuniques efectivament saps que testejar i quines metriques calen</li>
+<li>(Sim-&gt;Fb) Simple systems are easier test (<em>feedback</em>)</li>
+<li>(Fb-&gt;Sim) Having test <em>feedback</em> let's you focus on how to <em>simplify</em> the system.</li>
+</ul>
+<h2 id="principis">Principis</h2>
+<ul>
+<li>Els valors ens donen una idea de que valorar en un bon projecte</li>
+<li>
+<p>Són massa difusos per establir unes pràctiques </p>
+</li>
+<li>
+<p>Feedback rapid:</p>
+<ul>
+<li>Cal poder incorporar ràpid la informació que ofereix el feedback sobre l'acció que fem</li>
+<li>El temps entre l'acció i la reacció és clau per l'aprenentatge</li>
+</ul>
+</li>
+<li>Asumir la simplicitat:<ul>
+<li>Tractar cada problema com si es pogués resoldre amb una simplifitat ridícula</li>
+<li>Molt difícil d'empassar pels programadors:<ul>
+<li>No planegis el futur</li>
+<li>Confia en que pots afegir complexitat en el futur si la necessites</li>
+</ul>
+</li>
+<li>L'economia del software com a opcions ho recolza</li>
+</ul>
+</li>
+<li>Canvi incrementals:<ul>
+<li>Els grans canvis mai funcionen i menys a la primera</li>
+<li>Disseny es canvia poc a poc</li>
+<li>La planificació canvia poc a poc</li>
+<li>L'equip canvia poc a poc</li>
+<li>Fins i tot, l'adopcio de XP es fa poc a poc</li>
+</ul>
+</li>
+<li>Canvi és benvingut<ul>
+<li>Accepta el canvi com a motor de tot</li>
+</ul>
+</li>
+<li>
+<p>Trabajo de calidad</p>
+<ul>
+<li>Ningú treballa a gust fent xapuses</li>
+<li>Tothom es sent bé fent un bon treball</li>
+<li>La qualitat no ha de ser una de les variables de controlar.</li>
+<li>Els únics valors possibles són <em>excel·lent</em> o <em>malaltisament excel·lent</em> en cas de que en depenguin vides.</li>
+</ul>
+</li>
+<li>
+<p>Altres menys primaris</p>
+</li>
+<li>
+<p>Ensenya aprenent:</p>
+<ul>
+<li>En comptes de ensenyar amb doctrines</li>
+<li>planificar camins d'aprenentatge</li>
+<li>Que cadascú trobi les seves pròpies respostes</li>
+</ul>
+</li>
+<li>Inversio inicial petita<ul>
+<li>Massa recursos a l'inici del projecte es recepta pel fracàs</li>
+<li>Si no hi ha recursos per resoldre un problema interessant, el projecte no és interessant</li>
+</ul>
+</li>
+<li>Jugar para ganar<ul>
+<li>No para no perder</li>
+<li>Si juegas para no perder te ciñes al libro, no porque tenga sentido sino para que nadie pueda culparte del fracaso</li>
+<li>Ceñirse al libro son reuniones, documentacion inutiles que se hacen porque tocan, no porque ayude al exito.</li>
+</ul>
+</li>
+<li>Experiments concrets<ul>
+<li>Davant d'una decissió, testejar-la</li>
+<li>El resultat de les sessions de disseny no és un disseny acabat sinó un conjunt de coses a comprovar.</li>
+<li>El resultat d'una sessió d'anàlisis de requeriments ha de ser també un conjunt d'experiments a fer.</li>
+</ul>
+</li>
+<li>Comunicació oberta i honesta<ul>
+<li>Hem de poder dir els problemes que veiem en el codi dels altres</li>
+<li>Hem de poder expresar les pors i demanar auxili</li>
+<li>Hem de poder donar males notícies als clients i als caps</li>
+<li>Fer-ho com abans millor i sense castigs</li>
+</ul>
+</li>
+<li>Treballar amb els instints de les persones no en contra d'ells<ul>
+<li>A les persones els agrada:<ul>
+<li>guanyar, apendre, interactuar amb altres persones, ser part d'un equip, rebre confiança, fer un bon treball, tenir un software funcionant... </li>
+</ul>
+</li>
+<li>A la gent no li agrada:<ul>
+<li>procediments, burocracia, castigs...</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Responsabilitat aceptada:<ul>
+<li>No s'asigna responsabilitats a les persones</li>
+<li>Son les persones les que accepten la responsabilitat</li>
+<li>Si l'equip arriba a la conclusio de que cal fer una tasca algu asumira la responsabilitat</li>
+</ul>
+</li>
+<li>Local adaptation<ul>
+<li>Cada pais, organitzacio, equip és diferent</li>
+<li>Les receptes d'XP no son regles absolutes</li>
+<li>Cal pero evaluar els canvis i les seves conseqüències</li>
+<li>Es un procés progressiu</li>
+</ul>
+</li>
+<li>Viatja lleuger<ul>
+<li>No ens podem moure àgilment si portem molt d'equipatge</li>
+<li>Artefactes: pocs, simples i valuosos</li>
+<li>Cultura nòmada llestos per canviar de lloc<ul>
+<li>Si el client decideix pendre un altre camí</li>
+<li>Si decidim portar el disseny per un camí no anticipat</li>
+<li>Si l'entorn del negoci canvia</li>
+<li>Si una nova tecnologia esdevé interessant</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Mètriques honestes<ul>
+<li>Si hi ha incertesa no interessa tant una estimació amb molts decimals sinó un rang o un ordre de magnitud</li>
+<li>No fer servir mètriques que no es correlin amb el progrés</li>
+<li>ie. LoC no tè sentit si simplificar ho redueix</li>
+</ul>
+</li>
+</ul>
+<h2 id="activitats-basiques">Activitats bàsiques</h2>
+<p>Quins son les activitats bàsiques que necessitem?</p>
+<h3 id="codificar">Codificar</h3>
+<ul>
+<li>El codi és el producte principal, el que has d'acabar generant</li>
+<li>Pots voler dir una altra cosa, pero el que está escrit hi queda</li>
+<li>El codi comunica sense retorica<ul>
+<li>Si m'expliques una idea, la puc malinterpretar</li>
+<li>Si la codifiquem junts, precissament  el que volies dir (en un test o en un Sut)</li>
+</ul>
+</li>
+<li>Aquesta comunicació esdevé aprenentatge al temps que evolucionem el codi</li>
+<li>Com és lo bàsic, ho farem servir per el que poguem<ul>
+<li>Comunicar</li>
+<li>Especificació operacional (testos autocomprovats)</li>
+</ul>
+</li>
+</ul>
+<h3 id="testejar">Testejar</h3>
+<ul>
+<li>Molt de programari es fa sense testos automatics, perque seria essencial?<ul>
+<li>Llarg: Mante el programari viu més temps<ul>
+<li>Pots fer canvis durant més temps</li>
+<li>La confiança en el sistema es manté, millor modificar el que hi ha que refer-ho tot de nou perque no ens atrevim a tocar-ho</li>
+</ul>
+</li>
+<li>Curt: Es mes divertit amb test (lo curt es el que va a favor de l'instint)</li>
+</ul>
+</li>
+<li>Dos nivells:<ul>
+<li>Unitaris: Els codi fa el que els programadors volen que faci </li>
+<li>Funcionals: El codi fa el que els clients volen que faci</li>
+</ul>
+</li>
+</ul>
+<h3 id="escoltar">Escoltar</h3>
+<ul>
+<li>Els programadors no saben res (que els interessi a la gent de negoci)</li>
+<li>Els testos recullen saber de negoci capturat pels programadors</li>
+<li>D'on el treuen? d'escoltar al client</li>
+<li>Els programadors tambe ajuden al client a entendre el que es complicat i el que es fàcil</li>
+<li>Cal una bona estructura de comunicació per a que això funcioni</li>
+</ul>
+<h3 id="dissenyar">Dissenyar</h3>
+<ul>
+<li>Si escoltem, testejem i codifiquem arribara un moment que l'entropia no ens deixarà avançar</li>
+<li>Cal reorganitzar el codi, dissenyar</li>
+<li>Disseny bo:<ul>
+<li>Un canvi a una part no implica un canvi a un altra part (baix acoblament)</li>
+<li>Cada peça de logica es troba a un sol lloc (no duplicació)</li>
+<li>La lògica és a prop de les dades que modifica (cohesió)</li>
+<li>Extensions al sistema es poden fer canviant-ho a un sol lloc (extensibilitat)</li>
+</ul>
+</li>
+<li>La forma de dissenyar també és incremental</li>
+<li>No es fa un disseny d'entrada sinó que es va evolucionant</li>
+<li>Refactorings: canvis en el codi per millorar el disseny</li>
+<li>El procés de disseny separat de l'afegir funcionalitats</li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../timewarrior/" class="md-footer__link md-footer__link--prev" aria-label="Previous: TimeWarrior" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              TimeWarrior
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../math/mates-fundation/" class="md-footer__link md-footer__link--next" aria-label="Next: Math Foundations" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Math Foundations
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d6c3db9e.min.js"></script>
+      
+    
+  </body>
+</html>
