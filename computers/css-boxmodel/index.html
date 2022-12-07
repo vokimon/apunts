@@ -400,26 +400,18 @@
     Borde (border)
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#margen-margin" class="md-nav__link">
-    Margen (margin)
+    <nav class="md-nav" aria-label="Borde (border)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#collapsing-borders" class="md-nav__link">
+    Collapsing borders
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#contornos-outline" class="md-nav__link">
-    Contornos (outline)
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#margin" class="md-nav__link">
-    Margin
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -689,7 +681,7 @@
   
     <li class="md-nav__item">
       <a href="../xpxplained/" class="md-nav__link">
-        El problema
+        XP Explained (Extracto del libro)
       </a>
     </li>
   
@@ -1193,26 +1185,18 @@
     Borde (border)
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#margen-margin" class="md-nav__link">
-    Margen (margin)
+    <nav class="md-nav" aria-label="Borde (border)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#collapsing-borders" class="md-nav__link">
+    Collapsing borders
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#contornos-outline" class="md-nav__link">
-    Contornos (outline)
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#margin" class="md-nav__link">
-    Margin
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1382,9 +1366,11 @@ Está fuera del padding pero sigue siendo parte de la caja de cara al maquetado.
 se le aplica el fondo (background) del elemento,
 aunque muchas veces no es visible.</p>
 <p>La línea de borde tiene 3 atributos: ancho <code>width</code>, estilo <code>style</code> y color <code>color</code>.</p>
-<p>El color por defecto es el <code>color</code> del elemento.
-La anchura puede ser una longitud o una de las palabras <code>thin</code>, <code>medium</code>, <code>thick</code>.
-La anchura por defecto es <code>medium</code> aunque no esta especificada a cuanto corresponde.</p>
+<p>El color por defecto es el <code>color</code> del elemento.</p>
+<p>La anchura puede ser una longitud o una de las palabras <code>thin</code>, <code>medium</code>, <code>thick</code>.
+La anchura por defecto es <code>medium</code> pero no esta especificada a cuanto corresponde,
+así que cada navegador usa la suya como <code>medium</code>.
+Para que sea consistente se recomienda siempre explicitar una anchura con unidades.</p>
 <p>El estilo es importante porque por defecto es <code>none</code> y si no lo cambiamos no se verá.</p>
 <p>Los estilos posibles son:</p>
 <ul>
@@ -1405,6 +1391,8 @@ La anchura por defecto es <code>medium</code> aunque no esta especificada a cuan
 <li><code>groove</code>: Simula un surco alrededor del contenido <code>\/--------\/</code></li>
 <li><code>inset</code>: Simula que el contenido està hundido <code>\______/</code></li>
 <li><code>outset</code>: Simula que el contenido sobresale <code>/--------\</code></li>
+<li>Los colores que no sean negros, usa una version del color oscurecido.</li>
+<li>Al menos en Firefox, el negro se comporta diferente, usando tonos de gris.</li>
 </ul>
 </li>
 </ul>
@@ -1434,38 +1422,48 @@ Se pueden usar 4, 3, 2 o 1 valores igual que con el padding:</p>
 </ul>
 <p>Los atajos <code>border{-direction}</code> permiten fijar los tres atributos a la vez en una direccion.</p>
 <p>El atajo <code>border</code> permite especificar los 3 atributos en las 4 direcciones a la vez,
-pero no permite especificar distintos atributos para cada dirección como permiten <code>padding</code> o <code>border{-attribute}</code>.</p>
-<p>El borde tiene anchura <code>width</code>, como el padding, pero ademas color y estilo.</p>
-<p>Por defecto, el color es el del contenido.</p>
-<p>También como el padding se puede especificar para las cuatro direcciones.
-Se fija con propiedades:</p>
-<p><code>border{-attribute}{-direction}</code></p>
-<p>A diferencia del padding, el shortcut <code>border</code> no sirve para especificar diferentes
-propiedades en cada dirección, solo para especificar las mismas propiedades a las cuatro.</p>
+pero no permite especificar distintos valores para cada dirección como permiten <code>padding</code> o <code>border{-attribute}</code>.</p>
+<h3 id="collapsing-borders">Collapsing borders</h3>
+<p>Si dos bordes no tienen margen entre ellos podemos decir que los fusione.
+Esto es útil en las tablas donde a menudo solo queremos un borde entre celdas.</p>
+<p>Para activar el colapso de los bordes <code>border-colapse: colapse</code>.
+Cual es la politica para colapsar bordes:</p>
 <ul>
-<li>colapse</li>
-<li>radius</li>
-<li>image<ul>
-<li>setting border set border-image to none</li>
+<li>Tomaran preferencia los bordes del padre.</li>
+<li>Después los de los hijos por orden de definición.</li>
+<li>Si un borde es <code>none</code> cede la preferencia al otro borde.</li>
+<li>Si un borde es <code>hidden</code> adquiere la preferencia.</li>
 </ul>
-</li>
-</ul>
-<h2 id="margen-margin">Margen (<code>margin</code>)</h2>
-<p>El margen es una distancia mínima de exclusión que se establece para un bloque en cada dirección
-desde el borde de la caja al borde de la caja adjacente en esa dirección.</p>
-<ul>
-<li>Es transparente, no se le aplica el background.<ul>
-<li>Al contrario del borde y el padding, que si se les aplica el background.</li>
-</ul>
-</li>
-<li>Los margenes de cajas adyacentes se solapan <strong>colapsandose</strong>.<ul>
-<li>De los dos, se toma el mas grande para separar.</li>
-<li>Da igual que sea de otro nivel, si hay no hay contenido en medio</li>
-<li>El margen no expande el contenedor</li>
-</ul>
-</li>
-</ul>
-<p>Formas de especificarlo:</p>
+<div style="border: solid green; border-collapse: collapse;">
+<div style="border: solid yellow; border-collapse: collapse;"></div>
+<div style="border: solid blue; border-collapse: collapse;"</div>>
+</div>
+
+### Border radius
+
+TODO
+
+### Border image
+
+TODO
+
+Setting `border{-direction}` property sets `border-image` to none
+
+
+## Margen (`margin`)
+
+El margen es una distancia mínima de exclusión que se establece para un bloque en cada dirección
+desde el borde de la caja al borde de la caja adjacente en esa dirección.
+
+- Es transparente, no se le aplica el background.
+    - Al contrario del borde y el padding, que si se les aplica el background.
+- Los margenes de cajas adyacentes se solapan **colapsandose**.
+    - De los dos, se toma el mas grande para separar.
+    - Da igual que sea de otro nivel, si hay no hay contenido en medio
+    - El margen no expande el contenedor
+
+Formas de especificarlo:
+
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">.</span><span class="nc">midiv</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="c">/* el mismo margen en las 4 direcciones */</span><span class="w"></span>
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="mi">2</span><span class="kt">px</span><span class="w"> </span><span class="mi">3</span><span class="kt">px</span><span class="w"> </span><span class="mi">4</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="c">/* top left bottom right, clock-wise order */</span><span class="w"></span>
@@ -1477,6 +1475,7 @@ desde el borde de la caja al borde de la caja adjacente en esa dirección.</p>
 <a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">    </span><span class="k">margin-left</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
 <a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div>
+
 <div style="background: green">
     <div style="background: blue; margin: 0;">content</div>
     <div style="background: red; margin: 10px 10px 20px 10px; border: solid 1pt black">content</div>
@@ -1489,45 +1488,46 @@ desde el borde de la caja al borde de la caja adjacente en esa dirección.</p>
         content</div>
 </div>
 
-<p>Los márgenes de dos bloques adjacentes <strong>se colapsan</strong>.
-Es decir, de los dos se toma el mayor.</p>
-<p>Cuando ponemos al lado dos márgenes, se colapsan en el más grande.</p>
-<h2 id="contornos-outline">Contornos (<code>outline</code>)</h2>
-<p>Otras cosas que añaden capas pero no pertenecen al box model y, por tanto,
-<strong>no se tienen en cuenta para calcular el maquetado</strong>:</p>
-<ul>
-<li>Outline:<ul>
-<li>Es un borde extra que se añade normalmente cuando el elemento esta en foco</li>
-<li>Tiene la misma sintaxis que <code>border</code> pero sin poder especificar por direcciones</li>
-<li>Pintado en rojo en el ejemplo.</li>
-<li>El borde en azul, esta dentro de la caja. El outline en rojo no se tiene en cuenta para el maquetado.</li>
-</ul>
-</li>
-<li>Box shadow: <ul>
-<li>El box shadow replica el volumen de la caja con un cierto offset, color y difusión.</li>
-<li>Tampoco se tiene en cuenta para calcular el </li>
-<li>En purpura en el ejemplo, con un offset de 5pt en cada direccion y una difusion de un punto.</li>
-</ul>
-</li>
-</ul>
-<p>La propiedad <code>outline-offset</code> permite definir una distancia de separación
-entre el border y el contorno.</p>
-<h2 id="margin">Margin</h2>
-<p>The margin </p>
-<ul>
-<li>Margenes entre bloques adyacentes (del nivel que sea) no se suman sino que colapsan al más grande.</li>
-<li>Excepciones:</li>
-<li>Si hay algo entre medias que tambien puede ser un borde o un padding</li>
-<li>Si hemos creado un contexto de flujo diferente (flex, grid, position...)</li>
-</ul>
-<p>Other</p>
-<ul>
-<li><code>width: auto</code> takes the available space without overflowing</li>
-<li><code>margin: auto</code> takes the availabel space</li>
-<li><code>width: max-content;</code> expands to the max content expans, but does not shrink</li>
-<li><code>width: min-content;</code> sets to the mininum width the content could shrink without over flowing content. (The longer word in a paragraph)</li>
-<li><code>width: fit-content;</code> expands between max and min content according to the available size</li>
-</ul>
+Los márgenes de dos bloques adjacentes **se colapsan**.
+Es decir, de los dos se toma el mayor.
+
+Cuando ponemos al lado dos márgenes, se colapsan en el más grande.
+
+## Contornos (`outline`)
+
+Otras cosas que añaden capas pero no pertenecen al box model y, por tanto,
+**no se tienen en cuenta para calcular el maquetado**:
+
+- Outline:
+    - Es un borde extra que se añade normalmente cuando el elemento esta en foco
+    - Tiene la misma sintaxis que `border` pero sin poder especificar por direcciones
+    - Pintado en rojo en el ejemplo.
+    - El borde en azul, esta dentro de la caja. El outline en rojo no se tiene en cuenta para el maquetado.
+- Box shadow: 
+    - El box shadow replica el volumen de la caja con un cierto offset, color y difusión.
+    - Tampoco se tiene en cuenta para calcular el 
+    - En purpura en el ejemplo, con un offset de 5pt en cada direccion y una difusion de un punto.
+
+La propiedad `outline-offset` permite definir una distancia de separación
+entre el border y el contorno.
+
+
+## Margin
+
+The margin 
+
+- Margenes entre bloques adyacentes (del nivel que sea) no se suman sino que colapsan al más grande.
+- Excepciones:
+  - Si hay algo entre medias que tambien puede ser un borde o un padding
+  - Si hemos creado un contexto de flujo diferente (flex, grid, position...)
+
+Other
+
+- `width: auto` takes the available space without overflowing
+- `margin: auto` takes the availabel space
+- `width: max-content;` expands to the max content expans, but does not shrink
+- `width: min-content;` sets to the mininum width the content could shrink without over flowing content. (The longer word in a paragraph)
+- `width: fit-content;` expands between max and min content according to the available size
 
 
 
