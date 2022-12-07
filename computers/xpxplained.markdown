@@ -1,7 +1,9 @@
-# El problema
+# XP Explained (Extracto del libro)
+
+## El problema
 
 
-## Riscos del programari
+### Riscos del programari
 
 - Objectiu: evitar els riscos del programari
 - En concret:
@@ -45,7 +47,7 @@
 		- Força interacció amb companys i clients, reduint la solitud
 		- Formació contínuada incoorporada al treball
 
-## El dia a dia
+### El dia a dia
 
 - Parelles de programaires programen junts
 - Desenvolupament dirigit per testos
@@ -78,7 +80,7 @@
 	- Incertesa sobre el valor del benefici en el futur
 - Normalment domina la incertesa en el valor
 
-## 4 variables dels projectes
+### 4 variables dels projectes
 
 - Cost, Temps, Qualitat, Abast (agafa'n 3... o 2... o 1)
 
@@ -114,7 +116,7 @@
 		- Dintre de la iteració fer primer les tasques prioritaries, si cal deixar caure, que sigui lo menys important
 
 
-## Cost del canvi
+### Cost del canvi
 
 - Quant costa fer un canvi?
 - Teoria clasica:
@@ -127,9 +129,9 @@
 	- Tests de regressió per fer canvis amb confiança 
 	- Constant refactoring to improve the design
 
-## Els quatre valors
+### Els quatre valors
 
-### Comunicació
+#### Comunicació
 
 - Els problemes als projectes sovint es poden reseguir fins a algu no parlant amb algu altres
 	- Un canvi en el disseny no comunicat
@@ -146,7 +148,7 @@
 - XP introdueix la figura 
 
 
-### Simplicitat
+#### Simplicitat
 
 - Quina es la solució més simple que funciona
 - Com no avançar-se als problemes de demà si ens han acollonit amb el cost exponencial dels projectes
@@ -154,7 +156,7 @@
 	- Millor invertir poc ara i asumir cost del canvi posterior
 	- que invertir molt ara i arriscar-se a que no sigui útil demà
 
-### Realimentació
+#### Realimentació
 
 - "No m'ho preguntis a mi, pregunta-ho al sistema"
 - Es posa en valor tenir una visió real de l'estat del sistema (testos, progres, estimacions...)
@@ -165,7 +167,7 @@
 	- Testos funcionals per cada història (cas d'us simplificat) 
 	- Posar d'hora les funcionalitats a producció 
 
-### Coratge
+#### Coratge
 
 - Els altres valors permeten tenir coratge per fer coses que sense elles no en tindries
 - Però de fet, sovint els temors heredats a fer segons quines coses ens dominen, cal tenir coratge
@@ -174,7 +176,7 @@
 	- Tirar codi que ja no es fa servir
 	- Intentar una solucio que simplifica el sistema
 
-### Interaccions positives entre els valors
+#### Interaccions positives entre els valors
 
 - (Com->Sim) Com més _comuniqueu_, millor veieu el que cal i el que no cal en un sistema i podeu _simplificar_
 - (Sim->Com) Com més _simple_ és el sistema, més fàcil és _comunicar_
@@ -189,7 +191,7 @@
 
 
 
-## Principis
+### Principis
 
 - Els valors ens donen una idea de que valorar en un bon projecte
 - Són massa difusos per establir unes pràctiques 
@@ -269,11 +271,11 @@
 	- ie. LoC no tè sentit si simplificar ho redueix
 
 
-## Activitats bàsiques
+### Activitats bàsiques
 
 Quins son les activitats bàsiques que necessitem?
 
-### Codificar
+#### Codificar
 
 - El codi és el producte principal, el que has d'acabar generant
 - Pots voler dir una altra cosa, pero el que está escrit hi queda
@@ -285,7 +287,7 @@ Quins son les activitats bàsiques que necessitem?
 	- Comunicar
 	- Especificació operacional (testos autocomprovats)
 
-### Testejar
+#### Testejar
 
 - Molt de programari es fa sense testos automatics, perque seria essencial?
 	- Llarg: Mante el programari viu més temps
@@ -297,7 +299,7 @@ Quins son les activitats bàsiques que necessitem?
 	- Funcionals: El codi fa el que els clients volen que faci
 
 
-### Escoltar
+#### Escoltar
 
 - Els programadors no saben res (que els interessi a la gent de negoci)
 - Els testos recullen saber de negoci capturat pels programadors
@@ -306,7 +308,7 @@ Quins son les activitats bàsiques que necessitem?
 - Cal una bona estructura de comunicació per a que això funcioni
 
 
-### Dissenyar
+#### Dissenyar
 
 - Si escoltem, testejem i codifiquem arribara un moment que l'entropia no ens deixarà avançar
 - Cal reorganitzar el codi, dissenyar
