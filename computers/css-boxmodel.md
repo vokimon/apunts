@@ -171,8 +171,11 @@ aunque muchas veces no es visible.
 La línea de borde tiene 3 atributos: ancho `width`, estilo `style` y color `color`.
 
 El color por defecto es el `color` del elemento.
+
 La anchura puede ser una longitud o una de las palabras `thin`, `medium`, `thick`.
-La anchura por defecto es `medium` aunque no esta especificada a cuanto corresponde.
+La anchura por defecto es `medium` pero no esta especificada a cuanto corresponde,
+así que cada navegador usa la suya como `medium`.
+Para que sea consistente se recomienda siempre explicitar una anchura con unidades.
 
 El estilo es importante porque por defecto es `none` y si no lo cambiamos no se verá.
 
@@ -191,6 +194,8 @@ Los estilos posibles son:
 	- `groove`: Simula un surco alrededor del contenido `\/--------\/`
 	- `inset`: Simula que el contenido està hundido `\______/`
 	- `outset`: Simula que el contenido sobresale `/--------\`
+	- Los colores que no sean negros, usa una version del color oscurecido.
+	- Al menos en Firefox, el negro se comporta diferente, usando tonos de gris.
 
 <div style="color: #77f; display: flex; justify-content: space-between; gap: 5pt">
 <div style="border-style: none; border-width: 5pt">None</div>
@@ -221,27 +226,35 @@ Se pueden usar 4, 3, 2 o 1 valores igual que con el padding:
 Los atajos `border{-direction}` permiten fijar los tres atributos a la vez en una direccion.
 
 El atajo `border` permite especificar los 3 atributos en las 4 direcciones a la vez,
-pero no permite especificar distintos atributos para cada dirección como permiten `padding` o `border{-attribute}`.
+pero no permite especificar distintos valores para cada dirección como permiten `padding` o `border{-attribute}`.
 
-El borde tiene anchura `width`, como el padding, pero ademas color y estilo.
+### Collapsing borders
 
-Por defecto, el color es el del contenido.
+Si dos bordes no tienen margen entre ellos podemos decir que los fusione.
+Esto es útil en las tablas donde a menudo solo queremos un borde entre celdas.
 
-También como el padding se puede especificar para las cuatro direcciones.
-Se fija con propiedades:
+Para activar el colapso de los bordes `border-colapse: colapse`.
+Cual es la politica para colapsar bordes:
 
-`border{-attribute}{-direction}`
+- Tomaran preferencia los bordes del padre.
+- Después los de los hijos por orden de definición.
+- Si un borde es `none` cede la preferencia al otro borde.
+- Si un borde es `hidden` adquiere la preferencia.
 
+<div style="border: solid green; border-collapse: collapse;">
+<div style="border: solid yellow; border-collapse: collapse;"></div>
+<div style="border: solid blue; border-collapse: collapse;"</div>>
+</div>
 
+### Border radius
 
-A diferencia del padding, el shortcut `border` no sirve para especificar diferentes
-propiedades en cada dirección, solo para especificar las mismas propiedades a las cuatro.
+TODO
 
+### Border image
 
-- colapse
-- radius
-- image
-	- setting border set border-image to none
+TODO
+
+Setting `border{-direction}` property sets `border-image` to none
 
 
 ## Margen (`margin`)

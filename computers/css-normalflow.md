@@ -19,6 +19,10 @@ escriben de derecha a izquierda, y, en idiomas asiáticos,
 es comun escribir de arriba a abajo o incluso de abajo a arriba
 y añaden las lineas en horizontal a veces a derecha, a veces a izquierda.
 
+La especificación también llama
+page-relative a los físicos, y flow-relative a las direcciones
+teniendo en cuenta las direcciones del flujo de lectura.
+
 ## Inline y block
 
 Hay dos tipos de elementos a repartir:
