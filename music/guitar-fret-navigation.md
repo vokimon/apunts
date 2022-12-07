@@ -307,7 +307,8 @@ Las formas E A y D, comparten estructura harmonica:
 - Fijate que los intervalos de los E, A y D mayores tienen estructura: R-p5-R-3M
 - E, A y D son diferentes porque la afinacion relativa de las cuerdas se rompe entre la 2 y tercera cuerda.
 	- En A, avanzamos un taste el dedo de abajo
-	- En D, avanzamos un traste los dos dedos de abajo
+	- En D, avanzamos un traste los dos dedos de abajo. Tendriamos que replicar la 1a cuerda en la 6a pero como es complicado la dejamos muda (hay quien la aprieta con el pulgar)
+	- En G, pasamos a la 6a 
 - R está duplicada en la cejilla y en en el dedo avanzado del medio
 - p5 es la cuerda mas grave con dedo avanzado
 - 3M es la cuerda mas aguda con dedo avanzado
@@ -316,7 +317,8 @@ Las formas E A y D, comparten estructura harmonica:
 	- Un traste para tener el 7M (Major 7th)
 	- Dos trastes para tener el 7m (Minor 7th y Dominant 7th)
 - En las transiciones de una forma a la otra, pasamos la R más avanzada a la cejilla
-	- Excepcion D->C en que 
+	- Excepcion D->C puesto que D tiene la tonica en la 2a cuerda y C esa cuerda no la tiene al aire sino en el 1er traste
+
 
 
 transition | bar shift | bridge string |
@@ -328,49 +330,86 @@ E -> D | 2 | 4a |
 D -> C | 2 | 2a |
 
 
-## Cajas Pentatónicas
+### Cajas Pentatónicas
 
 Función
 
 - Las escalas pentatónicas son útiles como marco para hacer punteados.
 - Las notas de la escala están en intervalos de 2 y 3 semitonos.
 - Como son subconjuntos de varios modos diatónicos, cuadran bastante bien con armonías diatónicas
-- Las cajas son zonas en las que tocar 2 notas de la pentatónica en cada cuerda
-- Las cajas estan encabalgadas, la segunda nota de una es la primera de la siguiente
 
+Como se tocan
 
+- Coinciden con las las posiciones CAGED
+- Hay que tocar dos trastes en cada cuerda
+- Se encadenan: el segundo traste de cada cuerda en una posición CAGED, es el primer traste para la siguiente posición
+- Cada posición del CAGED empieza un modo de la escala pentatónica
+	- E -> Pentatónica E Menor
+	- D -> Pentatónica G Mayor
+	- C -> Pentatónica A Suspendida
+	- A -> Pentatónica B Blues Menor
+	- G -> Pentatónica D Blues Mayor
+- Las raices son las notas de la 6a cuerda, no coinciden con la raiz los acordes de la forma CAGED
+- Si las tocamos ascendentes, como se empieza por la segunda columna, la raiz y los intervalos avanzan, y por tanto el mode, es el de la siguiente posición
 
-Útiles para hacer punteos.
-Definen zonas del mástil donde tocar con dos notas por cuerda.
-Las posiciones de las dos notas de cada zona están
-aproximadamente colocadas haciendo dos columnas,
-y las zonas estan encabalgadas de forma que 
-la segunda columna de una zona se convierte
-en la primera columna de la siguiente.
-Bastaria pu
+Las posiciones, si empezamos por E minor, serían:
 
+	------------------  CAGED Notas  Interv   Esc Asce      Esc. Descen
+	 0  0  0  0  0  0     E   23223  EGABD    E minor       G major
+	 |  |  |  |  |  |
+	 |  2  2  2  |  |
+	 3  |  |  |  3  3     D   22323  GABDE    G major       A sus
+	 |  |  |  4  |  |   
+	 5  5  5  |  5  5     C   23232  ABDEG    A sus         B blues minor
+	 |  |  |  |  |  |
+	 7  7  7  7  |  7     A   32322  BDEGA    B blues minor D blues major
+	 |  |  |  |  8  |
+	 |  |  9  9  |  |
+	10 10  |  | 10 10     G   23223  DEGAB    D blues major E minor
+	 |  |  |  |  |  |
+	12 12 12 12 12 12
 
-Cada zona comparte una fila con la anterior.
-El patron se repite cada 5 zonas que coincide con una octava en el mastil.
+Esta transposición, con la mayor en G,
+es práctica porque deja las notas al aire en escala,
+y podemos combinarlas con un punteado en medio del mastil.
+Pero podriamos transponerla a otro sitio subiendo o bajando los patrones del mastil.
 
-	 Em     G  Asus Bmblues Dscot
-	0 - - 3 - 5 - 7 - - 10 - 12
-	0 - - 3 - 5 - - 8 - 10 - 12
-	0 - 2 - 4 - - 7 - 9 -  - 12
-	0 - 2 - - 5 - 7 - 9 -  - 12
-	0 - 2 - - 5 - 7 - - 10 - 12
-	0 - - 3 - 5 - 7 - - 10 - 12
+#### Construcción
 
+No tienes el esquema a mano, como sacarlas?
 
+Fíjate que la 3a columna es el patrón de afinación:
 
+- Cada cuerda está en el traste que suena igual que la cuerda más aguda.
+	- En casi todas en el 5o traste
+	- Menos la 3a en el 4o, para compensar que entre la 3a y la 2a hay un semitono menos de distancia.
+- La 1a cuerda que no tienen cuerda más aguda, pero está afinada a octava con la 6a cuerda, así que hacemos lo mismo que la 6a.
 
+Podemos sacar los patrones de todas las posiciones aplicando esto repetitivamente:
 
-Muy parecida a como funciona el método del gusano pero
-con dos notas por cuerda.
-Definimos varias zonas en el mastil donde tocarlas.
-Nos sirven de marco para hacer punteos.
+- Subimos el patron 5 trastes al agudo y una cuerda a la grave
+- Compensamos la 3a bajando un traste
+- En la 1a cuerda, el mismo traste que la 6a
 
-En el caso de las pentatónicas, cada posicion toma
-el segundo dedo de la posicion anterior y 
+Nos sale:
+
+	-------------------------
+	______  0  0  0  0  0  0
+	___-__  5  5  5  4  5  5
+	__--__ 10 10  9  9 10 10
+	_---__  3  2  2  2  3  3   (15 14 14 14 15 15) - 12
+	----_-  7  7  7  7  8  7   (19 19 19 19 20 19) - 12
+	------ 12 12 12 12 12 12   (24 24 24 24 24 24) - 12 equivale a 0 0 0 0 0 0
+
+El penúltimo salto tiene miga,
+porque el salto de 5 en 5 tendria que ser 20, y empezar en el traste 20-12=8,
+pero aqui las cuerdas compensadas ya han llegado a la más grave,
+y ademas se copia en la más aguda, por eso están todas en el 19 (7) menos la segunda.
+En el último salto, ya todas han pasado por la compensación, y vuelven a estar alineadas.
+
+En un patrón de escala pentatónica,
+entre los traste graves y los agudo, el patrón sube 3 posiciones en la anterior progresión.
+
+TODO: Relación entre la forma del acorde CAGED y el punteo pentatonico?
 
 

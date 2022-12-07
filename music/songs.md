@@ -17,5 +17,8 @@ que da un tono un tanto apocaliptico e insistente a toda la canción.
 
 Las cejillas se pone en:  10 9 7 7  y repetir hasta el final del estribillo en que se hace el siguiente break: 10 7 5 2 3 3 3 3 7 7 7 7
 
+## Otras
+
+- [Linkin Park - In the end](song-linkinpark-intheend.md)
 
 

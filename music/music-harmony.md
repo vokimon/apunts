@@ -167,12 +167,12 @@ E5
 
 Folded in a octave and sorted: C D E G A, resulting in +2 +2+ 3 +2 +3 interval pattern.
 
-Among the 12 existing **transpositions**, some are specially useful:
+Among the 12 existing **transpositions**, 4 are specially useful:
 
 The ones that fit into natural notes:
 
 - C: C D E G A
-- D: D E G A B
+- G: G A B D E
 - F: F G A C D
 
 And the one that uses all and only altered notes:
@@ -204,6 +204,11 @@ Modes:
 	| IV  | Blues major         | 2 3 2 2 3 | C D  F G  A  | G A C D E | C D F G A - D E G A B  | Db Eb Gb Ab Bb |
 	| V   | Minor pentatonic    | 3 2 2 3 2 | C D# F G  A# | A C D E G | D F G A C - E G A B D  | Eb Gb Ab Bb Db |
 
+- Major: es la unica que puede construir un acorde mayor en C (C E G), es la unica que tiene E, construida con dos segundas
+- Menor: es la única que puede construir un acorde menor en C (C D# G)
+- Minor blues: Incluye la 3a menor pero no la 5a???
+- Major blues: ???
+
 
 Triads in Pentatonics are limited as not all diatonic notes are available.
 
@@ -213,6 +218,13 @@ Triads in Pentatonics are limited as not all diatonic notes are available.
 Because of these limitations pentatonic melodies are usually harmonized with diatonic chords.
 
 Also, pentatonics on C can be considered by the notes shared by three Diatonic Scales on C
+
+	I IV V -> Major
+	I II V -> Blues Major
+	II V VI -> Suspended
+	II III VI -> Minor
+	III VI VII - Blues Minor
+
 
 	| Ionian I | Lydian IV | Mixolydian V | CD_F_GA | Major Pentatonic I 
 	| Ionian I | Dorian II | Mixolydian V | CD*E*G_A_ | Blues Major Pentatonic IV
@@ -519,18 +531,19 @@ Examples
 Cool for continuous looping along the song.
 The last chord adds tensions, ask for another loop.
 
-Rotations and examples in C Major:
+Rotations and examples transposed in C Major and G major
 
-- I–V–vi–IV : C–G–Am–F
-- V–vi–IV–I : G–Am–F–C
-- vi–IV–I–V : Am–F–C–G
-- IV–I–V–vi : F–C–G–Am
+- I–V–vi–IV : C–G–Am–F  G-D-Em-C
+- V–vi–IV–I : G–Am–F–C  D-Em-C-G
+- vi–IV–I–V : Am–F–C–G  Em-C-G-D
+- IV–I–V–vi : F–C–G–Am  C-G-D-Em
+
 
 ### vi IV I V
 
 Same of the axis but starting at half.
 
-- Numb (linkin park)
+- Numb (linkin park) d..ud.u...u.d.u.
 - Africa (Toto) F#minor
 - Grenade (Bruno Mars) 
 - Sant Francisco (Scott McKenzie Hippies)
@@ -799,10 +812,6 @@ Samples:
 - Piano Man - Billy Joal
 	- I V/1 IV/1 I/2 IVM7 I/1 II7 V
 	- C G/B F/A C/G FM7 C/E D7 G
-
-
-
-
 
 
 
