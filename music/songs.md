@@ -20,5 +20,6 @@ Las cejillas se pone en:  10 9 7 7  y repetir hasta el final del estribillo en q
 ## Otras
 
 - [Linkin Park - In the end](song-linkinpark-intheend.md)
+- [Linkin Park - Numb](song-linkinpark-numb.md)
 
 
