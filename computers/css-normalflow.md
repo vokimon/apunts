@@ -1,4 +1,4 @@
-# Flujo normal (normal flow)
+# CSS Flow
 
 La disposición (_layout_) es la forma de repartir los elementos en el espacio disponible.
 
@@ -20,14 +20,14 @@ es comun escribir de arriba a abajo o incluso de abajo a arriba
 y añaden las lineas en horizontal a veces a derecha, a veces a izquierda.
 
 La especificación también llama
-page-relative a los físicos, y flow-relative a las direcciones
+page-relative a las direcciónes físicas, y flow-relative a las direcciones
 teniendo en cuenta las direcciones del flujo de lectura.
 
 ## Inline y block
 
 Hay dos tipos de elementos a repartir:
 
-<div style="border: solid; float: right; width: 30%; padding: 3pt">
+<div style="border: solid; float: right; width: 30%; padding: 3pt; color: black; background: white">
 <h5>Example of flow layout</h5>
 <span style="background: #faa; border: solid 2pt #f66">
 inline1 inline1 inline1 inline1 

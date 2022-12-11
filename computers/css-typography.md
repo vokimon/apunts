@@ -1,33 +1,54 @@
-https://www.youtube.com/watch?v=agbh1wbfJt8
+# CSS Typografy
 
-- Lettering: Seria caligrafia
+<https://www.youtube.com/watch?v=agbh1wbfJt8>
+
+Several fields:
+
+- Caligraphy: Escribir a mano con buena letra (focus legibilidad)
+- Lettering: Escribir a mano con letra artística (focus composición)
 - Typography: Use of premade definitions of letters
+
+Several items:
 
 - TypeFace: the design of a collection of characters
 	- ie: Helvetica, Futura...
 - Font: Specific embodiment of a specific weight, witdh or style of a typeface
 	- ie: Helvetica bold 10pt
 
+Goals:
 
-- Scanability: How it eases the read as blocks
-- Accessibility: How 
+- Legibility: How easy is to identify a character in a given typeface.
+- Readability: How easy is to read because how the typefaces are used. Spacing between letters, words, lines, paragraphs...
+- Accessibility: How adapted to diferent functional abilities of the readers
+- Scanability: How it eases the read as blocks or locate random content.
+
+Font face features affecting Legibility:
 
 - Baseline: Serves as common reference for reading line where the lines rest.
 - Cap-height: Height of the capital letters from the base line.
-- X-height: The height of most lowercase
+- X-height: The height of most lowercase, the higher the more legible
 - Descender/ascenders: Letters that go down the baseline
 - Descender: Letters that go down the baseline: q, p, g...
 - Ascender: Letters that go up of the x-height: d, b, l, t...
-
-Matching Cap-height and ascenders might affect readability Ill.
-
+- Matching Cap-height and ascenders might affect readability: Ill.
 - Serifs: adornations  of the endings of the main traces of the letters, might help readibility
-- sans serif: a font that does not have 
-- Contrast: diference in stroke thicknes depending on the orientation
+	- sans serif: a font that does not have 
+- Stroke contrast: diference in stroke thicknes depending on the orientation
+- Counters: closed or semi-closed negative shapes. The smaller the harder to read.
+- Adornments: Might distract from the character identification
+- Density, quantity of ink in the paper
+- Weight: both extreme light and extreme heavy weights are hard to read
+
+Text features affecting Readability:
+
+- Type size: too small is hard to read
+- Type case: long text in all caps is hard to read
+- Line spacing: 
+- Long lines: (>70chars) hard to follow and changing line.
+- Short lines (<45 chars) interrupts too often the reading flow.
 - Color Contrast: wcag 4.5:1 contrast
 - Color blindnes (Red-Green, Blue-Yellow)
-	- Browser tools to simulate it
-- Density, quantity of ink in the paper
+	- Use browser tools to simulate it
 
 
 ## Typefaces genres
@@ -76,6 +97,13 @@ Matching Cap-height and ascenders might affect readability Ill.
 	- Casual:
 		- Modern script leters
 		- If constrast, simulates the writting device
+- Display
+	- Decorative: Headers, Designs...
+
+
+
+Resumen historico: <https://www.youtube.com/watch?v=WVfRxFwVHQc>
+
 
 Numbers:
 
@@ -97,8 +125,9 @@ Font formats:
 - WOOT 2 (.wott2): A more compressed version, not fully supported in ie
 - Scalable Vector Graphics (.svg): 
 
+Utility:
 
-- Text typeface: La que se usa como base del texto denso. Focus en legibilidad.
+- Body typeface: La que se usa como base del texto denso. Focus en legibilidad.
 - Display typeface: la que se usa para cabeceras, en tamaños grandes. Focus en expresividad, pero sin descuidar tampoco legibilidad.
 
 Styles:
@@ -118,6 +147,7 @@ Multiple columns can opt for the 45-50 smaller lines.
 
 Tracking/Letterspacing:
 - Sparse tracking 
+- Condensed vs Expanded fonts
 - Reduce the header tracking slightly 3-5%
 	- This gives the headers more impact
 - Keep the track of body, normally is set to
@@ -141,11 +171,18 @@ Floating heading:
 
 
 
+## Design concepts
 
 
+### Hierarchy
 
+Guide the reader towards what it is important.
+Where to begin and where to continue.
+Use size, weigth, color
 
+Reduce to a couple of typeface using complementary styles.
 
+## Leading (line spacing)
 
 
 
