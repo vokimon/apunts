@@ -5,21 +5,21 @@ https://www.youtube.com/watch?v=O9S70oJAivI
 ## Overview
 
 - Simple
-  - **Present Simple:** I work
-  - **Past Simple:** I worked
-  - **Future Simple:** I will work
+    - **Present Simple:** I work
+    - **Past Simple:** I worked
+    - **Future Simple:** I will work
 - Continuous
-  - **Present Continuous:** I am working
-  - **Past Continuous:** I was working
-  - **Future Continuous:** I will be working
+    - **Present Continuous:** I am working
+    - **Past Continuous:** I was working
+    - **Future Continuous:** I will be working
 - Perfect
-  - **Present Perfect:** I have worked
-  - **Past Perfect:** I had worked
-  - **Future Perfet:** I will have worked
+    - **Present Perfect:** I have worked
+    - **Past Perfect:** I had worked
+    - **Future Perfet:** I will have worked
 - Pefect Continuous
-  - **Present Perfect Continuous:** I have been working
-  - **Past Perfect Continuous:** I had been working
-  - **Future Perfect Continuous:** I will have been working
+    - **Present Perfect Continuous:** I have been working
+    - **Past Perfect Continuous:** I had been working
+    - **Future Perfect Continuous:** I will have been working
 
 All 12 refer to a reference time in the Present, Past or Future.
 
@@ -27,47 +27,47 @@ All 12 refer to a reference time in the Present, Past or Future.
 
 - Happens en general o permanent way
 - Use cases:
-  - Permanent: I live in Barcelona
-  - Facts: Sun raises in the east
-  - Routines: I wake at 9 o'clock
-  - Schedules: The train leaves at noon
-  - Frequency: I **always** do that. (never, rarely, sometimes, often, always)
-
+    - Permanent: I live in Barcelona
+    - Facts: Sun raises in the east
+    - Routines: I wake at 9 o'clock
+    - Schedules: The train leaves at noon
+    - Frequency: I **always** do that. (never, rarely, sometimes, often, always)
+ 
 Construction:
 
 - Positive:
-  - I/You/We/They work
-  - He/She/It work**s**
+    - I/You/We/They work
+    - He/She/It work**s**
 - Stressed Positive:
-  - I/You/We/They do work
-  - He/She/It does work
+    - I/You/We/They do work
+    - He/She/It does work
 - Negative:
-  - I/You/We/They do/don't not work
-  - He/She/It does not/doesn't work
+    - I/You/We/They do/don't not work
+    - He/She/It does not/doesn't work
 - Question:
-  - Do I/you/we/they work?
-  - Does he/she/it work?
+    - Do I/you/we/they work?
+    - Does he/she/it work?
 - W questions?
-  - Just put the W word before the question formula
-  - What..., where..., why..., when..., How..., How often..., How much...
+    - Just put the W word before the question formula
+    - What..., where..., why..., when..., How..., How often..., How much...
 
 Singular third person inflection:
 
 - Most verbs just add an 's'
 - Verbs ending with 's', 'sh', 'ch', 'x' add 'es'
-  - kis**s**es, wa**sh**es, tea**ch**es, fi**x**es
+    - kis**s**es, wa**sh**es, tea**ch**es, fi**x**es
 - Verbs ending with consonant + 'y' substitute it by 'ies'
-  - fry -> fries
-  - try -> tries
-  - study -> studies
-  - but if there no is a consonant:
-    - enjoys, not enjoies
-    - destroys, not destroies
-    - plays -> plaies
+    - fry -> fries
+    - try -> tries
+    - study -> studies
+    - but if there no is a consonant:
+        - enjoys, not enjoies
+        - destroys, not destroies
+        - plays -> plaies
 - Special:
-  - go -> goes
-  - do -> does
-  - have -> has
+    - go -> goes
+    - do -> does
+    - have -> has
 
 Short answers to yes/no questions
 
@@ -81,16 +81,16 @@ Negative short answer always contracted.
 Common mistakes:
 
 - Confusing Present Continuous with Present Simple 
-  - _I live in Tokio_ (permanently) vs _I am living in Tokio_ (for a short time)
-  - _I play football_ (usually) vs _I am playing football_ (right now)
+    - _I live in Tokio_ (permanently) vs _I am living in Tokio_ (for a short time)
+    - _I play football_ (usually) vs _I am playing football_ (right now)
 - Missuse third person inflection
-  - They likes apples (using it when it should not be used)
-  - He like apples (not using it when it should be used)
+    - They likes apples (using it when it should not be used)
+    - He like apples (not using it when it should be used)
 - Spelling third person inflection
-  - He trys -> He tr**ies**
-  - It caths -> It catch**es**
+    - He trys -> He tr**ies**
+    - It caths -> It catch**es**
 - Skipping auxiliar in questions:
-  - What time you finish work? -> What time **do** you finish work
+    - What time you finish work? -> What time **do** you finish work
 
 
 ## Present Continuous
@@ -110,59 +110,59 @@ Anti-use cases:
 
 - Permanent: I am living in Canada (if I always live in Canada)
 - Stative verbs: Not actions but a condition/state
-  - need, want, understand, know, like....
-  - I am understanding -> I understand
-  - She is liking the show -> She likes
-  - They are having a card -> They have a card
-  - I am hating sprawns -> I hate sprawns
+    - need, want, understand, know, like....
+    - I am understanding -> I understand
+    - She is liking the show -> She likes
+    - They are having a card -> They have a card
+    - I am hating sprawns -> I hate sprawns
 
 Construction: Subject + to be + gerund (ing)
 
 - Positive:
-  - I am working
-  - You/We/They are working
-  - She/He/It is working
+    - I am working
+    - You/We/They are working
+    - She/He/It is working
 - Negative
-  - I am **not** working
-  - You/We/They are **not** working
-  - She/He/It is **not** working
+    - I am **not** working
+    - You/We/They are **not** working
+    - She/He/It is **not** working
 - Questions:
-  - Am I working?
-  - Are you/we/they working?
-  - Is she/he/it working?
+    - Am I working?
+    - Are you/we/they working?
+    - Is she/he/it working?
 - W words, just prepend to the question form
-  - Where is she working?
-  - How much are you working?
-  - Why am I working?
+    - Where is she working?
+    - How much are you working?
+    - Why am I working?
 
 Contracted forms:
 
 - Positive
-  - I**'m** working
-  - You/We/They**'re** working
-  - She/He/It**'s** working
+    - I**'m** working
+    - You/We/They**'re** working
+    - She/He/It**'s** working
 - Negative
-  - I**'m not** working
-  - You/We/They **aren't** working
-  - You/We/They**'re not** working
-  - She/He/It **isn't** working
-  - She/He/It**'s not** working
+    - I**'m not** working
+    - You/We/They **aren't** working
+    - You/We/They**'re not** working
+    - She/He/It **isn't** working
+    - She/He/It**'s not** working
 
 Spelling for the gerund
 
 - For most just add "-ing"
 - Verbs ending in mute '-e', just drop the 'e'
-  - take -> taking, use -> using, cope -> coping
+    - take -> taking, use -> using, cope -> coping
 - Verbs ending in -ie, drop -ie -> -ying
-  - lie -> lying, tie -> tying
+    - lie -> lying, tie -> tying
 - Verbs ending in consonant-vowel-consonant, double the last consonant
-  - clap -> clapping
-  - sit -> sitting
-  - begin -> beginning
-  - get -> getting
-  - control -> controlling
-  - hug -> hugging
-  - Not always apply
+    - clap -> clapping
+    - sit -> sitting
+    - begin -> beginning
+    - get -> getting
+    - control -> controlling
+    - hug -> hugging
+    - Not always apply
 
 Short answers:
 
@@ -177,22 +177,22 @@ Short answers:
 Common mistakes:
 
 - Missing 'to be' verb
-  - My brother watching TV -> My brother **is** watching TV
-  - John not helping -> John **is** not helping
-  - She going? -> **Is** she going?
+    - My brother watching TV -> My brother **is** watching TV
+    - John not helping -> John **is** not helping
+    - She going? -> **Is** she going?
 - Incorrect form of to be
-  - Bob and Maria is driving home -> Bob and Maria **are** driving home
-  - He ain't studying (ain't is slang) -> He isn't studying
+    - Bob and Maria is driving home -> Bob and Maria **are** driving home
+    - He ain't studying (ain't is slang) -> He isn't studying
 - Not inflecting gerunds
-  - He is study in his room -> He is study**ing** in his room
+    - He is study in his room -> He is study**ing** in his room
 - Gerund spelling
-  - lieing -> lying
-  - siting -> sitting
-  - writeing -> writing
+    - lieing -> lying
+    - siting -> sitting
+    - writeing -> writing
 - Stative verbs
-  - I am needing some water -> I need some water
+    - I am needing some water -> I need some water
 - Permanent situations
-  - The company is manifacturing cars -> The company manufactures cars
+    - The company is manifacturing cars -> The company manufactures cars
 
 Contrast phrases between simple and continuous
 
@@ -212,12 +212,12 @@ General form:  Subject + participle (verb+ed)
 Use case: Something that started and ended in the past
 
 - Positive
-  - (I/You/She/He/It/We/They) work**ed**
+    - (I/You/She/He/It/We/They) work**ed**
 - Negative
-  - (I/You/She/He/It/We/They) did not work
-  - (I/You/She/He/It/We/They) didn't work
+    - (I/You/She/He/It/We/They) did not work
+    - (I/You/She/He/It/We/They) didn't work
 - Questions:
-  - (When/Where/Why...) Did I/you/she/he/it/we/they work?
+    - (When/Where/Why...) Did I/you/she/he/it/we/they work?
 - The participle goes to the auxiliary: do -> did
 
 Combining many verbs with a single subject
@@ -230,13 +230,13 @@ Regular verbs:
 
 - Most just -ed
 - Mute e at the end just removed
-  - bake -> baked
-  - use -> used
+    - bake -> baked
+    - use -> used
 - Ending in -y -> -ied
-  - study  -> studied
+    - study  -> studied
 - consonant - vowel - consonant -> double the last consonant
-  - stop -> stopped
-  - plan -> planned
+    - stop -> stopped
+    - plan -> planned
 
 Pronounciation:
 
@@ -251,14 +251,14 @@ Irregular verbs
 Common mistakes:
 
 - Not changing the verb
-  - I come back yesterday -> I came back yesterday
+    - I come back yesterday -> I came back yesterday
 - Apply the past form to the verb in negative and questions
-  - Did you cooked that? -> Did you cook that?
-  - I didn't came yesterday -> I didn't come yesterday
+    - Did you cooked that? -> Did you cook that?
+    - I didn't came yesterday -> I didn't come yesterday
 - Spelling
-  - Then it stoped raining -> Then it sto**pp**ed raining
+    - Then it stoped raining -> Then it sto**pp**ed raining
 - Missing auxiliary
-  - You wake up early? -> Did you wake up early?
+    - You wake up early? -> Did you wake up early?
 
 ## Past Continuous
 
@@ -281,49 +281,49 @@ Contrast with Past Simple
 Construction:
 
 - Positive:
-  - I/She/He/It was working
-  - We/You/They were working
+    - I/She/He/It was working
+    - We/You/They were working
 - Negative:
-  - I/She/He/It was not working
-  - I/She/He/It wasn't working
-  - We/You/They were not working
-  - We/You/They weren't working
+    - I/She/He/It was not working
+    - I/She/He/It wasn't working
+    - We/You/They were not working
+    - We/You/They weren't working
 - Questions:
-  - (W) Was i/she/he/it working
-  - (W) Were we/you/they working
+    - (W) Was i/she/he/it working
+    - (W) Were we/you/they working
 - Short Answers
-  - Yes, i/she/he/it was
-  - Yes, we/you/they were
-  - No, i/she/he/it wasn't
-  - No, we/you/they weren't
-  - No, i/she/he/it was not ???
-  - No, we/you/they were not ???
+    - Yes, i/she/he/it was
+    - Yes, we/you/they were
+    - No, i/she/he/it wasn't
+    - No, we/you/they weren't
+    - No, i/she/he/it was not ???
+    - No, we/you/they were not ???
   
 Common mistakes:
 
 - Wrong tense
-  - I am studying when you called -> I **was** studying when your called
+    - I am studying when you called -> I **was** studying when your called
 - Wrong to-be form
-  - We was relaxing -> We **were** relaxing
+    - We was relaxing -> We **were** relaxing
 - Spelling
-  - She was bakeing -> She was baking
+    - She was bakeing -> She was baking
 - Auxiliary order
-  - When you were going to call? -> When **were** you going to call?
+    - When you were going to call? -> When **were** you going to call?
 - Auxiliary missing
-  - You waiting a long time? -> **Were** you waiting a long time?
+    - You waiting a long time? -> **Were** you waiting a long time?
 - Stative verbs:
-  - I was believing you -> I believed you
+    - I was believing you -> I believed you
 
 
 ## Simple Future
 
 - Formal: will
 - Informal
-  - Unplanned: will
-    - Ok, then, I will meet him tomorrow
-  - Planned: other forms
-    - i am going to meet him tomorrow
-    - i am meeting him tommorrow
+    - Unplanned: will
+        - Ok, then, I will meet him tomorrow
+    - Planned: other forms
+        - i am going to meet him tomorrow
+        - i am meeting him tommorrow
 
 
 Uses:
@@ -342,17 +342,17 @@ Uses:
 Construct
 
 - Postive:
-  - I/You/She/He/It/We/They will work (formal)
-  - I/You/She/He/It/We/They'll work (informal)
+    - I/You/She/He/It/We/They will work (formal)
+    - I/You/She/He/It/We/They'll work (informal)
 - Negative
-  - I/You/She/He/It/We/They will not work (formal)
-  - I/You/She/He/It/We/They won't work (informal)
+    - I/You/She/He/It/We/They will not work (formal)
+    - I/You/She/He/It/We/They won't work (informal)
 - Question
-  - (W) Will I/you/she/he/it/we/they work?
+    - (W) Will I/you/she/he/it/we/they work?
 - Short answers
-  - Yes, I/you/she/he/it/we/they will (no contractions, never)
-  - No, I/you/she/he/it/we/they won't  (informal)
-  - No, I/you/she/he/it/we/they will not  (formal)
+    - Yes, I/you/she/he/it/we/they will (no contractions, never)
+    - No, I/you/she/he/it/we/they won't  (informal)
+    - No, I/you/she/he/it/we/they will not  (formal)
 
 Common phrasal: I (don't) think/believe/suppose/imagine... + future tense
 
@@ -361,22 +361,22 @@ About _shall_:
 - Shall is the form of _will_ for for plural and singular first person (I and we)
 - Is an English (metropoli) thing, and sounds too formal and old-fashioned most of the time.
 - Is used just for polite questions and metropoli (english) people.
-  - Shall I order?
-  - Shall we dance?
+    - Shall I order?
+    - Shall we dance?
 
 Common mistakes:
 
 - Missing auxiliary
-  - They meet you at the hotel -> They will meet you at the hotel
+    - They meet you at the hotel -> They will meet you at the hotel
 - Missing apostroph
-  - Well be home soon -> We**'**ll be home soon (Well is another word)
+    - Well be home soon -> We**'**ll be home soon (Well is another word)
 - Spell mistake
-  - The kids want go to sleep -> The kids **won't** go to sleep
+    - The kids want go to sleep -> The kids **won't** go to sleep
 - Conditional sentences (the if part of the sentece cannot be future)
-  - If I **will** visit Greece I will visit you -> If I visit Greece, i will visit you
-  - I will visit you If I **will** visit Greece -> i will visit you, If I visit Greece
-  - Not just with "If", any conditional word 'when', 'as soon as', 'before', 'after'
-    - **As soon as** I **will** arrive Greece I will visit you -> As soon as I arrive Greece I will visit you
+    - If I **will** visit Greece I will visit you -> If I visit Greece, i will visit you
+    - I will visit you If I **will** visit Greece -> i will visit you, If I visit Greece
+    - Not just with "If", any conditional word 'when', 'as soon as', 'before', 'after'
+        - **As soon as** I **will** arrive Greece I will visit you -> As soon as I arrive Greece I will visit you
 
 ## Other futures
 
@@ -397,63 +397,63 @@ Uses:
 Construct
 
 - Positive:
-  - I'm/You're/We're/They're/She's/He's/It's going to work
+    - I'm/You're/We're/They're/She's/He's/It's going to work
 - Negative
-  - I'm/You're/We're/They're/She's/He's/It's **not** going to work
-  - You/We/They**'re not** going to work
-  - You/We/They **aren't** going to work
-  - She/He/It**'s not** going to work
-  - She/He/It **isn't** going to work
+    - I'm/You're/We're/They're/She's/He's/It's **not** going to work
+    - You/We/They**'re not** going to work
+    - You/We/They **aren't** going to work
+    - She/He/It**'s not** going to work
+    - She/He/It **isn't** going to work
 - Question:
-  - (W) Are you/they/we  going to work?
-  - (W) Am I going to work?
-  - (W) Is she/he/it going to work?
+    - (W) Are you/they/we  going to work?
+    - (W) Am I going to work?
+    - (W) Is she/he/it going to work?
 Short answers
-  - Yes, I am (no contraction!)
-  - Yes, you/we/they are (no contraction!)
-  - Yes, she/he/it is (no contraction!)
-  - No, I'm not
-  - No, you/we/they aren't
-  - No, you/we/they're not
-  - No, she/he/it isn't
-  - No, she/he/it's not
+    - Yes, I am (no contraction!)
+    - Yes, you/we/they are (no contraction!)
+    - Yes, she/he/it is (no contraction!)
+    - No, I'm not
+    - No, you/we/they aren't
+    - No, you/we/they're not
+    - No, she/he/it isn't
+    - No, she/he/it's not
 
 Present Continuous for future
 
 - Positive:
-  - I'm/You're/We're/They're/She's/He's/It's working next week
+    - I'm/You're/We're/They're/She's/He's/It's working next week
 - Negative
-  - I'm/You're/We're/They're/She's/He's/It's **not** working next week
-  - You/We/They **aren't** working next week
-  - She/He/It **isn't** working next week
+    - I'm/You're/We're/They're/She's/He's/It's **not** working next week
+    - You/We/They **aren't** working next week
+    - She/He/It **isn't** working next week
 - Question:
-  - (W) Are you/they/we working next week?
-  - (W) Am I working next week?
-  - (W) Is she/he/it working next week?
+    - (W) Are you/they/we working next week?
+    - (W) Am I working next week?
+    - (W) Is she/he/it working next week?
 - Short answers
-  - Yes, I am (no contraction!)
-  - Yes, you/we/they are (no contraction!)
-  - Yes, she/he/it is (no contraction!)
-  - No, I'm not
-  - No, you/we/they aren't
-  - No, you/we/they're not
-  - No, she/he/it isn't
-  - No, she/he/it's not
+    - Yes, I am (no contraction!)
+    - Yes, you/we/they are (no contraction!)
+    - Yes, she/he/it is (no contraction!)
+    - No, I'm not
+    - No, you/we/they aren't
+    - No, you/we/they're not
+    - No, she/he/it isn't
+    - No, she/he/it's not
 
 Common mistakes
 
 - Word order:
-  - When **they are** arriving? -> When **are they** arriving?
+    - When **they are** arriving? -> When **are they** arriving?
 - Missing going to
-  - They bring the drinks tomorrow -> They are going to bring the drinks tomorrow
+    - They bring the drinks tomorrow -> They are going to bring the drinks tomorrow
 - Missing to-be
-  - She going to be happy -> She **is** going to be happy
+    - She going to be happy -> She **is** going to be happy
 - Spelling
-  - Your going to be late -> You**'re** going to be late
+    - Your going to be late -> You**'re** going to be late
 - Slang
-  - She's gonna call you later -> She's going to call you later
+    - She's gonna call you later -> She's going to call you later
 - Missing time marker
-  - Donna is driving to Florida -> Donna is driving to Florida **tomorrow**
+    - Donna is driving to Florida -> Donna is driving to Florida **tomorrow**
 
 Contrast: Will vs Going to
 
@@ -471,27 +471,27 @@ Use: Something that happens in the future that continues for som time
 Construction:
 
 - Positive
-  - I/We/You/They/She/He/It will be working
+    - I/We/You/They/She/He/It will be working
 - Negative
-  - I/We/You/They/She/He/It will not be working
-  - I/We/You/They/She/He/It won't be working
-  - I/We/You/They/She/He/It'll not be working ??? no lo menciona
+    - I/We/You/They/She/He/It will not be working
+    - I/We/You/They/She/He/It won't be working
+    - I/We/You/They/She/He/It'll not be working ??? no lo menciona
 - Questions
-  - (W) Will I/we/you/they/she/he/it be working?
+    - (W) Will I/we/you/they/she/he/it be working?
 - Short answers
-  - Yes, I/you/she/he/it/we/they will (no contractions, never)
-  - No, I/you/she/he/it/we/they won't  (always contracted)
+    - Yes, I/you/she/he/it/we/they will (no contractions, never)
+    - No, I/you/she/he/it/we/they won't  (always contracted)
 
 Uses:
 
 - Continuous in the future:
-  - Our team will be attending a conference from march 5th to 8th
+    - Our team will be attending a conference from march 5th to 8th
 - Continue during a moment in the future:
-  - At 2:30 i will be still taking my exam
+    - At 2:30 i will be still taking my exam
 - Things happening at the same time
-  - Tomorrow I will be teaching and he will be reading articles
+    - Tomorrow I will be teaching and he will be reading articles
 - Polite question
-  - Will you be attending the dinner?
+    - Will you be attending the dinner?
 
 Time markers are often used.
 
@@ -502,14 +502,14 @@ Anti-uses:
 Common mistakes:
 
 - Tense
-  - I can call at 8am as i will travel then -> ... as i will be travelling then
+    - I can call at 8am as i will travel then -> ... as i will be travelling then
 - Contracted positive short answer
-  - Yes, I'll -> Yes, I will
+    - Yes, I'll -> Yes, I will
 - Question order
-  - When **they will** fix be fixing the car? -> When **will they** be fixing the car?
+    - When **they will** fix be fixing the car? -> When **will they** be fixing the car?
 - stative verbs
 - Gerund inflexion spelling
-  - swiming -> swimming, takeing -> taking
+    - swiming -> swimming, takeing -> taking
 
 
 ## Present Perfect
@@ -522,25 +522,25 @@ Connects the present with the past: An action in the present affects the present
 Construction:
 
 - Positive:
-  - I/You/We/They have work**ed**/**gone**
-  - She/He/It has work**ed**/**gone**
-  - Contracted
-    - I/You/We/They**'ve** work**ed**/**gone**
-    - She/He/It**'s** work**ed**/**gone**
+    - I/You/We/They have work**ed**/**gone**
+    - She/He/It has work**ed**/**gone**
+    - Contracted
+        - I/You/We/They**'ve** work**ed**/**gone**
+        - She/He/It**'s** work**ed**/**gone**
 - Negative:
-  - I/You/We/They have not work**ed**/**gone**
-  - She/He/It has not work**ed**/**gone**
-  - Contracted:
-    - I/You/We/They haven't work**ed**/**gone**
-    - She/He/It hasn't work**ed**/**gone**
+    - I/You/We/They have not work**ed**/**gone**
+    - She/He/It has not work**ed**/**gone**
+    - Contracted:
+        - I/You/We/They haven't work**ed**/**gone**
+        - She/He/It hasn't work**ed**/**gone**
 - Question
-  - (W) Have I/you/we/they work**ed**/**gone**?
-  - (W) Has she/he/it work**ed**/**gone**?
+    - (W) Have I/you/we/they work**ed**/**gone**?
+    - (W) Has she/he/it work**ed**/**gone**?
 - Short answers
-  - Yes, I/we/you/they have (no contraction)
-  - Yes, she/he/it has (no contraction)
-  - No, I/we/you/they haven't (always contraction)
-  - No, she/he/it hasn't (always contraction)
+    - Yes, I/we/you/they have (no contraction)
+    - Yes, she/he/it has (no contraction)
+    - No, I/we/you/they haven't (always contraction)
+    - No, she/he/it hasn't (always contraction)
 
 The contraction 's also is used with the verb to-be.
 We know from the context.
@@ -553,18 +553,18 @@ We know from the context.
 Uses:
 
 - Past true:
-  - I have **already** seen the movie
+    - I have **already** seen the movie
 - Finished action
-  - I have finished my homework
+    - I have finished my homework
 - Ongoing past:
-  - I have worked here **for five years**a
-  - Have you **ever** beeing in Italy?
-  - **How long** have you know each other
+    - I have worked here **for five years**a
+    - Have you **ever** beeing in Italy?
+    - **How long** have you know each other
 - Recent past result
-  - I have **just** eaten
-  - I have **just** sent the email
+    - I have **just** eaten
+    - I have **just** sent the email
 - Repeated past still ongoing:
-  - I have shopped here **for many years**
+    - I have shopped here **for many years**
 
 Finished actions:
 
@@ -581,47 +581,47 @@ Acomplished until now:
 Anti-used:
 
 - Not with finished time periods (last week, on Monday)
-  - You can use it with ongoing time periods (this week, your live, ever, since last week, for three months)
-  - You can use it with no time expresion
+    - You can use it with ongoing time periods (this week, your live, ever, since last week, for three months)
+    - You can use it with no time expresion
 
 Common mistakes:
 
 - Missing or bad irregular form
-  - He have won the price -> He has won the price
-  - She been to Paris -> She has been to Paris
+    - He have won the price -> He has won the price
+    - She been to Paris -> She has been to Paris
 - Using past instead of participle
-  - They have saw the movie -> the have seen the movie
+    - They have saw the movie -> the have seen the movie
 - Not inflecting verbs in question (past removed, perfect doesn't)
-  - Have you ever fly in first class? -> Have you ever flown in first class?
+    - Have you ever fly in first class? -> Have you ever flown in first class?
 - Question for finished time
-  - Did you ever eat there? -> **Have** you ever **eaten** there
-  - When have you started you new job? -> Have you started your new job? When did you started your new job?
+    - Did you ever eat there? -> **Have** you ever **eaten** there
+    - When have you started you new job? -> Have you started your new job? When did you started your new job?
 - Finished time
-  - We have visited them yesterday. -> We have visited them (without time marker) We visited them yesterday (in simple past)
+    - We have visited them yesterday. -> We have visited them (without time marker) We visited them yesterday (in simple past)
 - Positive short answers with contractions
-  - Yes I've -> Yes, I have
+    - Yes I've -> Yes, I have
 - Negative short answers uncontracted ??? Esta me la he inventado
-  - No, I have not -> No, I haven't
+    - No, I have not -> No, I haven't
 
 
 Contrast Present Perfect vs Past Simple
 
 - Connects past with present
-  - I forgot (now i remember) vs I have forgotten (still forgot)
-  - He lost his bag (no idea if he found later) vs He has lost his bag (still lost)
+    - I forgot (now i remember) vs I have forgotten (still forgot)
+    - He lost his bag (no idea if he found later) vs He has lost his bag (still lost)
 - While the action is in the past, the focus is now (present perfect) or in the past (past simple)
-  - she has eaten (so she is not eating again), she ate dinner (ok was in the past)
+    - she has eaten (so she is not eating again), she ate dinner (ok was in the past)
 - Definite time vs Indefinite time
-  - I have visited NY (indefinite time) vs I visited NY in 2012 (concrete time)
+    - I have visited NY (indefinite time) vs I visited NY in 2012 (concrete time)
 - Finished time vs unfinished time
-  - She lived in London (from 2000 to 2010) vs She's lived in london since 2000/for 5 years
-  - She didn't call me yesterday vs She haven't called me yet
+    - She lived in London (from 2000 to 2010) vs She's lived in london since 2000/for 5 years
+    - She didn't call me yesterday vs She haven't called me yet
 - When did you...? (puntual) vs How long have you...? (happening during a period)
-  - get married vs been married
-  - start this job vs had this job
-  - move to Boston vs lived in Boston
-  - meet Mary vs know Mary
-  - join the university vs been in university
+    - get married vs been married
+    - start this job vs had this job
+    - move to Boston vs lived in Boston
+    - meet Mary vs know Mary
+    - join the university vs been in university
 
 
 
@@ -638,35 +638,35 @@ I have been working
 Construction:
 
 - Positive:
-  - I/You/We/They have been working
-  - I/You/We/They've been working
-  - She/He/It has been working
-  - She/He/It's been working
+    - I/You/We/They have been working
+    - I/You/We/They've been working
+    - She/He/It has been working
+    - She/He/It's been working
 - Negative:
-  - I/You/We/They have not been working
-  - I/You/We/They haven't been working
-  - She/He/It has not been working
-  - She/He/It hasn't been working
+    - I/You/We/They have not been working
+    - I/You/We/They haven't been working
+    - She/He/It has not been working
+    - She/He/It hasn't been working
 - Question:
-  - (W) Have I/you/we/they been working?
-  - Has she/he/it been working?
+    - (W) Have I/you/we/they been working?
+    - Has she/he/it been working?
 - Short answers:
-  - Yes, I/we/you/they have (no contraction)
-  - Yes, she/he/it has (no contraction)
-  - No, I/we/you/they haven't (always contraction)
-  - No, she/he/it hasn't (always contraction)
+    - Yes, I/we/you/they have (no contraction)
+    - Yes, she/he/it has (no contraction)
+    - No, I/we/you/they haven't (always contraction)
+    - No, she/he/it hasn't (always contraction)
 
 
 Uses:
 
 - Started and continues
-  - Sea levels have been rising
+    - Sea levels have been rising
 - Started in the past but just finished
-  - I have been calling you for hours
-  - We have been waiting for you
+    - I have been calling you for hours
+    - We have been waiting for you
 - Common expressions
-  - I have been studying for three hours
-  - I haeb been 
+    - I have been studying for three hours
+    - I haeb been 
 
 
 ## Past Perfect
@@ -681,25 +681,25 @@ Something happenend before some reference point also in the past.
 Construction
 
 - Positive:
-  - I/We/You/They/She/He/It had worked/gone
-  - I/We/You/They/She/He/It'd worked/gone
+    - I/We/You/They/She/He/It had worked/gone
+    - I/We/You/They/She/He/It'd worked/gone
 - Negative
-  - I/We/You/They/She/He/It had not worked/gone
-  - I/We/You/They/She/He/It hadn't worked/gone
+    - I/We/You/They/She/He/It had not worked/gone
+    - I/We/You/They/She/He/It hadn't worked/gone
 - Question
-  - (W) Had I/we/you/they/she/he/it worked/gone?
+    - (W) Had I/we/you/they/she/he/it worked/gone?
 - Short answers:
-  - Yes, I/we/you/they/she/he/it had (always uncontracted)
-  - No, I/we/you/they/she/he/it hadn't (usually contracted)
-  - No, I/we/you/they/she/he/it had not (means you are serious)
+    - Yes, I/we/you/they/she/he/it had (always uncontracted)
+    - No, I/we/you/they/she/he/it hadn't (usually contracted)
+    - No, I/we/you/they/she/he/it had not (means you are serious)
 
 The reference can be:
 
 - Another action in a past tense:
-  - Before we moved
-  - When i arrived
-  - After we moved in
-  - At the time i joined the company
+    - Before we moved
+    - When i arrived
+    - After we moved in
+    - At the time i joined the company
 - A time marker in the past
 
 Combining many verbs: we can optionally skip the subject and the auxiliary
@@ -725,13 +725,13 @@ You can diferentiate them by the following tense.
 Common mistakes
 
 - Using past instead participle
-  - We had went to the mall -> We had gone to the mall
+    - We had went to the mall -> We had gone to the mall
 - Participle spelling
-  - How had planed the party -> Who had pla**nn**ed the party
+    - How had planed the party -> Who had pla**nn**ed the party
 - Contractions
-  - They had'nt been there before -> They hadn't been there before
+    - They had'nt been there before -> They hadn't been there before
 - Tense
-  - When you arrived, he went out already -> When you arrived, he had already gone out
+    - When you arrived, he went out already -> When you arrived, he had already gone out
 
 ## Past Perfect Continuous
 
@@ -740,16 +740,16 @@ Before a refference time in the past, something continuously hapenned
 Uses:
 
 - Past activity
-  - it had been snowing all last winter
+    - it had been snowing all last winter
 - Happening continuosly before an event
-  - We had been playing golf, before it started rain
+    - We had been playing golf, before it started rain
 - Long hapenning for a period of time in the past
-  - The had been working for six month/since January
+    - The had been working for six month/since January
 - Happening in the past with a pattern (how often)
-  - We had been going to gym **regularly**/seldomly
-  - We had rarely been going to gym
+    - We had been going to gym **regularly**/seldomly
+    - We had rarely been going to gym
 - Cause for a thing happening
-  - She was tired because she had been studying all night
+    - She was tired because she had been studying all night
 
 Antiuses:
 
@@ -758,18 +758,18 @@ Antiuses:
 Construct
 
 - Positive
-  - I/We/You/They/She/He/It had been working
+    - I/We/You/They/She/He/It had been working
 - Negative
-  - I/We/You/They/She/He/It had not been working
+    - I/We/You/They/She/He/It had not been working
 - Question
-  - (W) Had I/we/you/they/she/he/it been working?
+    - (W) Had I/we/you/they/she/he/it been working?
 
 Contractions
 
 - Positive
-  - I/We/You/They/She/He/It**'d** been working
+    - I/We/You/They/She/He/It**'d** been working
 - Negative
-  - I/We/You/They/She/He/It **hadn't** been working
+    - I/We/You/They/She/He/It **hadn't** been working
 
 Short answers
 
@@ -779,13 +779,13 @@ Short answers
 Contrast: Present Perfect Continuos vs Past Perfect Continuos
 
 - Present Perfect Continuos:
-  - Links past and present
-  - Started in the past, continues in the present
-  - I **has been working** all day, so i **am** tired
+    - Links past and present
+    - Started in the past, continues in the present
+    - I **has been working** all day, so i **am** tired
 - Past Perfect Continuous
-  - Lincs past to past
-  - Started in the past, continues in the past
-  - I **had been working** all day, so i **was** tired
+    - Lincs past to past
+    - Started in the past, continues in the past
+    - I **had been working** all day, so i **was** tired
 
 
 ## Future perfect
@@ -799,24 +799,24 @@ _I will have finished fixing the roof next week._
 Uses:
 
 - Action finished before a specific time in the future
-  - By next July, they will have bought a new home
+    - By next July, they will have bought a new home
 - Action finished before another action
-  - Before you arrive, we will have eaten dinner.
+    - Before you arrive, we will have eaten dinner.
 
 Construct:
 
 - Positive
-  - I/We/You/They/She/He/It will have worked/gone
+    - I/We/You/They/She/He/It will have worked/gone
 - Negatives
-  - I/We/You/They/She/He/It will not have worked/gone
+    - I/We/You/They/She/He/It will not have worked/gone
 - Questions
-  - (W) Will I/we/you/they/she/he/it have worked/gone?
+    - (W) Will I/we/you/they/she/he/it have worked/gone?
 
 Contractions
 - Positive
-  - I/We/You/They/She/He/It'll have worked/gone
+    - I/We/You/They/She/He/It'll have worked/gone
 - Negatives
-  - I/We/You/They/She/He/It won't have worked/gone
+    - I/We/You/They/She/He/It won't have worked/gone
 
 By what time...?
 
@@ -835,18 +835,18 @@ By next July, i will have been working here for 10 years.
 Construct
 
 - Positive
-  - I/We/You/They/She/He/It will have been working
+    - I/We/You/They/She/He/It will have been working
 - Negative
-  - I/We/You/They/She/He/It will not have been working
+    - I/We/You/They/She/He/It will not have been working
 - Questions
-  - (W) Will I/we/you/they/she/he/it have been working?
+    - (W) Will I/we/you/they/she/he/it have been working?
 
 Uses:
 
 - A specific time as reference in the future
-  - Next November, we will have been living in this house for 15 years
+    - Next November, we will have been living in this house for 15 years
 - Before another action in the future
-  - By the time the guest will arrive, I will have been cooking all day
+    - By the time the guest will arrive, I will have been cooking all day
 
 Antiuses:
 
@@ -863,9 +863,9 @@ Contractionsa
 Used just in informal contexts
 
 - Positive
-  - I/We/You/They/She/He/It**'ll** have been working
+    - I/We/You/They/She/He/It**'ll** have been working
 - Negative
-  - I/We/You/They/She/He/It **won't** have been working
+    - I/We/You/They/She/He/It **won't** have been working
 
 Common Mistakes
 
@@ -877,13 +877,13 @@ Common Mistakes
 ## Appendix: stative verbs
 
 - Emotional:
-  - feel, need, want, love, hate, prefer...
+    - feel, need, want, love, hate, prefer...
 - Mental:
-  - believe, understand, know, realize...
+    - believe, understand, know, realize...
 - Possesion:
-  - have, own, belong...
+    - have, own, belong...
 - other
-  - cost...
+    - cost...
 
 
 
