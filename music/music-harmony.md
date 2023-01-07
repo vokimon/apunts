@@ -253,6 +253,7 @@ Also, pentatonics on C can be considered by the notes shared by three Diatonic S
 		- C D E F# G# A#
 	- The one with the lower keys of the scale in altered keys
 		- Db Eb F G A B
+	- On the semitone of the major scale switches from black to white keys and viceversa
 - Only two triads are available.
 	- In C:
 		- Caug (Eaug and G#aug are just inversions)
@@ -266,6 +267,7 @@ Also, pentatonics on C can be considered by the notes shared by three Diatonic S
 	- So, the scale has an unsettling and weird mood
 	- Also gives the sensation of being lost
 	- Used in horror movies, in the dream carrillion
+	- A root can be built upon repetition or stress
 
 ## Diatonic scale
 
