@@ -5,7 +5,7 @@
 - **cooperative member:** socio de la cooperativa
 - **hacerse socio:** become a member
 - **non-profit:** sin animo de lucro
-- **governing board/council:** consejo rector (Ana y compañia...)
+- **governing board/council:** consejo rector
 - **assembly:** asamblea [esen'bli]
 - **growth:** crecimiento
 - **has grown:** ha crecido
@@ -70,8 +70,56 @@
 - **reject:** rechazar (una ley)
 - **decline:** rechazar (una peticion)
 - **appeal:** apelar
-- **European union:** Union Europea (yu'ro pi'an yu'nion)
+- **European union:** Union Europea [yu'ro pi'an yu'nion]
 
+
+## Business administration
+
+### Invoicing and payments
+
+- **factura:** invoice
+- **factura ordinaria:** regular invoice
+- **factura abonadora:** cancellation invoice
+- **factura rectificadora:** correction invoice
+- **factura emitida:** emitted invoice
+- **factura anulada:** void invoice
+- **factura en borrador:** draft invoice
+- **factura pagada:** paid invoice (not payed, please!)
+- **factura impagada:**  unpaid invoice
+- **emitir facturas:** to emit invoices
+- **pago domiciliado:** (SEPA) direct debit payment
+    - **domiciliar el pago:** to 
+- **pago al contado:** cash payment
+    - **pargar al contado:** to pay in cash
+- **pago con targeta:** credit/debit card payment
+    - **pagar con targeta:** to pay using a credit card
+- **morosa:** slow payer
+- **pago retrasado:** late payment
+
+### Services
+
+- **persona socia:** member
+- **ser persona socia:** membership
+- **contract:** contracto
+- **service:** servicio
+- **alta:** registration, signup (joined when a sustative)
+- **darse de alta:** to register, to sign up (separated when a verb)
+- **baja:** termination, cancellation
+- **baja como persona socia:** membership cancellation
+- **baja de contrato:** contract cancelation
+- **darse de baja:** to cancel, to terminate
+- **dar de baja el contrato:** to terminate the contract, to cancel the contract
+- **dar de baja como persona socia:** to cancel the membership
+- **hacerse socia/darse de alta como socia:** become a member, signup as a member, register as a member
+- **dar de alta el servicio:** sign up for the service, register for the service
+- **dar de alta el contrato:** sign up the contracta
+
+### Investments and contributions
+
+- **inversión:** investment
+- **invertir:** to invest
+- **aportación:** contribution
+- **aportar:** to contribute
 
 
 ### Formulas:

@@ -17,6 +17,22 @@ Not at all -- Para nada. No se deben.
 I'm glad i could help -- Estoy contento de que pude ayudar
 I'm happy to help -- Estoy feliz de ayudar
 
+## Eating/drinking
 
+- bite: Morder
+- nibble: Mordisquear
+- chew: Masticar
+- sip: dar un sorbo
+- drink: beber
+- down: beber de un trago
+- drol: babear
+- stuff your face: mancharse los morros
+- pig out: comer como un cerdo
+
+- sober: sereno
+- tipsy: con puntillo
+- half cut: puesto
+- drunk: borracho
+- shit faced: pasao
 
 
