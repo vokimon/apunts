@@ -10,15 +10,20 @@
 	- Notes repeat in successive octaves
 	- The same note doubles its frequency on the next octave
 	- We diferentiate notes in different scales with the number of the octave
-	- A4 is the A on the 4th octave (the middle A)
-	- Phisically there are infinite octaves up and down but not all of them are audible
+		- A4 is the A on the 4th octave (the middle A)
+	- Phisically there are infinite octaves up and down since you can divide or multiply infinitely
+	- But not all of them are audible
+		- Average human audible range is 31Hz - 19KHz (aprox C0 - C10)
+		- Digital recording range is 20Hz - 22KHz (C-1 - C11
+		- Higher octaves have few musical interest because the harmonics of the notes are lost
+		- Standard piano is A0-C8
 - Black keys (altered notes):
 	- Tonal distance betweens succesive white notes is not uniform
 	- B-C and E-F intervals are half the interval between other succesive white keys
 	- Piano black keys fill the gap between those full tones
 	- Two ways of expressing them referring the neighbouring notes:
-		- As sharp notes: C#, D# and F#, G#, A#. The lower note up a semitone.
-		- As flat notes: Db, Eb and Gb, Ab, Bb. The higher note down a semitone.
+		- As sharp notes: C#, D# and F#, G#, A#. The lower note up a semitone. (sostenido/sustingut)
+		- As flat notes: Db, Eb and Gb, Ab, Bb. The higher note down a semitone. (bemol)
 	- The black keys starting at F#/Gb form a _Major Pentatonic Scale_
 - Black and white notes build a pattern in a piano keyboard
 	- `_x_x_ _x_x_x_`
@@ -38,10 +43,18 @@ https://www.youtube.com/watch?v=P7iC-fbdKmQ
 	- _Adding_ an octave is multiplying the frequency by 2
 	- _Adding_ a semitone (12th of an octave) is multiplying the frequency by 2^(1/12) ~= 1,00057779
 	- A cent is the 100th part of a semitone, so one cent multipies by 2^(1/(12*100))
+- Audible range
+	- You can divide a frequency by 2 never reaching 0, and of course, you can always multiply by 2
+	- But at some point we fall outside the human audible range (20Hz - 22000Hz)
+	- So, if we tune A4 to 440Hz (which is the standard) octaves 0 to 9 are the audible ones.
+	- Reference frequency is 440Hz for A4
+	- You can always divide by 2 never reaching 0: A3=220Hz, A2=110Hz, A1=55Hz, A0=27.5Hz, A-1=13.75Hz...
+	- You can always multiply by 2: A5=880Hz, A6=1760Hz, A7=3520Hz, A8=7040Hz, A9=14080Hz, A10=28160Hz
 - When a melodic instrument plays a note it generates a main frequency, the **fundamental** one (f), and then many frequencies at integer multiples, the **harmonics** (2f, 3f, 4f...)
 	- The fundamental frequency determines the perceived pitch
 	- The harmonics and its relative strenghts gives the distintive timber to the instrument
 	- Why those frequencies? Instrument vibration builds an [standing wave](https://en.wikipedia.org/wiki/Standing_wave). The modes of vibration correspond to the harmonics
+	- High pitches of an instrument lose the timber because harmonics move outside the audible range
 - Disonance and consonance:
 	- Two sounds sound disonant or detuned if many of their harmonics do not align
 	- Frequencies for musical notes are chosen to be integer ratios among them so that many of their harmonics align.
