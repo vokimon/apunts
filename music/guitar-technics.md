@@ -86,6 +86,34 @@ También se usan sin partitura, posicionalmente. Se usa el punto para indicar no
 	- `ddddd·d·` Ramones
 	- `d·dududu` Dancing in the dark - Springteen
 
+- Rumba
+	- Simple:    td tu td tu . iu id iu (primera perte con pulgar t, segunda con indice i) [tan tararan tarara]
+	- Abanico:   td . tu fd td . tu . . . fu . fd . fu /  (cambia la primera parte con el abanico en 16ths tu fd td ) [tan tararantan tarara]
+	- Tapao:
+		- td tu td tu pm iu id iu
+		- [tan tararap tarara]
+		- como el simple con un palm mute que se puede hacer mas o menos mudo o sonoro como percusion)
+	- Catalana:
+		- iu id pu pm iu id pu pm
+		- [tararap tararap tararap tararap]
+		- si, la dos partes iguales, repeticion industrial
+		- importante empezar para arriba para que cuadre
+		- antes del palm subimos con el pulgar para que quede la palma abajo
+		- despues del palm suvimos on el indice que aun esta abajo
+	- 3abanico:  td . tu fd td tu . tu fd td tu . tu fd td tu . iu . id . iu  (tan tararantan tararantan taranantan tarara)
+	- Rasgeo de pulgar: adorno rapido en doble o cuatriple velocidad, entrenarlo lento, con metronomo y variando tempo arriba y abajo
+		pu id pd pu id pd  (ojo es ternario pero cuadrado a 16th)
+	- Rasgeo flamenco: Apoyo con pulgar extender en secuencia anular medio y indice con la misma fuerza (cuesta mas el anular)
+
+
+
+
+
+
+
+
+
+
 
 
 ### Otras formas
