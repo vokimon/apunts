@@ -12,6 +12,8 @@
   Documentación de W3Schools sobre CSS
 - [Can I Use](https://caniuse.com/):
   Buscador mantenido por la comunidad para saber qué navegadores soportan una funcionalidad.
+- [Layout Generator](https://layout.bradwoods.io/customize)
+  Generador de layouts CSS
 
 
 ## Units
