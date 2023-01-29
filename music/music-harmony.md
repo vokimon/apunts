@@ -313,27 +313,97 @@ Knowing the traditional names of the intervals is useful
 to understand chords names:
 
 |semitones | interval name |
-|---:|:-----|
+|---:|:-----|---|---|---|
 | 0  | unison |
 | 1  | second minor |
 | 2  | second major |
 | 3  | third minor |
 | 4  | third major |
 | 5  | perfect fourth |
-| 6  | augmented fourth, or diminished fifth |
+| 6  | augmented fourth, or diminished fifth or tritone |
 | 7  | perfect fifth |
 | 8  | minor sixth |
 | 9  | major sixth |
 | 10 | minor seventh |
 | 11 | major seventh |
 | 12 | octave |
+| 13 | minor nineth |
 
 Nmemotecnics for the nomenclature:
 
-- If the first note is C, major and perfects are the white keys and the ordinal means which key: second, third...
+- If the first note is C, major and perfects are the white keys and the ordinal means which white key: second, third...
 - Minor and diminished are bemoled tones
-- Augmented are sharpered notes
-- Octave means eighth
+- Augmented are sharpened notes
+- Octave means eighth, literally
+
+Interval song examples for reference:
+
+- 1 - ii: (Minor 2nd)
+	- Jaws (tiburon) [010101...] 
+	- All my loving - Beatles [10 "All my"]
+	- Fur Elise - Bethoven [10101]
+- 2 - II: (Major 2nd)
+	- Frere Jacques [02 "Fre-re"]
+	- Happy birthday [0020 "Ha-ppy birth-day"]
+	- Yesterday - Beatles [200 "Yes-ter-day"]
+	- Noche de paz [020 "No-che-de"]
+	- Enter Sandman [202 "En-ter-Light"]
+- 3 - iii: (Minor 3rd)
+	- Mad World - Tears for Fears [003300 "All-a-round-me-are-fa-..miliar faces"]
+	- Greensleeves [03] 
+	- Smoke in the water - Deep Purple [035 Riff]
+	- Hey Jude - Beatles [3003 "Hey-Jude  don't-make.."]
+	- Superdetective en Hollywood [03005..]
+- 4 - III (Major 3rd)
+	- When the saints go marching in [0457]
+	- Obladi, oblada - Beatles [047047047 "O-bla-di O-bla-da..."]
+	- Campanadas cuartos [40 ding dong]
+	- Summertime - George Gershwin [404 "sum-mer-time"]
+	- Doce cascabeles - [**04040404**] "**do-ce-cas-ca-be-les-tie-ne** ... mi caballo..."]
+- 5 - IV (Perfect 4th)
+	- Here comes the bride - Wagner [0555 "here-comes-the-bride"]
+	- We wish you a Merry Christmas [055 "we-wish-you..."
+	- Summer nights - Grease [0.05.57.75750 bass]
+	- El patio de mi casa [**05**55 "**el-pa**-tio-de"]
+	- Under pressure - Queen (ice-ice-baby) [5555550 bass]
+	- Cannon de Pachenbel [50 - primeras dos notas blancas]
+	- Pinocho fue a pescar [050505 "pi-no-cho-fuea-pes-car..."]
+	- El intervalo entre las cuerdas de la guitarra menos entre la 2a y 3a
+- 6 - IV+ (Augmented 4th)
+	- The Simpsons Theme [06 "The-Simp..."]
+	- Mariano el primo se llama mariano [067 "Ma-ria-no"] (Maria de west side story)
+	- Evenflow - Pearl Jam [60 "E-ven"]
+- 7 - V (Perfect 5th)
+	- Starwars - John Williams [0000.7]
+	- Superman - John Williams [0007.7]
+	- ET - John Williams [07..]
+	- Twinkle Twinkle litle star [0055 "twin-kle twin-kle" "ca-da-di-a"] (canta el gall quiquiriqui)
+	- Flinkstones (picapiedra) [70 "Pe-dro" "Flinks-tones"]
+	- Game of thrones [70 main melody]
+	- Bad Romance - Lady Gaga [007787 "rah-rah-a-ah-ah-ha"]
+- 8 - vi (Minor 6th)
+	- The entertainer - Scott Joplin (Willians add) [080808 tres en leif motive]
+	- Orfeo Negro (Manhã De Carnaval) [08.. "ma-nhã...-tão bonita manhã"]
+	- Love Story [80088 tiiruriruriiii] 
+- 9 - VI (Major 6th)
+	- Jingle bells (verse) [09 "Da-shing... thru the snow" "per-da ...munt la neu" ]
+	- My Way - Sinatra [09 "And-now... the end is near"]
+	- No surprises - Radiohead (piano inicial) [905090509050...]
+- 10 - vii (Minor 7th) (A in sequences)
+	- The winner takes it all - Abba [0**0A**%  "the-**win-ner**-ta-"]
+	- Can't stop - Red Hot - bass - [00AC0000AC]  (son tres notas resuelve a octava)
+- 11 - VII (Major 7th) (B in sequences)
+	- Take on Me - Aha - [0BC "Take-on-me"]
+	- I love you - Cole Porter [BB0 "I-love-you ...hums the april breeze]
+- 12 - VII (Octave) (C in sequence)
+	- Somewhere over the rainbow [0C "some-where..."]
+	- Bulls on the parade - Rage aganist the machine [C0.CC0.CC0 chorus/intro bass]
+	- The forest - The Cure [0C.0A0708]
+- 13 - IX (Minor 9th)
+	- Killing in the name of - Rage aganist the machine [000DDD000DDD000DDD000DDD intro bass]
+
+More in: https://www.earmaster.com/products/free-tools/interval-song-chart-generator.html
+
 
 ## Scale degrees
 
