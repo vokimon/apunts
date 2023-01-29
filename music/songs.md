@@ -1,3 +1,8 @@
+## De bandas concretas
+
+- [Linkin Park](song-linkinpark.md)
+- [Led Zeppeling](song-ledzeppeling)
+
 ## Polly - Nirvana
 
 Tempo lento. Cada down-up-down y el up libre cambiando al siguiente acorde.
@@ -45,10 +50,4 @@ Todos los siguientes acordes son un A transpuestos con cejilla pero con la cuerd
 que da un tono un tanto apocaliptico e insistente a toda la canción.
 
 Las cejillas se pone en:  10 9 7 7  y repetir hasta el final del estribillo en que se hace el siguiente break: 10 7 5 2 3 3 3 3 7 7 7 7
-
-## Otras
-
-- [Linkin Park - In the end](song-linkinpark-intheend.md)
-- [Linkin Park - Numb](song-linkinpark-numb.md)
-- [Led Zeppeling](song-ledzeppeling)
 
