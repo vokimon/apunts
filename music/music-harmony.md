@@ -402,8 +402,10 @@ Interval song examples for reference:
 - 13 - IX (Minor 9th)
 	- Killing in the name of - Rage aganist the machine [000DDD000DDD000DDD000DDD intro bass]
 
-More in: https://www.earmaster.com/products/free-tools/interval-song-chart-generator.html
+More in:
 
+- https://www.earmaster.com/products/free-tools/interval-song-chart-generator.html
+- https://www.musicca.com/interval-song-chart
 
 ## Scale degrees
 

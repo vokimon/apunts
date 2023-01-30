@@ -61,7 +61,8 @@ nav:
     - lang/spanish.md
     - lang/stylistic-figures.md
   - Economics: economics.md
-  - 3D: 3d/3d-production-pipeline.md
+  - 3D:
+      - 3d/3d-production-pipeline.md
 
 
 markdown_extensions:
