@@ -173,7 +173,7 @@ hay que añadir el salto de 2a a 3a.
 	- El mismo principio que en el salto en octavas pero, sin tener que esperar a la tónica
 	- Echamos dos patrones para arriba, ie En ascendente Z1 -> Y1
 - Solapado en tercera:
-	- Saltamos al tercer dedo, descontamos tres patrones en la progresión que llebabamos
+	- Saltamos al tercer dedo, descontamos tres patrones en la progresión que llevábamos
 
 
 ### Ejercicios
