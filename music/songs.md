@@ -26,7 +26,7 @@ Estribillo: D C G Bb (Poniendo mas intensidad en C y Bb)
 Bb es el A en el primer traste.
 
 	|...|...|...|...
-        d.Xu.udud.Xu.udu
+	d.Xu.udud.Xu.udu
 	D  C   0G  Bb  0
 	----------------
 	7--5-------4----
