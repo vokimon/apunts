@@ -50,16 +50,18 @@ https://www.youtube.com/watch?v=P7iC-fbdKmQ
 	- Reference frequency is 440Hz for A4
 	- You can always divide by 2 never reaching 0: A3=220Hz, A2=110Hz, A1=55Hz, A0=27.5Hz, A-1=13.75Hz...
 	- You can always multiply by 2: A5=880Hz, A6=1760Hz, A7=3520Hz, A8=7040Hz, A9=14080Hz, A10=28160Hz
-- When a melodic instrument plays a note it generates a main frequency, the **fundamental** one (f), and then many frequencies at integer multiples, the **harmonics** (2f, 3f, 4f...)
+- When a melodic instrument plays a note, it generates a main frequency, the **fundamental** one (f), and then many frequencies at integer multiples, the **harmonics** (2f, 3f, 4f...)
 	- The fundamental frequency determines the perceived pitch
-	- The harmonics and its relative strenghts gives the distintive timber to the instrument
-	- Why those frequencies? Instrument vibration builds an [standing wave](https://en.wikipedia.org/wiki/Standing_wave). The modes of vibration correspond to the harmonics
+	- The harmonics, by means of its relative strenghts, gives the distintive timber to the instrument
+	- Why those frequencies? Instrument vibration builds an [standing wave](https://en.wikipedia.org/wiki/Standing_wave).
+		- The modes of vibration of the standing wave correspond to the harmonics
 	- High pitches of an instrument lose the timber because harmonics move outside the audible range
 - Disonance and consonance:
 	- Two sounds sound disonant or detuned if many of their harmonics do not align
 	- Frequencies for musical notes are chosen to be integer ratios among them so that many of their harmonics align.
 	- Octave: ratio of 2, one of each pair of harmonics match (C3-C4)
-	- Fifth: ratio of 2/3, the triple and second harmonics of both tones will match (C-G)
+	- Fifth: ratio of 3/2, the triple and second harmonics of both tones will match (C-G)
+	- Augmented Fourth: More complex ratio of 64/729 (6 fiths jumps, thus (2/3)^6) generates disonance (C-F#/Gb)
 - Pitagorean construction: By jumping fifths (2/3 factor) and folding the octaves in a cercle
 	- 5 times, builds a pentatonic scale (CAGED)
 	- 7 times, builds a diatonic scale (ie, C major scale)
@@ -96,21 +98,31 @@ https://www.youtube.com/watch?v=P7iC-fbdKmQ
 - **Interval pattern:** Tonal distances between the succesive notes of the scale.
 	- In CMajor has a _Major Diatonic_ interval pattern: T T S T T T S (T=Tone, S=Semitone)
 	- Expressed in semitones would be: 2 2 1 2 2 2 1
-- A tonic and an interval pattern specifies an scale:
+- A scale is fully specified by a tonic plus an interval pattern:
 	- CMajor scale is the _Major Diatonic_ interval pattern starting at C
-- **Mode:** Interval pattern that can be constructe by rotating a different pattern
-	- A rotated interval pattern can be obtained by playing the same set of notes of a given scale but starting with a different tonic
-	- Same notes, different interval pattern
+
+
+Derived scales: different scales can be obtained from a reference one, by rotation and transposition:
+
+- **Degree rotation:** Playing the same set of notes but starting with a different note as tonic
+	- The result is a different interval pattern obtained by rotation
+		- 2 2 1 2 2 2 1 -> 2 degree rotation -> 1 2 2 2 1 2 2
+	- **Mode:** Each one of those different interval patterns
+	- Same set of notes, different interval pattern
+	- As many modes as degrees has the scale (7 in C Major)
+	- Modes named after the degree of the tonic in the reference scale
+	- The mode of the chosen scale affects the emotional mood of the music
 - **Chromatic transposition:** Applying the same interval pattern, starting at a different tonic
-	- Different notes, same interval pattern
-- The mode of the chosen scale affects the emotional mood of the music
-- A transposition does not change the mood but it can ease the performance with a given instrument
+	- Generates a diferent set of notes
+	- The interval pattern is kept
+	- Transposition unit: semitones
+	- A transposition does not change the mood but it can ease the performance with a given instrument
 
 ### Diatonic scales
 
 A diatonic scale is a scale of 7 tones (heptatonal) that has 2 semitones steps and 5 tone steps where the semitones are separated at least by two full tones
 
-In summary: any rotation of the CMajor scale
+In summary: any rotation or transposition of the CMajor scale
 
 Diatonic Modes:
 
@@ -123,6 +135,7 @@ Diatonic Modes:
 	| V   | Mixolydian | 2 2 1 2 2 1 2 | C D  E  F  G  A  Bb | G A B C D E F | GMaj  | GM7 | Dmin | Gm7    | 
 	| VI  | Aeolian    | 2 1 2 2 1 2 2 | C D  Eb F  G  Ab Bb | A B C D E F G | Amin  | Am7 | Emin | Em7    | Natural Minor
 	| VII | Locrian    | 1 2 2 1 2 2 2 | C Db Eb F  Gb Ab Bb | B C D E F G A | Bdim  | B∅7 | FMaj | FM7    | 
+
 
 - Modes with a major third (+4) are called major:
 	- Resting chord (tonic) is Major: I
@@ -254,10 +267,11 @@ Also, pentatonics on C can be considered by the notes shared by three Diatonic S
 	| VII | Locrian    | 1 2 2 1 2 2 2 | C Db Eb F  Gb Ab Bb | B C D E F G A | Bdim  | B∅7 | FMaj | FM7    | 
 
 
-## Chromatic
+### Chromatic scale
 
+TODO
 
-## Whole-tone hexatonic
+### Whole-tone hexatonic
 
 - Whole-tone hexatonic scale has just whole-tone intervals (6*2semitones=12)
 - Because the intervals are uniform, has no sense to talk about diferent modes
@@ -282,25 +296,12 @@ Also, pentatonics on C can be considered by the notes shared by three Diatonic S
 	- Used in horror movies, in the dream carrillion
 	- A root can be built upon repetition or stress
 
-## Diatonic scale
+### Other scales
 
-- A Diatonic Scale is an scale behaving like this: Transpositions and permutations of the C scale
-- Scale is
-- Chromatic scale: A sequence of 12 notes evenly separated within an octave.
-- Diatonic scale: A sequence of 7 notes with 5 tones intervals and 2 semitones intervals so that 
-	- Any rotation or transposition of the CMaj scale.
-	- Major scales:
-		- Intervals in semitones: 2 2 1 2 2 2 1
-		- Transpositions of CMaj scale, starting at a different note
-	- Minor scales:
-		- Rotations of a Major scale so that the third degree is a third minor
-		
-
-
-- Transposition: changing the tone a set of notes to play a fixed amount of positions up or down.
-	- Chromatic transposition: by n semitones
-	- Diatonic transposition: by n degrees
-
+	C  D  Eb F  G  A  B  - 2 1 2 2 2 2 1 - Melodic minor
+	C  D  Eb F  G  Ab B  - 2 1 2 2 1 3 1 - Harmonic minor
+	C  Eb F  Gb G  Bb - 3 2 1 1 3 2 - Blues (minor pentatonic plus a perfect 4th)
+ 
 
 ## Intervals
 
@@ -336,7 +337,7 @@ Nmemotecnics for the nomenclature:
 - Augmented are sharpened notes
 - Octave means eighth, literally
 
-Interval song examples for reference:
+### Song examples
 
 - 1 - ii: (Minor 2nd)
 	- Jaws (tiburon) [010101...] 
@@ -448,6 +449,7 @@ might be a tone or a semitone.
 
 
 
+## Chords
 
 A **chord** is a combination of notes that sounds good played at once.
 Chords usually sounds good because its frequencies have a multiplicative factor among them.
@@ -528,13 +530,20 @@ Add a major or minor 7th to a triad
 | Structure | Name | Intervals | Jumps | Roles | Symbols
 |------------|----|----|----|--|--|
 | `C D EF G A B` | |  |  |  | 
-| `x---x--x---x` | Major 7th | I III V VII | +4 +3 +4 | | CMaj7 CMa7 CM7 Cdelta7
+| `x---x--x---x` | Major 7th | I III V VII | +4 +3 +4 | | CMaj7 CMa7 CM7 CΔ7 CΔ
 | `x--x---x--x-` | Minor 7th | I bIII V bVII | +3 +4 +3 |  | Cmin7 Cm7 C-7
-| `x---x--x--x-` | Dominant 7th | I III V bVII | +4 +4 +3 | | C7
-| `x--x--x--x--` | Diminished 7th | I bIII bV bbVII | +3 +3 +4 |  | Co7 Cdim7 
+| `x---x--x--x-` | Dominant 7th | I III V bVII | +4 +3 +3 | | C7
+| `x--x---x---x` | MinorMajor 7th | I bIII V VII | +3 +4 +4 | | CmM7
+| `x--x--x--x--` | Diminished 7th | I bIII bV bbVII | +3 +3 +3 |  | Co7 Cdim7 
 | `x--x--x---x-` | Half Diminished  7th| I bIII bV  | +3 +3 +4 |  | C∅7 Cm7b5
 
 No augmented 7th?
+
+### upper chord extensions
+
+	x-x-x--x--x- C9 (c7add9) 
+	x-x-x--x---- Cadd9 (c + 9th)
+	x-x--x-x--x- C11 (C9add11)
 
 
 ### Extended chords
@@ -570,21 +579,50 @@ Add a 9th an 11th or 13th to a triad
 Outside any diatonic scale.
 
 
-### Slash chords
+### Inversion / Slash chords
 
-Inversion of the chord which has the bass note different from the root.
+**Inversion:** a different order in which play the notes of a chord
+The standard inversion is the one with the bass note being the root.
 
-C/G means inversion with G as the bass note.
+**Slash chords:** Inversion of the chord which has the bass note different from the root.
+Named because the notation: C/G means inversion with G as the bass note.
+
+## Modulation
+
+Changing the key/scale in the middle of the song
+
+- Intensify the energy level (subidon-subidon)
+- In duets, adapting to the singer key
+- Create interest in a monotonous song (subidon-subidon, too)
+- Could lead to akward sensation
+
+Tactics:
+
+- Dominant bridge up (energy push): For semitone up, use the dominant chord of the target key.
+	- Examples: C  F  G  C  **Ab**  Db  Gb  Ab  Db
+- Pivot chords: For wider jumps, usually use in duets. Use chords that are shared by both keys. Can be combined with target dominant.
+	- Example: C  Dm  G  Am  Dm  Gm7  C11  F
+
+Considerations:
+
+- Upwards is easier than downwards since downwards sap energy from the song
+	- Changing down 4th can be see as changing up a 5th, so ok
+	- But changing down semitone or tone is trick
+- Harder to modulate to different signatures (either sharps or flats)
+- Better to use upward modulation along intensifications on the lyrics, the singing style or volume
+- Early modulation could sound abrupt, better later in the song, when the harmony has been introduced
 
 
+## Chord progression
 
+**Chord progression:** A sequence of chords.
 
-
-
-
-## Inversions
-
-Diferrent order in which we play the notes of a chord
+- Different chord progressions provides different feelings to the piece
+- Two transposed chord progressions provide a similar feeling
+- Because of that we characterize chords in a chord progression with the intervals to their roots from the key/scale root.
+- We represent the chords with roman numerals, upper case if Major, lower case if minor
+	- In C Major scale: D is _II_ and Am is _vi_
+	- In A minor scale: D is _VI_ and Am is _i_
 
 
 ## Common Pop chord progressions
@@ -899,6 +937,62 @@ Samples:
 - Piano Man - Billy Joal
 	- I V/1 IV/1 I/2 IVM7 I/1 II7 V
 	- C G/B F/A C/G FM7 C/E D7 G
+
+
+### I III IV iv  (Creep progression)
+
+- Creep - Radio Head (G B C Cm)
+- Space Oddity - Bowie - I III IV iv I (iv is shorter)
+- Underweard - Pulp
+- Magic City - Gorillaz
+- Where is my mind - Pixies (Break before chorus)
+- The air I breath - The hollies
+
+- I Establishes tonality
+- III chormatic mediant  chord not belonging to the scale
+- IV 
+- iv minor plagal cadence
+
+	_x_x__x_x_x_
+	  x    x   x  G
+	   x  x    x  B
+	x   x  x      C
+	x  x   x      Cm
+
+
+### ii V I
+
+
+
+- Dm G C (CMajor)
+- Gm A D (FMajor)
+
+
+Function:
+
+- Good for changing key (modulating)
+- It's done by playing it first on the origin key and then in the destination key
+- Chords have role in both keys
+
+- Variaciones con la misma funcionalidad:
+	- ii puede ser: II, ii7, iidim
+	- I could be: I or i
+	- V could be V7, but is the leading tone to the new key
+		
+C
+Eb
+F
+Db
+E
+D
+G
+A
+Ab
+B
+Gb
+C
+
+
 
 
 

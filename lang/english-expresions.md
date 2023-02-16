@@ -35,4 +35,33 @@ I'm happy to help -- Estoy feliz de ayudar
 - drunk: borracho
 - shit faced: pasao
 
+## Shopping
+
+- deli: charcuteria (delicatessen?)
+- butcher: carniceria
+
+## Kitchen
+
+- colander [colenda] colador
+- ladle [leidel] cucharon
+- ice cream scoop [scoop] boladora de helados
+
+## Body accidentals
+
+- eye bags: ojeras
+- wrinkles: patas de gallo
+- spots: granos
+- grey hairs: canas
+- split ends: puntas abiertas
+- bruise: morado
+- scar: cicatriz
+- cut: corte
+- splinter: espina
+- rash: erupcion
+
+
+
+
+
+
 
