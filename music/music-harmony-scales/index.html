@@ -781,12 +781,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
       
       
       
@@ -812,6 +814,117 @@
       <a href="../music-harmony/" class="md-nav__link">
         Harmony: Notes, Scales and Chords 🎶
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Harmony: Scales 🎶
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Harmony: Scales 🎶
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#diatonic-scales" class="md-nav__link">
+    Diatonic scales
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pentatonic-scale" class="md-nav__link">
+    Pentatonic scale
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chromatic-scale" class="md-nav__link">
+    Chromatic scale
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whole-tone-hexatonic" class="md-nav__link">
+    Whole-tone hexatonic
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#melodic-minor-scales" class="md-nav__link">
+    Melodic Minor scales
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#harmonic-minor-scales" class="md-nav__link">
+    Harmonic Minor scales
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#harmonic-major-scales" class="md-nav__link">
+    Harmonic Major scales
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diminished-scales" class="md-nav__link">
+    Diminished scales
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-scales" class="md-nav__link">
+    Other scales
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1248,6 +1361,27 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#pentatonic-scale" class="md-nav__link">
+    Pentatonic scale
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chromatic-scale" class="md-nav__link">
+    Chromatic scale
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whole-tone-hexatonic" class="md-nav__link">
+    Whole-tone hexatonic
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#melodic-minor-scales" class="md-nav__link">
     Melodic Minor scales
   </a>
@@ -1271,27 +1405,6 @@
         <li class="md-nav__item">
   <a href="#diminished-scales" class="md-nav__link">
     Diminished scales
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pentatonic-scale" class="md-nav__link">
-    Pentatonic scale
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#chromatic-scale" class="md-nav__link">
-    Chromatic scale
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#whole-tone-hexatonic" class="md-nav__link">
-    Whole-tone hexatonic
   </a>
   
 </li>
@@ -1325,7 +1438,9 @@
 
 <h1 id="harmony-scales">Harmony: Scales 🎶</h1>
 <h2 id="diatonic-scales">Diatonic scales</h2>
-<p>A diatonic scale is a scale of 7 tones (heptatonal) that has 2 semitones steps and 5 tone steps where the semitones are separated at least by two full tones</p>
+<p>A diatonic scale is a scale of 7 tones (heptatonal)
+that has 2 semitones steps and 5 tone steps
+where the semitones are separated at least by two full tones</p>
 <p>In summary: any rotation or transposition of the CMajor scale</p>
 <p>Diatonic Modes:</p>
 <div class="highlight"><pre><span></span><code>| N   | Name       | Pattern       | On C                | Natural notes | Tonic | 7th | Dom  | Dom7th | AKA
@@ -1338,8 +1453,17 @@
 | VI  | Aeolian    | 2 1 2 2 1 2 2 | C D  Eb F  G  Ab Bb | A B C D E F G | Amin  | Am7 | Emin | Em7    | Natural Minor
 | VII | Locrian    | 1 2 2 1 2 2 2 | C Db Eb F  Gb Ab Bb | B C D E F G A | Bdim  | B∅7 | FMaj | FM7    |
 </code></pre></div>
+<p>From C Major we can go adding flats to obtain the tonalities:</p>
 <ul>
-<li>I Ionian -&gt; b7 -&gt; V Mixolydian -&gt; b3 -&gt; II Dorian -&gt; b6 -&gt; VI Aeolian (nat min) -&gt; b2 -&gt; III Phrygian -&gt; b5 -&gt; VII Locrian</li>
+<li>I Ionian Major (all white notes)</li>
+<li>b7 -&gt; V Mixolydians</li>
+<li>b3 -&gt; II Dorian</li>
+<li>b6 -&gt; VI Aeolian (nat min)</li>
+<li>b2 -&gt; III Phrygian</li>
+<li>b5 -&gt; VII Locrian</li>
+</ul>
+<p>Moods of modes: https://www.youtube.com/watch?v=8i7K9GYzbIY</p>
+<ul>
 <li>Modes with a major third (+4) are called major:<ul>
 <li>Resting chord (tonic) is Major: I</li>
 <li>Happy mood</li>
@@ -1393,53 +1517,6 @@
 </ul>
 </li>
 </ul>
-<p>Moods of modes: https://www.youtube.com/watch?v=8i7K9GYzbIY</p>
-<h2 id="melodic-minor-scales">Melodic Minor scales</h2>
-<p><a href="https://www.youtube.com/watch?v=Vq2xt2D3e3E">Jazz scales: Melodic, Harmonic, Augmented, Diminished...</a></p>
-<p>Heptatonic scales which are chromatic transpositions or rotations of the C Melodic minor scale
-Like diatonic scales, also has 2 halftones and 5 fulltones, but now the two halftones are separated one fulltone.</p>
-<div class="highlight"><pre><span></span><code>| N   | Name        | Pattern       | Transposed on C      | Rotations            |
-|-----|-------------|---------------|----------------------|----------------------|
-| I   | Melodic Min | 2 1 2 2 2 2 1 | C  D  Eb F  G  A  B  | C  D  Eb F  G  A  B  |
-| II  | Dorian b2   | 1 2 2 2 2 1 2 | C  Db Eb F  G  A  Bb | D  Eb F  G  A  B  C  |
-| III | Lydian Aug  | 2 2 2 2 1 2 1 | C  D  E  F# G# A  B  | Eb F  G  A  B  C  D  |
-| IV  | Lydian Dom  | 2 2 2 1 2 1 2 | C  D  E  F# G  A  Bb | F  G  A  B  C  D  E  |
-| V   | Aeolian Dom | 2 2 1 2 1 2 2 | C  D  E  F  G  Ab Bb | G  A  B  C  D  Eb F  |
-| VI  | Half Dimin. | 2 1 2 1 2 2 2 | C  D  Eb F  Gb Ab Bb | A  B  C  D  Eb F  G  |
-| VII | Altered     | 1 2 1 2 2 2 2 | C  Db Eb E  Gb Ab Bb | B  C  D  Eb F  G  A  |
-</code></pre></div>
-<h2 id="harmonic-minor-scales">Harmonic Minor scales</h2>
-<p>Heptatonic scale with one interval of 3 semitones </p>
-<div class="highlight"><pre><span></span><code>| N   | Name         | Pattern       | Transposed on C      | Rotations            |
-|-----|--------------|---------------|----------------------|----------------------|
-| I   | Harmonic Min | 2 1 2 2 1 3 1 | C  D  Eb F  G  Ab B  | C  D  Eb F  G  Ab B  |
-| II  | Locrian 6    | 1 2 2 1 3 1 2 | C  Db Eb F  Gb A  Bb | D  Eb F  G  Ab B  C  |
-| III | Major #5     | 2 2 1 3 1 2 1 | C  D  E  F  G# A  B  | Eb F  G  Ab B  C  D  | 
-| IV  | Dorian #4    | 2 1 3 1 2 1 2 | C  D  Eb F# G  A  Bb | F  G  Ab B  C  D  Eb | 
-| V   | Phrygian Dom | 1 3 1 2 1 2 2 | C  Db E  F  G  Ab Bb | G  Ab B  C  D  Eb F  | 
-| VI  | Lydian #2    | 3 1 2 1 2 2 1 | C  D# E  F# G  A  B  | Ab B  C  D  Eb F  G  |
-| VII | Altered bb7  | 1 2 1 2 2 1 3 | C  Db Eb Fb Gb Ab A  | B  C  D  Eb F  G  Ab |
-</code></pre></div>
-<h2 id="harmonic-major-scales">Harmonic Major scales</h2>
-<p>Heptatonic scale with one interval of 3 semitones and 3 half tones intervales.
-Like minor scale ends with 1 3 1, but starts with a major 2 2, instead of a minor 2 1.</p>
-<div class="highlight"><pre><span></span><code>| N   | Name        | Pattern       | Transposed on C      | Rotations            |
-|-----|-------------|---------------|----------------------|----------------------|
-| I   | Melodic Maj | 2 2 1 2 1 3 1 | C  D  E  F  G  Ab B  | C  D  E  F  G  Ab B  |
-| II  | Dorian b5   | 2 1 2 1 3 1 2 | C  D  Eb F  Gb A  Bb | D  E  F  G  Ab B  C  |
-| III | Phrygian b4 | 1 2 1 3 1 2 2 | C  Db Eb E  G  Ab Bb | E  F  G  Ab B  C  D  |
-| IV  | Lydian b3   | 2 1 3 1 2 2 1 | C  D  Eb F# G  A  B  | F  G  Ab B  C  D  E  |
-| V   | Myxolyd. b2 | 1 3 1 2 2 1 2 | C  Db E  F  G  A  Bb | G  Ab B  C  D  E  F  |
-| VI  | Lyd. aug#2  | 3 1 2 2 1 2 1 | C  D# E  F# G# A  B  | Ab B  C  D  E  F  G  |
-| VII | Locryan bb7 | 1 2 2 1 2 1 3 | C  Db Eb F  Gb Ab A  | B  C  D  E  F  G  Ab |
-</code></pre></div>
-<h2 id="diminished-scales">Diminished scales</h2>
-<p>Octatonic scale of altering half and full tones.</p>
-<div class="highlight"><pre><span></span><code>| N   | Name             | Pattern         | Transposed on C         | Rotations            |
-|-----|------------------|-----------------|-------------------------|----------------------|
-| I   | Diminished       | 2 1 2 1 2 1 2 1 | C  D  Eb F  Gb Ab A  B  | C  D  E  F  G  Ab B  |
-| II  | Dimini. inverted | 1 2 1 2 1 2 1 2 | C  Db Eb E  Gb F  A Bb  | D  E  F  G  Ab B  C  |
-</code></pre></div>
 <h2 id="pentatonic-scale">Pentatonic scale</h2>
 <p>Pentatonic scale is used by many cultures.
 An octave has 5 notes a fifth away (7 semitones).</p>
@@ -1554,6 +1631,52 @@ No modes available.</p>
 </ul>
 </li>
 </ul>
+<h2 id="melodic-minor-scales">Melodic Minor scales</h2>
+<p><a href="https://www.youtube.com/watch?v=Vq2xt2D3e3E">Jazz scales: Melodic, Harmonic, Augmented, Diminished...</a></p>
+<p>Heptatonic scales which are chromatic transpositions or rotations of the C Melodic minor scale
+Like diatonic scales, also has 2 halftones and 5 fulltones, but now the two halftones are separated one fulltone.</p>
+<div class="highlight"><pre><span></span><code>| N   | Name        | Pattern       | Transposed on C      | Rotations            |
+|-----|-------------|---------------|----------------------|----------------------|
+| I   | Melodic Min | 2 1 2 2 2 2 1 | C  D  Eb F  G  A  B  | C  D  Eb F  G  A  B  |
+| II  | Dorian b2   | 1 2 2 2 2 1 2 | C  Db Eb F  G  A  Bb | D  Eb F  G  A  B  C  |
+| III | Lydian Aug  | 2 2 2 2 1 2 1 | C  D  E  F# G# A  B  | Eb F  G  A  B  C  D  |
+| IV  | Lydian Dom  | 2 2 2 1 2 1 2 | C  D  E  F# G  A  Bb | F  G  A  B  C  D  E  |
+| V   | Aeolian Dom | 2 2 1 2 1 2 2 | C  D  E  F  G  Ab Bb | G  A  B  C  D  Eb F  |
+| VI  | Half Dimin. | 2 1 2 1 2 2 2 | C  D  Eb F  Gb Ab Bb | A  B  C  D  Eb F  G  |
+| VII | Altered     | 1 2 1 2 2 2 2 | C  Db Eb E  Gb Ab Bb | B  C  D  Eb F  G  A  |
+</code></pre></div>
+<h2 id="harmonic-minor-scales">Harmonic Minor scales</h2>
+<p>Heptatonic scale with one interval of 3 semitones </p>
+<div class="highlight"><pre><span></span><code>| N   | Name         | Pattern       | Transposed on C      | Rotations            |
+|-----|--------------|---------------|----------------------|----------------------|
+| I   | Harmonic Min | 2 1 2 2 1 3 1 | C  D  Eb F  G  Ab B  | C  D  Eb F  G  Ab B  |
+| II  | Locrian 6    | 1 2 2 1 3 1 2 | C  Db Eb F  Gb A  Bb | D  Eb F  G  Ab B  C  |
+| III | Major #5     | 2 2 1 3 1 2 1 | C  D  E  F  G# A  B  | Eb F  G  Ab B  C  D  | 
+| IV  | Dorian #4    | 2 1 3 1 2 1 2 | C  D  Eb F# G  A  Bb | F  G  Ab B  C  D  Eb | 
+| V   | Phrygian Dom | 1 3 1 2 1 2 2 | C  Db E  F  G  Ab Bb | G  Ab B  C  D  Eb F  | 
+| VI  | Lydian #2    | 3 1 2 1 2 2 1 | C  D# E  F# G  A  B  | Ab B  C  D  Eb F  G  |
+| VII | Altered bb7  | 1 2 1 2 2 1 3 | C  Db Eb Fb Gb Ab A  | B  C  D  Eb F  G  Ab |
+</code></pre></div>
+<h2 id="harmonic-major-scales">Harmonic Major scales</h2>
+<p>Heptatonic scale with one interval of 3 semitones and 3 half tones intervales.
+Like minor scale ends with 1 3 1, but starts with a major 2 2, instead of a minor 2 1.</p>
+<div class="highlight"><pre><span></span><code>| N   | Name        | Pattern       | Transposed on C      | Rotations            |
+|-----|-------------|---------------|----------------------|----------------------|
+| I   | Melodic Maj | 2 2 1 2 1 3 1 | C  D  E  F  G  Ab B  | C  D  E  F  G  Ab B  |
+| II  | Dorian b5   | 2 1 2 1 3 1 2 | C  D  Eb F  Gb A  Bb | D  E  F  G  Ab B  C  |
+| III | Phrygian b4 | 1 2 1 3 1 2 2 | C  Db Eb E  G  Ab Bb | E  F  G  Ab B  C  D  |
+| IV  | Lydian b3   | 2 1 3 1 2 2 1 | C  D  Eb F# G  A  B  | F  G  Ab B  C  D  E  |
+| V   | Myxolyd. b2 | 1 3 1 2 2 1 2 | C  Db E  F  G  A  Bb | G  Ab B  C  D  E  F  |
+| VI  | Lyd. aug#2  | 3 1 2 2 1 2 1 | C  D# E  F# G# A  B  | Ab B  C  D  E  F  G  |
+| VII | Locryan bb7 | 1 2 2 1 2 1 3 | C  Db Eb F  Gb Ab A  | B  C  D  E  F  G  Ab |
+</code></pre></div>
+<h2 id="diminished-scales">Diminished scales</h2>
+<p>Octatonic scale of altering half and full tones.</p>
+<div class="highlight"><pre><span></span><code>| N   | Name             | Pattern         | Transposed on C         | Rotations            |
+|-----|------------------|-----------------|-------------------------|----------------------|
+| I   | Diminished       | 2 1 2 1 2 1 2 1 | C  D  Eb F  Gb Ab A  B  | C  D  E  F  G  Ab B  |
+| II  | Dimini. inverted | 1 2 1 2 1 2 1 2 | C  Db Eb E  Gb F  A Bb  | D  E  F  G  Ab B  C  |
+</code></pre></div>
 <h2 id="other-scales">Other scales</h2>
 <div class="highlight"><pre><span></span><code>C  Eb F  Gb G  Bb - 3 2 1 1 3 2 - Blues (minor pentatonic plus a perfect 4th)
 </code></pre></div>
@@ -1572,6 +1695,42 @@ No modes available.</p>
       </main>
       
         <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../music-harmony/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Harmony: Notes, Scales and Chords 🎶" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Harmony: Notes, Scales and Chords 🎶
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../guitar-technics/" class="md-footer__link md-footer__link--next" aria-label="Next: Técnica de Guitarra 🎸" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Técnica de Guitarra 🎸
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
