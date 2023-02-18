@@ -20,51 +20,34 @@ Diatonic Modes:
 	| VI  | Aeolian    | 2 1 2 2 1 2 2 | C D  Eb F  G  Ab Bb | A B C D E F G | Natural Minor
 	| VII | Locrian    | 1 2 2 1 2 2 2 | C Db Eb F  Gb Ab Bb | B C D E F G A | 
 
-From C Major we can go adding flats to obtain the tonalities:
+Insights:
 
-- I Ionian Major (all white notes)
-- b7 -> V Mixolydians
-- b3 -> II Dorian
-- b6 -> VI Aeolian (nat min)
-- b2 -> III Phrygian
-- b5 -> VII Locrian
+- We can get any mode with white keys just by stressing the proper root.
+- Keeping the root in C, we can obtain all the modes by adding progresivelly flats (or sharps)
 
-Moods of modes: https://www.youtube.com/watch?v=8i7K9GYzbIY
+A mechanical way of learning modes on C,
 
-- Modes with a major third (+4) are called major:
-	- Resting chord (tonic) is Major: I
-	- Happy mood
-	- I Ionian:
-		- Major key
-		- The dominant 7th is the only dominant minor 7th
-		- Contains B and F that lead to C and G
-		- G7 C is a perfect closure (Chinpon)
-		- Happy + Ritmic
-	- IV Lydian
-		- F -> F# (augmented 4th)
-		- Happy + Brilliant, magic
-	- V Mixolydian
-		- Dominant 7th is minor with minor 7th
-		- Sounds milder but also epic
-		- Also epic because bVII  BbMaj
-		- Happy + Epic
-- Modes with a minor third (+3) are called minor:
-	- Resting chord (tonic) is Minor: i
-	- Sad mood
-	- VI Aeolian:
-		- Mood: Sad + epic
-		- Dominant vii
-	- II Dorian
-		- In between Aeolean and Mixolyidian
-		- Has the Epic chord of Mixolydian bVII BbMaj
-		- IVMaj FMaj is also a happy/force contrast
-	- III Phrygian
-		- Domminant is a B∅7
-		- Inquietante
-- VII Locrian tonic chord is neither Major nor minor, it is a dim chord
-	- Weird mood
-	- Resting chord is a diminished 5th chord
-	- The only one with the bV
+- as we jump to the next 5th mode, we just add a flat.
+- flats are chosen interleaving one from the 3 blacks and next from 2 blacks group
+- pick the flat on the right
+- to obtain IV we sharp instead flat and pick from left
+
+In action:
+
+	_x_x__x_x_x_
+	o o o Xo o o IV  #4 Lydian (Exception from major sharps F)
+	o o oo o o o I      Ionian (Major, the reference, all whites)
+	o o oo o oX  V   b7 Mixolydian (flats B)
+	o oX o o ox  II  b3 Dorian (flats E)
+	o ox o oX x  VI  b6 Aeolian (flats A)
+	oX x o ox x  III b2 Phrygian (flats D)
+	ox x oX x x  VII b5 Locrian (flats G)
+	_x_x__x_x_x_
+	 4 2  5 3 1  (Order to add flats)
+
+::: note
+	If we extend the method we will get the other 5 tonalities,
+	but they do not include the root (C) so they are not modes of the scale.
 
 Each mode has their chords:
 
@@ -77,6 +60,66 @@ Each mode has their chords:
 	| V   | Mixolydian | G A B C D E F | GMaj  | GM7 | Dmin | Gm7    |
 	| VI  | Aeolian    | A B C D E F G | Amin  | Am7 | Emin | Em7    |
 	| VII | Locrian    | B C D E F G A | Bdim  | B∅7 | FMaj | FM7    |
+
+- The tonic (rest) chord: I III V
+- The dominant (tension) chord: V VII II
+- The 7th: I III V VII
+- The dominant 7th: V VII II IV
+
+The tonic chord provides the majority or minority or neither (locrian) character of the mode.
+
+Moods of modes: https://www.youtube.com/watch?v=8i7K9GYzbIY
+
+### Major modes (Ionian, Lydian, Mixolydian)
+
+- Modes with a major third (+4) are called major.
+- Resting chord (tonic) is Major: I
+- They bring a happy mood
+
+Which are
+
+- I Ionian:
+	- Major key
+	- The dominant 7th is the only dominant minor 7th
+	- Contains B and F that lead to C and G
+	- G7 C is a perfect closure (Chinpon)
+	- Happy + Ritmic
+- IV Lydian
+	- F -> F# (augmented 4th)
+	- Happy + Brilliant, magic
+- V Mixolydian
+	- Dominant 7th is minor with minor 7th
+	- Sounds milder but also epic
+	- Also epic because bVII  BbMaj
+	- Happy + Epic
+
+### Minor modes (Aeolian, Dorian, Phrygian)
+
+- Modes with a minor third (+3) are called major.
+- Resting chord (tonic) is a minor triad: ia
+- They bring a sad mood
+
+Which are
+
+- VI Aeolian:
+	- Mood: Sad + epic
+	- Dominant vii
+- II Dorian
+	- In between Aeolean and Mixolyidian
+	- Has the Epic chord of Mixolydian bVII BbMaj
+	- IVMaj FMaj is also a happy/force contrast
+- III Phrygian
+	- Domminant is a B∅7
+	- Inquietante
+
+### Neither major neither minor
+
+VII Locrian mode is quite special as the resting triad is a dim chord, neither major nor minor.
+
+- VII Locrian tonic chord is neither Major nor minor, it is a dim chord
+	- Weird mood
+	- Resting chord is a diminished 5th chord
+	- The only one with the bV
 
 ## Pentatonic scale
 
@@ -218,7 +261,7 @@ Like diatonic scales, also has 2 halftones and 5 fulltones, but now the two half
 
 ## Harmonic Minor scales
 
-Heptatonic scale with one interval of 3 semitones 
+Heptatonic scale an harmonic sequence 1 3 1 and a minor sequence 2 1 2 2
 
 	| N   | Name         | Pattern       | Transposed on C      | Rotations            |
 	|-----|--------------|---------------|----------------------|----------------------|
@@ -232,8 +275,7 @@ Heptatonic scale with one interval of 3 semitones
 
 ## Harmonic Major scales
 
-Heptatonic scale with one interval of 3 semitones and 3 half tones intervales.
-Like minor scale ends with 1 3 1, but starts with a major 2 2, instead of a minor 2 1.
+Heptatonic scale an harmonic sequence 1 3 1 and a major sequence 2 2 1 2
 
 
 	| N   | Name        | Pattern       | Transposed on C      | Rotations            |
@@ -245,6 +287,30 @@ Like minor scale ends with 1 3 1, but starts with a major 2 2, instead of a mino
 	| V   | Myxolyd. b2 | 1 3 1 2 2 1 2 | C  Db E  F  G  A  Bb | G  Ab B  C  D  E  F  |
 	| VI  | Lyd. aug#2  | 3 1 2 2 1 2 1 | C  D# E  F# G# A  B  | Ab B  C  D  E  F  G  |
 	| VII | Locryan bb7 | 1 2 2 1 2 1 3 | C  Db Eb F  Gb Ab A  | B  C  D  E  F  G  Ab |
+
+
+## Double Harmonic scales
+
+Has two harmonic sequences 1 3 1 and a full tone.
+
+	| N   | Name        | Pattern       | Transposed on C      | Rotations            |
+	|-----|-------------|---------------|----------------------|----------------------|
+	| I   | D.Harm.Maj. | 1 3 1 2 1 3 1 | C  Db E  F  G  Ab B  | C  Db E  F  G  Ab B  | Bizantine
+	| II  | Lydian #2#6 | 3 1 2 1 3 1 1 | C  D# F  F# G  A# B  | Db E  F  G  Ab B  C  |
+	| III | UltraPhryg. | 1 2 1 3 1 1 3 | C  Db Eb E  G  Ab A  | E  F  G  Ab B  C  Db |
+	| IV  | Gypsy Minor | 2 1 3 1 1 3 1 | C  D  Eb F# G  Ab B  | F  G  Ab B  C  Db E  | Hungarian minor
+	| V   | Oriental    | 1 3 1 1 3 1 2 | C  Db E  F  Gb A  Bb | G  Ab B  C  Db E  F  |
+	| VI  | Ionian #2#5 | 3 1 1 3 1 2 1 | C  D# E  F  G# A  B  | Ab B  C  Db E  F  G  |
+	| VII | Loc. bb3bb7 | 1 1 3 1 2 1 3 | C  Db D  F  Gb Ab A  | B  C  Db E  F  G  Ab |
+
+AKA
+
+- North Indian Thaat named Bhairav
+- South Indian (Carnatic) Melakarta named Mayamalavagowla. 
+
+Songs:
+
+- Misirlou E Double Harmonic
 
 
 ## Diminished scales
@@ -260,8 +326,12 @@ Octatonic scale of altering half and full tones.
 ## Other scales
 
 	C  Eb F  Gb G  Bb - 3 2 1 1 3 2 - Blues (minor pentatonic plus a perfect 4th)
- 
-## Non-western scales
+
+## Non-western scales (Western classic view)
+
+Taken from [here](https://ukebuddy.com/ukulele-scales/C-gypsy-scale)
+Origins are western perspective on how it sounds.
+Indeed each of those culture use many scales including some of the considered "western scales".
 
 Pentatonics
 
@@ -271,7 +341,9 @@ Pentatonics
 	| Chinese    | 1     3 #4  5     7 | 4 2 1 4 1     | C     E  F# G     B  |
 	| Japanese   | 1 b2     4  5 b6    | 1 4 2 1 4     | C  Bb    F  G  Ab    |
 
-Heptatonics
+Heptatonics:
+[Egyptian](),
+[Persian](https://en.wikipedia.org/wiki/Persian_scale),
 
 	| Origin     | intervals           |               |                      |
 	|------------|---------------------|---------------|----------------------|
@@ -281,5 +353,8 @@ Heptatonics
 	| Jewish     | 1 b2  3  4  5 b6 b7 | 1 3 1 2 1 2 2 | C  Db E  F  G  Ab Bb |
 	| Gypsy      | 1  2 b3 #4  5 b6 b7 | 2 1 3 1 1 2 2 | C  D  Eb F# G  Ab Bb |
 
+1 3 1 2 1 3 1
+
+C Db E F G Ab B
 
 
