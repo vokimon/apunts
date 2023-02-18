@@ -261,6 +261,25 @@ Octatonic scale of altering half and full tones.
 
 	C  Eb F  Gb G  Bb - 3 2 1 1 3 2 - Blues (minor pentatonic plus a perfect 4th)
  
+## Non-western scales
+
+Pentatonics
+
+	| Origin     | intervals           |               |                      |
+	|------------|---------------------|---------------|----------------------|
+	| Egyptian   | 1  2     4  5    b7 | 2 3 2 3 2     | C  D     F  G     Bb |
+	| Chinese    | 1     3 #4  5     7 | 4 2 1 4 1     | C     E  F# G     B  |
+	| Japanese   | 1 b2     4  5 b6    | 1 4 2 1 4     | C  Bb    F  G  Ab    |
+
+Heptatonics
+
+	| Origin     | intervals           |               |                      |
+	|------------|---------------------|---------------|----------------------|
+	| Persian    | 1 b2  3  4 #4 b6  7 | 1 3 1 1 2 3 1 | C  Db E  F  Gb Ab B  |
+	| Indian     | 1  2  3  4  5 b6 b7 | 2 2 1 2 1 2 2 | C  D  E  F  G  Ab Bb |
+	| Arabic     | 1  2  3  4 #4 b6 b7 | 2 2 1 1 2 2 2 | C  D  E  F  Gb Ab Bb |
+	| Jewish     | 1 b2  3  4  5 b6 b7 | 1 3 1 2 1 2 2 | C  Db E  F  G  Ab Bb |
+	| Gypsy      | 1  2 b3 #4  5 b6 b7 | 2 1 3 1 1 2 2 | C  D  Eb F# G  Ab Bb |
 
 
 
