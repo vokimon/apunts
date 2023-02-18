@@ -118,6 +118,24 @@ Derived scales: different scales can be obtained from a reference one, by rotati
 	- Transposition unit: semitones
 	- A transposition does not change the mood but it can ease the performance with a given instrument
 
+Scale families: each is a circular sequence of intervals, you can transpose and rotate.
+
+- Pentatonic: 5 notes
+	- 2 2 3 2 3: **Pentatonic**
+- Heptatonic: 6 notes
+	- 2 2 2 2 2 2: **Whole tone**
+- Heptatonic: 7 notes
+	- 2 2 1 2 2 2 1: **Diatonic:** Dos semitonos separados por 2 y 3 tonos en cada lado
+	- 2 1 2 2 2 2 1: **Melodic Minor:** Dos semitonos separados 1 y 4 tonos en cada lado
+	- 2 2 1 2 1 3 1: **Harmonic Major:** 
+	- 2 1 2 2 1 3 1: **Harmonic Minor:**
+	- 3 2 1 1 3 2 1: **Blues:**
+- Octatonic: 8 notes
+	- 2 1 2 1 2 1 2 1: **Diminished**
+- Dodecatonic: 12 notes
+	- 1 1 1 1 1 1 1 1 1 1 1 1: **Chromatic scale**
+
+
 ### Diatonic scales
 
 A diatonic scale is a scale of 7 tones (heptatonal) that has 2 semitones steps and 5 tone steps where the semitones are separated at least by two full tones
@@ -136,7 +154,7 @@ Diatonic Modes:
 	| VI  | Aeolian    | 2 1 2 2 1 2 2 | C D  Eb F  G  Ab Bb | A B C D E F G | Amin  | Am7 | Emin | Em7    | Natural Minor
 	| VII | Locrian    | 1 2 2 1 2 2 2 | C Db Eb F  Gb Ab Bb | B C D E F G A | Bdim  | B∅7 | FMaj | FM7    | 
 
-
+- I Ionian -> b7 -> V Mixolydian -> b3 -> II Dorian -> b6 -> VI Aeolian (nat min) -> b2 -> III Phrygian -> b5 -> VII Locrian
 - Modes with a major third (+4) are called major:
 	- Resting chord (tonic) is Major: I
 	- Happy mood
@@ -174,6 +192,63 @@ Diatonic Modes:
  
 
 Moods of modes: https://www.youtube.com/watch?v=8i7K9GYzbIY
+
+### Melodic Minor scales
+
+[Jazz scales: Melodic, Harmonic, Augmented, Diminished...](https://www.youtube.com/watch?v=Vq2xt2D3e3E)
+
+Heptatonic scales which are chromatic transpositions or rotations of the C Melodic minor scale
+Like diatonic scales, also has 2 halftones and 5 fulltones, but now the two halftones are separated one fulltone.
+
+	| N   | Name        | Pattern       | Transposed on C      | Rotations            |
+	|-----|-------------|---------------|----------------------|----------------------|
+	| I   | Melodic Min | 2 1 2 2 2 2 1 | C  D  Eb F  G  A  B  | C  D  Eb F  G  A  B  |
+	| II  | Dorian b2   | 1 2 2 2 2 1 2 | C  Db Eb F  G  A  Bb | D  Eb F  G  A  B  C  |
+	| III | Lydian Aug  | 2 2 2 2 1 2 1 | C  D  E  F# G# A  B  | Eb F  G  A  B  C  D  |
+	| IV  | Lydian Dom  | 2 2 2 1 2 1 2 | C  D  E  F# G  A  Bb | F  G  A  B  C  D  E  |
+	| V   | Aeolian Dom | 2 2 1 2 1 2 2 | C  D  E  F  G  Ab Bb | G  A  B  C  D  Eb F  |
+	| VI  | Half Dimin. | 2 1 2 1 2 2 2 | C  D  Eb F  Gb Ab Bb | A  B  C  D  Eb F  G  |
+	| VII | Altered     | 1 2 1 2 2 2 2 | C  Db Eb E  Gb Ab Bb | B  C  D  Eb F  G  A  |
+
+### Harmonic Minor scales
+
+Heptatonic scale with one interval of 3 semitones 
+
+	| N   | Name         | Pattern       | Transposed on C      | Rotations            |
+	|-----|--------------|---------------|----------------------|----------------------|
+	| I   | Harmonic Min | 2 1 2 2 1 3 1 | C  D  Eb F  G  Ab B  | C  D  Eb F  G  Ab B  |
+	| II  | Locrian 6    | 1 2 2 1 3 1 2 | C  Db Eb F  Gb A  Bb | D  Eb F  G  Ab B  C  |
+	| III | Major #5     | 2 2 1 3 1 2 1 | C  D  E  F  G# A  B  | Eb F  G  Ab B  C  D  | 
+	| IV  | Dorian #4    | 2 1 3 1 2 1 2 | C  D  Eb F# G  A  Bb | F  G  Ab B  C  D  Eb | 
+	| V   | Phrygian Dom | 1 3 1 2 1 2 2 | C  Db E  F  G  Ab Bb | G  Ab B  C  D  Eb F  | 
+	| VI  | Lydian #2    | 3 1 2 1 2 2 1 | C  D# E  F# G  A  B  | Ab B  C  D  Eb F  G  |
+	| VII | Altered bb7  | 1 2 1 2 2 1 3 | C  Db Eb Fb Gb Ab A  | B  C  D  Eb F  G  Ab | 
+
+### Harmonic Major scales
+
+Heptatonic scale with one interval of 3 semitones and 3 half tones intervales.
+Like minor scale ends with 1 3 1, but starts with a major 2 2, instead of a minor 2 1.
+
+
+	| N   | Name        | Pattern       | Transposed on C      | Rotations            |
+	|-----|-------------|---------------|----------------------|----------------------|
+	| I   | Melodic Maj | 2 2 1 2 1 3 1 | C  D  E  F  G  Ab B  | C  D  E  F  G  Ab B  |
+	| II  | Dorian b5   | 2 1 2 1 3 1 2 | C  D  Eb F  Gb A  Bb | D  E  F  G  Ab B  C  |
+	| III | Phrygian b4 | 1 2 1 3 1 2 2 | C  Db Eb E  G  Ab Bb | E  F  G  Ab B  C  D  |
+	| IV  | Lydian b3   | 2 1 3 1 2 2 1 | C  D  Eb F# G  A  B  | F  G  Ab B  C  D  E  |
+	| V   | Myxolyd. b2 | 1 3 1 2 2 1 2 | C  Db E  F  G  A  Bb | G  Ab B  C  D  E  F  |
+	| VI  | Lyd. aug#2  | 3 1 2 2 1 2 1 | C  D# E  F# G# A  B  | Ab B  C  D  E  F  G  |
+	| VII | Locryan bb7 | 1 2 2 1 2 1 3 | C  Db Eb F  Gb Ab A  | B  C  D  E  F  G  Ab |
+
+
+### Diminished scales
+
+Octatonic scale of altering half and full tones.
+
+	| N   | Name             | Pattern         | Transposed on C         | Rotations            |
+	|-----|------------------|-----------------|-------------------------|----------------------|
+	| I   | Diminished       | 2 1 2 1 2 1 2 1 | C  D  Eb F  Gb Ab A  B  | C  D  E  F  G  Ab B  |
+	| II  | Dimini. inverted | 1 2 1 2 1 2 1 2 | C  Db Eb E  Gb F  A Bb  | D  E  F  G  Ab B  C  |
 
 
 ### Pentatonic scale
