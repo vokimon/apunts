@@ -10,15 +10,15 @@ In summary: any rotation or transposition of the CMajor scale
 
 Diatonic Modes:
 
-	| N   | Name       | Pattern       | On C                | Natural notes | Tonic | 7th | Dom  | Dom7th | AKA
-	|-----|------------|---------------|---------------------|---------------|-------|-----|------|--------|----------
-	| I   | Ionian     | 2 2 1 2 2 2 1 | C D  E  F  G  A  B  | C D E F G A B | CMaj  | CM7 | GMaj | G7     | Major
-	| II  | Dorian     | 2 1 2 2 2 1 2 | C D  Eb F  G  A  Bb | D E F G A B C | Dmin  | Dm7 | Amin | Am7    | 
-	| III | Phrygian   | 1 2 2 2 1 2 2 | C Db Eb F  G  Ab Bb | E F G A B C D | Emin  | Em7 | Bdim | B∅7    | 
-	| IV  | Lydian     | 2 2 2 1 2 2 1 | C D  E  F# G  A  B  | F G A B C D E | FMaj  | FM7 | GMaj | GM7    | 
-	| V   | Mixolydian | 2 2 1 2 2 1 2 | C D  E  F  G  A  Bb | G A B C D E F | GMaj  | GM7 | Dmin | Gm7    | 
-	| VI  | Aeolian    | 2 1 2 2 1 2 2 | C D  Eb F  G  Ab Bb | A B C D E F G | Amin  | Am7 | Emin | Em7    | Natural Minor
-	| VII | Locrian    | 1 2 2 1 2 2 2 | C Db Eb F  Gb Ab Bb | B C D E F G A | Bdim  | B∅7 | FMaj | FM7    | 
+	| N   | Name       | Pattern       | On C                | Natural notes | AKA
+	|-----|------------|---------------|---------------------|---------------|----------
+	| I   | Ionian     | 2 2 1 2 2 2 1 | C D  E  F  G  A  B  | C D E F G A B | Major
+	| II  | Dorian     | 2 1 2 2 2 1 2 | C D  Eb F  G  A  Bb | D E F G A B C | 
+	| III | Phrygian   | 1 2 2 2 1 2 2 | C Db Eb F  G  Ab Bb | E F G A B C D | 
+	| IV  | Lydian     | 2 2 2 1 2 2 1 | C D  E  F# G  A  B  | F G A B C D E | 
+	| V   | Mixolydian | 2 2 1 2 2 1 2 | C D  E  F  G  A  Bb | G A B C D E F | 
+	| VI  | Aeolian    | 2 1 2 2 1 2 2 | C D  Eb F  G  Ab Bb | A B C D E F G | Natural Minor
+	| VII | Locrian    | 1 2 2 1 2 2 2 | C Db Eb F  Gb Ab Bb | B C D E F G A | 
 
 From C Major we can go adding flats to obtain the tonalities:
 
@@ -65,7 +65,18 @@ Moods of modes: https://www.youtube.com/watch?v=8i7K9GYzbIY
 	- Weird mood
 	- Resting chord is a diminished 5th chord
 	- The only one with the bV
- 
+
+Each mode has their chords:
+
+	| N   | Name       | Natural notes | Tonic | 7th | Dom  | Dom7th |
+	|-----|------------|---------------|-------|-----|------|--------|
+	| I   | Ionian     | C D E F G A B | CMaj  | CM7 | GMaj | G7     |
+	| II  | Dorian     | D E F G A B C | Dmin  | Dm7 | Amin | Am7    |
+	| III | Phrygian   | E F G A B C D | Emin  | Em7 | Bdim | B∅7    |
+	| IV  | Lydian     | F G A B C D E | FMaj  | FM7 | GMaj | GM7    |
+	| V   | Mixolydian | G A B C D E F | GMaj  | GM7 | Dmin | Gm7    |
+	| VI  | Aeolian    | A B C D E F G | Amin  | Am7 | Emin | Em7    |
+	| VII | Locrian    | B C D E F G A | Bdim  | B∅7 | FMaj | FM7    |
 
 ## Pentatonic scale
 
@@ -105,13 +116,21 @@ Songs in pentatonics
 
 Modes:
 
-	| N   | Western             | Intervals | On C         | CMaj Rot  | Natural transpositions | Altered trans. |
-	|-----|---------------------|-----------|--------------|-----------|------------------------|----------------|
-	| I   | Major pentatonic    | 2 2 3 2 3 | C D  E G  A  | C D E G A | F G A C D - G A B D E  | Gb Ab Bb Db Eb |
-	| II  | Egyptian, suspended | 2 3 2 3 2 | C D  F G  A# | D E G A C | G A C D F - A B D E G  | Ab Bb Db Eb Gb |
-	| III | Blues minor         | 3 2 3 2 2 | C D# F G# A# | E G A C D | A C D F G - B D E G A  | Bb Db Eb Gb Ab |
-	| IV  | Blues major         | 2 3 2 2 3 | C D  F G  A  | G A C D E | C D F G A - D E G A B  | Db Eb Gb Ab Bb |
-	| V   | Minor pentatonic    | 3 2 2 3 2 | C D# F G  A# | A C D E G | D F G A C - E G A B D  | Eb Gb Ab Bb Db |
+	| N   | Western             | Intervals | On C         | CMaj Rot  |
+	|-----|---------------------|-----------|--------------|-----------|
+	| I   | Major pentatonic    | 2 2 3 2 3 | C D  E G  A  | C D E G A |
+	| II  | Egyptian, suspended | 2 3 2 3 2 | C D  F G  A# | D E G A C |
+	| III | Blues minor         | 3 2 3 2 2 | C D# F G# A# | E G A C D |
+	| IV  | Blues major         | 2 3 2 2 3 | C D  F G  A  | G A C D E |
+	| V   | Minor pentatonic    | 3 2 2 3 2 | C D# F G  A# | A C D E G |
+
+	| N   | Western             | CMaj Rot  | Natural transpositions | Altered trans. |
+	|-----|---------------------|-----------|------------------------|----------------|
+	| I   | Major pentatonic    | C D E G A | F G A C D - G A B D E  | Gb Ab Bb Db Eb |
+	| II  | Egyptian, suspended | D E G A C | G A C D F - A B D E G  | Ab Bb Db Eb Gb |
+	| III | Blues minor         | E G A C D | A C D F G - B D E G A  | Bb Db Eb Gb Ab |
+	| IV  | Blues major         | G A C D E | C D F G A - D E G A B  | Db Eb Gb Ab Bb |
+	| V   | Minor pentatonic    | A C D E G | D F G A C - E G A B D  | Eb Gb Ab Bb Db |
 
 - Major: es la unica que puede construir un acorde mayor en C (C E G), es la unica que tiene E, construida con dos segundas
 - Menor: es la única que puede construir un acorde menor en C (C D# G)
