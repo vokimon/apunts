@@ -142,14 +142,14 @@ Ademas puede usar algunos valores de atajo:
 Por defecto, el comportamiento es:
 
 - Los elementos se apilarán al inicio de la pista en la dirección principal dejando cualquier espacio sobrante al final.
-  - En flujo `row wrap`: los elementos se apilan a la izquierda de la linea.
-  - `justify-content: flex-start`
+    - En flujo `row wrap`: los elementos se apilan a la izquierda de la linea.
+    - `justify-content: flex-start`
 - Las pistas de elementos se wrappearan al inicio de la direccion de cruce dejando cualquier espacio sobrante al final.
-  - En flujo `row wrap`: las lineas se apilan arriba del contenedor.
-  - `align-content: flex-start`
+    - En flujo `row wrap`: las lineas se apilan arriba del contenedor.
+    - `align-content: flex-start`
 - Los elementos de cada pista se estiraran en el eje de cruce hasta alcanzar el tamaño del mayor elemento de la pista.
-  - En flujo `row wrap`: los elementos expandiran su altura a la del elemento más alto de cada linea.
-  - `align-items: stretch`
+    - En flujo `row wrap`: los elementos expandiran su altura a la del elemento más alto de cada linea.
+    - `align-items: stretch`
 
 El comportamiento esta gobernado por las propiedades `justify/align-content/items`.
 La propiedad `justify-items` no tiene sentido en Flexbox, pero sí se aplica en Grid.
