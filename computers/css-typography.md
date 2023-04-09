@@ -43,7 +43,9 @@ Text features affecting Readability:
 
 - Type size: too small is hard to read
 - Type case: long text in all caps is hard to read
-- Line spacing: 
+- Line spacing (leading): Distance between baselines.
+- Paragraph spacing: Added space between lines in different paragraphs (must be added to the leading)
+
 - Long lines: (>70chars) hard to follow and changing line.
 - Short lines (<45 chars) interrupts too often the reading flow.
 - Color Contrast: wcag 4.5:1 contrast
@@ -109,6 +111,7 @@ Numbers:
 
 - Old style figures: Go down the baseline, good for read
 - Lining figures: Same height and base
+- Tabular figures: Same width so that digits are aligned (versus proportional figures)
 
 Target users
 
