@@ -1,14 +1,103 @@
-::: figure trigo_cebada_centeno_avena.jpg
-	Diferencias fisicas entre cereales
+## Baies, Bayas, Berries
 
 lat: Prunus espinosa
-	cat: aranyò, aranyoner (arbol) prunyoner, prinyoner, escanyagats, arç negre o barsa/barza
+	ca: aranyò, aranyoner (arbol) prunyoner, prinyoner, escanyagats, arç negre o barsa/barza
 	en: sloe (fruit) blackthorn (arbol)
 	es: endrinas, arañon (fruit), endrino (arbol)
 
+### Nabius
+
+lat: Vaccinium Cyanococcus (subgenero)
+	ca: nabiu, avajonera, mirtil, moixereta, nabissera, nabiner
+	es: arandano, 
+
+lat: Vaccinium Myrtillus
+	ca: mirtil
+	es: arándano silvestre
+	en: bilberry, european blueberry
+
+lat: Vaccinium Oxycoccus
+	ca: nabiu vermell
+	es: arandano rojo
+	en: cranberry
+
+lat: Vaccinium corymbosum
+	ca: nabiu blau
+	es: arandano
+	en: blueberry
+
+lat: Arbutus unedo
+	en: strawberry tree
+	ca: arboç, arborcer, cirerer d'arboç
+	es: madroño
+
+lat: Rubus idaeus
+	es: franbuesa
+	en: raspberry
+	ca: gerd
+
+lat: Rubus caesius
+	es: zarza pajera
+	ca: romegueró
+
+lat: Ribes (Gènere)
+	en: gooseberry, currant
+	ca: grosella
+	es: grosella
+
+lat: Phyllanthus acidus
+	ca: grosella estrellada
+	es: grosella estrellada
+	en: star gooseberry
+	Origen asiatico
+	Se parecen a las uvaspinas pero la seccion tiende a hexagonal.
+
+lat: Ribes uva-crispa
+	ca: agrassó, gaixiver
+	es: uva espina, uva de san joan
+	en: gooseberry
+	Tamaño similar a una uva blanca, con estrias longitudinales de color claro
+
+lat: Ribes rubrum
+	es: grosellero rojo
+	ca: riber vermell, groseller vermell (arbre), riba o grosella vermella (fruit)
+	en: redcurrant
+
+lat: Ribes nigrum
+	es: casis, grosella negra, zarzaparrilla negra
+	en: blackcurrant, casis
+	ca: riber negre, groseller negre, cassis
+
+lat: Smilax aspera
+	es: zarzaparrilla
+	ca: arítjol
+	en: sarsaparille
+
+lat: Rubus ulmifolius
+	es: zarza (arbol) zarzamora (fruto), mora (fruto)
+	ca: esbarzer, albarzer
+	en: bramble (planta), blackberry (fruit)
+
+lat: Morus nigra
+	es: moras de moral
+	ca: morera negra, morer de mores, morer de sant joan
+	en: black mulberry
+
+lat: Morus alba
+	es: morera
+	ca: morera blanca
+	en: black mulberry
+	La de las hojas para los gusanos de seda, las moras blancas sin sabor
+
+
+## Cereales
+
+::: figure trigo_cebada_centeno_avena.jpg
+	Diferencias fisicas entre cereales
+
 lat: Avena sativa
 	en: oat
-	cat: civada, avena (terres de l'ebre i valencia)
+	ca: civada, avena (terres de l'ebre i valencia)
 	es: avena
 	Hace panículas (inflorescencia ramificada) no espigas
 	Vainas abiertas que contienen dos semillas
@@ -23,7 +112,7 @@ lat: Avena sativa
 
 lat: Hordeum vulgare
 	en: barley
-	cat: ordi
+	ca: ordi
 	es: cebada
 	Espiga con dos (plana) o seis granos por nivel, con barbas rectas y largas
 	Semillas con piel pegada
