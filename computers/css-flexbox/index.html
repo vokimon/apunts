@@ -731,6 +731,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../branching-patterns/" class="md-nav__link">
+        Summary: Patterns for Managing Source Code Branches by Martin Fowler
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1539,15 +1553,21 @@ Ademas puede usar algunos valores de atajo:</p>
 <p>¿Qué hacer cuando el contenido no llena todo el espacio disponible?</p>
 <p>Por defecto, el comportamiento es:</p>
 <ul>
-<li>Los elementos se apilarán al inicio de la pista en la dirección principal dejando cualquier espacio sobrante al final.</li>
+<li>Los elementos se apilarán al inicio de la pista en la dirección principal dejando cualquier espacio sobrante al final.<ul>
 <li>En flujo <code>row wrap</code>: los elementos se apilan a la izquierda de la linea.</li>
 <li><code>justify-content: flex-start</code></li>
-<li>Las pistas de elementos se wrappearan al inicio de la direccion de cruce dejando cualquier espacio sobrante al final.</li>
+</ul>
+</li>
+<li>Las pistas de elementos se wrappearan al inicio de la direccion de cruce dejando cualquier espacio sobrante al final.<ul>
 <li>En flujo <code>row wrap</code>: las lineas se apilan arriba del contenedor.</li>
 <li><code>align-content: flex-start</code></li>
-<li>Los elementos de cada pista se estiraran en el eje de cruce hasta alcanzar el tamaño del mayor elemento de la pista.</li>
+</ul>
+</li>
+<li>Los elementos de cada pista se estiraran en el eje de cruce hasta alcanzar el tamaño del mayor elemento de la pista.<ul>
 <li>En flujo <code>row wrap</code>: los elementos expandiran su altura a la del elemento más alto de cada linea.</li>
 <li><code>align-items: stretch</code></li>
+</ul>
+</li>
 </ul>
 <p>El comportamiento esta gobernado por las propiedades <code>justify/align-content/items</code>.
 La propiedad <code>justify-items</code> no tiene sentido en Flexbox, pero sí se aplica en Grid.

@@ -637,6 +637,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/branching-patterns/" class="md-nav__link">
+        Summary: Patterns for Managing Source Code Branches by Martin Fowler
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -863,6 +877,33 @@
     Diatonic scales
   </a>
   
+    <nav class="md-nav" aria-label="Diatonic scales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#major-modes-ionian-lydian-mixolydian" class="md-nav__link">
+    Major modes (Ionian, Lydian, Mixolydian)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#minor-modes-aeolian-dorian-phrygian" class="md-nav__link">
+    Minor modes (Aeolian, Dorian, Phrygian)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#neither-major-neither-minor" class="md-nav__link">
+    Neither major neither minor
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -908,6 +949,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#double-harmonic-scales" class="md-nav__link">
+    Double Harmonic scales
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#diminished-scales" class="md-nav__link">
     Diminished scales
   </a>
@@ -922,8 +970,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#non-western-scales" class="md-nav__link">
-    Non-western scales
+  <a href="#non-western-scales-western-classic-view" class="md-nav__link">
+    Non-western scales (Western classic view)
   </a>
   
 </li>
@@ -1365,6 +1413,33 @@
     Diatonic scales
   </a>
   
+    <nav class="md-nav" aria-label="Diatonic scales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#major-modes-ionian-lydian-mixolydian" class="md-nav__link">
+    Major modes (Ionian, Lydian, Mixolydian)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#minor-modes-aeolian-dorian-phrygian" class="md-nav__link">
+    Minor modes (Aeolian, Dorian, Phrygian)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#neither-major-neither-minor" class="md-nav__link">
+    Neither major neither minor
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1410,6 +1485,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#double-harmonic-scales" class="md-nav__link">
+    Double Harmonic scales
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#diminished-scales" class="md-nav__link">
     Diminished scales
   </a>
@@ -1424,8 +1506,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#non-western-scales" class="md-nav__link">
-    Non-western scales
+  <a href="#non-western-scales-western-classic-view" class="md-nav__link">
+    Non-western scales (Western classic view)
   </a>
   
 </li>
@@ -1467,20 +1549,62 @@ where the semitones are separated at least by two full tones</p>
 | VI  | Aeolian    | 2 1 2 2 1 2 2 | C D  Eb F  G  Ab Bb | A B C D E F G | Natural Minor
 | VII | Locrian    | 1 2 2 1 2 2 2 | C Db Eb F  Gb Ab Bb | B C D E F G A |
 </code></pre></div>
-<p>From C Major we can go adding flats to obtain the tonalities:</p>
+<p>Insights:</p>
 <ul>
-<li>I Ionian Major (all white notes)</li>
-<li>b7 -&gt; V Mixolydians</li>
-<li>b3 -&gt; II Dorian</li>
-<li>b6 -&gt; VI Aeolian (nat min)</li>
-<li>b2 -&gt; III Phrygian</li>
-<li>b5 -&gt; VII Locrian</li>
+<li>We can get any mode with white keys just by stressing the proper root.</li>
+<li>Keeping the root in C, we can obtain all the modes by adding progresivelly flats (or sharps)</li>
 </ul>
-<p>Moods of modes: https://www.youtube.com/watch?v=8i7K9GYzbIY</p>
+<p>A mechanical way of learning modes on C,</p>
 <ul>
-<li>Modes with a major third (+4) are called major:<ul>
+<li>as we jump to the next 5th mode, we just add a flat.</li>
+<li>flats are chosen interleaving one from the 3 blacks and next from 2 blacks group</li>
+<li>pick the flat on the right</li>
+<li>to obtain IV we sharp instead flat and pick from left</li>
+</ul>
+<p>In action:</p>
+<div class="highlight"><pre><span></span><code>_x_x__x_x_x_
+o o o Xo o o IV  #4 Lydian (Exception from major sharps F)
+o o oo o o o I      Ionian (Major, the reference, all whites)
+o o oo o oX  V   b7 Mixolydian (flats B)
+o oX o o ox  II  b3 Dorian (flats E)
+o ox o oX x  VI  b6 Aeolian (flats A)
+oX x o ox x  III b2 Phrygian (flats D)
+ox x oX x x  VII b5 Locrian (flats G)
+_x_x__x_x_x_
+ 4 2  5 3 1  (Order to add flats)
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If we extend the method we will get the other 5 tonalities,
+but they do not include the root (C) so they are not modes of the scale.</p>
+</div>
+<p>Each mode has their chords:</p>
+<div class="highlight"><pre><span></span><code>| N   | Name       | Natural notes | Tonic | 7th | Dom  | Dom7th |
+|-----|------------|---------------|-------|-----|------|--------|
+| I   | Ionian     | C D E F G A B | CMaj  | CM7 | GMaj | G7     |
+| II  | Dorian     | D E F G A B C | Dmin  | Dm7 | Amin | Am7    |
+| III | Phrygian   | E F G A B C D | Emin  | Em7 | Bdim | B∅7    |
+| IV  | Lydian     | F G A B C D E | FMaj  | FM7 | GMaj | GM7    |
+| V   | Mixolydian | G A B C D E F | GMaj  | GM7 | Dmin | Gm7    |
+| VI  | Aeolian    | A B C D E F G | Amin  | Am7 | Emin | Em7    |
+| VII | Locrian    | B C D E F G A | Bdim  | B∅7 | FMaj | FM7    |
+</code></pre></div>
+<ul>
+<li>The tonic (rest) chord: I III V</li>
+<li>The dominant (tension) chord: V VII II</li>
+<li>The 7th: I III V VII</li>
+<li>The dominant 7th: V VII II IV</li>
+</ul>
+<p>The tonic chord provides the majority or minority or neither (locrian) character of the mode.</p>
+<p>Moods of modes: https://www.youtube.com/watch?v=8i7K9GYzbIY</p>
+<h3 id="major-modes-ionian-lydian-mixolydian">Major modes (Ionian, Lydian, Mixolydian)</h3>
+<ul>
+<li>Modes with a major third (+4) are called major.</li>
 <li>Resting chord (tonic) is Major: I</li>
-<li>Happy mood</li>
+<li>They bring a happy mood</li>
+</ul>
+<p>Which are</p>
+<ul>
 <li>I Ionian:<ul>
 <li>Major key</li>
 <li>The dominant 7th is the only dominant minor 7th</li>
@@ -1502,10 +1626,14 @@ where the semitones are separated at least by two full tones</p>
 </ul>
 </li>
 </ul>
-</li>
-<li>Modes with a minor third (+3) are called minor:<ul>
-<li>Resting chord (tonic) is Minor: i</li>
-<li>Sad mood</li>
+<h3 id="minor-modes-aeolian-dorian-phrygian">Minor modes (Aeolian, Dorian, Phrygian)</h3>
+<ul>
+<li>Modes with a minor third (+3) are called major.</li>
+<li>Resting chord (tonic) is a minor triad: ia</li>
+<li>They bring a sad mood</li>
+</ul>
+<p>Which are</p>
+<ul>
 <li>VI Aeolian:<ul>
 <li>Mood: Sad + epic</li>
 <li>Dominant vii</li>
@@ -1523,7 +1651,9 @@ where the semitones are separated at least by two full tones</p>
 </ul>
 </li>
 </ul>
-</li>
+<h3 id="neither-major-neither-minor">Neither major neither minor</h3>
+<p>VII Locrian mode is quite special as the resting triad is a dim chord, neither major nor minor.</p>
+<ul>
 <li>VII Locrian tonic chord is neither Major nor minor, it is a dim chord<ul>
 <li>Weird mood</li>
 <li>Resting chord is a diminished 5th chord</li>
@@ -1531,17 +1661,6 @@ where the semitones are separated at least by two full tones</p>
 </ul>
 </li>
 </ul>
-<p>Each mode has their chords:</p>
-<div class="highlight"><pre><span></span><code>| N   | Name       | Natural notes | Tonic | 7th | Dom  | Dom7th |
-|-----|------------|---------------|-------|-----|------|--------|
-| I   | Ionian     | C D E F G A B | CMaj  | CM7 | GMaj | G7     |
-| II  | Dorian     | D E F G A B C | Dmin  | Dm7 | Amin | Am7    |
-| III | Phrygian   | E F G A B C D | Emin  | Em7 | Bdim | B∅7    |
-| IV  | Lydian     | F G A B C D E | FMaj  | FM7 | GMaj | GM7    |
-| V   | Mixolydian | G A B C D E F | GMaj  | GM7 | Dmin | Gm7    |
-| VI  | Aeolian    | A B C D E F G | Amin  | Am7 | Emin | Em7    |
-| VII | Locrian    | B C D E F G A | Bdim  | B∅7 | FMaj | FM7    |
-</code></pre></div>
 <h2 id="pentatonic-scale">Pentatonic scale</h2>
 <p>Pentatonic scale is used by many cultures.
 An octave has 5 notes a fifth away (7 semitones).</p>
@@ -1679,7 +1798,7 @@ Like diatonic scales, also has 2 halftones and 5 fulltones, but now the two half
 | VII | Altered     | 1 2 1 2 2 2 2 | C  Db Eb E  Gb Ab Bb | B  C  D  Eb F  G  A  |
 </code></pre></div>
 <h2 id="harmonic-minor-scales">Harmonic Minor scales</h2>
-<p>Heptatonic scale with one interval of 3 semitones </p>
+<p>Heptatonic scale an harmonic sequence 1 3 1 and a minor sequence 2 1 2 2</p>
 <div class="highlight"><pre><span></span><code>| N   | Name         | Pattern       | Transposed on C      | Rotations            |
 |-----|--------------|---------------|----------------------|----------------------|
 | I   | Harmonic Min | 2 1 2 2 1 3 1 | C  D  Eb F  G  Ab B  | C  D  Eb F  G  Ab B  |
@@ -1691,8 +1810,7 @@ Like diatonic scales, also has 2 halftones and 5 fulltones, but now the two half
 | VII | Altered bb7  | 1 2 1 2 2 1 3 | C  Db Eb Fb Gb Ab A  | B  C  D  Eb F  G  Ab |
 </code></pre></div>
 <h2 id="harmonic-major-scales">Harmonic Major scales</h2>
-<p>Heptatonic scale with one interval of 3 semitones and 3 half tones intervales.
-Like minor scale ends with 1 3 1, but starts with a major 2 2, instead of a minor 2 1.</p>
+<p>Heptatonic scale an harmonic sequence 1 3 1 and a major sequence 2 2 1 2</p>
 <div class="highlight"><pre><span></span><code>| N   | Name        | Pattern       | Transposed on C      | Rotations            |
 |-----|-------------|---------------|----------------------|----------------------|
 | I   | Melodic Maj | 2 2 1 2 1 3 1 | C  D  E  F  G  Ab B  | C  D  E  F  G  Ab B  |
@@ -1703,6 +1821,27 @@ Like minor scale ends with 1 3 1, but starts with a major 2 2, instead of a mino
 | VI  | Lyd. aug#2  | 3 1 2 2 1 2 1 | C  D# E  F# G# A  B  | Ab B  C  D  E  F  G  |
 | VII | Locryan bb7 | 1 2 2 1 2 1 3 | C  Db Eb F  Gb Ab A  | B  C  D  E  F  G  Ab |
 </code></pre></div>
+<h2 id="double-harmonic-scales">Double Harmonic scales</h2>
+<p>Has two harmonic sequences 1 3 1 and a full tone.</p>
+<div class="highlight"><pre><span></span><code>| N   | Name        | Pattern       | Transposed on C      | Rotations            |
+|-----|-------------|---------------|----------------------|----------------------|
+| I   | D.Harm.Maj. | 1 3 1 2 1 3 1 | C  Db E  F  G  Ab B  | C  Db E  F  G  Ab B  | Bizantine
+| II  | Lydian #2#6 | 3 1 2 1 3 1 1 | C  D# F  F# G  A# B  | Db E  F  G  Ab B  C  |
+| III | UltraPhryg. | 1 2 1 3 1 1 3 | C  Db Eb E  G  Ab A  | E  F  G  Ab B  C  Db |
+| IV  | Gypsy Minor | 2 1 3 1 1 3 1 | C  D  Eb F# G  Ab B  | F  G  Ab B  C  Db E  | Hungarian minor
+| V   | Oriental    | 1 3 1 1 3 1 2 | C  Db E  F  Gb A  Bb | G  Ab B  C  Db E  F  |
+| VI  | Ionian #2#5 | 3 1 1 3 1 2 1 | C  D# E  F  G# A  B  | Ab B  C  Db E  F  G  |
+| VII | Loc. bb3bb7 | 1 1 3 1 2 1 3 | C  Db D  F  Gb Ab A  | B  C  Db E  F  G  Ab |
+</code></pre></div>
+<p>AKA</p>
+<ul>
+<li>North Indian Thaat named Bhairav</li>
+<li>South Indian (Carnatic) Melakarta named Mayamalavagowla. </li>
+</ul>
+<p>Songs:</p>
+<ul>
+<li>Misirlou E Double Harmonic</li>
+</ul>
 <h2 id="diminished-scales">Diminished scales</h2>
 <p>Octatonic scale of altering half and full tones.</p>
 <div class="highlight"><pre><span></span><code>| N   | Name             | Pattern         | Transposed on C         | Rotations            |
@@ -1713,7 +1852,10 @@ Like minor scale ends with 1 3 1, but starts with a major 2 2, instead of a mino
 <h2 id="other-scales">Other scales</h2>
 <div class="highlight"><pre><span></span><code>C  Eb F  Gb G  Bb - 3 2 1 1 3 2 - Blues (minor pentatonic plus a perfect 4th)
 </code></pre></div>
-<h2 id="non-western-scales">Non-western scales</h2>
+<h2 id="non-western-scales-western-classic-view">Non-western scales (Western classic view)</h2>
+<p>Taken from <a href="https://ukebuddy.com/ukulele-scales/C-gypsy-scale">here</a>
+Origins are western perspective on how it sounds.
+Indeed each of those culture use many scales including some of the considered "western scales".</p>
 <p>Pentatonics</p>
 <div class="highlight"><pre><span></span><code>| Origin     | intervals           |               |                      |
 |------------|---------------------|---------------|----------------------|
@@ -1721,7 +1863,9 @@ Like minor scale ends with 1 3 1, but starts with a major 2 2, instead of a mino
 | Chinese    | 1     3 #4  5     7 | 4 2 1 4 1     | C     E  F# G     B  |
 | Japanese   | 1 b2     4  5 b6    | 1 4 2 1 4     | C  Bb    F  G  Ab    |
 </code></pre></div>
-<p>Heptatonics</p>
+<p>Heptatonics:
+<a href="">Egyptian</a>,
+<a href="https://en.wikipedia.org/wiki/Persian_scale">Persian</a>,</p>
 <div class="highlight"><pre><span></span><code>| Origin     | intervals           |               |                      |
 |------------|---------------------|---------------|----------------------|
 | Persian    | 1 b2  3  4 #4 b6  7 | 1 3 1 1 2 3 1 | C  Db E  F  Gb Ab B  |
@@ -1730,6 +1874,8 @@ Like minor scale ends with 1 3 1, but starts with a major 2 2, instead of a mino
 | Jewish     | 1 b2  3  4  5 b6 b7 | 1 3 1 2 1 2 2 | C  Db E  F  G  Ab Bb |
 | Gypsy      | 1  2 b3 #4  5 b6 b7 | 2 1 3 1 1 2 2 | C  D  Eb F# G  Ab Bb |
 </code></pre></div>
+<p>1 3 1 2 1 3 1</p>
+<p>C Db E F G Ab B</p>
 
 
 

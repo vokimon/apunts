@@ -12,14 +12,14 @@
         <meta name="author" content="vokimon">
       
       
-        <link rel="canonical" href="https://vokimon.github.io/apunts/computers/jsecosystem/">
+        <link rel="canonical" href="https://vokimon.github.io/apunts/computers/branching-patterns/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.8">
     
     
       
-        <title>Jsecosystem - Apunts</title>
+        <title>Summary: Patterns for Managing Source Code Branches by Martin Fowler - Apunts</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#packaging-dependencies-preprocessing" class="md-skip">
+        <a href="#summary-patterns-for-managing-source-code-branches-by-martin-fowler" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Jsecosystem
+              Summary: Patterns for Managing Source Code Branches by Martin Fowler
             
           </span>
         </div>
@@ -414,14 +414,12 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
       
       
       
@@ -442,116 +440,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Jsecosystem
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../jsecosystem/" class="md-nav__link">
         Jsecosystem
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#packaging-dependencies-preprocessing" class="md-nav__link">
-    Packaging, dependencies, preprocessing
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#browser-compatibility-adapters" class="md-nav__link">
-    Browser compatibility adapters
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#assets-processors" class="md-nav__link">
-    Assets Processors
-  </a>
-  
-    <nav class="md-nav" aria-label="Assets Processors">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#python-in-browser" class="md-nav__link">
-    Python in browser
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#toolbox-libraries" class="md-nav__link">
-    Toolbox Libraries
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#application-frameworks" class="md-nav__link">
-    Application Frameworks
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#html-presentations" class="md-nav__link">
-    HTML Presentations
-  </a>
-  
-    <nav class="md-nav" aria-label="HTML Presentations">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#style-preprocessors" class="md-nav__link">
-    Style preprocessors
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#other-interesting-libraries" class="md-nav__link">
-    Other interesting libraries
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -750,11 +643,126 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../branching-patterns/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Summary: Patterns for Managing Source Code Branches by Martin Fowler
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Summary: Patterns for Managing Source Code Branches by Martin Fowler
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#glossari" class="md-nav__link">
+    Glossari
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#source-branching-ramificant-el-codi" class="md-nav__link">
+    Source branching (Ramificant el codi)
+  </a>
+  
+    <nav class="md-nav" aria-label="Source branching (Ramificant el codi)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conceptes" class="md-nav__link">
+    Conceptes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#forces" class="md-nav__link">
+    Forces
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mainline-linia-principal" class="md-nav__link">
+    Mainline (Linia principal)
+  </a>
+  
+    <nav class="md-nav" aria-label="Mainline (Linia principal)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conceptes_1" class="md-nav__link">
+    Conceptes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#forces_1" class="md-nav__link">
+    Forces
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#healthy-branch-branca-sana" class="md-nav__link">
+    Healthy Branch (Branca sana)
+  </a>
+  
+    <nav class="md-nav" aria-label="Healthy Branch (Branca sana)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#forces_2" class="md-nav__link">
+    Forces
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1368,6 +1376,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1376,30 +1386,30 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#packaging-dependencies-preprocessing" class="md-nav__link">
-    Packaging, dependencies, preprocessing
+  <a href="#glossari" class="md-nav__link">
+    Glossari
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#browser-compatibility-adapters" class="md-nav__link">
-    Browser compatibility adapters
+  <a href="#source-branching-ramificant-el-codi" class="md-nav__link">
+    Source branching (Ramificant el codi)
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#assets-processors" class="md-nav__link">
-    Assets Processors
-  </a>
-  
-    <nav class="md-nav" aria-label="Assets Processors">
+    <nav class="md-nav" aria-label="Source branching (Ramificant el codi)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#python-in-browser" class="md-nav__link">
-    Python in browser
+  <a href="#conceptes" class="md-nav__link">
+    Conceptes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#forces" class="md-nav__link">
+    Forces
   </a>
   
 </li>
@@ -1410,30 +1420,23 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#toolbox-libraries" class="md-nav__link">
-    Toolbox Libraries
+  <a href="#mainline-linia-principal" class="md-nav__link">
+    Mainline (Linia principal)
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#application-frameworks" class="md-nav__link">
-    Application Frameworks
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#html-presentations" class="md-nav__link">
-    HTML Presentations
-  </a>
-  
-    <nav class="md-nav" aria-label="HTML Presentations">
+    <nav class="md-nav" aria-label="Mainline (Linia principal)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#style-preprocessors" class="md-nav__link">
-    Style preprocessors
+  <a href="#conceptes_1" class="md-nav__link">
+    Conceptes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#forces_1" class="md-nav__link">
+    Forces
   </a>
   
 </li>
@@ -1444,9 +1447,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#other-interesting-libraries" class="md-nav__link">
-    Other interesting libraries
+  <a href="#healthy-branch-branca-sana" class="md-nav__link">
+    Healthy Branch (Branca sana)
   </a>
+  
+    <nav class="md-nav" aria-label="Healthy Branch (Branca sana)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#forces_2" class="md-nav__link">
+    Forces
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1464,411 +1480,74 @@
                 
                   
 
-  <a href="https://github.com/vokimon/apunts/edit/master/docs/computers/jsecosystem.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/vokimon/apunts/edit/master/docs/computers/branching-patterns.md" title="Edit this page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-  <h1>Jsecosystem</h1>
-
-<p>This is a compilation of useful Javascript libraries
-which are used on web and webapp development nowadays.</p>
-<h2 id="packaging-dependencies-preprocessing">Packaging, dependencies, preprocessing</h2>
+<h1 id="summary-patterns-for-managing-source-code-branches-by-martin-fowler">Summary: Patterns for Managing Source Code Branches by Martin Fowler</h1>
+<p>https://martinfowler.com/articles/branching-patterns.html</p>
+<h2 id="glossari">Glossari</h2>
+<h2 id="source-branching-ramificant-el-codi">Source branching (Ramificant el codi)</h2>
 <ul>
-<li><a href="http://npm.org">npm</a><ul>
-<li>Manages packages for nodejs projects.</li>
-<li>It's used beyond nodejs for any js program</li>
-<li>Most other frameworks are installed via npm</li>
-<li>A project relies on a <code>package.json</code> file with meta, dependencies, commands...</li>
-<li>It keeps a folder <code>node_modules</code> with the installed dependencies</li>
-<li>You can configure build commands</li>
+<li><strong>Problema:</strong> Com treballar amb canvis paral·lels fets fer diferents persones?</li>
+<li><strong>Solució:</strong> Crea diferents copies del codi i enregistra els canvis que es fan a cadascuna</li>
 </ul>
-</li>
-<li><a href="https://yarnpkg.com/">yarn</a><ul>
-<li>Package manager.</li>
-<li>Tries to substitute npm (but uses npm to install itself)</li>
-<li>Uses the same package.json format and repositories than npm</li>
-<li>Faster dependency downloads, easier commands</li>
-<li>Besides loosy package.json version specs, it keeps an specific current version file, that can be shared among developers.</li>
-</ul>
-</li>
-<li><a href="http://requirejs.org/">Require.js</a><ul>
-<li>On browser dependency loader</li>
-<li>Manages javascript modules and dependencies and scopes their global variables to avoid conflicts.</li>
-<li>You configure requirejs on how to locate and dynamically load modules</li>
-<li>Out of order script loading, dependency driven script evaluation</li>
-<li>Lazy definition of modules inside functions, and use <code>require</code> function to actually load them</li>
-<li>Quite intrusive on the way you layout code</li>
-<li>Don't use this, mentioned because is influencial on later frameworks</li>
-</ul>
-</li>
-<li><a href="http://browserify.org">Browserify</a><ul>
-<li>Locates 'require' sentences in your code and builds a js bundle with all dependencies taken from npm repositories.</li>
-<li>The bundle is built with dependencies inside modules in requirejs way.</li>
-</ul>
-</li>
-<li><a href="https://bower.io">Bower</a><ul>
-<li>Manages runtime dependencies (in browser) for web projects</li>
-<li><a href="https://bower.io/blog/2017/how-to-migrate-away-from-bower/">Authors indeed recommend</a> webpack and yam, nowadays</li>
-<li>Manages in-browser dependencies different from npm build dependencies.</li>
-<li>Places ready to import optimized js inside <code>bower_components</code></li>
-</ul>
-</li>
-<li><a href="https://parceljs.org/">Parcel</a><ul>
-<li>Assets bundler</li>
-<li>Zero configuration, via sane defaults</li>
-</ul>
-</li>
-<li><a href="http://webpack.js.org">Webpack</a><ul>
-<li>Assets bundler.</li>
-<li>You define dependencies, media... it compiles (process, optimize...) them and generate static files for he web.</li>
-<li>Solves modularization and dependency resolution using either require or import strategies</li>
-<li>Asset spliting and multiple inclusion methods (js, inline, asset inline...)</li>
-<li>Asset transcompilation via plugins</li>
-<li><strong>Deprecated by Parcel???</strong></li>
-</ul>
-</li>
-<li><a href="http://brunch.io/">Brunch</a><ul>
-<li>Task runner</li>
-<li>Declarative and simpler than gulp/grunt</li>
-<li>Alleged vs Webpack: faster, implicit compilation by type, </li>
-<li>Not tried myself</li>
-</ul>
-</li>
-<li><a href="https://gulpjs.com/">Gulp</a><ul>
-<li>Task runner to build web static assets</li>
-<li>Pipe based and imperative</li>
-<li><strong>Deprecated by webpack</strong></li>
-</ul>
-</li>
-<li>
-<p><a href="http://gruntjs.com">Grunt</a></p>
+<h3 id="conceptes">Conceptes</h3>
 <ul>
-<li>Task runner to build web static assets.</li>
-<li>Tries to be declarative, at the end it is a configuration hell</li>
-<li><strong>Deprecated by Gulp</strong></li>
+<li>Commit (confirmació): un canvi enregistrat</li>
+<li>Codeline: la seqüència de comisións (el terme <em>branca</em> s'evita per significa coses diferents en diferents sistems de control de versions)<ul>
+<li>Una codeline és més que una branca de git: Alice i Bob poden tenir diferents codelines en local de la mateixa branca <code>master</code> de git i poden diferir de la d'<code>origin</code>.</li>
 </ul>
 </li>
-<li>
-<p><a href="https://nodejs.org/">Nodejs</a></p>
+<li>Tip/Head (cap): la darrera comissió d'una codeline</li>
+<li>To branch (ramificar): generar una copia del codi a partir de la qual generar una nova sequència de commissions</li>
+<li>To merge (fusionar): aplicar els canvis d'una codeline a una altra</li>
+<li>Conflicts: Mergin usually implies conflicts<ul>
+<li>Textual Conflict: Both codelines have changed the same lines. Version control systems detects them, but requires manual resolution</li>
+<li>Semantic Conflict: Both codelines do not necessarily affect the same lines, but interfere logically. Harder to detect without CI.</li>
+</ul>
+</li>
+</ul>
+<h3 id="forces">Forces</h3>
 <ul>
-<li>A webserver framework</li>
-<li>Event driven: Instead of one thread listening for a petition, running and responding, it enqueues petitions and get served as they go</li>
-<li>Pure javascript implementation</li>
-<li>You can use it as javascript terminal</li>
-<li>See npm</li>
+<li>Ramificar és fàcil, fusionar costa.</li>
+<li>Ramificant evitem temporalment el conflicte que seria estar tothom canviant el codi.</li>
+<li>Tard o d'hora cal pagar els deutes (amb interessos).</li>
+<li>La fusió és més costosa com més canvis acomulen.</li>
 </ul>
-</li>
-</ul>
-<h2 id="browser-compatibility-adapters">Browser compatibility adapters</h2>
+<h2 id="mainline-linia-principal">Mainline (Linia principal)</h2>
 <ul>
-<li>
-<p><a href="http://modernizr.com/">Modernizer</a></p>
+<li><strong>Problema:</strong> Quan tenim diverses branques, quin és l'estat actual del projecte?</li>
+<li><strong>Solució:</strong> Considerar una única branca compartida l'estat actual del producte</li>
+</ul>
+<h3 id="conceptes_1">Conceptes</h3>
 <ul>
-<li>Browser feature detector</li>
-<li>Once you detect a miss you can use one of the <a href="https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills">many browser compatibility layers</a></li>
+<li>La branca fa de referencia per:<ul>
+<li>Saber de quin punt he d'arrencar la meva branca</li>
+<li>Saber quins canvis dels companys he d'incorporar</li>
+<li>Saber d'on treure una versió a desplegar a producció</li>
 </ul>
 </li>
-<li>
-<p><a href="https://github.com/scottjehl/Respond/">Respond</a></p>
+</ul>
+<h3 id="forces_1">Forces</h3>
 <ul>
-<li>Transparently translates CSS files with CSS3 media queries to old IE&lt;7a</li>
-<li>This enables responsive designs without caring for lame browsers.</li>
-<li>Una alternativa más lenta pero mas robusta es <a href="http://code.google.com/p/css3-mediaqueries-js/">css3-mediaqueries.js</a></li>
+<li>Alternativa: Release Train</li>
 </ul>
-</li>
-<li>
-<p><a href="http://necolas.github.io/normalize.css/">Normalize.css</a></p>
+<h2 id="healthy-branch-branca-sana">Healthy Branch (Branca sana)</h2>
 <ul>
-<li>Style reseter (css3/html5 ready)</li>
-<li>You start with a common ground in any browser</li>
-<li>CSS, no javascript.</li>
+<li><strong>Problema:</strong> Amb tanta gent aplicant canvis a l'hora, com puc refiar-me de que la branca principal funciona?</li>
+<li><strong>Solució:</strong> Executar automaticament comprovacions per cada commit que es fa a la branca</li>
 </ul>
-</li>
-<li>
-<p><a href="https://github.com/afarkas/html5shiv">Html5shiv</a></p>
+<h3 id="forces_2">Forces</h3>
 <ul>
-<li>Allows styling new HTML5 elements in older versions of IE</li>
+<li>Important que el codi s'auto-comprovi</li>
+<li>Hi ha tensió entre el cost de les proves i la freqüència i profundintat de les proves<ul>
+<li>Jerarquia de testos: Els ràpids primer per donar feedback aviat</li>
 </ul>
 </li>
-<li>
-<p><a href="http://html5boilerplate.com/">Html5 Boilerplate</a></p>
-<ul>
-<li>Static website template</li>
-<li>Includes most things an static website should have nowadays</li>
-<li>ganalitics, modernizer, jquery, normalize, htaccess, 404 page, </li>
-</ul>
-</li>
-</ul>
-<h2 id="assets-processors">Assets Processors</h2>
-<ul>
-<li>
-<p><a href="http://coffeescript.org">CoffeScript</a></p>
-<ul>
-<li>Language that transcompiles into Javascript</li>
-<li>Inspired by Ruby, Python, Haskell...</li>
-</ul>
-</li>
-<li>
-<p><a href="https://www.typescriptlang.org/">TypeScript</a></p>
-<ul>
-<li>Language that transcompiles into Javascript</li>
-<li>By Microsoft, embraced by Google's </li>
-</ul>
-</li>
-<li>
-<p><a href="https://babeljs.io">Babel</a></p>
-<ul>
-<li>Transcompiler to turn modern ES6 into ES5 which is compatible on most browsers</li>
-</ul>
-</li>
-</ul>
-<h3 id="python-in-browser">Python in browser</h3>
-<ul>
-<li><a href="https://transcrypt.org/">Transcrypt</a><ul>
-<li>Transcompiler for Python</li>
-<li>Py2/Py3</li>
-<li>Generates javascript code</li>
-<li>Uses Javascript libraries (not python ones)</li>
-</ul>
-</li>
-<li><a href="https://github.com/atsepkov/RapydScript">RapydScript</a><ul>
-<li>Transcompiler</li>
-<li>Python like syntax constructs for EcmaScript</li>
-<li>Not Python, new language</li>
-</ul>
-</li>
-<li><a href="http://www.skulpt.org/">skulpt</a><ul>
-<li>Client side python interpreter</li>
-<li>Py2</li>
-<li>Teaching tool</li>
-<li>Slow runtime (1/10 cpython)</li>
-</ul>
-</li>
-<li><a href="http://www.brython.info/">Brython</a><ul>
-<li>Client side python interpreter</li>
-<li>Adds a new script type</li>
-<li>500k extra for the jit compiler</li>
-</ul>
-</li>
-<li><a href="http://pypyjs.org/">Pypy.js</a><ul>
-<li>Client side python interpreter</li>
-<li>Full Python interpret implementation in javascript</li>
-<li>Generated from PyPy by means of emscripten ()</li>
-<li>Big/slow download, fast runtime</li>
-<li>Full featured</li>
-</ul>
-</li>
-<li><a href="https://batavia.readthedocs.io/en/latest/">Batavia</a><ul>
-<li>Interprete de Python bytecode en el navegador</li>
-<li>Py3.4</li>
-<li>do not interpret python code, but bytecode</li>
-<li>Very preliminar version</li>
-</ul>
-</li>
-</ul>
-<h2 id="toolbox-libraries">Toolbox Libraries</h2>
-<p>Improve the usability of standard javascript DOM api's and limitations of standard libraries.</p>
-<ul>
-<li>
-<p><a href="https://jquery.com/">jQuery</a></p>
-<ul>
-<li>Provides a nicer API for DOM acces (xpath and css like)</li>
-<li>async Web API queries</li>
-<li>Other tooling (foreach, apply, bind...)</li>
-</ul>
-</li>
-<li>
-<p><a href="http://underscorejs.org/">Underscore</a></p>
-<ul>
-<li>Basic functions missing in javascript</li>
-<li>Enables functional programming style</li>
-</ul>
-</li>
-<li>
-<p><a href="https://lodash.com/">Lo-dash</a></p>
-<ul>
-<li>Superset of Underscore</li>
-</ul>
-</li>
-<li>
-<p><a href="https://sugarjs.com/">Sugar</a></p>
-<ul>
-<li>Functions to operate nicely with standard objects</li>
-<li>Objects, Dates, Functions, Ranges, Regexp, Strings, Array...</li>
-</ul>
-</li>
-</ul>
-<h2 id="application-frameworks">Application Frameworks</h2>
-<p>Provide more foundation to the dynamic app building.
-Usually they use a Model-View-Controller like approach.</p>
-<ul>
-<li>
-<p><a href="http://getbootstrap.com/">Bootstrap</a></p>
-<ul>
-<li>Responsive layout and graphical components</li>
-<li>The one used by twitter</li>
-<li>Themable</li>
-</ul>
-</li>
-<li>
-<p><a href="https://angularjs.org/">Angular</a></p>
-<ul>
-<li>MVC framework</li>
-<li>I loved it until i started to use it version 1.x</li>
-<li>Component based approach improved on 2.x but i am in refractary</li>
-</ul>
-</li>
-<li>
-<p><a href="https://mithril.js.org/">Mithril</a></p>
-<ul>
-<li>MVC/Component framework</li>
-<li>Simplistic but powerfull and fast</li>
-<li>Models: bare javascript objects</li>
-<li>View building by <code>m</code> primitives <code>m('ul.myclas', m('li', 'content'))</code></li>
-<li>Efficiency: generates a Virtual DOM that is compared and updated to the real one</li>
-<li>Routing, async requests and data binders</li>
-<li>Component based. Component libraries available.</li>
-</ul>
-</li>
-<li>
-<p><a href="https://reactjs.org/">React</a></p>
-<ul>
-<li>Component Framework</li>
-<li>Developed by Facebook</li>
-</ul>
-</li>
-<li>
-<p><a href="http://backbonejs.org/">Backbone</a></p>
-<ul>
-<li>MVC framework</li>
-</ul>
-</li>
-<li>
-<p><a href="https://vuejs.org/">Vue</a></p>
-<ul>
-<li>MVC framework</li>
-</ul>
-</li>
-</ul>
-<h2 id="html-presentations">HTML Presentations</h2>
-<ul>
-<li>
-<p><a href="http://impress.js.com">Impress.js</a></p>
-<ul>
-<li>Somewhat slow compared to others</li>
-<li>3d transforms</li>
-<li>Content written in markdown</li>
-<li><a href="https://github.com/jgm/pandoc/wiki/Creating-impress.js-slide-shows-with-pandoc">Integration with pandoc</a> by using
-  <a href="">this template</a></li>
-</ul>
-</li>
-<li>
-<p><a href="https://revealjs.com/">Reveal.js</a></p>
-<ul>
-<li>Vertical and horizontal slider</li>
-<li>Transition effects</li>
-<li>Integrated with pandoc</li>
-</ul>
-</li>
-</ul>
-<h3 id="style-preprocessors">Style preprocessors</h3>
-<ul>
-<li><a href="http://learnboost.github.io/stylus/">Stylus</a><ul>
-<li>Compact syntax, indentation based, no colons no semicolons</li>
-<li>Still css syntax is accepted</li>
-<li>Imports, variables, nesting, mixins, extends, color ops, math ops, conditions, loops</li>
-</ul>
-</li>
-<li><a href="http://lesscss.org/">Less</a><ul>
-<li>Imports, variables, nesting, mixins, extends, color ops, math ops, conditions, loops</li>
-<li>Conditions are declarative</li>
-</ul>
-</li>
-<li><a href="http://sass-lang.com/">Sass</a><ul>
-<li>Imports, variables, nesting, mixins, extends, color ops, math ops, conditions, loops</li>
-<li>Used by bootstrap, MDC4W...</li>
-</ul>
-</li>
-<li><a href="https://postcss.org/">PostCSS</a><ul>
-<li>API to process CSS rules from javascript</li>
-<li>Plugins use the API to perform stuff<ul>
-<li>autoprefixer: adds webkit moz prefix when needed</li>
-<li>preset env: converts modern css4 features into old css</li>
-<li>linter: warns about css coding conventions</li>
-<li>Inline images</li>
-<li>optimizar reglas</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="other-interesting-libraries">Other interesting libraries</h2>
-<ul>
-<li>jquery-tipsy<ul>
-<li>Tooltips cutres tipo facebook</li>
-<li>http://onehackoranother.com/projects/jquery/tipsy/</li>
-</ul>
-</li>
-<li>jquery-infieldlabel<ul>
-<li>Puts the labels of form fields inside them</li>
-<li>http://fuelyourcoding.com/scripts/infield/</li>
-</ul>
-</li>
-<li>jquery-showpassword<ul>
-<li>Places a button on password fields to avoid the stars</li>
-<li>http://trevordavis.net/blog/jquery-show-password-plugin</li>
-</ul>
-</li>
-<li>minicolors<ul>
-<li>color picker</li>
-<li>http://www.abeautifulsite.net/blog/2011/02/jquery-minicolors-a-color-selector-for-input-controls/</li>
-</ul>
-</li>
-<li>timepicker<ul>
-<li>Chose time</li>
-<li>No idea on which one uses own cloud (many arround)</li>
-</ul>
-</li>
-<li>chosen<ul>
-<li>User friendly selection boxes</li>
-<li>http://harvesthq.github.io/chosen/</li>
-</ul>
-</li>
-<li>fullcalendar<ul>
-<li>Fullpage calendar</li>
-<li>http://arshaw.com/fullcalendar/</li>
-</ul>
-</li>
-<li>Ace Editor<ul>
-<li>Text editor with syntax highlight</li>
-<li>http://ace.c9.io</li>
-</ul>
-</li>
-<li>Mousewheel<ul>
-<li>cross browswer mousewheel support</li>
-<li>https://github.com/brandonaaron/jquery-mousewheel</li>
-</ul>
-</li>
-<li>lightbox<ul>
-<li>Modal image visualization</li>
-</ul>
-</li>
-<li>Colorbox<ul>
-<li>Visualization dialog (like lightbox)</li>
-<li>External pages, content and ajax</li>
-<li>Sequence, slideshow</li>
-<li>http://www.jacklmoore.com/colorbox/</li>
-</ul>
-</li>
-<li>js_tpl<ul>
-<li>Javascript (client-side) templating</li>
-<li>&lt;%= javascript expresion %&gt;</li>
-<li>Solo en oc_bookmarks</li>
-<li>http://ejohn.org/blog/javascript-micro-templating/http://ejohn.org/blog/javascript-micro-templating/</li>
-</ul>
-</li>
+<li>Ajuda el patro <em>Pre-Integration Review</em></li>
 </ul>
 
 
@@ -1890,7 +1569,7 @@ Usually they use a Model-View-Controller like approach.</p>
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../css-typography/" class="md-footer__link md-footer__link--prev" aria-label="Previous: CSS Typografy" rel="prev">
+        <a href="../xpxplained/" class="md-footer__link md-footer__link--prev" aria-label="Previous: XP Explained (Extracto del libro)" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -1899,20 +1578,20 @@ Usually they use a Model-View-Controller like approach.</p>
               <span class="md-footer__direction">
                 Previous
               </span>
-              CSS Typografy
+              XP Explained (Extracto del libro)
             </div>
           </div>
         </a>
       
       
         
-        <a href="../jsonschema/" class="md-footer__link md-footer__link--next" aria-label="Next: Jsonschema" rel="next">
+        <a href="../../math/mates-fundation/" class="md-footer__link md-footer__link--next" aria-label="Next: Math Foundations" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Jsonschema
+              Math Foundations
             </div>
           </div>
           <div class="md-footer__button md-icon">
