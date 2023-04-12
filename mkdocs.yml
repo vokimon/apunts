@@ -28,6 +28,7 @@ nav:
     - computers/specs-pdf.md
     - computers/timewarrior.md
     - computers/xpxplained.markdown
+    - computers/branching-patterns.md
   - Math:
     - Math Foundations: math/mates-fundation.md
     - Statistics: math/stats.md
