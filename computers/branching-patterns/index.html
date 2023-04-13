@@ -19,7 +19,7 @@
     
     
       
-        <title>Summary: Patterns for Managing Source Code Branches by Martin Fowler - Apunts</title>
+        <title>Branching Patterns - Apunts</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#summary-patterns-for-managing-source-code-branches-by-martin-fowler" class="md-skip">
+        <a href="#branching-patterns" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Summary: Patterns for Managing Source Code Branches by Martin Fowler
+              Branching Patterns
             
           </span>
         </div>
@@ -655,12 +655,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Summary: Patterns for Managing Source Code Branches by Martin Fowler
+          Branching Patterns
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Summary: Patterns for Managing Source Code Branches by Martin Fowler
+        Branching Patterns
       </a>
       
         
@@ -679,18 +679,26 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#glossari" class="md-nav__link">
-    Glossari
+  <a href="#patrons-generals" class="md-nav__link">
+    Patrons generals
+  </a>
+  
+    <nav class="md-nav" aria-label="Patrons generals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#patro-source-branching-ramificant-el-codi" class="md-nav__link">
+    Patró Source Branching (Ramificant el codi)
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#source-branching-ramificant-el-codi" class="md-nav__link">
-    Source branching (Ramificant el codi)
+        
+          <li class="md-nav__item">
+  <a href="#patro-mainline-linia-principal" class="md-nav__link">
+    Patrò Mainline (Linia principal)
   </a>
   
-    <nav class="md-nav" aria-label="Source branching (Ramificant el codi)">
+    <nav class="md-nav" aria-label="Patrò Mainline (Linia principal)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -711,25 +719,10 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#mainline-linia-principal" class="md-nav__link">
-    Mainline (Linia principal)
-  </a>
-  
-    <nav class="md-nav" aria-label="Mainline (Linia principal)">
-      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#conceptes_1" class="md-nav__link">
-    Conceptes
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#forces_1" class="md-nav__link">
-    Forces
+  <a href="#patro-healthy-branch-branca-sana" class="md-nav__link">
+    Patrò Healthy Branch (Branca sana)
   </a>
   
 </li>
@@ -740,16 +733,195 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#healthy-branch-branca-sana" class="md-nav__link">
-    Healthy Branch (Branca sana)
+  <a href="#patrons-dintegracio" class="md-nav__link">
+    Patrons d'integració
   </a>
   
-    <nav class="md-nav" aria-label="Healthy Branch (Branca sana)">
+    <nav class="md-nav" aria-label="Patrons d'integració">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#forces_2" class="md-nav__link">
-    Forces
+  <a href="#patro-mainline-integration" class="md-nav__link">
+    Patrò Mainline Integration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patro-feature-branching-ramificat-per-funcions" class="md-nav__link">
+    Patrò Feature Branching (Ramificat per funcions)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patro-continuous-integration-integracio-continua" class="md-nav__link">
+    Patrò Continuous Integration (Integració contínua)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pre-integration-review-revisio-previa-a-la-integracio" class="md-nav__link">
+    Pre-integration review (Revisió previa a la integració)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patro-ship-show-ask-entrega-mostra-o-pregunta" class="md-nav__link">
+    Patrò: Ship-show-ask (Entrega, mostra o pregunta)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aspectes-claus-dels-patrons-dintegracio" class="md-nav__link">
+    Aspectes claus dels patrons d'integració
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patrons-dentrega" class="md-nav__link">
+    Patrons d'entrega
+  </a>
+  
+    <nav class="md-nav" aria-label="Patrons d'entrega">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#patro-release-branch" class="md-nav__link">
+    Patró Release Branch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patro-maturity-branch" class="md-nav__link">
+    Patró Maturity Branch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patro-long-lived-release-branch" class="md-nav__link">
+    Patró Long Lived Release Branch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patro-environment-branch" class="md-nav__link">
+    Patró Environment Branch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patro-hotfix-branch" class="md-nav__link">
+    Patró Hotfix Branch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patro-release-train-branch" class="md-nav__link">
+    Patró Release Train Branch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patro-release-ready-mainline" class="md-nav__link">
+    Patró Release-Ready Mainline
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#altres-patrons" class="md-nav__link">
+    Altres patrons
+  </a>
+  
+    <nav class="md-nav" aria-label="Altres patrons">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#patro-experimental-branch" class="md-nav__link">
+    Patró Experimental Branch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patro-future-branch" class="md-nav__link">
+    Patró Future Branch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patro-collaboration-branch" class="md-nav__link">
+    Patró Collaboration Branch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patro-team-integration-branch" class="md-nav__link">
+    Patró Team Integration Branch
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#branching-policies" class="md-nav__link">
+    Branching Policies
+  </a>
+  
+    <nav class="md-nav" aria-label="Branching Policies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#git-flow" class="md-nav__link">
+    Git-flow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#github-flow" class="md-nav__link">
+    Github flow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trunk-based-development" class="md-nav__link">
+    Trunk based development
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    
   </a>
   
 </li>
@@ -1386,18 +1558,26 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#glossari" class="md-nav__link">
-    Glossari
+  <a href="#patrons-generals" class="md-nav__link">
+    Patrons generals
+  </a>
+  
+    <nav class="md-nav" aria-label="Patrons generals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#patro-source-branching-ramificant-el-codi" class="md-nav__link">
+    Patró Source Branching (Ramificant el codi)
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#source-branching-ramificant-el-codi" class="md-nav__link">
-    Source branching (Ramificant el codi)
+        
+          <li class="md-nav__item">
+  <a href="#patro-mainline-linia-principal" class="md-nav__link">
+    Patrò Mainline (Linia principal)
   </a>
   
-    <nav class="md-nav" aria-label="Source branching (Ramificant el codi)">
+    <nav class="md-nav" aria-label="Patrò Mainline (Linia principal)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1418,25 +1598,10 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#mainline-linia-principal" class="md-nav__link">
-    Mainline (Linia principal)
-  </a>
-  
-    <nav class="md-nav" aria-label="Mainline (Linia principal)">
-      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#conceptes_1" class="md-nav__link">
-    Conceptes
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#forces_1" class="md-nav__link">
-    Forces
+  <a href="#patro-healthy-branch-branca-sana" class="md-nav__link">
+    Patrò Healthy Branch (Branca sana)
   </a>
   
 </li>
@@ -1447,16 +1612,195 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#healthy-branch-branca-sana" class="md-nav__link">
-    Healthy Branch (Branca sana)
+  <a href="#patrons-dintegracio" class="md-nav__link">
+    Patrons d'integració
   </a>
   
-    <nav class="md-nav" aria-label="Healthy Branch (Branca sana)">
+    <nav class="md-nav" aria-label="Patrons d'integració">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#forces_2" class="md-nav__link">
-    Forces
+  <a href="#patro-mainline-integration" class="md-nav__link">
+    Patrò Mainline Integration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patro-feature-branching-ramificat-per-funcions" class="md-nav__link">
+    Patrò Feature Branching (Ramificat per funcions)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patro-continuous-integration-integracio-continua" class="md-nav__link">
+    Patrò Continuous Integration (Integració contínua)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pre-integration-review-revisio-previa-a-la-integracio" class="md-nav__link">
+    Pre-integration review (Revisió previa a la integració)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patro-ship-show-ask-entrega-mostra-o-pregunta" class="md-nav__link">
+    Patrò: Ship-show-ask (Entrega, mostra o pregunta)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aspectes-claus-dels-patrons-dintegracio" class="md-nav__link">
+    Aspectes claus dels patrons d'integració
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patrons-dentrega" class="md-nav__link">
+    Patrons d'entrega
+  </a>
+  
+    <nav class="md-nav" aria-label="Patrons d'entrega">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#patro-release-branch" class="md-nav__link">
+    Patró Release Branch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patro-maturity-branch" class="md-nav__link">
+    Patró Maturity Branch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patro-long-lived-release-branch" class="md-nav__link">
+    Patró Long Lived Release Branch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patro-environment-branch" class="md-nav__link">
+    Patró Environment Branch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patro-hotfix-branch" class="md-nav__link">
+    Patró Hotfix Branch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patro-release-train-branch" class="md-nav__link">
+    Patró Release Train Branch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patro-release-ready-mainline" class="md-nav__link">
+    Patró Release-Ready Mainline
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#altres-patrons" class="md-nav__link">
+    Altres patrons
+  </a>
+  
+    <nav class="md-nav" aria-label="Altres patrons">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#patro-experimental-branch" class="md-nav__link">
+    Patró Experimental Branch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patro-future-branch" class="md-nav__link">
+    Patró Future Branch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patro-collaboration-branch" class="md-nav__link">
+    Patró Collaboration Branch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patro-team-integration-branch" class="md-nav__link">
+    Patró Team Integration Branch
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#branching-policies" class="md-nav__link">
+    Branching Policies
+  </a>
+  
+    <nav class="md-nav" aria-label="Branching Policies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#git-flow" class="md-nav__link">
+    Git-flow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#github-flow" class="md-nav__link">
+    Github flow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trunk-based-development" class="md-nav__link">
+    Trunk based development
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    
   </a>
   
 </li>
@@ -1486,43 +1830,46 @@
   </a>
 
 
-<h1 id="summary-patterns-for-managing-source-code-branches-by-martin-fowler">Summary: Patterns for Managing Source Code Branches by Martin Fowler</h1>
+<h1 id="branching-patterns">Branching Patterns</h1>
+<p>Un resum de  <em>Patterns for Managing Source Code Branches</em> by Martin Fowler</p>
 <p>https://martinfowler.com/articles/branching-patterns.html</p>
-<h2 id="glossari">Glossari</h2>
-<h2 id="source-branching-ramificant-el-codi">Source branching (Ramificant el codi)</h2>
+<h2 id="patrons-generals">Patrons generals</h2>
+<h3 id="patro-source-branching-ramificant-el-codi">Patró <em>Source Branching</em> (Ramificant el codi)</h3>
 <ul>
 <li><strong>Problema:</strong> Com treballar amb canvis paral·lels fets fer diferents persones?</li>
 <li><strong>Solució:</strong> Crea diferents copies del codi i enregistra els canvis que es fan a cadascuna</li>
 </ul>
-<h3 id="conceptes">Conceptes</h3>
+<p><strong>Conceptes:</strong></p>
 <ul>
 <li>Commit (confirmació): un canvi enregistrat</li>
-<li>Codeline: la seqüència de comisións (el terme <em>branca</em> s'evita per significa coses diferents en diferents sistems de control de versions)<ul>
+<li>Codeline: una seqüència de canvis confirmats (el terme <em>branca</em> s'evita per significa coses diferents en diferents sistems de control de versions)<ul>
 <li>Una codeline és més que una branca de git: Alice i Bob poden tenir diferents codelines en local de la mateixa branca <code>master</code> de git i poden diferir de la d'<code>origin</code>.</li>
 </ul>
 </li>
 <li>Tip/Head (cap): la darrera comissió d'una codeline</li>
 <li>To branch (ramificar): generar una copia del codi a partir de la qual generar una nova sequència de commissions</li>
 <li>To merge (fusionar): aplicar els canvis d'una codeline a una altra</li>
-<li>Conflicts: Mergin usually implies conflicts<ul>
-<li>Textual Conflict: Both codelines have changed the same lines. Version control systems detects them, but requires manual resolution</li>
-<li>Semantic Conflict: Both codelines do not necessarily affect the same lines, but interfere logically. Harder to detect without CI.</li>
+<li>Conflictes: Fusionar sovint implica conflictes<ul>
+<li>Conflictes textuals: Quan les dues branques han modificat les mateixes linies.
+    El control de versions ho detecta però requereix resolució manual.</li>
+<li>Conflictes semàntic: Quan les dues branques, tot i no incòrrer en conflicte textual interfereixen en la seva lògica. 
+    El control de versions no ajuda a detectar-ho però si ens ajuda tenir bons testos.</li>
 </ul>
 </li>
 </ul>
-<h3 id="forces">Forces</h3>
+<p><strong>Forces:</strong></p>
 <ul>
 <li>Ramificar és fàcil, fusionar costa.</li>
 <li>Ramificant evitem temporalment el conflicte que seria estar tothom canviant el codi.</li>
 <li>Tard o d'hora cal pagar els deutes (amb interessos).</li>
 <li>La fusió és més costosa com més canvis acomulen.</li>
 </ul>
-<h2 id="mainline-linia-principal">Mainline (Linia principal)</h2>
+<h3 id="patro-mainline-linia-principal">Patrò <em>Mainline</em> (Linia principal)</h3>
 <ul>
 <li><strong>Problema:</strong> Quan tenim diverses branques, quin és l'estat actual del projecte?</li>
 <li><strong>Solució:</strong> Considerar una única branca compartida l'estat actual del producte</li>
 </ul>
-<h3 id="conceptes_1">Conceptes</h3>
+<h4 id="conceptes">Conceptes</h4>
 <ul>
 <li>La branca fa de referencia per:<ul>
 <li>Saber de quin punt he d'arrencar la meva branca</li>
@@ -1530,17 +1877,18 @@
 <li>Saber d'on treure una versió a desplegar a producció</li>
 </ul>
 </li>
+<li>Usualment la branca esta a un servidor compartit</li>
 </ul>
-<h3 id="forces_1">Forces</h3>
+<h4 id="forces">Forces</h4>
 <ul>
 <li>Alternativa: Release Train</li>
 </ul>
-<h2 id="healthy-branch-branca-sana">Healthy Branch (Branca sana)</h2>
+<h3 id="patro-healthy-branch-branca-sana">Patrò <em>Healthy Branch</em> (Branca sana)</h3>
 <ul>
 <li><strong>Problema:</strong> Amb tanta gent aplicant canvis a l'hora, com puc refiar-me de que la branca principal funciona?</li>
 <li><strong>Solució:</strong> Executar automaticament comprovacions per cada commit que es fa a la branca</li>
 </ul>
-<h3 id="forces_2">Forces</h3>
+<p><strong>Forces:</strong></p>
 <ul>
 <li>Important que el codi s'auto-comprovi</li>
 <li>Hi ha tensió entre el cost de les proves i la freqüència i profundintat de les proves<ul>
@@ -1548,7 +1896,167 @@
 </ul>
 </li>
 <li>Ajuda el patro <em>Pre-Integration Review</em></li>
+<li>Important a la branca principal, pero tambè a les branques de features o personals</li>
 </ul>
+<h2 id="patrons-dintegracio">Patrons d'integració</h2>
+<h3 id="patro-mainline-integration">Patrò <em>Mainline Integration</em></h3>
+<p>S'integra el codi a la branca principal</p>
+<h3 id="patro-feature-branching-ramificat-per-funcions">Patrò <em>Feature Branching</em> (Ramificat per funcions)</h3>
+<ul>
+<li><strong>Problema:</strong> Com integrar els canvis?</li>
+<li><strong>Solució:</strong> Tots els canvis associats amb una funció van a una branca i s'integra quan està acabada</li>
+</ul>
+<p>Alternativa: <em>Integració continua</em></p>
+<p><strong>Forces:</strong></p>
+<ul>
+<li>:-) La qualitat de tot codi de la funció es comprova com a unitat</li>
+<li>:-) El codi de la funció s'incorpora integrament o no, només quan la funció és completa</li>
+<li>:-( La fusió és menys freqüent<ul>
+<li>Més conflictes textuals i semantics</li>
+<li>Por al merge</li>
+<li>Branques zombie</li>
+</ul>
+</li>
+<li>:-) Introdueix un punt de peer-review de tercers (fora del pair programming)</li>
+<li>:-( Els refactorings no relacionats es veuen aliens a una brancha de funció</li>
+<li>:-) Es un mode de funcionament popular a l'open source (pull request), on els desenvolupadors son contribuidors i cal review dels programadors principalsa</li>
+</ul>
+<h3 id="patro-continuous-integration-integracio-continua">Patrò <em>Continuous Integration</em> (Integració contínua)</h3>
+<ul>
+<li><strong>Problema:</strong> Com integrar els canvis?</li>
+<li><strong>Solució:</strong> Els desenvolupadors integren amb mainline tan d'hora com s'arriba a una branca sana de compartir, normalment dintre del dia</li>
+</ul>
+<p>Com?</p>
+<ul>
+<li>Redueix la por d'integració per branca llarga</li>
+<li>Requereix Integració Continua</li>
+<li>Compromís d'arribar frequentment a punts de integració sana, amb una feature, si cal, parcialment construïda</li>
+<li>Com integrar features parcialment construides:<ul>
+<li>Feature flags: Que la feature estigui desactivada amb un flag</li>
+<li>Keystone Interface: No exposar la interficie a l'usuari fins que tot lo de darrera està fet (Keystone interface, la interficie es la pedra final)</li>
+</ul>
+</li>
+<li>Obrir una feature branch es opcional:<ul>
+<li>Si s'obre, s'integra freqüentment</li>
+<li>També es pot treballar sense ella: Si es passa la CI i hi ha manera de desactivar la feature parcial a producció</li>
+</ul>
+</li>
+</ul>
+<p>Alternativa: <em>Feature branch</em></p>
+<p><strong>Forces:</strong></p>
+<ul>
+<li>:-( Requereix compromís de tenir la branca sana (integració continua)</li>
+<li>:-) Integració més freqüent que la duracio del desenvolupament d'una funció<ul>
+<li>:-) Redueix el temps de detecció dels conflictes</li>
+<li>:-) Fusións més petites</li>
+</ul>
+</li>
+<li>:-) Més natural fer refactorings no relacionats amb la funció</li>
+<li>:-) Cientificament comprovat que augmenta el delivery (Fowler dixit)</li>
+<li>:-( Codi condicional que un cop a producció caldria treure</li>
+</ul>
+<h3 id="pre-integration-review-revisio-previa-a-la-integracio"><em>Pre-integration review</em> (Revisió previa a la integració)</h3>
+<ul>
+<li><strong><em>Problema:</em></strong> Com assegurar la qualitat del mainline?</li>
+<li><strong><em>Solució:</em></strong> Tota integració amb la mainline ha de estar revisada per iguals abans d'acceptar-se</li>
+</ul>
+<p>Una Pull request es una combinació dels patrons <em>Feature Branch</em> i <em>Pre-integration review</em></p>
+<p><strong>Forces:</strong></p>
+<ul>
+<li>:-( El pair programming ja aporta peer-review i més rápida</li>
+<li>:-) Assegura un mínim de qualitat quan els equips no són equilibrats</li>
+<li>:-) Aporta peer review quan no s'esta fent pair programming</li>
+<li>:-( Introduceix latència en el delivery</li>
+<li>:-( Complicada de fer a cada integració si hi ha integració contínua</li>
+<li>:-( Amb <em>Feature Branch</em> els reviews arriben al final del desenvolupament principal implicant refer coses per arribar a la qualitat desitjada</li>
+</ul>
+<p>DGG: Pot servir per fer extensiu el que s'està fent si el desenvolupament ha estat molt concentrat en poques persones</p>
+<h3 id="patro-ship-show-ask-entrega-mostra-o-pregunta">Patrò: <em>Ship-show-ask</em> (Entrega, mostra o pregunta)</h3>
+<blockquote>
+<p>No es un patrò de l'article pero en Fowler comenta que,
+en un entorn equilibrat ell prefereix fer refactorings un cop comitejat,
+que exigir-los a una revisió pre-commit.</p>
+<p>https://martinfowler.com/articles/ship-show-ask.html</p>
+</blockquote>
+<p>Adaptar l'estrategia al tipus de canvi.</p>
+<ul>
+<li>Ship<ul>
+<li>Com la integració contínua, sense branca</li>
+<li>Casos:<ul>
+<li>Funció afegida seguint protocols ja establerts</li>
+<li>Arregla un bug obvi</li>
+<li>Documentació</li>
+<li>Millora codi basat en el feedback rebut</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Show<ul>
+<li>Crees una PR i s'integra un cop es passen els checks automatics, hi ha conversa sobre el codi</li>
+<li>Obre espai per comunicar el que s'ha fet i rebre feedback, preguntes...</li>
+<li>Discusio post mortem</li>
+<li>Casos:<ul>
+<li>M'agradaria qualsevol tipus de feedback per millorar el codi</li>
+<li>Mireu aquesta nova aproximació de fer les coses</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Wait<ul>
+<li>Crees una PR, i esperes al feedback abans de fusionar</li>
+<li>Casos:<ul>
+<li>Això funcionaria?</li>
+<li>No estic segur de com he resolt el tema</li>
+<li>Necessito ajuda per millorar això</li>
+<li>Ja integraré demà, que avui no arribo</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Regles:</strong></p>
+<ul>
+<li>Per fusionar no es requereix review</li>
+<li>Els autors decideixen quin tipus de cas</li>
+<li>Els autors son els que fusionen</li>
+<li>Les branques tenen vida curta i les rebasem a master sovint</li>
+</ul>
+<p><strong>Forces:</strong></p>
+<ul>
+<li>Un cop proposada una solució es dur proposar alternatives</li>
+<li>No es substitut de parlar amb les companyes abans de començar</li>
+<li>Que no obrir una PR pugui ser tampoc una forma d'evitar la discussió sobre com es fan les coses</li>
+</ul>
+<h3 id="aspectes-claus-dels-patrons-dintegracio">Aspectes claus dels patrons d'integració</h3>
+<ul>
+<li>Freqüència d'integració: Baixa freqüència permet desenvolupament tranquil, </li>
+<li>Fricció d'integració:<ul>
+<li>tot el que posem en mig de fer la integració: formularis, conflictes, reviews...</li>
+<li>si hi ha molta dificulta la integració continua</li>
+<li>plantejar: aporta un valor clar?</li>
+<li>Factors culturals: confiança entre desenvolupadors, equilibri de </li>
+</ul>
+</li>
+<li>Modularitat</li>
+</ul>
+<h2 id="patrons-dentrega">Patrons d'entrega</h2>
+<h3 id="patro-release-branch">Patró <em>Release Branch</em></h3>
+<h3 id="patro-maturity-branch">Patró <em>Maturity Branch</em></h3>
+<h3 id="patro-long-lived-release-branch">Patró <em>Long Lived Release Branch</em></h3>
+<h3 id="patro-environment-branch">Patró <em>Environment Branch</em></h3>
+<h3 id="patro-hotfix-branch">Patró <em>Hotfix Branch</em></h3>
+<h3 id="patro-release-train-branch">Patró <em>Release Train Branch</em></h3>
+<h3 id="patro-release-ready-mainline">Patró <em>Release-Ready Mainline</em></h3>
+<h2 id="altres-patrons">Altres patrons</h2>
+<h3 id="patro-experimental-branch">Patró <em>Experimental Branch</em></h3>
+<h3 id="patro-future-branch">Patró <em>Future Branch</em></h3>
+<h3 id="patro-collaboration-branch">Patró <em>Collaboration Branch</em></h3>
+<h3 id="patro-team-integration-branch">Patró <em>Team Integration Branch</em></h3>
+<h2 id="branching-policies">Branching Policies</h2>
+<h3 id="git-flow">Git-flow</h3>
+<h3 id="github-flow">Github flow</h3>
+<h3 id="trunk-based-development">Trunk based development</h3>
+<h3 id="_1"></h3>
 
 
 
