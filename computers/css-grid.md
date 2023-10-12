@@ -297,7 +297,7 @@ Blocks absolutely positioned into a relative pos grid container are positioned
 relative to the grid container and not put on the flow.
 
 If you name a line `xxxx-start` or `xxxx-end` it will implicitly
-define an area named `xxxx` and the other way arround:
+define an area named `xxxx` and the other way around:
 If you name an area `xxxx` you will implicitly define
 lines `xxxx-start` and `xxxx-end` foreach direction.
 

@@ -99,13 +99,13 @@
       />
     </g>
     <g
-       id="arround"
+       id="around"
        transform="translate(0,45)">
       <text
          xml:space="preserve"
          x="69"
          y="0"
-         id="text_arround">space-arround</text>
+         id="text_around">space-around</text>
       <rect
          class="spacer"
          width="8"

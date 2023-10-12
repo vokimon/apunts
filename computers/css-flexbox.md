@@ -182,7 +182,7 @@ Una vez definido los espacios sobrantes que queremos gestionar,
 - `flex-end` ajusta los elementos al final del eje
 - `center` deja el mismo espacio a los dos lados del eje
 - `stretch`: Se da el espacio extra a los items (en la principal, se reparte segun el grow)
-- `space-arround`: Añade espacio alrededor de cada item.
+- `space-around`: Añade espacio alrededor de cada item.
     - Como si fuera un padding: en los extremos habrá la mitad de espacio que entre hijos.
 - `space-between`: Añade espacio solo entre los elementos interiores.
 - `space-evenly`: Añade el mismo espacio entre los elementos y en los extremos.
@@ -217,7 +217,7 @@ Las propiedades `column-gap`, `row-gap` y la combinada `gap` (row column),
 indican un espacio minimo entre los elementos interiores.
 No genera margen en los elementos exteriores.
 
-Es un espacio minimo, asi que si por  `space-between`, `space-evenly` o `space-arround`,
+Es un espacio minimo, asi que si por  `space-between`, `space-evenly` o `space-around`,
 toca mas espacio, se dará más espacio.
 
 ## Hijos díscolos
