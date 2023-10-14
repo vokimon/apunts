@@ -202,29 +202,52 @@ function Garage() {
 ## Hooks
 
 Els hooks son funcions que es criden dintre del callback de render del component.
+Per convenció comencen per `use`, per exemple, `useState`, `useEffect`...
 
-Normalment els podem cridar diverses vegades i s'identiquen per l'ordre de crida.
+Podem cridar un callback més d'una vegada a un component.
+Es diferencien entre elles per l'ordre de crida.
 
+COMPTE: La conseqüència és que si la seva execució depén d'ifs, la liariem parda.
+
+Per això, és bon costum posar-los a dalt de la funció abans de cap lògica.
 
 ### ```useState```
 
 - Gestiona valors propis de la instància del component, que es mantenen entre execucions del render.
 - Canvis als valors provocaran una crida asincrona al render
+- Retornen un valor (no un getter, sino una copia del valor), i un setter:
 
 ```javascript
-const { myValue, setMyValue } = useState(initialValue)
+const [ myValue, setMyValue ] = useState(initialValue)
 ```
 
-- `initialValue` és el valor inicial del value
+- `initialValue` és el valor inicial de l'estat
 - `myValue` variable receives the current value of the state
 - `setMyValue(value)` és el setter
 
 Internament el que identifica l'atribut no son els noms dels setters/getters sinó l'ordre en que es criden.
+Pel que deiem abans que l'ordre determina la 
 
-COMPTE: La conseqüència és que si la seva execució depén d'ifs, la liariem parda.
+**Comportament error prone:** El valor de l'estat `myValue`, es una copia del valor en el moment de cridar a `useState`.
+Aixó té dues conseqüències:
 
-Per això, és bo posar-los a dalt de la funció abans de cap lògica.
+- El valor `myValue` queda desactualitzat després de fer un `setMyValue`.
+- Si un callback definit dintre de la funcio de render, s'executa després del renderitzat fent servir `myValue` és possible que tingui un valor antic.a
 
+```javascript
+const [ myValue, setMyValue ] = useState(0)
+setMyValue(myValue + 1) // al primer render estat es 1
+setMyValue(myValue + 1) // al primer render, l'estat es encara es 1 perque myValue no ha deixat de valdre 0
+```
+
+Una forma d'obtindre el darrer valor actualitzat és cridar el `setMyValue` amb un callback en comptes d'un nou valor.
+El callback rebrà com a valor el valor actualitzat de l'estat i el retorn sera el valor.
+
+```javascript
+const [ myValue, setMyValue ] = useState(0)
+setMyValue((oldvalue) => oldvalue + 1) // estat es 1
+setMyValue((oldvalue) => oldvalue + 1) // estat es 2
+```
 
 ### ```useEffect```
 
@@ -234,13 +257,20 @@ Executa callbacks després de fer el render quan ja tenim el DOM creat/actualitz
 
 El segon paràmetre determina quan s'executa:
 
-- Si no existeix, s'executa a cada render incondicionalment
+- Si no existeix, s'executa a cada render incondicionalment (inicialment i quan canvia l'estat)
 - Si és un array de valors, s'executa cada vegada que els valors son diferents
 - Si és un array buit, s'executa només a l'inici (l'array sempre serà el mateix les successives vegadess)
 
 El callback pot retornar un altre callback que s'executarà abans de desmuntar el component.
 Es pot fer servir per fer un clean up del que fa l'efecte o del component mateix.
 
+**Error típic:** Si no posem  
+
+:::note Error típic:  Fer-ho servir per calcular valors depenents d'altres.
+
+Els valors depenents els podem calcular al cos del render.
+Fer-ho amb el `useEffect` generaria un render extra.
+Si és un càlcul costós que volem evitar calcular cada render, podem fer servir `useMemo`.
 
 ### ```useContext```
 

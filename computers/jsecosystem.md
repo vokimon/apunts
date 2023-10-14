@@ -242,7 +242,7 @@ Usually they use a Model-View-Controller like approach.
 	- http://www.abeautifulsite.net/blog/2011/02/jquery-minicolors-a-color-selector-for-input-controls/
 - timepicker
 	- Chose time
-	- No idea on which one uses own cloud (many arround)
+	- No idea on which one uses own cloud (many around)
 - chosen
 	- User friendly selection boxes
 	- http://harvesthq.github.io/chosen/
