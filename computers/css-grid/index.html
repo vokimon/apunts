@@ -14,8 +14,15 @@
       
         <link rel="canonical" href="https://vokimon.github.io/apunts/computers/css-grid/">
       
+      
+        <link rel="prev" href="../css-flexbox/">
+      
+      
+        <link rel="next" href="../css-typography/">
+      
+      
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.8">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.6">
     
     
       
@@ -23,15 +30,17 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.20d9efc8.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.35e1ed30.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.815d1a91.min.css">
-        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.356b1318.min.css">
       
       
 
+
     
+    
+      
     
     
       
@@ -49,7 +58,7 @@
     
       <link rel="stylesheet" href="../../css/videowrapper.css">
     
-      <link rel="stylesheet" href="../..">
+      <link rel="stylesheet" href="../../None">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -68,7 +77,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="" data-md-color-accent="">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     
@@ -89,14 +98,16 @@
       
     </div>
     
-      <div data-md-component="outdated" hidden>
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
         
       </div>
     
     
       
 
-<header class="md-header" data-md-component="header">
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="Apunts" class="md-header__button md-logo" aria-label="Apunts" data-md-component="logo">
       
@@ -104,6 +115,7 @@
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
+      
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
@@ -123,40 +135,46 @@
       </div>
     </div>
     
-      <form class="md-header__option" data-md-component="palette">
-        
-          
-          
-          <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
-          
-            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_3" hidden>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9h-1.9M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69m-9.15 3.96h2.3L12 9l-1.15 3.65Z"/></svg>
-            </label>
-          
-        
-          
-          
-          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
-          
-            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
-            </label>
-          
-        
-          
-          
-          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_3">
-          
-            <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_2" hidden>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
-            </label>
-          
-        
-      </form>
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_3" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9h-1.9M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69m-9.15 3.96h2.3L12 9l-1.15 3.65Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_3">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
     
     
     
       <label class="md-header__button md-icon" for="__search">
+        
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
       </label>
       <div class="md-search" data-md-component="search" role="dialog">
@@ -165,12 +183,15 @@
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
+        
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
         <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
@@ -182,7 +203,7 @@
           <div class="md-search-result__meta">
             Initializing search
           </div>
-          <ol class="md-search-result__list"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
         </div>
       </div>
     </div>
@@ -194,7 +215,7 @@
         <a href="https://github.com/vokimon/apunts" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -224,6 +245,7 @@
                     
 
 
+
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="Apunts" class="md-nav__button md-logo" aria-label="Apunts" data-md-component="logo">
@@ -238,7 +260,7 @@
       <a href="https://github.com/vokimon/apunts" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -250,14 +272,18 @@
     
       
       
-      
-
   
   
   
     <li class="md-nav__item">
       <a href="../.." class="md-nav__link">
-        README
+        
+  
+  <span class="md-ellipsis">
+    README
+  </span>
+  
+
       </a>
     </li>
   
@@ -265,120 +291,182 @@
     
       
       
+  
+  
+    
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Computers
+  </span>
+  
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Computers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
   
   
     
   
   
+    
+    
+    
+    
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_2">
-          Computers
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Computers" data-md-level="1">
-        <label class="md-nav__title" for="__nav_2">
-          <span class="md-nav__icon md-icon"></span>
-          Computers
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        
           
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    css
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            css
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
-  
-  
-    
-  
-  
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" checked>
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_2_1">
-          css
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="css" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_1">
-          <span class="md-nav__icon md-icon"></span>
-          css
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
+                
   
   
   
     <li class="md-nav__item">
       <a href="../css/" class="md-nav__link">
-        CSS
+        
+  
+  <span class="md-ellipsis">
+    CSS
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../css-animations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Animaciones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
   
   
   
     <li class="md-nav__item">
       <a href="../css-boxmodel/" class="md-nav__link">
-        CSS: El modelo de caja
+        
+  
+  <span class="md-ellipsis">
+    CSS: El modelo de caja
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../css-normalflow/" class="md-nav__link">
-        CSS Flow
+        
+  
+  <span class="md-ellipsis">
+    CSS Flow
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../css-flexbox/" class="md-nav__link">
-        CSS Flexbox
+        
+  
+  <span class="md-ellipsis">
+    CSS Flexbox
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
     
@@ -386,19 +474,31 @@
   
     <li class="md-nav__item md-nav__item--active">
       
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
         
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          CSS Grid
+          
+  
+  <span class="md-ellipsis">
+    CSS Grid
+  </span>
+  
+
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        CSS Grid
+        
+  
+  <span class="md-ellipsis">
+    CSS Grid
+  </span>
+  
+
       </a>
       
         
@@ -493,810 +593,1150 @@
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../css-typography/" class="md-nav__link">
-        CSS Typografy
+        
+  
+  <span class="md-ellipsis">
+    CSS Typografy
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../css-methodologies-architectures/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Methodologias y Arquitecturas
+  </span>
+  
+
+      </a>
     </li>
   
 
+              
             
-          
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
             
               
+                
   
   
   
     
+    
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_2_2">
-          javascript
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="javascript" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_2">
-          <span class="md-nav__icon md-icon"></span>
-          javascript
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
           
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    javascript
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            javascript
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../jsecosystem/" class="md-nav__link">
-        Jsecosystem
+        
+  
+  <span class="md-ellipsis">
+    Jsecosystem
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../jsonschema/" class="md-nav__link">
-        Jsonschema
+        
+  
+  <span class="md-ellipsis">
+    Jsonschema
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../react-formik/" class="md-nav__link">
-        React formik
+        
+  
+  <span class="md-ellipsis">
+    React formik
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../react/" class="md-nav__link">
-        React / Redux
+        
+  
+  <span class="md-ellipsis">
+    React / Redux
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../computer-graphics/" class="md-nav__link">
-        Computer graphics
+        
+  
+  <span class="md-ellipsis">
+    Computer graphics
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../fastapi/fastapi/" class="md-nav__link">
-        FastAPI
+        
+  
+  <span class="md-ellipsis">
+    FastAPI
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../android-glossary/" class="md-nav__link">
-        Android glossary
+        
+  
+  <span class="md-ellipsis">
+    Android glossary
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../cpp11/" class="md-nav__link">
-        New features of C++11 I should be starting to use:
+        
+  
+  <span class="md-ellipsis">
+    New features of C++11 I should be starting to use:
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../deeplearning/" class="md-nav__link">
-        Deep learning
+        
+  
+  <span class="md-ellipsis">
+    Deep learning
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../docker/" class="md-nav__link">
-        Docker
+        
+  
+  <span class="md-ellipsis">
+    Docker
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../ip6" class="md-nav__link">
-        None
+        
+  
+  <span class="md-ellipsis">
+    None
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../specs-pdf/" class="md-nav__link">
-        Specs pdf
+        
+  
+  <span class="md-ellipsis">
+    Specs pdf
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../timewarrior/" class="md-nav__link">
-        TimeWarrior
+        
+  
+  <span class="md-ellipsis">
+    TimeWarrior
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../xpxplained/" class="md-nav__link">
-        XP Explained (Extracto del libro)
+        
+  
+  <span class="md-ellipsis">
+    XP Explained (Extracto del libro)
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../branching-patterns/" class="md-nav__link">
-        Branching Patterns
+        
+  
+  <span class="md-ellipsis">
+    Branching Patterns
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
     
       
       
-      
-
   
   
   
     
+    
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_3">
-          Math
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Math" data-md-level="1">
-        <label class="md-nav__title" for="__nav_3">
-          <span class="md-nav__icon md-icon"></span>
-          Math
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
           
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Math
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Math
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../../math/mates-fundation/" class="md-nav__link">
-        Math Foundations
+        
+  
+  <span class="md-ellipsis">
+    Math Foundations
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../../math/stats/" class="md-nav__link">
-        Statistics
+        
+  
+  <span class="md-ellipsis">
+    Statistics
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../../math/math-halfderivatives/" class="md-nav__link">
-        Half Derivatives
+        
+  
+  <span class="md-ellipsis">
+    Half Derivatives
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../../math/math-quadraticformula-alternative/" class="md-nav__link">
-        Quadratic Formula
+        
+  
+  <span class="md-ellipsis">
+    Quadratic Formula
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../../math/math-wavelets/" class="md-nav__link">
-        Wavelets
+        
+  
+  <span class="md-ellipsis">
+    Wavelets
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../../math/math-3n1/" class="md-nav__link">
-        Collatz Conjecture
+        
+  
+  <span class="md-ellipsis">
+    Collatz Conjecture
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../../math/math-geometric-algebra/" class="md-nav__link">
-        Geometric Algebra
+        
+  
+  <span class="md-ellipsis">
+    Geometric Algebra
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
     
       
       
-      
-
   
   
   
     
+    
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_4">
-          Music
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Music" data-md-level="1">
-        <label class="md-nav__title" for="__nav_4">
-          <span class="md-nav__icon md-icon"></span>
-          Music
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
           
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Music
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Music
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../../music/music-harmony/" class="md-nav__link">
-        Harmony: Notes, Scales and Chords 🎶
+        
+  
+  <span class="md-ellipsis">
+    Harmony: Notes, Scales and Chords 🎶
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../../music/music-harmony-scales/" class="md-nav__link">
-        Harmony: Scales 🎶
+        
+  
+  <span class="md-ellipsis">
+    Harmony: Scales 🎶
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../../music/guitar-technics/" class="md-nav__link">
-        Técnica de Guitarra 🎸
+        
+  
+  <span class="md-ellipsis">
+    Técnica de Guitarra 🎸
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../../music/guitar-fret-navigation/" class="md-nav__link">
-        Navegación en el mástil
+        
+  
+  <span class="md-ellipsis">
+    Navegación en el mástil
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../../music/pentatonicas.txt" class="md-nav__link">
-        Pentatonicas
+        
+  
+  <span class="md-ellipsis">
+    Pentatonicas
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../../music/songs/" class="md-nav__link">
-        Songs
+        
+  
+  <span class="md-ellipsis">
+    Songs
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../../music/ukelele/" class="md-nav__link">
-        Ukelele
+        
+  
+  <span class="md-ellipsis">
+    Ukelele
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../../music/drums/" class="md-nav__link">
-        Drum line composition (for non drummers)
+        
+  
+  <span class="md-ellipsis">
+    Drum line composition (for non drummers)
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../../music/online-resources/" class="md-nav__link">
-        Online resources
+        
+  
+  <span class="md-ellipsis">
+    Online resources
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
     
       
       
-      
-
   
   
   
     
+    
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_5">
-          Languages
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Languages" data-md-level="1">
-        <label class="md-nav__title" for="__nav_5">
-          <span class="md-nav__icon md-icon"></span>
-          Languages
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
           
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Languages
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Languages
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../../lang/consonantes-afi.png" class="md-nav__link">
-        Phonetics Consonants
+        
+  
+  <span class="md-ellipsis">
+    Phonetics Consonants
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../../lang/vowels.jpg" class="md-nav__link">
-        Phonetics Vowels
+        
+  
+  <span class="md-ellipsis">
+    Phonetics Vowels
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../../lang/arabic-alphabet/" class="md-nav__link">
-        Arabic script
+        
+  
+  <span class="md-ellipsis">
+    Arabic script
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../../lang/arabic/" class="md-nav__link">
-        Arabic
+        
+  
+  <span class="md-ellipsis">
+    Arabic
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../../lang/deutsch/" class="md-nav__link">
-        Deutsch
+        
+  
+  <span class="md-ellipsis">
+    Deutsch
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../../lang/english-expresions/" class="md-nav__link">
-        English expresions
+        
+  
+  <span class="md-ellipsis">
+    English expresions
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../../lang/english-old-pronoums/" class="md-nav__link">
-        English old pronoums
+        
+  
+  <span class="md-ellipsis">
+    English old pronoums
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../../lang/english-prepositions/" class="md-nav__link">
-        English prepositions
+        
+  
+  <span class="md-ellipsis">
+    English prepositions
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../../lang/english-tenses/" class="md-nav__link">
-        English tenses
+        
+  
+  <span class="md-ellipsis">
+    English tenses
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../../lang/vocabulary-somenergia/" class="md-nav__link">
-        English Vocabulary for SE enterviews
+        
+  
+  <span class="md-ellipsis">
+    English Vocabulary for SE enterviews
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../../lang/vocabulary-edibles/" class="md-nav__link">
-        Vocabulary edibles
+        
+  
+  <span class="md-ellipsis">
+    Vocabulary edibles
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../../lang/ruso-alphabet/" class="md-nav__link">
-        Ruso alphabet
+        
+  
+  <span class="md-ellipsis">
+    Ruso alphabet
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../../lang/spanish/" class="md-nav__link">
-        Spanish
+        
+  
+  <span class="md-ellipsis">
+    Spanish
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../../lang/stylistic-figures/" class="md-nav__link">
-        Retorical figures
+        
+  
+  <span class="md-ellipsis">
+    Retorical figures
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
     
       
       
-      
-
   
   
   
     <li class="md-nav__item">
       <a href="../../economics/" class="md-nav__link">
-        Economics
+        
+  
+  <span class="md-ellipsis">
+    Economics
+  </span>
+  
+
       </a>
     </li>
   
@@ -1304,48 +1744,63 @@
     
       
       
-      
-
   
   
   
     
+    
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_7">
-          3D
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="3D" data-md-level="1">
-        <label class="md-nav__title" for="__nav_7">
-          <span class="md-nav__icon md-icon"></span>
-          3D
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
           
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    3D
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            3D
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../../3d/3d-production-pipeline/" class="md-nav__link">
-        3D animation pipeline
+        
+  
+  <span class="md-ellipsis">
+    3D animation pipeline
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1460,10 +1915,8 @@
                 
                   
 
-  <a href="https://github.com/vokimon/apunts/edit/master/docs/computers/css-grid.md" title="Edit this page" class="md-content__button md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+  
+  
 
 
 <h1 id="css-grid">CSS Grid</h1>
@@ -1520,10 +1973,10 @@ Choose the tool closer to your purpose.</p>
 <p><img alt="Grid Schema" src="../css-grid.svg" /></p>
 <h2 id="defining-the-grid">Defining the grid</h2>
 <p>The grid is defined by defining the sizes of the tracks (columns and rows)</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">.</span><span class="nc">container</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="k">grid-template-columns</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">rem</span><span class="w"> </span><span class="mi">1</span><span class="n">fr</span><span class="w"> </span><span class="mi">1</span><span class="n">f</span><span class="p">;</span><span class="w"></span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="k">grid-template-rows</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="kt">rem</span><span class="w"> </span><span class="nf">repeat</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="n">fr</span><span class="w"> </span><span class="mi">2</span><span class="n">fr</span><span class="p">);</span><span class="w"></span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">.</span><span class="nc">container</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="k">grid-template-columns</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">rem</span><span class="w"> </span><span class="mi">1</span><span class="n">fr</span><span class="w"> </span><span class="mi">1</span><span class="n">f</span><span class="p">;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="k">grid-template-rows</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="kt">rem</span><span class="w"> </span><span class="nf">repeat</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="n">fr</span><span class="w"> </span><span class="mi">2</span><span class="n">fr</span><span class="p">);</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">}</span>
 </code></pre></div>
 <p>Each of those sizes can be defined either:</p>
 <ul>
@@ -1541,67 +1994,67 @@ In this case, will expand as <code>1fr 2fr 1fr 2fr 1fr 2fr</code></p>
 which are numbered in each direction by read order: 1, 2, 3...</p>
 <p>Children can be placed by indicating an area defined by two
 vertical and two horizontal divisions.</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">.</span><span class="nc">mychild</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="k">grid-row</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w">      </span><span class="c">/* from the first to the fifth horizontal line */</span><span class="w"></span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="k">grid-column</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w">   </span><span class="c">/* from the second to the fourth vertical line */</span><span class="w"></span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="p">}</span><span class="w"></span>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">.</span><span class="nc">mychild</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="k">grid-row</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w">      </span><span class="c">/* from the first to the fifth horizontal line */</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="k">grid-column</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w">   </span><span class="c">/* from the second to the fourth vertical line */</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="p">}</span>
 </code></pre></div>
 or, in a less clear but compact form:</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">.</span><span class="nc">mychild</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="k">grid-area</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w">    </span><span class="c">/* row start, column start, row end, column end */</span><span class="w"></span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">}</span><span class="w"></span>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">.</span><span class="nc">mychild</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="k">grid-area</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w">    </span><span class="c">/* row start, column start, row end, column end */</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">}</span>
 </code></pre></div>
 or, in the other extreme, more verbose and explicit:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">.</span><span class="nc">mychild</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="k">grid-row-start</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">     </span><span class="c">/* from the first horizontal line */</span><span class="w"></span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="k">grid-row-end</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w">       </span><span class="c">/* to the fifth horizontal line */</span><span class="w"></span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="k">grid-column-start</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w">  </span><span class="c">/* from the second vertical line */</span><span class="w"></span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="k">grid-column-end</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w">    </span><span class="c">/* to the fourth vertical line */</span><span class="w"></span>
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="p">}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">.</span><span class="nc">mychild</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="k">grid-row-start</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">     </span><span class="c">/* from the first horizontal line */</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="k">grid-row-end</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w">       </span><span class="c">/* to the fifth horizontal line */</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="k">grid-column-start</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w">  </span><span class="c">/* from the second vertical line */</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="k">grid-column-end</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w">    </span><span class="c">/* to the fourth vertical line */</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="p">}</span>
 </code></pre></div>
 <h2 id="span">Span</h2>
 <p>The end line can be also specified as an span.
 The same area could be expressed like:</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">.</span><span class="nc">mychild</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="k">grid-row</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">span</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w">      </span><span class="c">/* from the first horizontal line span 4 rows */</span><span class="w"></span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="k">grid-column</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">span</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w">   </span><span class="c">/* from the second vertical line span 2 columns */</span><span class="w"></span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="p">}</span><span class="w"></span>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">.</span><span class="nc">mychild</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="k">grid-row</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">span</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w">      </span><span class="c">/* from the first horizontal line span 4 rows */</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="k">grid-column</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">span</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w">   </span><span class="c">/* from the second vertical line span 2 columns */</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="p">}</span>
 </code></pre></div>
 or you could also use span in the compact (and messy) area declaration:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="p">.</span><span class="nc">mychild</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="k">grid-area</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">span</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">span</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w">  </span><span class="c">/* same compact mode */</span><span class="w"></span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="p">}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="p">.</span><span class="nc">mychild</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="k">grid-area</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">span</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">span</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w">  </span><span class="c">/* same compact mode */</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="p">}</span>
 </code></pre></div>
 <h2 id="naming-lines-and-areas">Naming lines and areas</h2>
 <p>Using numbers to refer the separators can lead to maintenance problems on the long term.
 Naming track divisions can ease the reading and maintenance of the css.</p>
 <p>You can name the track lines with [square brackets] when you specify the tamplate:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="p">.</span><span class="nc">container</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="k">grid-template-columns</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="n">sidebar-start</span><span class="p">]</span><span class="w"> </span><span class="mi">20</span><span class="kt">rem</span><span class="w"> </span><span class="p">[</span><span class="n">sidebar-end</span><span class="w"> </span><span class="k">content</span><span class="o">-</span><span class="kc">start</span><span class="p">]</span><span class="w"> </span><span class="mi">1</span><span class="n">fr</span><span class="w"> </span><span class="p">[</span><span class="k">content</span><span class="o">-</span><span class="kc">end</span><span class="p">]</span><span class="w"> </span><span class="mi">1</span><span class="n">f</span><span class="p">;</span><span class="w"></span>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="p">}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="p">.</span><span class="nc">container</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="k">grid-template-columns</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="n">sidebar-start</span><span class="p">]</span><span class="w"> </span><span class="mi">20</span><span class="kt">rem</span><span class="w"> </span><span class="p">[</span><span class="n">sidebar-end</span><span class="w"> </span><span class="k">content</span><span class="o">-</span><span class="kc">start</span><span class="p">]</span><span class="w"> </span><span class="mi">1</span><span class="n">fr</span><span class="w"> </span><span class="p">[</span><span class="k">content</span><span class="o">-</span><span class="kc">end</span><span class="p">]</span><span class="w"> </span><span class="mi">1</span><span class="n">f</span><span class="p">;</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="p">}</span>
 </code></pre></div>
 <p>Notice that the second line has two names enclosed in the brackets and space separated:
 <code>sidebar-end</code> and <code>content-start</code>.
 This means that you can use either one to refer the same line..</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="p">.</span><span class="nc">child1</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">grid-column</span><span class="p">:</span><span class="w"> </span><span class="n">sidebar-start</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">sidebar-end</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="p">.</span><span class="nc">child1</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">grid-column</span><span class="p">:</span><span class="w"> </span><span class="n">sidebar-start</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">sidebar-end</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
 </code></pre></div>
 <p>We can use any name, but if you name a line <code>xxxx-start</code> or <code>xxxx-end</code>,
 it will implicitly define an area named <code>xxxx</code>.
 This makes using <code>grid-area</code> much easier.</p>
 <p>So, using the former definition, two named areas are defined, and we could just state:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="p">.</span><span class="nc">child1</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">grid-area</span><span class="p">:</span><span class="w"> </span><span class="n">sidebar</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="p">.</span><span class="nc">child2</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">grid-area</span><span class="p">:</span><span class="w"> </span><span class="k">content</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="p">.</span><span class="nc">child1</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">grid-area</span><span class="p">:</span><span class="w"> </span><span class="n">sidebar</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="p">.</span><span class="nc">child2</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">grid-area</span><span class="p">:</span><span class="w"> </span><span class="k">content</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
 </code></pre></div>
 <p>Using areas like this is quite direct.
 But still, defining the start and end lines is quite tedious.
 There is another way of defining the areas:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="p">.</span><span class="nc">container</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">    </span><span class="k">grid-template-areas</span><span class="p">:</span><span class="w"></span>
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">        </span><span class="s1">&#39;header header header&#39;</span><span class="w"></span>
-<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">        </span><span class="s1">&#39;sidebar content ..... &#39;</span><span class="w"></span>
-<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="w">        </span><span class="s1">&#39;footer footer footer&#39;</span><span class="w"></span>
-<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">    </span><span class="p">;</span><span class="w"></span>
-<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="p">}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="p">.</span><span class="nc">container</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">    </span><span class="k">grid-template-areas</span><span class="p">:</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">        </span><span class="s1">&#39;header header header&#39;</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">        </span><span class="s1">&#39;sidebar content ..... &#39;</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="w">        </span><span class="s1">&#39;footer footer footer&#39;</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">    </span><span class="p">;</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="p">}</span>
 </code></pre></div>
 <p>Each line is a row and each word is a column within the row.
 If you do not use a cell for any area you can use one or more dots like in the example.</p>
@@ -1641,54 +2094,54 @@ will take the next space to fit in the row in reading order and then the next.</
 new rows will be created implicitly.</p>
 <p>The default size 
 You can expliciitly size those tracks with:</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nt">grid-auto-rows</span><span class="o">:</span><span class="w"> </span><span class="nt">size</span><span class="w"></span>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nt">grid-auto-rows</span><span class="o">:</span><span class="w"> </span><span class="nt">size</span>
 </code></pre></div>
   /<em> Successive rows and columns get this with </em>/
 TODO: how to grow in columns? -&gt; grid-auto-flow</p>
 <p>By default items take the next grid cell available</p>
 <p>Explicit positioning can be set by specifying the vertical </p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nt">grid-template-columns</span><span class="o">:</span><span class="w"> </span><span class="nt">20rem</span><span class="w"> </span><span class="nt">1fr</span><span class="w"> </span><span class="nt">1f</span><span class="w"></span>
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="nt">grid-template-rows</span><span class="o">:</span><span class="w"> </span><span class="nt">4rem</span><span class="w"> </span><span class="nt">repeat</span><span class="o">(</span><span class="nt">3</span><span class="o">,</span><span class="w"> </span><span class="nt">1fr</span><span class="w"> </span><span class="nt">2fr</span><span class="o">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nt">grid-template-columns</span><span class="o">:</span><span class="w"> </span><span class="nt">20rem</span><span class="w"> </span><span class="nt">1fr</span><span class="w"> </span><span class="nt">1f</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="nt">grid-template-rows</span><span class="o">:</span><span class="w"> </span><span class="nt">4rem</span><span class="w"> </span><span class="nt">repeat</span><span class="o">(</span><span class="nt">3</span><span class="o">,</span><span class="w"> </span><span class="nt">1fr</span><span class="w"> </span><span class="nt">2fr</span><span class="o">)</span>
 <a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>
-<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="nt">grid-auto-columns</span><span class="o">/</span><span class="nt">rows</span><span class="o">:</span><span class="w"> </span><span class="nt">size</span><span class="w"> </span><span class="nt">size</span><span class="w"> </span><span class="nt">Successive</span><span class="w"> </span><span class="nt">rows</span><span class="w"> </span><span class="nt">and</span><span class="w"> </span><span class="nt">columns</span><span class="w"> </span><span class="nt">get</span><span class="w"> </span><span class="nt">this</span><span class="w"> </span><span class="nt">with</span><span class="w"></span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="nt">grid-auto-columns</span><span class="o">/</span><span class="nt">rows</span><span class="o">:</span><span class="w"> </span><span class="nt">size</span><span class="w"> </span><span class="nt">size</span><span class="w"> </span><span class="nt">Successive</span><span class="w"> </span><span class="nt">rows</span><span class="w"> </span><span class="nt">and</span><span class="w"> </span><span class="nt">columns</span><span class="w"> </span><span class="nt">get</span><span class="w"> </span><span class="nt">this</span><span class="w"> </span><span class="nt">with</span>
 <a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>
-<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="nt">grid-template-rows</span><span class="o">/</span><span class="nt">columns</span><span class="o">:</span><span class="w"> </span><span class="nt">subgrid</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="nt">use</span><span class="w"> </span><span class="nt">parent</span><span class="w"> </span><span class="nt">grid</span><span class="w"> </span><span class="o">(</span><span class="nt">Firefox</span><span class="w"> </span><span class="nt">only</span><span class="w"> </span><span class="nt">by</span><span class="w"> </span><span class="nt">2022-07</span><span class="o">)</span><span class="w"></span>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="nt">grid-template-rows</span><span class="o">/</span><span class="nt">columns</span><span class="o">:</span><span class="w"> </span><span class="nt">subgrid</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="nt">use</span><span class="w"> </span><span class="nt">parent</span><span class="w"> </span><span class="nt">grid</span><span class="w"> </span><span class="o">(</span><span class="nt">Firefox</span><span class="w"> </span><span class="nt">only</span><span class="w"> </span><span class="nt">by</span><span class="w"> </span><span class="nt">2022-07</span><span class="o">)</span>
 <a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>
-<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="nt">align-items</span><span class="o">:</span><span class="w"> </span><span class="nt">on</span><span class="w"> </span><span class="nt">the</span><span class="w"> </span><span class="nt">parent</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span><span class="nt">the</span><span class="w"> </span><span class="nt">children</span><span class="w"></span>
-<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="nt">align-self</span><span class="o">:</span><span class="w"> </span><span class="nt">on</span><span class="w"> </span><span class="nt">the</span><span class="w"> </span><span class="nt">children</span><span class="w"> </span><span class="nt">within</span><span class="w"> </span><span class="nt">the</span><span class="w"> </span><span class="nt">parent</span><span class="w"></span>
-<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="w">    </span><span class="nt">start</span><span class="o">,</span><span class="w"> </span><span class="nt">end</span><span class="o">,</span><span class="w"> </span><span class="nt">stretch</span><span class="w"></span>
-<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="nt">gap</span><span class="o">:</span><span class="w"> </span><span class="nt">size</span><span class="w"> </span><span class="o">[</span><span class="nt">size</span><span class="o">]</span><span class="w"></span>
-<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="nt">column-gap</span><span class="o">:</span><span class="w"> </span><span class="nt">size</span><span class="w"></span>
-<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a><span class="nt">row-gap</span><span class="o">:</span><span class="w"> </span><span class="nt">size</span><span class="w"></span>
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="nt">align-items</span><span class="o">:</span><span class="w"> </span><span class="nt">on</span><span class="w"> </span><span class="nt">the</span><span class="w"> </span><span class="nt">parent</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span><span class="nt">the</span><span class="w"> </span><span class="nt">children</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="nt">align-self</span><span class="o">:</span><span class="w"> </span><span class="nt">on</span><span class="w"> </span><span class="nt">the</span><span class="w"> </span><span class="nt">children</span><span class="w"> </span><span class="nt">within</span><span class="w"> </span><span class="nt">the</span><span class="w"> </span><span class="nt">parent</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="w">    </span><span class="nt">start</span><span class="o">,</span><span class="w"> </span><span class="nt">end</span><span class="o">,</span><span class="w"> </span><span class="nt">stretch</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="nt">gap</span><span class="o">:</span><span class="w"> </span><span class="nt">size</span><span class="w"> </span><span class="o">[</span><span class="nt">size</span><span class="o">]</span>
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="nt">column-gap</span><span class="o">:</span><span class="w"> </span><span class="nt">size</span>
+<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a><span class="nt">row-gap</span><span class="o">:</span><span class="w"> </span><span class="nt">size</span>
 <a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>
-<a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a><span class="o">//</span><span class="w"> </span><span class="nt">Explicit</span><span class="w"> </span><span class="nt">grid</span><span class="w"> </span><span class="nt">placing</span><span class="w"></span>
-<a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a><span class="nt">grid-column</span><span class="o">/</span><span class="nt">row-start</span><span class="o">:</span><span class="w"> </span><span class="nt">linestart</span><span class="w"></span>
-<a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a><span class="nt">grid-column</span><span class="o">/</span><span class="nt">row-end</span><span class="o">:</span><span class="w"> </span><span class="nt">lineend</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="nt">absolute</span><span class="w"></span>
-<a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a><span class="nt">grid-column</span><span class="o">/</span><span class="nt">row-end</span><span class="o">:</span><span class="w"> </span><span class="nt">span</span><span class="w"> </span><span class="nt">nlines</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="nt">relative</span><span class="w"></span>
-<a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a><span class="nt">grid-column</span><span class="o">/</span><span class="nt">row</span><span class="o">:</span><span class="w"> </span><span class="o">&lt;</span><span class="nt">cells</span><span class="o">&gt;</span><span class="w"> </span><span class="o">[[</span><span class="nt">span</span><span class="o">]</span><span class="w"> </span><span class="o">&lt;</span><span class="nt">cells</span><span class="o">&gt;]</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="nt">negative</span><span class="w"> </span><span class="nt">columns</span><span class="w"> </span><span class="nt">start</span><span class="w"> </span><span class="nt">counting</span><span class="w"> </span><span class="nt">from</span><span class="w"> </span><span class="nt">end</span><span class="w"></span>
-<a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a><span class="nt">grid-area</span><span class="o">:</span><span class="w"> </span><span class="nt">rowlinestart</span><span class="w"> </span><span class="nt">columnlinestart</span><span class="w"> </span><span class="nt">rowlineend</span><span class="w"> </span><span class="nt">columnlineend</span><span class="w"></span>
+<a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a><span class="o">//</span><span class="w"> </span><span class="nt">Explicit</span><span class="w"> </span><span class="nt">grid</span><span class="w"> </span><span class="nt">placing</span>
+<a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a><span class="nt">grid-column</span><span class="o">/</span><span class="nt">row-start</span><span class="o">:</span><span class="w"> </span><span class="nt">linestart</span>
+<a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a><span class="nt">grid-column</span><span class="o">/</span><span class="nt">row-end</span><span class="o">:</span><span class="w"> </span><span class="nt">lineend</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="nt">absolute</span>
+<a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a><span class="nt">grid-column</span><span class="o">/</span><span class="nt">row-end</span><span class="o">:</span><span class="w"> </span><span class="nt">span</span><span class="w"> </span><span class="nt">nlines</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="nt">relative</span>
+<a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a><span class="nt">grid-column</span><span class="o">/</span><span class="nt">row</span><span class="o">:</span><span class="w"> </span><span class="o">&lt;</span><span class="nt">cells</span><span class="o">&gt;</span><span class="w"> </span><span class="o">[[</span><span class="nt">span</span><span class="o">]</span><span class="w"> </span><span class="o">&lt;</span><span class="nt">cells</span><span class="o">&gt;]</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="nt">negative</span><span class="w"> </span><span class="nt">columns</span><span class="w"> </span><span class="nt">start</span><span class="w"> </span><span class="nt">counting</span><span class="w"> </span><span class="nt">from</span><span class="w"> </span><span class="nt">end</span>
+<a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a><span class="nt">grid-area</span><span class="o">:</span><span class="w"> </span><span class="nt">rowlinestart</span><span class="w"> </span><span class="nt">columnlinestart</span><span class="w"> </span><span class="nt">rowlineend</span><span class="w"> </span><span class="nt">columnlineend</span>
 <a id="__codelineno-11-21" name="__codelineno-11-21" href="#__codelineno-11-21"></a>
-<a id="__codelineno-11-22" name="__codelineno-11-22" href="#__codelineno-11-22"></a><span class="o">//</span><span class="w"> </span><span class="nt">The</span><span class="w"> </span><span class="nt">cells</span><span class="w"> </span><span class="nt">get</span><span class="w"> </span><span class="nt">occupied</span><span class="w"> </span><span class="nt">and</span><span class="w"> </span><span class="nt">the</span><span class="w"> </span><span class="nt">implicit</span><span class="w"> </span><span class="nt">placed</span><span class="w"> </span><span class="nt">elements</span><span class="w"> </span><span class="nt">jump</span><span class="w"> </span><span class="nt">those</span><span class="w"></span>
+<a id="__codelineno-11-22" name="__codelineno-11-22" href="#__codelineno-11-22"></a><span class="o">//</span><span class="w"> </span><span class="nt">The</span><span class="w"> </span><span class="nt">cells</span><span class="w"> </span><span class="nt">get</span><span class="w"> </span><span class="nt">occupied</span><span class="w"> </span><span class="nt">and</span><span class="w"> </span><span class="nt">the</span><span class="w"> </span><span class="nt">implicit</span><span class="w"> </span><span class="nt">placed</span><span class="w"> </span><span class="nt">elements</span><span class="w"> </span><span class="nt">jump</span><span class="w"> </span><span class="nt">those</span>
 <a id="__codelineno-11-23" name="__codelineno-11-23" href="#__codelineno-11-23"></a>
-<a id="__codelineno-11-24" name="__codelineno-11-24" href="#__codelineno-11-24"></a><span class="o">//</span><span class="w"> </span><span class="nt">You</span><span class="w"> </span><span class="nt">can</span><span class="w"> </span><span class="nt">name</span><span class="w"> </span><span class="nt">lines</span><span class="w"> </span><span class="nt">between</span><span class="w"> </span><span class="nt">tracks</span><span class="w"></span>
+<a id="__codelineno-11-24" name="__codelineno-11-24" href="#__codelineno-11-24"></a><span class="o">//</span><span class="w"> </span><span class="nt">You</span><span class="w"> </span><span class="nt">can</span><span class="w"> </span><span class="nt">name</span><span class="w"> </span><span class="nt">lines</span><span class="w"> </span><span class="nt">between</span><span class="w"> </span><span class="nt">tracks</span>
 <a id="__codelineno-11-25" name="__codelineno-11-25" href="#__codelineno-11-25"></a>
-<a id="__codelineno-11-26" name="__codelineno-11-26" href="#__codelineno-11-26"></a><span class="nt">grid-template-columns</span><span class="o">:</span><span class="w"> </span><span class="o">[</span><span class="nt">main-start</span><span class="o">]</span><span class="w"> </span><span class="nt">20rem</span><span class="w"> </span><span class="o">[</span><span class="nt">content-start</span><span class="o">]</span><span class="w"> </span><span class="nt">1fr</span><span class="w"> </span><span class="o">[</span><span class="nt">content-end</span><span class="o">]</span><span class="w"> </span><span class="nt">1f</span><span class="w"> </span><span class="o">[</span><span class="nt">main-end</span><span class="o">]</span><span class="w"></span>
-<a id="__codelineno-11-27" name="__codelineno-11-27" href="#__codelineno-11-27"></a><span class="o">//</span><span class="w"> </span><span class="nt">then</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nt">the</span><span class="w"> </span><span class="nt">childs</span><span class="w"></span>
-<a id="__codelineno-11-28" name="__codelineno-11-28" href="#__codelineno-11-28"></a><span class="nt">grid-column</span><span class="o">:</span><span class="w"> </span><span class="nt">content-start</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nt">content-end</span><span class="w"></span>
-<a id="__codelineno-11-29" name="__codelineno-11-29" href="#__codelineno-11-29"></a><span class="o">//</span><span class="w"> </span><span class="nt">if</span><span class="w"> </span><span class="nt">you</span><span class="w"> </span><span class="nt">named</span><span class="w"> </span><span class="nt">the</span><span class="w"> </span><span class="nt">lines</span><span class="w"> </span><span class="nt">with</span><span class="w"> </span><span class="nt">and</span><span class="w"> </span><span class="nt">start</span><span class="w"> </span><span class="nt">and</span><span class="w"> </span><span class="nt">end</span><span class="w"> </span><span class="nt">suffixes</span><span class="w"></span>
-<a id="__codelineno-11-30" name="__codelineno-11-30" href="#__codelineno-11-30"></a><span class="nt">grid-area</span><span class="o">:</span><span class="w"> </span><span class="nt">content</span><span class="w"></span>
+<a id="__codelineno-11-26" name="__codelineno-11-26" href="#__codelineno-11-26"></a><span class="nt">grid-template-columns</span><span class="o">:</span><span class="w"> </span><span class="o">[</span><span class="nt">main-start</span><span class="o">]</span><span class="w"> </span><span class="nt">20rem</span><span class="w"> </span><span class="o">[</span><span class="nt">content-start</span><span class="o">]</span><span class="w"> </span><span class="nt">1fr</span><span class="w"> </span><span class="o">[</span><span class="nt">content-end</span><span class="o">]</span><span class="w"> </span><span class="nt">1f</span><span class="w"> </span><span class="o">[</span><span class="nt">main-end</span><span class="o">]</span>
+<a id="__codelineno-11-27" name="__codelineno-11-27" href="#__codelineno-11-27"></a><span class="o">//</span><span class="w"> </span><span class="nt">then</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nt">the</span><span class="w"> </span><span class="nt">childs</span>
+<a id="__codelineno-11-28" name="__codelineno-11-28" href="#__codelineno-11-28"></a><span class="nt">grid-column</span><span class="o">:</span><span class="w"> </span><span class="nt">content-start</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nt">content-end</span>
+<a id="__codelineno-11-29" name="__codelineno-11-29" href="#__codelineno-11-29"></a><span class="o">//</span><span class="w"> </span><span class="nt">if</span><span class="w"> </span><span class="nt">you</span><span class="w"> </span><span class="nt">named</span><span class="w"> </span><span class="nt">the</span><span class="w"> </span><span class="nt">lines</span><span class="w"> </span><span class="nt">with</span><span class="w"> </span><span class="nt">and</span><span class="w"> </span><span class="nt">start</span><span class="w"> </span><span class="nt">and</span><span class="w"> </span><span class="nt">end</span><span class="w"> </span><span class="nt">suffixes</span>
+<a id="__codelineno-11-30" name="__codelineno-11-30" href="#__codelineno-11-30"></a><span class="nt">grid-area</span><span class="o">:</span><span class="w"> </span><span class="nt">content</span>
 <a id="__codelineno-11-31" name="__codelineno-11-31" href="#__codelineno-11-31"></a>
 <a id="__codelineno-11-32" name="__codelineno-11-32" href="#__codelineno-11-32"></a>
-<a id="__codelineno-11-33" name="__codelineno-11-33" href="#__codelineno-11-33"></a><span class="nt">grid-auto-rows</span><span class="o">:</span><span class="w"> </span><span class="nt">size</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="nt">creates</span><span class="w"> </span><span class="nt">rows</span><span class="w"> </span><span class="nt">as</span><span class="w"> </span><span class="nt">needed</span><span class="w"> </span><span class="nt">of</span><span class="w"> </span><span class="nt">the</span><span class="w"> </span><span class="nt">provided</span><span class="w"> </span><span class="nt">size</span><span class="w"></span>
+<a id="__codelineno-11-33" name="__codelineno-11-33" href="#__codelineno-11-33"></a><span class="nt">grid-auto-rows</span><span class="o">:</span><span class="w"> </span><span class="nt">size</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="nt">creates</span><span class="w"> </span><span class="nt">rows</span><span class="w"> </span><span class="nt">as</span><span class="w"> </span><span class="nt">needed</span><span class="w"> </span><span class="nt">of</span><span class="w"> </span><span class="nt">the</span><span class="w"> </span><span class="nt">provided</span><span class="w"> </span><span class="nt">size</span>
 <a id="__codelineno-11-34" name="__codelineno-11-34" href="#__codelineno-11-34"></a>
-<a id="__codelineno-11-35" name="__codelineno-11-35" href="#__codelineno-11-35"></a><span class="nt">grid-template-areas</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;area1 area2 area3&#39;</span><span class="w"> </span><span class="s1">&#39;area4 . area3&#39;</span><span class="w"></span>
-<a id="__codelineno-11-36" name="__codelineno-11-36" href="#__codelineno-11-36"></a><span class="o">//</span><span class="w"> </span><span class="nt">each</span><span class="w"> </span><span class="nt">quoted</span><span class="w"> </span><span class="nt">is</span><span class="w"> </span><span class="nt">a</span><span class="w"> </span><span class="nt">row</span><span class="o">.</span><span class="w"></span>
-<a id="__codelineno-11-37" name="__codelineno-11-37" href="#__codelineno-11-37"></a><span class="o">//</span><span class="w"> </span><span class="nt">dot</span><span class="w"> </span><span class="o">(</span><span class="nt">or</span><span class="w"> </span><span class="nt">multiple</span><span class="w"> </span><span class="nt">dots</span><span class="w"> </span><span class="nt">without</span><span class="w"> </span><span class="nt">spaces</span><span class="o">)</span><span class="w"> </span><span class="nt">is</span><span class="w"> </span><span class="nt">a</span><span class="w"> </span><span class="nt">place</span><span class="w"> </span><span class="nt">holder</span><span class="w"></span>
+<a id="__codelineno-11-35" name="__codelineno-11-35" href="#__codelineno-11-35"></a><span class="nt">grid-template-areas</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;area1 area2 area3&#39;</span><span class="w"> </span><span class="s1">&#39;area4 . area3&#39;</span>
+<a id="__codelineno-11-36" name="__codelineno-11-36" href="#__codelineno-11-36"></a><span class="o">//</span><span class="w"> </span><span class="nt">each</span><span class="w"> </span><span class="nt">quoted</span><span class="w"> </span><span class="nt">is</span><span class="w"> </span><span class="nt">a</span><span class="w"> </span><span class="nt">row</span><span class="o">.</span>
+<a id="__codelineno-11-37" name="__codelineno-11-37" href="#__codelineno-11-37"></a><span class="o">//</span><span class="w"> </span><span class="nt">dot</span><span class="w"> </span><span class="o">(</span><span class="nt">or</span><span class="w"> </span><span class="nt">multiple</span><span class="w"> </span><span class="nt">dots</span><span class="w"> </span><span class="nt">without</span><span class="w"> </span><span class="nt">spaces</span><span class="o">)</span><span class="w"> </span><span class="nt">is</span><span class="w"> </span><span class="nt">a</span><span class="w"> </span><span class="nt">place</span><span class="w"> </span><span class="nt">holder</span>
 </code></pre></div>
 <p>Blocks absolutely positioned into a relative pos grid container are positioned
 relative to the grid container and not put on the flow.</p>
 <p>If you name a line <code>xxxx-start</code> or <code>xxxx-end</code> it will implicitly
-define an area named <code>xxxx</code> and the other way arround:
+define an area named <code>xxxx</code> and the other way around:
 If you name an area <code>xxxx</code> you will implicitly define
 lines <code>xxxx-start</code> and <code>xxxx-end</code> foreach direction.</p>
 <ul>
@@ -1698,30 +2151,30 @@ by adding a number after it 'content-col 2`.</li>
 <li>Likewise you can span just counting instances of a name <code>span content-col 2</code></li>
 </ul>
 <p>Example: setting up bootstrap 12 columns model</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c">/* This single selector sets it up */</span><span class="w"></span>
-<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="p">.</span><span class="nc">grid</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">    </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="k">grid</span><span class="p">;</span><span class="w"></span>
-<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">    </span><span class="k">gap</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
-<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="w">    </span><span class="k">grid-template-columns</span><span class="p">:</span><span class="w"> </span><span class="nf">repeat</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="w"> </span><span class="err">[</span><span class="n">col</span><span class="nv">-start</span><span class="err">]</span><span class="w"> </span><span class="mi">1</span><span class="n">fr</span><span class="p">);</span><span class="w"></span>
-<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="p">}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c">/* This single selector sets it up */</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="p">.</span><span class="nc">grid</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">    </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="k">grid</span><span class="p">;</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">    </span><span class="k">gap</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="w">    </span><span class="k">grid-template-columns</span><span class="p">:</span><span class="w"> </span><span class="nf">repeat</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="w"> </span><span class="err">[</span><span class="n">col</span><span class="nv">-start</span><span class="err">]</span><span class="w"> </span><span class="mi">1</span><span class="n">fr</span><span class="p">);</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="p">}</span>
 <a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>
-<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="c">/* And for example, the tipical header-sides-footer structure */</span><span class="w"></span>
-<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="p">.</span><span class="nc">footer</span><span class="o">,</span><span class="w"></span>
-<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="p">.</span><span class="nc">header</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="w">    </span><span class="k">grid-column</span><span class="p">:</span><span class="w"> </span><span class="n">col-start</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">span</span><span class="w"> </span><span class="mi">12</span><span class="p">;</span><span class="w"></span>
-<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a><span class="p">.</span><span class="nc">side-1</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a><span class="w">    </span><span class="k">grid-column</span><span class="p">:</span><span class="w"> </span><span class="n">col-start</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">span</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"></span>
-<a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a><span class="w">    </span><span class="k">grid-row</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"></span>
-<a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a><span class="p">.</span><span class="nc">content</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a><span class="w">    </span><span class="k">grid-column</span><span class="p">:</span><span class="w"> </span><span class="n">col-start</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">span</span><span class="w"> </span><span class="mi">8</span><span class="p">;</span><span class="w"></span>
-<a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a><span class="w">    </span><span class="k">grid-row</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"></span>
-<a id="__codelineno-12-20" name="__codelineno-12-20" href="#__codelineno-12-20"></a><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-12-21" name="__codelineno-12-21" href="#__codelineno-12-21"></a><span class="p">.</span><span class="nc">side-2</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-12-22" name="__codelineno-12-22" href="#__codelineno-12-22"></a><span class="w">    </span><span class="k">grid-column</span><span class="p">:</span><span class="w"> </span><span class="n">col-start</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">span</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"></span>
-<a id="__codelineno-12-23" name="__codelineno-12-23" href="#__codelineno-12-23"></a><span class="w">    </span><span class="k">grid-row</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"></span>
-<a id="__codelineno-12-24" name="__codelineno-12-24" href="#__codelineno-12-24"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="c">/* And for example, the tipical header-sides-footer structure */</span>
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="p">.</span><span class="nc">footer</span><span class="o">,</span>
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="p">.</span><span class="nc">header</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="w">    </span><span class="k">grid-column</span><span class="p">:</span><span class="w"> </span><span class="n">col-start</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">span</span><span class="w"> </span><span class="mi">12</span><span class="p">;</span>
+<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="p">}</span>
+<a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a><span class="p">.</span><span class="nc">side-1</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a><span class="w">    </span><span class="k">grid-column</span><span class="p">:</span><span class="w"> </span><span class="n">col-start</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">span</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a><span class="w">    </span><span class="k">grid-row</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a><span class="p">}</span>
+<a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a><span class="p">.</span><span class="nc">content</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a><span class="w">    </span><span class="k">grid-column</span><span class="p">:</span><span class="w"> </span><span class="n">col-start</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">span</span><span class="w"> </span><span class="mi">8</span><span class="p">;</span>
+<a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a><span class="w">    </span><span class="k">grid-row</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<a id="__codelineno-12-20" name="__codelineno-12-20" href="#__codelineno-12-20"></a><span class="p">}</span>
+<a id="__codelineno-12-21" name="__codelineno-12-21" href="#__codelineno-12-21"></a><span class="p">.</span><span class="nc">side-2</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-22" name="__codelineno-12-22" href="#__codelineno-12-22"></a><span class="w">    </span><span class="k">grid-column</span><span class="p">:</span><span class="w"> </span><span class="n">col-start</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">span</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<a id="__codelineno-12-23" name="__codelineno-12-23" href="#__codelineno-12-23"></a><span class="w">    </span><span class="k">grid-row</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<a id="__codelineno-12-24" name="__codelineno-12-24" href="#__codelineno-12-24"></a><span class="p">}</span>
 </code></pre></div>
 <p><code>grid-auto-rows/columns</code> determines the size of implicitly created columns.
 You can specify several values and they will be asigned in loop.</p>
@@ -1748,42 +2201,6 @@ As maximum, max-content.</p>
       
         <footer class="md-footer">
   
-    
-    <nav class="md-footer__inner md-grid" aria-label="Footer" >
-      
-        
-        <a href="../css-flexbox/" class="md-footer__link md-footer__link--prev" aria-label="Previous: CSS Flexbox" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              CSS Flexbox
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../css-typography/" class="md-footer__link md-footer__link--next" aria-label="Next: CSS Typografy" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              CSS Typografy
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
-  
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
@@ -1805,10 +2222,11 @@ As maximum, max-content.</p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d6c3db9e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.aecac24b.min.js"></script>
       
     
   </body>
