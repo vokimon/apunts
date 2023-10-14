@@ -8,11 +8,14 @@ nav:
   - Computers:
     - css:
       - computers/css.md
+      - computers/css-animations.md
       - computers/css-boxmodel.md
       - computers/css-normalflow.md
       - computers/css-flexbox.md
       - computers/css-grid.md
       - computers/css-typography.md
+      - computers/css-methodologies-architectures.md
+      #- computers/css-frameworks-preprocessors.md
     - javascript:
       - computers/jsecosystem.md
       - computers/jsonschema.md

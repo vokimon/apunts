@@ -163,7 +163,7 @@ Las propiedades empiezan por:
 En cada una de esas direcciones, podemos hablar de
 
 - `*-content`: El espacio que sobra en la dirección, después de colocar todo el contenido
-- `*-item`: El espacio en la dirección que le sobra a cada elemento dentro de la pista que atraviesa la dirección
+- `*-items`: El espacio en la dirección que le sobra a cada elemento dentro de la pista que atraviesa la dirección
 
 Como en Flexbox no hay pistas que atraviesen la dirección principal, `justify-items` no tiene sentido.
 En Grid sí, porque se definen pistas en las dos direcciones.
