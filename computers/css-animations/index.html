@@ -2039,12 +2039,15 @@ Si queremos que se haga al entrar y salir del estado hay que poner transiciones 
 <li><code>transition-timing-function</code>: la funcion que dicta como interpolar los valores entre el inicial y final.</li>
 </ul>
 <h3 id="funciones-de-interpolacion">Funciones de interpolación</h3>
-<p>Hay tres transiciones funcionales, la bezier o continua y la escalonada o discreta.</p>
+<p>Hay tres funciones de interpolación:</p>
 <ul>
-<li>linear(v1, v2...)<ul>
-<li>El primer valor sera 0 normalmente y el ultimo 1</li>
+<li>
+<p>linear(v1, v2...)</p>
+<ul>
+<li>Incremento uniforme en los valores entre puntos de control</li>
+<li>Normalmente, el primer valor sera 0 y el ultimo 1</li>
 <li>Divide temporalmente el intervalo en tantos pasos como valores<ul>
-<li><code>linear(0, .4, 1)</code></li>
+<li><code>linear(0, .4, 1)</code> (al 50% del progreso valdra .4)</li>
 </ul>
 </li>
 <li>Si no nos va bien esa división, también podemos añadir al valor un porcentaje<ul>
@@ -2054,45 +2057,65 @@ Si queremos que se haga al entrar y salir del estado hay que poner transiciones 
 <li>Hace interpolación linial entre los pasos de un valor a otro</li>
 </ul>
 </li>
-<li>steps(nsteps, jumpmode): divide en pasos y aplica el modo<ul>
+<li>
+<p><code>steps(nsteps, jumpmode)</code>:</p>
+<ul>
+<li>hace la transición en nsteps saltos abruptos</li>
+<li>el jumpmode indica si hay o no salto al principio o al final<ul>
 <li>jump-start/start: 5 -&gt; 0%, 20%, 40%, 60%, 80% (no 100)</li>
 <li>jump-end/end: 5 -&gt; 20%, 40%, 60%, 80%, 100% (no 0)</li>
-<li>jump-none: 5 -&gt; 20%, 40%, 60%, 80% (neither 0 or 100)</li>
-<li>jump-both: 5 -&gt; </li>
+<li>jump-none: 4 -&gt; 20%, 40%, 60%, 80% (neither 0 or 100)</li>
+<li>jump-both: 6 -&gt; 0%, 20%, 40%, 60%, 80%, 100%</li>
 </ul>
 </li>
-<li>cubic-bezier(P1, P2, P3, P4)<ul>
+</ul>
+</li>
+<li>
+<p>cubic-bezier(v1, t1, v2, t2)</p>
+<ul>
 <li>Los puntos iniciales de la curva son siempre (0,0) y (1,1)</li>
-<li>Lo que controlamos son las aristas de control</li>
-<li></li>
+<li>Lo que controlamos son las aristas de control (v1,t1) y (v2,t2)</li>
+<li>Según las aristas la funcion puede salirse del intervalo (0,1)</li>
 </ul>
 </li>
 </ul>
 <p>Tambien hay algunos alias con nombre para funciones típicas.</p>
 <ul>
+<li>linear:<ul>
+<li>velocidad uniforme</li>
+<li>cubic-bezier(0.0, 0.0, 1.0, 1.0)</li>
+<li>linear(0, 1)</li>
+</ul>
+</li>
 <li>ease:<ul>
 <li>aceleracion suave al inicio y al final</li>
 <li>cubic-bezier(0.25, 0.1, 0.25, 1.0)</li>
+<li>a diferencia de ease-in-out, se esta mas tiempo en torno a los valores inicio y final</li>
 </ul>
 </li>
-<li>linear:<ul>
-<li>uniform transition speed</li>
-<li>cubic-bezier(0.0, 0.0, 1.0, 1.0)</li>
+<li>ease-in<ul>
+<li>lento al principio, rapido al final</li>
+<li>cubic-bezier(0.42,0,1,1)</li>
 </ul>
 </li>
-<li>ease</li>
-<li>ease-in</li>
-<li>ease-out</li>
-<li>ease-in-out</li>
-<li>linear</li>
+<li>ease-out<ul>
+<li>rapido al principio, suave al final</li>
+<li>cubic-bezier(0,0,0.58,1)</li>
+</ul>
+</li>
+<li>ease-in-out<ul>
+<li>suave al principio y al final (un poco mas lento que ease)</li>
+<li>cubic-bezier(0.42,0,0.58,1)</li>
+</ul>
+</li>
 <li>step-start:<ul>
+<li>Un salto brusco al inicio de la transicion</li>
 <li>step(1, start)</li>
 </ul>
 </li>
 <li>step-end:<ul>
-<li>step(1, end)
- jump-start/jump-end/jump-none/jump-both/start/end)</li>
-<li></li>
+<li>Un salto brusco al final de la transicion</li>
+<li>step(1, end)</li>
 </ul>
 </li>
 </ul>
