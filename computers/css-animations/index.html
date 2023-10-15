@@ -437,6 +437,20 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#no-molestar" class="md-nav__link">
+    No molestar
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objetivos-de-diseno" class="md-nav__link">
+    Objetivos de diseño
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#transiciones" class="md-nav__link">
     Transiciones
   </a>
@@ -447,6 +461,13 @@
           <li class="md-nav__item">
   <a href="#propiedades-de-la-transicion" class="md-nav__link">
     Propiedades de la transición
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funciones-de-interpolacion" class="md-nav__link">
+    Funciones de interpolación
   </a>
   
 </li>
@@ -644,7 +665,7 @@
         
   
   <span class="md-ellipsis">
-    CSS Methodologias y Arquitecturas
+    CSS: Metodologías y arquitecturas
   </span>
   
 
@@ -1851,6 +1872,20 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#no-molestar" class="md-nav__link">
+    No molestar
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objetivos-de-diseno" class="md-nav__link">
+    Objetivos de diseño
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#transiciones" class="md-nav__link">
     Transiciones
   </a>
@@ -1861,6 +1896,13 @@
           <li class="md-nav__item">
   <a href="#propiedades-de-la-transicion" class="md-nav__link">
     Propiedades de la transición
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funciones-de-interpolacion" class="md-nav__link">
+    Funciones de interpolación
   </a>
   
 </li>
@@ -1958,6 +2000,21 @@
 
 
 <h1 id="css-animaciones">CSS: Animaciones</h1>
+<h2 id="no-molestar">No molestar</h2>
+<p>Primero de todo, las animaciones pueden ser molestas para algunos usuarios.
+Los navegadores tienen una opción para indicar a la página que el usuario
+prefiere reducir los elementos en movimiento.</p>
+<p>Desde css podemos adaptar las animaciones para que sean menos violentas
+especializandolas dentro de un media query:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">@</span><span class="k">media</span><span class="w"> </span><span class="o">(</span><span class="nt">prefers-reduced-motion</span><span class="o">:</span><span class="w"> </span><span class="nt">reduce</span><span class="o">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="c">/* styles to apply if a user&#39;s device settings are set to reduced motion */</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">}</span>
+</code></pre></div>
+<p>Para probar como se ve con dicha opcion Mozlla ha hecho una
+<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion#user_preferences">compilación de como activarla en diferentes platformas</a></p>
+<h2 id="objetivos-de-diseno">Objetivos de diseño</h2>
+<p>Como pueden ser molestas es importante aplicar animaciones allí donde aporten algo:</p>
+<p>-</p>
 <h2 id="transiciones">Transiciones</h2>
 <p>Las transiciones son la forma más sencilla de generar animaciones.
 Las transiciones se activan cuando cambia el valor de una propiedad de un elemento
@@ -1979,6 +2036,65 @@ Si queremos que se haga al entrar y salir del estado hay que poner transiciones 
 </ul>
 </li>
 <li><code>transition-duration</code>: El tiempo que tarda en alcanzar el valor final.</li>
+<li><code>transition-timing-function</code>: la funcion que dicta como interpolar los valores entre el inicial y final.</li>
+</ul>
+<h3 id="funciones-de-interpolacion">Funciones de interpolación</h3>
+<p>Hay tres transiciones funcionales, la bezier o continua y la escalonada o discreta.</p>
+<ul>
+<li>linear(v1, v2...)<ul>
+<li>El primer valor sera 0 normalmente y el ultimo 1</li>
+<li>Divide temporalmente el intervalo en tantos pasos como valores<ul>
+<li><code>linear(0, .4, 1)</code></li>
+</ul>
+</li>
+<li>Si no nos va bien esa división, también podemos añadir al valor un porcentaje<ul>
+<li><code>linear(0, .5 40% 1)</code> mueve el punto que llegara al .5 a cuando llege el 40% del progreso</li>
+</ul>
+</li>
+<li>Hace interpolación linial entre los pasos de un valor a otro</li>
+</ul>
+</li>
+<li>steps(nsteps, jumpmode): divide en pasos y aplica el modo<ul>
+<li>jump-start/start: 5 -&gt; 0%, 20%, 40%, 60%, 80% (no 100)</li>
+<li>jump-end/end: 5 -&gt; 20%, 40%, 60%, 80%, 100% (no 0)</li>
+<li>jump-none: 5 -&gt; 20%, 40%, 60%, 80% (neither 0 or 100)</li>
+<li>jump-both: 5 -&gt; </li>
+</ul>
+</li>
+<li>cubic-bezier(P1, P2, P3, P4)<ul>
+<li>Los puntos iniciales de la curva son siempre (0,0) y (1,1)</li>
+<li>Lo que controlamos son las aristas de control</li>
+<li></li>
+</ul>
+</li>
+</ul>
+<p>Tambien hay algunos alias con nombre para funciones típicas.</p>
+<ul>
+<li>ease:<ul>
+<li>aceleracion suave al inicio y al final</li>
+<li>cubic-bezier(0.25, 0.1, 0.25, 1.0)</li>
+</ul>
+</li>
+<li>linear:<ul>
+<li>uniform transition speed</li>
+<li>cubic-bezier(0.0, 0.0, 1.0, 1.0)</li>
+</ul>
+</li>
+<li>ease</li>
+<li>ease-in</li>
+<li>ease-out</li>
+<li>ease-in-out</li>
+<li>linear</li>
+<li>step-start:<ul>
+<li>step(1, start)</li>
+</ul>
+</li>
+<li>step-end:<ul>
+<li>step(1, end)
+ jump-start/jump-end/jump-none/jump-both/start/end)</li>
+<li></li>
+</ul>
+</li>
 </ul>
 <h3 id="multiples-transiciones">Multiples transiciones</h3>
 <p>Cada elemento puede tener más de una transición.</p>
@@ -2095,11 +2211,11 @@ con las funciones <code>view</code> o <code>scroll</code>.</p>
 <p>Por defecto los timelines solo se pueden usar en animaciones de elementos descendientes.
 La propiedad <code>timeline-scope</code> tiene como valor el nombre de un timeline en un
 elemento hijo, augmentando el alcance (scope) a </p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Document
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    Scope
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>        DirectChild
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>            Scroller
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>        Animated
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Document
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    Scope
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>        DirectChild
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>            Scroller
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>        Animated
 </code></pre></div>
 <p>En el ejemplo anterior Scroller define un timeline.
 Para poder afectar a Animated, el elemento scope tiene que definir <code>timeline-scope</code>
