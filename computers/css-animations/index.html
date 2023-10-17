@@ -437,16 +437,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#accessibilidad-primero" class="md-nav__link">
+    Accessibilidad primero
+  </a>
+  
+    <nav class="md-nav" aria-label="Accessibilidad primero">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#no-molestar" class="md-nav__link">
     No molestar
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#objetivos-de-diseno" class="md-nav__link">
-    Objetivos de diseño
+        
+          <li class="md-nav__item">
+  <a href="#pausa-para-oculta" class="md-nav__link">
+    Pausa-Para-Oculta
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tres-flashes-o-menos" class="md-nav__link">
+    Tres flashes o menos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#objetivos-en-el-diseno" class="md-nav__link">
+    Objetivos en el diseño
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -485,16 +512,30 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#animaciones" class="md-nav__link">
-    Animaciones
+  <a href="#animaciones-basadas-en-fotogramas-clave-keyframes" class="md-nav__link">
+    Animaciones basadas en fotogramas clave (keyframes)
   </a>
   
-    <nav class="md-nav" aria-label="Animaciones">
+    <nav class="md-nav" aria-label="Animaciones basadas en fotogramas clave (keyframes)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#keyframes" class="md-nav__link">
-    Keyframes
+  <a href="#fotogramas-clave-keyframes" class="md-nav__link">
+    Fotogramas clave (keyframes)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atributos" class="md-nav__link">
+    Atributos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiples-animaciones-independientes" class="md-nav__link">
+    Multiples animaciones independientes
   </a>
   
 </li>
@@ -1885,16 +1926,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#accessibilidad-primero" class="md-nav__link">
+    Accessibilidad primero
+  </a>
+  
+    <nav class="md-nav" aria-label="Accessibilidad primero">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#no-molestar" class="md-nav__link">
     No molestar
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#objetivos-de-diseno" class="md-nav__link">
-    Objetivos de diseño
+        
+          <li class="md-nav__item">
+  <a href="#pausa-para-oculta" class="md-nav__link">
+    Pausa-Para-Oculta
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tres-flashes-o-menos" class="md-nav__link">
+    Tres flashes o menos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#objetivos-en-el-diseno" class="md-nav__link">
+    Objetivos en el diseño
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1933,16 +2001,30 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#animaciones" class="md-nav__link">
-    Animaciones
+  <a href="#animaciones-basadas-en-fotogramas-clave-keyframes" class="md-nav__link">
+    Animaciones basadas en fotogramas clave (keyframes)
   </a>
   
-    <nav class="md-nav" aria-label="Animaciones">
+    <nav class="md-nav" aria-label="Animaciones basadas en fotogramas clave (keyframes)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#keyframes" class="md-nav__link">
-    Keyframes
+  <a href="#fotogramas-clave-keyframes" class="md-nav__link">
+    Fotogramas clave (keyframes)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atributos" class="md-nav__link">
+    Atributos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiples-animaciones-independientes" class="md-nav__link">
+    Multiples animaciones independientes
   </a>
   
 </li>
@@ -2026,7 +2108,8 @@
 
 
 <h1 id="css-animaciones">CSS: Animaciones</h1>
-<h2 id="no-molestar">No molestar</h2>
+<h2 id="accessibilidad-primero">Accessibilidad primero</h2>
+<h3 id="no-molestar">No molestar</h3>
 <p>Primero de todo, las animaciones pueden ser molestas para algunos usuarios.
 Los navegadores tienen una opción para indicar a la página que el usuario
 prefiere reducir los elementos en movimiento.</p>
@@ -2038,10 +2121,52 @@ especializandolas dentro de un media query:</p>
 </code></pre></div>
 <p>Para probar como se ve con dicha opcion Mozilla ha hecho una
 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion#user_preferences">compilación de como activarla en diferentes platformas</a></p>
-<h2 id="objetivos-de-diseno">Objetivos de diseño</h2>
+<h3 id="pausa-para-oculta">Pausa-Para-Oculta</h3>
+<p>Si hay alguna animación que:</p>
+<ul>
+<li>Comienza automáticamente</li>
+<li>Dura más de 5s</li>
+<li>Se presenta en paralelo a otro contenido</li>
+</ul>
+<p>Hay que proporcionar algún método para que el usuario la pause, pare o oculte.</p>
+<h3 id="tres-flashes-o-menos">Tres flashes o menos</h3>
+<p>Los elementos que parpadean son peligrosos para las personas con epilepsia.</p>
+<p><a href="https://www.w3.org/TR/2008/REC-WCAG20-20081211/#general-thresholddef">Hay estudios que establecen el umbral seguro.</a></p>
+<p>Es seguro si:</p>
+<ul>
+<li>No hay cosas que parpadeen mas de 3 veces por segundo.<ul>
+<li>Flash general: Alternar luminancias</li>
+<li>Flash rojo: Alternar entre rojo saturado y otro color</li>
+</ul>
+</li>
+<li>O el fulcrum que engloba los parpadeos no supera los 10 grados</li>
+</ul>
+<h3 id="objetivos-en-el-diseno">Objetivos en el diseño</h3>
 <p>Como pueden ser molestas es importante aplicar animaciones allí donde aporten algo:</p>
 <ul>
-<li></li>
+<li>Continuidad: Cuando un elemento aparece, desaparece o cambia, hacerlo de una forma gradual para que la pagina no de saltos</li>
+<li>Feedback: Comunicar al usuario que la pagina responde a lo que hace (hover, clicked, drag...)</li>
+<li>Atención: Hay un elemento (uno, si, no dos) que queremos que capte la atención del usuario</li>
+<li>Esperas: En las esperas, indica que la aplicación no se ha colgado sinó que está esperando datos.</li>
+<li>Emoción: Refuerzan el mensaje y conectan con el usuario</li>
+<li>Marca: Las animaciones son parte de la marca</li>
+</ul>
+<p>Respecto a las animaciones de espera:</p>
+<ul>
+<li>Tipos:<ul>
+<li>Animación de carga: ofrecen algo interesante que mirar mientras se carga (por un ratín)</li>
+<li>Animación de progreso: Da cuenta de cuanto tiempo queda</li>
+<li>Esqueletos de carga (skeleton loaders): Muestran la maquetación aproximada de como serán los elementos que esta cargando.</li>
+</ul>
+</li>
+<li>Criterios:<ul>
+<li>Por bonica que sea, si es corta, mejor</li>
+<li>Esperar duele, hagamosla interesante</li>
+<li>Es parte de la marca</li>
+<li>Explicar a qué esperamos</li>
+<li>Si se conoce aprox, decir cuanto queda</li>
+</ul>
+</li>
 </ul>
 <h2 id="transiciones">Transiciones</h2>
 <p>Las transiciones son la forma más sencilla de generar animaciones.
@@ -2167,8 +2292,13 @@ Si queremos que se haga al entrar y salir del estado hay que poner transiciones 
 </ul>
 </li>
 </ul>
-<h2 id="animaciones">Animaciones</h2>
-<h3 id="keyframes">Keyframes</h3>
+<h2 id="animaciones-basadas-en-fotogramas-clave-keyframes">Animaciones basadas en fotogramas clave (<code>keyframes</code>)</h2>
+<p>Las animaciones basadas en fotogramas clave dan más flexibilidad
+que las animaciones de transición pero son un poco más complejas de definir.</p>
+<p>TODO: verificar que es asi</p>
+<p>El timeline viene definido por el tiempo desde que se aplica el selector
+que contiene la animación.</p>
+<h3 id="fotogramas-clave-keyframes">Fotogramas clave (<code>keyframes</code>)</h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">@</span><span class="k">keyframes</span><span class="w"> </span><span class="nt">colorchange</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">0</span><span class="o">%</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="kc">yellow</span><span class="p">;</span>
@@ -2178,6 +2308,50 @@ Si queremos que se haga al entrar y salir del estado hay que poner transiciones 
 <a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">  </span><span class="p">}</span>
 <a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="p">}</span>
 </code></pre></div>
+<h3 id="atributos">Atributos</h3>
+<ul>
+<li><code>animation-name</code>: Nombre de la definición keyframes </li>
+<li><code>animation-duration</code>: Obligatoria, sino por defecto es 0s y no hay animación.</li>
+<li><code>animation-delay</code>: igual que en la transicion (usando el shortcut, el segundo tiempo que indiquemos)</li>
+<li><code>animation-timing-funcion</code>: igual que en transiciones (default: ease)</li>
+<li><code>animation-iteration-count</code>: un numero (float!) o infinite (default 1)</li>
+<li><code>animation-fill-mode</code>: <ul>
+<li><code>none</code> (default) Fuera del intervalo la animación no afecta a los atributos</li>
+<li><code>forwards</code> Las propiedades se quedan con el último valor de la animación</li>
+<li><code>backwards</code> A la que aplica la animación y durante el delay, las propiedades adoptan el primer valor de la animación</li>
+<li><code>both</code>: aplica backwards y forwards</li>
+</ul>
+</li>
+<li><code>animación-direction</code>: en que dirección progresan las distintas iteraciones<ul>
+<li><code>normal</code> -&gt; -&gt; (default)</li>
+<li><code>reverse</code> &lt;- &lt;-</li>
+<li><code>alternate</code> -&gt; &lt;-</li>
+<li><code>alternate-reverse</code> &lt;- -&gt;</li>
+</ul>
+</li>
+<li><code>animation-play-state</code>: <ul>
+<li><code>running</code> (default)</li>
+<li><code>paused</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="multiples-animaciones-independientes">Multiples animaciones independientes</h3>
+<p>Un keyframe puede controlar varias propiedades.
+Pero si queremos controlar propiedades con parametros de animación distintos,
+podemos separar los parametros de las animaciones independientes con comas.</p>
+<p>Cuando varias animaciones o transiciones setean una misma propiedad,
+el atributo <code>animation-composition</code> especifica como mezclarlas.</p>
+<ul>
+<li><code>replace</code>: (default) Sobreescribe el ultimo valor de la cascada</li>
+<li><code>add</code>: Añade</li>
+</ul>
+<p>Esto es especialmente útil con attributos como <code>transform</code> que se especifica con llamadas a diferentes funciones (translate, rotate...).
+Por ejemplo si partimos de un <code>transform: rotate(10) translateX(3)</code> y la animación aplica <code>rotate(20)</code></p>
+<ul>
+<li><code>replace</code>: substituira todas las funciones existentes: <code>rotate(20)</code></li>
+<li><code>add</code>: añadira las tranformaciones a las existentes <code>rotate(10) translateX(3) rotate(20)</code></li>
+<li><code>combine</code>: añadira a las funciones existentes que coincidan: <code>rotate(30) translateX(3)</code></li>
+</ul>
 <h2 id="animaciones-de-scroll">Animaciones de scroll</h2>
 <p>En las animaciónes clásicas, el progreso en la animación (timeline) lo determina el tiempo.
 Se define un inicio y una duración, y, las propiedades se modifican, segun el tiempo avance en ese intérvalo.</p>
