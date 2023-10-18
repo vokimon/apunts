@@ -66,6 +66,8 @@ nav:
     - lang/ruso-alphabet.md
     - lang/spanish.md
     - lang/stylistic-figures.md
+  - History:
+    - history/cristianismo.md
   - Economics: economics.md
   - 3D:
       - 3d/3d-production-pipeline.md
