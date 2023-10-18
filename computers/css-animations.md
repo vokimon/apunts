@@ -1,4 +1,73 @@
-# Animaciones
+# CSS: Animaciones
+
+
+## Accessibilidad primero
+
+### No molestar
+
+Primero de todo, las animaciones pueden ser molestas para algunos usuarios.
+Los navegadores tienen una opción para indicar a la página que el usuario
+prefiere reducir los elementos en movimiento.
+
+Desde css podemos adaptar las animaciones para que sean menos violentas
+especializandolas dentro de un media query:
+
+```css
+@media (prefers-reduced-motion: reduce) {
+  /* styles to apply if a user's device settings are set to reduced motion */
+}
+```
+
+Para probar como se ve con dicha opcion Mozilla ha hecho una
+[compilación de como activarla en diferentes platformas](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion#user_preferences)
+
+### Pausa-Para-Oculta
+
+Si hay alguna animación que:
+
+- Comienza automáticamente
+- Dura más de 5s
+- Se presenta en paralelo a otro contenido
+
+Hay que proporcionar algún método para que el usuario la pause, pare o oculte.
+
+### Tres flashes o menos
+
+Los elementos que parpadean son peligrosos para las personas con epilepsia.
+
+[Hay estudios que establecen el umbral seguro.](https://www.w3.org/TR/2008/REC-WCAG20-20081211/#general-thresholddef)
+
+Es seguro si:
+
+- No hay cosas que parpadeen mas de 3 veces por segundo.
+	- Flash general: Alternar luminancias
+	- Flash rojo: Alternar entre rojo saturado y otro color
+- O el fulcrum que engloba los parpadeos no supera los 10 grados
+
+
+### Objetivos en el diseño
+
+Como pueden ser molestas es importante aplicar animaciones allí donde aporten algo:
+
+- Continuidad: Cuando un elemento aparece, desaparece o cambia, hacerlo de una forma gradual para que la pagina no de saltos
+- Feedback: Comunicar al usuario que la pagina responde a lo que hace (hover, clicked, drag...)
+- Atención: Hay un elemento (uno, si, no dos) que queremos que capte la atención del usuario
+- Esperas: En las esperas, indica que la aplicación no se ha colgado sinó que está esperando datos.
+- Emoción: Refuerzan el mensaje y conectan con el usuario
+- Marca: Las animaciones son parte de la marca
+
+Respecto a las animaciones de espera:
+
+- Tipos:
+	- Animación de carga: ofrecen algo interesante que mirar mientras se carga (por un ratín)
+	- Animación de progreso: Da cuenta de cuanto tiempo queda
+	- Esqueletos de carga (skeleton loaders): Muestran la maquetación aproximada de como serán los elementos que esta cargando.
+- Criterios:
+	- Por bonica que sea, si es corta, mejor
+	- Esperar duele, hagamosla interesante
+	- Es parte de la marca
+	- Explicar a qué esperamos
+	- Si se conoce aprox, decir cuanto queda
 
 ## Transiciones
 
@@ -15,27 +84,150 @@ Si queremos que se haga al entrar y salir del estado hay que poner transiciones 
 ### Propiedades de la transición
 
 - `transition-properties`: Las propiedades que se cambiaran separadas por espacios.
+	- Default: `all`
 	- También podemos usar comas para separar grupos de propiedades que se animan de forma diferente.
 	  (Ver 'Multiples transiciones')
+- `transition-duration`: El tiempo que tarda en alcanzar el valor final.
+	- Default: 0s
 - `transition-delay`: Cuanto tarda la transición en empezar
 	- Default: 0s
 	- Duraciones negativas no empiezan antes, pero empiezan con el timeline a medias como si hubieran empezado antes.
-- `transition-duration`: El tiempo que tarda en alcanzar el valor final.
+- `transition-timing-function`: la funcion que dicta como interpolar los valores entre el inicial y final.
+	- Default: `easy`
+- `transition`: Atajo para las anteriores. Si solo hay un tiempo es el duration.
 
+Default to: `all 0s 0s easy`
+
+
+### Funciones de interpolación
+
+Hay tres funciones de interpolación:
+
+- linear(v1, v2...)
+	- Incremento uniforme en los valores entre puntos de control
+	- Normalmente, el primer valor sera 0 y el ultimo 1
+	- Divide temporalmente el intervalo en tantos pasos como valores
+		- `linear(0, .4, 1)` (al 50% del progreso valdra .4)
+	- Si no nos va bien esa división, también podemos añadir al valor un porcentaje
+		- `linear(0, .5 40% 1)` mueve el punto que llegara al .5 a cuando llege el 40% del progreso
+	- Hace interpolación linial entre los pasos de un valor a otro
+
+- `steps(nsteps, jumpmode)`:
+	- hace la transición en nsteps saltos abruptos
+	- el jumpmode indica si hay o no salto al principio o al final
+		- jump-start/start: 5 -> 0%, 20%, 40%, 60%, 80% (no 100)
+		- jump-end/end: 5 -> 20%, 40%, 60%, 80%, 100% (no 0)
+		- jump-none: 4 -> 20%, 40%, 60%, 80% (neither 0 or 100)
+		- jump-both: 6 -> 0%, 20%, 40%, 60%, 80%, 100%
+
+- cubic-bezier(v1, t1, v2, t2)
+	- Los puntos iniciales de la curva son siempre (0,0) y (1,1)
+	- Lo que controlamos son las aristas de control (v1,t1) y (v2,t2)
+	- Según las aristas la funcion puede salirse del intervalo (0,1)
+
+Tambien hay algunos alias con nombre para funciones típicas.
+
+- linear:
+	- velocidad uniforme
+	- cubic-bezier(0.0, 0.0, 1.0, 1.0)
+	- linear(0, 1)
+- ease:
+	- aceleracion suave al inicio y al final
+	- cubic-bezier(0.25, 0.1, 0.25, 1.0)
+	- a diferencia de ease-in-out, se esta mas tiempo en torno a los valores inicio y final
+- ease-in
+	- lento al principio, rapido al final
+	- cubic-bezier(0.42,0,1,1)
+- ease-out
+	- rapido al principio, suave al final
+	- cubic-bezier(0,0,0.58,1)
+- ease-in-out
+	- suave al principio y al final (un poco mas lento que ease)
+	- cubic-bezier(0.42,0,0.58,1)
+- step-start:
+	- Un salto brusco al inicio de la transicion
+	- step(1, start)
+- step-end:
+	- Un salto brusco al final de la transicion
+	- step(1, end)
 
 ### Multiples transiciones
 
 Cada elemento puede tener más de una transición.
 
-- En cada una de las propiedades se separa cada transición con comas
-- La propiedad que manda en el número de transiciones que hay es `transition-property`.
+- En cada una de las propiedades `transition-*` puede definir transiciones independientes separandolas por comas
+- La propiedad `transition-property` es la que determina en el número de transiciones independientes
 - El resto de propiedades relacionadas,
 	- si hay de más se ignoran
 	- si hay de menos se repiten los valores en bucle
 
 
+## Animaciones basadas en fotogramas clave (`keyframes`)
 
-## Keyframes
+Las animaciones basadas en fotogramas clave dan más flexibilidad
+que las animaciones de transición pero son un poco más complejas de definir.
+
+TODO: verificar que es asi
+
+El timeline viene definido por el tiempo desde que se aplica el selector
+que contiene la animación.
+
+
+### Fotogramas clave (`keyframes`)
+
+```css
+@keyframes colorchange {
+  0% {
+    background: yellow;
+  }
+  100% {
+    background: blue;
+  }
+}
+```
+
+### Atributos
+
+- `animation-name`: Nombre de la definición keyframes 
+- `animation-duration`: Obligatoria, sino por defecto es 0s y no hay animación.
+- `animation-delay`: igual que en la transicion (usando el shortcut, el segundo tiempo que indiquemos)
+- `animation-timing-funcion`: igual que en transiciones (default: ease)
+- `animation-iteration-count`: un numero (float!) o infinite (default 1)
+- `animation-fill-mode`: 
+	- `none` (default) Fuera del intervalo la animación no afecta a los atributos
+	- `forwards` Las propiedades se quedan con el último valor de la animación
+	- `backwards` A la que aplica la animación y durante el delay, las propiedades adoptan el primer valor de la animación
+	- `both`: aplica backwards y forwards
+- `animación-direction`: en que dirección progresan las distintas iteraciones
+	- `normal` -> -> (default)
+	- `reverse` <- <-
+	- `alternate` -> <-
+	- `alternate-reverse` <- ->
+- `animation-play-state`: 
+	- `running` (default)
+	- `paused`
+
+
+### Multiples animaciones independientes
+
+Un keyframe puede controlar varias propiedades.
+Pero si queremos controlar propiedades con parametros de animación distintos,
+podemos separar los parametros de las animaciones independientes con comas.
+
+Cuando varias animaciones o transiciones setean una misma propiedad,
+el atributo `animation-composition` especifica como mezclarlas.
+
+- `replace`: (default) Sobreescribe 
+- `add`: concatena el valor 
+
+Esto es especialmente útil con attributos como `transform` que se especifica con llamadas a diferentes funciones (translate, rotate...).
+Por ejemplo si partimos de un `transform: rotate(10) translateX(3)` y la animación aplica `rotate(20)`
+
+- `replace`: substituira todas las funciones existentes: `rotate(20)`
+- `add`: añadira las tranformaciones a las existentes `rotate(10) translateX(3) rotate(20)`
+- `combine`: añadira a las funciones existentes que coincidan: `rotate(30) translateX(3)`
+
+
 
 ## Animaciones de scroll
 
