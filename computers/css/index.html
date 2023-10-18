@@ -451,6 +451,48 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#tailwind" class="md-nav__link">
+    Tailwind
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#styled-components" class="md-nav__link">
+    Styled Components
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#emotion" class="md-nav__link">
+    Emotion
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vanilla-css" class="md-nav__link">
+    Vanilla CSS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#css-modules" class="md-nav__link">
+    CSS Modules
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts" class="md-nav__link">
+    Concepts
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1831,6 +1873,48 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#tailwind" class="md-nav__link">
+    Tailwind
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#styled-components" class="md-nav__link">
+    Styled Components
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#emotion" class="md-nav__link">
+    Emotion
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vanilla-css" class="md-nav__link">
+    Vanilla CSS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#css-modules" class="md-nav__link">
+    CSS Modules
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts" class="md-nav__link">
+    Concepts
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2013,169 +2097,6 @@ dppx: dots per pixel unit</p>
 <li>Variables</li>
 <li>Rule selection (just if you use the component)</li>
 </ul>
-<h1 id="methodologias-y-arquitecturas">Methodologias y Arquitecturas</h1>
-<p>Ciertas malas practicas al definir selectores
-afectan a su especificidad
-y que hacen que las reglas interaccionen entre ellas de forma poco predecible.
-Dificulta la mantenibilidad.</p>
-<p>Unos primeros criterios:</p>
-<ul>
-<li>Evitar <code>!important</code> no se puede sobreescribir y enmascaran problemas de metodologia.</li>
-<li>Evitar <code>#id</code> en los selectores, tienen demasiada especifidad. Dejarlos para js, usar solo clases.</li>
-<li>Usar clases con nombres intelegibles</li>
-<li>Evitar nested selectors</li>
-</ul>
-<p>A parte de estos criterios, podemos aplicar:</p>
-<ul>
-<li>Convenciones: Como identificamos las palabras (<code>snake_case</code>, <code>camellCase</code>, <code>PascalCase</code>/<code>UpperCamellCase</code>, <code>kebab-case</code>)</li>
-<li>Metodologias: Como nombramos las clases</li>
-<li>Arquitecturas: Como organizamos el código</li>
-</ul>
-<p>DGG: (Todo es un nivell de abstraccion por debajo a como va en programación)</p>
-<p>Objetivos:</p>
-<ul>
-<li>Comprensible (los nombres tienen significado claro)</li>
-<li>Predecible (aplicar una clase</li>
-<li>Reutilizable (no replicar codigo)</li>
-<li>Escalable (funciona para proyectos grandes)</li>
-<li>Modular (cambios en un componente no afecta a otros)</li>
-</ul>
-<p>Criterios de organizacion de las metodologias:</p>
-<ul>
-<li>Estructurales: tipo de elemento al que se le aplica</li>
-<li>Funcionales: que attributos afecta</li>
-</ul>
-<h2 id="bem-block-element-modifier">BEM (Block, Element, Modifier)</h2>
-<p>https://en.bem.info/methodology/css/</p>
-<p>Evita ciertos problemas en la definicion de estilos
-cuando queremos reusar componentes,
-mover componentes de sitio,
-o redefinir su comportamiento.</p>
-<p>Tal y como esta definido CSS, se aplican segun especificidad.
-Eso hace que los selectores anidados o los basados en id, o los que tienen muchas clases,
-sean muy dificiles de sobreescribir.
-Tambien hace que sean muy sensibles al contexto DOM en el que se usan.
-Para evitarlo, proscribe el uso de id's y de selectores padre hijo.</p>
-<p>Un <strong>Bloque</strong> es una parte de una interfaz que se puede reusar o mover como unidad.
-Los bloques pueden
-contener otros bloques,
-usarse repetidamente en un proyecto o
-reusarse como elemento aislado en otro proyecto.</p>
-<p><strong>Elementos</strong> son partes del bloque que no tienen sentido fuera de el.
-Por ejemplo, cada una de las pestañas de una barra de pestañas.</p>
-<p>Los <strong>Modificadores</strong> cambian como se ve o comporta un bloque o elemento.
-Esos modificadores pueden cambiar en tiempo de ejecución.</p>
-<p>Un nodo DOM puede ser a la vez varias entidades (bloque o elemento) BEM.
-Por ejemplo un <code>menu__item</code> (elemento dentro de <code>menu</code>) puede ser a la vez un bloque <code>link</code>.</p>
-<p>Nomenclatura: <code>block-name__elem-name_mod-name_mod-val</code></p>
-<p>Ejemplo: <code>main-menu__item_status_background-color_red</code></p>
-<ul>
-<li>El <code>-</code> separa palabras</li>
-<li>El <code>__</code> separa el bloque del elemento (si es un elemento)</li>
-<li>El <code>_</code> separa el modificador (si es un modificador) y su valor (si lo tuviera)</li>
-</ul>
-<p>Si se sigue la metodologia se puede redefinir los estilos facilmente
-y no deberian de existir conflictos.</p>
-<ul>
-<li>Los selectores son casi siempre una sola clase para no augmentar su especificidad y poderse redefinir facilmente:</li>
-<li>no usa ids</li>
-<li>no usa tags</li>
-<li>no usa clases combinadas,</li>
-<li>solo en unos pocos casos se usan clases anidadas</li>
-<li>Usa clases que identifican</li>
-<li>bloques <code>button</code>,</li>
-<li>elementos de esos bloques <code>button__icon</code>, <code>button__ripple</code> o</li>
-<li>modificadores <code>buton_enabled</code>, <code>button_cool_theme</code>.</li>
-<li>La excepción para usar clases anidadas son:</li>
-<li>cuando se depende de los modificadores del padre (el modificador como contexto)</li>
-<li>cuando se depende de el tema de la aplicación (el tema como contexto)</li>
-<li>No para indicar jerarquia (el nombre ya lo documenta)</li>
-<li>La excepción para usar clases combinadas</li>
-<li>cuando los modificadores tienen efectos juntos (enabled y theme)</li>
-<li>Cada selector se ocupa de un aspecto.</li>
-</ul>
-<p>Ejemplo:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#39;menu&#39;</span><span class="p">&gt;</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#39;menu__item&#39;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#39;menu__item menu__item--active&#39;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</code></pre></div>
-<p>Fuerzas:</p>
-<ul>
-<li>:-) sencillo y facil</li>
-<li>:-( html muy verboso</li>
-</ul>
-<h2 id="suit-css">Suit CSS</h2>
-<p>Usa una nomenclatura analoga a BEM pero diferente:</p>
-<p><code>namespace-ComponentName-descendantName--modifierName</code></p>
-<p><code>u-utilityName</code></p>
-<p>Para las variables <code>--ComponentName[-descendant|--modifier][-onState]-(cssProperty|variableName)</code></p>
-<p>Para las variables del tema simplemente camelCase y en theme.css</p>
-<p>Utilities: basada en los conceptos de atom</p>
-<p>Components: basada en los conceptos de BEM</p>
-<p>Principios:</p>
-<ul>
-<li>Classes and variables are scoped to the component</li>
-<li>All related css in a single file named as the component, or a directory.</li>
-<li>Components should not set their width, margin and positioning.</li>
-<li>Make it inline or full-width (100%) and let the ancestors fit in</li>
-<li>Documentation:</li>
-<li>Intended presentation</li>
-<li>Modifiers and states</li>
-<li>Reason for specific, opaque property values</li>
-<li>Known limitations</li>
-</ul>
-<h2 id="cubecss">CubeCSS</h2>
-<p>https://cube.fyi/</p>
-<p>CUBE: Composition Utility Block Exception</p>
-<ul>
-<li>Global (not in the anacronym):<ul>
-<li>Set the reset and the basics for the standard elements</li>
-<li>Embraces css progresive enhancement and keeps minimal css</li>
-</ul>
-</li>
-<li>Composition: The skeleton of the page<ul>
-<li>How elements of a container are layout</li>
-<li>Reusable, flexible layouts</li>
-<li>Parametrizable with css-variables<ul>
-<li>se pueden personalizar para componentes concretos</li>
-</ul>
-</li>
-<li>No deben incluir visuales o decorativas como: colores, fuentes, sombras...</li>
-<li>No pixel-perfect (visualbasic) sino adaptable (responsive, qt)</li>
-</ul>
-</li>
-<li>Utilities: piece of funtional rules (bgcolor-primary, flow...)<ul>
-<li>Una sola regla o un conciso grupo de reglas relacionadas</li>
-<li>Basarse en design tokens (--variables o mixins) para tener una sola fuente de verdad</li>
-<li>Combinar utilities en una clase tiene mas pinta de bloque</li>
-<li>Design tokens: utilities which are parts of the design system (colors, spacing...)<ul>
-<li>From some definitions generate (sass) a set of utility classes</li>
-<li>Now css vars and calc do this</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Block: Just like in Bem but<ul>
-<li>unlike bem, structural selector are ok, shorter classes</li>
-<li>unlike bem, we can do class combinations<ul>
-<li>most of the work is done on global, composition and utility classes, so high specificity is ok</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Exception: Modifier in BEM, but it uses <code>data-*</code> attributes for it, which is cool.</li>
-</ul>
-<p>CUBE Methodology suggest to group classes in html by each category
-either with [ ] or separating them with |.
-<code>[ main-block ] [ additional blocks ] [ other utilities]</code>
-In order to state clearly which role each class plays.
-Such separators are ignored by most browsers.</p>
-<p>Pensada para usar las Logical Properties.</p>
-<p>Usa atributos <code>data-*</code> para el state.</p>
-<ul>
-<li>:-( Las | y los corchetes no son naturales al HTML</li>
-</ul>
 <h2 id="tailwind">Tailwind</h2>
 <p>Basado en utility classes.</p>
 <p>Pros:</p>
@@ -2190,109 +2111,9 @@ Such separators are ignored by most browsers.</p>
 <li>Poca mantenibilidad</li>
 <li>Dificil de salir</li>
 </ul>
-<h1 id="arquitecturas">Arquitecturas</h1>
-<p>https://www.youtube.com/watch?v=tUldrlfIGb4</p>
-<ul>
-<li>Metodologia: Como nombrar las clases<ul>
-<li>BEM, Suit CSS</li>
-</ul>
-</li>
-<li>Arquitectura: Como organizar ficheros y carpetas<ul>
-<li>OOCSS, ITCSS, ACSS (Atomic Design), SMACSS, BEMIT</li>
-</ul>
-</li>
-</ul>
-<h2 id="ooccs">OOCCS</h2>
-<p>Metodologia BEM + carpetas o archivos separadas asi:</p>
-<ul>
-<li><code>styles</code>: importa el resto</li>
-<li><code>_base</code>: reset css</li>
-<li><code>_layout</code>: mixins, grid, flex, wrappers</li>
-<li><code>_modules</code>: objetos concretos</li>
-<li><code>_other</code>: modificadores</li>
-<li><code>_shame</code>: importants y otras cosas que nos averguenzan (donde comenzar un refactor)</li>
-</ul>
-<p>Fuerzas:</p>
-<ul>
-<li>:-) Facil si ya se parte de BEM</li>
-<li>:-) Estructura sencilla</li>
-<li>:-( Clases muy largas</li>
-</ul>
-<h2 id="itcss">ITCSS</h2>
-<p>Inverted Triangle architecture for CSS, Harry Roberts @csswizardry</p>
-<p>Convention to organize CSS for a project focusing in maintainability.
-Takes profit of css preprocessors like sass, less, postcss, stylus...</p>
-<p>Rules are hierarchicalized in folders: from </p>
-<ul>
-<li>Settings: Variables and preprocessor methods</li>
-<li>Tools: Mixins i funciones</li>
-<li>Generics: resets, global theming</li>
-<li>Elements: styling for standard html elements</li>
-<li>Objects: </li>
-<li>Components:</li>
-<li>Utilities: Non related to a component</li>
-</ul>
-<p>Triangulo invertido:</p>
-<ul>
-<li>Contra mas arriba en la jerarquía, a más elementos afecta.</li>
-<li>Contra más abajo en la jerarquia, más especificidad en los selectores.</li>
-</ul>
-<p>Especificidad:</p>
-<ul>
-<li>Settings/Tools: No afecta a elementos</li>
-<li>Generics/Elements: Especificidad de magnitud 1: elementos html standard</li>
-<li>Objects: Una clase: magnitud 2 </li>
-<li>Components: Dos o tres clases: magnitud 2 pero mayor que objects</li>
-<li>Utilities: Llevan important, nivel 4</li>
-</ul>
-<h2 id="atomic-design-css">Atomic Design CSS</h2>
-<p>Aproximación bottom up pensada en la reutilización.</p>
-<ul>
-<li>Ions: Valores en un json (colores, tamaños...) (Tambien Tokens o Design Tokens)</li>
-<li>Atoms: Low level widgets</li>
-<li>Molecules: Combination of widgets (cards, dialogs, drowdowns, navigations...)</li>
-<li>Organisms: Combination of molecules: Sidebar, product list... (Si envia o recibe datos, Quark)</li>
-<li>Plantillas: Generalized pages, concentrates in the overall layout</li>
-<li>Paginas: Concrete pages</li>
-<li>
-<p>Utilities: Including browser hacks, overrides...</p>
-</li>
-<li>
-<p>Pensada para equipos con UX - Frontend, integrada en Figma</p>
-</li>
-</ul>
-<p>Proponen una nomenclatura muy mierder con backslashes</p>
-<h2 id="smacss">SMACSS</h2>
-<ul>
-<li>Base: Reset i generales<ul>
-<li>Selectors are single standard elements</li>
-</ul>
-</li>
-<li>Layout: Estructura de la pagina<ul>
-<li>Partes de la pagina con ID</li>
-<li>No visuales, solo distribución</li>
-<li>Prefijo <code>l-</code> (layout)</li>
-</ul>
-</li>
-<li>Modules: Elementos reutilizables<ul>
-<li>Elementos modulares del diseño</li>
-<li>Nombre tal cual</li>
-</ul>
-</li>
-<li>State: Estado de un modulo<ul>
-<li>El nombre del modulo separado con --</li>
-</ul>
-</li>
-<li>Theme: Colores y estilos<ul>
-<li>Usamos variables</li>
-</ul>
-</li>
-</ul>
-<p>Fuerzas:</p>
-<ul>
-<li>:-) Organizacion simple de clases y carpetas</li>
-<li>:-( ids son lentos</li>
-</ul>
+<h2 id="styled-components">Styled Components</h2>
+<h2 id="emotion">Emotion</h2>
+<h2 id="vanilla-css">Vanilla CSS</h2>
 <h2 id="css-modules">CSS Modules</h2>
 <p>CSS files which are scoped locally by default.</p>
 <p>Not a standard but a build step for component based frameworks
