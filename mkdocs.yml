@@ -33,6 +33,7 @@ nav:
     - computers/timewarrior.md
     - computers/xpxplained.markdown
     - computers/branching-patterns.md
+    - computers/security.md
   - Math:
     - Math Foundations: math/mates-fundation.md
     - Statistics: math/stats.md
