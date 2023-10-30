@@ -805,7 +805,7 @@
         
   
   <span class="md-ellipsis">
-    None
+    IPv6
   </span>
   
 
@@ -948,14 +948,21 @@
       
         <li class="md-nav__item">
   <a href="#csrf-cross-site-request-forgery" class="md-nav__link">
-    CSRF (Cross Site Request Forgery
+    CSRF (Cross Site Request Forgery)
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#sql-or-other-injection" class="md-nav__link">
-    SQL (or other) Injection
+  <a href="#sql-injection-code-injection" class="md-nav__link">
+    SQL Injection, Code Injection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cors-cross-origin-resource-sharing" class="md-nav__link">
+    CORS (Cross Origin Resource Sharing)
   </a>
   
 </li>
@@ -1878,14 +1885,21 @@
       
         <li class="md-nav__item">
   <a href="#csrf-cross-site-request-forgery" class="md-nav__link">
-    CSRF (Cross Site Request Forgery
+    CSRF (Cross Site Request Forgery)
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#sql-or-other-injection" class="md-nav__link">
-    SQL (or other) Injection
+  <a href="#sql-injection-code-injection" class="md-nav__link">
+    SQL Injection, Code Injection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cors-cross-origin-resource-sharing" class="md-nav__link">
+    CORS (Cross Origin Resource Sharing)
   </a>
   
 </li>
@@ -1916,7 +1930,7 @@ El contingut canviarà a mida que vagi entenent millor els conceptes,
 partint de que, segurament, ara no els estic entenent del tot bé.
 Igual que la resta d'apunts d'aquesta pàgina,
 però com aquest és un tema especialment sensible, calia dir-ho.</p>
-<h2 id="csrf-cross-site-request-forgery">CSRF (Cross Site Request Forgery</h2>
+<h2 id="csrf-cross-site-request-forgery">CSRF (Cross Site Request Forgery)</h2>
 <p>https://owasp.org/www-project-code-review-guide/reviewing-code-for-csrf-issues</p>
 <p>Succeeix quan un usuari té una sessió oberta al navegador
 i algú, maliciosament, li fa clickar un enllaç que fa una acció a l'aplicació.</p>
@@ -1924,7 +1938,7 @@ i algú, maliciosament, li fa clickar un enllaç que fa una acció a l'aplicaci�
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>https://mibanco.com/api/transfer/?amount=2000&amp;targetiban=ES5512341234001234567890
 </code></pre></div></p>
 <p>L'enllaç li pot arribar per un correu, un xat, una web maliciossa, un QR...
-I pot estar enmascarat amb un text legítim.</p>
+Segurament estarà enmascarat com a legítim i amb un context que faci de ganxo.</p>
 <p>Per evitar aquest tipus de situacions,
 hi ha diverses solucions que es poden aplicar:</p>
 <ul>
@@ -1932,11 +1946,14 @@ hi ha diverses solucions que es poden aplicar:</p>
 <p>Que les accions no es resolguin automaticament, sinó que es demani algún tipus de confirmació.</p>
 <ul>
 <li>No seria solució per API REST.</li>
-<li>El resultat de la confirmació, no pot ser un altre punt atacable, el que envia la confirmació es una referència a la acció anterior.</li>
+<li>La resolució del segon pas no ha de tenir tota la informació i referir-se al primer pas.<ul>
+<li>Si no, estaríem tornant a tenir un punt d'entrada objectiu per l'atac.</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>
-<p>CSRF Tokens:</p>
+<p>Synchronizer token pattern</p>
 <ul>
 <li>Cada cop que l'aplicació envia un link/formulari a l'usuari,
     l'aplicació generarà un codi aleatori (diferent cada vegada)
@@ -1945,13 +1962,72 @@ hi ha diverses solucions que es poden aplicar:</p>
 <li>Quan el client activa un dels enllaços, envia tambie el codi</li>
 <li>El servidor confirma que el codi pertany a la sessió</li>
 <li>Si no hi es, cal tancar la sessió i donar error</li>
-<li>Un atacant, hauria d'esbrinar el codi cada cop... pot fer-ho si </li>
+<li>Un atacant, hauria d'esbrinar el codi cada cop... pot fer-ho si</li>
+<li>:-) Si posem els codis com a camps ocults dels formularis no cal JS ni similars</li>
+<li>:-( Complejo en el lado del servidor pues hay que gestionar todos los tokens</li>
 </ul>
 </li>
 </ul>
-<h2 id="sql-or-other-injection">SQL (or other) Injection</h2>
-<p>Succeeix quan la informació obtinguda de l'exterior del sistema
-(la introdueix l'usuari o </p>
+<h2 id="sql-injection-code-injection">SQL Injection, Code Injection</h2>
+<ul>
+<li>https://en.wikipedia.org/wiki/Code_injection</li>
+<li>https://en.wikipedia.org/wiki/SQL_injection</li>
+</ul>
+<p>Succeeix en situacions on la informació que l'aplicació obté de l'exterior del sistema
+s'integra com a part del codi a executar.
+Per exemple, quan les dades que es reben d'un formulari s'incorporen</p>
+<ul>
+<li>a una consulta de la base de dades,</li>
+<li>o a un script que executa el servidor,</li>
+<li>o a l'HTML,</li>
+<li>o a una url, (important! no és un llenguatge de programació però també!)</li>
+<li>o...</li>
+</ul>
+<p>Una atacant pot dissenyar aquesta informació introduïda
+per sortir-se del contexte on està pensada incorporar-se
+i acaban executant codi arbitrari al servidor.</p>
+<p>Per exemple, molt sovint, dades que s'obtenen de formularis, acaben formant part
+d'una consulta SQL entre cometes.
+Si no inserim la dada amb cura,
+una atacant pot incloure-hi unes cometes per tancar-les prematurament,
+amb un punt-i-coma terminaria la nostra sentencia i a continuació,
+podria incloure la nova sentencia maliciosa que vol executar al servidor.</p>
+<p>La solució universal es processar aquestes dades entrants per, per exemple, incorporar seqüències d'escapada on toca.</p>
+<p>El problema aquí és doble:</p>
+<ul>
+<li>Per un costat és una sitiuació molt comuna i es fa molt sovint aixó d'incorporar dades externes. És fàcil que en alguna en oblidem de d'aplicar-ho.</li>
+<li>O ens oblidem d'aplicar-ho bé, perque l'altre problema es que les casuístiques són complexes i depenen de cada llenguatge on inserim la dada externa.</li>
+</ul>
+<p>Per això les bones pràctiques són:</p>
+<ul>
+<li>Evitar les tècniques d'inserció de dades del llenguatge de programació que construeix la cadena desti (Python, Javascript)<ul>
+<li>En Python, prohibit concatenar, f-strings, operador <code>%</code>, <code>format</code></li>
+<li>En Javascript, prohibit concatenar, interpolacio amb cometes invertida...</li>
+</ul>
+</li>
+<li>No programar les escapades a mà, sinó fer servir les funcions d'escapada pròpies de cada llenguatge destí.<ul>
+<li>Els escapaments són específic de cada llenguatge destí (SQL, HTML, bash...)</li>
+<li>Les llibreries existents ha sofert un procés de maduresa (s'han trobat i fixat errors) que segur que el nostre code des de zero no tindrà.</li>
+</ul>
+</li>
+<li>Fer servir llibreries que facin el camí amb escapada, el camí per defecte i de menys resistència.<ul>
+<li>El que ha de costar es inserir coses sense escapar</li>
+<li>Ex: JSX sempre escapa tot, si vols inserir codi és molt mes complicat i has d'escriure la paraula 'dangerous'</li>
+<li></li>
+</ul>
+</li>
+</ul>
+<p>A dalt hem parlat de dades de l'exterior.
+Cal entendre això de forma extensa.
+Les dades que ja  tenim incorporades al sistema, perque ja estan a la base de dades,
+també cal considerar-les externes, i no segures per injection perque en </p>
+<h2 id="cors-cross-origin-resource-sharing">CORS (Cross Origin Resource Sharing)</h2>
+<p>https://en.wikipedia.org/wiki/Cross-origin_resource_sharing
+https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS</p>
+<p>La política de seguretat per defecte es que una pagina té confiança en els recursos 
+La situació per defecte es que una pàgina web tè confiança en els recursos
+(same-origin policy)</p>
+<p>Succeeix quan una web maliciosa fa servir recursos (imatges, javascripts...) </p>
 
 
 
