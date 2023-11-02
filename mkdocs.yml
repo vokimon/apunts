@@ -28,7 +28,7 @@ nav:
     - computers/deeplearning.md
     - computers/docker.md
     - computers/godot.md
-    - computers/ip6
+    - IPv6: computers/ip6
     - computers/specs-pdf.md
     - computers/timewarrior.md
     - computers/xpxplained.markdown

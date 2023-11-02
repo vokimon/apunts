@@ -182,6 +182,63 @@ Single stroke roll rudiments
 - Single stroke four: 1 16th triplet + 1 8th, twice, alternating hands each stroke, can start with either L or R, the 8th looks like a pause
 - Single stroke seven (3 16th triplets + 1 8th, once) can
  
+## Keyboard drums
+
+Technique on how to play (General MIDI) drums with the keyboard:
+https://www.youtube.com/watch?v=TxD30s4jvcw
+
+Notas clave
+
+- C1 kickdrum (often B0 A0 are variations)
+- D1-E1 snares (E1 harder for rimshots)
+- C#1 Sidestick
+- D#1 Claps
+
+Hihats in black keys
+
+- F#1 close hihat 1
+- G#1 close hihat 2
+- A#1 open hihat
+
+Trick: Most libraries makes them exclusive, so an open hihat stops when playing a closed one
+
+- Toms: White keys F1 to D2 sorted by pitch
+- Crash cymbals: C#2 A2
+- Ride cymbals: D#2 F2 B2
+
+Fingering:
+
+- Middle left finger in the drum
+- Left index and thumb in the snares
+- Right hand over the cymbals (pinkie over crash)
+- Right hand moves to whites when tombing
+- Right hand moves octave for ride cymbals
+
+Learning Progression:
+
+1. Kick-Snare
+	- Use just the left hand
+	- Basic rhythm, slow
+	- Don't go for speed, first keeping tempo even slow.
+1. Slow with hihats on the right hand
+1. Slow combining both hands
+1. Slow introduce variations (crash, forwarded and delayed snares and kicks, breaks)
+1. Speed up (next excercies start slow and then speed up)
+1. Introduce a switch on toms
+1. Switch to rides instead of hihats
+1. Repetitions (two hands and single handed)
+1. Dinamics: controlling strength up and down (toms and snares)
+1. Accents with toms and snares
+1. Ghost notes
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,4 +1,4 @@
-# CSS Flow
+# CSS Normal Flow
 
 La disposición (_layout_) es la forma de repartir los elementos en el espacio disponible.
 

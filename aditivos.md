@@ -1,5 +1,6 @@
 
 Jamon serrano bonarea
+
 - nitrito de sodio (conservante E-250)
 	- reacciona con la mioglobina del musculo y lo colora rojo purpura
 	- también tiene efecto sobre el olor

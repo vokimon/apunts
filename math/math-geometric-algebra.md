@@ -4,10 +4,10 @@ https://www.youtube.com/watch?v=60z_hpEAtD8
 https://www.youtube.com/watch?v=0bOiy0HVMqA (Addendum)
 https://www.youtube.com/watch?v=2hBWCCAiCzQ&list=PLVuwZXwFua-0Ks3rRS4tIkswgUmDLqqRy (From zero to Geo)
 
-Context:
+Close but different concepts:
 
-- Clifford Algebra: is the mathematical abstraction, not applied to phisics
-- Algebraic geometry: not to be confused with.
+- Clifford Algebra: is the mathematical abstraction, not applied to physics
+- Algebraic geometry: Algebraic description of geometries. Not to be confused with.
 
 What it can do for us:
 
@@ -43,13 +43,15 @@ Bivectors: Oriented area
 	- Axis are the orthogonal unit areas coplanar with the planes
 	- Components are area projection to those planes
 - Addition:
-	- Add componentsof axis representation
+	- Add components of axis representation
 
 
 Trivector: Oriented volume
 
 - Magnitude
-- Orientation?
+- Orientation? In 3D inside and outside.
+	- a k-vector in a k-space just can have those two orientations
+	- ie. vector in a 1D can be positive or negative, 2-vector in 2D can be facing up or down
 
 k-vector: extension to k dimension
 
@@ -378,6 +380,257 @@ En 2d:
 - 0v 1v => 1v
 - 1v 1v => 0v + 2v
 - 2v 1v => 1v
+
+
+## Operations
+
+::: youtube https://www.youtube.com/watch?v=2AKt6adG_OI
+
+Object Generalization
+
+- k-vector
+	- k-dimensional subspace
+	- Magnitude
+	- Orientation
+- k grade multivector: sum of j-vectors of dimensions j up to k
+
+Operation Generalization
+
+### Grade projection operator
+
+- `<A>_k`
+- The k-vector part of A
+- Example `<3e0 + 5e12 + 4e01 + e012>_2 = 5e12 + 4e01`
+
+### Geometric product
+
+- Geometric vision
+	- in VGA the geometric product of 2 vectors
+		- parallel, is product of their lengths, negative if different directions
+		- perpendicular, the bivector span of the two vectors
+		- Thus contracts parallel, joins perpendicular
+		- oblique vectors, we can decompose the second vector in a perpendicular and a parallel
+			- uv = u(v|| + vT) = uv|| + uvT
+	- Generalization:
+		- given a basis e1,...,en
+		- basis are perpendicular so the product of two different of them gives the bivector of the span, which anticonmutes
+			- eiej = -ejei
+		- when multiplying with it self, is paralel so the result is a scalar
+			- in VGA the scalar is 1 but in others might be 0, 1, or -1 for each basis.
+			- Indeed which basis squares to what caracterizes the geometric algebra we are using
+		- algebraically:
+			- distribute the multiplication keeping the order of the basis
+			- swap the basis order by swapping the sign of the term (each pair swapped a sign change)
+			- apply squares to scalar mapping
+				- 0: remove term
+				- 1: remove dupped basis
+				- -1: remove dupped basis inverting the term sign
+		- transformations:
+			- auv = rotate `a` the angle between `u` and `v`
+				- vua = rotate `a` the angle between 
+ 
+
+
+
+- Products:
+	- **Geometric product:**
+		- of two vectors:
+			- Paral·lel: Scalar from multiplication both magnitudes with negative sign if they are opposite directions
+			- Perpendicular: bivector span of two vectors
+			- Contracts parallels, joins perpendiculars
+			- Neither parallel neigher perpendicular: split one of them into a parallel and 
+	- **Outer product:**
+		- A^B
+		- Span: the smallest subspace containing the inputs
+		- If linear dependent 0 else the span subspace
+		- Algebraically, like geometric product but considering all basis square to zero
+		- j-vector ^ k-vector = (j+k)-vector
+		- Aj ^ Bj = <AjBj>k+j (outer product is equivalent of to the k+j grade projection of the geometric product)
+	- **Regressive product:**
+		- AvB = (Ai ^ Bi)/i
+		- the largest subspace contained in both subspaces
+		-  
+	- **Inner product:**
+- Involutions:
+	- **Reverse:** Invert the order of the basis of each kvector
+	- **Grade involution:** Invert the sign of odd k-vector components 
+- Other
+	- **Dual:** Orthogonal complement
+		- Ai (pero no funciona cuando alguna base se cuadra en 0)
+	- **Grade Projection:** Take the k-vector part of a multivector
+	- **Magnitude:**
+
+
+- **Grade projection:** `<A>_k` k-vector part of a multivectora (without k subscript, means 0)
+- **Grade k multivector:** A multivector that just have a k-vector component
+
+
+### Reverse
+
+Given a product of multivectors, the product in the reverse order.
+
+`(uvw)† = (wvu)`
+
+Useful becaue of rotation. `R u R†`
+
+Because it is linear, we can apply the reverse to its components and extract factor.
+So you can obtain the reverse of a multivector by applying the reverse to their kbasis,
+which corresponds to a sign change or not depending on the number of basis.
+
+`(e1..n)† = en (e1..n-1)† = (e1..n-1)† en (-1)^(n-1)`
+
+Every 2k swaps the sign
+
+
+- k=0: + ie. (a)† =  a
+- k=1: + ie. (a e1)† = a(e1)† = a e1
+- k=2: - ie. (a e12)† = a(e12)† = ae21 = -a e1 e2
+- k=3: - ie. (a e123)† = a(e123)† = a(e321) = -ae231 = +ae213 = - ae123
+
+### Grade involution
+
+`u*` 
+
+
+Linear and multiplicative
+
+`(A+B)* = A* + B*`
+
+`(aA)* = a A*`
+
+
+`(AB)* = A* B*`
+
+
+### Magnitude squared
+
+`|A|^2 = <A† A>`
+
+- Scalar part of the multiplication with its reverse is the square of the magnitude
+- Squared root is not appliable to some squares which are negative
+- Scalar product with itself does not compute, use the inverse
+- Some vectors squared are multidimensional, just take the zero
+
+
+
+## Projective Geometric Algebra
+
+https://www.youtube.com/watch?v=0i3ocLhbxJ4
+
+### In 2D euclidean space
+
+- We use a 3D space e0 representing infinity
+	- Basis e0, e1, e2
+	- ei ej = - ej ei,  i!=j (anticonmute)
+	- e0 · e0 = 0   this is different
+	- e1 · e1 = 1
+	- e2 · e2 = 1
+- Vectors represent lines:
+	- `ax + by + 1 = 0` is represented as `c e0 +  a e1 + b e2`
+	- `e1` and `e2` are the horizontal and vertical lines passing by origin
+	- `e0` is a line at infinity  ????
+	- Scalar multiplication of the vector represents the same line
+	- Normalized by seting 1 the e0 coefficient unless it is zero
+- Linear combination of two lines
+	- A linear combination of two lines is a line passing by their intersection more or less parallel to one or the other depending on the ratio of their coefficients
+	- A plain addition is the bisectrix
+	- Adding a e0 component is translating the line keeping the slope
+- Inner product:
+	- a·b = |a||b|cos theta
+	- e0 component gets removed
+		|a|² = a a
+		= (ae1 + be2 + ce0) (ae1 + be2 + ce0) = 
+		= ae1ae1 + ae1be2 + ae1ce0 +be2ae1 + be2be2 + be2ce0 + ce0ae1 + ce0be2 + ce0ce0 =
+		= aa + ae1be2 + ae1ce0 +be2ae1 + bb + be2ce0 + ce0ae1 + ce0be2 =
+		= aa + ae1be2 + ae1ce0 -ae1be2 + bb + be2ce0 - ae1ce0 - be2ce0 =
+		= aa + bb
+	- Parallel if `|a·b| = |a||b|`
+	- Perpendicular if `a·b = 0
+	- TODO: demostrar que las paralelas son la misma añadiendo un `alpha e0`
+- Bivectors represent points: e12 + Xe01 + Ye20
+	- A bivectors represents the subspace created by the linear combination of two vectors
+	- A bivector of two lines are the set of lines passing by the intersection
+	- Indeed they can be sumarized by the intersection, the point
+	- `p = e12 + x e20 + y e01` normalizando e12 a 1
+	- points with no e12 component are points in infinity at the given direction
+- Outer product of two vectors. Meet `A^B` Intersection of two lines
+	- TODO: derivation
+	- The meet of two parallel lines is the point at the infinity on the direction at the lines
+- Regresive product of two points: Join. `AvB`
+	- The intersection subspace of the two points
+	- That is the line that joins the two points
+	- TODO: derive the formula
+- Inner product:
+	- Two points, not that interesting -a3b3
+	- aB (line·point): The perpendicular line passing by the point
+- Projection `(A·B)B` Projection of A into B
+	- Project a point A into a line B: Intersect the perpendicular line with the line (a·B)a
+	- Project a line to a point: (a·B) Perperdicular passing by B, to the line Perpendicular to a passing by B
+- Geometric product:
+	- Reflection: uau refleja a respecto a u
+	- Rotation: vuauv rota a el angulo entre u y v
+	- Translation: vuauv (u i v paralelas) traslada a el doble de la distancia entre u i v
+	- Same for points: TODO: Develop from a point as a intersection of two lines
+
+## Extension to 3d
+
+Objects:
+
+- Planes
+- Lines
+- Points
+
+Meets:
+
+- 2 planes -> line
+- plane + line -> point
+- 3 planes -> point
+
+Joins:
+
+- 2 points -> line
+- 3 points -> plane
+- point + line -> plane
+
+Projections:
+
+- Plane <-> Point <-> Line <-> Plane
+
+Basis:
+
+- In 3D geometry we use 4D geometrical algebra
+- Vectors are planes:
+	- ae1 + be2 + ce3 + de0  <-> ax + by + cz + d = 0
+- Bivectors are the span of two vectors (planes), the set of planes share the intersecting line -> lines
+	- a e01 + b e02 + c e03 + x e12 + y e13 + z e23
+- Trivectors are the span of three vectors (plane), they share the point -> points
+	- e123 + x e032 + y e013 + + z e021
+
+Operations
+
+- Meet: A^B whichever the objects
+- Join: AvB whichever the objects
+- Inner Product: 
+	- General: object perpendicular to the higher dimensional object passing by the lower dimensional object
+	- plane · line: Perpendicular plane passing by the line
+	- plane · point: Perpendicular line to the plane passing by the point
+	- line · point: Perpendicular plane to the line passinb by the point
+- Projection: (A·B)·B
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

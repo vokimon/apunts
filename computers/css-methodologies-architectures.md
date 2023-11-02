@@ -1,4 +1,13 @@
-# Methodologias y Arquitecturas
+# CSS: Metodologías y arquitecturas
+
+A medida que los proyectos avanzan es común encontrarse con problemas de mantenibilidad.
+Cada vez resulta más complicado hacer cambios.
+Es importante establecer ciertos criterios para mantener la entropia acotada.
+
+Uno de los problemas más comunes del css es que es complejo controlar
+la especificidad de los selectores.
+Si los selectores son demasiado específicos es difícil especializar.
+Las reglas a aplican 
 
 Ciertas malas practicas al definir selectores
 afectan a su especificidad
@@ -304,7 +313,7 @@ Frameworks and libraries enabling css modules:
 - [styled-components](https://styled-components.com/)
 - [emotion](https://emotion.sh)
 - [css-modules](https://github.com/css-modules/css-modules) ([React Integration](https://create-react-app.dev/docs/adding-a-css-modules-stylesheet/))
-
+- [vanilla-extract](https://vanilla-extract.style)
 
 ## Concepts
 
@@ -321,6 +330,8 @@ Frameworks and libraries enabling css modules:
     - Example: `md-hidden` to activate hidden on medium 
     - Following the mobile first principle, md means from md size and above, you set mobile and then, customize larger sizes with prefixed utility clases.
     - Frameworks enable redefining boundaries and names.
+
+
 
 
 ## Tailwind
@@ -341,7 +352,11 @@ Cons:
 
 
 
+## vanilla-extract
 
+- CSS-in-JS genera css puro.
+- Elementos dinàmicos los extrae como variables
+- css modules
 
 
 

@@ -1,68 +1,128 @@
+# Economia
 
-Bien (good): Algo que satisface un deseo o una necesidad
-	Bien libre o no economicos: Sin dueño ni precio, abundante y sin proceso productivo para obtenerlo.
-	Bien escasos o económico: Bien adquirible en un mercado por un valor.
+## Objetos econòmicos: Bienes, Servicios, Derechos...
 
-Bien vs. Producto: El bien es algo que se tiene, el producto algo que se ofrece.
+- **Utilidad:** Capacidad para satisfacer un deseo o una necesidad
+- **Disfrutar:** [Término propio] Extraer utilidad mediante uso, consumo o tenencia
+	- Disfrutas de una silla cuando te sientas en ella o la usas en tu espectáculo circense, los asistentes al espectaculo disfrutan de el cuando lo ven
+- **Útil/Disfrutable:** [Término propio] Algo con utilidad (TODO: a falta de palabro para _bien o servicio_ dado que _producto_ excluye los bienes libres)
+- **Servicio:** Acto de una persona con utilidad para otra
+	- Ejemplos: Corte de pelo, viaje de avión, consulta de un doctor, concierto, honorarios de un abogado
+	- Son intangibles: No se fabrican, transportan o acumulan para uso posterior
+	- Son perecederos: Se producen y consumen al mismo tiempo
+- **Bien:** Objeto (material o inmaterial) con utilidad
+	- Se tiene y esa tenencia es tranferible vía intercambio
+	- Ejemplos: Naranjas, sillas, casas
+	- No siempre son físicos (ej. un usufructo, una marca, un conocimiento)
+- Hay grises entre Bien y Servicio:
+	- Ejemplos Intermedios:
+		- Una comida en un restaurante es a la vez un bien (la comida) pero tambien un servicio (ambiente, atención del camarero...)
+		- Una entrada a un concierto, o un billete de avion es algo físico, pero representa el acceso al servicio
+		- El servicio de internet, incluye un router, que es un bien
+		- La atención y asesoría en una tienda de objetos, también se ve como un servicio, también la garantia o el servicio postventa
+
+- **Mercado:** Entorno que posibilita el intercambio de bienes y servicios entre partes.
+- **Mercadeable:**
+	Bien o servicio que se puede intercambiar en un mercado
+	- [TODO: Me hacía falta por compleción. Existe en el diccionario pero no lo veo en la literatura]
+- **Producto:** Mercadeable fruto de un proceso productivo
+	- En sentido estricto, no serían productos aquellos mercadeables que no necesitan proceso productivo
+	- En la práctica, se usa como sinónimo de mercadeable.
+		- Según como se mire, todo mercadeable requiere cierto proceso: transporte, pesado, enpacado...
+		- En el caso de los servicios: cierta preparación, obtencion de las herramientas, aprender las habilidades...
+
+Uso Bien vs. Producto:
+	Usamos la palabra _bien_ para algo que se tiene, y _producto_ para algo que se ofrece.
 	La mayoria de veces son ambas cosas a la vez.
 	Bienes se usa mas como generico en plural
 	Producto se usa para concretos 'este producto', no 'este bien'
 
-Producto (Product): Bien o servicio ofrecido al mercado con un proceso productivo para obtenerlo
-	Bienes: Producto material.
-	Servicio: Producto inmaterial.
-	Normalmente hay grises entre Bienes y Servicios.
-	Derechos: Es algun derecho conforme a ley que se puede ceder (requiere la ley).
-Utilidad: Capacidad de un producto de satisfacer tal deseo o necesidad.
+- **Valor:** Posición de un producto en una escala de equivalència de bienes y servicios de cara a un intercambio
+	- No existe un valor intrínseco al producto, depende de cada parte y del contexto
+	- Intervienen la utilidad para el adquiriente, su escasez, la competencia de oferta y la competencia de demanda
+	- Se simplifica asignando un valor monetario
+	- **Valor de mercado:** Es el valor máximo que estaría dispuesto a pagar alguien por él
+	- **Precio:** Es el valor que espera obtener quien pone un producto a disposición del mercado
 
-Bien (Good): Objeto material, servicio inmaterial o derecho que és útil a quien lo usa o lo posee.
+TODO
+
+- **Derechos:** Es algun derecho conforme a ley que se puede ceder (requiere la ley). Son bien inmaterial.
+- **Servicios públicos:** Aquellos que ofrece el estado  se dirigen a las necesidades de la sociedad en agregado
+
+Segun la competencia de uso y valor económico
+
+- Bienes **comerciales o económicos**: Tienen cierto valor económico y se pueden adquirir en un mercado
+	- Tiene valor por que o bien:
+		- hay **escasez** (no hay suficiente para todas las partes)
+		- requiere un **esfuerzo** obtenerlo
+- Bienes **libres o no económicos**:
+	- Aunque puedan tener utilidad no tienen valor de mercado
+	- No hay escasez ni requieren esfuerzo obtenerlo, por lo tanto no tienen valor comercial
+	- Ejemplo: el aire, el viento, la luz solar, el agua del mar, el agua corriente
+	- Pueden ser transformados en bienes economicos por
+		- Transporte a un lugar donde sean escasos: llevar agua corriente a donde no la hay
+		- Por proceso: convertir luz solar (libre) en energia electrica (comercial)
+		- Por limitar su acceso generando **escased artificial**: Vallando el recinto de un evento
+- **Mal:** Objeto con utilidad y valor negativo. Se paga por dejarlo de tener.
+	- Ej. Desechos, residuos, purines, impagados, adds, extorsión...
 
 Segun su origen:
-	Bienes manufacturados (manufactured goods)
-	Materias primas (raw materials)
 
-Segun su destino:
-	Bienes de consumo o finales: destino al mercado de masas, no crear otros bienes
-	Bienes intermedios: bienes que se usan para obtener otros bienes
-	Bienes comerciales: 
+- **Bienes manufacturados** (manufactured goods)
+- **Materias primas** (raw materials)
 
-Segun la competencia de uso:
-    Bienes libres: no tienen ni dueño ni precio ya sea
-        - por su abundancia,
-        - por la imposibilidad de limitar su acceso o
-        - por innecesidad de proceso productivo para obtenerlo
-    Bienes comerciales o economicos: Si tienen valor económico porque no se da ninguna de las anteriores
+Según su destino o **Funcionalidad**:
 
-Transabilidad: capacidad de ser movido y consumido en otro sitio
-	Bienes inmuebles: No transables. Casas, tierras...
-	Bienes muebles: Transables. 
-	Exportabilidad: transabilidad a nivel de region (impuestos, aranceles, leyes...)
+- Bienes de **consumo o finales**: Consumidos no para producir otros bienes (vivienda, comida...)
+- Bienes **intermedios**: Se transforman para producir otros bienes (motor, tablones en una carpinteria...)
+- Bienes de **capital o de equipo**: Se usan para producir otros bienes pero no formaran parte de ellos (fabrica, maquinaria...)
 
-Durabilidad: capacidad de un bien de conservar su usabilidad
-	Bienes duraderos
-	Bienes perecederos. 
 
-Relacion con la demanda de otros bienes:
-	Bienes complementarios: De demanda asociada (coches y gasolina)
-	Bienes sustitutos: De demanda inversa porque cubren la misma necesidad (butano y gas natural)
-	Bienes independientes: No especialmente relacionados (siempre lo estan debido a la renta limitada)
-	Flexibilidad: capacidad de ser substituido por otro bien.
+|---------------|---------|-----|----|
+|               | Consumo | Intermedio | Capital |
+|---------------|---------|-----|----|
+| Manufacturado | Coche   | Motor de coche | Maquinaria |
+| Materia prima | Sal     | Acero, Madera | Carbon |
 
-Funcionalidad:
-	Bienes de consumo o final: Consumidos no para producir otros bienes
-	Bienes intermedios o de equipo: Se usan para producir otros bienes
-	Bienes de capital:
 
-Rivalidad: El consumo de un bien por un individuo impide el consumo simultaneo por parte de otro
-	Anti-rivalidad: El consumo de un bien por un individuo beneficia el consumo por parte
-	de otros consumidores. (lenguaje, FLOSS, telefonia)
-	No-rival
 
-Excludibilidad: Se puede excluir a individuos de su consumo (si no pagan, por ejemplo) 
-	Bienes privados: Rivales y exclusibles
-	Bienes publicos: Ni rivalidad ni exclusividad. Conocimiento (sin patentes), television por antena, defensa nacional, lluvia, aire, luz solar...
-	Bienes comunes: Rivales pero no excludibles. No se puede excluir quien los usa pero son limitados. pesca, medio ambiente
-	Bienes club: No hay rivalidad pero si se limita el uso a pago (peajes, tele de pago
+Segun **Transabilidad**: capacidad de ser movido y consumido en otro sitio
+
+- Bienes inmuebles: No transables. Casas, tierras...
+- Bienes muebles: Transables. 
+- Exportabilidad: transabilidad a nivel de region (impuestos, aranceles, leyes...)
+
+**Durabilidad**: capacidad de un bien de conservar su usabilidad
+
+- Bienes duraderos
+- Bienes perecederos
+
+Relación con la demanda de otros bienes:
+
+- Bienes **complementarios**: De demanda asociada (coches y gasolina)
+- Bienes **sustitutos**: De demanda inversa porque cubren la misma necesidad (butano y gas natural)
+- Bienes **independientes**: No especialmente relacionados (siempre lo estan debido a la renta limitada)
+
+**Flexibilidad:** capacidad de ser substituido por otro bien.
+
+**Rivalidad:** Si el disfrute de un bien impide que otra persona lo disfrute
+
+- Rival: El consumo de un bien por un individuo impide el consumo simultaneo por parte de otro
+- No-rival: El consumo de una persona no afecta a las de otras
+- Anti-rivalidad: El consumo de un bien por un individuo beneficia el consumo por parte
+  de otros consumidores. (lenguaje, FLOSS, telefonia)
+
+**Excluibilidad:** Se puede excluir a individuos de su consumo (si no pagan, por ejemplo) 
+
+- Exclusivos: comida
+- No exclusivos: 
+
+La combinación de Rivalidad y Excludibilidad nos da:
+
+- **Bienes privados:** Rivales y exclusibles
+- **Bienes club:** No hay rivalidad pero si se limita el uso a pago (peajes, tele de pago)
+- **Bienes publicos:** Ni rivalidad ni exclusividad. Conocimiento (sin patentes), television en abierto, defensa nacional, lluvia, aire, luz solar...
+- **Bienes comunes:** Rivales pero no excludibles. No se puede excluir quien los usa pero son limitados. pesca, medio ambiente
 
 Fungibilidad (1): Capacidad de un bien para ser substituido por otro equivalente
 Fungibilidad (2): Que para hacer uso de el ha de consumirse (en la legislacion española)
