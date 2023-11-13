@@ -98,12 +98,78 @@
 
 
 
+## 2D Nodes
+
+https://www.youtube.com/watch?v=22VYNOtrcgM
+
+- Node2D: Base of every 2D Node
+	- Inherits CanvasItem and thus, Node
+	- rotation, position, scale, skew
+- Camera2D: Specify which part of the world is viewed
+	- Inherits Node2D
+	- Offset, Anchor, Limits
+	- Smoothing, Drag: Easy view changes
+- (Animated)Sprite2D: Render 2D texture to the screen
+	- Supports sheeting (images with many sprites)
+	- Animated adds sequences of sprites you can switch between
+- CollisionObject2D: Base for all objects with collisions
+	- Layer, Mask, Prioriry
+- PhisicsBody2D: Base for all objects affected by physics
+	- Inherit CollisionObject2D
+- CollisionShape: 
+	- Inherit CollitionBody3D
+- StaticBody2D:
+	- OBject that can not be moved but collides with other objects
+- AnimatableBody2D:
+- RigidBody2D: Moves but does not have initiative
+- CharacterBody2D: Controled by player
+- Joint2D: Base for joining 2 objects together
+	- DampedSpringJoint2D: Elastic joint
+	- GrooveJoint2D: Move in a direction like a rail (length, initial offset)
+	- PinJoint2D: Join with point
+- Area2D: Can be use to collision or to set specific physics
+- AudioListener2D: sets the listener location for the audio
+- AudioStreamPlayer2D: Source of sound
+- GPUParticle2D: Emits cheap objects affected by phisics (particles)
+	- Properties to configure how they move and are affected by gravity
+- TileMap: Tiles
+- CanvasModulate: 2D shadows color removed by light
+- Light2D: Base for all Lights
+	- color, energy, blendmode
+	- PointLight2D: texture, 
+	- DirectionalLight2D: sun like light
+	- LightOcluder2D: Shape that ocludes light
+- Line2D: Polyline with vectorial properties
+- Marker2D: Debug helper 
+- MeshInstance2D: Render a 3D mesh in a 2D scene
+- MultiMeshInstance2D: Optimally (GPU) rendered replicated objects
+- Navigation Nodes: Used to resolve automated movement and path finding
+	- NavigationRegion2D: Defines the allowed navigation
+	- NavigationLink2D: 
+	- NavigationObstacle2d: Defines a forbiden region
+- ParallaxBackground: root of a set of ParallaxLayer
+	- Needs either a Camera2D or setting the scrolloffset of each layer by hand
+- ParallaxLayer: Background image that moves slower than the camera to gave a 3D feeling
 
 
+## Shaders
+
+[Original Geometry]  -> Vertext Shaders -> [Modified Geometry] -> Rasterization ->  [Fragments] -> Fragment Shader -> [Final output]
 
 
+- Fragments are not called Pixels because they have lots of more information:
+	- Color
+	- Screen location
+	- UV coordinates
+	- Normals
+	- Light information
+	- ....
 
+In Godot, we can use either a shader node editor (`VisualShader`) or shader code (`Shader`).
 
+Create a resource, choose either `Shader` or `VisualShader`, drag the file as material of the target object.
 
-
+For VisualShader, a node editor will open with an output node.
+Input nodes have to be added by hand.
+Change the shader type (vertex, fragment...) with the dropdown selector.
 
