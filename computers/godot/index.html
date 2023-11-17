@@ -647,6 +647,26 @@
 
               
             
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="./" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    None
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -857,6 +877,27 @@
         <li class="md-nav__item">
   <a href="#physics" class="md-nav__link">
     Physics
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2d-nodes" class="md-nav__link">
+    2D Nodes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ui-nodes" class="md-nav__link">
+    UI Nodes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shaders" class="md-nav__link">
+    Shaders
   </a>
   
 </li>
@@ -1932,6 +1973,27 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#2d-nodes" class="md-nav__link">
+    2D Nodes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ui-nodes" class="md-nav__link">
+    UI Nodes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shaders" class="md-nav__link">
+    Shaders
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2083,6 +2145,205 @@
 </ul>
 </li>
 </ul>
+<h2 id="2d-nodes">2D Nodes</h2>
+<p>https://www.youtube.com/watch?v=22VYNOtrcgM</p>
+<ul>
+<li>Node2D: Base of every 2D Node<ul>
+<li>Inherits CanvasItem and thus, Node</li>
+<li>rotation, position, scale, skew</li>
+</ul>
+</li>
+<li>Camera2D: Specify which part of the world is viewed<ul>
+<li>Inherits Node2D</li>
+<li>Offset, Anchor, Limits</li>
+<li>Smoothing, Drag: Easy view changes</li>
+</ul>
+</li>
+<li>(Animated)Sprite2D: Render 2D texture to the screen<ul>
+<li>Supports sheeting (images with many sprites)</li>
+<li>Animated adds sequences of sprites you can switch between</li>
+</ul>
+</li>
+<li>CollisionObject2D: Base for all objects with collisions<ul>
+<li>Layer, Mask, Prioriry</li>
+</ul>
+</li>
+<li>PhisicsBody2D: Base for all objects affected by physics<ul>
+<li>Inherit CollisionObject2D</li>
+</ul>
+</li>
+<li>CollisionShape: <ul>
+<li>Inherit CollitionBody3D</li>
+</ul>
+</li>
+<li>StaticBody2D:<ul>
+<li>OBject that can not be moved but collides with other objects</li>
+</ul>
+</li>
+<li>AnimatableBody2D:</li>
+<li>RigidBody2D: Moves but does not have initiative</li>
+<li>CharacterBody2D: Controled by player</li>
+<li>Joint2D: Base for joining 2 objects together<ul>
+<li>DampedSpringJoint2D: Elastic joint</li>
+<li>GrooveJoint2D: Move in a direction like a rail (length, initial offset)</li>
+<li>PinJoint2D: Join with point</li>
+</ul>
+</li>
+<li>Area2D: Can be use to collision or to set specific physics</li>
+<li>AudioListener2D: sets the listener location for the audio</li>
+<li>AudioStreamPlayer2D: Source of sound</li>
+<li>GPUParticle2D: Emits cheap objects affected by phisics (particles)<ul>
+<li>Properties to configure how they move and are affected by gravity</li>
+</ul>
+</li>
+<li>TileMap: Tiles</li>
+<li>CanvasModulate: 2D shadows color removed by light</li>
+<li>Light2D: Base for all Lights<ul>
+<li>color, energy, blendmode</li>
+<li>PointLight2D: texture, </li>
+<li>DirectionalLight2D: sun like light</li>
+<li>LightOcluder2D: Shape that ocludes light</li>
+</ul>
+</li>
+<li>Line2D: Polyline with vectorial properties</li>
+<li>Marker2D: Debug helper </li>
+<li>MeshInstance2D: Render a 3D mesh in a 2D scene</li>
+<li>MultiMeshInstance2D: Optimally (GPU) rendered replicated objects</li>
+<li>Navigation Nodes: Used to resolve automated movement and path finding<ul>
+<li>NavigationRegion2D: Defines the allowed navigation</li>
+<li>NavigationLink2D: </li>
+<li>NavigationObstacle2d: Defines a forbiden region</li>
+</ul>
+</li>
+<li>ParallaxBackground: root of a set of ParallaxLayer<ul>
+<li>Needs either a Camera2D or setting the scrolloffset of each layer by hand</li>
+</ul>
+</li>
+<li>ParallaxLayer: Background image that moves slower than the camera to gave a 3D feeling</li>
+</ul>
+<h2 id="ui-nodes">UI Nodes</h2>
+<p>https://www.youtube.com/watch?v=sPfoZy-cW-E</p>
+<ul>
+<li>ContainerNode: Layout childs<ul>
+<li>AspectRatio: Keeps aspect ratio of child</li>
+<li>CenterContainer: child centered </li>
+<li>MarginContainer: generates a padding arround the child</li>
+<li>BoxContainter: Stacked in one direction<ul>
+<li>HBoxContainer: horizontal stack</li>
+<li>VBoxContainer: vertical stack</li>
+</ul>
+</li>
+<li>SplitContainer: Like BoxContainter but using an editable splitter to control relative sizes of children<ul>
+<li>VSplitContainer: Vertical</li>
+<li>HSplitContainer: Horizontal</li>
+</ul>
+</li>
+<li>FlowContainter: Displays elements using wrapping text layout</li>
+<li>GridContainer: Arrange in rows and columns</li>
+<li>PanelContainer: Adds an styled background</li>
+<li>ScrollContainer: Allows overflows of the children with an scroll</li>
+<li>TabContainer: Separates children in tabs</li>
+</ul>
+</li>
+<li>Displays/Backgrounds<ul>
+<li>Label: Text display</li>
+<li>RichTextLabel: With styles</li>
+<li>ColorRect: </li>
+<li>TextureRect:</li>
+<li>VideoStreamPlayer:</li>
+<li>Separator: Line<ul>
+<li>VSeparator</li>
+<li>HSeparator</li>
+</ul>
+</li>
+<li>Panel: Not container just background</li>
+<li>-NinePatchRect: textured borders</li>
+</ul>
+</li>
+<li>Control: Input. You can connect events to react<ul>
+<li>BaseButton:<ul>
+<li>Button: Text button</li>
+<li>TextureButton: Image button</li>
+<li>LinkButton: Shown as a link</li>
+<li>CheckBox: [x]</li>
+<li>CheckButton: <code>*-</code> <code>-*</code></li>
+<li>MenuButton: opens a </li>
+<li>OptionButton: Dropdown selection</li>
+<li>ColorPickerButton:</li>
+</ul>
+</li>
+<li>LineEdit: single line text edit</li>
+<li>TextEdit: Plain multiline editor</li>
+<li>CodeEdit: Syntax highligted editor</li>
+<li>Range: Selecting or displaying a number in a range<ul>
+<li>ProgressBar: Styled progress bar</li>
+<li>TextureProgressBar: Displays a texture partially to show progress</li>
+<li>SpinBox: shows a number with arrows to increase or discre</li>
+<li>(V/H)ScrollBar: Usually use the ScrollContainer</li>
+<li>(V/H)Slider: Grab a handle to select a number within </li>
+</ul>
+</li>
+<li>ItemList: clickable list of items</li>
+<li>Tree: Hierachical items</li>
+<li>MenuBar: Array of MenuButtons</li>
+<li>TabBar: Top element of the TabContainer</li>
+<li>ReferenceRect: ???</li>
+<li>GraphEdit: ???</li>
+<li>GraphNode: ???</li>
+<li>TouchScreenButton: ???</li>
+</ul>
+</li>
+</ul>
+<p>Common control attributes:</p>
+<ul>
+<li>Layout<ul>
+<li>ClipContent: Overflowed content clipped by parent or can be seen</li>
+<li>CustomMinimumSize: Do not </li>
+<li>LayoutDirection: for children, Left to right, localization dependant...</li>
+<li>LayoutMode: Anchor or Coordinates</li>
+</ul>
+</li>
+<li>Transform: position, size, scale, rotation, pivot point (With anchor are changed automatically)</li>
+<li>Localization:<ul>
+<li>Autotranslate:</li>
+<li>Localize numerals:</li>
+</ul>
+</li>
+<li>Tooltip: </li>
+<li>Focus:<ul>
+<li>Neighbours (sequence and directional)</li>
+</ul>
+</li>
+<li>Mouse:<ul>
+<li>Pass or stop the event</li>
+<li>Pass or stop scroll events</li>
+<li>Cursor Shape:</li>
+</ul>
+</li>
+<li>Input<ul>
+<li>Shortcut context:</li>
+</ul>
+</li>
+<li>Theme:</li>
+</ul>
+<h2 id="shaders">Shaders</h2>
+<p>[Original Geometry]  -&gt; Vertext Shaders -&gt; [Modified Geometry] -&gt; Rasterization -&gt;  [Fragments] -&gt; Fragment Shader -&gt; [Final output]</p>
+<ul>
+<li>Fragments are not called Pixels because they have lots of more information:<ul>
+<li>Color</li>
+<li>Screen location</li>
+<li>UV coordinates</li>
+<li>Normals</li>
+<li>Light information</li>
+<li>....</li>
+</ul>
+</li>
+</ul>
+<p>In Godot, we can use either a shader node editor (<code>VisualShader</code>) or shader code (<code>Shader</code>).</p>
+<p>Create a resource, choose either <code>Shader</code> or <code>VisualShader</code>, drag the file as material of the target object.</p>
+<p>For VisualShader, a node editor will open with an output node.
+Input nodes have to be added by hand.
+Change the shader type (vertex, fragment...) with the dropdown selector.</p>
 
 
 
