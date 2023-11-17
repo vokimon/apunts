@@ -97,7 +97,6 @@
 		- `move_and_collide()` 
 
 
-
 ## 2D Nodes
 
 https://www.youtube.com/watch?v=22VYNOtrcgM
@@ -150,6 +149,88 @@ https://www.youtube.com/watch?v=22VYNOtrcgM
 - ParallaxBackground: root of a set of ParallaxLayer
 	- Needs either a Camera2D or setting the scrolloffset of each layer by hand
 - ParallaxLayer: Background image that moves slower than the camera to gave a 3D feeling
+
+## UI Nodes
+
+https://www.youtube.com/watch?v=sPfoZy-cW-E
+
+- ContainerNode: Layout childs
+	- AspectRatio: Keeps aspect ratio of child
+	- CenterContainer: child centered 
+	- MarginContainer: generates a padding arround the child
+	- BoxContainter: Stacked in one direction
+		- HBoxContainer: horizontal stack
+		- VBoxContainer: vertical stack
+	- SplitContainer: Like BoxContainter but using an editable splitter to control relative sizes of children
+		- VSplitContainer: Vertical
+		- HSplitContainer: Horizontal
+	- FlowContainter: Displays elements using wrapping text layout
+	- GridContainer: Arrange in rows and columns
+	- PanelContainer: Adds an styled background
+	- ScrollContainer: Allows overflows of the children with an scroll
+	- TabContainer: Separates children in tabs
+- Displays/Backgrounds
+	- Label: Text display
+	- RichTextLabel: With styles
+	- ColorRect: 
+	- TextureRect:
+	- VideoStreamPlayer:
+	- Separator: Line
+		- VSeparator
+		- HSeparator
+	- Panel: Not container just background
+	- -NinePatchRect: textured borders
+- Control: Input. You can connect events to react
+	- BaseButton:
+		- Button: Text button
+		- TextureButton: Image button
+		- LinkButton: Shown as a link
+		- CheckBox: [x]
+		- CheckButton: `*-` `-*`
+		- MenuButton: opens a 
+		- OptionButton: Dropdown selection
+		- ColorPickerButton:
+	- LineEdit: single line text edit
+	- TextEdit: Plain multiline editor
+	- CodeEdit: Syntax highligted editor
+	- Range: Selecting or displaying a number in a range
+		- ProgressBar: Styled progress bar
+		- TextureProgressBar: Displays a texture partially to show progress
+		- SpinBox: shows a number with arrows to increase or discre
+		- (V/H)ScrollBar: Usually use the ScrollContainer
+		- (V/H)Slider: Grab a handle to select a number within 
+	- ItemList: clickable list of items
+	- Tree: Hierachical items
+	- MenuBar: Array of MenuButtons
+	- TabBar: Top element of the TabContainer
+	- ReferenceRect: ???
+	- GraphEdit: ???
+	- GraphNode: ???
+	- TouchScreenButton: ???
+
+Common control attributes:
+
+- Layout
+	- ClipContent: Overflowed content clipped by parent or can be seen
+	- CustomMinimumSize: Do not 
+	- LayoutDirection: for children, Left to right, localization dependant...
+	- LayoutMode: Anchor or Coordinates
+- Transform: position, size, scale, rotation, pivot point (With anchor are changed automatically)
+- Localization:
+	- Autotranslate:
+	- Localize numerals:
+- Tooltip: 
+- Focus:
+	- Neighbours (sequence and directional)
+- Mouse:
+	- Pass or stop the event
+	- Pass or stop scroll events
+	- Cursor Shape:
+- Input
+	- Shortcut context:
+- Theme:
+
+
 
 
 ## Shaders
