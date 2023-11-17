@@ -124,47 +124,50 @@ La combinación de Rivalidad y Excludibilidad nos da:
 - **Bienes publicos:** Ni rivalidad ni exclusividad. Conocimiento (sin patentes), television en abierto, defensa nacional, lluvia, aire, luz solar...
 - **Bienes comunes:** Rivales pero no excludibles. No se puede excluir quien los usa pero son limitados. pesca, medio ambiente
 
-Fungibilidad (1): Capacidad de un bien para ser substituido por otro equivalente
+Fungibilidad (1): Una unidad del bien puede substituirse por otra equivalente del mismo bien
 Fungibilidad (2): Que para hacer uso de el ha de consumirse (en la legislacion española)
 
-Demanda (Demand): Capacidad o deseo de adquirir un producto 
-Ingresos (Income): Es la oportunidad de gasto o ahorro que gana una entidad durante un intervalo de tiempo determinado.
-Oferta (Supply): Cantidad de un bien disponible en el mercado
+## Demanda y elasticidad
 
-Elasticidad: Capacidad de un bien de ser substituido por otro
-Elasticidad de la demanda respecto a la renta: Como varia la demanda respecto a la disponibilidad de renta
-Elasticidad de los precios respecto a la oferta (PES): 
-Elasticidad de los precios respecto a la demanda (PED): 
-	Variacion relativa de la demanda respecto al precio (dQ/Q)/(dP/P)
-	Suele ser negativa con excepcion de los bienes Veblen o Giffen
-	Determinantes:
-		Disponibilidad de sustitutos cercanos: + por la capacidad de canviar a alternativas si cambia el precio
-		Porcentaje de los ingresos que representa: + por la atencion al precio
-		Necesidad: - hay que comprarlo valga lo que valga
-		Duracion del cambio: + hay mas tiempo para buscar alternativas, tiempo de respuesta
-		Lealtad a la marca: - tradicion, conocimiento
-		Cautividad a la marca (mio):  - barreras propietarias para cambiar de producto
-		Generalidad en la definicion del bien: 
-		Distancia entre el pagador y el elector: - Si no lo pago yo da igual el precio
-		Distancia entre el consumidor y el elector (Mio): + Si no lo consumo yo da igual la calidad
+- Demanda (Demand): Capacidad o deseo de adquirir un producto 
+- Ingresos (Income): Es la oportunidad de gasto o ahorro que gana una entidad durante un intervalo de tiempo determinado.
+- Oferta (Supply): Cantidad de un bien disponible en el mercado
 
+**Elasticidad:** Capacidad de un bien de ser substituido por otro
 
+- Elasticidad de la demanda respecto a la renta: Como varia la demanda respecto a la disponibilidad de renta
+- Elasticidad de los precios respecto a la oferta (PES): 
+- Elasticidad de los precios respecto a la demanda (PED): 
+	- Variacion relativa de la demanda respecto al precio (dQ/Q)/(dP/P)
+	- Suele ser negativa con excepcion de los bienes Veblen o Giffen
+	- Determinantes:
+		- Disponibilidad de sustitutos cercanos: + por la capacidad de canviar a alternativas si cambia el precio
+		- Porcentaje de los ingresos que representa: + por la atencion al precio
+		- Necesidad: - hay que comprarlo valga lo que valga
+		- Duracion del cambio: + hay mas tiempo para buscar alternativas, tiempo de respuesta
+		- Lealtad a la marca: - tradicion, conocimiento
+		- Cautividad a la marca (mio):  - barreras propietarias para cambiar de producto
+		- Generalidad en la definicion del bien: 
+		- Distancia entre el pagador y el elector: - Si no lo pago yo da igual el precio
+		- Distancia entre el consumidor y el elector (Mio): + Si no lo consumo yo da igual la calidad
 
+Según la flexibilidad en la demanda:
 
+- Bienes inferiores: aquellos cuya demanda baja al disponer de mas renta.
+- Bienes normales: aquellos cuya demanda sube al disponer de mas renta.
+	- Bienes de necesidad: Demanda sube por debajo de la proporcionalidad
+	- Bienes superiores o de lujo: aquellos cuya demanda sube cuando se dispone de mucha renta
 
-	Bienes inferiores: aquellos cuya demanda baja al disponer de mas renta.
-	Bienes normales: aquellos cuya demanda sube al disponer de mas renta.
-		Bienes de necesidad: Demanda sube por debajo de la proporcionalidad
-		Bienes superiores o de lujo: aquellos cuya demanda sube cuando se dispone de mucha renta
-
-Bien Giffen: Bien inferior tal que el incremento de su precio (o decremento de renta) 
+- Bien Giffen: Bien inferior tal que el incremento de su precio (o decremento de renta) 
 	implica incremento en la demanda, puesto que hay menos renta disponible para otros bienes normales
 
-Bien Veblen: Bien superior tal que el decremento de su precio implica un decremento en la demanda.
+- Bien Veblen: Bien superior tal que el decremento de su precio implica un decremento en la demanda.
 	Bienes de lujo cuyo 
 
-Bien (merit): Aporta un valor no apreciado por el individuo que (no) lo demanda.
-Bien (demerit): Aporta un inconveniente no apreciado por el individuo que lo demanda.
+Según el valor no apreciado:
+
+- Bien (merit): Aporta un valor no apreciado por el individuo que (no) lo demanda.
+- Bien (demerit): Aporta un inconveniente no apreciado por el individuo que lo demanda.
 
 	La ley de la oferta y la demanda se aplica suponiendo que la demanda es independiente
 		del precio o de la oferta.

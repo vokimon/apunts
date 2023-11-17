@@ -21,6 +21,7 @@ nav:
       - computers/jsonschema.md
       - computers/react-formik.md
       - computers/react.md
+      - computers/godot.md
     - computers/computer-graphics.md
     - computers/fastapi/fastapi.md
     - computers/android-glossary.md
