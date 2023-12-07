@@ -44,6 +44,9 @@ Es seguro si:
 	- Flash rojo: Alternar entre rojo saturado y otro color
 - O el fulcrum que engloba los parpadeos no supera los 10 grados
 
+### Animación como forma de suavizar o naturalizar los cambios
+
+Como lo molesto es el parpadeo, las animaciones justamente pueden ser útiles para hacer más naturales los cambios en las transiciones.
 
 ### Objetivos en el diseño
 
