@@ -271,7 +271,8 @@ En el objeto que genera el timeline:
 
 Son atajos que juntan las propiedades con sufijos `-name` y `-axis` (y `inset` para view).
 
-- `*-name`: especifica una variable para referenciarla en las animaciones que la usen. (Por defecto, `none` para anonimas)
+- `*-name`: especifica un nombre (sintaxis de variable css) para referenciarla en las animaciones que la usen. (Por defecto, `none` para anonimas)
+	- Se especifica para el elemento subject
 - `*-axis`: define que eje del scroll (x, y, block, inline) default: `block`
 - `*-inset`: (solo para view) reduce (o amplia, si negativo) la zona del viewport en la que se produce la animación
 		- Dos valores start y end
@@ -288,9 +289,39 @@ que se indican separadas con comas como las otras propiedades de animacion.
 
 TODO: none = auto??
 
-### TODO: Animation Range
+### Animation Range
 
-TODO: cover, fill...
+`animation-range{-start/-end}`: Define el intervalo considerado como inicio y final de tránsito.
+
+Intervalos del scroll considerando el movimiento de un Subject (S) por un Puerto de scroll (P).
+Convención: en la dirección de scroll, 
+P0 y S0 son sus bordes de inicio,
+P1 y S1 son sus bordes de final.
+
+https://scroll-driven-animations.style/tools/view-timeline/ranges/
+
+- `entry-crossing`: Mientras que el subject cruza la entrada del puerto
+	- 0% `S0=P1` empieza a entrar todo el puerto
+	- 100% `S1=P1` ha entrado todo en el puerto
+- `exit-crossing`: Mientras que el subject cruza la salida del puerto
+	- 0% `S0=P0` empieza a salir del puerto
+	- 100% `S1=P0` acaba de salir del puerto
+- `entry`: Como entry crosing pero 
+	- 0% `S0=P1` empieza a entrar en el puerto
+	- 100% `(S<P) S1=P1` ha entrado todo en el puerto
+	- 100% `(S>P) S0=P0` empieza a desaparecer
+- `exit`: Como exit crossing pero si es grande se espera a que haya entrado todo.
+	- 0% `(S<P) S0=P0` empieza a salir del puerto
+	- 0% `(S>P) S1=P1` ha entrado todo el puerto
+	- 100% `S1=P0` acaba de salir del puerto
+- `contain`: Mientras que se vea entero, si no cabe, mientras cubra todo el puerto.
+	- 0% `S<P S1=P1`
+	- 100% `S<P S0=P0`
+	- 0% `S>P S0=P0`
+	- 100% `S>P S1=P1`
+- `cover`: Durante el tiempo que se ve algo del componente
+	- 0% `S0=P1` Empieza a entrar
+	- 100% `S1=P0` Acaba de salir
 
 ### Timelines anónimos con las funciones `scroll()` y `view()`
 
@@ -314,11 +345,17 @@ con las funciones `view` o `scroll`.
 	- Se especifican en cualquier orden (son disjuntos)
 
 - `view(...)`
+	- Lo que controla la animacion es el tránsito de un elemento (subject) por la parte visible (scroll port) de un elemento contenedor con scroll
 	- No permite escoger
-		- ni elemento cuya visibilidad controla la animación, que será self
-		- ni el scroller, que será nearest
+		- ni elemento cuya visibilidad controla la animación (subject), que será self
+		- ni el scroller, que será nearest y defile lo que es el view port
 	- Tiene dos parametros inset y axis
-	- axis como el scroll: x, y, inline, block; por defecto `block`
+	- view-timeline-inset: son dos distancias (`-start` y `-end`) positivas (o negativas) que reducen (o amplian) el scroll port
+		 - el scroll port es la zona que se consider por la que tiene que pasar o verse el subject
+	- `view-timeline-axis` como el scroll: x, y, inline, block; por defecto `block`
+		- Firefox: `horizontal`, `vertical`, hay que especificarlo a parte mientras no se actualiza para no invalidar la regla en otros navegadores
+
+
 
 ### Propiedad timeline-scope
 

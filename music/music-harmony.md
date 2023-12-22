@@ -827,7 +827,21 @@ Gb
 C
 
 
+### iv (VI) V I
+
+https://www.facebook.com/reel/2683564461820767
 
 
+- September - Earth wind & fire
+- Dragula - Rob Zombie (taking over)
+- Party night anathem - 
+- Call me maybe - Carly Rae Jepsen
+- Gimme A man after midnight - ABBA
+- Ain't No Mountain High Enough - Marvin Gaye (verse)
+- Lovefool- Cardigans (love me, love me, say that you love me)
+- Anti-hero - Taylor Swift
+- We found love - Rianna
+- i can't feel my face - the weekend
+- I wanna dance with 
 
 

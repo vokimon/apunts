@@ -149,6 +149,78 @@ https://www.youtube.com/watch?v=22VYNOtrcgM
 - ParallaxBackground: root of a set of ParallaxLayer
 	- Needs either a Camera2D or setting the scrolloffset of each layer by hand
 - ParallaxLayer: Background image that moves slower than the camera to gave a 3D feeling
+- Path2D: Defines a point path to be follow by other node
+- PathFollow2D: A node that change position according to a Path2D controlling the progressRatio
+- Polygon2D: Draws filled polygon
+- RayCast2D: Computes collision points in a direction from a point
+- ShapeCast2D: Computes collisions on shapes projected over a direcction
+- RemoteTransform2D: Applies its own transform to a different node not in the hierarchy
+- Skeleton2D, PhysicalBone2D, Bone2D: Used to build hierchical animations
+- visibility
+	- VisibleOnScreenModifier2D: Sends signals when item changes it visibility
+	- VisibleOnScreenEnabler2D: Enables itself (and children) when visible
+- CanvasGroup: renders children once
+- BackbufferCopy: Copy a region as texture for the shaders to use it
+
+## 3D nodes
+
+
+
+- Node3D: Positionable, scalable, rotable object
+- Marker3D: Helper to visualize a node postion and orientation
+- VisualInstance3D: Base for all nodes that can be seen, add layering and bounding boxes
+- GeometryInstance3D: Base for all nodes with material properties: lightning, shadowing...
+- MeshInstance3D: Godot bultin or loaded mesh files
+- MultiMeshInstance3D: Optimally repeated geometry
+- Label3d: Text in 3D, can be or not camera facing
+- Decal: Projects a texture into a geometry
+- Sprite3D/AnimatedSprite3D: Plane with a texture applied
+- WorldEnvironment: Sets the lightning of the world
+- FogVolumen: Sets a volumen of fog
+- GPUParticles3d: Genera partículas
+- GPUParticlesAttractor3D: Attracts or repulses particles
+- GPUParticlesCollision3D: Collides particles  
+- Light3D: Base for lights strength, color, project shadow...
+	- OmniLight3D: omnidirectional light
+	- SpotLight3D: focused light
+	- DirectionalLight3D: celestial light, just direction
+- CSGShape3D: Base for shapes that can do boolean operations
+- SoftBody3D: Emulates physics of textiles, inherits MeshInstance3D, adds attachment points, colliders to affect on...
+- CollisionObject3D: layers what object can collide, childs can be:
+	- CollisionShape3D: Thickened Shape
+	- CollitionPolygon3D: Thickened Polygon
+	- PhysicsBody3D: Base. Holds any dimensional and rotational locking
+		- StaticBody3D: material, velocity, spin, but static because it is unaffected by others collisions (walls, floor...)
+			- AnimatableBody3D: it can push or pull other object but unaffected by others
+		- RigidBody3D: Mass, inertia, bouncing...
+	- CharacterBody3D: User controlled
+- Area3D: Collision detection and change physical properties within
+- Camera3D:
+- VehicleNode3D/VehicleWheel3d: Emulates vehicle physics
+- Joint3D: Base to join 2 objects, you add it as a sibbling and configure it with the objects
+	- HingeJoint3D: rotation around an axis (bisagra) limits, lubricació...
+	- ConeTwistJoint3D: Rotula limitada a cierto cono
+	- SliderJoint3D: piston like movement
+	- PinJoint3D: single point of contact
+	- Generic6DOFJoint3D: Full generalization for complex joints. Angular/Linear limits/springs/motors for xyz
+- Skeleton3D: Normally imported from blender (skeletons and skeletons animations)
+- BoneAttachment3D: To bind extra elements to a bone
+- RootBoneAnimation3D: surface that acts as root (floor) for the animation
+
+
+
+
+	
+	
+
+
+
+
+
+
+
+
+
 
 ## UI Nodes
 
@@ -229,6 +301,9 @@ Common control attributes:
 - Input
 	- Shortcut context:
 - Theme:
+
+## 3D Nodes
+
 
 
 

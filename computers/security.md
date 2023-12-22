@@ -12,16 +12,31 @@ però com aquest és un tema especialment sensible, calia dir-ho.
 
 https://owasp.org/www-project-code-review-guide/reviewing-code-for-csrf-issues
 
-Succeeix quan un usuari té una sessió oberta al navegador
-i algú, maliciosament, li fa clickar un enllaç que fa una acció a l'aplicació.
+https://scotthelme.co.uk/csrf-is-dead/
 
-Per exemple, imagina que tenim sessió oberta al banc i li fem clickar aquest enllaç:
+
+Succeeix quan un usuari té al navegador una sessió oberta amb una aplicació/servidor
+i algú aliè, maliciosament, fa que el navegador faci una petició no volguda a aquesta aplicació aprofitant la sessió oberta.
+
+Per exemple, imagina que tinc una sessió oberta al banc, `mibanco.com` i
+visitant una web maliciosa faig click a un enllaç que
+fa aquesta petició des del meu navegador:
 ```
 https://mibanco.com/api/transfer/?amount=2000&targetiban=ES5512341234001234567890
 ```
 
 L'enllaç li pot arribar per un correu, un xat, una web maliciossa, un QR...
 Segurament estarà enmascarat com a legítim i amb un context que faci de ganxo.
+De fet, no cal que sigui un enllaç ni que li faci click.
+Qualsevol javascript pot fer peticions a on sigui de forma autònoma.
+
+El que tenen en comú aquests atacs és que tot i que la petició la fa el navegador de l'usuari,
+qui construeix la petició (origin, referer) no es el mateix lloc que la rep.
+
+ACLARACIÓ: L'origin o referrer de la petició no es qui la executa (el navegador), si no el lloc que li diu que l'ha d'execturar.
+Per protegir-nos d'un atac CSRF de qui hem de sospitar es d'aquest referrer si no és el site de destí.
+
+- Origin: (domain) Referer: (pagina/url)
 
 Per evitar aquest tipus de situacions,
 hi ha diverses solucions que es poden aplicar:
@@ -31,7 +46,7 @@ hi ha diverses solucions que es poden aplicar:
 	- La resolució del segon pas no ha de tenir tota la informació i referir-se al primer pas.
 		- Si no, estaríem tornant a tenir un punt d'entrada objectiu per l'atac.
 
-- Synchronizer token pattern
+- Synchronizer token pattern (CSRF tokens)
 	- Cada cop que l'aplicació envia un link/formulari a l'usuari,
 		l'aplicació generarà un codi aleatori (diferent cada vegada)
 		que el client ha de tornar.
@@ -39,9 +54,27 @@ hi ha diverses solucions que es poden aplicar:
 	- Quan el client activa un dels enllaços, envia tambie el codi
 	- El servidor confirma que el codi pertany a la sessió
 	- Si no hi es, cal tancar la sessió i donar error
-	- Un atacant, hauria d'esbrinar el codi cada cop... pot fer-ho si
+	- Un atacant, hauria d'esbrinar el codi cada cop... pot fer-ho si demana primer el formulari i agafa el token.
 	- :-) Si posem els codis com a camps ocults dels formularis no cal JS ni similars
 	- :-( Complejo en el lado del servidor pues hay que gestionar todos los tokens
+	- !!:-O NO SOLUCIONA UNA MERDA!
+		- JS pot demanar el formulari, agafar el csrf i fer el post
+
+- Origin/Referrer headers:
+	- El servidor limita les peticions compromeses a aquelles que el navegador confirma pels headers que venen del mateix lloc.
+	- Els navegadors aporten certa protecció perque les pagines no puguin canviar els seus origin ni referer
+
+- SameSite Cookies: Los navegadores no las envian cuando es una peticion entre dominios.
+	- `SameSite: Strict` Només envia la cookie si el referer es el mateix.
+		- Problema: La primera carrega de la pagina no tenim la cookie perque venim de fora i no s'envia
+		- Solució: Tenir dos cookies simultanees una per les peticións fluixes i una Strict per les peticions delicades.
+		- Cap problema amb les SPA perque la primera crida es per agafar l'index.html que no té res
+		
+	- `SameSite: Lax`: Solo se exige SameSite para metodos HTTP no seguros.
+		- Considerandose seguros: GET, OPTIONS, HEAD, TRACE
+		- Hay que programar la api con cuidado de que esos Metodos no tengan acceso a cosas y GET se usa mucho
+
+	- Para SAP Strict es ideal pues se coge XS la pagina index.html, que es segura y el resto require SameSite.
 
 
 ## SQL Injection, Code Injection

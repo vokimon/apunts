@@ -148,6 +148,8 @@ dppx: dots per pixel unit
 
 ## new features
 
+### 2023
+
 ```css
 aspect-ratio: 16 / 9;
 size: 50vw   // sets both height and width
@@ -168,12 +170,29 @@ filters:
   saturate(factor) // 0 unsaturated, 100 normal, beyond saturated
   sepia(factor)
 contain: layout/style/paint // TODO: limit
+```
+### 2024
+
+```css
+orphans: n // Number of lonely lines at the end of a page/column/region (fragmentation break)
+widows: n // Number of lonely lines at the begining of a page/column/region (fragmentation break)
+text-wrap: balance // balances words in each line, for example for titles
+color-mix(in <model> longer/shorter param, <color1> [percent], <color2> [percent])
+lch/oklch // new color model
+rgb(from var(--color) calc((r + g) / 2) calc((r + g) /2) b / .4) // modifies components of a given color
 
 
+// make rules not to depend that more on specificity or order
+@layer reset, elements, layout, components // from general to specific
+@layer my-layer {
+  rules...
+}
+// subgrids (until now only in firefox, since sep 2024 also in safary and chrome)
+// view transitions: 
+:user-invalid // much like :invalid but wait for the user to interact
 ```
 
-
-
+## lala
 
 CSS frameworks:
 

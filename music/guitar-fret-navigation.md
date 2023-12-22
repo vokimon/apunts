@@ -30,7 +30,7 @@ Eso nos da tres patrones de fingering que llamaremos X Y Z:
 |------|---------------|-------|----|
 |  X   | tono-tono     | 1-2-4 | **C**DE, **F**GA o **G**AB |
 |  Y   | semitono-tono | 12-4  | **E**FG o **B**CD |
-|  Z   | tono-semitono | 1-34  | **D**CE o **A**BC |
+|  Z   | tono-semitono | 1-34  | **D**EF o **A**BC |
 
 - El guión en el fingering significa un traste que saltamos.
 - Los números: 1 Indice, 2 medio, 3 anular, 4 meñique.
