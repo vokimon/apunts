@@ -26,6 +26,7 @@ https://dreamfarmstudios.com/blog/3d-animation-pipeline/
 
 - Postproduction
 
+	- [Motion Graphics]: Animacion de letras y figuras (titulos de credito, narraciones...)
 	- [Composition]: Sequence and mixing images, including chroma effects
 	- [2D VFX]: Some effects are cheaper in 2D
 		- Adds: Sparks, rain/snow, lens flares, smoke, dust, pixie dust

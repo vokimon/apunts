@@ -42,6 +42,7 @@ nav:
     - Quadratic Formula: math/math-quadraticformula-alternative.md
     - Wavelets: math/math-wavelets.md
     - Collatz Conjecture: math/math-3n1.md
+    - Binary math: math/math-binary.md
     - Geometric Algebra: math/math-geometric-algebra.md
   - Music:
     - music/music-harmony.md
@@ -73,6 +74,7 @@ nav:
   - Economics: economics.md
   - 3D:
       - 3d/3d-production-pipeline.md
+      - 3d/blender-materials.md
 
 
 markdown_extensions:

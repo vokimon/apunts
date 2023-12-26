@@ -1,7 +1,7 @@
 ## De bandas concretas
 
-- [Linkin Park](song-linkinpark.md)
-- [Led Zeppeling](song-ledzeppeling)
+- [Linkin Park](./song-linkinpark.md)
+- [Led Zeppeling](./song-ledzeppeling.md)
 
 ## Polly - Nirvana
 
