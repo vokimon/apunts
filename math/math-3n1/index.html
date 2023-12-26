@@ -18,7 +18,7 @@
         <link rel="prev" href="../math-wavelets/">
       
       
-        <link rel="next" href="../math-geometric-algebra/">
+        <link rel="next" href="../math-binary/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -1288,6 +1288,26 @@
   
   
     <li class="md-nav__item">
+      <a href="../math-binary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Binary math
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../math-geometric-algebra/" class="md-nav__link">
         
   
@@ -1993,6 +2013,26 @@
 
               
             
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3d/blender-materials/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Blender material
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2206,8 +2246,10 @@ As for today this has been proved until 2^68 (David Bařina https://github.com/h
 <p>The Collatz conjecture states that: all natural numbers are reductible.</p>
 <h2 id="toolbox">Toolbox</h2>
 <h3 id="powers-of-three">Powers of three</h3>
-<p>Given a base b:</p>
+<p>We can relate a power of 3 with lesser powers of 3</p>
+<p>Given that for any base b and natural power n:</p>
 <div class="highlight"><pre><span></span><code>b^n - 1 = (b-1) * sum[0&lt;=i&lt;n](b^i)
+b^n = 1 + (b-1) * sum[0&lt;=i&lt;n](b^i)
 </code></pre></div>
 <p>For b = 3:</p>
 <div class="highlight"><pre><span></span><code>3^n = 1 + 2*sum[0&lt;=i&lt;n](3^i)
@@ -2222,7 +2264,7 @@ sum(3^k)[0&lt;=k&lt;n] = (3^n - 1) / 2
 (3^n + 1)/2 = 1 + (3^n-1 + 3^n-2 ... + 3 + 1)
 (3^n + 1)/2 = 1 + sum[0&lt;=i&lt;n](3^i)
 </code></pre></div>
-<p>We can also express</p>
+<p>We can also relate powers of 3 in terms of powers of 2 by using the binomial theorem</p>
 <div class="highlight"><pre><span></span><code>3^n = (2 + 1)^n
 3^n = sum[0&lt;=i&lt;=n]( 2^i * n! / (n-i)! / i! )
 3^n = sum[0&lt;=i&lt;=n]( 2^i * bincoef(i,n) )
@@ -2280,7 +2322,7 @@ We can make multiplication factors and addition terms optional.</p>
 <li>conditional multiplication by a factor x:  x^a * y</li>
 </ul>
 <h3 id="oddity-of-algebraic-expressions">Oddity of algebraic expressions</h3>
-<p>Oddity is a function that returns a boolean integer.
+<p>Oddity is a function that returns a boolean integer, 1 if the number is odd.
 Also useful to eliminate branching.</p>
 <p>Being a and b integer expressions:</p>
 <div class="highlight"><pre><span></span><code>odd(1) = 1
@@ -2304,7 +2346,7 @@ fk+1(n) = 1/2 * ( fk(n) * 3^(odd(fk(n))) + odd(fk(n)) )
 <p>Another formulation is:</p>
 <div class="highlight"><pre><span></span><code>fk+1(n) = 1/2 * ( fk(n) * (1 + 2*odd(fk(n))) + odd(fk(n)) )
 </code></pre></div>
-<p>Which can be convinient to extract factors of two.</p>
+<p>Which can be convenient to extract factors of two.</p>
 <p>Lets define Ok as odd(fk(n)). Then we can express both formulations as</p>
 <div class="highlight"><pre><span></span><code>fk+1(n) = (3^Ok * fk(n) + Ok) / 2
 </code></pre></div>
@@ -2312,27 +2354,29 @@ fk+1(n) = 1/2 * ( fk(n) * 3^(odd(fk(n))) + odd(fk(n)) )
 <div class="highlight"><pre><span></span><code>fk+1(n) = ((1+2*Ok) * fk(n) + Ok) / 2
 </code></pre></div>
 <p>For compactness, we will omit (n), so fk = fk(n)</p>
+<div class="highlight"><pre><span></span><code>fk+1 = (3^Ok * fk + Ok) / 2     # Ok exponential form
+fk+1 = (fk + 2*Ok*fk  + Ok) / 2 # Ok factor form
+</code></pre></div>
 <h3 id="additivesubstractive-view">Additive/Substractive view</h3>
 <div class="highlight"><pre><span></span><code>fk+1 - fk =
-= ((1+2*Ok) * fk(n) + Ok) / 2 - fk
-= ((1+2*Ok) * fk(n) + Ok - 2*fk) / 2
-= ((1+2*Ok-2) * fk(n) + Ok) / 2
-= ((2*Ok-1) * fk(n) + Ok) / 2
-= (2*Ok-1) * fk(n)/2 + Ok/2
+= (fk + 2*Ok*fk  + Ok) / 2 - fk   # Using Ok factor form
+= (-fk + 2*Ok*fk  + Ok) / 2       # fk inside 1/2
+    Odd: (-fk + 2*fk  + 1) / 2 = fk/2 + 1/2
+    Even: -fk/2
 
 fk odd : +fk/2 + 1/2
 fk even: -fk/2
 </code></pre></div>
 <p><strong>Conclusión</strong>:
 Depending on the oddity of the previous result,
-we are adding or substracting half of the value,
+we are adding or substracting half of the sequence value,
 rounding up for odds.</p>
 <h2 id="strategies">Strategies</h2>
 <p>Hypothesis: Exists a first natural number A that it is not reductible.</p>
 <p><strong>Strategy 1:</strong> 
-If exists a first non reductible natural A implies that any n<A is reductible.
-Because A is not reductible, f_k(A)>=A for all k.
-Having f_k(A)&lt;A will contradict the hypothesis.
+If exists a first non reductible natural A implies that any <code>n&lt;A</code> is reductible.
+Because A is not reductible, <code>f_k(A)&gt;=A</code> for all k.
+Having <code>f_k(A)&lt;A</code> will contradict the hypothesis.
 If the hypothesis is true, it could lead to a search algorithm for A.</p>
 <p><strong>Suposition:</strong> The oddness of the f_k(n) just depends on the lower k+1 bits of n.</p>
 <p><strong>Strategy 2:</strong>
@@ -2348,10 +2392,10 @@ Start on 1 and invert f so that we can get to that number by the odd and even fo
 <h2 id="solution-structure">Solution structure</h2>
 <p><strong>Theorem</strong>: All f^k(n) can be expressed as (an+b)/c being a and c extrictly positive integers, and b positive integer.</p>
 <p>Proof:</p>
-<div class="highlight"><pre><span></span><code>f^0(n) = n; (a=1, b=0, c=1)
+<div class="highlight"><pre><span></span><code>f^0(n) = n; (a0=1, b0=0, c0=1)
 
-Given that f^k(n) can be expressed as (an +b)/c,
-can f^k+1(n) be expressed as (a&#39;n+b&#39;)/c&#39;?
+Given that f^k(n) can be expressed as (ak*n +bk)/ck,
+can f^k+1(n) be expressed as (a&#39;*n+b&#39;)/c&#39; ?
 
 if f^k(n) is odd: f^k+1(n) = (3*a*n + 3*b + c)/2*c
 (a&#39;=3*a, b&#39;=3*b+c, c&#39;=2*c)
@@ -2366,6 +2410,10 @@ if f^k(n) is even: f^k+1(n) = (a*n + b) /2*c
 a&#39;= (2*Ok +1) * a
 b&#39;= b + b*2*Ok + c * Ok
 c&#39;= 2*c
+
+ak+1 = prod[i=0..k] 3^Oi = 3 ^ sum[i=0..k] Oi
+bk+1 = bk * 3^Ok + ck + Ok = bk * 3^Ok + 2^k-1 + Ok 
+ck+1 = 2^k
 </code></pre></div>
 <h2 id="empirical-observations">Empirical observations</h2>
 <p>Being nk the kth bit of n binary base representation.

@@ -882,23 +882,43 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#shaders" class="md-nav__link">
+    Shaders
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#node-catalog" class="md-nav__link">
+    Node catalog
+  </a>
+  
+    <nav class="md-nav" aria-label="Node catalog">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#2d-nodes" class="md-nav__link">
     2D Nodes
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
+  <a href="#3d-nodes" class="md-nav__link">
+    3D nodes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#ui-nodes" class="md-nav__link">
     UI Nodes
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#shaders" class="md-nav__link">
-    Shaders
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1185,6 +1205,26 @@
   
   <span class="md-ellipsis">
     Collatz Conjecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/math-binary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Binary math
   </span>
   
 
@@ -1905,6 +1945,26 @@
 
               
             
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3d/blender-materials/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Blender material
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1974,23 +2034,43 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#shaders" class="md-nav__link">
+    Shaders
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#node-catalog" class="md-nav__link">
+    Node catalog
+  </a>
+  
+    <nav class="md-nav" aria-label="Node catalog">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#2d-nodes" class="md-nav__link">
     2D Nodes
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
+  <a href="#3d-nodes" class="md-nav__link">
+    3D nodes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#ui-nodes" class="md-nav__link">
     UI Nodes
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#shaders" class="md-nav__link">
-    Shaders
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2026,17 +2106,23 @@
 <li>You can add childs</li>
 </ul>
 </li>
-<li>Tree structure:<ul>
+<li>Tree structure (Composition hierarchy != Inheritance hierarchy):<ul>
 <li>Modifications on the parent (scaling, rotating, positioning, skew, groups...) affect their children</li>
 <li>Siblings order affects to the drawing order</li>
 </ul>
 </li>
-<li>Scene: Node that organizes other nodes and display them<ul>
+<li>Scene: Root node that organizes other nodes and display them<ul>
 <li>Current scene is the scene currently displayed</li>
 <li>Scenes are also reusable groups of nodes</li>
 <li>You can convert a subtree of nodes into its own scene</li>
 <li>You can insert a scene inside another scene</li>
 <li>Scenes are stored as .tscn files</li>
+</ul>
+</li>
+<li>Root node types:<ul>
+<li>Node2D: 2D scene to organize object in a 2D canvas</li>
+<li>UI: Control node (a Node2D it self) but organizes controls in layouts</li>
+<li>Node3D: 3D scene to organice object in a 3D world</li>
 </ul>
 </li>
 <li>Some useful node types:<ul>
@@ -2145,7 +2231,26 @@
 </ul>
 </li>
 </ul>
-<h2 id="2d-nodes">2D Nodes</h2>
+<h2 id="shaders">Shaders</h2>
+<p>[Original Geometry]  -&gt; Vertext Shaders -&gt; [Modified Geometry] -&gt; Rasterization -&gt;  [Fragments] -&gt; Fragment Shader -&gt; [Final output]</p>
+<ul>
+<li>Fragments are not called Pixels because they have lots of more information:<ul>
+<li>Color</li>
+<li>Screen location</li>
+<li>UV coordinates</li>
+<li>Normals</li>
+<li>Light information</li>
+<li>....</li>
+</ul>
+</li>
+</ul>
+<p>In Godot, we can use either a shader node editor (<code>VisualShader</code>) or shader code (<code>Shader</code>).</p>
+<p>Create a resource, choose either <code>Shader</code> or <code>VisualShader</code>, drag the file as material of the target object.</p>
+<p>For VisualShader, a node editor will open with an output node.
+Input nodes have to be added by hand.
+Change the shader type (vertex, fragment...) with the dropdown selector.</p>
+<h2 id="node-catalog">Node catalog</h2>
+<h3 id="2d-nodes">2D Nodes</h3>
 <p>https://www.youtube.com/watch?v=22VYNOtrcgM</p>
 <ul>
 <li>Node2D: Base of every 2D Node<ul>
@@ -2220,8 +2325,75 @@
 </ul>
 </li>
 <li>ParallaxLayer: Background image that moves slower than the camera to gave a 3D feeling</li>
+<li>Path2D: Defines a point path to be follow by other node</li>
+<li>PathFollow2D: A node that change position according to a Path2D controlling the progressRatio</li>
+<li>Polygon2D: Draws filled polygon</li>
+<li>RayCast2D: Computes collision points in a direction from a point</li>
+<li>ShapeCast2D: Computes collisions on shapes projected over a direcction</li>
+<li>RemoteTransform2D: Applies its own transform to a different node not in the hierarchy</li>
+<li>Skeleton2D, PhysicalBone2D, Bone2D: Used to build hierchical animations</li>
+<li>visibility<ul>
+<li>VisibleOnScreenModifier2D: Sends signals when item changes it visibility</li>
+<li>VisibleOnScreenEnabler2D: Enables itself (and children) when visible</li>
 </ul>
-<h2 id="ui-nodes">UI Nodes</h2>
+</li>
+<li>CanvasGroup: renders children once</li>
+<li>BackbufferCopy: Copy a region as texture for the shaders to use it</li>
+</ul>
+<h3 id="3d-nodes">3D nodes</h3>
+<ul>
+<li>Node3D: Positionable, scalable, rotable object</li>
+<li>Marker3D: Helper to visualize a node postion and orientation</li>
+<li>VisualInstance3D: Base for all nodes that can be seen, add layering and bounding boxes</li>
+<li>GeometryInstance3D: Base for all nodes with material properties: lightning, shadowing...</li>
+<li>MeshInstance3D: Godot bultin or loaded mesh files</li>
+<li>MultiMeshInstance3D: Optimally repeated geometry</li>
+<li>Label3d: Text in 3D, can be or not camera facing</li>
+<li>Decal: Projects a texture into a geometry</li>
+<li>Sprite3D/AnimatedSprite3D: Plane with a texture applied</li>
+<li>WorldEnvironment: Sets the lightning of the world</li>
+<li>FogVolumen: Sets a volumen of fog</li>
+<li>GPUParticles3d: Genera partículas</li>
+<li>GPUParticlesAttractor3D: Attracts or repulses particles</li>
+<li>GPUParticlesCollision3D: Collides particles  </li>
+<li>Light3D: Base for lights strength, color, project shadow...<ul>
+<li>OmniLight3D: omnidirectional light</li>
+<li>SpotLight3D: focused light</li>
+<li>DirectionalLight3D: celestial light, just direction</li>
+</ul>
+</li>
+<li>CSGShape3D: Base for shapes that can do boolean operations</li>
+<li>SoftBody3D: Emulates physics of textiles, inherits MeshInstance3D, adds attachment points, colliders to affect on...</li>
+<li>CollisionObject3D: layers what object can collide, childs can be:<ul>
+<li>CollisionShape3D: Thickened Shape</li>
+<li>CollitionPolygon3D: Thickened Polygon</li>
+<li>PhysicsBody3D: Base. Holds any dimensional and rotational locking<ul>
+<li>StaticBody3D: material, velocity, spin, but static because it is unaffected by others collisions (walls, floor...)<ul>
+<li>AnimatableBody3D: it can push or pull other object but unaffected by others</li>
+</ul>
+</li>
+<li>RigidBody3D: Mass, inertia, bouncing...</li>
+</ul>
+</li>
+<li>CharacterBody3D: User controlled</li>
+</ul>
+</li>
+<li>Area3D: Collision detection and change physical properties within</li>
+<li>Camera3D:</li>
+<li>VehicleNode3D/VehicleWheel3d: Emulates vehicle physics</li>
+<li>Joint3D: Base to join 2 objects, you add it as a sibbling and configure it with the objects<ul>
+<li>HingeJoint3D: rotation around an axis (bisagra) limits, lubricació...</li>
+<li>ConeTwistJoint3D: Rotula limitada a cierto cono</li>
+<li>SliderJoint3D: piston like movement</li>
+<li>PinJoint3D: single point of contact</li>
+<li>Generic6DOFJoint3D: Full generalization for complex joints. Angular/Linear limits/springs/motors for xyz</li>
+</ul>
+</li>
+<li>Skeleton3D: Normally imported from blender (skeletons and skeletons animations)</li>
+<li>BoneAttachment3D: To bind extra elements to a bone</li>
+<li>RootBoneAnimation3D: surface that acts as root (floor) for the animation</li>
+</ul>
+<h3 id="ui-nodes">UI Nodes</h3>
 <p>https://www.youtube.com/watch?v=sPfoZy-cW-E</p>
 <ul>
 <li>ContainerNode: Layout childs<ul>
@@ -2326,24 +2498,6 @@
 </li>
 <li>Theme:</li>
 </ul>
-<h2 id="shaders">Shaders</h2>
-<p>[Original Geometry]  -&gt; Vertext Shaders -&gt; [Modified Geometry] -&gt; Rasterization -&gt;  [Fragments] -&gt; Fragment Shader -&gt; [Final output]</p>
-<ul>
-<li>Fragments are not called Pixels because they have lots of more information:<ul>
-<li>Color</li>
-<li>Screen location</li>
-<li>UV coordinates</li>
-<li>Normals</li>
-<li>Light information</li>
-<li>....</li>
-</ul>
-</li>
-</ul>
-<p>In Godot, we can use either a shader node editor (<code>VisualShader</code>) or shader code (<code>Shader</code>).</p>
-<p>Create a resource, choose either <code>Shader</code> or <code>VisualShader</code>, drag the file as material of the target object.</p>
-<p>For VisualShader, a node editor will open with an output node.
-Input nodes have to be added by hand.
-Change the shader type (vertex, fragment...) with the dropdown selector.</p>
 
 
 

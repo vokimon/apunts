@@ -1165,6 +1165,26 @@
   
   
     <li class="md-nav__item">
+      <a href="../../math/math-binary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Binary math
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../math/math-geometric-algebra/" class="md-nav__link">
         
   
@@ -1870,6 +1890,26 @@
 
               
             
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3d/blender-materials/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Blender material
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1952,13 +1992,25 @@ Igual que la resta d'apunts d'aquesta pàgina,
 però com aquest és un tema especialment sensible, calia dir-ho.</p>
 <h2 id="csrf-cross-site-request-forgery">CSRF (Cross Site Request Forgery)</h2>
 <p>https://owasp.org/www-project-code-review-guide/reviewing-code-for-csrf-issues</p>
-<p>Succeeix quan un usuari té una sessió oberta al navegador
-i algú, maliciosament, li fa clickar un enllaç que fa una acció a l'aplicació.</p>
-<p>Per exemple, imagina que tenim sessió oberta al banc i li fem clickar aquest enllaç:
+<p>https://scotthelme.co.uk/csrf-is-dead/</p>
+<p>Succeeix quan un usuari té al navegador una sessió oberta amb una aplicació/servidor
+i algú aliè, maliciosament, fa que el navegador faci una petició no volguda a aquesta aplicació aprofitant la sessió oberta.</p>
+<p>Per exemple, imagina que tinc una sessió oberta al banc, <code>mibanco.com</code> i
+visitant una web maliciosa faig click a un enllaç que
+fa aquesta petició des del meu navegador:
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>https://mibanco.com/api/transfer/?amount=2000&amp;targetiban=ES5512341234001234567890
 </code></pre></div></p>
 <p>L'enllaç li pot arribar per un correu, un xat, una web maliciossa, un QR...
-Segurament estarà enmascarat com a legítim i amb un context que faci de ganxo.</p>
+Segurament estarà enmascarat com a legítim i amb un context que faci de ganxo.
+De fet, no cal que sigui un enllaç ni que li faci click.
+Qualsevol javascript pot fer peticions a on sigui de forma autònoma.</p>
+<p>El que tenen en comú aquests atacs és que tot i que la petició la fa el navegador de l'usuari,
+qui construeix la petició (origin, referer) no es el mateix lloc que la rep.</p>
+<p>ACLARACIÓ: L'origin o referrer de la petició no es qui la executa (el navegador), si no el lloc que li diu que l'ha d'execturar.
+Per protegir-nos d'un atac CSRF de qui hem de sospitar es d'aquest referrer si no és el site de destí.</p>
+<ul>
+<li>Origin: (domain) Referer: (pagina/url)</li>
+</ul>
 <p>Per evitar aquest tipus de situacions,
 hi ha diverses solucions que es poden aplicar:</p>
 <ul>
@@ -1973,7 +2025,7 @@ hi ha diverses solucions que es poden aplicar:</p>
 </ul>
 </li>
 <li>
-<p>Synchronizer token pattern</p>
+<p>Synchronizer token pattern (CSRF tokens)</p>
 <ul>
 <li>Cada cop que l'aplicació envia un link/formulari a l'usuari,
     l'aplicació generarà un codi aleatori (diferent cada vegada)
@@ -1982,9 +2034,43 @@ hi ha diverses solucions que es poden aplicar:</p>
 <li>Quan el client activa un dels enllaços, envia tambie el codi</li>
 <li>El servidor confirma que el codi pertany a la sessió</li>
 <li>Si no hi es, cal tancar la sessió i donar error</li>
-<li>Un atacant, hauria d'esbrinar el codi cada cop... pot fer-ho si</li>
+<li>Un atacant, hauria d'esbrinar el codi cada cop... pot fer-ho si demana primer el formulari i agafa el token.</li>
 <li>:-) Si posem els codis com a camps ocults dels formularis no cal JS ni similars</li>
 <li>:-( Complejo en el lado del servidor pues hay que gestionar todos los tokens</li>
+<li>!!:-O NO SOLUCIONA UNA MERDA!<ul>
+<li>JS pot demanar el formulari, agafar el csrf i fer el post</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Origin/Referrer headers:</p>
+<ul>
+<li>El servidor limita les peticions compromeses a aquelles que el navegador confirma pels headers que venen del mateix lloc.</li>
+<li>Els navegadors aporten certa protecció perque les pagines no puguin canviar els seus origin ni referer</li>
+</ul>
+</li>
+<li>
+<p>SameSite Cookies: Los navegadores no las envian cuando es una peticion entre dominios.</p>
+<ul>
+<li>
+<p><code>SameSite: Strict</code> Només envia la cookie si el referer es el mateix.</p>
+<ul>
+<li>Problema: La primera carrega de la pagina no tenim la cookie perque venim de fora i no s'envia</li>
+<li>Solució: Tenir dos cookies simultanees una per les peticións fluixes i una Strict per les peticions delicades.</li>
+<li>Cap problema amb les SPA perque la primera crida es per agafar l'index.html que no té res</li>
+</ul>
+</li>
+<li>
+<p><code>SameSite: Lax</code>: Solo se exige SameSite para metodos HTTP no seguros.</p>
+<ul>
+<li>Considerandose seguros: GET, OPTIONS, HEAD, TRACE</li>
+<li>Hay que programar la api con cuidado de que esos Metodos no tengan acceso a cosas y GET se usa mucho</li>
+</ul>
+</li>
+<li>
+<p>Para SAP Strict es ideal pues se coge XS la pagina index.html, que es segura y el resto require SameSite.</p>
+</li>
 </ul>
 </li>
 </ul>
