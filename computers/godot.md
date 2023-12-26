@@ -12,19 +12,22 @@
 	- Default properties values can be set differently
 	- They can extend with new properties
 	- You can add childs
-- Tree structure:
+- Tree structure (Composition hierarchy != Inheritance hierarchy):
 	- Modifications on the parent (scaling, rotating, positioning, skew, groups...) affect their children
 	- Siblings order affects to the drawing order
-- Scene: Node that organizes other nodes and display them
+- Scene: Root node that organizes other nodes and display them
 	- Current scene is the scene currently displayed
 	- Scenes are also reusable groups of nodes
 	- You can convert a subtree of nodes into its own scene
 	- You can insert a scene inside another scene
 	- Scenes are stored as .tscn files
+- Root node types:
+	- Node2D: 2D scene to organize object in a 2D canvas
+	- UI: Control node (a Node2D it self) but organizes controls in layouts
+	- Node3D: 3D scene to organice object in a 3D world
 - Some useful node types:
 	- Node2D: A 2D point bearing 2D transformations to its children
 	- Sprite2D: An 2D image (also a Node2d)
-
 
 ## Scripting
 
@@ -96,8 +99,30 @@
 		- `move_and_slide()` Updates position accordint to velocity avoiding getting into static body areas by slipping on the border
 		- `move_and_collide()` 
 
+## Shaders
 
-## 2D Nodes
+[Original Geometry]  -> Vertext Shaders -> [Modified Geometry] -> Rasterization ->  [Fragments] -> Fragment Shader -> [Final output]
+
+
+- Fragments are not called Pixels because they have lots of more information:
+	- Color
+	- Screen location
+	- UV coordinates
+	- Normals
+	- Light information
+	- ....
+
+In Godot, we can use either a shader node editor (`VisualShader`) or shader code (`Shader`).
+
+Create a resource, choose either `Shader` or `VisualShader`, drag the file as material of the target object.
+
+For VisualShader, a node editor will open with an output node.
+Input nodes have to be added by hand.
+Change the shader type (vertex, fragment...) with the dropdown selector.
+
+## Node catalog
+
+### 2D Nodes
 
 https://www.youtube.com/watch?v=22VYNOtrcgM
 
@@ -162,7 +187,7 @@ https://www.youtube.com/watch?v=22VYNOtrcgM
 - CanvasGroup: renders children once
 - BackbufferCopy: Copy a region as texture for the shaders to use it
 
-## 3D nodes
+### 3D nodes
 
 
 
@@ -222,7 +247,7 @@ https://www.youtube.com/watch?v=22VYNOtrcgM
 
 
 
-## UI Nodes
+### UI Nodes
 
 https://www.youtube.com/watch?v=sPfoZy-cW-E
 
@@ -302,30 +327,5 @@ Common control attributes:
 	- Shortcut context:
 - Theme:
 
-## 3D Nodes
 
-
-
-
-
-## Shaders
-
-[Original Geometry]  -> Vertext Shaders -> [Modified Geometry] -> Rasterization ->  [Fragments] -> Fragment Shader -> [Final output]
-
-
-- Fragments are not called Pixels because they have lots of more information:
-	- Color
-	- Screen location
-	- UV coordinates
-	- Normals
-	- Light information
-	- ....
-
-In Godot, we can use either a shader node editor (`VisualShader`) or shader code (`Shader`).
-
-Create a resource, choose either `Shader` or `VisualShader`, drag the file as material of the target object.
-
-For VisualShader, a node editor will open with an output node.
-Input nodes have to be added by hand.
-Change the shader type (vertex, fragment...) with the dropdown selector.
 
