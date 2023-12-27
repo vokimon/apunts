@@ -121,7 +121,7 @@ Scale families: each is a circular sequence of intervals, you can transpose and 
 
 - Pentatonic: 5 notes
 	- 2 2 3 2 3: **Pentatonic** (5 Modes)
-- Heptatonic: 6 notes
+- Hexatonic: 6 notes
 	- 2 2 2 2 2 2: **Whole tone** (1 Mode)
 	- 3 2 1 1 3 2: **Blues:** (6 Modes)
 - Heptatonic: 7 notes
@@ -147,22 +147,22 @@ The interval is the tonal distance between two notes.
 Knowing the traditional names of the intervals is useful
 to understand chords names:
 
-|semitones | interval name |
-|---:|:-----|---|---|---|
-| 0  | unison |
-| 1  | second minor |
-| 2  | second major |
-| 3  | third minor |
-| 4  | third major |
-| 5  | perfect fourth |
-| 6  | augmented fourth, or diminished fifth or tritone |
-| 7  | perfect fifth |
-| 8  | minor sixth |
-| 9  | major sixth |
-| 10 | minor seventh |
-| 11 | major seventh |
-| 12 | octave |
-| 13 | minor nineth |
+|semitones | tradit. not. | interval name |
+|---:|- ---:|:--------|
+| 0  |   I | unison |
+| 1  |  ii | second minor |
+| 2  |  II | second major |
+| 3  | iii | third minor |
+| 4  | III | third major |
+| 5  |  IV | perfect fourth |
+| 6  | IV+ v | augmented fourth, or diminished fifth or tritone |
+| 7  |   V | perfect fifth |
+| 8  |  vi | minor sixth |
+| 9  |  VI | major sixth |
+| 10 | vii | minor seventh |
+| 11 | VII | major seventh |
+| 12 | VIII | octave |
+| 13 |  ix | minor nineth |
 
 Nmemotecnics for the nomenclature:
 
