@@ -1,6 +1,11 @@
 # Godot 4 (Game Engine)
 
-<https://www.youtube.com/watch?v=nAh_Kx5Zh5Q>
+::: link https://www.youtube.com/watch?v=nAh_Kx5Zh5Q
+	The ultimate introduction to Godot 4 
+
+::: link https://www.youtube.com/watch?v=9LaB6wbZepg&list=PLJ690cxlZTgL4i3sjTPRQTyrJ5TTkYJ2_&index=0
+	Playlist GDScript from scratch. From very scratch, even programming concepts,
+	but explains some of the differences
 
 ## The node tree
 
@@ -29,33 +34,78 @@
 	- Node2D: A 2D point bearing 2D transformations to its children
 	- Sprite2D: An 2D image (also a Node2d)
 
-## Scripting
+## Scripting (GDScript)
 
-- Scripts are bound to nodes.
+- Scripts are bound to nodes
 - Scripts can be done in several languages
 	- C, C++, GDScript (similar to python)
-	- `.gd` files, same name than node
-- Basic datatypes: int, float, bool, String, dict, Array[T]
+	- `.gd` files, same name than node (but turn node's `PascalCase` into script's `snake_case`)
+- GDScript is similar to Python (yupi) but it has many differences (oops)
+- Every script defines a class
+	- Functions, variables, constants... defined at the top level of the script will be class members (methods and properties)
+	- Unnamed class by default
+		- Refer a class: by a string with the script path `"res://path/to/myclass.gd"`
+		- The path can be also relative `"../utils/hex.gd"` `"./subitem.gd"`
+		- In other scripts: `var MyClass = preload("res://path/to/myclass")`
+		- Or you can load on demand: `var MyClass = load("res://path/to/myclass")`, but its recommended to use ExtensionLoader
+	- Named class, if specified:
+		- The line `class_name Myclass` to the script (top line, usually for clarity)
+		- The name will be available globally to other scripts
+		- Class names cannot be namespaced so be conservative on what you name as a class (damn Resource)
+	- Inheritance:
+		- Add the line `extends OtherClass` to specify the base class in the hierarchy
+		- Usually the superclass is a standard Node type or resource type
+		- You can use filepath for unnamed `extends "res://path/to/superclass"`
+		- Do not mess tree hierarchy (composition), with class hierarchy (inheritance)
+		- Multiple inheritance not allowed!! Party!!
+	- Variables (var) and constants (const)
+		- `var name: type = initialvalue` <- Static type variable
+		- `var name` <- Uninitialized vars point to `null` (Python `None`)
+		- `var name = initialvalue` <- Dynamic type variable
+		- `var name := value` - Static type variable, but type implied by the value type
+		- `const name: type = value` <- Constant
+		- Unlike Python, type binding is enforced in compilation and run time
+		- Dubt: Dynamic typing is just defaulting Static typing with Variant type??
+		- Editable member: 
+		- Properties (top level variables) decorated by `@export` will be available to the editor (also seralized)
+	- Functions, just like python but `def` -> `func`, indented blocks...
+		- Parameters and return value can be dynamically or statically binded.
+		- Returning a type binded value: `func f() -> int: `
+		- Type binding parameter: `f(param: int)`
+		- Optional parameters with default: `f(param = 100):`
+		- Combining both:  `func f(param: int = 100):`
+		- Or implied: `func f(param := 100):`
+		- You cannot use Python keyword parameter binding in calls :-(
+	- Godot editor integration:
+		- Editable properties
+			- By default, properties (top level `var`) are not available in the editor to edit
+			- Prepend the declaration with `@export`
+			- Types helps to better edit the object
+			- If no type specified, Variant will be used (user can select any type among available for the editor)
+			- Normally you don't want that but often (dictionaries) you have no option to type inner types
+		- Class icon: `@icon("res://path/to/myclass.svg")`
+			- Helps to identify better the nodes in the tree, and in the node type selector
+			- By default, takes superclass icon
+	- Inner classes
+		- Defined like in Python but using `extends` instead of parenthesis
+		- `class MyInnerClass extends InnerSuperClass:`
+
+- Basic datatypes: int, float, bool, String, dict, Array, Array[T], Null
 	- note that list and tuple -> Array
-	- Custom Types: Array2, Array3, Color, Angle...
-- Variables (var) and constants (const)
-	- `var name: type = initialvalue` <- Static type variable
-	- `var name = initialvalue` <- Dinamic type variable
-	- `const name: type = value` <- Constant
-- Functions, just like python but `def` -> `func`, indented blocks...
-	- You can type bind parameters like variables
-- Classes: Nodes
-	- a single file
-	- top level functions are methods
-	- top level variables are attributes/properties
-		- `@export` prefix on a property shows it as editable property
-		- properties (own and inherited) can be accessed with or without `self.`
+	- Custom Types: Vector2, Vector3, Color, Angle...
+	- accessing members:
+		- inherited and own members can be accessed as local variables
+			- but you can explicitly use `self.` (ie. when scoped out)
+			- when overriden you can use parent class member with `super.`
+	- By default unnamed, referenced by filename to others
+	- You can name them with 
+		
 	- `extends MyParentNode` defines inherintance
 	- builtin methods, starting with `_`
 		- `_ready`: run when node added to a tree
 		- `_process(delta)`: run every tick, delta is floating point seconds since last tick
 	- Referenced as `res://path/from/root/mynode.`
-- Getting other nodes:
+- Getting other nodes from the tree:
 	- `get_node("../scene/path")`
 	- `$../scene/path`
 	- `%UniqueNodeName` (You have to activate that for the node)
@@ -64,6 +114,67 @@
 	- `add_child(newKid)`
 - Debugging
 	- We can use `print` function
+- Intanciating a class
+	- 
+
+## Scripts
+
+GD Scripts work like classes.
+
+- Variables `var` and constants `const` are attributes of the class
+- Functions `func` are methods of the class
+- Adding a script is subclassing the type you selected for the node
+- You specify the base class at the top with `extends BaseClass`
+- Any `var`, you prefix with `@export` will be shown on the inspector and can be modified from outside.
+- You can also declare a `signal` you can emit at the class root, just name it `signal mysignalHappened`
+- Members (inherited or not)  are accessible without `this.` but you can explicitly use `this.member` if the name is shadowed by a local variable.
+- Chldren nodes can be accessed by prepending `$` to their name
+- Node types and types can be accessed by name (`Vector2D`, `Input`, `CollisionObject2D`...), no import required (also means, names must be unique)
+- Built-in methods starts with `_`
+
+### Typed variables
+
+If not specified, variables are untyped.
+You can enforce a type for a variable like:
+
+Unlike Python, type declaration are enforced if defined.
+In compile time and in run-time.
+
+Values can be casted to a type with the `myvalue as MyType` expresion
+
+TODO: Implications on conversions, reinterpretations...?
+Object of class can be casted as the subclass
+
+TODO: checked in runtime?
+
+
+## Collisions
+
+Collisions are segmented by physics layers
+so that each layer can be checked for collisions separatelly.
+
+`CollisionObject2D` base class has those attributes:
+
+- Layer: The layers where the object can be detected by others
+- Mask: The layers that the object will scan for collisions with others
+- Priority: The order in which the object will be notified. Useful to avoid race conditions.
+
+`RigidSolid2D`, besides physics of rigid solids, also defines signals like:
+
+- `body_entered/exited(body: Node)`
+
+
+## Tilesets
+
+Tilesets are tile based maps 
+
+Atlas: Definicion de los elementos individuales que hay en una imagen multi sprite.
+
+
+
+
+
+
 
 ## Input and actions
 
@@ -119,6 +230,65 @@ Create a resource, choose either `Shader` or `VisualShader`, drag the file as ma
 For VisualShader, a node editor will open with an output node.
 Input nodes have to be added by hand.
 Change the shader type (vertex, fragment...) with the dropdown selector.
+
+## Coroutines: await, yield
+
+```gdscript
+func myregularfunciton():
+	print("before")
+	mycorutine()
+	print("after")
+
+func mycorutine():
+	print("entering")
+	await get_tree().create_timer(1.0).timeout # timeout is a signal
+	print("exiting")
+# Outputs before-entering-after-exiting
+```
+`await` returns to the caller, the corutine is remumed once the signal is emited
+
+La funcion `yield()` (sin parametros) en cambio permite al llamador de la corutina
+controlar cuando continua ejecutandose.
+
+```gdscript
+func myregularfunciton():
+	print("before")
+	y = mycorutine()
+	print("after", )
+	y.resume("value for yield")
+
+func mycorutine():
+	print("entering")
+	value = yield()
+	print("received", value)
+
+# Outputs before-entering-after-exiting
+```
+
+
+
+
+
+
+## PackedScene
+
+https://gamedevacademy.org/packedscene-in-godot-complete-guide/
+
+A PackedScene is a tree of nodes stored as a file with extension `.tscn`
+(for "text-based scene", you can also use binaries) 
+
+```gdscript
+var subscene_pack = load("res://scenes/my_subscene.tscn") # could be any path in the project
+var subscene = subscene_pack.instance()
+subscene.attribute = "value # Changing original attributes if needed
+get_node("/root/Main").add_child(enemy_instance)
+```
+
+For scenes that are loaded often in the game is better to use `preload`
+Why? How?
+
+Doubt: for later instances is duplicate() faster than instantiate()?
+
 
 ## Node catalog
 
