@@ -854,8 +854,42 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#scripting" class="md-nav__link">
-    Scripting
+  <a href="#scripting-gdscript" class="md-nav__link">
+    Scripting (GDScript)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scripts" class="md-nav__link">
+    Scripts
+  </a>
+  
+    <nav class="md-nav" aria-label="Scripts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#typed-variables" class="md-nav__link">
+    Typed variables
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#collisions" class="md-nav__link">
+    Collisions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tilesets" class="md-nav__link">
+    Tilesets
   </a>
   
 </li>
@@ -884,6 +918,20 @@
         <li class="md-nav__item">
   <a href="#shaders" class="md-nav__link">
     Shaders
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#coroutines-await-yield" class="md-nav__link">
+    Coroutines: await, yield
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#packedscene" class="md-nav__link">
+    PackedScene
   </a>
   
 </li>
@@ -2006,8 +2054,42 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#scripting" class="md-nav__link">
-    Scripting
+  <a href="#scripting-gdscript" class="md-nav__link">
+    Scripting (GDScript)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scripts" class="md-nav__link">
+    Scripts
+  </a>
+  
+    <nav class="md-nav" aria-label="Scripts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#typed-variables" class="md-nav__link">
+    Typed variables
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#collisions" class="md-nav__link">
+    Collisions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tilesets" class="md-nav__link">
+    Tilesets
   </a>
   
 </li>
@@ -2036,6 +2118,20 @@
         <li class="md-nav__item">
   <a href="#shaders" class="md-nav__link">
     Shaders
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#coroutines-await-yield" class="md-nav__link">
+    Coroutines: await, yield
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#packedscene" class="md-nav__link">
+    PackedScene
   </a>
   
 </li>
@@ -2093,7 +2189,13 @@
 
 
 <h1 id="godot-4-game-engine">Godot 4 (Game Engine)</h1>
-<p><a href="https://www.youtube.com/watch?v=nAh_Kx5Zh5Q">https://www.youtube.com/watch?v=nAh_Kx5Zh5Q</a></p>
+<div class="link https://www.youtube.com/watch?v=nAh_Kx5Zh5Q">
+<p>The ultimate introduction to Godot 4 </p>
+</div>
+<div class="link https://www.youtube.com/watch?v=9LaB6wbZepg&amp;list=PLJ690cxlZTgL4i3sjTPRQTyrJ5TTkYJ2_&amp;index=0">
+<p>Playlist GDScript from scratch. From very scratch, even programming concepts,
+but explains some of the differences</p>
+</div>
 <h2 id="the-node-tree">The node tree</h2>
 <ul>
 <li>Game: Is composed by a tree of nodes.</li>
@@ -2131,60 +2233,171 @@
 </ul>
 </li>
 </ul>
-<h2 id="scripting">Scripting</h2>
+<h2 id="scripting-gdscript">Scripting (GDScript)</h2>
 <ul>
-<li>Scripts are bound to nodes.</li>
+<li>Scripts are bound to nodes</li>
 <li>Scripts can be done in several languages<ul>
 <li>C, C++, GDScript (similar to python)</li>
-<li><code>.gd</code> files, same name than node</li>
+<li><code>.gd</code> files, same name than node (but turn node's <code>PascalCase</code> into script's <code>snake_case</code>)</li>
 </ul>
 </li>
-<li>Basic datatypes: int, float, bool, String, dict, Array[T]<ul>
-<li>note that list and tuple -&gt; Array</li>
-<li>Custom Types: Array2, Array3, Color, Angle...</li>
+<li>GDScript is similar to Python (yupi) but it has many differences (oops)</li>
+<li>
+<p>Every script defines a class</p>
+<ul>
+<li>Functions, variables, constants... defined at the top level of the script will be class members (methods and properties)</li>
+<li>Unnamed class by default<ul>
+<li>Referred by the path to the script:<ul>
+<li>Absolute: <code>"res://path/to/myclass.gd"</code></li>
+<li>Relative <code>"../utils/hex.gd"</code> <code>"./subitem.gd"</code></li>
+</ul>
+</li>
+<li>In other scripts: <code>const MyClass = preload("res://path/to/myclass")</code></li>
+<li>On demand: <code>var MyClass = ResourceLoader.load('path.gd')</code><ul>
+<li>When you want to control in memory resources</li>
+<li>This does not work as expected: <code>var MyClass = load("res://path/to/myclass")</code> Use <code>ResourceLoader</code>. Why?</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Named class, if specified:<ul>
+<li>The line <code>class_name Myclass</code> to the script (top line, usually for clarity)</li>
+<li>The name will be available globally to other scripts</li>
+<li>Use it carefully, it polutes the global scope (no namespaces in GDScript)</li>
+</ul>
+</li>
+<li>Inheritance:<ul>
+<li>Add the line <code>extends OtherClass</code> to specify the base class in the hierarchy</li>
+<li>Usually the superclass is a standard Node type or resource type</li>
+<li>You can use filepath for unnamed <code>extends "res://path/to/superclass"</code></li>
+<li>Do not mess tree hierarchy (composition), with class hierarchy (inheritance)</li>
+<li>Multiple inheritance not allowed!! Party!!</li>
 </ul>
 </li>
 <li>Variables (var) and constants (const)<ul>
 <li><code>var name: type = initialvalue</code> &lt;- Static type variable</li>
-<li><code>var name = initialvalue</code> &lt;- Dinamic type variable</li>
+<li><code>var name</code> &lt;- Uninitialized vars point to <code>null</code> (Python <code>None</code>)</li>
+<li><code>var name = initialvalue</code> &lt;- Dynamic type variable</li>
+<li><code>var name := value</code> - Static type variable, but type implied by the value type</li>
 <li><code>const name: type = value</code> &lt;- Constant</li>
+<li>Unlike Python, type binding is enforced in compilation and run time</li>
+<li>Dubt: Dynamic typing is just defaulting Static typing with Variant type??</li>
+<li>Editable member: </li>
+<li>Properties (top level variables) decorated by <code>@export</code> will be available to the editor (also seralized)</li>
 </ul>
 </li>
 <li>Functions, just like python but <code>def</code> -&gt; <code>func</code>, indented blocks...<ul>
-<li>You can type bind parameters like variables</li>
+<li>Parameters and return value can be dynamically or statically binded.</li>
+<li>Returning a type binded value: <code>func f() -&gt; int:</code></li>
+<li>Type binding parameter: <code>f(param: int)</code></li>
+<li>Optional parameters with default: <code>f(param = 100):</code></li>
+<li>Combining both:  <code>func f(param: int = 100):</code></li>
+<li>Or implied: <code>func f(param := 100):</code></li>
+<li>You cannot use Python keyword parameter binding in calls :-(</li>
 </ul>
 </li>
-<li>Classes: Nodes<ul>
-<li>a single file</li>
-<li>top level functions are methods</li>
-<li>top level variables are attributes/properties<ul>
-<li><code>@export</code> prefix on a property shows it as editable property</li>
-<li>properties (own and inherited) can be accessed with or without <code>self.</code></li>
+<li>Godot editor integration:<ul>
+<li>Editable properties<ul>
+<li>By default, properties (top level <code>var</code>) are not available in the editor to edit</li>
+<li>Prepend the declaration with <code>@export</code></li>
+<li>Types helps to better edit the object</li>
+<li>If no type specified, Variant will be used (user can select any type among available for the editor)</li>
+<li>Normally you don't want that but often (dictionaries) you have no option to type inner types</li>
 </ul>
 </li>
-<li><code>extends MyParentNode</code> defines inherintance</li>
+<li>Class icon: <code>@icon("res://path/to/myclass.svg")</code><ul>
+<li>Helps to identify better the nodes in the tree, and in the node type selector</li>
+<li>By default, takes superclass icon</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Inner classes<ul>
+<li>Defined like in Python but using <code>extends</code> instead of parenthesis</li>
+<li><code>class MyInnerClass extends InnerSuperClass:</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Basic datatypes: int, float, bool, String, dict, Array, Array[T], Null</p>
+<ul>
+<li>note that list and tuple -&gt; Array</li>
+<li>Custom Types: Vector2, Vector3, Color, Angle...</li>
+<li>accessing members:<ul>
+<li>inherited and own members can be accessed as local variables<ul>
+<li>but you can explicitly use <code>self.</code> (ie. when scoped out)</li>
+<li>when overriden you can use parent class member with <code>super.</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>By default unnamed, referenced by filename to others</li>
+<li>
+<p>You can name them with </p>
+</li>
+<li>
+<p><code>extends MyParentNode</code> defines inherintance</p>
+</li>
 <li>builtin methods, starting with <code>_</code><ul>
 <li><code>_ready</code>: run when node added to a tree</li>
 <li><code>_process(delta)</code>: run every tick, delta is floating point seconds since last tick</li>
 </ul>
 </li>
 <li>Referenced as <code>res://path/from/root/mynode.</code></li>
-</ul>
-</li>
-<li>Getting other nodes:<ul>
+<li>Getting other nodes from the tree:</li>
 <li><code>get_node("../scene/path")</code></li>
 <li><code>$../scene/path</code></li>
 <li><code>%UniqueNodeName</code> (You have to activate that for the node)</li>
 <li><code>get_parent()</code> or <code>$".."</code></li>
 <li><code>add_sibbling(newSib)</code></li>
 <li><code>add_child(newKid)</code></li>
-</ul>
-</li>
-<li>Debugging<ul>
+<li>Debugging</li>
 <li>We can use <code>print</code> function</li>
+<li>Intanciating a class</li>
+<li></li>
 </ul>
 </li>
 </ul>
+<h2 id="scripts">Scripts</h2>
+<p>GD Scripts work like classes.</p>
+<ul>
+<li>Variables <code>var</code> and constants <code>const</code> are attributes of the class</li>
+<li>Functions <code>func</code> are methods of the class</li>
+<li>Adding a script is subclassing the type you selected for the node</li>
+<li>You specify the base class at the top with <code>extends BaseClass</code></li>
+<li>Any <code>var</code>, you prefix with <code>@export</code> will be shown on the inspector and can be modified from outside.</li>
+<li>You can also declare a <code>signal</code> you can emit at the class root, just name it <code>signal mysignalHappened</code></li>
+<li>Members (inherited or not)  are accessible without <code>this.</code> but you can explicitly use <code>this.member</code> if the name is shadowed by a local variable.</li>
+<li>Chldren nodes can be accessed by prepending <code>$</code> to their name</li>
+<li>Node types and types can be accessed by name (<code>Vector2D</code>, <code>Input</code>, <code>CollisionObject2D</code>...), no import required (also means, names must be unique)</li>
+<li>Built-in methods starts with <code>_</code></li>
+</ul>
+<h3 id="typed-variables">Typed variables</h3>
+<p>If not specified, variables are untyped.
+You can enforce a type for a variable like:</p>
+<p>Unlike Python, type declaration are enforced if defined.
+In compile time and in run-time.</p>
+<p>Values can be casted to a type with the <code>myvalue as MyType</code> expresion</p>
+<p>TODO: Implications on conversions, reinterpretations...?
+Object of class can be casted as the subclass</p>
+<p>TODO: checked in runtime?</p>
+<h2 id="collisions">Collisions</h2>
+<p>Collisions are segmented by physics layers
+so that each layer can be checked for collisions separatelly.</p>
+<p><code>CollisionObject2D</code> base class has those attributes:</p>
+<ul>
+<li>Layer: The layers where the object can be detected by others</li>
+<li>Mask: The layers that the object will scan for collisions with others</li>
+<li>Priority: The order in which the object will be notified. Useful to avoid race conditions.</li>
+</ul>
+<p><code>RigidSolid2D</code>, besides physics of rigid solids, also defines signals like:</p>
+<ul>
+<li><code>body_entered/exited(body: Node)</code></li>
+</ul>
+<h2 id="tilesets">Tilesets</h2>
+<p>Tilesets are tile based maps </p>
+<p>Atlas: Definicion de los elementos individuales que hay en una imagen multi sprite.</p>
 <h2 id="input-and-actions">Input and actions</h2>
 <ul>
 <li>Action: Interaction event that can be bound to device actions (mouse, joystick, keyboard...)<ul>
@@ -2249,6 +2462,46 @@
 <p>For VisualShader, a node editor will open with an output node.
 Input nodes have to be added by hand.
 Change the shader type (vertex, fragment...) with the dropdown selector.</p>
+<h2 id="coroutines-await-yield">Coroutines: await, yield</h2>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">func</span><span class="w"> </span><span class="n">myregularfunciton</span><span class="p">():</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;before&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="n">mycorutine</span><span class="p">()</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;after&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="k">func</span><span class="w"> </span><span class="n">mycorutine</span><span class="p">():</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;entering&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="n">await</span><span class="w"> </span><span class="n">get_tree</span><span class="p">()</span><span class="o">.</span><span class="n">create_timer</span><span class="p">(</span><span class="mf">1.0</span><span class="p">)</span><span class="o">.</span><span class="n">timeout</span><span class="w"> </span><span class="c1"># timeout is a signal</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;exiting&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="c1"># Outputs before-entering-after-exiting</span>
+</code></pre></div>
+<code>await</code> returns to the caller, the corutine is remumed once the signal is emited</p>
+<p>La funcion <code>yield()</code> (sin parametros) en cambio permite al llamador de la corutina
+controlar cuando continua ejecutandose.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">func</span><span class="w"> </span><span class="n">myregularfunciton</span><span class="p">():</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;before&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mycorutine</span><span class="p">()</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;after&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">)</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="n">y</span><span class="o">.</span><span class="n">resume</span><span class="p">(</span><span class="s2">&quot;value for yield&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="k">func</span><span class="w"> </span><span class="n">mycorutine</span><span class="p">():</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;entering&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">yield</span><span class="p">()</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;received&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">value</span><span class="p">)</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="c1"># Outputs before-entering-after-exiting</span>
+</code></pre></div>
+<h2 id="packedscene">PackedScene</h2>
+<p>https://gamedevacademy.org/packedscene-in-godot-complete-guide/</p>
+<p>A PackedScene is a tree of nodes stored as a file with extension <code>.tscn</code>
+(for "text-based scene", you can also use binaries) </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">var</span><span class="w"> </span><span class="n">subscene_pack</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">load</span><span class="p">(</span><span class="s2">&quot;res://scenes/my_subscene.tscn&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1"># could be any path in the project</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">var</span><span class="w"> </span><span class="n">subscene</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">subscene_pack</span><span class="o">.</span><span class="n">instance</span><span class="p">()</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">subscene</span><span class="o">.</span><span class="n">attribute</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;value # Changing original attributes if needed</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">get_node</span><span class="p">(</span><span class="s2">&quot;/root/Main&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">add_child</span><span class="p">(</span><span class="n">enemy_instance</span><span class="p">)</span>
+</code></pre></div>
+<p>For scenes that are loaded often in the game is better to use <code>preload</code>
+Why? How?</p>
+<p>Doubt: for later instances is duplicate() faster than instantiate()?</p>
 <h2 id="node-catalog">Node catalog</h2>
 <h3 id="2d-nodes">2D Nodes</h3>
 <p>https://www.youtube.com/watch?v=22VYNOtrcgM</p>
