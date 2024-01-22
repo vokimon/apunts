@@ -2370,6 +2370,7 @@ fk+1(n) = 1/2 * ( fk(n) * 3^(odd(fk(n))) + odd(fk(n)) )
 <p>For compactness, we will omit (n), so fk = fk(n)</p>
 <div class="highlight"><pre><span></span><code>fk+1 = (3^Ok * fk + Ok) / 2     # Ok exponential form
 fk+1 = (fk + 2*Ok*fk  + Ok) / 2 # Ok factor form
+fk+1 = (fk + Ok*(2*fk  + 1)) / 2 # Binary shift and add form
 </code></pre></div>
 <h3 id="additivesubstractive-view">Additive/Substractive view</h3>
 <div class="highlight"><pre><span></span><code>fk+1 - fk =

@@ -854,9 +854,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#scripting-gdscript" class="md-nav__link">
-    Scripting (GDScript)
+  <a href="#scripting-gdscript-for-pythoners" class="md-nav__link">
+    Scripting (GDScript) for Pythoners
   </a>
+  
+    <nav class="md-nav" aria-label="Scripting (GDScript) for Pythoners">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#languages-in-godot" class="md-nav__link">
+    Languages in Godot
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gdscript-vs-python" class="md-nav__link">
+    GDScript vs Python
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2054,9 +2074,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#scripting-gdscript" class="md-nav__link">
-    Scripting (GDScript)
+  <a href="#scripting-gdscript-for-pythoners" class="md-nav__link">
+    Scripting (GDScript) for Pythoners
   </a>
+  
+    <nav class="md-nav" aria-label="Scripting (GDScript) for Pythoners">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#languages-in-godot" class="md-nav__link">
+    Languages in Godot
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gdscript-vs-python" class="md-nav__link">
+    GDScript vs Python
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2232,46 +2272,87 @@ but explains some of the differences</p>
 <li>Sprite2D: An 2D image (also a Node2d)</li>
 </ul>
 </li>
+<li>Node can be bound to a script<ul>
+<li>Normally you bound to a type</li>
+<li>When you bind a script you are defining a new type by extending the asigned one</li>
 </ul>
-<h2 id="scripting-gdscript">Scripting (GDScript)</h2>
+</li>
+</ul>
+<h2 id="scripting-gdscript-for-pythoners">Scripting (GDScript) for Pythoners</h2>
+<h3 id="languages-in-godot">Languages in Godot</h3>
 <ul>
-<li>Scripts are bound to nodes</li>
-<li>Scripts can be done in several languages<ul>
-<li>C, C++, GDScript (similar to python)</li>
-<li><code>.gd</code> files, same name than node (but turn node's <code>PascalCase</code> into script's <code>snake_case</code>)</li>
+<li>Scripts in Godot may be written in several languages<ul>
+<li>Godot provides a C interface for any language to interact with</li>
 </ul>
 </li>
-<li>GDScript is similar to Python (yupi) but it has many differences (oops)</li>
-<li>
-<p>Every script defines a class</p>
+<li>Indeed you can use that interface to write extensions directly in C++ or C<ul>
+<li><a href="https://docs.godotengine.org/en/3.5/tutorials/scripting/gdnative/gdnative_c_example.html">C</a></li>
+<li><a href="https://docs.godotengine.org/en/3.5/tutorials/scripting/gdnative/gdnative_cpp_example.html">C++</a></li>
+<li>But there is no Editor integration AFAIK so they are used mostly to write native extensions later integrated into a project</li>
+</ul>
+</li>
+<li>Officially suported languages: GDScript (own) and C#</li>
+<li>C#<ul>
+<li>Welcome path to developers coming from widely used game engines like Unity and Unreal</li>
+<li>Also because M$ donates to the port</li>
+<li>Problems with Garbage Collector</li>
+</ul>
+</li>
+<li>GDScript is similar to Python (yahoo) but it has many differences (oops)<ul>
+<li>Unlike Python, no Global Thread Lock!! You have real Multithreading!</li>
+<li>Like Python: Ref counted object instead Garbage Collection</li>
+<li>Instead quack typing, uses <strong>gradual typing</strong>: Some variables are statically typed others dynamically typed</li>
+</ul>
+</li>
+<li><a href="https://github.com/Vivraan/godot-lang-support">Many others</a> comunity driven<ul>
+<li><a href="https://github.com/touilleMan/godot-python">godot-python</a><ul>
+<li>Currently (2023-01) rewritting it for Godot 4</li>
+<li>Unmature: Even in Godot 3, limitations and flaws</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>So, the recommended path for pythoners is to use GDScript</li>
+<li>False friends: Whenever you jump across two "similar" languanges you start fast but end getting stuck in your falses expentances<ul>
+<li>ie. Javascript coming from C about var scoping, casting...</li>
+</ul>
+</li>
+</ul>
+<h3 id="gdscript-vs-python">GDScript vs Python</h3>
 <ul>
-<li>Functions, variables, constants... defined at the top level of the script will be class members (methods and properties)</li>
-<li>Unnamed class by default<ul>
-<li>Referred by the path to the script:<ul>
-<li>Absolute: <code>"res://path/to/myclass.gd"</code></li>
-<li>Relative <code>"../utils/hex.gd"</code> <code>"./subitem.gd"</code></li>
-</ul>
-</li>
-<li>In other scripts: <code>const MyClass = preload("res://path/to/myclass")</code></li>
-<li>On demand: <code>var MyClass = ResourceLoader.load('path.gd')</code><ul>
-<li>When you want to control in memory resources</li>
-<li>This does not work as expected: <code>var MyClass = load("res://path/to/myclass")</code> Use <code>ResourceLoader</code>. Why?</li>
+<li>Every script defines a class<ul>
+<li>Most tutorials i saw avoid explaining this up front<ul>
+<li>they consider classes are an advanced topic for non-programmers</li>
+<li>you have them in the first page, so you have to deal with them</li>
+<li>you come from Python, so, come on</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>Named class, if specified:<ul>
-<li>The line <code>class_name Myclass</code> to the script (top line, usually for clarity)</li>
-<li>The name will be available globally to other scripts</li>
-<li>Use it carefully, it polutes the global scope (no namespaces in GDScript)</li>
+<li>Any function, variable, constant... defined at the top level of the script will be class members (methods and properties)<ul>
+<li>Unlike Python you don't need to specify <code>class MyClass:</code> and have all members indented inside</li>
+<li>Indeed if you do, you will be defining what in Python is an inner class (see below)</li>
+</ul>
+</li>
+<li>Classes are by default unnamed, they are refered by their script path<ul>
+<li><code>const MyClass = preload("./path/to/myscript.gd")</code></li>
+<li>You could explicitly name them adding this clause: <code>class_name MyClass</code></li>
+<li>Then the symbol is globally accessible</li>
+<li>But there are no namespaces so explicit names crowds the global scope</li>
+<li>TOCHECK: Why autoload modules? Has the modules be loaded by any other to be available?</li>
+<li>Still, not that far from import clauses in other languages (javascript)</li>
 </ul>
 </li>
 <li>Inheritance:<ul>
-<li>Add the line <code>extends OtherClass</code> to specify the base class in the hierarchy</li>
+<li>Add the line <code>extends OtherClass</code> to specify the base class in the hierarchy<ul>
+<li>This is done from the editor, you can change the default superclass from the dialog</li>
+</ul>
+</li>
 <li>Usually the superclass is a standard Node type or resource type</li>
 <li>You can use filepath for unnamed <code>extends "res://path/to/superclass"</code></li>
-<li>Do not mess tree hierarchy (composition), with class hierarchy (inheritance)</li>
-<li>Multiple inheritance not allowed!! Party!!</li>
+<li>Tree/scene hierarchy (composition) vs. class hierarchy (inheritance)</li>
+<li>By default, <code>extends RefCounted</code>, not <code>Object</code> like in Python.</li>
+<li>Multiple inheritance not allowed!! Party!! Use composition!</li>
 </ul>
 </li>
 <li>Variables (var) and constants (const)<ul>
@@ -2282,8 +2363,6 @@ but explains some of the differences</p>
 <li><code>const name: type = value</code> &lt;- Constant</li>
 <li>Unlike Python, type binding is enforced in compilation and run time</li>
 <li>Dubt: Dynamic typing is just defaulting Static typing with Variant type??</li>
-<li>Editable member: </li>
-<li>Properties (top level variables) decorated by <code>@export</code> will be available to the editor (also seralized)</li>
 </ul>
 </li>
 <li>Functions, just like python but <code>def</code> -&gt; <code>func</code>, indented blocks...<ul>
@@ -2294,9 +2373,38 @@ but explains some of the differences</p>
 <li>Combining both:  <code>func f(param: int = 100):</code></li>
 <li>Or implied: <code>func f(param := 100):</code></li>
 <li>You cannot use Python keyword parameter binding in calls :-(</li>
+<li>A method can refer attributes and other methods (own or inherited) </li>
+<li>Methods can use attribute or other methods directly (no need to prepend <code>self.</code>)</li>
 </ul>
 </li>
-<li>Godot editor integration:<ul>
+<li>
+<p>Refering script classes:</p>
+<ul>
+<li>Script classes are unamed by default<ul>
+<li>Referred by the path to the script:<ul>
+<li>Absolute: <code>"res://path/to/myclass.gd"</code></li>
+<li>Relative <code>"../utils/hex.gd"</code> or <code>"./subitem.gd"</code></li>
+</ul>
+</li>
+<li>In other scripts: <code>const MyClass = preload("res://path/to/my_class.gd")</code></li>
+<li>On demand: <code>var MyClass = ResourceLoader.load('./my_class.gd')</code><ul>
+<li>When you want to control in memory resources</li>
+<li>Global <code>load</code> function but this does not work as expected: <code>var MyClass = load("res://path/to/myclass")</code> Use <code>ResourceLoader</code>. Why?</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Named class, if specified:<ul>
+<li>The line <code>class_name Myclass</code> to the script (top line, usually for clarity)</li>
+<li>The name will be available globally to other scripts</li>
+<li>Use it carefully, it polutes the global scope (no namespaces in GDScript)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Godot editor integration:</p>
+<ul>
 <li>Editable properties<ul>
 <li>By default, properties (top level <code>var</code>) are not available in the editor to edit</li>
 <li>Prepend the declaration with <code>@export</code></li>
@@ -2312,11 +2420,29 @@ but explains some of the differences</p>
 </li>
 </ul>
 </li>
+<li>Instanciating:<ul>
+<li><code>var myinstance: MyClass = MyClass.new(params)</code></li>
+<li><code>var myinstance := MyClass.new(params)</code> ?? Is this working?</li>
+</ul>
+</li>
+<li>Overrides<ul>
+<li>Godot overridable functions have a prefixed <code>_</code></li>
+<li>TOSOLVE: Is this a godot only thing or a GDScript thing</li>
+<li>Call same function from parent with <code>super(params)</code></li>
+<li>Call other function from parent when overriden with <code>super.otherfunction(params)</code></li>
+</ul>
+</li>
 <li>Inner classes<ul>
 <li>Defined like in Python but using <code>extends</code> instead of parenthesis</li>
 <li><code>class MyInnerClass extends InnerSuperClass:</code></li>
+<li>Referring from other classes if unnamed: <code>extends "./script.gd".MyInnerClass</code></li>
 </ul>
 </li>
+<li>
+<p>Dynamic type checking:</p>
+<ul>
+<li><code>myvar is MyClass</code> checks is instance (same class or subclass)</li>
+<li>warning: <code>typeof</code>, just says it is a <code>TYPE_OBJECT</code>, not the class</li>
 </ul>
 </li>
 <li>
@@ -2332,29 +2458,28 @@ but explains some of the differences</p>
 </li>
 </ul>
 </li>
-<li>By default unnamed, referenced by filename to others</li>
-<li>
-<p>You can name them with </p>
-</li>
-<li>
-<p><code>extends MyParentNode</code> defines inherintance</p>
-</li>
 <li>builtin methods, starting with <code>_</code><ul>
 <li><code>_ready</code>: run when node added to a tree</li>
 <li><code>_process(delta)</code>: run every tick, delta is floating point seconds since last tick</li>
 </ul>
 </li>
 <li>Referenced as <code>res://path/from/root/mynode.</code></li>
-<li>Getting other nodes from the tree:</li>
+</ul>
+</li>
+<li>Getting other nodes from the tree:<ul>
 <li><code>get_node("../scene/path")</code></li>
 <li><code>$../scene/path</code></li>
 <li><code>%UniqueNodeName</code> (You have to activate that for the node)</li>
 <li><code>get_parent()</code> or <code>$".."</code></li>
 <li><code>add_sibbling(newSib)</code></li>
 <li><code>add_child(newKid)</code></li>
-<li>Debugging</li>
+</ul>
+</li>
+<li>Debugging<ul>
 <li>We can use <code>print</code> function</li>
-<li>Intanciating a class</li>
+</ul>
+</li>
+<li>Intanciating a class<ul>
 <li></li>
 </ul>
 </li>
