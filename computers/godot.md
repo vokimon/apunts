@@ -33,75 +33,134 @@
 - Some useful node types:
 	- Node2D: A 2D point bearing 2D transformations to its children
 	- Sprite2D: An 2D image (also a Node2d)
+- Node can be bound to a script
+	- Normally you bound to a type
+	- When you bind a script you are defining a new type by extending the asigned one
 
-## Scripting (GDScript)
+## Scripting (GDScript) for Pythoners
 
-- Scripts are bound to nodes
-- Scripts can be done in several languages
-	- C, C++, GDScript (similar to python)
-	- `.gd` files, same name than node (but turn node's `PascalCase` into script's `snake_case`)
-- GDScript is similar to Python (yupi) but it has many differences (oops)
+### Languages in Godot
+
+- Scripts in Godot may be written in several languages
+	- Godot provides a C interface for any language to interact with
+- Indeed you can use that interface to write extensions directly in C++ or C
+	- [C](https://docs.godotengine.org/en/3.5/tutorials/scripting/gdnative/gdnative_c_example.html)
+	  [C++](https://docs.godotengine.org/en/3.5/tutorials/scripting/gdnative/gdnative_cpp_example.html)
+	  But there is no Editor integration AFAIK so they are used mostly to write native extensions later integrated into a project
+- Officially suported languages: GDScript (own) and C#
+- C#
+	- Welcome path to developers coming from widely used game engines like Unity and Unreal
+	- Also because M$ donates to the port
+	- Problems with Garbage Collector
+- GDScript is similar to Python (yahoo) but it has many differences (oops)
+	- Unlike Python, no Global Thread Lock!! You have real Multithreading!
+	- Like Python: Ref counted object instead Garbage Collection
+	- Instead quack typing, uses **gradual typing**: Some variables are statically typed others dynamically typed
+- [Many others](https://github.com/Vivraan/godot-lang-support) comunity driven
+	- [godot-python](https://github.com/touilleMan/godot-python)
+		- Currently (2023-01) rewritting it for Godot 4
+		- Unmature: Even in Godot 3, limitations and flaws
+- So, the recommended path for pythoners is to use GDScript
+- False friends: Whenever you jump across two "similar" languanges you start fast but end getting stuck in your falses expentances
+	- ie. Javascript coming from C about var scoping, casting...
+
+### GDScript (vs Python)
+
 - Every script defines a class
-	- Functions, variables, constants... defined at the top level of the script will be class members (methods and properties)
-	- Unnamed class by default
-		- Refer a class: by a string with the script path `"res://path/to/myclass.gd"`
-		- The path can be also relative `"../utils/hex.gd"` `"./subitem.gd"`
-		- In other scripts: `var MyClass = preload("res://path/to/myclass")`
-		- Or you can load on demand: `var MyClass = load("res://path/to/myclass")`, but its recommended to use ExtensionLoader
+	- Most tutorials i saw avoid explaining this up front
+		- they consider classes are an advanced topic for non-programmers
+		- you have them in the first page, so you have to deal with them
+		- you come from Python, so, come on
+- Any function, variable, constant... defined at the top level of the script will be class members (methods and properties)
+	- Unlike Python you don't need to specify `class MyClass:` and have all members indented inside
+	- Indeed if you do, you will be defining what in Python is an inner class (see below)
+- Classes are by default unnamed, they are refered by their script path
+	- `const MyClass = preload("./path/to/myscript.gd")`
+	- You could explicitly name them adding this clause: `class_name MyClass`
+	- Then the symbol is globally accessible
+	- But there are no namespaces so explicit names crowds the global scope
+	- TOCHECK: Why autoload modules? Has the modules be loaded by any other to be available? -> They make an instance not a class globally available
+	- Still, not that far from import clauses in other languages (javascript)
+- Inheritance:
+	- Add the line `extends OtherClass` to specify the base class in the hierarchy
+		- This is done from the editor, you can change the default superclass from the dialog
+	- Usually the superclass is a standard Node type or resource type
+	- You can use filepath for unnamed `extends "res://path/to/superclass"`
+	- Tree/scene hierarchy (composition) vs. class hierarchy (inheritance)
+	- By default, `extends RefCounted`, not `Object` like in Python.
+	- Multiple inheritance not allowed!! Party!! Use composition!
+- Variables (var) and constants (const)
+	- `var name: type = initialvalue` <- Static type variable
+	- `var name` <- Uninitialized vars point to `null` (Python `None`)
+	- `var name = initialvalue` <- Dynamic type variable
+	- `var name := value` - Static type variable, but type implied by the value type
+	- `const name: type = value` <- Constant
+	- Unlike Python, type binding is enforced in compilation and run time
+	- Dubt: Dynamic typing is just defaulting Static typing with Variant type??
+- Functions, just like python but `def` -> `func`, indented blocks...
+	- Parameters and return value can be dynamically or statically binded.
+	- Returning a type binded value: `func f() -> int: `
+	- Type binding parameter: `f(param: int)`
+	- Optional parameters with default: `f(param = 100):`
+	- Combining both:  `func f(param: int = 100):`
+	- Or implied: `func f(param := 100):`
+	- You cannot use Python keyword parameter binding in calls :-(
+	- A method can refer attributes and other methods (own or inherited) 
+	- Methods can use attribute or other methods directly (no need to prepend `self.`)
+- Refering script classes:
+	- Script classes are unamed by default
+		- Referred by the path to the script:
+			- Absolute: `"res://path/to/myclass.gd"`
+			- Relative `"../utils/hex.gd"` or `"./subitem.gd"`
+		- In other scripts: `const MyClass = preload("res://path/to/my_class.gd")`
+		- On demand: `var MyClass = ResourceLoader.load('./my_class.gd')`
+			- When you want to control in memory resources
+			- Global `load` function but this does not work as expected: `var MyClass = load("res://path/to/myclass")` Use `ResourceLoader`. Why?
 	- Named class, if specified:
 		- The line `class_name Myclass` to the script (top line, usually for clarity)
 		- The name will be available globally to other scripts
-		- Class names cannot be namespaced so be conservative on what you name as a class (damn Resource)
-	- Inheritance:
-		- Add the line `extends OtherClass` to specify the base class in the hierarchy
-		- Usually the superclass is a standard Node type or resource type
-		- You can use filepath for unnamed `extends "res://path/to/superclass"`
-		- Do not mess tree hierarchy (composition), with class hierarchy (inheritance)
-		- Multiple inheritance not allowed!! Party!!
-	- Variables (var) and constants (const)
-		- `var name: type = initialvalue` <- Static type variable
-		- `var name` <- Uninitialized vars point to `null` (Python `None`)
-		- `var name = initialvalue` <- Dynamic type variable
-		- `var name := value` - Static type variable, but type implied by the value type
-		- `const name: type = value` <- Constant
-		- Unlike Python, type binding is enforced in compilation and run time
-		- Dubt: Dynamic typing is just defaulting Static typing with Variant type??
-		- Editable member: 
-		- Properties (top level variables) decorated by `@export` will be available to the editor (also seralized)
-	- Functions, just like python but `def` -> `func`, indented blocks...
-		- Parameters and return value can be dynamically or statically binded.
-		- Returning a type binded value: `func f() -> int: `
-		- Type binding parameter: `f(param: int)`
-		- Optional parameters with default: `f(param = 100):`
-		- Combining both:  `func f(param: int = 100):`
-		- Or implied: `func f(param := 100):`
-		- You cannot use Python keyword parameter binding in calls :-(
-	- Godot editor integration:
-		- Editable properties
-			- By default, properties (top level `var`) are not available in the editor to edit
-			- Prepend the declaration with `@export`
-			- Types helps to better edit the object
-			- If no type specified, Variant will be used (user can select any type among available for the editor)
-			- Normally you don't want that but often (dictionaries) you have no option to type inner types
-		- Class icon: `@icon("res://path/to/myclass.svg")`
-			- Helps to identify better the nodes in the tree, and in the node type selector
-			- By default, takes superclass icon
-	- Inner classes
-		- Defined like in Python but using `extends` instead of parenthesis
-		- `class MyInnerClass extends InnerSuperClass:`
-
+		- Use it carefully, it polutes the global scope (no namespaces in GDScript)
+	
+- Godot editor integration:
+	- Editable properties
+		- By default, properties (top level `var`) are not available in the editor to edit
+		- Prepend the declaration with `@export`
+		- Types helps to better edit the object
+		- If no type specified, Variant will be used (user can select any type among available for the editor)
+		- Normally you don't want that but often (dictionaries) you have no option to type inner types
+		- `@export_*` variations to specify how to edit the attribute
+	- Class icon: `@icon("res://path/to/myclass.svg")`
+		- Helps to identify better the nodes in the tree, and in the node type selector
+		- By default, takes superclass icon
+	- `@onready`: Prefixed to a var to delay its initialization from `_init` to `_ready`
+	- `@rpc`: Prefixed to a func enables it for remote call (multiplayer)
+	- `@static_unload`: to a script deinstantiate its variables as soon as all reference are removed, instantiates again if a new reference appear.
+	- `@tool`: to a script to make it run by the editor
+- Instanciating:
+	- `var myinstance: MyClass = MyClass.new(params)`
+	- `var myinstance := MyClass.new(params)` ?? Is this working?
+- Overrides
+	- Godot overridable functions have a prefixed `_`
+	- TOSOLVE: Is this a godot only thing or a GDScript thing
+	- Call same function from parent with `super(params)`
+	- Unlike Python, super() is not the receiver object but the overriden function itself
+	- Call other function from parent when overriden with `super.otherfunction(params)`
+- Inner classes
+	- Defined like in Python but using `extends` instead of parenthesis
+	- `class MyInnerClass extends InnerSuperClass:`
+	- Referring from other classes if unnamed: `extends "./script.gd".MyInnerClass`
+- Dynamic type checking:
+	- `myvar is MyClass` checks is instance (same class or subclass)
+	- warning: `typeof(x)`, just says it is a `TYPE_OBJECT`, not the class
 - Basic datatypes: int, float, bool, String, dict, Array, Array[T], Null
 	- note that list and tuple -> Array
 	- Custom Types: Vector2, Vector3, Color, Angle...
-	- accessing members:
-		- inherited and own members can be accessed as local variables
-			- but you can explicitly use `self.` (ie. when scoped out)
-			- when overriden you can use parent class member with `super.`
-	- By default unnamed, referenced by filename to others
-	- You can name them with 
-		
-	- `extends MyParentNode` defines inherintance
+- accessing members:
+	- inherited and own members can be accessed as local variables
+		- but you can explicitly use `self.` (ie. when scoped out)
+		- when overriden you can use parent class member with `super.`
 	- builtin methods, starting with `_`
+		- `_init`: Constructor
 		- `_ready`: run when node added to a tree
 		- `_process(delta)`: run every tick, delta is floating point seconds since last tick
 	- Referenced as `res://path/from/root/mynode.`
@@ -114,8 +173,31 @@
 	- `add_child(newKid)`
 - Debugging
 	- We can use `print` function
-- Intanciating a class
-	- 
+
+### Lifecycle
+
+- `_init` called from root to leaves order within the tree
+- `_ready` called from leaves to root within the tree (your children should be available)
+
+
+### Encapsulating attributes
+
+- define accessors to be used when accessing attributes
+- keeps syntax nice for class users
+
+```gdscript
+var my_mar := 100:
+	set(value):
+		do whatever with value
+	get:
+		return the value
+var other_var setget mysetter, mygetter # both are functions in class
+var other_var setget mysetter # both are functions in class
+```
+- Pitfall: they won't be used from class code!!
+	- They require the dot notations to activate `my_attribute = 100` won't trigger accessor
+	- You must use `self.my_attribute = 100` for that
+	- This enables the class access to the inner representation so it can be used for encapsulation
 
 ## Scripts
 
@@ -127,9 +209,10 @@ GD Scripts work like classes.
 - You specify the base class at the top with `extends BaseClass`
 - Any `var`, you prefix with `@export` will be shown on the inspector and can be modified from outside.
 - You can also declare a `signal` you can emit at the class root, just name it `signal mysignalHappened`
-- Members (inherited or not)  are accessible without `this.` but you can explicitly use `this.member` if the name is shadowed by a local variable.
-- Chldren nodes can be accessed by prepending `$` to their name
+- Members (inherited or not)  are accessible without `self.` but you can explicitly use `self.member` if the name is shadowed by a local variable.
+- Children nodes can be accessed by prepending `$` to their name
 - Node types and types can be accessed by name (`Vector2D`, `Input`, `CollisionObject2D`...), no import required (also means, names must be unique)
+- Also scripts with `classname MyClass` directive will be available by name
 - Built-in methods starts with `_`
 
 ### Typed variables
@@ -204,7 +287,7 @@ Atlas: Definicion de los elementos individuales que hay en una imagen multi spri
 - CollitionBody3D:
 	- Defines a list of CollitionPolygon or PolygonShape to check collisions
 	- StaticBody2D: A moveable body that other bodies collides with (static)
-	- RigidBody2D: Moving body that moves according phisics (projectils...)
+	- RigidBody2D: Moving body that moves according physics (projectils...)
 	- CharacterBody2D: Moves controlled by code (players, enemies...)
 		- attribute velocity (Vector2D)
 		- `move_and_slide()` Updates position accordint to velocity avoiding getting into static body areas by slipping on the border
@@ -247,6 +330,10 @@ func mycorutine():
 ```
 `await` returns to the caller, the corutine is remumed once the signal is emited
 
+Note: `yield` is Godot 3.x. Deprecated in Godot 4.x
+
+Doubt: how to map yield functionality to await?
+
 La funcion `yield()` (sin parametros) en cambio permite al llamador de la corutina
 controlar cuando continua ejecutandose.
 
@@ -265,11 +352,6 @@ func mycorutine():
 # Outputs before-entering-after-exiting
 ```
 
-
-
-
-
-
 ## PackedScene
 
 https://gamedevacademy.org/packedscene-in-godot-complete-guide/
@@ -284,10 +366,136 @@ subscene.attribute = "value # Changing original attributes if needed
 get_node("/root/Main").add_child(enemy_instance)
 ```
 
-For scenes that are loaded often in the game is better to use `preload`
-Why? How?
+Instantiating PackedScene returns the root node.
+
+Pitfall: When you add a script to the root node of a scene, you are creating a class.
+When instanciating that class with `new()` the node will be created but the children in the scene won't.
+How to encapsulate a bunch of nodes in an abstract class?
+
+- Creating the children programmatically
+- ??? 
 
 Doubt: for later instances is duplicate() faster than instantiate()?
+
+
+## Texturas
+
+- Texture2D
+	- GradientTexture2D: Values are obtained from a gradient
+	- GradientTexture1D: Like 2D one but only provides variation in one coordinate
+	- NoiseTexture2D: Values are obtained from a noise generator (See Noise)
+	- ImageTexture: Values are taken from an Image
+	- MeshTexture: Still an image but aplies to meshes?? https://gamedevacademy.org/meshtexture-in-godot-complete-guide/
+	- PortableCompressedTexture2D
+	- CompressedTexture2D: loaded from a ctex file
+	- CanvasTexture: Physical properties (difuse, specular, normal...) for 2D objects (CanvasItem) with Light2D (Use Materials for 3D)
+		- Should be a Material2D since it has several Textures inside
+		- `difusse_texture`, `normal_texture`, `specular_texture`. Specular and Diffuse have color. 
+	- ViewPortTexture: Sets a ViewPort as the source of dynamic data for the texture
+	- CameraTexture: Maps image from a camera (not godot camera, but a physical camera device)
+	- CurveTexture: Curve stored as a 1D sequence of data (A sampled 1D function)
+	- CurveTextureXYZ: Like CurveTexture but uses each channel for a different curve
+	- AtlasTexture: Texture cuted from another Texture2D (its atlas) by defining a region and a margin.
+		- Reusing the same atlas for different textures optimizes video memory
+	- AnimatedTexture: Deprecated
+- TextureLayered: N layers of textures of the same size
+	- CubeMap: Environment mapping for reflections each layer for a side of an covering cube. See ReflectionProbe
+	- CubeMapArray: CubeMaps packed in a single texture for faster GPU upload and caching
+	- Texture2DArray: Array of independent textures of same size and mipmap for GPU upload and caching efficiency
+- Texture3D: Line N layers but enables interpolation between layers
+	- CompressedTexture3D, ImageTexture3D, NoiseTexture3D, PlaceholderTexture3D, Texture3DRD
+- GLFTTexture: Texture from standard file format (represents the object, not the texture you may use) (usually written glFT) for physics based shading
+- PlaceholderTextureXXX: No textures (Error or no need in a client server environ)
+
+## Physics
+
+### CollisionBody2D/3D (Volume)
+
+Defines a volume as being ocuppied by the object.
+
+Holds Shape3D (Resources) as children that will determine its volume for collisions.
+
+- Shape holders:
+- Shapes:
+
+Collision detection is splitted on layers. One object can define:
+
+- Collision Layers: Layers where other objects can find this object
+- Collision Mask: Layers the objects looks for collisions with other objects
+
+Having a volume:
+
+- They can receive input events from cameras (`_input(camera, event, normal, shape_idx)`).
+- They receive `mouse_enter/exit()`
+- They emit homonimal signals without the `_`
+
+
+### RigidBody2D/3D (Dynamics)
+
+https://www.youtube.com/watch?v=XSFkAzXQSWE
+
+A RigidBody3D is not controled by the kinetics but by the dynamics.
+Kinetics describe an scene by setting the initial position and orientations,
+and giving a set of velocities and angular velociites, computes the new positions and orientations.
+Dynamics considers forces (including gravity) and torques
+and given initial position, orientation, velocities and angular velocites
+derives the evolution.
+
+Because the physics engine computes them,
+setting `position`, `rotation`, `global_position`, `liniar_velocity` and `angular_velocity`
+has only sense for the initial conditions.
+**Beyond that any write we do will be overriden by the physics engine.**
+
+The controlling parameters are:
+
+- mass (kg)
+- gravity (factor to the project one in m/s²)
+- inertia (Vector3(kg)) how hard it is to make it spin in each direction (if zero computed from mass and shape)
+- `constant_force`
+- `constant_torque`
+- `linear_velocity` (Vector3(m/s))
+- `linear_damp` (units) object -> Area3D -> project, if zero
+- `linear_damp_mode` Combine (add the value to the others), Replace set to that.
+- `angular_velocity` (Vector3(m/s))
+- `angular_damp` (units) object -> Area3D -> project, if zero
+- `angular_damp_mode` Combine (add the value to the others), Replace set to that.
+
+But those are computed values.
+To affect the body we should call:
+
+- Major drivers: attributes `constant_force` (liniar) and `constant_torque` (angular)
+	- `force` are proportional to the volume (radious size) of the object. `F = m.a = ð * r^3 * a`
+	- `torque` are proportional to the fourth power of the size. `ŧ = r F = ð * r^4 * a`, perpendicular to the plane of rotation, right hand rule
+- Physics engine uses:
+	- `constant_force/torque` to update velocities (linear/angular) (with damp and gravity)
+	- velocities to update position/rotation
+	- also collisions have effect
+- You can set them directly or alter them with `add_constant_central_force(V3)` and `add_constant_torque(V3)`.
+- Also `add_constant_force(force: V3, pos: V3)` may generate both for force and torque if not applied to the center of mass.
+	- Why? Forces not applied to the center of mass (not central) generate torque
+	- Be aware of the messing names:
+		- `constant_force` updated by `add_constant_central_force` while `add_constant_force`, updates both `constant_force` and `constant_torque`
+- For one time impacts, use the impulse versions. Impulse is the integral over time of force.
+	- `apply_impulse(inpulse: V3, pos: V3)` torque + force
+	- `apply_torque_impulse(inpulse: V3)` just torque
+	- `apply_central_impulse(inpulse: V3)` just force
+	- The effects will be applied instantly to the velocities, won't modify `constant_X` to be applied on next physics frames.
+- When to use `apply_torque`, `apply_central_force` and `apply_force`?
+	- When you want to have fine tunning of the forces applied every physics frame and implementing `_integrate_forces`
+	- They alter velocities the equivalent of applying those forces during a physics frame
+	- This is too small, and if you do it in `_process` inconsistent and 
+
+**Freezing:**
+A rigid solid can be frozen.
+Depending on the `freeze_mode`, during the freeze, the rigid body behaves like a static or a kinematic.
+
+**Sleeping:**
+Whenever a rigid is not moving, if `can_sleep` is set to true (the default),
+the `sleeping` flag is set and it is exclude from physics engine
+until a collision or a programatic `apply_force`/`apply_impulse`
+
+- Doubt: Effect of parent transformation in mass/inertia.
+- Doubt: How damp affects to the forces, velocities...
 
 
 ## Node catalog
@@ -324,7 +532,7 @@ https://www.youtube.com/watch?v=22VYNOtrcgM
 - Area2D: Can be use to collision or to set specific physics
 - AudioListener2D: sets the listener location for the audio
 - AudioStreamPlayer2D: Source of sound
-- GPUParticle2D: Emits cheap objects affected by phisics (particles)
+- GPUParticle2D: Emits cheap objects affected by physics (particles)
 	- Properties to configure how they move and are affected by gravity
 - TileMap: Tiles
 - CanvasModulate: 2D shadows color removed by light
@@ -496,6 +704,11 @@ Common control attributes:
 - Input
 	- Shortcut context:
 - Theme:
+
+## Interesting videos
+
+
+- Interesting plugin SmartShape2D and usage: https://www.youtube.com/watch?v=r-pd2yuNPvA
 
 
 
