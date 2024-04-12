@@ -498,7 +498,26 @@ until a collision or a programatic `apply_force`/`apply_impulse`
 - Doubt: How damp affects to the forces, velocities...
 
 
+## Debugging
+
+- `push_error/warning()`: enables a stacktrace besides the error message
+- When in run, the running scene tree is availabe as 'Remote' tab in the scenen tree docker.
+	- You can fix it as the default shown in project settings.
+- "Always on top" option is good to keey the game in front and still being able to manipulate and inspect the editor interface.
+
+
+
+
 ## Node catalog
+
+### General purpose
+
+- AnimationPlayer: Stores a set of animation definitions you can play by name. Animations can define a time line for properties, function calls...
+- AnimationTree:
+	- https://www.youtube.com/watch?v=KAZX4qfD06E
+	- Requires a sibbling AnimationPlayer which is related by property
+	- Animation root is the root of the tree. Usually
+
 
 ### 2D Nodes
 
@@ -704,6 +723,11 @@ Common control attributes:
 - Input
 	- Shortcut context:
 - Theme:
+
+## Snippets
+
+Reacting to window resizes: `get_tree().get_root().size_changed.connect(on_resize)`
+Better? would takes the viewport, not the window viewport:  `get_viewport().size_changed.connect(on_resize)`
 
 ## Interesting videos
 

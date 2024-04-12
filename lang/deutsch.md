@@ -66,6 +66,7 @@ reich: rich
 leer: empty
 voll: full
 letz: last
+hell: luminoso
 vorbei: passed
 fest: firm, stable, compact
 regional: regional, local
@@ -991,8 +992,10 @@ gegenüber: across the street
 
 das Zimmer: room
 das Wohnzimmer: sala
-das Schlafzimmer: bedroom
 die Küche: kitchen
+das Schlafzimmer: bedroom (slaf sleep + zimmer room)
+das Badzimmer: bathroom (bat bath + zimmer room)
+der Hof: courtyard (patio)
 
 das Fenster: window
 die Tür: door
@@ -1004,21 +1007,22 @@ die Decke: techo (f)
 der Zaun: fence
 der Balcon: balcony
 die Wohnung: apartment (f?)
-der Keller: basement
-der Hof: courtyard (patio)
+der Keller: basement (same base as Celler (ca) i Cellar(en))
 
 das Möbel: furniture, a
 der Tisch: table
 der Stuhl: chair
 das Sofa: couch
 der Schrank: cupboard
+die Kommode: dresser
 die Lampe: lamp
 das Bett: bed
 das Licht: light
 der Teppich: carpet, rug
 die Steckdose: plug socket (steck-insert + dose-box)
 das Ladegerät: cargador (lade-load + gerate-device)
-
+das Bûcherregal: biblioteca (mueble) (bucher libro + regal estanteria)
+das Regal: estanteria
 
 ### der Körper
 
@@ -1111,7 +1115,7 @@ das Einkaufszentrum: mall
 die Bäckerei: bakery
 die Apotheke: pharmacy
 
-der Einkauf: purchase/compra
+der Einkauf: purchase/compra (kauf comprar)
 der Kunde: client (m)
 die Kundin: client (f)
 der Einkaufswägen: shopping cart
