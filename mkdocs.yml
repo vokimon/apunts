@@ -75,6 +75,10 @@ nav:
   - 3D:
       - 3d/3d-production-pipeline.md
       - 3d/blender-materials.md
+  - Laboral:
+      - laboral/comunicacio_de_crisi.md
+      - laboral/lideratges-autogestionat.md
+      - laboral/reunionseficients.md
 
 
 markdown_extensions:
