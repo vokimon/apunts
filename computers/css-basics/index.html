@@ -1987,8 +1987,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#elements-sintactics" class="md-nav__link">
-    Elements sintàctics
+  <a href="#anatomia-duna-fulla-destil" class="md-nav__link">
+    Anatomia d'una fulla d'estil
   </a>
   
 </li>
@@ -2002,36 +2002,50 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#element" class="md-nav__link">
-    Element
+  <a href="#selector-delement" class="md-nav__link">
+    Selector d'element
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#classe" class="md-nav__link">
-    Classe
+  <a href="#selector-de-classe" class="md-nav__link">
+    Selector de .classe
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#identificador" class="md-nav__link">
-    Identificador
+  <a href="#selector-didentificador" class="md-nav__link">
+    Selector d'#identificador
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#pseudo-element" class="md-nav__link">
-    Pseudo-element
+  <a href="#selector-de-pseudo-element" class="md-nav__link">
+    Selector de ::pseudo-element
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#pseudo-classe" class="md-nav__link">
-    Pseudo-classe
+  <a href="#selector-de-pseudo-classe" class="md-nav__link">
+    Selector de  :pseudo-classe
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selector-dattribut" class="md-nav__link">
+    Selector d'[attribut]
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selector-universal" class="md-nav__link">
+    Selector universal *
   </a>
   
 </li>
@@ -2057,21 +2071,117 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ancestres" class="md-nav__link">
-    Ancestres
+  <a href="#descendents" class="md-nav__link">
+    Descendents
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#padre" class="md-nav__link">
-    Padre
+  <a href="#fills" class="md-nav__link">
+    Fills
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#llista" class="md-nav__link">
+    Llista ,
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#successor" class="md-nav__link">
+    Successor +
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subsequent" class="md-nav__link">
+    Subsequent ~
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nesting" class="md-nav__link">
+    Nesting
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#insercio" class="md-nav__link">
+    Inserció
+  </a>
+  
+    <nav class="md-nav" aria-label="Inserció">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inline" class="md-nav__link">
+    Inline
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resolucio-css" class="md-nav__link">
+    Resolució css
+  </a>
+  
+    <nav class="md-nav" aria-label="Resolució css">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#especificitat" class="md-nav__link">
+    Especificitat
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cascada" class="md-nav__link">
+    Cascada
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#herencia" class="md-nav__link">
+    Herència
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pseudo-elements" class="md-nav__link">
+    Pseudo-elements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pseudo-classes" class="md-nav__link">
+    Pseudo-classes
+  </a>
   
 </li>
       
@@ -2099,8 +2209,9 @@
 Es un llenguatge d'estilat:
 diu com han de presentar-se els elements d'un HTML.</p>
 <p>De fet és aplicable a tots els formats XML,
-això inclou, per exemple, l'SGV per gràfics vectorials.</p>
-<h2 id="elements-sintactics">Elements sintàctics</h2>
+això inclou, per exemple, l'SGV per gràfics vectorials,
+o les interfícies de Flutter o Qt.</p>
+<h2 id="anatomia-duna-fulla-destil">Anatomia d'una fulla d'estil</h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c">/* comentari */</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nt">selector</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="n">propietat</span><span class="p">:</span><span class="w"> </span><span class="n">valor</span><span class="p">;</span><span class="w"> </span><span class="c">/* &lt;- regla */</span>
@@ -2109,14 +2220,14 @@ això inclou, per exemple, l'SGV per gràfics vectorials.</p>
 </code></pre></div>
 <ul>
 <li><strong>Selector:</strong> Selecciona a què elements s'apliquen les regles</li>
-<li><strong>Regla:</strong> El canvi del valor d'un atribut</li>
+<li><strong>Regla:</strong> Representa un canvi del valor d'un atribut</li>
 <li><strong>Attribut:</strong> Quelcom que volem canviar de la presentació: el color, el marge...</li>
 <li><strong>Valor:</strong> Depenent de la propietat podem assignar diferents tipus de valor: distancies, colors...</li>
 <li><strong>Bloc (de regles):</strong> un seguit de regles agrupades i encapçalades per un selector</li>
 </ul>
 <h2 id="selectors-basics">Selectors bàsics</h2>
 <p>Els més comuns:</p>
-<h3 id="element">Element</h3>
+<h3 id="selector-delement">Selector d'<code>element</code></h3>
 <p>S'apliquen als elements amb aquest nom de tag html.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c">/* Aplica color vermell a tots els elements h1 del document */</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nt">h1</span><span class="w"> </span><span class="p">{</span>
@@ -2125,7 +2236,7 @@ això inclou, per exemple, l'SGV per gràfics vectorials.</p>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Aquest títol es veurà vermell<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
 </code></pre></div>
-<h3 id="classe">Classe</h3>
+<h3 id="selector-de-classe">Selector de <code>.classe</code></h3>
 <p>Selecciona tots els elements l'atribut <code>class</code> dels quals
 conté el nom de la clase que va després del punt.
 L'atribut <code>class</code> pot tenir més d'una classe separades per espais.
@@ -2144,7 +2255,7 @@ la de <code>h1</code> i la de <code>myclass</code>, com colisionen en l'atribut 
 s'aplica la de <code>myclass</code>.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="p">&lt;</span><span class="nt">p</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;my-identifier&quot;</span><span class="p">&gt;</span>title<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 </code></pre></div>
-<h3 id="identificador">Identificador</h3>
+<h3 id="selector-didentificador">Selector d'<code>#identificador</code></h3>
 <p>Seleccionen elements amb l'atribut <code>id</code>
 amb el valor especificat darrera del signe <code>#</code>.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="p">#</span><span class="nn">my-identifier</span><span class="w"> </span><span class="p">{</span>
@@ -2154,8 +2265,9 @@ amb el valor especificat darrera del signe <code>#</code>.</p>
 <p>Tenen més especificitat que els selectors de classe.
 Com que només pot haver un identificador igual a tot el document,
 no és gaire comú ni aconsellable fer servir aquest tipus de selector.</p>
-<h3 id="pseudo-element">Pseudo-element</h3>
-<p>Seleccionen una <strong>part interna</strong> dels elements.
+<h3 id="selector-de-pseudo-element">Selector de <code>::pseudo-element</code></h3>
+<p>Seleccionen una <strong>part interna</strong> dels elements que no es un element per si mateix.
+Per exemple, la rodona d'un radio button.
 Van precedits per <code>::</code> i només poden ser certs valors
 definits en l'estàndard dels quals no tots s'apliquen a tots els elements.</p>
 <p>Tenen la mateixa especificitat que els selectors d'elements.</p>
@@ -2164,7 +2276,187 @@ definits en l'estàndard dels quals no tots s'apliquen a tots els elements.</p>
 <a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">orange</span>
 <a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="p">}</span>
 </code></pre></div>
-<p>Alguns exemples:</p>
+<p>Tenen molta importancia <code>::before</code> i <code>::after</code> que representen
+uns components virtuals en tot element que estan just davant i darrera
+d'ell i serveixen per inserir abans o despres contingut extra.</p>
+<p>Altres molt més específics (pel elements específics): </p>
+<ul>
+<li><code>::placeholder</code>: aplica a el text substitutori a alguns camps de formulari.</li>
+<li><code>::marker</code>: aplica a la gorguilla</li>
+<li><code>::file-selector-button</code>: aplica al botó de l'input de selecció de fitxers.</li>
+<li><code>::spelling-error</code>: aplica al contingut editable que conté errors d'ortografia</li>
+<li><code>::cue</code>: aplica als subtítols d'un element <code>video</code></li>
+<li><code>::backdrop</code>: aplica a l'element que tapa el fons quan es mostra un element <code>dialog</code></li>
+</ul>
+<h3 id="selector-de-pseudo-classe">Selector de  <code>:pseudo-classe</code></h3>
+<p>Els selectors de pseudo-classe seleccionen els elements en certs <strong>estats</strong>.
+Van precedits per <code>:</code>. Vigila que no son <code>::</code> com els pseudo-elements.
+També estàn definits per l'estandard.</p>
+<p>Tenen la mateixa especificitat que els selectors de classe.</p>
+<h3 id="selector-dattribut">Selector d'<code>[attribut]</code></h3>
+<p>Podem fer servir <strong>els corxets <code>[]</code></strong> per seleccionar
+elements pels seus attributs altres que <code>class</code> i <code>id</code>.</p>
+<ul>
+<li><code>[my-attribute]</code> que té l'atribut</li>
+<li><code>[my-attribute="value"]</code> que l'atribut coincideix exactament amb aquest valor</li>
+<li><code>[my-attribute*="value"]</code> que l'atribut conté aquest valor</li>
+<li><code>[my-attribute~="value"]</code> que l'atribut conté paraules separades per espais una de les quals es aquest valor</li>
+<li><code>[my-attribute^="value"]</code> que l'atribut comença amb aquest valor</li>
+<li><code>[my-attribute$="value"]</code> que l'atribut acaba amb aquest valor</li>
+<li><code>[my-attribute|="value"]</code> que l'atribut és aquest valor o comença per ell i el segueix un guio (per matxar idiomes <code>ca</code> pero tambe <code>ca-ES</code>)</li>
+</ul>
+<p>Té la mateixa especificitat que els selectors de classe.</p>
+<h3 id="selector-universal">Selector universal <code>*</code></h3>
+<p>Els selectors universals coincideixen amb tots els elements.
+Normalment els farem servir en combinació amb altres
+o per regles molt concretes d'abast global.</p>
+<h2 id="combinacions-de-selectors">Combinacions de selectors</h2>
+<h3 id="concurrents">Concurrents</h3>
+<p>Quan juntem selectors <strong>sense espais entre ells</strong>,
+tots els selectors s'han de donar en el mateix element per seleccionar-ho.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c">/* Tots els h1 que a més tinguin la class &#39;appendix&#39; */</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="nt">h1</span><span class="p">.</span><span class="nc">apendix</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="err">...</span><span class="w">  </span><span class="p">}</span>
+</code></pre></div>
+<h3 id="descendents">Descendents</h3>
+<p>Quan <strong>separem selectors amb espais</strong>,
+per exemple, <code>ancestor descendant</code>
+estem seleccionant els elements seleccionats per <code>descendant</code>
+que tingui com ancestre algun element seleccionat per <code>ancestor</code>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c">/* All p descendant of a section */</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="nt">section</span><span class="w"> </span><span class="nt">p</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="err">...</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+<p>No és necessari que siguin pare i fill directes.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Aquest no està dintre d&#39;un section i no es seleccionarà<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Aquest es selecciona<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Aquest, que no és directe, també<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>En general, es desaconsella fer servir anidaments,
+donat que quan la nostra fulla d'estils creix,
+genera interaccions entre les regles complexes d'entendre,
+i fa complex el manteniment.</p>
+<h3 id="fills">Fills</h3>
+<p>Si separem dos selectors amb un <code>&gt;</code>,
+per exemple <code>selector_pare &gt; selector_fill</code>,
+seleccionem els elements que coincideixin amb el <code>selector_fill</code>
+sempre se siguin fills directes d'elements seleccionats amb el <code>selector_pare</code>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nt">section</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nt">p</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="err">...</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="o">&lt;</span><span class="nt">section</span><span class="o">&gt;</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">    </span><span class="o">&lt;</span><span class="nt">p</span><span class="o">&gt;</span><span class="nt">Seleccionarà</span><span class="w"> </span><span class="nt">aquest</span><span class="o">&lt;/</span><span class="nt">p</span><span class="o">&gt;</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">    </span><span class="o">&lt;</span><span class="nt">div</span><span class="o">&gt;</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">        </span><span class="o">&lt;</span><span class="nt">p</span><span class="o">&gt;</span><span class="nt">Però</span><span class="w"> </span><span class="nt">no</span><span class="w"> </span><span class="nt">pas</span><span class="w"> </span><span class="nt">aquest</span><span class="o">&lt;/</span><span class="nt">p</span><span class="o">&gt;</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="w">    </span><span class="o">&lt;/</span><span class="nt">div</span><span class="o">&gt;</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="o">&lt;</span><span class="nt">section</span><span class="o">&gt;</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="o">&lt;</span><span class="nt">p</span><span class="o">&gt;</span><span class="nt">Aquest</span><span class="w"> </span><span class="nt">no</span><span class="w"> </span><span class="nt">està</span><span class="w"> </span><span class="nt">dintre</span><span class="w"> </span><span class="nt">d</span><span class="err">&#39;</span><span class="nt">un</span><span class="w"> </span><span class="nt">section</span><span class="o">&lt;/</span><span class="nt">p</span><span class="o">&gt;</span>
+</code></pre></div>
+<p>Tot i que els seus efectes estan més controlats que el descendant,
+també dona problemes de manteniment perque acoblem el css a l'estructura de l'html.
+Si el fill deixa de ser directe, si interposem un contenidor en mig,
+el selector deixarà de ser valid.</p>
+<h3 id="llista">Llista <code>,</code></h3>
+<p>Quan separem selectors <strong>amb comes</strong> vol dir que <strong>qualsevol</strong>
+es construeix un selector que coincideix quan qualsevol dels selectors
+coincideixi.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nt">selector1</span><span class="o">,</span><span class="w"> </span><span class="nt">selector2</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="err">...</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="c">/* las reglas se aplican a ambos selectores */</span>
+</code></pre></div>
+<p>Seria equivalent en duplicar les regles per cada selector per separat.</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="nt">selector1</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="err">...</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="nt">selector2</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="err">...</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+Poder especificar els selectors junts, redueix redundància al codi.</p>
+<h3 id="successor">Successor <code>+</code></h3>
+<p>Quan separem els selectors amb <strong>un signe  <code>+</code></strong>,
+per exemple, <code>predecessor + successor</code>,
+estem indicant que volem seleccionar
+els elements que seleccioni <code>successor</code>
+inmediatament després com a germans del mateix pare,
+de un element que seleccioni <code>predecessor</code>.</p>
+<h3 id="subsequent">Subsequent <code>~</code></h3>
+<p>L'operador subsecuent es al successor,
+com el descendent al pare.
+Es un germà posterior pero no ha de ser inmediatament el següent.</p>
+<h3 id="nesting">Nesting</h3>
+<p>Per estalviar-nos repetir codi, podem fer servir blocks aniuats.
+És a dir, ficar un bloc a dins d'un altre block.</p>
+<p>En aquest cas es fara servir el selector del block pare
+com a referència del selectors al block intern.</p>
+<p>Per defecte selector pare i fill generen un selector descendent.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="p">.</span><span class="nc">pare</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">  </span><span class="err">.fill</span><span class="w"> </span><span class="err">{</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">    </span><span class="err">...</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="err">}</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="c">/* Equivalent a */</span>
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="p">.</span><span class="nc">pare</span><span class="w"> </span><span class="p">.</span><span class="nc">fill</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="err">...</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+<p>Però si el selector fill conté <code>&amp;</code>,
+llavors el selector fill resultant es construeix
+substituint el <code>&amp;</code> per el selector pare.</p>
+<h2 id="insercio">Inserció</h2>
+<h3 id="inline">Inline</h3>
+<p>A dintre dels elements html a l'atribut <code>style</code>.
+El que posem son regles, no blocks de regles, no hi ha selectors.
+El selector es implícit perque l'element afectat serà
+l'element que té l'atribut.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="p">&lt;</span><span class="nt">p</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;color: red; background-color: lightgrey&quot;</span><span class="p">&gt;</span>Hola món<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div>
+<p style="color: red; background-color: lightgrey">Hola món</p>
+
+<h2 id="resolucio-css">Resolució css</h2>
+<h3 id="especificitat">Especificitat</h3>
+<p>Quan apliquem les regles a un element es prioritzen,
+primer, per especificitat i,
+si coincideixen en especificitat, després per l'ordre en que estan (ordre de cascada).
+L'especificitat es un vector multi component que depén del selector que ha fet aplicar la regla.</p>
+<p>Els estils posats inline tenen una especificitat especial de 4art nivell.
+Només els podem sobrescriure amb regles <code>important!</code> que puja l'especificitat a nivel 4,
+cosa totalment no recomanada.</p>
+<p>Cada subselector que composa el selector incrementa o no una de les components.
+La primera component es menys específica.</p>
+<ul>
+<li>No pujen especificitat<ul>
+<li>Selector universal <code>*</code></li>
+</ul>
+</li>
+<li>Pujen la 1a component<ul>
+<li><strong>elements</strong></li>
+<li>pseudo-elements</li>
+</ul>
+</li>
+<li>Pujen la 2a component<ul>
+<li><strong>class</strong></li>
+<li>pseudo-class</li>
+<li>atribut</li>
+</ul>
+</li>
+<li>
+<p>Pujen la 3a component</p>
+<ul>
+<li><strong>identificador</strong></li>
+</ul>
+</li>
+<li>
+<p>Aquestes funcions adopten l'especificitat del subselector més específic entre parèntesis</p>
+<ul>
+<li><code>:is()</code> i tot el que tingui a dintre de la funció</li>
+<li><code>:has()</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="cascada">Cascada</h3>
+<h3 id="herencia">Herència</h3>
+<p>Certs attributs, quan a un element no se li aplica explicitament un valor,
+l'hereden de l'element pare.</p>
+<p>Per exemple, si fixem el <code>color</code> a l'element pare,
+si el fill o no te cap estil per <code>color</code>,
+heretarà el color del pare.</p>
+<h2 id="pseudo-elements">Pseudo-elements</h2>
+<p>Parts internes dels elements que es poden estilar independentment.</p>
+<p>Generals</p>
 <ul>
 <li><code>::before</code>: aplica a un element virtual que està just abans de cada element</li>
 <li><code>::after</code>: aplica a un element virtual que està just darrera de cada element</li>
@@ -2181,10 +2473,8 @@ definits en l'estàndard dels quals no tots s'apliquen a tots els elements.</p>
 <li><code>::cue</code>: aplica als subtítols d'un element <code>video</code></li>
 <li><code>::backdrop</code>: aplica a l'element que tapa el fons quan es mostra un element <code>dialog</code></li>
 </ul>
-<h3 id="pseudo-classe">Pseudo-classe</h3>
-<p>Els selectors de pseudo-classe seleccionen els elements en certs <strong>estats</strong>.
-Van precedits per <code>:</code>. Vigila que no son <code>::</code> com els pseudo-elements.
-També estàn definits per l'estandard.</p>
+<h2 id="pseudo-classes">Pseudo-classes</h2>
+<p>Representen situacions o estats dels elements.</p>
 <p>Structural</p>
 <ul>
 <li><code>:root</code>: l'arrel del document, normalment <code>html</code></li>
@@ -2238,30 +2528,6 @@ També estàn definits per l'estandard.</p>
 <li><code>:where()</code>: concorda amb el contingut igual que si no hi hagues el where però, no puja l'especificitat</li>
 <li><code>:not()</code>: concorda amb tot el que no concordi amb el selector a dintre dels parèntesis</li>
 </ul>
-<h2 id="combinacions-de-selectors">Combinacions de selectors</h2>
-<h3 id="concurrents">Concurrents</h3>
-<p>Quan juntem selectors <strong>sense espais entre ells</strong>,
-tots els selectors s'han de donar en el mateix element per seleccionar-ho.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c">/* Tots els h1 que a més tinguin la class &#39;appendix&#39; */</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="nt">h1</span><span class="p">.</span><span class="nc">apendix</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="err">...</span><span class="w">  </span><span class="p">}</span>
-</code></pre></div>
-<h3 id="ancestres">Ancestres</h3>
-<p>Quan <strong>separem selectors amb espais</strong>,
-estem seleccionant els elements seleccionats pel darrer
-sempre que estiguin continguts en un element seleccionat per l'anterior.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c">/* All p descendant of a section */</span>
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="nt">section</span><span class="w"> </span><span class="nt">p</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="err">...</span><span class="w"> </span><span class="p">}</span>
-</code></pre></div>
-<p>No es necesario que sean padre e hijo directos.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
-<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>bla<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
-</code></pre></div>
-<h3 id="padre">Padre</h3>
-<p>Si los separamos con un <code>&gt;</code> especificamos
-h</p>
 
 
 
