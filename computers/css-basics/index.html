@@ -2050,6 +2050,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#sentencies" class="md-nav__link">
+    Sentències @
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2106,8 +2113,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#nesting" class="md-nav__link">
-    Nesting
+  <a href="#anidament" class="md-nav__link">
+    Anidament &amp;
   </a>
   
 </li>
@@ -2126,8 +2133,22 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#inline" class="md-nav__link">
-    Inline
+  <a href="#inline-style-property" class="md-nav__link">
+    Inline: style property
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#style-element" class="md-nav__link">
+    &lt;style&gt; element
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#link" class="md-nav__link">
+    &lt;link&gt;
   </a>
   
 </li>
@@ -2211,6 +2232,18 @@ diu com han de presentar-se els elements d'un HTML.</p>
 <p>De fet és aplicable a tots els formats XML,
 això inclou, per exemple, l'SGV per gràfics vectorials,
 o les interfícies de Flutter o Qt.</p>
+<div style="
+    text-align: center;
+    color: #ff6;
+    padding-top: 30px;
+    background-image: linear-gradient(45deg, transparent, black);
+    margin-inline: auto;
+    background: #770;
+    border-radius: 5px;
+">
+Hola mundo
+</div>
+
 <h2 id="anatomia-duna-fulla-destil">Anatomia d'una fulla d'estil</h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c">/* comentari */</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nt">selector</span><span class="w"> </span><span class="p">{</span>
@@ -2310,6 +2343,13 @@ elements pels seus attributs altres que <code>class</code> i <code>id</code>.</p
 <p>Els selectors universals coincideixen amb tots els elements.
 Normalment els farem servir en combinació amb altres
 o per regles molt concretes d'abast global.</p>
+<h3 id="sentencies">Sentències <code>@</code></h3>
+<p>Agafen el lloc d'un selector sintacticament però no ho son.
+Es fan servir per coses especials, com ara:</p>
+<ul>
+<li>definir animacións (keyframes, timelines...)</li>
+<li>definir casos responsive, o medis en paper</li>
+</ul>
 <h2 id="combinacions-de-selectors">Combinacions de selectors</h2>
 <h3 id="concurrents">Concurrents</h3>
 <p>Quan juntem selectors <strong>sense espais entre ells</strong>,
@@ -2379,12 +2419,11 @@ de un element que seleccioni <code>predecessor</code>.</p>
 <p>L'operador subsecuent es al successor,
 com el descendent al pare.
 Es un germà posterior pero no ha de ser inmediatament el següent.</p>
-<h3 id="nesting">Nesting</h3>
-<p>Per estalviar-nos repetir codi, podem fer servir blocks aniuats.
-És a dir, ficar un bloc a dins d'un altre block.</p>
-<p>En aquest cas es fara servir el selector del block pare
-com a referència del selectors al block intern.</p>
-<p>Per defecte selector pare i fill generen un selector descendent.</p>
+<h3 id="anidament">Anidament <code>&amp;</code></h3>
+<p>L'anidament de blocs ens estalvia codi repetit i agrupa regles conceptualment.
+Simplement cal definir un bloc dintre de les claus d'un altre:</p>
+<p>Per defecte selector pare i fill generen un selector descendent.
+Respon a l'estructura que s'espera a l'html</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="p">.</span><span class="nc">pare</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">  </span><span class="err">.fill</span><span class="w"> </span><span class="err">{</span>
 <a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">    </span><span class="err">...</span>
@@ -2396,16 +2435,45 @@ com a referència del selectors al block intern.</p>
 <p>Però si el selector fill conté <code>&amp;</code>,
 llavors el selector fill resultant es construeix
 substituint el <code>&amp;</code> per el selector pare.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="p">.</span><span class="nc">pare</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">  </span><span class="err">&amp;.fill1</span><span class="w"> </span><span class="err">{</span><span class="w"> </span><span class="err">...</span><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="c">/* no hi ha espai! */</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="w">  </span><span class="o">&amp;</span><span class="w"> </span><span class="p">.</span><span class="nc">fill2</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="err">...</span><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="c">/* equivalent a si no posem &amp; */</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="w">  </span><span class="o">&amp;</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="p">.</span><span class="nc">fill2</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="err">...</span><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="w">  </span><span class="p">.</span><span class="nc">avi</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="err">...</span><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="err">}</span>
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="c">/* Equivalent a */</span>
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a><span class="p">.</span><span class="nc">pare</span><span class="p">.</span><span class="nc">fill1</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="err">...</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a><span class="p">.</span><span class="nc">pare</span><span class="w"> </span><span class="p">.</span><span class="nc">fill2</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="err">...</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a><span class="p">.</span><span class="nc">pare</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="p">.</span><span class="nc">fill3</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="err">...</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a><span class="p">.</span><span class="nc">avi</span><span class="w"> </span><span class="p">.</span><span class="nc">pare</span><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="err">...</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="c">/* el fill no es tan &quot;fill&quot; */</span>
+</code></pre></div>
 <h2 id="insercio">Inserció</h2>
-<h3 id="inline">Inline</h3>
+<h3 id="inline-style-property">Inline: <code>style</code> property</h3>
 <p>A dintre dels elements html a l'atribut <code>style</code>.
-El que posem son regles, no blocks de regles, no hi ha selectors.
+No posem ni el selector ni les claus, només les regles.
 El selector es implícit perque l'element afectat serà
 l'element que té l'atribut.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="p">&lt;</span><span class="nt">p</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;color: red; background-color: lightgrey&quot;</span><span class="p">&gt;</span>Hola món<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="p">&lt;</span><span class="nt">p</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;color: red; background-color: lightgrey&quot;</span><span class="p">&gt;</span>Hola món<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 </code></pre></div>
 <p style="color: red; background-color: lightgrey">Hola món</p>
 
+<p>No es recomana fer-ho servir.
+Va bé per provar coses ràpides, inclús editant a les eines de desenvolupament del navegador.
+Però es molt poc mantenible, tendeix a la repetició de codi </p>
+<p>També és l'única manera que alguns clients de correu permeten estilar emails html.
+Per aquest escenari, hi ha eines que converteixen els fulls d'estils a atributs <code>style</code>.</p>
+<h3 id="style-element"><code>&lt;style&gt;</code> element</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="w">    </span><span class="nt">h1</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+</code></pre></div>
+<h3 id="link"><code>&lt;link&gt;</code></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>  <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;mystyle.css&quot;</span> <span class="p">/&gt;</span>
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>
+</code></pre></div>
 <h2 id="resolucio-css">Resolució css</h2>
 <h3 id="especificitat">Especificitat</h3>
 <p>Quan apliquem les regles a un element es prioritzen,
