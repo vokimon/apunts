@@ -2202,16 +2202,29 @@ inline4 inline4 inline4 inline4
 </ul>
 <p>El flujo normal es <code>flow</code>.</p>
 <h2 id="position">Position</h2>
-<p>Position </p>
-<p>El valor por defecto del atributo <code>position</code>, <code>static</code>,
-significa que los elementos contenidos se van a posicionar usando el llamado <em>flujo normal</em> o <em>normal flow</em>.
-Como es el normal, se comporta como esperarías, pero es importante saber qué esperar.</p>
+<p>El atributo <code>position</code> determina varios aspectos del posicionamiento:</p>
 <ul>
-<li>Se ignoran las propiedades de posicionamiento explícito: <code>top</code>, <code>left</code>, <code>right</code>, <code>bottom</code>.</li>
-<li>No se considera el elemento como referencia de posicionamiento explícito para sus hijos (más sobre esto abajo)</li>
-<li>Los hijos se posicionan siguiendo el flujo de lectura,
-  teniendo en cuenta lo que se ha colocado antes.</li>
+<li>Si el elemento participa del algoritmo de layout (normal, flex, grid...) desplazando a los otros elementos o se sale de él.<ul>
+<li>los desplazan <code>static</code>, <code>relative</code> y <code>sticky</code></li>
+<li>se salen <code>absolute</code> y <code>fixed</code></li>
 </ul>
+</li>
+<li>Qué referencia adoptan sus propiedades de <code>inset</code> (<code>top</code>, <code>left</code>, <code>right</code>, <code>bottom</code>)<ul>
+<li>Se ignoran (<code>static</code>)</li>
+<li>Su posición estática (<code>relative</code>)</li>
+<li>El documento o el ancestro mas cercano no <code>static</code> (<code>absolute</code>)</li>
+<li>La ventana (<code>fixed</code>)</li>
+<li>TODO: <code>sticky</code>???</li>
+</ul>
+</li>
+<li>Si establece como referencia absoluta para sus hijos <code>inset</code> (<code>top</code>, <code>left</code>, <code>right</code>, <code>bottom</code>)<ul>
+<li>Solo <code>static</code> no lo hace</li>
+</ul>
+</li>
+</ul>
+<p>El valor <code>sticky</code> se comporta como <code>relative</code> hasta que sale del viewport.
+En ese momento se comporta como <code>fixed</code>.</p>
+<p>El valor por defecto del atributo <code>position</code>, <code>static</code>.</p>
 <p>Por ejemplo, aunque <code>display: flex</code> y <code>display: grid</code>,
 determinan un layout de los elementos internos diferentes al flujo normal,
 el elemento que tiene tales propiedades, se considerarà block en su contenedor.
