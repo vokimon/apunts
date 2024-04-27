@@ -2313,15 +2313,30 @@ Com que només pot haver un identificador igual a tot el document,
 no és gaire comú ni aconsellable fer servir aquest tipus de selector.</p>
 <h3 id="selector-de-pseudo-element">Selector de <code>::pseudo-element</code></h3>
 <p>Seleccionen una <strong>part interna</strong> dels elements que no es un element per si mateix.
-Per exemple, la rodona d'un radio button.
+Per exemple, el punt que precedeix els elements <code>li</code> d'una llista <code>ul</code> s'accedeix amb <code>::marker</code>.
 Van precedits per <code>::</code> i només poden ser certs valors
 definits en l'estàndard dels quals no tots s'apliquen a tots els elements.</p>
 <p>Tenen la mateixa especificitat que els selectors d'elements.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c">/* Pinta la primera lletra de cada element en taronja */</span>
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="p">::</span><span class="nd">first-letter</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">orange</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">orange</span><span class="p">;</span>
 <a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="p">}</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="c">/* pinta tots els punts de les llistes com a signes &gt; */</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="p">::</span><span class="nd">marker</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">purple</span><span class="p">;</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">    </span><span class="k">content</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;&gt;&#39;</span><span class="p">;</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="p">}</span>
 </code></pre></div>
+<ul>
+<style>
+::marker {
+    color: purple;
+    content: '>';
+}
+</style>
+<li>item</li>
+</ul>
+
 <p>Tenen molta importancia <code>::before</code> i <code>::after</code> que representen
 uns components virtuals en tot element que estan just davant i darrera
 d'ell i serveixen per inserir abans o despres contingut extra.</p>
@@ -2551,6 +2566,7 @@ heretarà el color del pare.</p>
 <li><code>::marker</code>: aplica a la gorguilla</li>
 <li><code>::file-selector-button</code>: aplica al botó de l'input de selecció de fitxers.</li>
 <li><code>::spelling-error</code>: aplica al contingut editable que conté errors d'ortografia</li>
+<li><code>::grammar-error</code>: aplica al contingut editable que conté errors de gramàtica</li>
 <li><code>::cue</code>: aplica als subtítols d'un element <code>video</code></li>
 <li><code>::backdrop</code>: aplica a l'element que tapa el fons quan es mostra un element <code>dialog</code></li>
 </ul>
