@@ -2051,8 +2051,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sentencies" class="md-nav__link">
-    Sentències @
+  <a href="#regles" class="md-nav__link">
+    Regles @
   </a>
   
 </li>
@@ -2193,6 +2193,47 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#at-rules" class="md-nav__link">
+    At-rules
+  </a>
+  
+    <nav class="md-nav" aria-label="At-rules">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#import" class="md-nav__link">
+    @import
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#support" class="md-nav__link">
+    @support
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#media" class="md-nav__link">
+    @media
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#altres" class="md-nav__link">
+    Altres
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#pseudo-elements" class="md-nav__link">
     Pseudo-elements
   </a>
@@ -2247,17 +2288,15 @@ Hola món
 </div>
 
 <p>De fet és aplicable a tots els formats XML,
-això inclou, per exemple, l'SVG per gràfics vectorials,
+això inclou, per exemple, l'SGV per gràfics vectorials,
 o les interfícies de Flutter o Qt.</p>
 <p><svg viewBox="0 0 1220 100" xmlns="http://www.w3.org/2000/svg">
     <style>
-        :root {fill: red}
+        :root {background: red}
         rect { fill: #424; }
-        rect[x="1100"] { fill: #424; }
     </style>
     <rect width="100" height="100" />
     <rect x="120" width="100" height="100" rx="15" />
-    <rect x="1100" width="100" height="100" rx="50" />
 </svg></p>
 <h2 id="anatomia-duna-fulla-destil">Anatomia d'una fulla d'estil</h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c">/* comentari */</span>
@@ -2326,14 +2365,14 @@ definits en l'estàndard dels quals no tots s'apliquen a tots els elements.</p>
 <a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="c">/* pinta tots els punts de les llistes com a signes &gt; */</span>
 <a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="p">::</span><span class="nd">marker</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">purple</span><span class="p">;</span>
-<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">    </span><span class="k">content</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;&gt;&#39;</span><span class="p">;</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">    </span><span class="k">content</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;&gt; &#39;</span><span class="p">;</span>
 <a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="p">}</span>
 </code></pre></div>
 <ul>
 <style>
 ::marker {
     color: purple;
-    content: '>';
+    content: '> ';
 }
 </style>
 <li>item</li>
@@ -2342,15 +2381,6 @@ definits en l'estàndard dels quals no tots s'apliquen a tots els elements.</p>
 <p>Tenen molta importancia <code>::before</code> i <code>::after</code> que representen
 uns components virtuals en tot element que estan just davant i darrera
 d'ell i serveixen per inserir abans o despres contingut extra.</p>
-<p>Altres molt més específics (pel elements específics): </p>
-<ul>
-<li><code>::placeholder</code>: aplica a el text substitutori a alguns camps de formulari.</li>
-<li><code>::marker</code>: aplica a la gorguilla</li>
-<li><code>::file-selector-button</code>: aplica al botó de l'input de selecció de fitxers.</li>
-<li><code>::spelling-error</code>: aplica al contingut editable que conté errors d'ortografia</li>
-<li><code>::cue</code>: aplica als subtítols d'un element <code>video</code></li>
-<li><code>::backdrop</code>: aplica a l'element que tapa el fons quan es mostra un element <code>dialog</code></li>
-</ul>
 <h3 id="selector-de-pseudo-classe">Selector de  <code>:pseudo-classe</code></h3>
 <p>Els selectors de pseudo-classe seleccionen els elements en certs <strong>estats</strong>.
 Van precedits per <code>:</code>. Vigila que no son <code>::</code> com els pseudo-elements.
@@ -2373,12 +2403,22 @@ elements pels seus attributs altres que <code>class</code> i <code>id</code>.</p
 <p>Els selectors universals coincideixen amb tots els elements.
 Normalment els farem servir en combinació amb altres
 o per regles molt concretes d'abast global.</p>
-<h3 id="sentencies">Sentències <code>@</code></h3>
-<p>Agafen el lloc d'un selector sintacticament però no ho son.
+<h3 id="regles">Regles <code>@</code></h3>
+<p>Agafen el lloc d'un selector sintàcticament però no ho son.
 Es fan servir per coses especials, com ara:</p>
 <ul>
-<li>definir animacións (keyframes, timelines...)</li>
-<li>definir casos responsive, o medis en paper</li>
+<li>condicionar regles a:<ul>
+<li>característiques del medi com el tamany, l'aspecte o si es paginat o en paper (<code>@media</code>)</li>
+<li>funcionalitats supportades pel navegador (<code>@support</code>)</li>
+<li>caracteristiques del contenidor (<code>@container</code>)</li>
+</ul>
+</li>
+<li>definir els punts clau d'animacións (<code>@keyframes</code>)</li>
+<li>incloure estils d'un altre fitxer (<code>@import</code>)</li>
+<li>definir namespaces (<code>@namespace</code>)</li>
+<li>definir encoding de caràcters (<code>@charset</code>)</li>
+<li>definir el format de pàgina a medis paginats (<code>@page</code>)</li>
+<li>...</li>
 </ul>
 <h2 id="combinacions-de-selectors">Combinacions de selectors</h2>
 <h3 id="concurrents">Concurrents</h3>
@@ -2552,6 +2592,47 @@ l'hereden de l'element pare.</p>
 <p>Per exemple, si fixem el <code>color</code> a l'element pare,
 si el fill o no te cap estil per <code>color</code>,
 heretarà el color del pare.</p>
+<h2 id="at-rules">At-rules</h2>
+<p>Les at-rules son sentencies especials que podem introduir en el full d'estils per diferents funcions.</p>
+<h3 id="import"><code>@import</code></h3>
+<p>Aquest regla permet organitzar les fulles d'estils en diferents fitxers.
+En el seu ús més bàsic és:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="p">@</span><span class="k">import</span><span class="w"> </span><span class="s1">&#39;./file.css&#39;</span><span class="p">;</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="p">@</span><span class="k">import</span><span class="w"> </span><span class="nt">url</span><span class="o">(./</span><span class="nt">file</span><span class="p">.</span><span class="nc">css</span><span class="o">)</span><span class="p">;</span>
+</code></pre></div>
+<p>També és útil per evitar carregar regles innecessàries
+condicionant la càrrega a situacións específiques:</p>
+<ul>
+<li>Les funcionalitats que soporta el navegador: <code>supports (not (display: grid) and (selector(:has(a))</code></li>
+<li>El tipus de mitjà: <code>screen</code> o <code>paper</code>, <code>orientation(landscape)</code>, <code>(max-width: 400px)</code>...</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="p">@</span><span class="k">import</span><span class="w"> </span><span class="s1">&#39;./file.css&#39;</span><span class="w"> </span><span class="nt">supports</span><span class="o">(</span><span class="nt">not</span><span class="w"> </span><span class="o">(</span><span class="nt">display</span><span class="o">:</span><span class="w"> </span><span class="nt">grid</span><span class="o">)</span><span class="w"> </span><span class="nt">and</span><span class="w"> </span><span class="o">(</span><span class="nt">selector</span><span class="o">(</span><span class="p">:</span><span class="nd">has</span><span class="o">(</span><span class="nt">a</span><span class="o">)))</span><span class="w"> </span><span class="nt">screen</span><span class="w"> </span><span class="p">;</span>
+</code></pre></div>
+<h3 id="support"><code>@support</code></h3>
+<p>Define de forma condicional bloques de reglas o reglas
+si el navegador soporta las funcionalidades indicadas.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="p">@</span><span class="k">support</span><span class="w"> </span><span class="nt">supports</span><span class="w"> </span><span class="o">(</span><span class="nt">not</span><span class="w"> </span><span class="o">(</span><span class="nt">display</span><span class="o">:</span><span class="w"> </span><span class="nt">grid</span><span class="o">)</span><span class="w"> </span><span class="nt">and</span><span class="w"> </span><span class="o">(</span><span class="nt">selector</span><span class="o">(</span><span class="p">:</span><span class="nd">has</span><span class="o">(</span><span class="nt">a</span><span class="o">))</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="w">    </span><span class="p">:</span><span class="nd">has</span><span class="o">(</span><span class="nt">p</span><span class="o">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="w">        </span><span class="err">...</span>
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a><span class="p">}</span>
+</code></pre></div>
+<h3 id="media"><code>@media</code></h3>
+<p>Tambien llamadas media-queries.
+Define de forma condicional bloques de reglas o reglas
+si el medio tiene las características descritas.</p>
+<h3 id="altres">Altres</h3>
+<ul>
+<li><code>@media</code> -- declaració condicional de regles depenent de les dimensions format i tecnologia (print, screen) del mitjà</li>
+<li><code>@container</code> -- declaració condicional de regles depenent del tamany contenidor (similar que les media queries, pero més útil, i menys suportat)</li>
+<li><code>@support</code> -- declaració condicional de regles depenent de les funcionalitats que suporta el navegador</li>
+<li><code>@page</code> -- defineix el format de pàgina a medis paginats</li>
+<li><code>@keyframes</code> -- defineix animacions de propietats via punts claus</li>
+<li><code>@counter-style</code> -- defineix un tipus de numeració (figures, llistes, seccions...)</li>
+<li><code>@property</code> -- (poc suportat) permet definir una propietat personalitzada (com les variables pero animables)</li>
+<li><code>@color-profile</code> --</li>
+<li>...</li>
+</ul>
 <h2 id="pseudo-elements">Pseudo-elements</h2>
 <p>Parts internes dels elements que es poden estilar independentment.</p>
 <p>Generals</p>
