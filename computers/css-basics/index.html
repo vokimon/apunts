@@ -15,6 +15,10 @@
         <link rel="canonical" href="https://vokimon.github.io/apunts/computers/css-basics/">
       
       
+        <link rel="prev" href="../..">
+      
+      
+        <link rel="next" href="../css/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +26,7 @@
     
     
       
-        <title>Bàsics de CSS - Apunts</title>
+        <title>CSS Conceptes bàsics (ca) - Apunts</title>
       
     
     
@@ -124,7 +128,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Bàsics de CSS
+              CSS Conceptes bàsics (ca)
             
           </span>
         </div>
@@ -289,18 +293,20 @@
       
   
   
+    
+  
   
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -314,7 +320,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Computers
@@ -325,18 +331,20 @@
                 
   
   
+    
+  
   
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
         
           
           <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
@@ -350,12 +358,340 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_1">
             <span class="md-nav__icon md-icon"></span>
             css
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    CSS Conceptes bàsics (ca)
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    CSS Conceptes bàsics (ca)
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-css" class="md-nav__link">
+    Què es CSS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anatomia-duna-fulla-destil" class="md-nav__link">
+    Anatomia d'una fulla d'estil
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selectors-basics" class="md-nav__link">
+    Selectors bàsics
+  </a>
+  
+    <nav class="md-nav" aria-label="Selectors bàsics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#selector-delement" class="md-nav__link">
+    Selector d'element
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selector-de-classe" class="md-nav__link">
+    Selector de .classe
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selector-didentificador" class="md-nav__link">
+    Selector d'#identificador
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selector-de-pseudo-element" class="md-nav__link">
+    Selector de ::pseudo-element
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selector-de-pseudo-classe" class="md-nav__link">
+    Selector de  :pseudo-classe
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selector-dattribut" class="md-nav__link">
+    Selector d'[attribut]
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selector-universal" class="md-nav__link">
+    Selector universal *
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regles" class="md-nav__link">
+    Regles @
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#combinacions-de-selectors" class="md-nav__link">
+    Combinacions de selectors
+  </a>
+  
+    <nav class="md-nav" aria-label="Combinacions de selectors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#concurrents" class="md-nav__link">
+    Concurrents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#descendents" class="md-nav__link">
+    Descendents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fills" class="md-nav__link">
+    Fills
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#llista" class="md-nav__link">
+    Llista ,
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#successor" class="md-nav__link">
+    Successor +
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subsequent" class="md-nav__link">
+    Subsequent ~
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anidament" class="md-nav__link">
+    Anidament &amp;
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#insercio" class="md-nav__link">
+    Inserció
+  </a>
+  
+    <nav class="md-nav" aria-label="Inserció">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inline-style-property" class="md-nav__link">
+    Inline: style property
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#style-element" class="md-nav__link">
+    &lt;style&gt; element
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#link" class="md-nav__link">
+    &lt;link&gt;
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resolucio-css" class="md-nav__link">
+    Resolució css
+  </a>
+  
+    <nav class="md-nav" aria-label="Resolució css">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#especificitat" class="md-nav__link">
+    Especificitat
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cascada" class="md-nav__link">
+    Cascada
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#herencia" class="md-nav__link">
+    Herència
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#at-rules" class="md-nav__link">
+    At-rules
+  </a>
+  
+    <nav class="md-nav" aria-label="At-rules">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#import" class="md-nav__link">
+    @import
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#support" class="md-nav__link">
+    @support
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#media" class="md-nav__link">
+    @media
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#altres" class="md-nav__link">
+    Altres
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pseudo-elements" class="md-nav__link">
+    Pseudo-elements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pseudo-classes" class="md-nav__link">
+    Pseudo-classes
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
             
               
                 
@@ -367,7 +703,7 @@
         
   
   <span class="md-ellipsis">
-    CSS
+    CSS Recursos (es)
   </span>
   
 
@@ -387,7 +723,7 @@
         
   
   <span class="md-ellipsis">
-    CSS: Animaciones
+    CSS Animaciones (es)
   </span>
   
 
