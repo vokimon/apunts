@@ -562,40 +562,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#insercio" class="md-nav__link">
-    Inserció
-  </a>
-  
-    <nav class="md-nav" aria-label="Inserció">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#inline-style-property" class="md-nav__link">
-    Inline: style property
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#style-element" class="md-nav__link">
-    &lt;style&gt; element
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#link" class="md-nav__link">
-    &lt;link&gt;
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#resolucio-css" class="md-nav__link">
     Resolució css
   </a>
@@ -2481,40 +2447,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#insercio" class="md-nav__link">
-    Inserció
-  </a>
-  
-    <nav class="md-nav" aria-label="Inserció">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#inline-style-property" class="md-nav__link">
-    Inline: style property
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#style-element" class="md-nav__link">
-    &lt;style&gt; element
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#link" class="md-nav__link">
-    &lt;link&gt;
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#resolucio-css" class="md-nav__link">
     Resolució css
   </a>
@@ -2868,33 +2800,6 @@ substituint el <code>&amp;</code> per el selector pare.</p>
 <a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a><span class="p">.</span><span class="nc">pare</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="p">.</span><span class="nc">fill3</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="err">...</span><span class="w"> </span><span class="p">}</span>
 <a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a><span class="p">.</span><span class="nc">avi</span><span class="w"> </span><span class="p">.</span><span class="nc">pare</span><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="err">...</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="c">/* el fill no es tan &quot;fill&quot; */</span>
 </code></pre></div>
-<h2 id="insercio">Inserció</h2>
-<h3 id="inline-style-property">Inline: <code>style</code> property</h3>
-<p>A dintre dels elements html a l'atribut <code>style</code>.
-No posem ni el selector ni les claus, només les regles.
-El selector es implícit perque l'element afectat serà
-l'element que té l'atribut.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="p">&lt;</span><span class="nt">p</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;color: red; background-color: lightgrey&quot;</span><span class="p">&gt;</span>Hola món<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-</code></pre></div>
-<p style="color: red; background-color: lightgrey">Hola món</p>
-
-<p>No es recomana fer-ho servir.
-Va bé per provar coses ràpides, inclús editant a les eines de desenvolupament del navegador.
-Però es molt poc mantenible, tendeix a la repetició de codi </p>
-<p>També és l'única manera que alguns clients de correu permeten estilar emails html.
-Per aquest escenari, hi ha eines que converteixen els fulls d'estils a atributs <code>style</code>.</p>
-<h3 id="style-element"><code>&lt;style&gt;</code> element</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
-<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="w">    </span><span class="nt">h1</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="w"> </span><span class="p">}</span>
-<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
-</code></pre></div>
-<h3 id="link"><code>&lt;link&gt;</code></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>  <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;mystyle.css&quot;</span> <span class="p">/&gt;</span>
-<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>
-</code></pre></div>
 <h2 id="resolucio-css">Resolució css</h2>
 <h3 id="especificitat">Especificitat</h3>
 <p>Quan apliquem les regles a un element es prioritzen,
@@ -2948,8 +2853,8 @@ heretarà el color del pare.</p>
 <h3 id="import"><code>@import</code></h3>
 <p>Aquest regla permet organitzar les fulles d'estils en diferents fitxers.
 En el seu ús més bàsic és:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="p">@</span><span class="k">import</span><span class="w"> </span><span class="s1">&#39;./file.css&#39;</span><span class="p">;</span>
-<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="p">@</span><span class="k">import</span><span class="w"> </span><span class="nt">url</span><span class="o">(./</span><span class="nt">file</span><span class="p">.</span><span class="nc">css</span><span class="o">)</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="p">@</span><span class="k">import</span><span class="w"> </span><span class="s1">&#39;./file.css&#39;</span><span class="p">;</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="p">@</span><span class="k">import</span><span class="w"> </span><span class="nt">url</span><span class="o">(./</span><span class="nt">file</span><span class="p">.</span><span class="nc">css</span><span class="o">)</span><span class="p">;</span>
 </code></pre></div>
 <p>També és útil per evitar carregar regles innecessàries
 condicionant la càrrega a situacións específiques:</p>
@@ -2957,16 +2862,16 @@ condicionant la càrrega a situacións específiques:</p>
 <li>Les funcionalitats que soporta el navegador: <code>supports (not (display: grid) and (selector(:has(a))</code></li>
 <li>El tipus de mitjà: <code>screen</code> o <code>paper</code>, <code>orientation(landscape)</code>, <code>(max-width: 400px)</code>...</li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="p">@</span><span class="k">import</span><span class="w"> </span><span class="s1">&#39;./file.css&#39;</span><span class="w"> </span><span class="nt">supports</span><span class="o">(</span><span class="nt">not</span><span class="w"> </span><span class="o">(</span><span class="nt">display</span><span class="o">:</span><span class="w"> </span><span class="nt">grid</span><span class="o">)</span><span class="w"> </span><span class="nt">and</span><span class="w"> </span><span class="o">(</span><span class="nt">selector</span><span class="o">(</span><span class="p">:</span><span class="nd">has</span><span class="o">(</span><span class="nt">a</span><span class="o">)))</span><span class="w"> </span><span class="nt">screen</span><span class="w"> </span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="p">@</span><span class="k">import</span><span class="w"> </span><span class="s1">&#39;./file.css&#39;</span><span class="w"> </span><span class="nt">supports</span><span class="o">(</span><span class="nt">not</span><span class="w"> </span><span class="o">(</span><span class="nt">display</span><span class="o">:</span><span class="w"> </span><span class="nt">grid</span><span class="o">)</span><span class="w"> </span><span class="nt">and</span><span class="w"> </span><span class="o">(</span><span class="nt">selector</span><span class="o">(</span><span class="p">:</span><span class="nd">has</span><span class="o">(</span><span class="nt">a</span><span class="o">)))</span><span class="w"> </span><span class="nt">screen</span><span class="w"> </span><span class="p">;</span>
 </code></pre></div>
 <h3 id="support"><code>@support</code></h3>
 <p>Define de forma condicional bloques de reglas o reglas
 si el navegador soporta las funcionalidades indicadas.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="p">@</span><span class="k">support</span><span class="w"> </span><span class="nt">supports</span><span class="w"> </span><span class="o">(</span><span class="nt">not</span><span class="w"> </span><span class="o">(</span><span class="nt">display</span><span class="o">:</span><span class="w"> </span><span class="nt">grid</span><span class="o">)</span><span class="w"> </span><span class="nt">and</span><span class="w"> </span><span class="o">(</span><span class="nt">selector</span><span class="o">(</span><span class="p">:</span><span class="nd">has</span><span class="o">(</span><span class="nt">a</span><span class="o">))</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="w">    </span><span class="p">:</span><span class="nd">has</span><span class="o">(</span><span class="nt">p</span><span class="o">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="w">        </span><span class="err">...</span>
-<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="p">@</span><span class="k">support</span><span class="w"> </span><span class="nt">supports</span><span class="w"> </span><span class="o">(</span><span class="nt">not</span><span class="w"> </span><span class="o">(</span><span class="nt">display</span><span class="o">:</span><span class="w"> </span><span class="nt">grid</span><span class="o">)</span><span class="w"> </span><span class="nt">and</span><span class="w"> </span><span class="o">(</span><span class="nt">selector</span><span class="o">(</span><span class="p">:</span><span class="nd">has</span><span class="o">(</span><span class="nt">a</span><span class="o">))</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="w">    </span><span class="p">:</span><span class="nd">has</span><span class="o">(</span><span class="nt">p</span><span class="o">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="w">        </span><span class="err">...</span>
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="p">}</span>
 </code></pre></div>
 <h3 id="media"><code>@media</code></h3>
 <p>Tambien llamadas media-queries.
