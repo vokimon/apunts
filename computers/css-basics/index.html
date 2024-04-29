@@ -2879,9 +2879,11 @@ de un element que seleccioni <code>predecessor</code>.</p>
 <a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>Però aquest germà ja no<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div>
 </div>
-<div class="column">
+<div class="column exemple-successor">
 <p><style>
-.marcat + div { color: orange }
+.exemple-successor {
+    .marcat + div { color: orange }
+}
 </style></p>
 <p><div class="marcat">Aquest es el marcat</div>
 <div>Aquest serà taronja</div>
@@ -2892,12 +2894,26 @@ de un element que seleccioni <code>predecessor</code>.</p>
 <p>L'operador posterior és al successor,
 com el descendent al pare.
 Es un germà posterior pero no ha de ser inmediatament el següent.</p>
+<div class="columns exemple-posterior">
+<div class="column">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="p">.</span><span class="nc">marcat</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="nt">div</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">blue</span><span class="w"> </span><span class="p">}</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;marcat&quot;</span><span class="p">&gt;</span>Aquest es el marcat<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>Aquest sera blau<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>I aquest també<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div>
+</div>
+<div class="column">
+<p><style>
+.exemple-posterior {
+.marcat ~ div { color: blue }
+}
+</style></p>
+<p><div class="marcat">Aquest es el marcat</div>
+<div>Aquest sera blau</div>
+<div>I aquest també</div></p>
+</div>
+</div>
 <h3 id="anidament">Anidament <code>&amp;</code></h3>
 <p>L'anidament de blocs ens estalvia codi repetit i agrupa regles conceptualment.
 Simplement cal definir un bloc dintre de les claus d'un altre:</p>
