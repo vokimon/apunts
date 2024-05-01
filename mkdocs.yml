@@ -7,12 +7,14 @@ nav:
   - README: README.md
   - Computers:
     - css:
+      - computers/css-basics.md
       - computers/css.md
-      - computers/css-animations.md
+      - computers/css-design-principles.md
       - computers/css-boxmodel.md
       - computers/css-normalflow.md
       - computers/css-flexbox.md
       - computers/css-grid.md
+      - computers/css-animations.md
       - computers/css-typography.md
       - computers/css-methodologies-architectures.md
       #- computers/css-frameworks-preprocessors.md

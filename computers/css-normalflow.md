@@ -89,19 +89,27 @@ El flujo normal es `flow`.
 
 ## Position
 
-Position 
+El atributo `position` determina varios aspectos del posicionamiento:
 
+- Si el elemento participa del algoritmo de layout (normal, flex, grid...) desplazando a los otros elementos o se sale de él.
+	- los desplazan `static`, `relative` y `sticky`
+	- se salen `absolute` y `fixed`
+- Qué referencia adoptan sus propiedades de `inset` (`top`, `left`, `right`, `bottom`)
+	- Se ignoran (`static`)
+	- Su posición estática (`relative`)
+	- El documento o el ancestro mas cercano no `static` (`absolute`)
+	- La ventana (`fixed`)
+	- TODO: `sticky`???
+- Si establece como referencia absoluta para sus hijos `inset` (`top`, `left`, `right`, `bottom`)
+	- Solo `static` no lo hace
 
-El valor por defecto del atributo `position`, `static`,
-significa que los elementos contenidos se van a posicionar usando el llamado _flujo normal_ o _normal flow_.
-Como es el normal, se comporta como esperarías, pero es importante saber qué esperar.
-
-- Se ignoran las propiedades de posicionamiento explícito: `top`, `left`, `right`, `bottom`.
-- No se considera el elemento como referencia de posicionamiento explícito para sus hijos (más sobre esto abajo)
-- Los hijos se posicionan siguiendo el flujo de lectura,
-  teniendo en cuenta lo que se ha colocado antes.
-
-
+El valor `sticky` se comporta como `relative` hasta que sale del viewport.
+En ese momento se comporta como `fixed`.
+	
+El valor por defecto del atributo `position`, `static`.
+	
+  
+  
 Por ejemplo, aunque `display: flex` y `display: grid`,
 determinan un layout de los elementos internos diferentes al flujo normal,
 el elemento que tiene tales propiedades, se considerarà block en su contenedor.

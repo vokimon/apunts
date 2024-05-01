@@ -1,6 +1,5 @@
 # CSS: Animaciones
 
-
 ## Accessibilidad primero
 
 ### No molestar

@@ -124,6 +124,28 @@ Behaviours:
 
 
 ### Trabajo de tierras (LTC)
+
+Per conflictes entre parts.
+Genera empaties.
+
+Representem espai físic dividit entre les faccions i un espai comú en mig.
+
+Es situa cadascú a la seva terra i s'explica al resta
+
+1. Com és viure en la seva terra.
+2. Que es lo més important i que aportem?
+3. Quins reptes, pressions tenim per viure-hi?
+4. Quines ajudes o suport necessitem de les altres terres?
+
+Despres tothom es mou a cadascuna de les altres terres
+sense la gent de cada terra i després els expliquem com els veuen des de fora.
+
+5. Como ha sido que alguien os explique?
+
+6. Què ens duen de cadascuna de les altres terres?
+
+7. Como se siente en estar en la terra comuna?
+
 ### Discovery and Action Dialog (EL)
 ### Alianzas de equipo (LTC)
 
@@ -286,7 +308,23 @@ Matisos
 
 ## Responsabilitat
 ### Premortem (Agils)
-Anàlisis de riscos
+
+Anàlisis de riscos i planificacio.
+
+Imaginem que estem al final del projecte i ha terminat.
+Imaginem que ha anat de la forma més estrepitosa possible.
+
+- Perque no ha funcionat? Que va passar?
+- **Perquè** hem arribat a això?
+- Qué podriem haver fet per evitar-ho? (Capità a posteriori, a priori)
+
+Desde el present
+
+- Que podem fer abans de que passi?
+	- Implica gastar recursos si o si
+- Que hem podem fer si veiem que està passant?
+	- Implica preveure recursos
+
 ### Delegation poker (M3.0)
 
 Niveles de delegación
@@ -379,8 +417,46 @@ En grupo,
 - cosas que no todos tienen en cuenta
 
 ### Remember the future (Agils)
+
+La versió positiva del Premortem
+
+Retroplanning
+
+Sovint ens oblidem de certes coses com la comunicació,
+
+Imaginem que ha estat un exit i recordem que es el darrer que vam fer.
+Anem viatjant cap enrera, de que necessitem per fer cada cosa.
+
+- Surgeixen tasques que sovint no es preveuen
+- Ens dona informacio dels tempos reals
+- Serveix per descartar coses que ningú necessita despres (lean!)
+
+Mes que el detall es important que estiguin reflexades les mirades (comunicació, legal...)
+
 ### Min Specs (EL)
 ### Tecnica organizacion Round Robin
+
+Ajuda a prioritzar de forma democràtica
+
+Cadascu escriu ocultes les seves 3 opcions prioritzades entre elles.
+Després desvelem persona a persona la primera,
+i parlem perque i anem recollint les similars (sigui primera, segona o tercera).
+Quan tothom ha explicat la seva primera,
+passem a la segona.
+
+Serveix perque surtin els interessos de tots previ a la influència.
+No per votar, pero si veure l'ambient.
+Després d'explicar-ho poden haver canvis.
+
+La priorització personal té dos efectes:
+
+- afecta l'ordre en que surten els temes
+- serveix per que arribi a l'equip la importancia que li dones
+
+Eina similar (Pere).
+Surten les opcions primer, s'unifiquen, després es voten.
+
+https://scrumlr.io/login
 
 ### 25/10 Crowd Sourcing (EL)
 ### Tecnica organizacion round robin (M3.0)

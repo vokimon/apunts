@@ -1,6 +1,7 @@
-# Design principles
+# CSS: Principios de diseño
 
-https://www.refactoringui.com/
+Resumen del libro [Refactoring UI](https://www.refactoringui.com)
+
 
 
 ## Empezando de cero
@@ -273,7 +274,7 @@ Usando grises con temperatura
 - Si subimos un poco la saturación (12%) tendremos grises templados o frios segun el hue.
 
 
-## Depth
+## Profundidad
 
 Dar relieve emulando una fuente de iluminación
 
@@ -321,7 +322,7 @@ Solapamiento
 - Si los elementos se confunden, por ejemplo porque son imagenes añadir un borde sutil
 
 
-## Images
+## Imágenes
 
 
 Usa fotos de calidad
