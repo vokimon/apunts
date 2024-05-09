@@ -147,6 +147,18 @@ sense la gent de cada terra i després els expliquem com els veuen des de fora.
 7. Como se siente en estar en la terra comuna?
 
 ### Discovery and Action Dialog (EL)
+
+Para problemas crónicos
+
+- Cómo sabes cuando sucede el problema X?
+- Cómo contribuyes de forma eficiente a solucionarlo?
+- Qué te impide intervenir?
+- Sabes de alguien que resuelva el problema X frecuentemente? Qué comportamientos y prácticas observas en esa persona?
+- Tienes alguna idea para resolver el problema?
+- Qué se necesitaria hacer? Hay voluntarios?
+- Quién más necesitaríamos que se involucrase?
+
+
 ### Alianzas de equipo (LTC)
 
 Document viu que explicita la cultura o atmosfera que l'equip necessita o vol.
@@ -160,9 +172,6 @@ Surten paraules:
 - Altres son paraules grans que hem de concretar com equip
 
 Brainstorming: Com solucionem els conflictes?
-
-
-
 
 
 ### Generative Relationships - STAR (EL)
@@ -185,6 +194,15 @@ Si cal, proposar entre totes punts de millora.
 
 ### Wicked question (EL)
 
+Si, fem aixo, pero, passa aixó.
+
+Si, fem molts testos unitaris, pero els tenim tots petant.
+
+Brainstorming al reves:
+Com fem per a que passi mes encara la part xunga.
+D'aquest brain storming potser surt una idea que podem invertir.
+
+
 ## Compromiso
 
 ### Gremios y comunidades de pràctiques (M3.0)
@@ -197,6 +215,9 @@ Cal tenir:
 
 
 ### Mito original para las organizaciones (LTC)
+
+Objectiu: Reflexionar sobre les motivacions que ens van portar a entrar en l'equip
+
 ### Constelaciones informales (M3.0)
 
 Sirve para calibrar la importancia de un tema dentro del grupo.
@@ -304,6 +325,12 @@ Matisos
 
 ### Celebrity interview (EL)
 
+Convertir una presentació en una intrevista ben plantejada.
+
+Genera variació en com presentar la informació.
+
+Més entretinguda pel diàleg.
+
 
 
 ## Responsabilitat
@@ -341,6 +368,15 @@ Ubicar cada tipus de decissió en aquests nivells.
 On estan i on volem que estiguin.
 
 ###	Wise Crowds (EL)
+
+Algú planteja un problema que vol tractar a l'equip.
+
+En presencial, la persona que presenta el problema es dona la volta.
+La resta fa de consultors.
+El plantejant escolta sense intervindre, pero apunta les coses que surten.
+Els consultors poden preguntar-li coses puntuals.
+
+
 ### Troika consulting (EL)
 ### Competence matrix (M3.0)
 
@@ -434,6 +470,17 @@ Anem viatjant cap enrera, de que necessitem per fer cada cosa.
 Mes que el detall es important que estiguin reflexades les mirades (comunicació, legal...)
 
 ### Min Specs (EL)
+
+Qué es lo absolutamente esencial para el proyecto.
+
+- espai obert per fer afegir tot el que podem fer
+- plantejem si aixo ho treiem, encara podem aconseguir l'objectiu
+	- Hem de tenir clar l'objectiu
+- focalitzar els esforços en el que es prioritaria
+
+Acostumem a ser molt detallistes i sovint no cal.
+Sobredonem coses.
+
 ### Tecnica organizacion Round Robin
 
 Ajuda a prioritzar de forma democràtica
@@ -459,12 +506,112 @@ Surten les opcions primer, s'unifiquen, després es voten.
 https://scrumlr.io/login
 
 ### 25/10 Crowd Sourcing (EL)
+
+Prioritzar en grups grans. Presencial.
+
+No censura.
+
+Es generen les targetes amb les idees, les anem passant en rodona i puntuem de l'1 al 5.
+Les targetes que vagin arribant al 25 les anem escollint fins tenir-ne 10.
+
+No totes les targetes han de passar per tothom.
+I ha viaixos.
+
+
 ### Tecnica organizacion round robin (M3.0)
+
 ### 15% Solutions (EL)
+
+Empoderament personal quan no tenim control total sobre el problema.
+
+Evita la paralisi per analisi.
+
+Que puc fer jo personalmente amb les capacitats que tinc
+per anar cap a on vull.
+
 
 ## Generals
 
 1-2-4-all: reflexio, dialeg, construcció, consens
+
+
+
+
+### Dinàmica de presa de decisións en grup
+
+[_Facilitator Gide for parcipatory decission-making_, Sam Kaner](https://storypikes.com/workshops/PDFs/Facilitators%20Guide%20to%20Participation%20by%20Sam%20Kaner%20with%20Lenny%20Lind-Catherine%20Toldi-Sarah%20Fisk%20and%20Duane%20Berger-2007.pdf)
+
+- Fase divergent
+	- Generar alternatives
+	- Discusió oberta i fluida
+	- Recollir diferents punts de vistes
+	- Supendre el judici
+	- Opinions familiars -> Perspectives Divergents
+
+- Fase emergent
+	- Integració de formes de pensar
+	- Gestió de la fustració
+	- Entendre i acceptar les altres formes de pensar
+	- Confusió
+
+- Fase convergent
+	- Avaluar alternatives
+	- Resumir punts clau
+	- Ordenar el que s'ha dit
+	- Aplicar el judici
+	- Per arribar a solucions comunes
+	- Pensament 
+
+Problemes:
+
+- Opinions familiars: A la fase divergent a l'inici apareixen les solucions típiques, no pas les innovadores. Potser està bé, però potser ens perdem solucions millors.
+	- Costa introduir idees noves quan ja hem convergit
+- Excés de lideratge: Opinions que arrastren a la resta.
+
+L'aceptació de la fase emergent, és un pas.
+Ens permet acceptar el que està passant.
+
+- Business as usual: quan les solucions familiars son prou
+- Divergent zone: 
+- Groan zone:
+- Convergent zone:
+- Closure zone
+
+Com volem que sigui l'espai:
+
+- Participació plena
+	- Ronda fora del tema que obligui a tothom a parlar, per activar a tothom.
+	  Dinàmiques icebreakers, que siguin curtes.
+	- Persones prenent risc per proposar alternatives
+	- Obrir el procés a més pensament divergent
+	- Permetre pensaments a mig formar
+- Entesa mutua
+	- Apendre de la resta
+	- Entendre i aceptar la legetimitat de les necessitats i objectius de la resta
+	- Coneixer-se mutuament
+	- Amplitud del nostre propi procés mental
+- Solucions Inclusives
+	- Tots tenim part de la veritat
+	- Descubrir solucions completament noves
+	- Solucions no obvies
+- Responsabilitat Compartida
+	- Aceptació de la responsabilitat en el resultat i en el procés
+	- Acords sostenibles requereixen soport
+	- Tots ens som propietaris
+	- Trabajar las objeciones para conseguir consenso/consentimiento
+
+### Participació plena
+
+
+![](Participacio-Reptest.png)
+
+
+
+
+
+
+
+
 
 
 
