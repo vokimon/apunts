@@ -48,36 +48,31 @@ Limita las opciones
 	- Colores, tamaños y grosor de la fuente, tamaño de los iconos, espaciados...
 	- Tener opciones limitadas agiliza el proceso.
 	- También hace más coherente el conjunto
-- Define sistemas (conjuntos de valores validos para un paràmetro) por adelantado
+- Define **sistemas** (conjuntos de valores validos para un paràmetro) por adelantado
 - Tener opciones perceptiblemente diferentes ayuda a descartar
 - Sistematiza lo que puedas
 	- **Tintas de la paleta:** Usar de 2 a 5 colores principales
-		- Asignarles funciones
+		- Asignarles funciones (primario, accent, enterprise, warning, background... no fucsia, green...)
 		- Más facil de intercambiar las funciones
 	- **Tonalidades de la paleta:**
 		- Para cada tinta, máximo 8 y 10 tonos entre el casi blanco y el casi negro
 		- En los cambios 
-	- Tamaños de letra
 	- Tamaños de iconos: 12px, 16px, 24px, 32px
 	- Font size: Saltos perceptibles a simple vista
 	- Font weight: 200 es un salto perceptible
-	- Line height
-	- Margin
-	- Padding
+	- Otros tamaños: Line height, Margin, Padding, Border width...
 	- Width
 	- Height
 	- Box shadows
 	- Border radius
-	- Border width
 	- Opacity
 
 
 ## Jerarquías
 
-Cuando todo en el interfaz demanda atención, se percive ruidoso.
+Cuando todo en el interfaz demanda atención, se percibe ruidoso.
 
 Cuando intencionadamente se enfatiza de forma desigual los elementos és más fácil entrar al contenido.
-
 
 Tamaño pero no solo
 
@@ -101,7 +96,7 @@ Etiquetas como último recurso
 - A menudo el formato del valor ya dice que es (telefonos, nombre, precio...)
 - Se puede mezclar la etiqueta y el valor: _habitaciones: 3_ vs _3 habitaciones_
 - Si las pones, son secundarias, el valor es lo importante
-- Tienen importancia cuando los valores son similares (ie tamaños) y tenemos que destacar cual es cual (alto, ancho...)
+- Tienen importancia cuando los valores son similares (ie medidas) y tenemos que destacar cuál es cuál (alto, ancho...)
 
 Jerarquia de documento vs Jerarquia visual
 
@@ -109,7 +104,6 @@ Jerarquia de documento vs Jerarquia visual
 - No necesariamente hay que destacarlos visualmente en la misma jerarquia
 
 Equilibrar grosor y contraste
-
 
 - Cuando no es bueno modificar la jerarquia alterando uno se puede compensar con el otro
 - Ejemplo: los iconos parecen bold y no se le puede quitar -> reducir con contraste
@@ -121,7 +115,7 @@ Jerarquizar botones
 - Acciones primarias destacadas: solidas, contraste alto
 - Acciones secundarias claras no prominentes: lower contrast o outlines
 - Acciones terciarias descubribles pero ignorables: Como links
-- Acciones destructivas: El estilo rojo llamativo solo cuando son la accion primaria
+- Acciones destructivas: El estilo rojo es demasiado llamativo, solo cuando son la accion primaria
 
 ## Maquetado
 
@@ -292,12 +286,12 @@ Usar el grosor de la sombra para emular elevación sobre el fondo
 Un sistema de sombras, tiene las ventajas de los otros sistemas
 
 - Ventajas de los otros sistemas: Coherencia, agilidad de desarrollo...
-- Definirlo como colores: extremos aceptables y rellenas en pasos perceptibles
+- Definirlo como con los colores: extremos aceptables y rellenas en pasos perceptibles
 
 Interacción
 
 - Hundir los botones cuando los clickas
-- Levantar los elementos cuando haces drag an drop
+- Levantar los elementos cuando los arrastras
 
 Sombras en dos partes
 
