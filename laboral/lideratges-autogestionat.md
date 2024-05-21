@@ -1,8 +1,12 @@
-# Eines de gestió
+# Eines d'auto-gestió
 
 
+- [Tuataramente - Herramientas de autoorganización para equipos](Tuataramente - Herramientas de autoorganización para equipos.pdf)
+- <https://miro.com/app/board/uXjVKdpZtbQ=/>
+- [Dinámicas difíciles y retos comunes](Dinámicas difíciles y retos comunes.pdf)
+- [Participacio-Reptes.png](Participacio-Reptes.png)
 
-https://miro.com/app/board/uXjVKdpZtbQ=/
+## Conceptes
 
 - **Autonomia:** Presa de decisions en un marc establert
 - **Autogestio:** Autonomia + gestio del trabajo y la responsabilitat de cumplir objectius
@@ -10,8 +14,8 @@ https://miro.com/app/board/uXjVKdpZtbQ=/
 
 Per estructurar les eines les organitzarem pel tipus de nessesitat que cobreixen.
 
-Patrick Lencioni - Piràmide de necesidades (Maslow) para equipos autoorganizados.
-La base es necesaria para llegar a lo de arriba.
+Patrick Lencioni - Piràmide de necesidades (anàlog a la de Maslow) per a equips auto-organitzats.
+Les necessitats de base són necesaria per arribar a les superiors:
 
 - Resultados: Enfocar en logros colectivos
 - Responsabilidad: 
@@ -19,7 +23,7 @@ La base es necesaria para llegar a lo de arriba.
 - Conflicto: Debate ideologico constructivo
 - Confianza: Ser vulnerable sin temer las repercusiones
 
-Hi ha eines de diferents escoles:
+A cada nivell, diferents escoles ens aporten eïnes:
 
 - [Management 3.0](https://management30.com/)
 - [Estructuras liberadoras](https://estructurasliberadoras.com/)
