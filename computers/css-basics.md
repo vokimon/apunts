@@ -274,7 +274,7 @@ Es fan servir per coses com ara:
 
 ## Combinacions de selectors
 
-### Llista `,`
+### Llista (`,`)
 
 Quan separem selectors **amb comes**,
 vol dir que la regla es donarà si **qualsevol**
@@ -293,7 +293,7 @@ selector2 { ... }
 
 Poder especificar els selectors junts, redueix redundància al codi.
 
-### Concurrents
+### Concurrents (sense separació)
 
 Quan juntem selectors **sense espais entre ells**,
 tots els selectors han de donar-se en el mateix element per seleccionar-ho.
@@ -320,7 +320,7 @@ tots els selectors han de donar-se en el mateix element per seleccionar-ho.
 		<h1 class="apendix">h1 amb classe</h1>
 
 
-### Descendents
+### Descendents (<space>)
 
 Quan **separem selectors amb espais**,
 per exemple, `ancestor descendant`
@@ -365,7 +365,7 @@ donat que quan la nostra fulla d'estils creix,
 genera interaccions entre les regles complexes d'entendre,
 i fa complex el manteniment.
 
-### Fills
+### Fills (`>`)
 
 Si separem dos selectors amb un `>`,
 per exemple `selector_pare > selector_fill`,
@@ -405,7 +405,7 @@ Si el fill deixa de ser directe, si interposem un contenidor en mig,
 el selector deixarà de ser valid.
 
 
-### Successor `+`
+### Successor (`+`)
 
 Quan separem els selectors amb **un signe  `+`**,
 per exemple, `predecessor + successor`,
@@ -444,7 +444,7 @@ de un element que seleccioni `predecessor`.
 		<div>Però no pas aquest</div>
 
 
-### Posterior `~`
+### Posterior (`~`)
 
 L'operador posterior és al successor,
 com el descendent al pare.
@@ -653,11 +653,13 @@ si el medio tiene las características descritas.
 - `@color-profile` --
 - ...
 
-## Pseudo-elements
+## Llistats
+
+### Pseudo-elements
 
 Parts internes dels elements que es poden estilar independentment.
 
-Generals
+#### Generals
 
 - `::before`: aplica a un element virtual que està just abans de cada element
 - `::after`: aplica a un element virtual que està just darrera de cada element
@@ -665,7 +667,7 @@ Generals
 - `::first-letter`: aplica a la primera lletra del contingut
 - `::selection`: aplica al text seleccionat
 
-Altres molt més específics (pel elements específics): 
+#### Altres molt més específics (pel elements específics): 
 
 - `::placeholder`: aplica a el text substitutori a alguns camps de formulari.
 - `::marker`: aplica a la gorguilla
@@ -675,11 +677,11 @@ Altres molt més específics (pel elements específics):
 - `::cue`: aplica als subtítols d'un element `video`
 - `::backdrop`: aplica a l'element que tapa el fons quan es mostra un element `dialog`
 
-## Pseudo-classes
+### Pseudo-classes
 
 Representen situacions o estats dels elements.
 
-Structural
+#### Structural
 
 - `:root`: l'arrel del document, normalment `html`
 - `:empty`: element que com a molt conté espais
@@ -690,7 +692,7 @@ Structural
 - `:last-child`: equival a `nth-last-child(1)`
 - `:only-child`: si no té germans (equival a `:first-child:last-child`)
 
-Interacció
+#### Interacció
 
 - `:hover` el ratoli passa per damunt
 - `:active` l'usuari està interactuant (pe. fent click)
@@ -698,13 +700,13 @@ Interacció
 - `:focus`: quan l'element te el focus de teclat
 - `:focus-within`: quan l'element o algun fill té el focus de teclat
 
-Visualització
+#### Visualització
 
 - `:fullscreen`: quan l'element esta en mode pantalla complerta
 - `:modal`: quan l'element (dialeg, popup...) exclou la interacció amb la resta d'elements
 - `:picture-in-picture`: quan l'element, normalment un video, està extret a una subfinestra de reproducció fora de la pàgina
 
-Controls
+#### Controls
 
 - `:enabled` camp amb interaccio habilitada
 - `:disabled` camp amb la interacció deshabilitada
@@ -725,7 +727,7 @@ Controls
 - `:checked`: radio o checkbox marcat
 - `:indeterminate`: radio o checkbox en estat indeterminat
 
-Funcionals
+#### Funcionals
 
 - `:is()`: concorda a qualsevol dels selectors dintre dels parèntesis (separats per comes)
 - `:has()`: Com el descendant pero queda seleccionat el pare no el descendant.
