@@ -295,30 +295,38 @@ Currency:
 
 Fiat Money (Dinero fiduciaro):
 
+## Tributos, impuestos, tasas
 
 Tributo:
-	- Ingreso público y de derecho
-	- que impone el estado
-	- y exigen las administraciones públicas
-	- como consequencia de la realización de un hecho imponible
-	- al que la ley vincula el deber
-	- con caracter contributivo (destinado a generar fondos públicos)
-Multa: Ejemplo de exigencia de prestaciones pecuniarias que no es tributo.
-	- El objetivo no es generar fondos si no sancionar un ilícito
-Hecho imponible: La circumstancia que da pie a que se cobre el tributo.
 
-Tasa/Fee: Tributo que se paga por una utilización de los recursos públicos: espacios, servicios
-	- Que no es tasa? El precio público, cuando entra en competición con oferta privada
-Contribución especial: Pago dirigido a una mejora concreta de la que se beneficia el ciuadadano 
-Impuesto: Tributo exigido sin contraprestacion
+- Ingreso público (se lo lleva algún organismo público)
+- y de derecho (esta recogido en alguna ley)
+- que impone el estado (se usan los medios del estado para asegurar su pago)
+- y exigen las administraciones públicas (son las distintas adminsitraciones públicas las que ordenan cada tributo)
+- como consequencia de la realización de un hecho imponible
+- al que la ley vincula el deber
+- con caracter contributivo (destinado a generar fondos públicos)
 
+No se consideran tributos:
+
+- Multas: el objetivo no es generar fondos sinó sancionar un ilícito
+- Precio púbilco: cuando entra en competencia con la oferta privada
+
+**Hecho imponible:** La circumstancia que da pie a que se cobre el tributo.
+
+**Contraprestación:** Algo a lo que se tiene acceso pagando el tributo (puede no ser nada)
+
+- Según su contraprestación:
+	- Impuesto: Tributo exigido sin contraprestación
+	- Tasa/Fee: Tributo que se paga por una utilización de los recursos públicos: espacios, servicios
+		- Que no es tasa? El precio público, cuando entra en competición con oferta privada
+	- Contribución especial: Pago dirigido a una mejora concreta de la que se beneficia el ciuadadano 
 - Según el hecho imponible
 	- Impuesto Directo: Se grava la riqueza de las personas.
 	- Impuesto Indirecto: Se gravan bienes y servicios
-- Según se consideren circumstancias personales
+- Según si se consideren circumstancias personales
 	- Impuesto Personal: se consideran
 	- Impuesto Real: no se consideran
-- Según 
 - Según cuando se producen
 	- Impuestos Periódicos: se van pagando mientras exista el hecho
 	- Impuestos Instantàneos: solo cuando se produce el hecho
