@@ -6,26 +6,29 @@ repo_url: https://github.com/vokimon/apunts
 nav:
   - README: README.md
   - Computers:
-    - css:
-      - computers/css-basics.md
-      - computers/css.md
-      - computers/css-design-principles.md
-      - computers/css-boxmodel.md
-      - computers/css-normalflow.md
-      - computers/css-flexbox.md
-      - computers/css-grid.md
-      - computers/css-animations.md
-      - computers/css-typography.md
-      - computers/css-methodologies-architectures.md
-      #- computers/css-frameworks-preprocessors.md
-    - javascript:
-      - computers/jsecosystem.md
-      - computers/jsonschema.md
-      - computers/react-formik.md
-      - computers/react.md
-      - computers/godot.md
+    - web:
+      - css:
+        - computers/css-basics.md
+        - computers/css.md
+        - computers/css-design-principles.md
+        - computers/css-boxmodel.md
+        - computers/css-normalflow.md
+        - computers/css-flexbox.md
+        - computers/css-grid.md
+        - computers/css-animations.md
+        - computers/css-typography.md
+        - computers/css-methodologies-architectures.md
+        #- computers/css-frameworks-preprocessors.md
+      - javascript:
+        - computers/jsecosystem.md
+        - computers/jsonschema.md
+        - computers/react-formik.md
+        - computers/react.md
+        - computers/rest.md
+      - computers/fastapi/fastapi.md
+      - computers/security.md
+    - computers/godot.md
     - computers/computer-graphics.md
-    - computers/fastapi/fastapi.md
     - computers/android-glossary.md
     - computers/cpp11.md
     - computers/deeplearning.md
@@ -36,7 +39,6 @@ nav:
     - computers/timewarrior.md
     - computers/xpxplained.markdown
     - computers/branching-patterns.md
-    - computers/security.md
   - Math:
     - Math Foundations: math/mates-fundation.md
     - Statistics: math/stats.md
@@ -62,6 +64,7 @@ nav:
     - lang/arabic-alphabet.md
     - lang/arabic.md
     - Deutsch: lang/deutsch.md
+    - Japanese: lang/japan.md
     - lang/english-expresions.md
     - lang/english-old-pronoums.md
     - lang/english-prepositions.md
@@ -73,7 +76,9 @@ nav:
     - lang/stylistic-figures.md
   - History:
     - history/cristianismo.md
-  - Economics: economics.md
+  - Economics: varios/economics.md
+  - Psicology:
+      - varios/porque-creemos-en-mierdas.md
   - 3D:
       - 3d/3d-production-pipeline.md
       - 3d/blender-materials.md
