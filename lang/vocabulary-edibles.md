@@ -161,7 +161,63 @@ lat: Fagopyrum esculentum
 	es: trigo sarraceno, alforfón
 	Granos con tres aristas crecen de flores en ramilletes de flores
 
-	
+
+## Allium
+
+non bulbing
+
+lat: Allium fistulosum
+	es: Cebollino
+lat: Allium schoenoprasum
+	es: cebollino
+	ca: cibulet
+	en: chives
+lat: Allium ampeloprasum o Allium porrum
+	es: puerro
+	ca: porro
+	en: leek
+lat: Allium sativum
+
+
+lat: Allium cepa
+	es: cebolla
+	ca: ceba
+	en: onions
+
+	Tienen dos temporadas
+		la primera a partir de semilla desarrolla un bulbo inicial
+		la segunda a partir del bulbo, crece y florece que es cuando se recoge
+
+	Variedades
+		Yellow onion
+		Sweet onion (no porque tenga azucares sino por tener menos allicium
+		Red onion
+		White onion (mexican cousin)
+		Shallot (chalotas)
+			Tienen dientes como el ajo
+
+	Corte:
+		whole
+		sliced juliana
+		diced
+		minced
+		paste
+
+
+
+
+
+
+- Scallions, ceba de primavera,
+	- Se recogen antes de que desarrollen bulbo
+	- Calçot
+- Chives
+	- 
+- Leeks
+- Ramps
+- Chineses Garlic chives
+- shallot
+- chinese onion
 
 
 
