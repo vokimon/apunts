@@ -6,6 +6,9 @@
 - Katakata: Silábico para onomatopeyas, cursiva, prestamos y neologismos
 - Kanji: Ideogramico
 - Furigana: hiragana placed below or at the right of a kanji to explain how to spell
+- Romanji: transcripción latina
+
+- https://en.wikipedia.org/wiki/Nihon-shiki_romanization
 
 ## Vocales
 
@@ -271,14 +274,45 @@ Tiene efecto contacto con la siguiente tornandola velar (g, c) o labial (p, b) c
 - やさいをたべる 'yasaiwotaberu' to eat vegetables, yasai=vegetables, taberu=comer
 
 
+## Excepciones a la pronunciación cuadriculada
+
+- S
+	- しshi, no [si]
+	- しゃsha,  no [shia], ni [sia]
+	- しゅshu, no [shiu] ni [siu]
+	- しょsho, no [shiu] ni [siu]
+- T
+	- つtsu, no [tu]
+	- ちchi, no [ti]
+	- ちゃcha, no [tiya] ni [chiya]
+	- ちゅchu, no [tiyu] ni [chiyu]
+	- ちょcho, no [tiyo] ni [chiyu]
+- H
+	- ふ fu
+- J
+	- じji, no [zi]
+	- じゃja, no [ziya] ni [jiya]
+	- じゅju, no [ziyu] ni [jiyu]
+	- じょjo, no [ziyo] ni [jiyo]
+- D 
+	- ぢdi
+	- づdu 	 
+	- ぢゃdya
+	- ぢゅdyu
+	- ぢょdyo
+- Otras
+	- くゎkwa 	  	  	 
+	- ぐゎgwa 	  	  	 
+	- をwo 
+
 
 ## Con variantes (para copiar)
 https://symbl.cc/en/unicode/blocks/hiragana/
 
 ```
 あa   かka がga   さsa ざza   たta  だda   なna まma らra   はha ばba ぱpa  やya わwa
-いi   きki ぎgi   しxi じji   ちti  ぢdi   にni みmi りri   ひhi びbi ぴpi       ゐwi
-うu   くku ぐgu   すsu ずzu   つtu  づdu   ぬnu むmu るru   ふhu ぶbu ぷpu  ゆyu ゔvu      
+いi   きki ぎgi   しxi じji   ちchi ぢdji  にni みmi りri   ひhi びbi ぴpi       ゐwi
+うu   くku ぐgu   すsu ずzu   つtsu づdzu  ぬnu むmu るru   ふhu ぶbu ぷpu  ゆyu ゔvu      
 えe   けke げge   せse ぜze   てte  でde   ねne めme れre   へhe べbe ぺpe       ゑwe
 おo   こko ごgo   そso ぞzo   とto  どdo   のno もmo ろro   ほho ぼbo ぽpo  よyo をwo 
 んn   ゃia ゅiu ょio
@@ -367,7 +401,6 @@ ponemos una raya horizontal.
 
 
 
-
 ## Con variantes para copiar
 
 https://symbl.cc/en/unicode/blocks/katakana/
@@ -382,6 +415,15 @@ Digraff smalls:
 ァa   ィi   ゥu   ェe   ォo
 ヵka   ヶke   ッtsu   ャya   ュyu   ョyo   ヮwa
 Other: ン trailing n   ー long vowel marker   ・ middled dot  ヽ iteration mark  ヾ voiced iteration mark   ヿ digraph koto
+```
+
+## Sin variantes para aprender las formas
+```
+ア a   カ ka   サ sa    タ ta    ナ na   マ ma   ラ ra   ハ ha   ワ wa  ヤ ya
+イ i   キ ki   シ shi   チ ti    ニ ni   ミ mi   リ ri   ヒ hi   ヰ wi
+ウ u   ク ku   ス su    ツ tsu   ヌ nu   ム mu   ル ru   フ hu          ユ yu
+エ e   ケ ke   セ se    テ te    ネ ne   メ me   レ re   ヘ he   ヱ we
+オ o   コ ko   ソ so    ト to    ノ no   モ mo   ロ ro   ホ ho   ヲ wo  ヨ yo
 ```
 
 ## Digrafos
@@ -428,18 +470,9 @@ Amplian los sonidos
 
 
 
-## Sin variantes para aprender las formas
-```
-ア a   カ ka   サ sa    タ ta    ナ na   マ ma   ラ ra   ハ ha   ワ wa  ヤ ya
-イ i   キ ki   シ shi   チ ti    ニ ni   ミ mi   リ ri   ヒ hi   ヰ wi
-ウ u   ク ku   ス su    ツ tsu   ヌ nu   ム mu   ル ru   フ hu          ユ yu
-エ e   ケ ke   セ se    テ te    ネ ne   メ me   レ re   ヘ he   ヱ we
-オ o   コ ko   ソ so    ト to    ノ no   モ mo   ロ ro   ホ ho   ヲ wo  ヨ yo
-```
-
 Se parecen:
 - イi  ナna  チti  テte  キkia
-- シshi  ツtsu  ソso  ノno
+- シshi  ツtsu  ソso ンn ノno
 - アa  マma  ヱwe  ヤya
 - クku  ケke
 - エe  ユyu 
@@ -450,7 +483,446 @@ Se parecen:
 - ンn  ソso  リri  ルru (y la I del hiragana)
 - ヲwo  ラ ra
 - スsu  ヌnu
-- 
+
+
+# Pronunciación
+
+
+
+
+## Verbos corrientes
+https://www.youtube.com/watch?v=smeDBe_rryQ
+
+
+
+- tatsu: estar de pie
+- tachiagaru: levantarse
+- deru: salir
+- hairu: entrar
+- datsu: sacar
+- ireru: meter
+- managu: aprender
+- renshuu suru
+- tsukau [skal]: usar
+- kanjiru: feel
+- cotaeru: responder
+- shitsumonseru [stumonseru]: preuntar
+- haku: barrer
+- soujisuru: limpiar
+- sagasu: buscar
+- hataraku: trabajar
+- kidzuku: notar/darse cuenta
+- ketsukonsuru [ ketkonsurú]: casarse
+- nikonsuru: divorciarse
+- kimeru: decidir
+- tatsukeru [taskeru]: ayudar
+- tsukuu [skuu]: salvar
+- kurikasu [kuricais]: repetir
+- kazehohiku [kazeoshku]: resfriarse
+- tsuku [sku]: llegar
+- kasu: prestar
+- kariru: tomar prestado
+- nikaisuru: entender
+- aku: abrirse
+- akeru: abrir
+- shimaru: cerrarse
+- shimero: cerrar
+- yobu: llamar
+- sakebu: gritar
+- tokeru: derretir
+- uku: flotar
+- shidzumu: undirse
+- onegaisuru: pedir
+- watsureru: olvidar
+- modoru: volver
+- shinjiru: creer
+- moushicoru: [moshcoru]
+- kamesu: probar (ropa)
+- odoroku: sorprenderse
+- keikakusuru: planificar
+- henshiuusuru: [henshusuru] editar
+- omou: pensar
+- omoidasu: recordar
+- tsumeru: hacer las maletas
+- shiuuchiuusuru: concentrarse
+- llegar tarde: okureru
+- jiushinsuru: enviar mensaje
+- soushinsuru: recibir mensaje
+- sakujosuru: delete
+- haru: colgar en la pared
+- nigeru: escaparse
+- wataru: cruzar
+- watasu: entregar
+- sankasuru: participar
+
+
+
+## grammar
+
+
+### verb conjugation
+
+#### ichidan vs godan verbs
+
+La forma de referencia de los verbos (lo que en español seria el infinitivo)
+acaba siempre en 'u' (o en una silaba de la columna 'u').
+Es la forma del presente a pelo.
+De hecho se escriben con un kanji y un kana de la columna 'u' (u, pu, ru, bu, nu, yu...).
+(en estos apuntes no voy a usar los kanji sino su transcripcion hirigana o romanji,
+pero voy a separar con un guion lo que seria el kanji de la desinencia)
+
+Los verbos en japonés se conjugan obteniendo una inflexión del verbo
+a la que se pueden añadir adjetivos, auxiliares...
+Según como obtener la inflexión, hay dos tipos de verbos:
+
+- godan: Tienen 5 desinencias posibles (u, e, a, i, o) (go "cinco" dan "capas" monocapa)
+- ichidan: Simplemente eliminan la desinencia (ichi "una" dan "capa" pentacapa)
+
+Seguro que es godan si NO acaba en 'eru' o 'iru'.
+Si acaba en eru o iru puede ser godan o ichidan.
+Cuando aprendas un verbo acabado en 'i/eru' familiarizarse con una conjugacion
+
+Por ejemplo la negativa -nai, cambia la desinéncia a 'a'.
+
+aru-ku (walk) aru-kAnai
+no-mu (drink) -> no-mAnai
+oyo-gu (swim) -> oyo-gAnai
+hashi-ru (run) -> hashi-rAnai
+
+Sin embargo 
+
+ki-ru (wear) -> ki-nai
+tabe-ru (comer) -> tabe-nai
+mi-ru (see) -> minai
+kae-ru (change) -> kae-nai
+
+O, por ejemplo el sufijo `masu`, que hace formal la expresión.
+En los godan cambiamos la desinencia a I:
+
+aruku (walk) arukImasu [arukimás]
+nomu (drink) -> nomImasu
+oyogu (swim) -> oyogImasu
+hashiru (run) -> hashirImasu
+
+El último acaba en ru y podria ser ichidan,
+pero al conjugarlo mantenemos la 'r' y cambiamos la 'u'.
+
+En cambio, los siguientes verbos ichidan, eliminan toda la terminacion 'ru':
+
+kiru (wear) -> kimasu
+taberu (comer) -> tabemasu
+miru (see) -> mimasu
+kaeru (cambiar) -> kaemasu
+
+
+### Irregular
+
+tsuru (do) shimasu shinai
+kuru (come) kimasu konai
+
+
+Truco: aprender una palabra compuesta que tenga el verbo
+para saber si deja caer el ru.
+
+kimono (cosa que vistes) no es kir[aeiu]mono. por tanto es ichidan.
+
+Añadimos Guchi (sitio por el que) a los verbos deru (leave) iru (enter)
+
+- deru -> deguchi (salida) y no deruguchi - > ichidan
+- iru -> iriguchi (entrada) y no  iguchi -> godan
+
+
+#### i stem
+
+Se puede conectar a casi cualquier cosa.
+Es la desinencia conjuntiva.
+
+no-mi-masu [mas] polite
+no-mi-tai desire "i want to drink"
+no-mi-mono think "the think to drink, bebida"
+no-mi-kata way manera "forma de beber"
+tsukai-kata usar-forma de, "modo de empleo"
+hana-shi-a-u hablar-encontrarse, "to discuss"
+yasu-mi descansar hecho, "descanso"
+natsu-yasu-mi verano-descanso-hecho "vacaciones de verano"
+
+#### a stem
+
+Formas negativas:
+
+- shi-ru "i know"
+- shi-ra-nai  "i don't know"
+- shi-ra-zu   "without knowing" adverbio
+- shi-ra-nu   "i don't know" (arcaico)
+
+- If the verb ends in うu, do not change into あa but わwa
+	- tsukau "use" -> tsukawa and not tsukaa
+
+Helpers
+
+- Receptive verb (Forma pasiva, el subject recibe la acción):
+	- れるreru (godan)
+	- られるrareru (ichidan)	
+	- ejemplos:
+		- inu ga mizu wo no nda "perro <-subject water <-object bebe<-pasado"
+		- mizu ga inu ni noma re-ta "agua <-subject perro <- actor beber - pasivo<-pasado"
+	- En activa aplicamos el pasado al verbo, en pasiva al auxiliar
+	- la particula ni marca el actor, vs wo que marca el receptor ("por" castellano)
+- Causative verb (Hacer hacer algo a alguien, el subject provoca que otro haga la accion)
+	- せるseru (godan)
+	- させるsaseru (ichidan)
+	- exemples:
+		- kusuri wo mo-mu (medicina <-object tragar) "tragar la medicina"
+		- kusuri wo mo-seru (medicina <-object tragar hacer) "hacer tragar la medicina"
+		- tabesaseru not tabeseru
+
+#### e stem
+
+- Imperative use
+	- godan:
+		- no-me: bebe (de nomu, beber)
+		- tsukae: usa (de tsukau, usar)
+		- shi-ne: muere (de shinu, morir)
+	- ichidan
+		- instead of using e stem ro o yu (arcaico)
+		- o-ki-ru: to wake up -> o-ki-ro: wake up
+- Condicional (kateikei):
+	- godan:  -ba
+		- nomeba (if drink)
+		- tsukaeba (if use)
+		- hanaseba (if speak)
+	- ichidan: -reba
+		- tabereba (if eat)
+		- okireba (if wake)
+	- TODO: examples
+- Potencial
+	- godan: ru (it is a verb, meaning can) 
+		- nomeru: (can drink or is drinkable)
+		- tsukaeru: (can use or is useable)
+		- hanaseru: (can speak or is speakable)
+	- ichidan: rareru (ojo! igual que en la pasiva)
+		- Los jovenes se suelen colar la ra (cosa que no hacen en la pasiva)
+		- taberareru (can eat, eatable, but also being eat)
+		- tabereru (slang joven)
+	- TODO: examples
+
+#### o steam
+
+- Volitional form (i **will** do) うu
+- Hortative (let's do)
+	- godan: うu its a verb
+		- ou se prouncia como o larga
+		- nomou (lets drink)
+		- tsukou (let's use)
+		- hanasou (let's talk)
+	- ichidan: よう
+		- tabeyou, not tabeu
+
+i was not made to drink X
+
+
+#### Te form
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+てte links things together
+いるiru "exists and feels" (ichidan verb)
+
+combinado con otro verbo se usa para el presente continuo (no literal)
+"to exist in a state of doing"
+
+aru-ku walk
+aru-iteiru exists in a state of walking
+
+Se puede conjugar
+
+aru-iteita: estuvo en un estado de andar
+
+
+-mashita pasado
+
+
+
+## Particles (jioshi)
+
+https://nihongoaz.com/list-of-188-japanese-particles.html
+
+- おo direct object
+- がga liked thing, subject of existence, Specific topics
+- はwa (writen ha) Main topic
+	- TODO examples
+- へhe (pron e) direction, postfix
+	- メチシコへいきます
+	- Mekishiko e ikimasu (go to Mexico)
+	- くうこうへいきます
+	- kuukou e ikimasu (go to Mexico)
+	- わたしは,うちへかえります
+	- watashi wa uchi e kaerimasu
+	-   yo   sub home to going
+
+- へhe (pron e) recipient of action, postfix
+	- tomodachi e denwa o kakemashita
+	- friend  recipient telefono por llame
+
+- にni location, time, movement, purpose
+	- existence with arimasu (tener) (donde hay/tienes?) or imas (exist) (donde esta?)
+		- eki ni keisatsukan ga imasu
+		- estacion en oficialdepolicia subj esta
+		- sumimasu (vivir) (donde vives?)
+		- tsutomemasu (trabajar) (donde trabajas?)
+		- Ken wa Rondon ni sunde imasu
+			- Ken esta viviendo en Londres
+		- Ken wa ginkou ni tsutomete imasu
+			- Ken esta trabajando en un banco (ginkou)
+		- Têburu no shita ni neko ga imasu
+			- Hay un gato (neko) bajo (shita) la mesa (teeburu)
+	- point in time
+		- shichi-ji ni -> at seven oclock, shichiji ni okimasu -> me levanto a las siete
+		- getsuyobi ni -> on monday, Getsu-yobi ni shiutsupatsu (shuppatsu) shimasu i will leave in monday
+		- roku-gatsu ni -> in June, Roku-gatsu ni Nihon e ikimasu (voy a japon en junio)
+		- Go-ji ni -> at five o'clock
+		- No se usa con tiempo relativo:
+			- kyou (kyoo) today
+			- konshiuu (konshuu) this week
+			- rairen (rainen) next year
+- でde Location particle, means, constituent material or reasons for somethinga
+	- where an action take place
+		- Contrast with ni, existence
+		- Tokio de aimasho (Toukiyou de aimashiou) See you in tokio
+		- suupaamaaketsuto (supamarketto) de pan o kamaisu -- Compro pan en el super
+	- Means of transportation
+		- densha de (by train)
+		- basu de (by bus)
+	- Instrument or tool
+		- houchoiu (hocho) de -- with a knife
+		- watashi wa hocho de kudamono o kirimasu (kiri cortar, harakiri, cortarse el estomago)
+		- Furaipan de -- con una sarten (frypan)
+		- te de -- con las manos
+		- sushi o te de tabimasu -- como sushi con las manos
+		- language as a tool:
+		- Ei-go de (in english)
+		- Supein-go de (in spanish)
+		- Kataruunya-go de (in catalan)
+		- Nihon-go de (en japones)
+	- Material del que esta hecho
+		- ki de -- de arbol (madera)
+		- komugi de -- de maiz
+- のno modifying the first noum modifies the second one
+	- Posessive
+		- watashi no X -- mi X
+		- ken no X -- ken's X
+		- Kore wa watashi no kompyuutaa -- esta es mi computadora
+	- Without second noum, 
+		- watashi no -- mine
+		- Ken no -- ken's
+		- Kore wa watashi no desu -- esto es mio
+	- Beyond possesion, relations
+		- Eigo no sensei -- profe de ingles
+		- Kare wa eigo no sensei desu -- este es el profe de ingles
+		- sakura no hana -- flor de cerezo
+		- watashi no tomodachi no namae wa Yuuko desu -- el nombre de mi amiga es Yuko
+		- Nihon no kuruma ga suki desu -- coches de japon me gusta
+- とto connecting particle (and)
+	- conjuncion
+		- X to Y to Z
+		- no solo en la ultima
+	- companyia en la acción
+		- jon wa yoko to eiga o mimashitaa -- jon saw a moview with yoko
+		- postfijo, no junta
+- かka question marker
+	- question marker
+		- al final de la frase
+		- sube la entonacion
+		- no requiere reordenar la fraase
+		- in in formal no is used insted
+	- alternative or
+		- kuruma ka baiku de hiroshima ni ikitai desu -- quiero ir a Hiroshima en coche o bici
+- もmo additionally
+	- substitutes wa ka o
+		- the preceded noum is also 
+		- repeats the previous sentence
+		- kore mo niku desu -- esto tambien es carne
+		- watashi mo (yo tambien) o polite: watashi mo desu
+	- emphasis (as many as, as much as)
+		- cuesta tanto como 2000yen
+		- kodomo mo keitai denwa o motte imasu -- hasta los crios (kodomo) 
+- からkara (kará)
+	- Starting point
+		- from after a noum
+			- koko kara eki wa chikai desu - a partir de aqui (koko kara) la estacion (eki) esta cerrada
+			- Se usa como hora de comienzo de una acccion que toma cierto tiempo
+	- Material de partida
+		- Budou kara wain o tsukuru - hice vino de uvas
+		- Diferencia, no es consituyente del resultado, no hay uvas en el vino
+		- En cambio si que hay madera en la mesa hecha de madera. En este caso de.
+- までmade limitation particle (hasta)
+		- Tiempo: Ashita made machimasu - esperaré hasta mañana
+		- Arribing point: eki made arukimasu - caminare hasta la estacion
+		- Tokio made basu de ikimasu -- ire a tokio en bus
+	- Unexpected 
+		- kodomo made keitai denwa o motte iru -- hasta los crios tienen mobil
+			- No se esperaba que los tuvieran
+		- hone made tabemasu -- me como hasta los huesos
+- やya for example
+
+
+Places:
+	- Destination: ni (a, hacia)
+	- Limite: made (hasta)
+	- Lugar de accion: de
+	- Lugar de existencia: ni (verbos de exitencia)
+- Sujeto de gusto: ga I like kioto -- kioto ga
+
+to, ya, ka connect noums (not verbs, nor sentences, nor adjectives)
+	- to: and -- Kioto to Osaka (ambos)
+	- ka: or -- koto ka osaka (uno de los dos)
+	- ya: and, for example, 
+
+
+
+
+
+
+
+
+
+Kore this
+Are that
+
+
+		
+
+
+
+mashita hice
+
+
+- ga particle marks the subject (shuko) (specific topic or subject of existence)
+- ha (pronunced wa) particle marks the main topic (wadai)
+- wo (pronuncied o) particle marks the direct object (target of an action)
+	- a diferencia de las otras dos se usa para otras cosas
+
+
 
 
 
