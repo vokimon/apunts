@@ -8,6 +8,31 @@ partint de que, segurament, ara no els estic entenent del tot bé.
 Igual que la resta d'apunts d'aquesta pàgina,
 però com aquest és un tema especialment sensible, calia dir-ho.
 
+## Glossary
+
+- Resource origin: From its url, the combination of schema + hostname + port.
+	- Ignore path, query parameters...
+	- Implicit port considered (https is 443, http is 80)
+	- Same origin: https://www.example.com:443/a/path and https://www.example.com/other/path
+		- Cambia el path, ignorado, i el puerto, pero usa el explícito
+	- Cross origin: http://sell.example.com and https://www.example.com
+		- Cambia el protocolo, el puerto y el subdominio, cualquiera de los tres bastaría.
+- Resource site: From its url, schema + eTLD + next domain level
+	- No tiene en cuenta el subdominio ni el puerto
+	- El dominio es un nivel más del eTLD
+		- TLD toplevel domain .com, .org...
+		- eTLD efective public domain: .co.uk, github.io...
+			- Lista en: <https://publicsuffix.org/list/public_suffix_list.dat>
+	- El subdominio es todo lo que valla más allá.
+	- Same-site: https://sell.example.com vs https://www.example.com
+	- Cross-site: https://vokimon.github.io vs https://som-eneriga.github.io
+- Schemeless same-site: no tiene en cuenta el protocolo
+- Se aplica
+	- A transiciones de pagina: url de la original y la de destino
+	- A contenido incrustado (iframes, imágenes, popups...)
+	- A peticiones fetch: url del recurso que genera la peticion (js, html, css) vs a donde va la petición
+	- A cookies: url del recurso que la crea, url de la petición que se hace que podria o no enviarla
+
 ## CSRF (Cross Site Request Forgery)
 
 https://owasp.org/www-project-code-review-guide/reviewing-code-for-csrf-issues
@@ -141,11 +166,91 @@ La situació per defecte es que una pàgina web tè confiança en els recursos
 
 Succeeix quan una web maliciosa fa servir recursos (imatges, javascripts...) 
 
+## XSS (Cross-site scripting)
+
+Injectar contingut maliciós en un lloc web de confiança.
+Normalment és contingut que el site permet afegir als usuaris,
+o que s'obté d'un altre site/api,
+que, en renderitzar-ho,
+es converteix en codi executable, normalement al navegador.
+
+Igual que altres injeccions la solució passa per sanejar
+tot el contingut alié al codi de l'aplicació.
+Normalment hi ha contingut, html, javascript,
+que provenen del desenvolupador i es considera confiable,
+volem que s'envii al navegador tal qual.
+Seria no confiable tot el contingut que prové de l'usuari
+o de fonts externes.
+
+El problema d'aplicar sanejament a tot el contingut no confiable,
+sempre acaba passant que hi ha un contingut no confiable
+que ens oblidem de sanejar.
+
+Per això els frameworks están adoptant la estratègia de sanejar per defecte,
+i només en els casos que el desenvolupador especifiqui molt explícitament
+que el contingut es confiable, esquivar el sanejament.
+
+Exemple, en React, tot el contingut que s'insereix en el JSX
+es sanititza per defecte sense dir res.
+Si volem interpretar un cert text com a HTML, hem de fer servir
+l'atribut `dangerouslySetInnerHTML` en el tag contenidor.
+
+## JWT Flaws
+
+https://portswigger.net/web-security/jwt
+
+- Ficar informació personal al token
+	- El token està codificat (base64), no pas xifrat.
+	- La clau es per signar, no xifra pas.
+	- Qualsevol pot llegir el contingut sense cap tipus de clau.
+	- Per això, cal evitar posar cap informació que es pugui considerar sensible (correu)
+	- Si l'identificador d'usuari és el correu, considerar algun tipus de hash
+- No tenir o no comprovar la data d'expiració o que sigui massa llarga
+	- Una data d'expiració curta redueix el temps d'exposició davant un token substret
+	- En obtindre el token donar un segon refresh token per demanar l'actualització
+- No incloure `aud` (audience) field o no validar-ho (si diversos serveis comparteixen secret)
+	- Un token obtingut en un servei, es podria fer servir per accedir a l'altre si comparteixen clau
+	- Pe. Dos instàncies d'una aplicació i ens oblidem de canviar la clau.
+- No permetre els usuaris revocar els tokens (en sortir)
+	- Es menja l'avantatge dels jwt respecte a les sessions, de que no requereix enmagatzematge de sessió al servidor
+	- Es pot fer positiu (enmagatzemar només les revocades no caducades)
+- Enmagatzemament insegur al client
+	- Cookies caca
+		- `HttpOnly`: Assegura que no està disponible des del javascript, només s'envia, evita atacs XSS per obtindre el token.
+		- `Secure`: No s'envia amb http, només amb https
+		- `SameSite=strict`: Només s'envia al site del contingut que ha generat la request
+		- TODO: que hacer con el token de renovacion? (no hay que enviarlo cada vez, si no, pierde sentido)
+	- Local storage caca
+	- TODO: ¿entonces que?
+- Decodificar pero no validar
+	- La majoria de llibreries tenen dos accions, una per decodificar i obtindre el contingut (decode) i una altra per validar la signatura (verify).
+	- Cal assegurar que estem verificant el token
+- Fer servir l'algoritme que ve a l'atribut `alg` del token.
+	- Alguns algoritmes no es basen en una clau privada. Notablement l'algoritme `none`.
+	- Un atacant podría fabricar un token amb un d'aquests algoritmes i no es validaria la signatura.
+	- Usa una llibreria que ignori aquest camp, o com a minim que permeti especificar explicitament l'algoritme i fer-ho.
+	- Al final l'algoritme el definim nosaltres quan generem el token,
+	- i no hi ha cap motiu per confiar en el que ens ve amb el token de l'usuari.
+- Permetre claus incrustades amb jwk
+	- L'estàndard JWK permet inserir la clau (`kid`, `jwk`) al propi token.
+	- Un atacant podria fabricar un token amb la seva propia clau.
+	- Hem d'especificar la clau de forma explicita i vigilar que la llibreria
+	- fa servir la nostra i no la incrustada.
+- Permetre claus linkades amb jku
+	- El mateix que l'anterior pero la clau es proveeix amb un enllaç
+	- L'enllaç es un json amb els jwk a dintre
+- Permetre claus per id amb kid
+	- kid es un id d'una clau interna pero també pot ser un path al servidor
+	- si l'atacant puja, pe, un adjunt amb la clau, podria referenciar el fitxer adjunt
+	- També podria fer un sql injection si l'id es un camp a la base de dades.
+- Secret dèbil
+	- La seguretat del jwt depén de que el secret amb el que es signa no sigui obtenible
+	- `hashcat -a 0 -m 16500 <jwt> <wordlist>`
 
 
-
-
-
+TODO: Es recomana moure el refresh token a tokens i el token a estat de l'aplicacio,
+pero en aquest cas, tot i que protegim el token refresh de XSS, estariem enviat el refresh token tota l'estona.
+O es que amb https, el punt debil deixa de ser la xarxa i esdeve el propi navegador?
 
 
 
