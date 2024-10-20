@@ -3,6 +3,7 @@
 ## Principled BSDF material
 
 https://www.youtube.com/watch?v=_5dWa3z7bGw
+https://www.youtube.com/watch?v=4l86JpmqdbM
 
 
 - Absorption:

@@ -1,1 +1,1 @@
-../economics.md
+../varios/economics.md
