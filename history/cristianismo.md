@@ -1,6 +1,60 @@
 # História del cristianismo 
 
+- Contexto filosófico
+	- Cuando llegaron los romanos Palestina llevaba siglos bajo control o influencia Helena
+	- Cierta influencia griega y cierto conflicto con los puristas judíos
+	- Cinismo: Corriente filosófica que promovía la desposesión, y desapego a las normas sociales, y apego a la razon como camino a la virtud
+		- Antisthenes: el primero, discípulo de Sócrates
+		- Diógenes (el mas notable) -> Crates
+		- Decayó en el siglo IIIAC pero se reavivo con Roma justo en vida de Jesús
+	- Estoicismo: Control de las pasiones: Miedo, Lujuria, Gula...
+		- Influenciado por Diogenes, corriente de moda en Roma (Cicerón, Catón, Séneca...)
+
 - El ungido/elegido = Cristo (griego) = Mesias (hebreo)
+- Los Apostoles originales
+	- Simon -> Cefas (Kefah piedra en arameo) -> Pedro (Petros en griego)
+		- Pescador de Betsaida
+		- Hijo de Jonás (Jonah), Hermano de Andreas
+	- Santiago de Zebedeo (Santiago el mayor)
+		- Jacob, Iago, Santiago (San Tiago), Jaime, Diego...
+		- Pescador de Betsaida
+		- Hijo de Zebedeo y Salomé, hermano mayor de Juan
+	- Juan 
+		- Pescador de Betsaida
+		- Hijo de Zebedeo y Salomé, hermano menor de Santiago el Mayor
+		- El mas joven y el último en morir, en el año 100
+		- Se le atribuyen, en orden de dudosidad, las 3 epístolas, un evangelio y el Apocalipsis
+			- <https://es.wikipedia.org/wiki/Autor%C3%ADa_de_los_escritos_jo%C3%A1nicos>
+			- Juan el Evangelista (para referirse al que escribió el evangelio, si no fuera el)
+			- Juan de de Patmos o el Apokaleta o el Teologo (para referirse al autor del Apocalipse, si no fuera él)
+			- Existe un Juan el viejo o Presbítero que se menciona como distinto a Juan Apóstol al que se le atribuyen alguna de las epístolas
+	- Andrés (Andreas)
+		- Hermano de Pedro, Hijo de Jonás (Jonah)
+		- Anteriormente, discipulo de Juan el Bautista
+	- Felipe (Phillipos)
+		- Pescador de Betsaida
+		- Lo que se sabe de él tras la muerte de Jesús viene de textos considerados apócrifos
+	- Nathanael	Bartolomé (Bartholomei - hijo (bar) de Tolmai, Tolmai -> surco del arado)
+		- Pescador de Betsaida
+		- El evangelio de Juan Menciona a Nathanael, los otros, mencionan a Bartolomé, se supone la misma persona.
+		- De Caná (donde las bodas)
+		- EvJoan dice que cuando Felipe le dice que ha encontrado al Mesias, Nathanael le dice con sorna que que puede salir bueno de Nazareth
+		- A parte de eso solo se le enumera
+		- Apostolado: India?? Armenia, Azerbayan, Martirizado en Albanópolis, Armenia 69-71 desollado
+	- Tomas - Judas Tomás Dídimo (Dydimus GR Thomas AR -> Gemelo)
+		- Predico en Asia (Siria e India?)
+		- Predicó en Mesopotamia (irak), Partia (iran) y india.
+	- Mateo Leví (Mathaios GR de Mattai AR de Mattan Yah HE, Don de Dios)		
+		- Hijo de Alfeo y Maria de Cleofás, hermano de Santiago el menor
+		- Recaudador en Carfanaum
+		- Se le atribuye uno de los evangelios (en arameo), como tal, Mateo Evangelista
+	- Matias
+		- Substituto de Judas tras su suicidio
+	- Santiago de Alfeo (Santiago el menor) Ya'akov ben Halfay
+		- Hijo de Alfeo y Maria de Cleofás, hermano de Mateo
+	- Bernabé (Barnabas)
+	- José
+
 
 - Originalmente el cristianismo se propagó por las comunidades judías de levante
 	- Las costumbres y reglas eran judías
@@ -22,7 +76,7 @@
 			- Consideran que Jesus nacio de virgen, hijo de Dios y que ascendió a los cielos
 			- Consideran Jesus un profeta (aunque posteriormente también consideran su deidad)
 		- Elkesaitas
-		- Gnosticos (Muchas sectas)
+		- Gnosticos (Muchas sectas) (existian antes de Jesus)
 			- Promovian el autodescubrimiento espiritual sobre las enseñanzas y tradiciones
 			- Asimilaban el cristianismo a su vision
 			- Jesus era un ser divino que vino a mostrarnos el camino a la gnosis
@@ -33,9 +87,11 @@
 
 - ~48 [Concilio de Jerusalen](https://es.wikipedia.org/wiki/Concilio_de_Jerusal%C3%A9n)
 	- Participaron algunos apostoles:
-		- Simon Pedro
-		- Pablo
-	- Jacobo (hemano de Jesus)
+		- (Simon) Pedro
+		- (Saul) Pablo de Tarso (No de los doce originales, se le revelo jesus de camino )
+		- (Jose) Bernabé (Barnabas)
+		- 
+	- Jacobo (hemano de Jesus) (Jacobo, Jaime, Santiago (San Tiago, gallego)) No confundir con los dos Santiagos apostoles (el mayor y el menor).
 	- Hasta ese momento los cristianos se consideraban judíos, nacidos y conversos, y observaban las leyes del Segundo Templo
 	- Tema: Los gentiles conversos están obligados a circuncidarse y a otras obligaciones judías?
 	- Se decidió que no era necesaria la circumcisión
@@ -46,9 +102,20 @@
 		- Prohibición de la idolatria
 	- A partir de aquí ya no se consideraban judíos los gentiles que creían en Jesus como Cristo
 
+- 108-140??? [Ignacio Theophorus de Antioquia](https://en.wikipedia.org/wiki/Ignatius_of_Antioch)
+	- Patriarca de Antioquia
+	- De camino a su martirio escribió varias cartas sobre teologia que se conservan
+	- Ojo, fueron apareciendo varias versiones de sus cartas y muchas tienen claras manipulaciones políticas de quien las encuentra/transcribe/traduce
+	- Habla del cambio del dia de descanso del Sabbath (sabado) al Dia de Dios (domingo)
+	- Partidario de no seguir tanto las leyes judías sino seguir a Jesus como modelo
+	- Modelo de iglesia dividido en diocesis lideradas por un obispo asistido por presbiteros (ancianos) y diaconos (pringaos)
+	- "Reverenciar al obispo como a jesús mismo"
+	- Usa la palabra iglesia catolica (=universal) en contraste a las de cada ciudad
+
 - 50-160 [Marción](https://es.wikipedia.org/wiki/Marci%C3%B3n) Marcionismo:
 	- Pujante en imperio oriental hasta el siglo V, comunidades hasta el IX
 	- Consideran las enseñanzas de Jesus incompatibles con las acciones de Yahweh en los textos Judios
+	- Rechazaba los textos Hebreos de la Tora (Lo que ahora es el antiguo testamento)
 	- Les lleva al diteismo:
 		- Demiurgo, dios vengativo del viejo testamento
 		- Padre celestial de Jesus
@@ -64,10 +131,11 @@
 	- Herencia de Herodes:
 		- vasallaje a Roma -> Impuestos, Procurador dependiente del gobernador de Siria
 		- grandes construcciones, migracion forzada a Jerusalen para construirlas, sociedad empobrecida
-		- 
 	- 70 "Destrucción del Templo" de Jerusalen (y de Jerusalen misma!!)
 	- Inicio de la diaspora Judia, primero por el mediterraneo oriental (Alejandria, Anatolia...) y tambien a Roma
 	- No es que destruyeran el templo y la gente se fuera, destruyeron la ciudad misma de Jerusalen
+	- La represion se centró en los Judíos que participaron en la revuelta, dejando a parte
+	- El exodo y la inexistencia del templo forzo la aparición de la figura de los rabinos y el estudio y copia de los textos
 
 - 251-252-254 [Sínodos de Cartago](https://en.wikipedia.org/wiki/Councils_of_Carthage)
 	- Tres concilios en los que principalmente se hablaba de como tratar a los Lapsis (tropezados)
@@ -247,6 +315,55 @@
 	- 
 
 
+
+- Asunción de Maria
+	- "Maria subió a los cielos en cuerpo y alma"
+	- Es lo que se celebra el 15 de Agosto
+	- No hay escritos que hablen de la vida y muerte de María después de la Ascension de Jesús
+	- Juan de Damasco (675–749 AD) en su segundo sermón sobre la Dormición, cita:
+		-  un fragmento del 3er libro de Historia Euthymiaca (escrito entre 550 y 750, pero perdido) en el que se explica:
+			- Durante el Concilio de Calcedonia (451)
+				- La emperatriz Pulqueria y el consorte Marciano pidieron a Juvenal (obispo de Jerusalen) tener el cuerpo de María
+				- Juvenal les contesto que no podía ser y les explicó esta história:
+					- que María murió en presencia de todos los apostoles menos Tomas
+					- Cuando Tomas llegó tres dias despues, pidio abrir la tumba para verla y solo encontraron sus ropajes
+					- "Asumieron" que habia sido asumida (llevada a los cielos) en cuerpo y alma "como Elias"
+				- La emperatriz les requirió pues, los ropajes
+			- 473 Los ropajes (manto y túnica) llegan a constantinopla ya con el emperador Leon I
+			- Se custodian en Iglesia de Santa Maria de Blanquerna que construyeron los anteriores emperadores
+	- 600 El emperador Mauricio establece la celebracion ortodoxa (28 de Agosto)
+	- 6xx Se introdujo en la iglesia latina
+	- 847-855 Leon IV: introduce una vigilia y una octava?
+	- 1950 Pio XII lo estableció como dogma (divinamente revelado... a él?)
+	- Variante ortodoxa: Transito o Dormición de Maria
+		- No murió, se durmió y subio a los cielos en cuerpo y alma
+	- Por suerte no se llegó a matar a nadie por decir que murio y resucito o que simplement no murio.
+
+- 858-867 Cisma de Foscio https://es.wikipedia.org/wiki/Cisma_de_Focio
+
+- 1054 El Gran Cisma
+	- Discrepancias Políticas
+		- La coronacion de Carlo Magno como Emperador Romano (800)
+		- El obispo de roma reclamaba la supremacía Obispo de Roma (el Papa) vs Pentarchia: Roma, Antioquia, Constantinopla, Alejandria, Jerusalem
+			- A parte de Roma, y Constantinopla las otras grandes tres sedes ya estaban bajo control musulman
+	- Discrepancias Teologicas
+		- Si el pan de la eucaristia ha de llevar levadura o no XD
+		- Clausula Filioque: Los latinos introdujeron en el Credo de Nicea que el espíritu santo procedia no solo del padre sinó también del hijo (589 III Concilio de Toledo)
+		- Iconoclasia
+	- Ya había iglesias diferenciadas de credo latino o oriental
+
+
+- Iconoclasia:
+	- Idolatría: Los dioses se manifiestan a través de las imágenes
+	- Iconodúlia: La imagen no es divina, no se adora, ayuda a la meditación y el rezo
+	- Iconocásia: Rechazo total a las imágenes religiosas, considerando que se usaban como ídolos
+	- 305 Concilio de Elvira: canon 36: "Las imágenes no deben colocarse en las iglesias, para que no se conviertan en objetos de culto y adoración"
+	- Una vez que se destruyeron todas las imágenes pagana y a medida que se incorporaron gentiles, se fueron incorporando imágenes al culto
+	- 726 emperador León III prohibe la veneración de imagenes de cristo, la virgen y sobretodo los santos.
+	- 730 Gregorio III de Roma convoca sínodo en el que condena como herética la iconoclásia
+	- 787 II Concilio de Nicea, se vuelve a la adoración de iconos
+	- 813 emperador Leon V promueve un edicto iconoclasta
+	- 843 emperatriz Teodora a la muerte de su marido Teofilo congrega a los iconódulos y proclama la restauración de los iconos
 
 
 
