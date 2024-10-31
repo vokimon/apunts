@@ -1,3 +1,8 @@
+# Japanese
+
+- [Japanese char quick sheet](japan-char-sheet.md)
+
+
 # Hiragana (alphabeto silàbico)
 
 <https://www.youtube.com/watch?v=6p9Il_j0zjc>
@@ -5,16 +10,60 @@
 - Hiragama: Silábico
 - Katakata: Silábico para onomatopeyas, cursiva, prestamos y neologismos
 - Kanji: Ideogramico
-- Furigana: hiragana placed below or at the right of a kanji to explain how to spell
+- Furigana: hiragana placed above, below or at the right of a kanji to explain how to spell it
 - Romanji: transcripción latina
+	- https://en.wikipedia.org/wiki/Nihon-shiki_romanization
 
-- https://en.wikipedia.org/wiki/Nihon-shiki_romanization
+## Las claves
+
+Para aprender, mejor poco a poco, este es el resumen de lo aprendido.
+
+- Los símbolos son silábicos, representan sílabas.
+	- Un símbolo para cada combinación de lo que en script latino es consonante+vocal o vocal (pa, ku, so, i...)
+- Las vocales son similares a las de castellano:
+	- Se suelen ordenar diferente: A,I,U,E,O
+	- La u difiere del castellano, no se redondean los labios (IPA [ɯ])
+- Para un mismo grupo consonantico, a menudo U i I cambian el fonema
+	- Por ejemplo:
+		- sa, **shi**, su, se, so (sh es la x catalana)
+		- za, **ji*, zu, ze, zo (j catalana)
+		- ta, **chi**, **tsu**, te, to (ch castellana, tsu de tsunami)
+		- da, **dji**, **dju**, de, do (dj catalana)
+		- ha, hi, **fu**, ho, hu (h es hache aspirada inglesa)
+- Consonantes sonoras
+	- Los símbolos de las consonantes sordas se reusan para las equivalentes sonoras añadiendo 'acentos'
+	- Sonoras. Añadiendo dos comillas: s -> z, t -> d, h -> b
+	- Semisonoras. Añadiendo un circulo: h -> p (solo hay una)
+	- (en fonetica, la p es la sorda de la b, pero en japones se considera la h una versión aun mas sorda de la p)
+- Consonantes a final de sílaba
+	- En general las consonantes solo estan al principio de la sílaba
+	- Hay un símbolo para la n al final de una sílaba.
+		- Se pronuncia gemminada como en el Baix Llobregat
+	- I y U pierden sonoridad en algunos casos
+		- Entre dos sonidos sordos k, t, s, h  (arimasu -> arimas, watashi)
+		- Despues de un sonido sordo al final de palabra (suki > ski)
+- Algunos caracteres tienen su versión pequeña que sirven para modificar el caracter anterior:
+	- Las silabas semiconsonanticas (wo, wa, yo, ya...) en pequeño serían como diftongos
+	- Para conseguir los sonidos de I o U con otra vocal se usan diftongos
+		- Ej. chi-yo -> cho
+	- tsu pequeño sirve para hacer una parada, como una t gemminada
+- Moras (del latin retraso): Marcan el ritmo de la dicción
+	- Cada símbolo grande, una mora.
+	- Los símbolos pequeños van en la mora del símbolo grande precedente
+	- La N ocupa su mora aunque en romanji vaya con la silaba anterior (por eso suena gemminada)
+	- El alargamiento de las vocales ocupan una mora
+	- Las moras con vocales enmudecidas suelen ser mas cortas
+- Acentos
+	- Cada palabra puede tener acento en una de sus moras o no tenerlo
+	- El acento se marca con el tono (no con longitud ni intensidad)
+	- Afecta al tono de la siguiente mora
+
 
 ## Vocales
 
 - ぁ A (Apple)
 - い I (two i's)
-- う U (boxer getting punch, Ugh) es gutural
+- う U (boxer getting punch, Ugh) es gutural (sin redondear los labios) [ɯ](https://en.wikipedia.org/wiki/Close_back_unrounded_vowel)
 - え E (E-nergetic ninja running) es abierta
 - お O (u.f.O, similar to A but notice the caret)
 
@@ -24,8 +73,8 @@ Usos
 - い means stomack
 - お un prefijo para indicar educación
 
-- ぁい: [ay] love
-- うえ: [we] up, above
+- ぁい: [ai] love
+- うえ: [ue] up, above
 - いいえ: [i:e] no
 - ぁおい: [aoi] blue
 
@@ -45,7 +94,7 @@ Usos
 - 'ku' el sonido de la u a menudo se pronuncia poco
 - か 'ka' mosquito
 - かく 'kaku' to write
-- きく 'kiku' to listen
+- 聞く-きく 'kiku' to listen
 - かげ 'kage' shadow
 - こえ 'koe' voice
 - かぎ 'kagi' key
@@ -107,18 +156,19 @@ Ejercicios
 
 Uses:
 
--	A small つ is used to make a glotal stop
-て 'te' hand
-'kutsu' shoes
-'chizu' map
-'deshi' aprentice
-'tatsu' to stand
-'tooi' far
-'tsudzuku' to continue (continuara)
-'dotsuchi' [dotchi] which
-'daigaku' university (bigschool)
-'asatsute' [asatte] pasadomañana
-'achitsuku' to calm down
+-	A small つ is used to make a glotal stop, gemmination of the following sillabe
+- てte hand
+- てte conjuntive particle (sometimes でde
+- くつkutsu shoes
+- ちずchizu map
+- でしdeshi aprentice
+- たつtatsu to stand
+- 遠いtooi far (とおい)far/profound
+- 'tsudzuku' to continue (continuara)
+- 'dotsuchi' [dotchi] which
+- 'daigaku' university (bigschool)
+- 'asatsute' [asatte] pasadomañana
+- 'achitsuku' to calm down
 
 ## N
 
@@ -253,7 +303,7 @@ a la vocal fuerte del diftongo.
 
 Se parecen:
 
-- わwa ねne れre (snail, reno, swan)
+- わwa ねne れre (swan, nEiled snEil, reno)
 
 Usos
 
@@ -543,9 +593,7 @@ https://www.youtube.com/watch?v=smeDBe_rryQ
 - henshiuusuru: [henshusuru] editar
 - omou: pensar
 - omoidasu: recordar
-- tsumeru: hacer las maletas
 - shiuuchiuusuru: concentrarse
-- llegar tarde: okureru
 - jiushinsuru: enviar mensaje
 - soushinsuru: recibir mensaje
 - sakujosuru: delete
@@ -554,213 +602,14 @@ https://www.youtube.com/watch?v=smeDBe_rryQ
 - wataru: cruzar
 - watasu: entregar
 - sankasuru: participar
+- 持つ-もつmotsu: tener, llevar, cargar
+- 詰める-つめるtsumeru: llenar (tsumemasu, tsumenai) (ichidan)
+- 遅れる-おくれるokureru: llegar tarde (okuremasu, okurenai)
+
 
 
 
 ## grammar
-
-
-### verb conjugation
-
-#### ichidan vs godan verbs
-
-La forma de referencia de los verbos (lo que en español seria el infinitivo)
-acaba siempre en 'u' (o en una silaba de la columna 'u').
-Es la forma del presente a pelo.
-De hecho se escriben con un kanji y un kana de la columna 'u' (u, pu, ru, bu, nu, yu...).
-(en estos apuntes no voy a usar los kanji sino su transcripcion hirigana o romanji,
-pero voy a separar con un guion lo que seria el kanji de la desinencia)
-
-Los verbos en japonés se conjugan obteniendo una inflexión del verbo
-a la que se pueden añadir adjetivos, auxiliares...
-Según como obtener la inflexión, hay dos tipos de verbos:
-
-- godan: Tienen 5 desinencias posibles (u, e, a, i, o) (go "cinco" dan "capas" monocapa)
-- ichidan: Simplemente eliminan la desinencia (ichi "una" dan "capa" pentacapa)
-
-Seguro que es godan si NO acaba en 'eru' o 'iru'.
-Si acaba en eru o iru puede ser godan o ichidan.
-Cuando aprendas un verbo acabado en 'i/eru' familiarizarse con una conjugacion
-
-Por ejemplo la negativa -nai, cambia la desinéncia a 'a'.
-
-aru-ku (walk) aru-kAnai
-no-mu (drink) -> no-mAnai
-oyo-gu (swim) -> oyo-gAnai
-hashi-ru (run) -> hashi-rAnai
-
-Sin embargo 
-
-ki-ru (wear) -> ki-nai
-tabe-ru (comer) -> tabe-nai
-mi-ru (see) -> minai
-kae-ru (change) -> kae-nai
-
-O, por ejemplo el sufijo `masu`, que hace formal la expresión.
-En los godan cambiamos la desinencia a I:
-
-aruku (walk) arukImasu [arukimás]
-nomu (drink) -> nomImasu
-oyogu (swim) -> oyogImasu
-hashiru (run) -> hashirImasu
-
-El último acaba en ru y podria ser ichidan,
-pero al conjugarlo mantenemos la 'r' y cambiamos la 'u'.
-
-En cambio, los siguientes verbos ichidan, eliminan toda la terminacion 'ru':
-
-kiru (wear) -> kimasu
-taberu (comer) -> tabemasu
-miru (see) -> mimasu
-kaeru (cambiar) -> kaemasu
-
-
-### Irregular
-
-tsuru (do) shimasu shinai
-kuru (come) kimasu konai
-
-
-Truco: aprender una palabra compuesta que tenga el verbo
-para saber si deja caer el ru.
-
-kimono (cosa que vistes) no es kir[aeiu]mono. por tanto es ichidan.
-
-Añadimos Guchi (sitio por el que) a los verbos deru (leave) iru (enter)
-
-- deru -> deguchi (salida) y no deruguchi - > ichidan
-- iru -> iriguchi (entrada) y no  iguchi -> godan
-
-
-#### i stem
-
-Se puede conectar a casi cualquier cosa.
-Es la desinencia conjuntiva.
-
-no-mi-masu [mas] polite
-no-mi-tai desire "i want to drink"
-no-mi-mono think "the think to drink, bebida"
-no-mi-kata way manera "forma de beber"
-tsukai-kata usar-forma de, "modo de empleo"
-hana-shi-a-u hablar-encontrarse, "to discuss"
-yasu-mi descansar hecho, "descanso"
-natsu-yasu-mi verano-descanso-hecho "vacaciones de verano"
-
-#### a stem
-
-Formas negativas:
-
-- shi-ru "i know"
-- shi-ra-nai  "i don't know"
-- shi-ra-zu   "without knowing" adverbio
-- shi-ra-nu   "i don't know" (arcaico)
-
-- If the verb ends in うu, do not change into あa but わwa
-	- tsukau "use" -> tsukawa and not tsukaa
-
-Helpers
-
-- Receptive verb (Forma pasiva, el subject recibe la acción):
-	- れるreru (godan)
-	- られるrareru (ichidan)	
-	- ejemplos:
-		- inu ga mizu wo no nda "perro <-subject water <-object bebe<-pasado"
-		- mizu ga inu ni noma re-ta "agua <-subject perro <- actor beber - pasivo<-pasado"
-	- En activa aplicamos el pasado al verbo, en pasiva al auxiliar
-	- la particula ni marca el actor, vs wo que marca el receptor ("por" castellano)
-- Causative verb (Hacer hacer algo a alguien, el subject provoca que otro haga la accion)
-	- せるseru (godan)
-	- させるsaseru (ichidan)
-	- exemples:
-		- kusuri wo mo-mu (medicina <-object tragar) "tragar la medicina"
-		- kusuri wo mo-seru (medicina <-object tragar hacer) "hacer tragar la medicina"
-		- tabesaseru not tabeseru
-
-#### e stem
-
-- Imperative use
-	- godan:
-		- no-me: bebe (de nomu, beber)
-		- tsukae: usa (de tsukau, usar)
-		- shi-ne: muere (de shinu, morir)
-	- ichidan
-		- instead of using e stem ro o yu (arcaico)
-		- o-ki-ru: to wake up -> o-ki-ro: wake up
-- Condicional (kateikei):
-	- godan:  -ba
-		- nomeba (if drink)
-		- tsukaeba (if use)
-		- hanaseba (if speak)
-	- ichidan: -reba
-		- tabereba (if eat)
-		- okireba (if wake)
-	- TODO: examples
-- Potencial
-	- godan: ru (it is a verb, meaning can) 
-		- nomeru: (can drink or is drinkable)
-		- tsukaeru: (can use or is useable)
-		- hanaseru: (can speak or is speakable)
-	- ichidan: rareru (ojo! igual que en la pasiva)
-		- Los jovenes se suelen colar la ra (cosa que no hacen en la pasiva)
-		- taberareru (can eat, eatable, but also being eat)
-		- tabereru (slang joven)
-	- TODO: examples
-
-#### o steam
-
-- Volitional form (i **will** do) うu
-- Hortative (let's do)
-	- godan: うu its a verb
-		- ou se prouncia como o larga
-		- nomou (lets drink)
-		- tsukou (let's use)
-		- hanasou (let's talk)
-	- ichidan: よう
-		- tabeyou, not tabeu
-
-i was not made to drink X
-
-
-#### Te form
-
-
-
-
-
-
-
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-てte links things together
-いるiru "exists and feels" (ichidan verb)
-
-combinado con otro verbo se usa para el presente continuo (no literal)
-"to exist in a state of doing"
-
-aru-ku walk
-aru-iteiru exists in a state of walking
-
-Se puede conjugar
-
-aru-iteita: estuvo en un estado de andar
-
-
--mashita pasado
-
 
 
 ## Particles (jioshi)
@@ -898,20 +747,12 @@ to, ya, ka connect noums (not verbs, nor sentences, nor adjectives)
 	- ka: or -- koto ka osaka (uno de los dos)
 	- ya: and, for example, 
 
-
-
-
-
-
-
-
-
 Kore this
+Zore that
 Are that
 
-
-		
-
+sensei: maestro (pero no si somos nosotros)
+kiyoushi[kiooshi]: profesor
 
 
 mashita hice
@@ -921,6 +762,29 @@ mashita hice
 - ha (pronunced wa) particle marks the main topic (wadai)
 - wo (pronuncied o) particle marks the direct object (target of an action)
 	- a diferencia de las otras dos se usa para otras cosas
+
+
+
+
+### Wanting and don't wanting
+
+- masu form + "tai" (optional "desu" for politeness) -> I want do something
+- masu form + "takunai" (optional "desu" for politeness) -> I don't want do something
+
+Examples
+- tabe-tai - quiero comer (ichidan)
+- su-i-tai - quiero fumar (godan)
+- i-chi-tai - quiero ir (irregular)
+
+- X-ta-katta - i wanted to do someting - ie tabetakatta
+	- ki-ri-ta-katta
+
+- takaru querer
+	- takaru (inf) -> takari-masu (presente humilde)
+	- takatta (past) -> takari-mashita (pasado humilde)
+	- takatte (te) -> takara-nakute (te humilde)
+	- takaranai (neg inf) -> takari-masen
+	- takara-nakatta (neg pas) -> takari-masen deshita)
 
 
 
