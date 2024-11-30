@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="359.98877mm"
+   height="143.12115mm"
+   viewBox="0 0 359.98877 143.12115"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   sodipodi:docname="comparing-dates-and-datetimes.svg"
+   inkscape:export-filename="comparing-dates-and-datetimes.png"
+   inkscape:export-xdpi="42.330002"
+   inkscape:export-ydpi="42.330002"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     showgrid="false"
+     showguides="true"
+     inkscape:zoom="0.5946522"
+     inkscape:cx="559.15037"
+     inkscape:cy="401.07478"
+     inkscape:window-width="1920"
+     inkscape:window-height="1015"
+     inkscape:window-x="1920"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <sodipodi:guide
+       position="72.526858,84.452904"
+       orientation="109.03446,0"
+       id="guide1720"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="143.46622,55.604202"
+       orientation="-109.03446,0"
+       id="guide1724"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="216.52238,84.452904"
+       orientation="109.03446,0"
+       id="guide1738"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="216.52238,55.604202"
+       orientation="0,268.11726"
+       id="guide1740"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="287.46174,55.604202"
+       orientation="-109.03446,0"
+       id="guide1742"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="287.46174,84.452904"
+       orientation="0,-268.11726"
+       id="guide1744"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="327.88455,108.9946"
+       orientation="0,-1"
+       id="guide2495"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="0.5291654,70.028545"
+       orientation="1,0"
+       id="guide2497"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="359.45959,70.028545"
+       orientation="1,0"
+       id="guide2499"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2">
+    <rect
+       x="-80.875877"
+       y="483.49466"
+       width="1448.1252"
+       height="146.54932"
+       id="rect2418" />
+    <marker
+       style="overflow:visible"
+       id="TriangleStart"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="TriangleStart"
+       markerWidth="5.3244081"
+       markerHeight="6.155385"
+       viewBox="0 0 5.3244081 6.1553851"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="TriangleStart-7"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="TriangleStart"
+       markerWidth="5.3244081"
+       markerHeight="6.155385"
+       viewBox="0 0 5.3244081 6.1553851"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135-0" />
+    </marker>
+  </defs>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(30.884554,-29.499583)">
+    <path
+       id="rect1746"
+       style="fill:#ffcc00;fill-opacity:0.995077;stroke:#1a1a1a;stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:bevel;stop-color:#000000"
+       d="M -19.772056,30.557915 H 112.58167 v 25.11718 H -19.772056 l -10.583333,-12.55859 z"
+       sodipodi:nodetypes="cccccc" />
+    <path
+       id="rect1800"
+       style="fill:#de87cd;fill-opacity:0.995077;stroke:#1a1a1a;stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:bevel;stop-color:#000000"
+       d="m 112.58167,30.028748 h 205.41005 l 10.58333,12.823177 -10.58333,12.823177 H 112.58167 Z"
+       sodipodi:nodetypes="cccccc" />
+    <g
+       id="g377"
+       transform="translate(25.40001,0.39116737)">
+      <rect
+         style="fill:#ffb380;fill-opacity:0.995077;stroke:#1a1a1a;stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:bevel;-inkscape-stroke:none;stop-color:#000000"
+         id="rect111"
+         width="70.939362"
+         height="28.848701"
+         x="16.242298"
+         y="87.776665" />
+      <text
+         xml:space="preserve"
+         style="font-size:7.05556px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+         x="30.472952"
+         y="104.52646"
+         id="text322"><tspan
+           sodipodi:role="line"
+           id="tspan320"
+           style="font-size:7.05556px;stroke-width:0.264583"
+           x="30.472952"
+           y="104.52646">2022-03-04</tspan></text>
+    </g>
+    <g
+       id="g385"
+       transform="translate(97.397705,0.39116737)">
+      <rect
+         style="fill:#ff9955;fill-opacity:0.995077;stroke:#1a1a1a;stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:bevel;-inkscape-stroke:none;stop-color:#000000"
+         id="rect379"
+         width="70.939362"
+         height="28.848701"
+         x="16.242298"
+         y="87.776665" />
+      <text
+         xml:space="preserve"
+         style="font-size:7.05556px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+         x="30.472952"
+         y="104.52646"
+         id="text383"><tspan
+           sodipodi:role="line"
+           id="tspan381"
+           style="font-weight:bold;font-size:7.05556px;stroke-width:0.264583"
+           x="30.472952"
+           y="104.52646">2022-03-05</tspan></text>
+    </g>
+    <g
+       id="g393"
+       transform="translate(169.39554,0.39116737)">
+      <rect
+         style="fill:#ffb380;fill-opacity:0.995077;stroke:#1a1a1a;stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:bevel;-inkscape-stroke:none;stop-color:#000000"
+         id="rect387"
+         width="70.939362"
+         height="28.848701"
+         x="16.242298"
+         y="87.776665" />
+      <text
+         xml:space="preserve"
+         style="font-size:7.05556px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+         x="30.472952"
+         y="104.52646"
+         id="text391"><tspan
+           sodipodi:role="line"
+           id="tspan389"
+           style="font-size:7.05556px;stroke-width:0.264583"
+           x="30.472952"
+           y="104.52646">2022-03-06</tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:7.05556px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:0.264583"
+       x="189.75569"
+       y="140.88187"
+       id="text383-6"><tspan
+         sodipodi:role="line"
+         id="tspan381-7"
+         style="font-size:7.05556px;text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="189.75569"
+         y="140.88187">2022-03-<tspan
+   style="font-weight:bold"
+   id="tspan2744">06</tspan> 00:00:00 CET</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:7.05556px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="67.980064"
+       y="67.425606"
+       id="text528"><tspan
+         sodipodi:role="line"
+         id="tspan526"
+         style="font-size:7.05556px;stroke-width:0.264583"
+         x="67.980064"
+         y="67.425606">2022-03-<tspan
+   style="text-align:center;text-anchor:middle"
+   id="tspan530">05</tspan> 00:00:00 CET</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text2416"
+       style="font-size:40px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect2418);display:inline" />
+    <path
+       id="rect2434"
+       style="fill:#ffcc00;fill-opacity:0.995077;stroke:#1a1a1a;stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:bevel;stop-color:#000000"
+       d="M -19.772056,146.97438 H 185.63785 v 25.11719 H -19.772056 l -10.583333,-12.5586 z"
+       sodipodi:nodetypes="cccccc" />
+    <path
+       id="rect2436"
+       style="fill:#de87cd;fill-opacity:0.995077;stroke:#1a1a1a;stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:bevel;stop-color:#000000"
+       d="m 185.63783,146.44519 h 131.82471 l 11.1125,12.82318 -11.1125,12.82317 H 185.63783 Z"
+       sodipodi:nodetypes="cccccc" />
+    <g
+       id="g2485"
+       transform="translate(-46.597685,0.39116737)">
+      <rect
+         style="fill:#ffb380;fill-opacity:0.995077;stroke:#1a1a1a;stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:bevel;-inkscape-stroke:none;stop-color:#000000"
+         id="rect2479"
+         width="70.939362"
+         height="28.848701"
+         x="16.242298"
+         y="87.776665" />
+      <text
+         xml:space="preserve"
+         style="font-size:7.05556px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+         x="30.472952"
+         y="104.52646"
+         id="text2483"><tspan
+           sodipodi:role="line"
+           id="tspan2481"
+           style="font-size:7.05556px;stroke-width:0.264583"
+           x="30.472952"
+           y="104.52646">2022-03-03</tspan></text>
+    </g>
+    <g
+       id="g2493"
+       transform="translate(241.39338,0.39116737)">
+      <rect
+         style="fill:#ffb380;fill-opacity:0.995077;stroke:#1a1a1a;stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:bevel;-inkscape-stroke:none;stop-color:#000000"
+         id="rect2487"
+         width="70.939362"
+         height="28.848701"
+         x="16.242298"
+         y="87.776665" />
+      <text
+         xml:space="preserve"
+         style="font-size:7.05556px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+         x="30.472952"
+         y="104.52646"
+         id="text2491"><tspan
+           sodipodi:role="line"
+           id="tspan2489"
+           style="font-size:7.05556px;stroke-width:0.264583"
+           x="30.472952"
+           y="104.52646">2022-03-07</tspan></text>
+    </g>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.05833;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleStart)"
+       d="m 112.58167,72.757411 v 9.131277"
+       id="path2656"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.05833;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleStart-7)"
+       d="m 185.10867,134.41386 -1.4e-4,-10.64108"
+       id="path2656-9"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <g
+       id="g3378">
+      <text
+         xml:space="preserve"
+         style="font-size:5.64444px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+         x="-12.294754"
+         y="39.754177"
+         id="text528-6"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:monospace;-inkscape-font-specification:monospace;stroke-width:0.264583"
+           x="-12.294754"
+           y="39.754177"
+           id="tspan2312">time &lt; 2022-03-<tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:monospace;-inkscape-font-specification:monospace;text-align:center;text-anchor:middle"
+   id="tspan530-9">05</tspan></tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:5.64444px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+         x="-12.159696"
+         y="48.705917"
+         id="text3304"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:monospace;-inkscape-font-specification:monospace;stroke-width:0.264583"
+           x="-12.159696"
+           y="48.705917"
+           id="tspan3302">time &lt; 2022-03-05 00:00:00 CET</tspan></text>
+    </g>
+    <g
+       id="g3390"
+       transform="translate(184.08801)">
+      <text
+         xml:space="preserve"
+         style="font-size:5.64444px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+         x="-12.294754"
+         y="39.754177"
+         id="text3384"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:monospace;-inkscape-font-specification:monospace;stroke-width:0.264583"
+           x="-12.294754"
+           y="39.754177"
+           id="tspan3382">time &gt;= 2022-03-<tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:monospace;-inkscape-font-specification:monospace;text-align:center;text-anchor:middle"
+   id="tspan3380">05</tspan></tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:5.64444px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+         x="-12.159696"
+         y="48.705917"
+         id="text3388"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:monospace;-inkscape-font-specification:monospace;stroke-width:0.264583"
+           x="-12.159696"
+           y="48.705917"
+           id="tspan3386">time &gt;= 2022-03-05 00:00:00 CET</tspan></text>
+    </g>
+    <g
+       id="g3402"
+       transform="translate(31.81727,117.32037)">
+      <text
+         xml:space="preserve"
+         style="font-size:5.64444px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+         x="-12.159696"
+         y="48.705917"
+         id="text3400"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:monospace;-inkscape-font-specification:monospace;stroke-width:0.264583"
+           x="-12.159696"
+           y="48.705917"
+           id="tspan3398">time &lt;= 2022-03-0<tspan
+   style="font-weight:bold"
+   id="tspan3456">6</tspan> 00:00:00 CET</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:5.64444px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+         x="-11.765588"
+         y="39.754177"
+         id="text3396"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:monospace;-inkscape-font-specification:monospace;stroke-width:0.264583"
+           x="-11.765588"
+           y="39.754177"
+           id="tspan3394">time &lt;= 2022-03-<tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:monospace;-inkscape-font-specification:monospace;text-align:center;text-anchor:middle"
+   id="tspan3392">05</tspan></tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:5.64444px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+         x="172.14977"
+         y="48.705917"
+         id="text3462"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:monospace;-inkscape-font-specification:monospace;stroke-width:0.264583"
+           x="172.14977"
+           y="48.705917"
+           id="tspan3460">time &gt; 2022-03-0<tspan
+   style="font-weight:bold"
+   id="tspan3458">6</tspan> 00:00:00 CET</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:5.64444px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+         x="172.54387"
+         y="39.754177"
+         id="text3468"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:monospace;-inkscape-font-specification:monospace;stroke-width:0.264583"
+           x="172.54387"
+           y="39.754177"
+           id="tspan3466">time &gt; 2022-03-<tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:monospace;-inkscape-font-specification:monospace;text-align:center;text-anchor:middle"
+   id="tspan3464">05</tspan></tspan></text>
+    </g>
+  </g>
+</svg>
