@@ -1,3 +1,44 @@
+# Sentence structure
+
+- Action: subject "ga" verb
+	- sakura ga aruita (sacura andó)
+- Copula: subject "ga" what copula verb
+	- copula is any inflection of "da" verb: desu, datsuta, deshita...
+	- neko ga suki [ski] da "gato <-sujeto gustable (para mi) es
+
+## Pronombres
+
+- "yo"
+	- 私-わたしwatashi: ambos generos, en hombres marca distancia
+	- 私-わたくしwatakushi: forma más formal de decir (un/a servidor/a)
+	- 我-われware: uso literario y para el plural
+	- 我が-わがwaga: espress formality (speeches)
+	- 俺-おれore: para hombres, mascunilidad o camareria
+	- 僕-ぼくboku: hombres, mas humilde, denota juventud, usado por mujeres feministas
+	- 儂-わしwashi: sobretodo hombres, sobretodo mayores
+	- 自分-じぶんjibun: sobretodo hombres
+	- 私-あたしatashi: mujeres jovenes informal oral
+	- 私-あたいatai: mujeres slang
+	- 私-あたくしatakushi: mujeres informal
+	- 内-うちuchi: mujer, informal o hombres para temas de casa o internos de la empresa (kanji "persona", "dentro")
+	- Tambien se usa el nombre propio, y en zonas rurales oira, ora, 
+- "you" singular
+	- name+honorific ie. Dabidu-san
+	- あなたanata: generico, especialmente cuando no se sabe a quien te diriges (anuncios) o la mujeres para dirigirse a su pareja (cariño)
+	- 貴方-あんたanta: informal y brusco, contracción de anata
+
+
+- あなたanata "tú/usted"
+- 私-わたしwatashi "yo"
+- 
+- 彼女-かのじょkanojo "ella" (simbolo de 'el' pero con una mujer despues, "esa mujer")
+- 彼kare "ell" (kanji para "ese" compuesto por 彳"paso" 皮"piel" "piel distante"?)
+- (等-らra es un pluralizador o relativizador)
+	- 彼ら-かれらkarera "ells" (inclusivo)
+	- 彼女等kanojora "elles"
+	- 我等-われらwarera
+
+
 # verb conjugation
 
 ## Forma diccionario de los verbos
@@ -6,10 +47,12 @@ La forma de referencia de los verbos (lo que en español seria el infinitivo)
 acaba siempre en 'u' (o en una silaba de la columna 'u').
 Es la forma del presente a pelo.
 También se usa para habitos y para el futuro.
-De hecho se escriben con un kanji y un kana de la columna 'u' (u, pu, ru, bu, nu, yu...).
+De hecho se escriben con un kanji y un kana de la columna 'u' (u, pu, ru, bu, nu...).
 (en estos apuntes no voy a usar los kanji sino su transcripcion hirigana o romanji,
 pero voy a separar con un guion lo que seria el kanji de la desinencia)
 El kana sería lo que llamamos la desinencia del verbo, lo que modificamos para conjugar.
+
+No hay verbos que acaben con H/F (fu), Y (yu) o W (wu)
 
 ## ichidan vs godan verbs
 
@@ -34,6 +77,7 @@ Las dos conjugaciones típicas:
 Ejemplos godan
 
 - aru-ku (walk) -> aru-kA-nai - aru-kI-masu [arukimás]
+- hana-su (talk) -> hana-sa-nai - hana-shi-masu [hanashimás]
 - no-mu (drink) -> no-mA-nai - no-mI-masu [nomimás]
 - oyo-gu (swim) -> oyo-gA-nai - > oyo-gI-masu [oyogimás]
 - hashi-ru (run) -> hashi-rA-nai -> hashi-rI-masu [hashirimás]

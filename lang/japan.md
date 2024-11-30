@@ -16,9 +16,10 @@
 
 ## Las claves
 
-Para aprender, mejor poco a poco, este es el resumen de lo aprendido.
+Para aprender, mejor poco a poco, cada grupo consonántico de una vez. Más abajo.
+Este es el resumen de lo aprendido.
 
-- Los símbolos son silábicos, representan sílabas.
+- Los símbolos representan sílabas.
 	- Un símbolo para cada combinación de lo que en script latino es consonante+vocal o vocal (pa, ku, so, i...)
 - Las vocales son similares a las de castellano:
 	- Se suelen ordenar diferente: A,I,U,E,O
@@ -30,21 +31,33 @@ Para aprender, mejor poco a poco, este es el resumen de lo aprendido.
 		- ta, **chi**, **tsu**, te, to (ch castellana, tsu de tsunami)
 		- da, **dji**, **dju**, de, do (dj catalana)
 		- ha, hi, **fu**, ho, hu (h es hache aspirada inglesa)
+	- Se predispone la boca como la vocal que viene, y eso modifica la consonante
 - Consonantes sonoras
 	- Los símbolos de las consonantes sordas se reusan para las equivalentes sonoras añadiendo 'acentos'
 	- Sonoras. Añadiendo dos comillas: s -> z, t -> d, h -> b
 	- Semisonoras. Añadiendo un circulo: h -> p (solo hay una)
 	- (en fonetica, la p es la sorda de la b, pero en japones se considera la h una versión aun mas sorda de la p)
-- Consonantes a final de sílaba
-	- En general las consonantes solo estan al principio de la sílaba
-	- Hay un símbolo para la n al final de una sílaba.
-		- Se pronuncia gemminada como en el Baix Llobregat
-	- I y U pierden sonoridad en algunos casos
-		- Entre dos sonidos sordos k, t, s, h  (arimasu -> arimas, watashi)
-		- Despues de un sonido sordo al final de palabra (suki > ski)
+- Silaba N
+	- La silaba N es especial en que no tiene vocal
+	- Se pronuncia como una n en la sílaba anterior
+		- Pero toma el tiempo (mora) de una silaba entera
+		- Es como una n geminada del Baix Llobragat
+	- El fonema se modifica por contacto con la siguiente consonante
+		- como en español-catalan-inglés, nos sale natural
+		- delante de [p] y [b] suena [m]
+		- delane de [k] y [g] suena [ŋ]
+- Vocales sordas
+	- I y U pierden sonoridad en algunos casos a velocidad normal de habla
+		- I y U entre consonantes sordas (k, t, s, h, p y variantes)
+			- suki > ski
+		- I y U despues de consonante sorda al final de la frase
+			-  pasa sobretodo con desu (ser) y masu (auxiliar humildad)
+	- Para que suene bien tiene que articular pero sin sonar (o apenas sonar) la vocal
 - Algunos caracteres tienen su versión pequeña que sirven para modificar el caracter anterior:
 	- Las silabas semiconsonanticas (wo, wa, yo, ya...) en pequeño serían como diftongos
-	- Para conseguir los sonidos de I o U con otra vocal se usan diftongos
+	- Con consonantes que suenan diferente para la i,
+		- sirven para indicar el sonido de la i con la vocal final del diftongo
+		- No suena como el diftongo
 		- Ej. chi-yo -> cho
 	- tsu pequeño sirve para hacer una parada, como una t gemminada
 - Moras (del latin retraso): Marcan el ritmo de la dicción
@@ -53,10 +66,29 @@ Para aprender, mejor poco a poco, este es el resumen de lo aprendido.
 	- La N ocupa su mora aunque en romanji vaya con la silaba anterior (por eso suena gemminada)
 	- El alargamiento de las vocales ocupan una mora
 	- Las moras con vocales enmudecidas suelen ser mas cortas
-- Acentos
+- Acento tonal
 	- Cada palabra puede tener acento en una de sus moras o no tenerlo
-	- El acento se marca con el tono (no con longitud ni intensidad)
-	- Afecta al tono de la siguiente mora
+	- El acento se marca con una subida en el tono (no con longitud ni intensidad como nosotros)
+	- El acento en una mora afecta al tono de la siguiente mora que baja más de lo normal
+	- TODO: Se supone que hay ciertas claves para saber donde hay que poner acento
+	- Tokyo pitch accent
+		- Hay dos tonos, alto y bajo
+		- Si laSi empieza alto en
+		- First and second moras exchange pitch
+			- (start low -> follows high, start high follows low)
+		- En una palabra el tono solo sube una vez.
+		- Pitch only drops once in a word
+			- If the pitch raises again, it is another word
+		- Patterns:
+			- Hei ban: "flat board", First low, second high, no pitch drop after that.
+				- Amerika _^^^ 
+				- Because it must raise the second
+			- Atana daka (head high): la primera alta, y el resto por debajo
+				- Neko ^_
+			- Naka daka (middle high): middle
+				- Nihon 
+			- O daka (tail high): la bajada la hace en la siguiente partícula
+				 Como en los hei-ban la particula se haría alta.
 
 
 ## Vocales
@@ -541,10 +573,12 @@ Se parecen:
 
 
 ## Verbos corrientes
+
 https://www.youtube.com/watch?v=smeDBe_rryQ
 
 
-
+- motsu: hold
+- shinu: morir
 - tatsu: estar de pie
 - tachiagaru: levantarse
 - deru: salir
@@ -554,9 +588,10 @@ https://www.youtube.com/watch?v=smeDBe_rryQ
 - managu: aprender
 - renshuu suru
 - tsukau [skal]: usar
+- kau: comprar
 - kanjiru: feel
 - cotaeru: responder
-- shitsumonseru [stumonseru]: preuntar
+- shitsumonseru [stumonseru]: preguntar
 - haku: barrer
 - soujisuru: limpiar
 - sagasu: buscar
@@ -575,8 +610,8 @@ https://www.youtube.com/watch?v=smeDBe_rryQ
 - nikaisuru: entender
 - aku: abrirse
 - akeru: abrir
-- shimaru: cerrarse
-- shimero: cerrar
+- shimaru: cerrarse (la puerta se cierra)
+- shimeru: cerrar (ell cierra la puerta)
 - yobu: llamar
 - sakebu: gritar
 - tokeru: derretir
