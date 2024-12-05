@@ -735,4 +735,43 @@ Better? would takes the viewport, not the window viewport:  `get_viewport().size
 - Interesting plugin SmartShape2D and usage: https://www.youtube.com/watch?v=r-pd2yuNPvA
 
 
+## Extensiones recomendadas
+
+- Globalize Plugins: Install plugins to all projects
+- DRY
+	- Basic FPS player: Dont reinvent the wheel
+	- Phantom camera: Camara con targets, movimientos con easing, evita obstaculos... (2D y 3D)
+	- Scene Manager: Transiciones entre escenas
+	- Delta Rollback: Saves game
+	- BulletUpHell: gestiona proyectiles masivos
+- Asset editors/generators
+	- Cyclops: Editor de escenarios 3D al estilo del de Quake
+	- Dialogic: Creador de un sistema de dialogos. Logica
+	- CGS Toolbox: Modelado CGS visual
+	- Smartshape 2D: Definir volumenes en vez de tile a tile, formas no cuadriculadas...
+	- Gaia: Procedural generation
+	- Hoodie: Procedural geometries
+- Smart Agents:
+	- RL Agents: Entrenador de IA's para bots.
+	- LimboAI
+- Dev tools
+	- ScripIDE: IDe mejor
+	- Signal visualizer: Muestra las connexiones de signals como graph editable, tambe fa log
+	- Runtime Debug tools: Free cameras, wireframe mode, runtime object selector...
+	- Litle Camera preview: muestra lo que ve la camara en modo edicion
+	- Block Coding: Similar a un Scratch para Godot
+	- Tracy Profiler: Graphical profiler
+	- EmbedGame: Permite Ver el juego ejecutandose en el IDE
+	- Orchestrator: Visual modular programing
+- Fisicas
+	- Jolt Physics: Motor de fisica 3D mas potente y optimizado que el de serie
+	- Box 23: Motor de física 2d
+	- Water way: Para generar y simular rios y aguas corrientes en 3D.
+	- OceanWaves: Simulates ocean waves
+	- DistanceJoin2D: Rigid join to keep two object at a distance without elasticity
+	- SmashTheMesh: rompe objetos 3d
+	- Shaker: Emula sacudidas y temblores en los objetos 3d
+	- SoftBody2D: Emula cuerpos blandos (deforma, flexiona, parte...) tambien en 2D
+	- Concave Mesh slicer: Permite partir objectos con un plano
+
 
