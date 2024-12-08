@@ -10,23 +10,23 @@ que faciliten la manipulación de marcas temporales.
 
 ### TL;DR
 
-- **UTC:** Hora de referencia internacional. La antigua hora solar media de Greenwich, GMT, pero con algunos ajustes técnicos..
+- **UTC (Universal Time Clock):** Hora de referencia internacional. La antigua hora solar media de Greenwich (GMT) pero definida más precisamente. 
 - **UTC Offset:** Diferencia de un sistema horario con UTC. Se expresa UTC+-HH:MM
 - **Huso horario:** UTF offsets en horas enteras. De UTC-12 a UTC+12. Hay unos pocos estándares con offsets no de horas enteras.
-- **Standard Time (ST):** Sistema horario usado en una región (WET, CET, PST, WAT, CAT...), se corresponde con un UTC offset.
-- **Daylight Saving Time (DST):** Sistema horario alternativo a un Standard Time para el periodo de verano (WEST, CEST, PDT, WAST, CAST...)
+- **Standard Time (ST):** Sincronización de los relojes en una región (WET, CET, PST, WAT, CAT...), se corresponde con un UTC offset.
+- **Daylight Saving Time (DST):** Alteración de un Standard Time para el periodo de verano (WEST, CEST, PDT, WAST, CAST...)
 - **Time Zone (TZ):** Zona en la que se aplica un Standard Time (y su pareja DST, si toca)
 - **Local time:** Hora que se aplica oficialmente en una ciudad de referencia en cada momento.
 	- Cambios en la oficialidad de un sitio implica cambios en como obtener la hora local.
 - **Europe/Madrid:** Es nuestro local time.
 	- Actualmente CET(UTC+1)/CEST(UTC+2) con cambio de horario el último domingo de octubre y de marzo a la 01:00 UTC.
-	- Históricamente ha cambiado y puede cambiar: Fue WET/WEST, DST se ha aplicado de forma intermitente, y ha habido otros criterios para el cambio DST.
+	- Históricamente ha cambiado y puede cambiar: Fue WET/WEST, DST se ha aplicado de forma intermitente, y ha habido otros criterios para el momento del cambio DST.
 	- Africa/Ceuta es igual que Europe/Madrid
 	- Atlantic/Canary que es WET(UTC+0)/WEST(UTC+1). Cambia a DST simultaneamente, a la 1:00 UTC (1:00 local en vez de 2:00)
 - **IANA TZ Database:** Compilación histórica de los sistemas horarios que se aplican a ciertas ciudades de referencia.
 
-Si te interesa profundizar en el origen y motivación de estos conceptos, sigue leyendo.
-Si no, puedes saltar a los apartados de ambiguedades y convenciones.
+El siguiente apartado explica la historia y el porqué de estos conceptos.
+Sigue leyendo si te interesa, o puedes saltar al apartado de _Ambiguedades y convenciones_.
 
 ### Hora solar media (Mean solar time)
 
@@ -52,7 +52,7 @@ Por eso se establecieron regiones (**zonas horarias**)
 en la que todos los relojes están sincronizados a una misma **hora estándar** (Standard time).
 Dentro de una zona horaria ya no haría falta ajustar el reloj, sólo cuando pasases de una zona a otra.
 
-### UTC, offsets y husos horarios
+### UTC y offsets
 
 Las primeras horas estándar, a finales del siglo XIX,
 eran propias de cada país, y usaban como referencia,
@@ -75,18 +75,26 @@ La diferencia de un estándard horario con UTC la llamamos **desplazamiento UTC*
 Podemos añadir minutos y segundos al offset si hiciera falta.
 El antiguo Tehran Mean Time era `UTC+03:25:44`.
 
+### Husos horarios
+
 La otra aportación de Fleming fueron los **husos horarios**.
 Son franjas terrestres de 15 grados de longitud
 (el giro de la tierra en una hora)
 a las que corresponderia un offset UTC de horas enteras.
-Ello limitaría la divergencia con la hora solar a media hora más o menos.
+Ello limitaría, dentro de un huso,
+la divergencia con la hora solar a media hora más o menos.
 
 - El huso de referencia, centrado en el meridiano de Greenwich tiene la hora UTC+00.
 - Los husos al este desfasan una hora más cada uno UTC+1, UTC+2..., UTC+12.
 - Los husos al oeste defasan una hora menos cada uno UTC-1, UTC-2..., UTC-12.
 - Los husos UTC+12 y UTC-12 son la mitad de anchos, y los separa el anti-meridiano de Greenwich que define el cambio internacional de dia.
 
-![](World_Time_Zones_Map.png)
+::: note
+	No es 'uso' de 'usar' sino huso (con hache) de hilar en la rueca.
+	Es por la forma que tiene las franjas en el globo,
+	Aunque en la proyección Mercator aparezcan rectangulares.
+	acaban en punta en los polos y son mas anchas en el equador.
+	![Imagen de un huso de rueca ](museo-ancud-huso71A.jpg )
 
 Si observas el mapa actual de zonas horarias,
 verás que los husos como delimitación geográfica
@@ -94,11 +102,13 @@ apenas se usan en tierra, sólo en alta mar.
 Si que triunfó la idea de offsets enteros
 que se aplica en todos sitios menos en las zonas ralladas.
 
+![](World_Time_Zones_Map.png)
+
 ### Denominación militar/radiofónica de los husos
 
 La propuesta de Flemming asignaba a cada huso una letra del abecedario.
 Aunque esa parte de la propuesta no se aceptó,
-se usa en ambitos donde premia la comunicación por radio,
+aún se usa en ambitos donde premia la comunicación por radio,
 como el militar, naval o aviación.
 De hecho es comun usar [la palabra internacional de deletreo de esa letra](https://en.wikipedia.org/wiki/NATO_phonetic_alphabet):
 (Alpha, Bravo, Charlie, Delta...)
@@ -135,7 +145,6 @@ Las horas estándares que se definieron,
 ya con UTC como referencia,
 tienen nombres estandarizados que referencian su zona de aplicación
 y también se refieren por sus siglas.
-Ojo: las siglas no son unicas, y muchas horas estándares coinciden en el mismo offset.
 
 - West Europe Time (WET) UTF+00
 - Central Europe Time (CET) UTF+01
@@ -144,6 +153,15 @@ Ojo: las siglas no son unicas, y muchas horas estándares coinciden en el mismo 
 - Atlantic Standard Time (AST) UTF-05
 - ...
 
+::: warning
+	Es peligroso usar las siglas para identificar la hora estandard. ¡No son unicas!
+
+	- AST: Arabian Standard Time o Atlantic Daylight/Standard Time
+	- AMT: Amazon ime o Armenia Time
+	- CST: Cuba Standard Time o Central Standard Time o China Standard Time
+	- GST: Gulf Standard Time o South Georgia Time
+	- IST: Irish Standard Time, India Standard Time o Israel Standard Time
+	- ...
 
 ### Daylight saving time (DST)
 
@@ -156,24 +174,40 @@ Para reducir esta variación de la hora del amanecer
 algunos paises empezaron a establecer el horario de verano,
 durante el cual se adelanta el reloj una hora.
 
-![](Bilba-Luz-del-Día-2009.png)
 
-Efecto de el DST en la hora del amanecer en Bilbo
+::: figure Bilba-Luz-del-Día-2009.png
+	Efecto de el DST en la hora del amanecer en Bilbo
 
 En general, estas medidas se han introducido
 en tiempos de guerra o en crisis energéticas o por presión industrial.
 Hoy en día, se discute su utilidad energética.
 
 Cada horario estándar (_standard time_),
-puede tener aparejado una horario de verano (_daylight saving time_):
+puede tener aparejado una horario de verano (_daylight saving time_ o _summer time_):
 
 - West Europe Time (WET) -> West Europe Summer Time (WEST)
 - Pacific Standard Time (PST) -> Pacific Daylight saving Time (PDT)
 - ...
 
-Destáquese que se mantienen nombres diferentes aunque CET (Central European Time)
+Normalmente se mantienen nombres diferentes aunque CET (Central European Time)
 y WEST (West European Summer Time) sean ambos equivalentes a UTC+01.
 
+Algunos paises, notablemente en Rusia y en los paises de Norte América,
+no usan dos designaciones distintas para Standard y DST.
+En estos paises, la designacion de la hora estandard incluye ambos offsets.
+Por ello, saber la designación estàndard no es suficiénte
+para conocer si aplica o no DST.
+
+Otro aspecto fácil de olvidar es que verano y invierno estan invertidos
+en el hemisferio norte y en el sur.
+Dos paises en el mismo huso horario pero cada uno en un hemisferio,
+aplicaran el DST en momentos inversos.
+
+Y por útlimo, y más importante,
+son los gobiernos los que definen el momento en que se hacen los cambios DST
+en una región, o incluso si se aplica DST o no.
+Para dolor de cabeza nuestro,
+normalmente dicho criterio va cambiando a lo largo del tiempo.
 
 ### Hora local (_local time_)
 
@@ -182,25 +216,26 @@ en una región concreta se puede cambiar a otro estándar horario.
 De hecho pueden decidir:
 
 - Cambiar a otro estándar horario
-- Activar o desactivar el DST
+- Aplicar o no aplicar DST
 - Modificar los periódos en que se aplica DST
 
 Por eso es importante el concepto de hora local:
-La hora oficial que se aplica en una ciudad de referencia a través de todos esos cambios en el tiempo.
+La hora oficial que se aplica en una ciudad de referencia
+a través de todos esos cambios en el tiempo.
 
 La IANA mantiene una base de datos con las horas locales
 para ciudades y territorios de referencia y todos sus cambios desde 1970.
 Las ciudades de referencia tienen identificadores tipo:
 `Africa/Algiers`, `Antarctica/Macquarie`, `Pacific/Canary`, `Europe/Berlin`...
-La primera parte els el ámbito continental o oceánico.
+La primera parte es el ámbito continental o oceánico.
 Estas bases de datos nos permiten calcular la hora local equivalente de una hora UTC.
 
 Lamentablemente, en las librerías se llama normalmente Time Zone
 a conceptos esencialmente diferentes:
 
 - A los husos horarios o UTC offsets (Zulu, UTC+02...)
-- A una hora estándard o DST concreta aplicada a una zona (CET, CEST, WET, WEST...)
-- A la zona donde se aplican una pareja de horas standard/DST (CET/CEST, WET/WEST...)
+- A una hora estándard o una hora DST concreta aplicada a una zona (CET, CEST, WET, WEST...)
+- A la zona donde se aplican una pareja de horas standard/DST (CET/CEST, WET/WEST, Pacific...)
 - A la oficialidad de un lugar (Europe/Madrid) que hoy puede ser CET/CEST pero que mañana puede cambiar a WET/WEST o WET, o pueden establecer dias diferentes de transicion DST.
 
 ### Europe/Madrid
@@ -347,6 +382,12 @@ necesitamos saber que convencion se usa en las fechas.
 Normalmente se referiran al día en la hora local, aunque no está de más comprobarlo.
 Además ¿qué hora local? ¿la del usuario? ¿la del servidor? ¿la del lugar de la recogida de datos?
 
+Imaginate un usuario de viaje en Nueva York (navegador),
+que se conecta a un servidor en Californa (backend),
+para consultar las curvas de una planta en Canarias (recogida)
+y nosotros hemos guardado las curvas en hora local de Madrid.
+La hora local ha de ser una decisión muy consciente.
+
 Una buena aproximación es convertir la fecha a la hora 00:00:00 local del día en cuestión.
 Nos sirve para comparar con fechas anteriores o posteriores e iguales.
 
@@ -390,12 +431,15 @@ No, porque a las 00:00 locales no hay ambiguedad, por la fecha sabremos si es DS
 ### Texto ISO Format
 
 El estándard [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
-establece una forma uniforme de representar el tiempo como texto.
+establece una forma uniforme de representar el tiempo **como texto**.
 No substituye a la representación en lenguaje natural como "3 de mayo de 2020",
 pero si uniformiza las diferentes convenciones para representar fechas y horas.
 
-Si dos objetos son del mismo tipo y de la misma zona horaria,
+Tiene la interesante propiedad que si dos objetos son del mismo tipo
+y de la misma zona horaria,
 coincide el orden cronologico y el lexicografico.
+
+
 
 - ISO dates: "YYYY-MM-DD"
 - Naive ISO datetimes: "YYYY-MM-DD hh:mm:ss"
@@ -429,30 +473,36 @@ De momento no cubrimos nada de eso.
 ### Timestamp or time since Epoch
 
 Tiempo desde epoch (o también (UNIX/POSIX) timestamp)
-es una representación numérica del tiempo mediante, por ejemplo,
+es una representación **numérica** del tiempo mediante, por ejemplo,
 los segundos transcurridos desde una momento de referencia o epoch.
 
 Es un numero dificil de interpretar, pero fácil de obtener, comparar, restar...
 
 Internamente en POSIX y por extension en otros sistemas,
 el tiempo se representa numéricamente
-como los segundos transcurridos desde el EPOCH UNIX (January 1s 1970 00:00+00).
+como los segundos transcurridos desde el EPOCH UNIX (1970-01-01 00:00+00).
 
 A determinar:
 
-- Las unidades: segundos, milisegundos, microsegundos...
+- Importante: Las unidades: segundos, milisegundos, microsegundos...
 - La representación puede ser entera o float
 	- Float permite granularidad menor pero manteniendo compatibilidad en unidades.
 	- Ojo con los ints y el oferflow (efecto 2038 si seusan 32 bits)
 	- Ojo con los floats y la precisión (a menudo que el numero se hace grande baja en precision)
 - Las 00:00 de referencia del EPOCH pueden ser UTC... o no
 	- Se recomienda UTC pero no tiene porqué ni hay forma de indicarlo
+	- Por desgracia, algunos entornos se usa el EPOCH local, eso tiene todas los problemas que comentabamos arriba.
+	- En esos caso hay que aclarar qué local se usa y desambiguar el DST
 
 ### Tupla tiempo
 
 Otra representación típica es una tupla o estructura
 que contiene númericamente los diferentes niveles de tiempo:
 año, mes...
+
+Es conveniente para hacer manipulaciones semánticas.
+Por ejemplo, 
+incrementar en un dia (con el DST), una semana, un año (con los bisiestos)
 
 
 # WIP - A partir de aquí es Work In Progress
