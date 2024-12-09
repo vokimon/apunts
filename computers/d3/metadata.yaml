@@ -1,0 +1,62 @@
+---
+title: D3
+subtitle: Data Driven Documents
+author: David García Garzón
+
+theme: serif # beige/black/blood/league/moon/night/serif/simple/sky/solarized/white
+history: true # no vuelvas al principo con F5
+transition: convex # none/fade/slide/convex/concave/zoom
+center: true
+slideNumber: true # Muestra el numero de slide
+progress: true
+#parallaxBackgroundImage: "https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg"
+parallaxBackgroundSize: 150%
+parallaxBackgroundHorizontal: 20
+parallaxBackgroundVertical: 5
+#showNotes: separate-page
+showNotes: true
+keyboard:
+  46: prev
+  13: alert('hello')
+include-before: |
+  <style>
+    .reveal {
+      background: #d5e20f88;
+      background-image: url('../images/logo-somit.svg');
+      background-repeat: no-repeat;
+      background-size: 20%;
+      background-position: bottom left;
+      opacity: 50%;
+    }
+    .reveal .slides {
+      background: #ffffffee;
+    }
+    .reveal .slides .titleslide {
+      background-color: #86bc25ff;
+    }
+    .reveal .slides .titleslide h1 {
+      color: white;
+    }
+    .reveal .slides .slide.level2 h2 {
+      color: #86bc25ff;
+      //color: #480;
+    }
+    code {
+      background: #ffe;
+      border-radius: 0.5ex;
+      padding: 3px;
+      color: #500;
+    }
+    .slide strong {
+      color: #060;
+    }
+    .columns {
+      display: flex;
+    }
+    .columns .column {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+---
+
