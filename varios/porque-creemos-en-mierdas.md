@@ -1,9 +1,9 @@
 
 - No depende de la inteligencia o falta de ella
-- No es patologico
-- Buscar patrones para entender el mundo
-- Nos aferramos a nuestras creencias
-- Modificamos los recuerdos
+- No es patologico es como funcionamos
+	- Buscamos patrones para entender el mundo
+	- Nos aferramos a nuestras creencias
+	- Modificamos los recuerdos
 - Los bulos que creamos
 
 Capacidad humana para crear patrones
