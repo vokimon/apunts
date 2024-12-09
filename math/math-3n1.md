@@ -2,20 +2,19 @@
 
 ## The problem
 
-Given the function defined for the natural numbers:
+Given the function defined for the natural numbers^[
+Notice that, even though, the original Collatz formulation,
+defines the odd branch as $3n+1$,
+the result is always even, and the next step always $n/2$.
+In this formulation, both steps are collapsed into one.]:
 
-f(n) = (3n+1)/2 of n is odd n/2 if n is even
-(
+$$
+f(n) = \begin{cases} \frac{n}{2} &\text{if } n \equiv 0 \pmod{2}\\[4px] \frac{3n+1}{2} & \text{if } n\equiv 1 \pmod{2} .\end{cases}
+$$
 
-[/
-    f(n) = \begin{cases} \frac{n}{2} &\text{if } n \equiv 0 \pmod{2}\\[4px] \frack{3n+1}{2} & \text{if } n\equiv 1 \pmod{2} .\end{cases}
-/]
+f(n) = (3n+1)/2 if n is odd; n/2 if n is even
 
-And its kth application f^k(n). By definition f^0(n) = n
-
-Notice that for odd branches we are using the shortcut version
-provided that 3n+1, being n odd is guaranteed to be even
-and the next step is always dividing by two.
+Consider also the kth application of $f$ as $f^k(n)$. By definition $f^0(n) = n$
 
 Let's define that a number n is _reductible_ if it exist a finite k so that f^k(n)=1
 
@@ -126,7 +125,9 @@ Powers of odd always are odd. Powers of even always even unless the power is 0.
     odd((1+2*a)**b) = 1
     odd((2*a)**b) = (b==0?1:0)   --- TODO: which aritmetic opp gives this?
 
-## Unbranched formula
+## First insights
+
+### Unbranched formula
 
 Given the previous tools,
 the unbranched formula for the generator function is:
@@ -229,10 +230,10 @@ we are adding or substracting that "same" step.
     fk+1 = fk + [ (fk>>1) + (fk&1) ]   (odd)
     fk+1 = fk - [ (fk>>1) + (fk&1) ]   (even)
 
-### Oddity of n dependens just on the n lower bytes
+### Oddity of fk(n) dependens just on the k+1 lower bytes of n
 
 Theorem: The oddity of the kth member of the sequence for n
-is determined just by the k least significative bits of n.
+is determined by just the k+1 least significative bits of n.
 
 Demonstration:
 
@@ -242,6 +243,9 @@ Let's define D(i,k) as the set of bits of n
 whose value may influence on the value of the ith bit of fk.
 
 Because f0 = n, D(i,0) = { ni }
+
+
+
 
 Given the value of the kth step fk, with dependency bits D(i,k),
 what will the dependencies for fk+1.
@@ -287,12 +291,6 @@ Because we are interested in the lowest bit which indicates oddity:
 
 So, bits `ni; i>k` have no influence on fk oddity, Ok.
 
-Collorary: Numbers having the same m lower bits,
-will have the same sequence of Ok for `0 <= k <º= m`. 
-
-The demonstration is quite direct:
-since only 
-
 
 That means that numbers having the same lower bits
 also have the same rhythm of ups and downs
@@ -317,6 +315,19 @@ This opens several oportunities:
 - Because A has to be finite, at some point, only zero bits are incorporated
 
 TODO: How ones propagate to upper bits
+
+## Upper bits propagation
+
+Now lets consider how bits propagate up in the odd case.
+
+		111... + 011... (shifted down) = 1011... (with carriage)
+		111... + 011... (shifted down) = 1010... (without carriage)
+		110... + 011... (shifted down) = 1010... (with carriage)
+		110... + 011... (shifted down) = 1001... (without carriage)
+		101... + 010... (shifted down) = 1000... (with carriage)
+		101... + 010... (shifted down) = 0111... (without carriage)
+		100... + 010... (shifted down) = 0111... (with carriage)
+		100... + 010... (shifted down) = 0110... (without carriage)
 
 ## How bits in n are incorporated into Ok
 
