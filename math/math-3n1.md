@@ -2,17 +2,18 @@
 
 ## The problem
 
-Given the function defined for the natural numbers^[
-Notice that, even though, the original Collatz formulation,
-defines the odd branch as $3n+1$,
-the result is always even, and the next step always $n/2$.
-In this formulation, both steps are collapsed into one.]:
+Given the function defined for the natural numbers:
 
 $$
 f(n) = \begin{cases} \frac{n}{2} &\text{if } n \equiv 0 \pmod{2} \\\\[4px] \frac{3n+1}{2} & \text{if } n\equiv 1 \pmod{2} .\end{cases}
 $$
 
-f(n) = (3n+1)/2 if n is odd; n/2 if n is even
+	f(n) = (3n+1)/2 if n is odd; n/2 if n is even
+
+Notice that, even though, the original Collatz formulation,
+defines the odd branch as $3n+1$,
+the result is always even, and the next step always $n/2$.
+In this formulation, both steps are collapsed into one.]:
 
 Consider also the kth application of $f$ as $f^k(n)$. By definition $f^0(n) = n$
 
@@ -300,7 +301,8 @@ Similarity also happens with zeros to the left after all significant bits.
 
 The following example shows two similar binary numbers and below of each one
 the sequence of ups (1) and downs (·) in their fk series.
-Notice that the second number exausts their 
+Notice that the second number exausts their ones, but still matches
+and, during the matching, the coincidence 
 
 
     10101101011000011000000000000000
@@ -320,14 +322,37 @@ TODO: How ones propagate to upper bits
 
 Now lets consider how bits propagate up in the odd case.
 
-		111... + 011... (shifted down) = 1011... (with carriage)
-		111... + 011... (shifted down) = 1010... (without carriage)
-		110... + 011... (shifted down) = 1010... (with carriage)
-		110... + 011... (shifted down) = 1001... (without carriage)
-		101... + 010... (shifted down) = 1000... (with carriage)
-		101... + 010... (shifted down) = 0111... (without carriage)
-		100... + 010... (shifted down) = 0111... (with carriage)
-		100... + 010... (shifted down) = 0110... (without carriage)
+	n      + n>>1   + C
+	111... + 011... + 1 = 1011...
+	111... + 011... + 0 = 1010...
+	110... + 011... + 1 = 1010...
+	110... + 011... + 0 = 1001...
+	101... + 010... + 1 = 1000...
+	101... + 010... + 0 = 0111...
+	100... + 010... + 1 = 0111...
+	100... + 010... + 0 = 0110...
+
+
+	n       + n>>1    + C
+	1000... + 0100... + 0 = 01100...
+	1000... + 0100... + 1 = 01101...
+	1001... + 0100... + 0 = 01101...
+	1001... + 0100... + 1 = 01110...
+	1010... + 0101... + 0 = 01111...
+	1010... + 0101... + 1 = 10000...
+	1011... + 0101... + 0 = 10000...
+	1011... + 0101... + 1 = 10001...
+	1100... + 0110... + 0 = 10010...
+	1100... + 0110... + 1 = 10011...
+	1101... + 0110... + 0 = 10011...
+	1101... + 0110... + 1 = 10100...
+	1110... + 0111... + 0 = 10101...
+	1110... + 0111... + 1 = 10110...
+	1111... + 0111... + 0 = 10110...
+	1111... + 0111... + 1 = 10111...
+
+
+
 
 ## How bits in n are incorporated into Ok
 
