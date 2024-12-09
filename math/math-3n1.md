@@ -9,7 +9,7 @@ the result is always even, and the next step always $n/2$.
 In this formulation, both steps are collapsed into one.]:
 
 $$
-f(n) = \begin{cases} \frac{n}{2} &\text{if } n \equiv 0 \pmod{2}\\[4px] \frac{3n+1}{2} & \text{if } n\equiv 1 \pmod{2} .\end{cases}
+f(n) = \begin{cases} \frac{n}{2} &\text{if } n \equiv 0 \pmod{2} \\\\[4px] \frac{3n+1}{2} & \text{if } n\equiv 1 \pmod{2} .\end{cases}
 $$
 
 f(n) = (3n+1)/2 if n is odd; n/2 if n is even
