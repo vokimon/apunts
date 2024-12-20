@@ -250,10 +250,19 @@ Cocinados
 - griddle: plancha
 
 
+## Meats
 
+Usually the animal is from germanic origin
+while the meat is from romanic origin.
 
-
-
+- Pig -> Pork
+- Chicken -> Chicken/Poultry
+- Cow -> Beef
+- Calf -> Veal (vedella)
+- Sheep -> Mutton
+- Lamb -> Lamb (no changes) (cordero)
+- Goat -> Chevon
+- Deer -> Venison
 
 
 
