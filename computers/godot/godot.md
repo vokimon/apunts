@@ -9,34 +9,46 @@
 	Playlist GDScript from scratch. From very scratch, even programming concepts,
 	but explains some of the differences
 
+## Interesting videos
+
+- Interesting plugin SmartShape2D and usage: https://www.youtube.com/watch?v=r-pd2yuNPvA
+- Character creation Blender + Godot: https://www.youtube.com/watch?v=dd6G2S6MQ6U
+- Depth based outline with gdshaders that work in compatible mode: https://www.youtube.com/watch?v=-SXJvpbFJ7M
+
+## Extracted topics
+
+- [Tiling](tiling.md)
+
 ## The node tree
 
-- Game: Is composed by a tree of nodes.
 - Node: Any element of the game is a Node in a tree. Shape, skeleton, 2D/3DNodes, Sprites, Timer...
-- Properties: Nodes have named values which depend of the node type
-- Inheritance: Type of nodes are subtypes of other types
-	- Properties can be inherited
+- Node Type: Each node has a type which defines its behavior and and the set of properties it has.
+- Properties: Named values whose values can be set differently for each node.
+- Inheritance: A type of node can inherit from other type
+	- Properties are inherited
 	- Default properties values can be set differently
 	- They can extend with new properties
-	- You can add childs
-- Tree structure (Composition hierarchy != Inheritance hierarchy):
+	- You can add/modify childs
+- Node composition (Composition hierarchy != Inheritance hierarchy):
 	- Modifications on the parent (scaling, rotating, positioning, skew, groups...) affect their children
-	- Siblings order affects to the drawing order
-- Scene: Root node that organizes other nodes and display them
-	- Current scene is the scene currently displayed
-	- Scenes are also reusable groups of nodes
-	- You can convert a subtree of nodes into its own scene
-	- You can insert a scene inside another scene
+	- Siblings order has effects on the drawing order
+- Scene: Tree of composed nodes with a single root
+	- Whatever you display in godot has to be a scene
+	- You can also nest scenes inside others to compose complex scenes
+		- Make a set of nodes a scene for reuse and encapsulation
+	- Useful operations:
+		- Import a scene inside another
+		- Extract a subtree as independent scene
 	- Scenes are stored as .tscn files
 - Root node types:
-	- Node2D: 2D scene to organize object in a 2D canvas
+	- Node2D: 2D scene to organize objects in a 2D canvas
 	- UI: Control node (a Node2D it self) but organizes controls in layouts
 	- Node3D: 3D scene to organice object in a 3D world
 - Some useful node types:
 	- Node2D: A 2D point bearing 2D transformations to its children
 	- Sprite2D: An 2D image (also a Node2d)
-- Node can be bound to a script
-	- Normally you bound to a type
+- A node can be bound to a script
+	- Normally you bound to a type (which has its own behaviour)
 	- When you bind a script you are defining a new type by extending the asigned one
 
 ## Scripting (GDScript) for Pythoners
@@ -82,7 +94,7 @@
 	- Then the symbol is globally accessible
 	- But there are no namespaces so explicit names crowds the global scope
 	- TOCHECK: Why autoload modules? Has the modules be loaded by any other to be available? -> They make an instance not a class globally available
-	- Still, not that far from import clauses in other languages (javascript)
+	- Still, `preload` is not that far from import clauses in other languages (javascript)
 - Inheritance:
 	- Add the line `extends OtherClass` to specify the base class in the hierarchy
 		- This is done from the editor, you can change the default superclass from the dialog
@@ -92,6 +104,8 @@
 	- By default, `extends RefCounted`, not `Object` like in Python.
 	- Multiple inheritance not allowed!! Party!! Use composition!
 - Variables (var) and constants (const)
+	- Unlike Python you have to declare variables
+	- Top level are class attributes, inside a function they are locals
 	- `var name: type = initialvalue` <- Static type variable
 	- `var name` <- Uninitialized vars point to `null` (Python `None`)
 	- `var name = initialvalue` <- Dynamic type variable
@@ -181,6 +195,12 @@
 - `_init` called from root to leaves order within the tree
 - `_ready` called from leaves to root within the tree (your children should be available)
 
+Recursive hollywood calls:
+
+- parent first: `_init`, `_process`, `_draw`...
+- child first: `_ready` (when we run `_ready`, children already are ready)
+- inverse (of parent first): `_input`, `_exit_tree`
+
 
 ### Encapsulating attributes
 
@@ -247,17 +267,6 @@ so that each layer can be checked for collisions separatelly.
 `RigidSolid2D`, besides physics of rigid solids, also defines signals like:
 
 - `body_entered/exited(body: Node)`
-
-
-## Tilesets
-
-Tilesets are tile based maps 
-
-Atlas: Definicion de los elementos individuales que hay en una imagen multi sprite.
-
-
-
-
 
 
 
@@ -633,8 +642,15 @@ https://www.youtube.com/watch?v=22VYNOtrcgM
 
 
 
+### 3D escenes
 
-	
+Even though you can use any dimensions you want and fine tune,
+the physics engine is tuned to use SI Units,
+mostly Meter, Kilogram, Second, Radians and derived units.
+So, its better if you use the model scaled to that in world units.
+
+
+
 	
 
 
@@ -731,10 +747,29 @@ Common control attributes:
 Reacting to window resizes: `get_tree().get_root().size_changed.connect(on_resize)`
 Better? would takes the viewport, not the window viewport:  `get_viewport().size_changed.connect(on_resize)`
 
-## Interesting videos
 
+## Model formats
 
-- Interesting plugin SmartShape2D and usage: https://www.youtube.com/watch?v=r-pd2yuNPvA
+- glTF
+	- Mantenido por Khronos
+	- Directorio del ecosistema: https://github.com/KhronosGroup/glTF#gltf-tools
+	- Contenido json (Text Format)
+		- .bin:
+			- Geometry:Vertices, Indices...
+			- Animation: Keyframes
+			- Skins: Inverse bind matrices
+		- .glsl: Shaders
+		- .png/.jpg/...: Textures
+- FBX 
+	- Comun para escenarios y modelos con esqueletos y animacions
+	- Las texturas van en ficheros locales
+	- En Godot 2 se usaba la herramienta FBX2glTF
+	- En Godot>3.2 hay importacion nativa
+
+- DAE Digital Asset Exchange .dae
+	- Propiedad AutoDesk, soporte de Khronos
+	- COLLADA (COLLAborative Design Activity) XML schema
+	- https://en.wikipedia.org/wiki/COLLADA
 
 
 ## Extensiones recomendadas
@@ -775,5 +810,25 @@ Better? would takes the viewport, not the window viewport:  `get_viewport().size
 	- Shaker: Emula sacudidas y temblores en los objetos 3d
 	- SoftBody2D: Emula cuerpos blandos (deforma, flexiona, parte...) tambien en 2D
 	- Concave Mesh slicer: Permite partir objectos con un plano
+
+## Asset repositories
+
+- https://syntystore.com/ by [Synty Studios](https://www.syntystudios.com/)
+	- Propietario, de pago
+	- Low poly assets for realtime
+	- Single payment for "small studio"
+- https://www.fab.com  (Old Sketchfab)
+	- Colaborativo (usuarios suben modelos y ponen precio o no)
+
+
+
+
+
+
+
+
+
+
+
 
 
