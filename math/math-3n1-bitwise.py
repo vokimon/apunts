@@ -9,11 +9,11 @@ def edge(n, nbits, carry):
 	up = result[0] == "1"
 	target = result[:nbits] if up else result[-nbits:]
 	print(f"# {origin} + {shifted} + {carry} = {result}")
-	print(f"{origin} -> {target}")
+	print(f"{origin} -> {target} [label=\"{carry}\"{'color="red"' if up else ''} ]")
 	
 
 #step("What happens to the upper bits when odd")
-for nbits in range(2,5):
+for nbits in range(2,8):
 	for a in range(1<<(nbits-1),1<<(nbits)):
 		edge(a, nbits, carry=0)
 		edge(a, nbits, carry=1)

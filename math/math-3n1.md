@@ -13,16 +13,25 @@ $$
 Notice that, even though, the original Collatz formulation,
 defines the odd branch as $3n+1$,
 the result is always even, and the next step always $n/2$.
-In this formulation, both steps are collapsed into one.]:
+In this formulation, both steps are collapsed into one.
 
 Consider also the kth application of $f$ as $f^k(n)$. By definition $f^0(n) = n$
 
-Let's define that a number n is _reductible_ if it exist a finite k so that f^k(n)=1
+Let's define that a number n is _reductible_ if it exist a finite $k$ so that $f^k(n)=1$
 
 By brute force we know that all the first checked natural numbers are reductible.
 As for today this has been proved until 2^68 (David Bařina https://github.com/hellpig/collatz).
 
 The Collatz conjecture states that: all natural numbers are reductible.
+
+## Summary of achievements until now
+
+- Unbranched formulations, which makes derivations more manegeable
+- Bitwise computation, which provides an spacial insight on what is happening
+- Hypotesis of the first non reductible number, which provides either falsability conditions for rejection or a path to search such a number
+- Demonstrated Theorem: The oddity of fk(n) depends only on the kth lower bits of n, and it is independent of the upper ones.
+- Demonstrated Theorem: If the most significant bit of fk(n) is the ith, fk+1(n) is up-bounded  to (2^i+1 + 2^i)
+
 
 ## Toolbox
 
@@ -40,12 +49,12 @@ For b = 3:
     3^n = 1 + 2*sum[0<=i<n](3^i)
     3^n = 1 + 2*(3^n-1 + 3^n-2 ... + 3 + 1)
 
-This is also equivalent to those formulas:
+This is also equivalent to these formulas:
 
     (3^n - 1)/2 = (3^n-1 + 3^n-2 ... + 3 + 1)
     (3^n - 1)/2 = sum[0<=i<n](3^i)
 
-    sum(3^k)[0<=k<n] = (3^n - 1) / 2
+    sum[0<=i<n](3^i) = (3^n - 1) / 2
 
     (3^n + 1)/2 = 1 + (3^n-1 + 3^n-2 ... + 3 + 1)
     (3^n + 1)/2 = 1 + sum[0<=i<n](3^i)
@@ -58,9 +67,8 @@ We can also relate powers of 3 in terms of powers of 2 by using the binomial the
 
 ### Boolean with integer arithmetics
 
-Enable us to integrate boolean conditions
-into natural numbers expresions.
-Useful to eliminate formula branching.
+Expressing boolean values and operators with integer aritmethics,
+will be useful to eliminate formula branching for ods and even.
 
 Let's define a boolean integer as B€[0,1]
 
@@ -96,18 +104,21 @@ Those operations ensure a closure among booleans integers.
 Meaning that while the operands are 0 or 1, the result will be also 0 or 1.
 
 So, how to use those boolean expresions inside an algebraic fórmula?
-We can make multiplication factors and addition terms optional.
 
-Being x and y natural numbers and
-'a' a boolean condition represented as integer,
+Conditional addition by multiplying the term by the boolean contition:
 
-- conditional addition of a term x:  a*x + y
-- conditional multiplication by a factor x:  x^a * y
+	a*x + y
+
+Conditional multiplication by rising the factor the power of the boolean condition.
+
+	a^x * y
+
 
 ### Oddity of algebraic expressions
 
-Oddity is a function that returns a boolean integer, 1 if the number is odd.
-Also useful to eliminate branching.
+Oddity is a function that receives a natural number
+and returns a boolean integer: 1 when the number is odd and 0 otherwise.
+We will also use this function to eliminate branching in Collatz formula.
 
 Being a and b integer expressions:
 
@@ -120,57 +131,92 @@ Pair terms can be ignored for oddity:
 
     odd(2*a + b) = odd(2*a) xor odd(b) = 0 xor odd(b) = odd(b)
 
-Oddity of powers behave different depending on the oddity of the base.
-Powers of odd always are odd. Powers of even always even unless the power is 0.
+Oddity of integer powers behave different depending on the oddity of the base.
+
+Powers of odd bases are always odd.
 
     odd((1+2*a)**b) = 1
+
+Powers of even bases are even unless the power is 0.
+
     odd((2*a)**b) = (b==0?1:0)   --- TODO: which aritmetic opp gives this?
 
-## First insights
+## Reformulating Collatz
+
+### Notation
+
+In order to simplify formula writting we are using the following alias:
+
+	fk = f^k(n)
+	Ok = odd(f^k(n))
+
+As we imply `n`, we should take care of not mixing expressions that refer to different numbers.
 
 ### Unbranched formula
 
-Given the previous tools,
-the unbranched formula for the generator function is:
+Using boolean power to unbranch Collatz:
 
-    f(n) = 1/2 * (n * 3^odd(n) + odd(n) )
+	f(n) = ( 3^odd(n) * n + odd(n) ) / 2
 
-Thus we can define recursively the kth application of f:
+This unbranched formula renders in the following:
 
-    f0(n) = n
-    fk+1(n) = 1/2 * ( fk(n) * 3^(odd(fk(n))) + odd(fk(n)) )
+	f(n) = ( 3^1 * n + 1) / 2 = (3 * n + 1) / 2  for odd numbers
+	f(n) = ( 3^0 * n + 0) / 2 = n / 2            for even numbers
 
-Another formulation is:
+So we can define the kth application recursively as:
 
-    fk+1(n) = 1/2 * ( fk(n) * (1 + 2*odd(fk(n))) + odd(fk(n)) )
+	f0 = n
+	fk+1 = (fk * 3^Ok + Ok) / 2
 
-Which can be convenient to extract factors of two.
+Another approach is to use the boolean factor for the optional term:
 
-    fk+1(n) = 1/2 * ( fk(n) * (1 + 2*odd(fk(n))) + odd(fk(n)) )
+	f(n) = (n * (1 + 2*odd(n) ) + odd(n) ) / 2
 
-To simplify the writting, lets define Ok as odd(fk(n)).
-and fk(n) as fk.
-Then we can express both formulations as
+And the kth application:
+
+	f0 = n
+	fk+1 = (fk * (1+2*Ok) + Ok) / 2
+
+Often is useful to group all the optional part in one term:
+
+	fk+1 = (fk + Ok*(2*fk + 1)) / 2
+
+In summary we have these three formulations:
 
     fk+1 = (3^Ok * fk + Ok) / 2     # Ok exponential form
-    fk+1 = (fk + 2*Ok*fk  + Ok) / 2 # Ok factor form
-    fk+1 = (fk + Ok*(2*fk  + 1)) / 2 # Binary shift and add form
+    fk+1 = (fk + 2*Ok*fk + Ok) / 2 # Ok factor form
+    fk+1 = (fk + Ok*(2*fk + 1)) / 2 # Binary shift and add form
 
-### Additive/Substractive view
+### Additive/Substractive approach
+
+By computing the delta between successive steps in fk:
 
     fk+1 - fk =
     = (fk + 2*Ok*fk  + Ok) / 2 - fk   # Using Ok factor form
     = (-fk + 2*Ok*fk  + Ok) / 2       # fk inside 1/2
+
         Odd: (-fk + 2*fk  + 1) / 2 = fk/2 + 1/2
         Even: -fk/2
 
+In summary:
+
     fk odd : +fk/2 + 1/2
     fk even: -fk/2
+
 
 **Conclusion**:
 Depending on the oddity of the previous result,
 we are adding or substracting half of the sequence value,
 rounding up for odds.
+
+### Binary computation approach
+
+Imagine a computer that operates binary natural numbers of infinite precission.
+
+Lets define the down shift `a >> i` as the integer division by 2.
+
+
+
 
 ### Hypothesis of the first non-reductible number
 
@@ -316,11 +362,47 @@ This opens several oportunities:
   Maybe we can combine that with the first irreductible A hypothesis to discard many lower bits patterns instead of discarding numbers one by one.
 - Because A has to be finite, at some point, only zero bits are incorporated
 
-TODO: How ones propagate to upper bits
-
 ## Upper bits propagation
 
 Now lets consider how bits propagate up in the odd case.
+
+The least odd number having the ith bit to one is $2^i +1$.
+its successor is $2^i + +1 + 2^{i-1} + 1 = 2^i + 2^{i-1} + 2$.
+
+::: theorem
+	If the most significant bit of fk is the ith bit,
+	then the most significant bit of fk+1 could be i+1
+	but if so, the next significative bit should be zero.
+
+	if fk < 2^i -> fk+1 < 2^i+1 + 2^i
+
+
+
+
+
+	2^n + 1 -> 2^n +1 + 2^-1 +1 +1
+
+	10000...001
+	01000...001
+	11000...001
+
+	2^n -1 + 2^n-1 -1 + 1 =
+	2^n + 2^n-1 - 1 =
+
+	01111...111
+	01000...000
+	10111...111
+
+	01010...101
+	00101...010
+	01111...111
+	10000...000
+
+	n      + n>>1   + C
+	11... + 01... + 1 = 101...
+	11... + 01... + 0 = 100...
+	10... + 01... + 1 = 100...
+	10... + 01... + 0 = 011...
 
 	n      + n>>1   + C
 	111... + 011... + 1 = 1011...
@@ -331,7 +413,6 @@ Now lets consider how bits propagate up in the odd case.
 	101... + 010... + 0 = 0111...
 	100... + 010... + 1 = 0111...
 	100... + 010... + 0 = 0110...
-
 
 	n       + n>>1    + C
 	1000... + 0100... + 0 = 01100...
