@@ -31,8 +31,9 @@ nav:
       - computers/security.md
     - godot:
         - computers/godot/godot.md
-        - computers/godot/physics.md
         - computers/godot/tiling.md
+        - computers/godot/physics.md
+        - computers/godot/ui.md
     - computers/cligrafics/00-imagemagick.md
     - computers/computer-graphics.md
     - computers/android-glossary.md
@@ -45,7 +46,7 @@ nav:
     - computers/xpxplained.markdown
     - computers/branching-patterns.md
   - Math:
-    - Math Foundations: math/mates-fundation.md
+    - Math Foundations: math/math-fundation.md
     - Statistics: math/stats.md
     - Half Derivatives: math/math-halfderivatives.md
     - Quadratic Formula: math/math-quadraticformula-alternative.md
