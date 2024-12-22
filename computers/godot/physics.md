@@ -71,6 +71,36 @@ Having a volume:
 - They receive `mouse_enter/exit()`
 - They emit homonimal signals without the `_`
 
+## Physics
+
+- Area2D: Can be checked on whether another body enters (changes position, orientation...)
+	- Signal: `on_area2d_entered`
+	- Signal: `on_area2d_entered`
+- CollitionBody3D:
+	- Defines a list of CollitionPolygon or PolygonShape to check collisions
+	- StaticBody2D: A moveable body that other bodies collides with (static)
+	- RigidBody2D: Moving body that moves according physics (projectils...)
+	- CharacterBody2D: Moves controlled by code (players, enemies...)
+		- attribute velocity (Vector2D)
+		- `move_and_slide()` Updates position accordint to velocity avoiding getting into static body areas by slipping on the border
+		- `move_and_collide()` 
+
+
+## Collisions
+
+Collisions are segmented by physics layers
+so that each layer can be checked for collisions separatelly.
+
+`CollisionObject2D` base class has those attributes:
+
+- Layer: The layers where the object can be detected by others
+- Mask: The layers that the object will scan for collisions with others
+- Priority: The order in which the object will be notified. Useful to avoid race conditions.
+
+`RigidSolid2D`, besides physics of rigid solids, also defines signals like:
+
+- `body_entered/exited(body: Node)`
+
 
 ## RigidBody2D/3D (Dynamics)
 

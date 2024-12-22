@@ -20,6 +20,8 @@
 ## Extracted topics
 
 - [Tiling](tiling.md)
+- [Physics](physics.md)
+- [UI](ui.md)
 
 ## The node tree
 
@@ -253,22 +255,6 @@ TODO: Implications on conversions, reinterpretations...?
 Object of class can be casted as the subclass
 
 TODO: checked in runtime?
-
-
-## Collisions
-
-Collisions are segmented by physics layers
-so that each layer can be checked for collisions separatelly.
-
-`CollisionObject2D` base class has those attributes:
-
-- Layer: The layers where the object can be detected by others
-- Mask: The layers that the object will scan for collisions with others
-- Priority: The order in which the object will be notified. Useful to avoid race conditions.
-
-`RigidSolid2D`, besides physics of rigid solids, also defines signals like:
-
-- `body_entered/exited(body: Node)`
 
 
 
@@ -561,98 +547,6 @@ the physics engine is tuned to use SI Units,
 mostly Meter, Kilogram, Second, Radians and derived units.
 So, its better if you use the model scaled to that in world units.
 
-
-
-	
-
-
-
-
-
-
-
-
-
-
-### UI Nodes
-
-https://www.youtube.com/watch?v=sPfoZy-cW-E
-
-- ContainerNode: Layout childs
-	- AspectRatio: Keeps aspect ratio of child
-	- CenterContainer: child centered 
-	- MarginContainer: generates a padding arround the child
-	- BoxContainter: Stacked in one direction
-		- HBoxContainer: horizontal stack
-		- VBoxContainer: vertical stack
-	- SplitContainer: Like BoxContainter but using an editable splitter to control relative sizes of children
-		- VSplitContainer: Vertical
-		- HSplitContainer: Horizontal
-	- FlowContainter: Displays elements using wrapping text layout
-	- GridContainer: Arrange in rows and columns
-	- PanelContainer: Adds an styled background
-	- ScrollContainer: Allows overflows of the children with an scroll
-	- TabContainer: Separates children in tabs
-- Displays/Backgrounds
-	- Label: Text display
-	- RichTextLabel: With styles
-	- ColorRect: 
-	- TextureRect:
-	- VideoStreamPlayer:
-	- Separator: Line
-		- VSeparator
-		- HSeparator
-	- Panel: Not container just background
-	- -NinePatchRect: textured borders
-- Control: Input. You can connect events to react
-	- BaseButton:
-		- Button: Text button
-		- TextureButton: Image button
-		- LinkButton: Shown as a link
-		- CheckBox: [x]
-		- CheckButton: `*-` `-*`
-		- MenuButton: opens a 
-		- OptionButton: Dropdown selection
-		- ColorPickerButton:
-	- LineEdit: single line text edit
-	- TextEdit: Plain multiline editor
-	- CodeEdit: Syntax highligted editor
-	- Range: Selecting or displaying a number in a range
-		- ProgressBar: Styled progress bar
-		- TextureProgressBar: Displays a texture partially to show progress
-		- SpinBox: shows a number with arrows to increase or discre
-		- (V/H)ScrollBar: Usually use the ScrollContainer
-		- (V/H)Slider: Grab a handle to select a number within 
-	- ItemList: clickable list of items
-	- Tree: Hierachical items
-	- MenuBar: Array of MenuButtons
-	- TabBar: Top element of the TabContainer
-	- ReferenceRect: ???
-	- GraphEdit: ???
-	- GraphNode: ???
-	- TouchScreenButton: ???
-
-Common control attributes:
-
-- Layout
-	- ClipContent: Overflowed content clipped by parent or can be seen
-	- CustomMinimumSize: Do not 
-	- LayoutDirection: for children, Left to right, localization dependant...
-	- LayoutMode: Anchor or Coordinates
-- Transform: position, size, scale, rotation, pivot point (With anchor are changed automatically)
-- Localization:
-	- Autotranslate:
-	- Localize numerals:
-- Tooltip: 
-- Focus:
-	- Neighbours (sequence and directional)
-- Mouse:
-	- Pass or stop the event
-	- Pass or stop scroll events
-	- Cursor Shape:
-- Input
-	- Shortcut context:
-- Theme:
 
 ## Snippets
 
