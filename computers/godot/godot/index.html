@@ -18,7 +18,7 @@
         <link rel="prev" href="../../security/">
       
       
-        <link rel="next" href="../physics/">
+        <link rel="next" href="../tiling/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -1056,15 +1056,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#collisions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Collisions
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#input-and-actions" class="md-nav__link">
     <span class="md-ellipsis">
       Input and actions
@@ -1182,15 +1173,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#ui-nodes" class="md-nav__link">
-    <span class="md-ellipsis">
-      UI Nodes
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -1248,6 +1230,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../tiling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Godot Tiling
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../physics/" class="md-nav__link">
         
   
@@ -1269,11 +1272,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../tiling/" class="md-nav__link">
+      <a href="../ui/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Godot Tiling
+    Godot UI
   </span>
   
 
@@ -1571,7 +1574,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../math/mates-fundation/" class="md-nav__link">
+      <a href="../../../math/math-fundation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2800,15 +2803,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#collisions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Collisions
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#input-and-actions" class="md-nav__link">
     <span class="md-ellipsis">
       Input and actions
@@ -2926,15 +2920,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#ui-nodes" class="md-nav__link">
-    <span class="md-ellipsis">
-      UI Nodes
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -3013,6 +2998,8 @@ but explains some of the differences</p>
 <h2 id="extracted-topics">Extracted topics</h2>
 <ul>
 <li><a href="../tiling/">Tiling</a></li>
+<li><a href="../physics/">Physics</a></li>
+<li><a href="../ui/">UI</a></li>
 </ul>
 <h2 id="the-node-tree">The node tree</h2>
 <ul>
@@ -3321,19 +3308,6 @@ In compile time and in run-time.</p>
 <p>TODO: Implications on conversions, reinterpretations...?
 Object of class can be casted as the subclass</p>
 <p>TODO: checked in runtime?</p>
-<h2 id="collisions">Collisions</h2>
-<p>Collisions are segmented by physics layers
-so that each layer can be checked for collisions separatelly.</p>
-<p><code>CollisionObject2D</code> base class has those attributes:</p>
-<ul>
-<li>Layer: The layers where the object can be detected by others</li>
-<li>Mask: The layers that the object will scan for collisions with others</li>
-<li>Priority: The order in which the object will be notified. Useful to avoid race conditions.</li>
-</ul>
-<p><code>RigidSolid2D</code>, besides physics of rigid solids, also defines signals like:</p>
-<ul>
-<li><code>body_entered/exited(body: Node)</code></li>
-</ul>
 <h2 id="input-and-actions">Input and actions</h2>
 <ul>
 <li>Action: Interaction event that can be bound to device actions (mouse, joystick, keyboard...)<ul>
@@ -3653,111 +3627,6 @@ How to encapsulate a bunch of nodes in an abstract class?</p>
 the physics engine is tuned to use SI Units,
 mostly Meter, Kilogram, Second, Radians and derived units.
 So, its better if you use the model scaled to that in world units.</p>
-<h3 id="ui-nodes">UI Nodes</h3>
-<p>https://www.youtube.com/watch?v=sPfoZy-cW-E</p>
-<ul>
-<li>ContainerNode: Layout childs<ul>
-<li>AspectRatio: Keeps aspect ratio of child</li>
-<li>CenterContainer: child centered </li>
-<li>MarginContainer: generates a padding arround the child</li>
-<li>BoxContainter: Stacked in one direction<ul>
-<li>HBoxContainer: horizontal stack</li>
-<li>VBoxContainer: vertical stack</li>
-</ul>
-</li>
-<li>SplitContainer: Like BoxContainter but using an editable splitter to control relative sizes of children<ul>
-<li>VSplitContainer: Vertical</li>
-<li>HSplitContainer: Horizontal</li>
-</ul>
-</li>
-<li>FlowContainter: Displays elements using wrapping text layout</li>
-<li>GridContainer: Arrange in rows and columns</li>
-<li>PanelContainer: Adds an styled background</li>
-<li>ScrollContainer: Allows overflows of the children with an scroll</li>
-<li>TabContainer: Separates children in tabs</li>
-</ul>
-</li>
-<li>Displays/Backgrounds<ul>
-<li>Label: Text display</li>
-<li>RichTextLabel: With styles</li>
-<li>ColorRect: </li>
-<li>TextureRect:</li>
-<li>VideoStreamPlayer:</li>
-<li>Separator: Line<ul>
-<li>VSeparator</li>
-<li>HSeparator</li>
-</ul>
-</li>
-<li>Panel: Not container just background</li>
-<li>-NinePatchRect: textured borders</li>
-</ul>
-</li>
-<li>Control: Input. You can connect events to react<ul>
-<li>BaseButton:<ul>
-<li>Button: Text button</li>
-<li>TextureButton: Image button</li>
-<li>LinkButton: Shown as a link</li>
-<li>CheckBox: [x]</li>
-<li>CheckButton: <code>*-</code> <code>-*</code></li>
-<li>MenuButton: opens a </li>
-<li>OptionButton: Dropdown selection</li>
-<li>ColorPickerButton:</li>
-</ul>
-</li>
-<li>LineEdit: single line text edit</li>
-<li>TextEdit: Plain multiline editor</li>
-<li>CodeEdit: Syntax highligted editor</li>
-<li>Range: Selecting or displaying a number in a range<ul>
-<li>ProgressBar: Styled progress bar</li>
-<li>TextureProgressBar: Displays a texture partially to show progress</li>
-<li>SpinBox: shows a number with arrows to increase or discre</li>
-<li>(V/H)ScrollBar: Usually use the ScrollContainer</li>
-<li>(V/H)Slider: Grab a handle to select a number within </li>
-</ul>
-</li>
-<li>ItemList: clickable list of items</li>
-<li>Tree: Hierachical items</li>
-<li>MenuBar: Array of MenuButtons</li>
-<li>TabBar: Top element of the TabContainer</li>
-<li>ReferenceRect: ???</li>
-<li>GraphEdit: ???</li>
-<li>GraphNode: ???</li>
-<li>TouchScreenButton: ???</li>
-</ul>
-</li>
-</ul>
-<p>Common control attributes:</p>
-<ul>
-<li>Layout<ul>
-<li>ClipContent: Overflowed content clipped by parent or can be seen</li>
-<li>CustomMinimumSize: Do not </li>
-<li>LayoutDirection: for children, Left to right, localization dependant...</li>
-<li>LayoutMode: Anchor or Coordinates</li>
-</ul>
-</li>
-<li>Transform: position, size, scale, rotation, pivot point (With anchor are changed automatically)</li>
-<li>Localization:<ul>
-<li>Autotranslate:</li>
-<li>Localize numerals:</li>
-</ul>
-</li>
-<li>Tooltip: </li>
-<li>Focus:<ul>
-<li>Neighbours (sequence and directional)</li>
-</ul>
-</li>
-<li>Mouse:<ul>
-<li>Pass or stop the event</li>
-<li>Pass or stop scroll events</li>
-<li>Cursor Shape:</li>
-</ul>
-</li>
-<li>Input<ul>
-<li>Shortcut context:</li>
-</ul>
-</li>
-<li>Theme:</li>
-</ul>
 <h2 id="snippets">Snippets</h2>
 <p>Reacting to window resizes: <code>get_tree().get_root().size_changed.connect(on_resize)</code>
 Better? would takes the viewport, not the window viewport:  <code>get_viewport().size_changed.connect(on_resize)</code></p>

@@ -15,10 +15,10 @@
         <link rel="canonical" href="https://vokimon.github.io/apunts/computers/godot/physics/">
       
       
-        <link rel="prev" href="../godot/">
+        <link rel="prev" href="../tiling/">
       
       
-        <link rel="next" href="../tiling/">
+        <link rel="next" href="../ui/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -917,6 +917,27 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../tiling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Godot Tiling
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -984,6 +1005,24 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#physics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Physics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#collisions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Collisions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#rigidbody2d3d-dynamics" class="md-nav__link">
     <span class="md-ellipsis">
       RigidBody2D/3D (Dynamics)
@@ -1017,11 +1056,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../tiling/" class="md-nav__link">
+      <a href="../ui/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Godot Tiling
+    Godot UI
   </span>
   
 
@@ -1319,7 +1358,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../math/mates-fundation/" class="md-nav__link">
+      <a href="../../../math/math-fundation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2455,6 +2494,24 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#physics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Physics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#collisions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Collisions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#rigidbody2d3d-dynamics" class="md-nav__link">
     <span class="md-ellipsis">
       RigidBody2D/3D (Dynamics)
@@ -2583,6 +2640,39 @@ so you don't have to learn two different API's.</p>
 <li>They can receive input events from cameras (<code>_input(camera, event, normal, shape_idx)</code>).</li>
 <li>They receive <code>mouse_enter/exit()</code></li>
 <li>They emit homonimal signals without the <code>_</code></li>
+</ul>
+<h2 id="physics">Physics</h2>
+<ul>
+<li>Area2D: Can be checked on whether another body enters (changes position, orientation...)<ul>
+<li>Signal: <code>on_area2d_entered</code></li>
+<li>Signal: <code>on_area2d_entered</code></li>
+</ul>
+</li>
+<li>CollitionBody3D:<ul>
+<li>Defines a list of CollitionPolygon or PolygonShape to check collisions</li>
+<li>StaticBody2D: A moveable body that other bodies collides with (static)</li>
+<li>RigidBody2D: Moving body that moves according physics (projectils...)</li>
+<li>CharacterBody2D: Moves controlled by code (players, enemies...)<ul>
+<li>attribute velocity (Vector2D)</li>
+<li><code>move_and_slide()</code> Updates position accordint to velocity avoiding getting into static body areas by slipping on the border</li>
+<li><code>move_and_collide()</code> </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="collisions">Collisions</h2>
+<p>Collisions are segmented by physics layers
+so that each layer can be checked for collisions separatelly.</p>
+<p><code>CollisionObject2D</code> base class has those attributes:</p>
+<ul>
+<li>Layer: The layers where the object can be detected by others</li>
+<li>Mask: The layers that the object will scan for collisions with others</li>
+<li>Priority: The order in which the object will be notified. Useful to avoid race conditions.</li>
+</ul>
+<p><code>RigidSolid2D</code>, besides physics of rigid solids, also defines signals like:</p>
+<ul>
+<li><code>body_entered/exited(body: Node)</code></li>
 </ul>
 <h2 id="rigidbody2d3d-dynamics">RigidBody2D/3D (Dynamics)</h2>
 <p>https://www.youtube.com/watch?v=XSFkAzXQSWE</p>
