@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="18cm" height="10cm" viewBox="209 154 344 197" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs/>
+  <g id="Fons">
+    <ellipse style="fill: #d8634b; fill-opacity: 1; stroke: none" cx="221" cy="270" rx="10" ry="10"/>
+    <g>
+      <ellipse style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #d8634b" cx="266" cy="332" rx="15" ry="15"/>
+      <ellipse style="fill: #d8634b; fill-opacity: 1; stroke: none" cx="266" cy="332" rx="10" ry="10"/>
+    </g>
+    <g>
+      <rect style="fill: #e8b45e; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #d8634b" x="240" y="190" width="80" height="36" rx="10" ry="10"/>
+      <text font-size="12.7998" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="280" y="211.587">
+        <tspan x="280" y="211.587">A</tspan>
+      </text>
+    </g>
+    <g>
+      <rect style="fill: #e8b45e; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #ff02d9" x="389.534" y="313.95" width="80" height="36" rx="10" ry="10"/>
+      <text font-size="12.7998" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="429.534" y="335.537">
+        <tspan x="429.534" y="335.537">C</tspan>
+      </text>
+    </g>
+    <g>
+      <rect style="fill: #e8b45e; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #005405" x="389.6" y="189.9" width="80" height="36" rx="10" ry="10"/>
+      <text font-size="12.7998" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="429.6" y="211.487">
+        <tspan x="429.6" y="211.487">B</tspan>
+      </text>
+    </g>
+    <g>
+      <polyline style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke: #005405" points="232.005,270 280,270 280,231.481 "/>
+      <polyline style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke: #005405" points="285,239.245 280,229.245 275,239.245 "/>
+    </g>
+    <g>
+      <polyline style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke: #005405" points="321.005,208 355.3,208 355.3,207.9 384.123,207.9 "/>
+      <polyline style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke: #005405" points="376.359,212.9 386.359,207.9 376.359,202.9 "/>
+      <text font-size="12.7998" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="353.643" y="204.632">setter()</text>
+    </g>
+    <g>
+      <polyline style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke: #000000" points="429.6,188.923 429.6,158.891 500.605,158.891 500.605,207.9 475.07,207.9 "/>
+      <polyline style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke: #000000" points="482.834,202.9 472.834,207.9 482.834,212.9 "/>
+      <text font-size="12.7998" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="533" y="185">[cond2]</text>
+      <text font-size="12.7998" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="529" y="166">setter()</text>
+    </g>
+    <g>
+      <polyline style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke: #ff0000" points="429.6,226.881 429.6,268.925 429.534,268.925 429.534,308.49 "/>
+      <polyline style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke: #ff0000" points="424.534,300.726 429.534,310.726 434.534,300.726 "/>
+      <text font-size="12.7998" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="457.617" y="289">[cond1]</text>
+      <text font-size="12.7998" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="459.117" y="269">setter()</text>
+    </g>
+    <g>
+      <polyline style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke: #1b6bb6" points="388.541,331.95 335.651,331.95 335.651,332 286.474,332 "/>
+      <polyline style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke: #1b6bb6" points="294.238,327 284.238,332 294.238,337 "/>
+      <text font-size="12.7998" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="347.517" y="327.149">setter()</text>
+    </g>
+    <g>
+      <rect style="fill: #e8b45e; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke-linejoin: round; stroke: #d8634b" x="240" y="190" width="80" height="36" rx="10" ry="10"/>
+      <text font-size="12.7998" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="280" y="211.587">
+        <tspan x="280" y="211.587">A</tspan>
+      </text>
+    </g>
+    <text font-size="22.5774" style="fill: #ff02d9; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="470.034" y="323.703">
+      <tspan x="470.034" y="323.703">?</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #005405; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:700" x="360.152" y="177.066">
+      <tspan x="360.152" y="177.066">1. Set Up</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #ff0000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:700" x="444.114" y="245.197">
+      <tspan x="444.114" y="245.197">2. Exercise</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #ff02d9; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:700" x="476.389" y="338.596">
+      <tspan x="476.389" y="338.596">3. Assert</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #1b6bb6; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:700" x="286.221" y="304.119">
+      <tspan x="286.221" y="304.119">4. Tear Down</tspan>
+    </text>
+  </g>
+</svg>

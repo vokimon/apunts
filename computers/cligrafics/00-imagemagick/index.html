@@ -15,6 +15,10 @@
         <link rel="canonical" href="https://vokimon.github.io/apunts/computers/cligrafics/00-imagemagick/">
       
       
+        <link rel="prev" href="../../godot/tiling/">
+      
+      
+        <link rel="next" href="../../computer-graphics/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -22,7 +26,7 @@
     
     
       
-        <title>Intro - Apunts</title>
+        <title>ImageMagick: Graficos con CLI - Apunts</title>
       
     
     
@@ -82,7 +86,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#intro" class="md-skip">
+        <a href="#imagemagick-graficos-con-cli" class="md-skip">
           Skip to content
         </a>
       
@@ -121,7 +125,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Intro
+              ImageMagick: Graficos con CLI
             
           </span>
         </div>
@@ -290,17 +294,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -314,7 +320,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Computers
@@ -949,6 +955,361 @@
             
           </ul>
         </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    ImageMagick: Graficos con CLI
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    ImageMagick: Graficos con CLI
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#intro" class="md-nav__link">
+    <span class="md-ellipsis">
+      Intro
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Intro">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#graficos-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Gráficos CLI?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#herramientas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Herramientas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#imagemagick" class="md-nav__link">
+    <span class="md-ellipsis">
+      ImageMagick
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ImageMagick">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-es" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Qué es?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos-simples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplos simples
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#se-puede-complicar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Se puede complicar
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#elementos-de-la-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      Elementos de la CLI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entradas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entradas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#salida" class="md-nav__link">
+    <span class="md-ellipsis">
+      Salida
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operadores-de-imagen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operadores de imagen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aplicacion-parcial" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aplicación parcial
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parentesis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paréntesis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ops-multi-imagen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ops Multi-imagen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operadores-de-pila" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operadores de pila
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operadores-de-canal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operadores de canal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuración
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entradas-y-salida" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entradas y Salida
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Entradas y Salida">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tipos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tipos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#imagenes-built-in" class="md-nav__link">
+    <span class="md-ellipsis">
+      Imágenes built-in
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dispositivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dispositivos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formato-explicito" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formato Explícito
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cropresizeframing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Crop/Resize/Framing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fichero-con-lista-de-nombres" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fichero con lista de nombres
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#opciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Opciones
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Opciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-opciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tipos de opciones
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracion_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuración
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operaciones-de-imagen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operaciones de imagen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oper-multi-imagen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Oper. Multi-imàgen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operaciones-de-pila" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operaciones de pila
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2332,6 +2693,16 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#intro" class="md-nav__link">
+    <span class="md-ellipsis">
+      Intro
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Intro">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#graficos-cli" class="md-nav__link">
     <span class="md-ellipsis">
       ¿Gráficos CLI?
@@ -2339,13 +2710,279 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#herramientas" class="md-nav__link">
     <span class="md-ellipsis">
       Herramientas
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#imagemagick" class="md-nav__link">
+    <span class="md-ellipsis">
+      ImageMagick
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ImageMagick">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-es" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Qué es?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos-simples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplos simples
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#se-puede-complicar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Se puede complicar
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#elementos-de-la-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      Elementos de la CLI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entradas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entradas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#salida" class="md-nav__link">
+    <span class="md-ellipsis">
+      Salida
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operadores-de-imagen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operadores de imagen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aplicacion-parcial" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aplicación parcial
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parentesis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paréntesis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ops-multi-imagen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ops Multi-imagen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operadores-de-pila" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operadores de pila
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operadores-de-canal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operadores de canal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuración
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entradas-y-salida" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entradas y Salida
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Entradas y Salida">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tipos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tipos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#imagenes-built-in" class="md-nav__link">
+    <span class="md-ellipsis">
+      Imágenes built-in
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dispositivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dispositivos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formato-explicito" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formato Explícito
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cropresizeframing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Crop/Resize/Framing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fichero-con-lista-de-nombres" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fichero con lista de nombres
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#opciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Opciones
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Opciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-opciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tipos de opciones
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracion_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuración
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operaciones-de-imagen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operaciones de imagen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oper-multi-imagen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Oper. Multi-imàgen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operaciones-de-pila" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operaciones de pila
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2367,8 +3004,9 @@
   
 
 
-<h1 id="intro">Intro</h1>
-<h2 id="graficos-cli">¿Gráficos CLI?</h2>
+<h1 id="imagemagick-graficos-con-cli">ImageMagick: Graficos con CLI</h1>
+<h2 id="intro">Intro</h2>
+<h3 id="graficos-cli">¿Gráficos CLI?</h3>
 <p>Habiendo <strong>Grafic</strong> User Interfaces (GUI),\
 ¿para qué quiero un Command Line Interface?\
 ¿No es un <strong>oxímoron</strong>?</p>
@@ -2377,14 +3015,14 @@
 Hay muchos originales que procesar igual\
 Los parámetros del procesado cambian</p>
 <p><strong>Conversiones rápidas</strong></p>
-<h2 id="herramientas">Herramientas</h2>
+<h3 id="herramientas">Herramientas</h3>
 <p><strong>Pandoc:</strong> Conversión de documentos de texto</p>
 <p><strong>Imagemagick:</strong> Procesado de imagen</p>
 <p><strong>sox:</strong> Procesado de audio</p>
 <p><strong>ffmpeg:</strong> Procesado de video</p>
 <p><strong>PDFtk:</strong> Manipulación de PDF's</p>
-<h1 id="imagemagick">ImageMagick</h1>
-<h2 id="que-es">¿Qué es?</h2>
+<h2 id="imagemagick">ImageMagick</h2>
+<h3 id="que-es">¿Qué es?</h3>
 <p>Herramienta de manipulación de imágenes
 por línea de comandos.</p>
 <p>Conjunto de utilidades CLI</p>
@@ -2419,19 +3057,19 @@ entradas, salidas o opciones.</p>
 <li><code>conjure</code>: Interpreta scripts complejos (lenguage msl)
 :::</li>
 </ul>
-<h2 id="ejemplos-simples">Ejemplos simples</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Convertir un png en jpg</span>
+<h3 id="ejemplos-simples">Ejemplos simples</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">## Convertir un png en jpg</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>convert<span class="w"> </span>imagen.png<span class="w"> </span>imagen.jpg
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># Varios pngs en un gif animado</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1">## Varios pngs en un gif animado</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>convert<span class="w"> </span>imagen_*.png<span class="w"> </span>imagen.gif
 <a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c1"># Juntar varios pngs como paginas de un pdf</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c1">## Juntar varios pngs como paginas de un pdf</span>
 <a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>convert<span class="w"> </span>imagen_*.png<span class="w"> </span>imagen.pdf
 <a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="c1"># Renderizar las paginas del pdf por separado</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="c1">## Renderizar las paginas del pdf por separado</span>
 <a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>convert<span class="w"> </span>documeto.pdf<span class="w"> </span>documento-pagina.png
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="c1"># Genera documento-pagina-N.png, donde N es la página</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="c1">## Genera documento-pagina-N.png, donde N es la página</span>
 </code></pre></div>
 <div class="notes"></div>
 <p><strong>Ojo:</strong>
@@ -2440,7 +3078,7 @@ normalmente queremos mantener el pdf vectorial.
 PDFtk para eso.
 Imagemagic renderiza el raster.
 :::</p>
-<h2 id="se-puede-complicar">Se puede complicar</h2>
+<h3 id="se-puede-complicar">Se puede complicar</h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>convert<span class="w"> </span>-size<span class="w"> </span>120x160<span class="w"> </span><span class="se">\</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span>-style<span class="w"> </span>italic<span class="w"> </span>-weight<span class="w"> </span><span class="m">600</span><span class="w"> </span>label:A<span class="w">  </span>-negate<span class="w"> </span><span class="se">\</span>
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="se">\(</span><span class="w"> </span>+clone<span class="w">  </span>-shade<span class="w"> </span>110x90<span class="w"> </span>-normalize<span class="w"> </span>-negate<span class="w"> </span>+clone<span class="w"> </span><span class="se">\</span>
@@ -2458,7 +3096,7 @@ general de como juntar las opciones.</p>
 <p>La clave es entender que hay diferentes tipos de opciones
 y de que tipo es cada una.
 :::</p>
-<h2 id="elementos-de-la-cli">Elementos de la CLI</h2>
+<h3 id="elementos-de-la-cli">Elementos de la CLI</h3>
 <p>Entradas y salidas</p>
 <p>Parámetros de configuración</p>
 <p>Operadores de imagen</p>
@@ -2482,7 +3120,7 @@ por los operadores.</p>
 Afecta a entradas, salidas y operadores especificadas después en la línia de comandos.
 No les afectan los paréntesis.
 :::</p>
-<h2 id="entradas">Entradas</h2>
+<h3 id="entradas">Entradas</h3>
 <div class="notes"></div>
 <p>Se añaden a la pila de imagenes.</p>
 <p>Lo normal es que sean ficheros de imagen.</p>
@@ -2493,9 +3131,9 @@ en ese caso se añade a la pila una imagen por frame/página.</p>
 <p><strong>Importante:</strong> La primera imagen fija los valores por defecto para la mayoría de parámetros:
 tamaño, profundidad, espacio de colores...
 :::</p>
-<p><img alt="" src="images/imagemagick-input.svg" /></p>
-<h2 id="salida">Salida</h2>
-<p><img alt="" src="images/imagemagick-output.svg" /></p>
+<p><img alt="" src="../images/imagemagick-input.svg" /></p>
+<h3 id="salida">Salida</h3>
+<p><img alt="" src="../images/imagemagick-output.svg" /></p>
 <div class="notes"></div>
 <p>El último parámetro.</p>
 <p>Puede ser fichero o otras cosas también:</p>
@@ -2507,15 +3145,15 @@ tamaño, profundidad, espacio de colores...
 genera un solo fichero.</p>
 <p>Si no, genera un fichero por imagen con un sufijo.
 :::</p>
-<h2 id="operadores-de-imagen">Operadores de imagen</h2>
-<p><img alt="" src="images/imagemagick-singleop.svg" /></p>
+<h3 id="operadores-de-imagen">Operadores de imagen</h3>
+<p><img alt="" src="../images/imagemagick-singleop.svg" /></p>
 <div class="notes"></div>
 <p>Son filtros que se aplican imagen a imagen.</p>
 <p>Se aplican a todas las imagenes que tengamos en la pila
 generando nuevas versiones de éstas.
 :::</p>
-<h2 id="aplicacion-parcial">Aplicación parcial</h2>
-<p><img alt="" src="images/imagemagick-partialapply.svg" /></p>
+<h3 id="aplicacion-parcial">Aplicación parcial</h3>
+<p><img alt="" src="../images/imagemagick-partialapply.svg" /></p>
 <div class="notes"></div>
 <p>Los operadores se aplican solo a las entradas
 especificadas antes en la línia de comandos.</p>
@@ -2525,8 +3163,8 @@ especificadas antes en la línia de comandos.</p>
 <li>En cambio, el <code>-operador2</code>, en azul, se aplica a todos
 :::</li>
 </ul>
-<h2 id="parentesis">Paréntesis</h2>
-<p><img alt="" src="images/imagemagick-parenthesis.svg" /></p>
+<h3 id="parentesis">Paréntesis</h3>
+<p><img alt="" src="../images/imagemagick-parenthesis.svg" /></p>
 <div class="notes"></div>
 <p>Se pueden usar los paréntesis
 (escapados con contrabarras en <code>bash</code>)
@@ -2537,15 +3175,15 @@ para limitar hacia atrás el alcance de los operadores.</p>
 <li>En cambio, el <code>-operador2</code>, en azul, una vez cerrado el paréntesis ya se aplica a todos
 :::</li>
 </ul>
-<h2 id="ops-multi-imagen">Ops Multi-imagen</h2>
-<p><img alt="" src="images/imagemagick-multiop.svg" /></p>
+<h3 id="ops-multi-imagen">Ops Multi-imagen</h3>
+<p><img alt="" src="../images/imagemagick-multiop.svg" /></p>
 <div class="notes"></div>
 <p>Colapsan las imagenes en una (por justaposición, composición...)</p>
 <p>Si están dentro de paréntesis, sólo ve las imágenes que también están dentro.</p>
 <p>Podemos aplicar más de uno pero necesitaremos más inputs después de aplicar el primero.
 :::</p>
-<h2 id="operadores-de-pila">Operadores de pila</h2>
-<p><img alt="" src="images/imagemagick-stack.svg" /></p>
+<h3 id="operadores-de-pila">Operadores de pila</h3>
+<p><img alt="" src="../images/imagemagick-stack.svg" /></p>
 <div class="notes"></div>
 <p>A menudo el orden de pila es demasiado extricto.</p>
 <p>Los operadores de pila alteran la pila directamente, no el contenido de las imágenes.</p>
@@ -2559,9 +3197,9 @@ para limitar hacia atrás el alcance de los operadores.</p>
 <p><code>+clone</code>, <code>+delete</code>, <code>+swap</code> es como indicar el o los últimos.</p>
 <p>seguiran siendo clones por que les aplicaremos los mismos efectos.
 :::</p>
-<h2 id="operadores-de-canal">Operadores de canal</h2>
+<h3 id="operadores-de-canal">Operadores de canal</h3>
 <p>TODO: Aún no los he entendido</p>
-<h2 id="configuracion">Configuración</h2>
+<h3 id="configuracion">Configuración</h3>
 <p>Parametrizan la lectura y escritura de imágenes
 y la aplicación de efectos.</p>
 <p>Afectan a los input, outputs, operadores, que aparezcan detrás
@@ -2646,8 +3284,8 @@ en la línia de commandos</p>
 <li><code>‑write‑mask</code>
 :::</li>
 </ul>
-<h1 id="entradas-y-salida">Entradas y Salida</h1>
-<h2 id="tipos">Tipos</h2>
+<h2 id="entradas-y-salida">Entradas y Salida</h2>
+<h3 id="tipos">Tipos</h3>
 <p>Ficheros (globs y formateo)</p>
 <p>Imágenes y patrones built-in</p>
 <p>Dispositivos: stdio, pantalla, scanner, impresora...</p>
@@ -2662,10 +3300,10 @@ en la línia de commandos</p>
 <p>Por defecto si la salida es <code>frame.jpg</code> y hay más de una entrada, genera los nombres con <code>frame-%d.jpg</code>,
 sin cero padding que es complicado de ordenar.
 :::</p>
-<h2 id="imagenes-built-in">Imágenes built-in</h2>
+<h3 id="imagenes-built-in">Imágenes built-in</h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>convert<span class="w"> </span>logo:<span class="w"> </span>logo-imagemagick.svg
 </code></pre></div>
-<p><img alt="" src="images/logo-imagemagick.svg" />{style="width:40%"}</p>
+<p><img alt="" src="../images/logo-imagemagick.svg" />{style="width:40%"}</p>
 <div class="notes"></div>
 <p>Muy útiles para hacer pruebas.</p>
 <ul>
@@ -2690,7 +3328,7 @@ sin cero padding que es complicado de ordenar.
 <li><code>tile:&lt;image&gt;</code> Expande la imagen al size replicándola
 :::</li>
 </ul>
-<h2 id="dispositivos">Dispositivos</h2>
+<h3 id="dispositivos">Dispositivos</h3>
 <p><code>-</code> stdin/out</p>
 <p><code>x:</code> de input captura la pantalla (como <code>import</code>)</p>
 <p><code>x:</code> de output muestra por pantalla (como <code>display</code>)</p>
@@ -2698,7 +3336,7 @@ sin cero padding que es complicado de ordenar.
 <p><code>printer:</code> salida a impresora</p>
 <p><code>fd:&lt;n&gt;</code> file descriptor</p>
 <p><code>null</code> salida ignorada</p>
-<h2 id="formato-explicito">Formato Explícito</h2>
+<h3 id="formato-explicito">Formato Explícito</h3>
 <p>Normalmente se interpreta por el MAGIC de la entrada
 o por la extensión de la salida.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># saca por pantalla formato XPM</span>
@@ -2723,7 +3361,7 @@ GIF, BMP, PNG...</p>
 <a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>convert<span class="w"> </span>-list<span class="w"> </span>list
 </code></pre></div>
 :::</p>
-<h2 id="cropresizeframing">Crop/Resize/Framing</h2>
+<h3 id="cropresizeframing">Crop/Resize/Framing</h3>
 <p>Se puede hacer después con operadores</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># Resize</span>
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>convert<span class="w"> </span><span class="s1">&#39;*.jpg[120x120]&#39;</span><span class="w"> </span>thumbnail.png
@@ -2741,7 +3379,7 @@ GIF, BMP, PNG...</p>
 Bash no sabría con los modificadores ahí.
 Tampoco con prefijos de formato explícito.
 :::</p>
-<h2 id="fichero-con-lista-de-nombres">Fichero con lista de nombres</h2>
+<h3 id="fichero-con-lista-de-nombres">Fichero con lista de nombres</h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>cat<span class="w"> </span>&gt;<span class="w"> </span>ficheros.txt<span class="w"> </span><span class="o">&lt;&lt;&lt;</span>EOF
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>fichero1.jpg
 <a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>fichero2.jpg
@@ -2750,13 +3388,13 @@ Tampoco con prefijos de formato explícito.
 <a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>convert<span class="w"> </span>@ficheros.txt<span class="w"> </span>-o<span class="w"> </span>salida.gif
 </code></pre></div>
 <div class="notes"></div>
-<h1 id="opciones">Opciones</h1>
-<h2 id="tipos-de-opciones">Tipos de opciones</h2>
+<h2 id="opciones">Opciones</h2>
+<h3 id="tipos-de-opciones">Tipos de opciones</h3>
 <p>Configuración</p>
 <p>Operadores de imagen</p>
 <p>Operadores multi-imagen</p>
 <p>Operadores de pila</p>
-<h2 id="configuracion_1">Configuración</h2>
+<h3 id="configuracion_1">Configuración</h3>
 <p>Parametrizan la lectura y escritura de imágenes
 y la aplicación de efectos.</p>
 <p>Afectan a los input, outputs, operadores, que aparezcan detrás
@@ -2839,7 +3477,7 @@ en la línia de commandos</p>
 ‑weight
 ‑write‑mask 
 :::</p>
-<h2 id="operaciones-de-imagen">Operaciones de imagen</h2>
+<h3 id="operaciones-de-imagen">Operaciones de imagen</h3>
 <p>Filtros: modifican una imagen generando otra</p>
 <p>Se aplica a todas las entradas especificadas antes\
 (si no está dentro de un parèntesis)</p>
@@ -2934,7 +3572,7 @@ en la línia de commandos</p>
 ‑white‑point
 ‑white‑threshold
 :::</p>
-<h2 id="oper-multi-imagen">Oper. Multi-imàgen</h2>
+<h3 id="oper-multi-imagen">Oper. Multi-imàgen</h3>
 <p>¿Qué hacemos con múltiples entradas?</p>
 <p>Por defecto, 
 Junta las entradas anteriores en una.
@@ -2982,7 +3620,7 @@ genera múltiples ficheros con sufijo numérico.</p>
 ‑swap
 ‑write
 :::</p>
-<h2 id="operaciones-de-pila">Operaciones de pila</h2>
+<h3 id="operaciones-de-pila">Operaciones de pila</h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>-clone<span class="w"> </span>&lt;indexes&gt;<span class="w"> </span><span class="c1"># Duplica las imagenes, +clone la última</span>
 <a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>-delete<span class="w"> </span>&lt;indexes&gt;<span class="w"> </span><span class="c1"># </span>
 <a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>-insert<span class="w"> </span>&lt;indexes&gt;<span class="w"> </span><span class="c1"># </span>

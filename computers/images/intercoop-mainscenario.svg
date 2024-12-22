@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="36cm" height="27cm" viewBox="74 369 717 532" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g id="Fons">
+    <g>
+      <polygon style="fill: #d4ff84; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #008000" fill-rule="evenodd" points="340,380 350,370 790,370 790,610 780,620 340,620 340,380 "/>
+      <line style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke: #008000" x1="340" y1="380" x2="780" y2="380"/>
+      <line style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke: #008000" x1="780" y1="380" x2="790" y2="370"/>
+      <line style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke: #008000" x1="780" y1="380" x2="780" y2="620"/>
+      <text font-size="12.7998" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="350" y="401.9">
+        <tspan x="350" y="401.9">User Provider</tspan>
+      </text>
+      <line style="fill: none; stroke-opacity: 1; stroke-width: 1; stroke: #000000" x1="350" y1="404.95" x2="436" y2="404.95"/>
+    </g>
+    <g>
+      <rect style="fill: #ffc52d; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #8c6500" x="420" y="420" width="175" height="100" rx="0" ry="0"/>
+      <text font-size="12.7998" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="507.5" y="473.9">
+        <tspan x="507.5" y="473.9">Portal</tspan>
+      </text>
+    </g>
+    <g>
+      <ellipse style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 4; stroke: #008000" cx="100" cy="604" rx="6" ry="6"/>
+      <line style="fill: none; stroke-opacity: 1; stroke-width: 4; stroke: #008000" x1="76" y1="616" x2="124" y2="616"/>
+      <line style="fill: none; stroke-opacity: 1; stroke-width: 4; stroke: #008000" x1="100" y1="610" x2="100" y2="640"/>
+      <line style="fill: none; stroke-opacity: 1; stroke-width: 4; stroke: #008000" x1="100" y1="640" x2="76" y2="666"/>
+      <line style="fill: none; stroke-opacity: 1; stroke-width: 4; stroke: #008000" x1="100" y1="640" x2="124" y2="666"/>
+      <text font-size="12.7998" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="100" y="689.9">
+        <tspan x="100" y="689.9">User</tspan>
+      </text>
+    </g>
+    <g>
+      <polygon style="fill: #d4ff84; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #008000" fill-rule="evenodd" points="340,640 350,630 790,630 790,890 780,900 340,900 340,640 "/>
+      <line style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke: #008000" x1="340" y1="640" x2="780" y2="640"/>
+      <line style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke: #008000" x1="780" y1="640" x2="790" y2="630"/>
+      <line style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke: #008000" x1="780" y1="640" x2="780" y2="900"/>
+      <text font-size="12.7998" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="350" y="661.9">
+        <tspan x="350" y="661.9">Service Provider</tspan>
+      </text>
+      <line style="fill: none; stroke-opacity: 1; stroke-width: 1; stroke: #000000" x1="350" y1="664.95" x2="454.25" y2="664.95"/>
+    </g>
+    <g>
+      <rect style="fill: #ffc52d; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #8c6500" x="360" y="780" width="175" height="100" rx="0" ry="0"/>
+      <text font-size="12.7998" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="447.5" y="833.9">
+        <tspan x="447.5" y="833.9">Service Form</tspan>
+      </text>
+    </g>
+    <g>
+      <rect style="fill: #ffc52d; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #8c6500" x="460" y="660" width="175" height="100" rx="0" ry="0"/>
+      <text font-size="12.7998" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="547.5" y="713.9">
+        <tspan x="547.5" y="713.9">Intercoop API</tspan>
+      </text>
+    </g>
+    <g>
+      <line style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke: #000000" x1="125.977" y1="626.2" x2="411.402" y2="474.568"/>
+      <polygon style="fill: #000000; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #000000" fill-rule="evenodd" points="418.025,471.049 411.54,480.156 411.402,474.568 406.848,471.325 "/>
+    </g>
+    <text font-size="12.7998" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="160" y="500">
+      <tspan x="160" y="500">1. Login</tspan>
+      <tspan x="160" y="516">2. Browse services</tspan>
+      <tspan x="160" y="532">3. Activate a service</tspan>
+      <tspan x="160" y="548">4. Accept terms</tspan>
+    </text>
+    <g>
+      <line style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke: #000000" x1="551.25" y1="520" x2="588.575" y2="650.639"/>
+      <polygon style="fill: #000000; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #000000" fill-rule="evenodd" points="590.636,657.85 583.081,649.608 588.575,650.639 592.696,646.861 "/>
+    </g>
+    <text font-size="12.7998" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="580" y="560">
+      <tspan x="580" y="560">5. Sends encrypted</tspan>
+      <tspan x="580" y="576">and certified user data</tspan>
+      <tspan x="580" y="592"></tspan>
+    </text>
+    <g>
+      <line style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke: #000000" x1="420" y1="495" x2="133.738" y2="635.705"/>
+      <polygon style="fill: #000000; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #000000" fill-rule="evenodd" points="127.007,639.014 133.776,630.115 133.738,635.705 138.187,639.09 "/>
+    </g>
+    <g>
+      <line style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke: #000000" x1="503.75" y1="660" x2="466.425" y2="529.361"/>
+      <polygon style="fill: #000000; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #000000" fill-rule="evenodd" points="464.364,522.15 471.919,530.392 466.425,529.361 462.304,533.139 "/>
+    </g>
+    <text font-size="12.7998" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="360" y="580">
+      <tspan x="360" y="580">6. Returns Token</tspan>
+    </text>
+    <g>
+      <line style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke: #000000" x1="125.982" y1="654.206" x2="350.46" y2="776.942"/>
+      <polygon style="fill: #000000; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #000000" fill-rule="evenodd" points="357.041,780.54 345.868,780.13 350.46,776.942 350.665,771.356 "/>
+    </g>
+    <text font-size="12.7998" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="200" y="620">
+      <tspan x="200" y="620">7. Redirects to form</tspan>
+      <tspan x="200" y="636">attaching Token</tspan>
+    </text>
+    <text font-size="12.7998" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="220" y="700">
+      <tspan x="220" y="700">8. Fills the form</tspan>
+    </text>
+  </g>
+</svg>
