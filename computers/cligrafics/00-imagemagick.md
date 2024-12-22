@@ -1,6 +1,8 @@
-# Intro
+# ImageMagick: Graficos con CLI
 
-## ¿Gráficos CLI?
+## Intro
+
+### ¿Gráficos CLI?
 
 Habiendo **Grafic** User Interfaces (GUI),\
 ¿para qué quiero un Command Line Interface?\
@@ -14,7 +16,7 @@ Los parámetros del procesado cambian
 
 **Conversiones rápidas**
 
-## Herramientas
+### Herramientas
 
 **Pandoc:** Conversión de documentos de texto
 
@@ -26,9 +28,9 @@ Los parámetros del procesado cambian
 
 **PDFtk:** Manipulación de PDF's
 
-# ImageMagick
+## ImageMagick
 
-## ¿Qué es?
+### ¿Qué es?
 
 Herramienta de manipulación de imágenes
 por línea de comandos.
@@ -69,21 +71,21 @@ También hay una libreria C (con bindings Python y demás)
 - `conjure`: Interpreta scripts complejos (lenguage msl)
 :::
 
-## Ejemplos simples
+### Ejemplos simples
 
 ```bash
-# Convertir un png en jpg
+## Convertir un png en jpg
 convert imagen.png imagen.jpg
 
-# Varios pngs en un gif animado
+## Varios pngs en un gif animado
 convert imagen_*.png imagen.gif
 
-# Juntar varios pngs como paginas de un pdf
+## Juntar varios pngs como paginas de un pdf
 convert imagen_*.png imagen.pdf
 
-# Renderizar las paginas del pdf por separado
+## Renderizar las paginas del pdf por separado
 convert documeto.pdf documento-pagina.png
-# Genera documento-pagina-N.png, donde N es la página
+## Genera documento-pagina-N.png, donde N es la página
 ```
 
 ::: notes
@@ -95,7 +97,7 @@ Imagemagic renderiza el raster.
 :::
 
 
-## Se puede complicar
+### Se puede complicar
 
 ```bash
 convert -size 120x160 \
@@ -118,7 +120,7 @@ La clave es entender que hay diferentes tipos de opciones
 y de que tipo es cada una.
 :::
 
-## Elementos de la CLI
+### Elementos de la CLI
 
 Entradas y salidas
 
@@ -156,7 +158,7 @@ Afecta a entradas, salidas y operadores especificadas después en la línia de c
 No les afectan los paréntesis.
 :::
 
-## Entradas
+### Entradas
 
 ::: notes
 Se añaden a la pila de imagenes.
@@ -176,7 +178,7 @@ tamaño, profundidad, espacio de colores...
 
 ![](images/imagemagick-input.svg)
 
-## Salida
+### Salida
 
 ![](images/imagemagick-output.svg)
 
@@ -199,7 +201,7 @@ genera un solo fichero.
 Si no, genera un fichero por imagen con un sufijo.
 :::
 
-## Operadores de imagen
+### Operadores de imagen
 
 ![](images/imagemagick-singleop.svg)
 
@@ -210,7 +212,7 @@ Se aplican a todas las imagenes que tengamos en la pila
 generando nuevas versiones de éstas.
 :::
 
-## Aplicación parcial
+### Aplicación parcial
 
 ![](images/imagemagick-partialapply.svg)
 
@@ -224,7 +226,7 @@ En este ejemplo:
 - En cambio, el `-operador2`, en azul, se aplica a todos
 :::
 
-## Paréntesis
+### Paréntesis
 
 ![](images/imagemagick-parenthesis.svg)
 
@@ -239,7 +241,7 @@ En este otro ejemplo:
 - En cambio, el `-operador2`, en azul, una vez cerrado el paréntesis ya se aplica a todos
 :::
 
-## Ops Multi-imagen
+### Ops Multi-imagen
 
 ![](images/imagemagick-multiop.svg)
 
@@ -251,7 +253,7 @@ Si están dentro de paréntesis, sólo ve las imágenes que también están dent
 Podemos aplicar más de uno pero necesitaremos más inputs después de aplicar el primero.
 :::
 
-## Operadores de pila
+### Operadores de pila
 
 ![](images/imagemagick-stack.svg)
 
@@ -277,11 +279,11 @@ seguiran siendo clones por que les aplicaremos los mismos efectos.
 :::
 
 
-## Operadores de canal
+### Operadores de canal
 
 TODO: Aún no los he entendido
 
-## Configuración
+### Configuración
 
 Parametrizan la lectura y escritura de imágenes
 y la aplicación de efectos.
@@ -373,9 +375,9 @@ No hacen nada a la imagen de por sí
 
 
 
-# Entradas y Salida
+## Entradas y Salida
 
-## Tipos
+### Tipos
 
 Ficheros (globs y formateo)
 
@@ -403,7 +405,7 @@ sin cero padding que es complicado de ordenar.
 :::
 
 
-## Imágenes built-in
+### Imágenes built-in
 
 ```bash
 convert logo: logo-imagemagick.svg
@@ -432,7 +434,7 @@ Muy útiles para hacer pruebas.
 - `tile:<image>` Expande la imagen al size replicándola
 :::
 
-## Dispositivos
+### Dispositivos
 
 `-` stdin/out
 
@@ -449,7 +451,7 @@ Muy útiles para hacer pruebas.
 `null` salida ignorada
 
 
-## Formato Explícito
+### Formato Explícito
 
 Normalmente se interpreta por el MAGIC de la entrada
 o por la extensión de la salida.
@@ -481,7 +483,7 @@ convert -list list
 ```
 :::
 
-## Crop/Resize/Framing
+### Crop/Resize/Framing
 
 Se puede hacer después con operadores
 
@@ -507,7 +509,7 @@ Tampoco con prefijos de formato explícito.
 :::
 
 
-## Fichero con lista de nombres
+### Fichero con lista de nombres
 
 
 ```bash
@@ -522,9 +524,9 @@ convert @ficheros.txt -o salida.gif
 ::: notes
 :::
 
-# Opciones
+## Opciones
 
-## Tipos de opciones
+### Tipos de opciones
 
 Configuración
 
@@ -535,7 +537,7 @@ Operadores multi-imagen
 Operadores de pila
 
 
-## Configuración
+### Configuración
 
 Parametrizan la lectura y escritura de imágenes
 y la aplicación de efectos.
@@ -623,7 +625,7 @@ No hacen nada a la imagen de por sí
 ‑write‑mask 
 :::
 
-## Operaciones de imagen
+### Operaciones de imagen
 
 Filtros: modifican una imagen generando otra
 
@@ -725,7 +727,7 @@ $ convert input1 -op1 \( input2 -op2 \) -op3 ...
 ‑white‑threshold
 :::
 
-## Oper. Multi-imàgen
+### Oper. Multi-imàgen
 
 ¿Qué hacemos con múltiples entradas?
 
@@ -779,7 +781,7 @@ genera múltiples ficheros con sufijo numérico.
 ‑write
 :::
 
-## Operaciones de pila
+### Operaciones de pila
 
 ```bash
 -clone <indexes> # Duplica las imagenes, +clone la última

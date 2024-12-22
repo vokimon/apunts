@@ -33,6 +33,7 @@ nav:
         - computers/godot/godot.md
         - computers/godot/physics.md
         - computers/godot/tiling.md
+    - computers/cligrafics/00-imagemagick.md
     - computers/computer-graphics.md
     - computers/android-glossary.md
     - computers/cpp11.md
