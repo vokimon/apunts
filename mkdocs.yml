@@ -29,13 +29,15 @@ nav:
       - computers/fastapi/fastapi.md
       - computers/time/time.md
       - computers/security.md
-    - computers/godot.md
+    - godot:
+        - computers/godot/godot.md
+        - computers/godot/physics.md
+        - computers/godot/tiling.md
     - computers/computer-graphics.md
     - computers/android-glossary.md
     - computers/cpp11.md
     - computers/deeplearning.md
     - computers/docker.md
-    - computers/godot.md
     - IPv6: computers/ip6
     - computers/specs-pdf.md
     - computers/timewarrior.md
@@ -122,7 +124,7 @@ theme:
 
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
-      scheme: default 
+      scheme: default
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
@@ -148,5 +150,5 @@ extra:
         javascript_dir: js       # the directory to put the version selector's JS
         canonical_version: null  # the version for <link rel="canonical">; `null`
          # uses the version specified via `mike deploy`
-    - offline 
+    - offline
 
