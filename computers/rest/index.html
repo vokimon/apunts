@@ -1,0 +1,3108 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Apunts i notes de coses que aprenc">
+      
+      
+        <meta name="author" content="vokimon">
+      
+      
+        <link rel="canonical" href="https://vokimon.github.io/apunts/computers/rest/">
+      
+      
+        <link rel="prev" href="../d3/00-d3/">
+      
+      
+        <link rel="next" href="../time/time/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>REST APIs - Apunts</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/figure.css">
+    
+      <link rel="stylesheet" href="../../css/linkcard.css">
+    
+      <link rel="stylesheet" href="../../css/videowrapper.css">
+    
+      <link rel="stylesheet" href="../../None">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#rest-apis" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Apunts" class="md-header__button md-logo" aria-label="Apunts" data-md-component="logo">
+      
+  <img src="../../img/logo-customblocks-white.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Apunts
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              REST APIs
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/vokimon/apunts" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Apunts" class="md-nav__button md-logo" aria-label="Apunts" data-md-component="logo">
+      
+  <img src="../../img/logo-customblocks-white.svg" alt="logo">
+
+    </a>
+    Apunts
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/vokimon/apunts" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    README
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Computers
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Computers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    web
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            web
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_1" id="__nav_2_1_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    css
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            css
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../css-basics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CSS: Conceptes bàsics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../css/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CSS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../css-design-principles/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CSS: Principios de diseño
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../css-boxmodel/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CSS: El modelo de caja
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../css-normalflow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CSS Normal Flow
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../css-flexbox/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CSS Flexbox
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../css-grid/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CSS Grid
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../css-animations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CSS: Animaciones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../css-typography/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CSS Typografy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../css-methodologies-architectures/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CSS: Metodologías y arquitecturas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_2" id="__nav_2_1_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    javascript
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            javascript
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jsecosystem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Jsecosystem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jsonschema/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Jsonschema
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../react-formik/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    React formik
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../react/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    React / Redux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../d3/00-d3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducción
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    REST APIs
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    REST APIs
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-base-http" class="md-nav__link">
+    <span class="md-ellipsis">
+      The base HTTP
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#principios-arquitectonicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Principios arquitectónicos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rest-maturity-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rest Maturity Model
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stateless" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stateless
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security considerations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Endpoints
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resource-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resource format
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exceptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exceptions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#versionado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versionado
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hateoas" class="md-nav__link">
+    <span class="md-ellipsis">
+      HATEOAS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#puntos-de-entrada-mas-alla-de-crud" class="md-nav__link">
+    <span class="md-ellipsis">
+      Puntos de entrada más allá de CRUD
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Puntos de entrada más allá de CRUD">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#procesos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Procesos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#acciones-sobre-multiples-objetos-batch-y-bulk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Acciones sobre múltiples objetos: Batch y bulk
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variants" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variants
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Variants">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#zoom-embed-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Zoom-embed patterns
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fastapi/fastapi.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    None
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../time/time/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Representando el tiempo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../security/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Security problems
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    godot
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            godot
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../godot/godot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Godot 4 (Game Engine)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../godot/physics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Godot Physics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../godot/tiling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Godot Tiling
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../computer-graphics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Computer graphics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../android-glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Android glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cpp11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    New features of C++11 I should be starting to use:
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deeplearning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deep learning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../godot.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    None
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ip6" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IPv6
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../specs-pdf/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Specs pdf
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../timewarrior/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TimeWarrior
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xpxplained/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    XP Explained (Extracto del libro)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../branching-patterns/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Branching Patterns
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Math
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Math
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/mates-fundation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Math Foundations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/stats/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Statistics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/math-halfderivatives/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Half Derivatives
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/math-quadraticformula-alternative/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quadratic Formula
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/math-wavelets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wavelets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/math-3n1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Collatz Conjecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/math-binary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Binary math
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/math-geometric-algebra/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Geometric Algebra
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Music
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Music
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../music/music-harmony/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Harmony: Notes, Scales and Chords 🎶
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../music/music-harmony-scales/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Harmony: Scales 🎶
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../music/guitar-technics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Técnica de Guitarra 🎸
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../music/guitar-fret-navigation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Navegación en el mástil
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../music/pentatonicas.txt" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pentatonicas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../music/songs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Songs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../music/ukelele/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ukelele
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../music/drums/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Drum line composition (for non drummers)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../music/online-resources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Online resources
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Languages
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Languages
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/consonantes-afi.png" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phonetics Consonants
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/vowels.jpg" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phonetics Vowels
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/arabic-alphabet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arabic script
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/arabic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arabic
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/deutsch/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deutsch
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/japan/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Japanese
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/english-expresions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    English expresions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/english-old-pronoums/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    English old pronoums
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/english-prepositions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    English prepositions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/english-tenses/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    English tenses
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/vocabulary-somenergia/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    English Vocabulary for SE enterviews
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/vocabulary-edibles/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vocabulary edibles
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/ruso-alphabet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ruso alphabet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/spanish/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Spanish
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/stylistic-figures/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Retorical figures
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    History
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            History
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../history/cristianismo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    História del cristianismo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../varios/economics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Economics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Psicology
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Psicology
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../varios/porque-creemos-en-mierdas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Porque creemos en mierdas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    3D
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            3D
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3d/3d-production-pipeline/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3D animation pipeline
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3d/blender-materials/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Blender material
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Laboral
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Laboral
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../laboral/comunicacio_de_crisi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Comunicacio de crisi
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../laboral/lideratges-autogestionat/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lideratges autogestionat
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../laboral/reunionseficients/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Reunions eficients
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-base-http" class="md-nav__link">
+    <span class="md-ellipsis">
+      The base HTTP
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#principios-arquitectonicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Principios arquitectónicos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rest-maturity-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rest Maturity Model
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stateless" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stateless
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security considerations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Endpoints
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resource-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resource format
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exceptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exceptions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#versionado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versionado
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hateoas" class="md-nav__link">
+    <span class="md-ellipsis">
+      HATEOAS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#puntos-de-entrada-mas-alla-de-crud" class="md-nav__link">
+    <span class="md-ellipsis">
+      Puntos de entrada más allá de CRUD
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Puntos de entrada más allá de CRUD">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#procesos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Procesos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#acciones-sobre-multiples-objetos-batch-y-bulk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Acciones sobre múltiples objetos: Batch y bulk
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variants" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variants
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Variants">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#zoom-embed-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Zoom-embed patterns
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="rest-apis">REST APIs</h1>
+<p>https://www.youtube.com/watch?v=CVBpYfPKGlE</p>
+<h2 id="the-base-http">The base HTTP</h2>
+<p>Explota la expresividad del protocolo HTTP.</p>
+<p>Petición</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">POST</span> <span class="nn">/api/myobject</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="na">Host</span><span class="o">:</span> <span class="l">canvoki.net/</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="na">User-Agent</span><span class="o">:</span> <span class="l">Mozilla/5.0 Linux</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="na">Content-Type</span><span class="o">:</span> <span class="l">application/json</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="na">Accept</span><span class="o">:</span> <span class="l">application/json</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="na">Content-Length</span><span class="o">:</span> <span class="l">1232</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="na">Conneciton</span><span class="o">:</span> <span class="l">Keep-alive</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="p">{</span><span class="err">myobjec</span><span class="kc">t</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="kc">f</span><span class="err">ield</span><span class="mi">1</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;value&quot;</span><span class="p">}}</span>
+</code></pre></div>
+<ul>
+<li>Header y content separados por una linia en blanco.</li>
+<li>La primera línia del header: verbo, endpoint y protocolo</li>
+<li>El verbo infrautilizado en la web ordinaria: POST, GET pero tambien PUT, PATCH, DELETE...</li>
+</ul>
+<p>Respuesta:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="na">Date</span><span class="o">:</span> <span class="l">Tue, 21 May 2023 10:00:00 GMT</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="na">Server</span><span class="o">:</span> <span class="l">nginx/ (Ubuntu)</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="na">Last-Modified</span><span class="o">:</span> <span class="l">Tue, 21 May 2023 10:00:00 GMT</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="na">Content-Type</span><span class="o">:</span> <span class="l">application/json</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="na">Content-Length</span><span class="o">:</span> <span class="l">1232</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="na">Connection</span><span class="o">:</span> <span class="l">close</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="p">{</span><span class="err">myobjec</span><span class="kc">t</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="kc">f</span><span class="err">ield</span><span class="mi">1</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;value&quot;</span><span class="p">}}</span>
+</code></pre></div>
+<h2 id="principios-arquitectonicos">Principios arquitectónicos</h2>
+<ul>
+<li>Uniform interface<ul>
+<li>Las peticiones tienen la misma pinta sea cual sea su origen: browser, applicación, mobil...</li>
+</ul>
+</li>
+<li>Client-server<ul>
+<li>Interficie asimétrica. El cliente hace peticiones, el servidor las responde.</li>
+</ul>
+</li>
+<li>Stateless<ul>
+<li>La petición está auto contenida. El cliente no guarda información de quien es el cliente, ni que peticiones ha hecho antes. (Esto excluye el estado de la aplicación)</li>
+</ul>
+</li>
+<li>Layered System<ul>
+<li>El cliente desconoce de las capas que su petición debe atravesar para resolverse<ul>
+<li>Proxies, Caching, Security layers, Load balancing...</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Cacheable<ul>
+<li>El servidor incluye en la respuesta información sobre si el resultado se puede cachear (el cliente o los intermediarios).</li>
+</ul>
+</li>
+<li>Code on Demand<ul>
+<li>Opcionalmente el cliente puede pedir al servidor código a ejectuar para hacer alguna acción</li>
+<li>Es un poco turbio e inseguro.</li>
+</ul>
+</li>
+</ul>
+<h2 id="rest-maturity-model">Rest Maturity Model</h2>
+<p>Niveles de adherencia a estandard (Leonard Richadson)</p>
+<ul>
+<li>Level 0: Swamp of POX</li>
+<li>Level 1: Resource based URLs</li>
+<li>Level 2: HTTP Verbs</li>
+<li>Level 3: HATEOAS (hipermedia links to discover the api)</li>
+</ul>
+<h2 id="stateless">Stateless</h2>
+<p>Los clientes no estan vinculados a un servidor específico.
+Los servidores no mantienen estado de sessión.</p>
+<p>Esto hace la arquitectura escalable:
+En un entorno multi servidor con autobalanceado,
+los clientes pueden cambiar de servidor sin que nada cambie.</p>
+<p>Esto hace la arquitectura disponible:
+Incluso en un entorno de servidor único,
+el servidor no ha de memorizar las interacciones previas.
+Si el servidor peta, otro servidor puede reemplazarlo sin perder información.</p>
+<p>También hace que sea más fácil de cachear.
+Toda la información de la petición esta en la propia petición.
+Se puede retornar respuestas idénticas a peticiones idénticas.</p>
+<p>Que la sesión no tenga estado no implica que la aplicación no lo tenga.
+Acciones del cliente pueden modificar el estado de la aplicación.
+Es un estado compartido por los servidores normalmente en una base de datos.</p>
+<p>Tambié se permite estado propi de sesión (por ejemplo, un carro de compra)
+con dos condiciones.</p>
+<ul>
+<li>El estado se almacena externamente al servidor, en una base de datos o en una cache compartida (redis).</li>
+<li>La identificación de la sesión/usuario se almacena en la petición (ie, un token jwt en la cabecera)</li>
+</ul>
+<h2 id="security-considerations">Security considerations</h2>
+<ul>
+<li>API Validation and Sanitization</li>
+<li>Monitoring and logging</li>
+<li>Data Encryption (https not http)</li>
+<li>Regular Database Audits</li>
+<li>Penetration testing</li>
+<li>Authentication and Authorization</li>
+</ul>
+<h2 id="endpoints">Endpoints</h2>
+<p>Focaliza en recursos, no en las acciones o verbos.
+Usa los verbos disponibles en HTTPS (Son muy limitados a CRUD!!)</p>
+<ul>
+<li>Create -&gt; POST</li>
+<li>Read -&gt; GET</li>
+<li>Update -&gt; PUT  (PATCH si només s'envien els camps editats)</li>
+<li>Delete -&gt; DELETE</li>
+</ul>
+<p>Rules:</p>
+<ul>
+<li>No trailing slash</li>
+<li>Use hierarchical relationships (also insert ids in path)</li>
+<li>Use hyphens for greater scanneability</li>
+<li>Focus on resources, not actions</li>
+<li>Use plurals instead of singlulars (for consistency)</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a># Contra example
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>/api/GetOrderActiveItems/?id=122
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a># No trailing slash
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>/api/GetOrderActiveItems?id=122
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a># Hierarchical relationships
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>/api/order/122/getActiveItems
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a># Use hyphens
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>/api/order/122/get-active-items
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a># Focus on 
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>GET /api/order/122/active-items
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a># Plural names
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>GET /api/orders/122/active-items
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a># Complexity (contra example, amb l&#39;order ja sabem que customer i store tenim)
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>GET /api/costumer/34/store/1/orders/122/active-items
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a># Not a rule but more consistent with other item queries
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>GET /api/orders/122/items/active
+<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>
+<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a># Por ejemplo:
+<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>GET /api/orders/122/items
+<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>GET /api/orders/122/items/1
+<a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a>GET /api/orders/122/items/inactive  # Other filter
+<a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a>POST /api/orders/122/deliver  # Non CRUD action
+</code></pre></div>
+<h2 id="resource-format">Resource format</h2>
+<p>Se hacen servir varios formatos:</p>
+<ul>
+<li>JSON (<code>application/json</code>): Simple, efficient, widely supported</li>
+<li>XML (<code>application/xml</code>): Verbose, large, slow</li>
+<li>YAML (<code>application/x-yaml</code>)): Més expressiu, suport limitat</li>
+</ul>
+<p>Por ser el más usado y mejor soportado por las librerias, se recomienda JSON.</p>
+<p>Para algunas aplicaciones se usa JSONP, codigo javascript con el json incrustado.
+Se hace para evitar incompatibilidades con CORS.
+En estos casos, como el contenido es javascript, el content type será <code>application/javascript</code>.</p>
+<p>Como los indicamos</p>
+<ul>
+<li>Request Header <code>Content-Type</code>: Formato en el que envio la petición<ul>
+<li>Error 415: Unsupported Media Type, si el servidor no soporta ese tipo en la petición</li>
+</ul>
+</li>
+<li>Request Header <code>Accept</code>: Que formatos me gustaria recibif como respuesta, separados por comas<ul>
+<li>Error 406: Not Acceptable, si el servidor no puede servir ninguno de los propuestos</li>
+</ul>
+</li>
+<li>Response Header: <code>Content-Type</code>: El formato que el servidor ha escogido para responder</li>
+</ul>
+<p>Otra forma de especificarlo es añadiendo extension a la url.</p>
+<h2 id="exceptions">Exceptions</h2>
+<p>Usar en lo posible los códigos de estado HTTP</p>
+<p>https://restfulapi.net/http-status-codes/</p>
+<ul>
+<li>1xx: informational</li>
+<li>2xx: successfull<ul>
+<li>200 OK: Request exitosa con contenido en el body</li>
+<li>201 Created: Exito y recurso creado</li>
+<li>202 Accepted: Acceptada pero no concluidaa</li>
+<li>204 No content: Peticion exitosa sin contenido (normalmente POST, PUST, DELETE, si no retorna el estado modificado)</li>
+</ul>
+</li>
+<li>3xx: redirects<ul>
+<li>301 Moved Permanently: Cuando el modelo de recursos ha cambiado</li>
+<li>302 Found: Redirección temporal, normalment la resuelve el navegador</li>
+<li>303 See Other: Proporciona un enlace donde ver el resultado, normalmente para operaciones largas cuyo estado se puede monitorizar</li>
+<li>304 Not Modified: Para peticiones con headers If-Modified-Since o If-None-Match, va sin body, para ahorrar ancho de banda</li>
+<li>307 Temporary redirect: Si posteriores peticiones tienen que seguir usando la url originals<ul>
+<li>Ejemplo: si temporalmente se mueve a otro servidor</li>
+<li>La nueva url temporal en el header <code>Location:</code>.</li>
+<li>Aun así el body debe contener html con el enlace por si el agente no redirige o mientras lo hace o si falla.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>4xx: client errors<ul>
+<li>400 Bad request: La petición es incorrecta (validación...)</li>
+<li>401 Unauthorized: El usuario no se ha autenticado, repita la petición una vez se haya autenticado</li>
+<li>403 Unauthorized: Un usuario autenticado no tiene acceso al recurso</li>
+<li>404 Not found: Not such a resource</li>
+<li>405 Method not allowed: <ul>
+<li>Retorna els metodes permesos en la capcelera <code>Allow:  GET, POST</code></li>
+</ul>
+</li>
+<li>406 Not Acceptable: ninguno de los media types indicados en <code>Accept:</code> se pueden retornar</li>
+<li>410 Gone: El servidor ha reconocido el recurso como existente en el pasado pero ya no</li>
+<li>412 Precondition Failed: one or more conditions in the request header fields evaluated to false</li>
+<li>415 Unsupported Media Type: Content-Type recibido no se soporta (406 es para el requerido por la peticion para la respuesta, 415 es el de la peticion misma)</li>
+</ul>
+</li>
+<li>5xx: server errors<ul>
+<li>500 Internal Server Error: Errores inexperados</li>
+<li>501 Not implemented: El punto de entrada o el método no esta disponible, pero si en un futuro</li>
+<li>502 Bad Gateway: Error en el backend</li>
+<li>503 Service Unavailable: El servicio está temporalmente inaccesible (mantenimiento, ataques...)a</li>
+</ul>
+</li>
+</ul>
+<p>Y el Payload?? No hay una sola forma de hacerlo.</p>
+<p>https://www.baeldung.com/rest-api-error-handling-best-practices</p>
+<ul>
+<li><code>error</code>: código</li>
+<li><code>message</code>: Mensaje leible corto, presentable a los usuarios finales</li>
+<li><code>detail</code>: Detalles específicos para el caso, para los desarrolladores del cliente, no del usuario</li>
+<li><code>help</code>: (opcional) </li>
+</ul>
+<p>IETF RFC 7807. Poca gente lo sigue.</p>
+<ul>
+<li><code>title</code>:<ul>
+<li>descripción generica del error para humanos (internacionalizado)</li>
+<li>ex: "Incorrect username or password."</li>
+</ul>
+</li>
+<li><code>type</code><ul>
+<li>uri, identifica el error y se puede usarse para obtener mas info del error</li>
+<li>ex: "/errors/incorrect-user-pass"</li>
+</ul>
+</li>
+<li><code>status</code>:<ul>
+<li>Igual que el status HTTP</li>
+<li>ex: 400</li>
+</ul>
+</li>
+<li><code>detail</code>:<ul>
+<li>Especificidades del error para esta instancia del error.</li>
+<li>ex: "Authentication failed due to incorrect username or password."</li>
+<li>ex: "Missing attribute: badfield"</li>
+</ul>
+</li>
+<li><code>instance</code>:<ul>
+<li>uri con la info más específica del error</li>
+<li>ex: "/login/log/abc123"</li>
+</ul>
+</li>
+</ul>
+<p>Cualquier otro atributo se acepta y es considerado como una extensión.</p>
+<h2 id="versionado">Versionado</h2>
+<p>Las API's sirven para independizar el desarrollo de cliente y servidor.
+Los cambios en las APIs afectan a los clientes, han de ser estables.
+Cuando se modifican de una forma no compatible,
+una buena practica es mantener la version anterior,
+o como mínimo que la nueva esté disponible en una url diferente.</p>
+<p>Si hacemos el versionado en la url será cache friendly:</p>
+<ul>
+<li><code>/api/v2/...</code></li>
+<li><code>/api/...?version=2</code></li>
+</ul>
+<h2 id="hateoas">HATEOAS</h2>
+<p><strong>H</strong>ypermedia <strong>A</strong>s <strong>T</strong>he <strong>E</strong>ngine <strong>O</strong>f <strong>A</strong>pplication <strong>S</strong>tate</p>
+<p>Un cliente puede usar la API sin ningún conocimiento previo de la API
+simplemente interaccionando con ella.
+La respuesta no solo devuelve el contenido de la petición
+sino una lista de links a las acciones relacionadas.</p>
+<p>Si los clientes usan esos links,
+el servidor podría cambiar la API sin romper los clientes.</p>
+<ul>
+<li>Performance cost</li>
+<li>No hay standard</li>
+<li>Muy poco adoptado</li>
+</ul>
+<h2 id="puntos-de-entrada-mas-alla-de-crud">Puntos de entrada más allá de CRUD</h2>
+<p>Aunque los métodos recogen los verbos de CRUD,
+REST no restringe la funcionalidad a CRUD.</p>
+<h3 id="procesos">Procesos</h3>
+<p>Un proceso es un recurso que representa una acción.
+Puede colgar del recurso al que se aplica.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="err">POST /api/orders/122/deliver</span>
+</code></pre></div>
+<p>Podemos retornar el resultado.</p>
+<p>También tenemos la opcion de retornar <code>202 Accepted</code>
+si el proceso no retorna inmediatamente.
+Linkat al recurso que representa al estado del proceso.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="err">202 Accepted</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="err">{</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="err">    &quot;_links&quot;: [</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="err">        {</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="err">            &quot;rel&quot;: &quot;self&quot;,</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="err">            &quot;href&quot;: &quot;/api/orders/122&quot;,</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="err">        }</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="err">    ]</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="err">}</span>
+</code></pre></div>
+<p>Ventajas sobre CRUD:</p>
+<ul>
+<li>Lógica de negocio encapsulada en las acciones, workflow explícito<ul>
+<li>No hemos de saber que campos hay que modificar para dar de baja a un usuario</li>
+</ul>
+</li>
+<li>Podemos controlar el acceso a las acciones que se pueden hacer<ul>
+<li>No hablamos de campos que podemos alterar sino de acciones que podemos hacer</li>
+</ul>
+</li>
+<li>Podemos usar los links hypermedia para poner de manifiesto las acciones disponibles<ul>
+<li>según el estado del recurso</li>
+<li>según el usuario que lo pida</li>
+</ul>
+</li>
+</ul>
+<h3 id="acciones-sobre-multiples-objetos-batch-y-bulk">Acciones sobre múltiples objetos: Batch y bulk</h3>
+<p>Ambos sirven para crear/afectar múltiples objetos en una sola peticion.</p>
+<ul>
+<li>Bulk: Pueden fallar y se retorna el estado de cada uno en un 200</li>
+<li>Batch: Si uno falla, fallan todos</li>
+</ul>
+<p>Estas operaciones suelen tardar mucho.
+Considerar en ese caso, crear un proceso</p>
+<h2 id="variants">Variants</h2>
+<h3 id="zoom-embed-patterns">Zoom-embed patterns</h3>
+<p>Permeten controlar la quantitat d'informació que inclourà la resposta.</p>
+<p>Zoom: Escull els camps inclosos.
+Podría ser invers si excloem camps.</p>
+<p><code>GET /accounts/12345?fields=id,name,description</code></p>
+<p>Incrustar recursos relacionats.</p>
+<p><code>GET /accounts/12345?include=preferences</code></p>
+<p>Puede ahorrar el anti-pattern del "n+1 query problem".
+La peticion de un objecto acaba en N queries de los objetos relacionados.
+En un profile de queries no es visible porque todas acaban en un tiempo razonable.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+    
+  </body>
+</html>

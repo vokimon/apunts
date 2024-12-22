@@ -15,14 +15,14 @@
         <link rel="canonical" href="https://vokimon.github.io/apunts/computers/security/">
       
       
-        <link rel="prev" href="../branching-patterns/">
+        <link rel="prev" href="../time/time/">
       
       
-        <link rel="next" href="../../math/mates-fundation/">
+        <link rel="next" href="../godot/godot/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
     
     
       
@@ -30,10 +30,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.35e1ed30.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6f8fc17f.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.356b1318.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -60,7 +60,7 @@
     
       <link rel="stylesheet" href="../../None">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -79,9 +79,6 @@
     
     <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
-    
-    
-      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -116,7 +113,7 @@
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -141,30 +138,30 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
     
-      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_3" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9h-1.9M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69m-9.15 3.96h2.3L12 9l-1.15 3.65Z"/></svg>
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
       </label>
     
   
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
     
-      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
       </label>
     
   
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_3">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
     
-      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_2" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
       </label>
     
   
@@ -172,10 +169,13 @@
       
     
     
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
     
       <label class="md-header__button md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
       </label>
       <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
@@ -184,21 +184,21 @@
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
         <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
       </nav>
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -215,7 +215,7 @@
         <a href="https://github.com/vokimon/apunts" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -260,7 +260,7 @@
       <a href="https://github.com/vokimon/apunts" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -272,6 +272,7 @@
     
       
       
+  
   
   
   
@@ -296,14 +297,13 @@
     
   
   
-    
+  
     
     
     
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
@@ -331,8 +331,45 @@
                 
   
   
+    
+  
+  
   
     
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    web
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            web
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     
     
     
@@ -341,11 +378,10 @@
       
         
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_1" >
         
           
-          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_1_1" id="__nav_2_1_1_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -356,8 +392,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_1">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_1">
             <span class="md-nav__icon md-icon"></span>
             css
           </label>
@@ -365,6 +401,7 @@
             
               
                 
+  
   
   
   
@@ -388,6 +425,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../css/" class="md-nav__link">
         
@@ -405,6 +443,7 @@
             
               
                 
+  
   
   
   
@@ -428,6 +467,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../css-boxmodel/" class="md-nav__link">
         
@@ -445,6 +485,7 @@
             
               
                 
+  
   
   
   
@@ -468,6 +509,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../css-flexbox/" class="md-nav__link">
         
@@ -485,6 +527,7 @@
             
               
                 
+  
   
   
   
@@ -508,6 +551,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../css-animations/" class="md-nav__link">
         
@@ -528,6 +572,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../css-typography/" class="md-nav__link">
         
@@ -545,6 +590,7 @@
             
               
                 
+  
   
   
   
@@ -576,7 +622,7 @@
   
   
   
-    
+  
     
     
     
@@ -585,11 +631,10 @@
       
         
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_2" >
         
           
-          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_1_2" id="__nav_2_1_2_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -600,8 +645,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_2">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_2">
             <span class="md-nav__icon md-icon"></span>
             javascript
           </label>
@@ -609,6 +654,7 @@
             
               
                 
+  
   
   
   
@@ -632,6 +678,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../jsonschema/" class="md-nav__link">
         
@@ -649,6 +696,7 @@
             
               
                 
+  
   
   
   
@@ -672,6 +720,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../react/" class="md-nav__link">
         
@@ -692,12 +741,13 @@
   
   
   
+  
     <li class="md-nav__item">
-      <a href="../godot/" class="md-nav__link">
+      <a href="../d3/00-d3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    None
+    Introducción
   </span>
   
 
@@ -720,12 +770,13 @@
   
   
   
+  
     <li class="md-nav__item">
-      <a href="../computer-graphics/" class="md-nav__link">
+      <a href="../rest/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Computer graphics
+    REST APIs
   </span>
   
 
@@ -740,12 +791,13 @@
   
   
   
+  
     <li class="md-nav__item">
-      <a href="../fastapi/fastapi/" class="md-nav__link">
+      <a href="../fastapi/fastapi.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    FastAPI
+    None
   </span>
   
 
@@ -760,192 +812,13 @@
   
   
   
+  
     <li class="md-nav__item">
-      <a href="../android-glossary/" class="md-nav__link">
+      <a href="../time/time/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Android glossary
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../cpp11/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    New features of C++11 I should be starting to use:
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../deeplearning/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Deep learning
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../docker/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Docker
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../godot/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Godot 4 (Game Engine)
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ip6" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    IPv6
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../specs-pdf/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Specs pdf
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../timewarrior/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    TimeWarrior
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../xpxplained/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    XP Explained (Extracto del libro)
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../branching-patterns/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Branching Patterns
+    Representando el tiempo
   </span>
   
 
@@ -960,6 +833,7 @@
   
   
     
+  
   
   
     <li class="md-nav__item md-nav__item--active">
@@ -1007,22 +881,55 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#glossary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Glossary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#csrf-cross-site-request-forgery" class="md-nav__link">
-    CSRF (Cross Site Request Forgery)
+    <span class="md-ellipsis">
+      CSRF (Cross Site Request Forgery)
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#sql-injection-code-injection" class="md-nav__link">
-    SQL Injection, Code Injection
+    <span class="md-ellipsis">
+      SQL Injection, Code Injection
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#cors-cross-origin-resource-sharing" class="md-nav__link">
-    CORS (Cross Origin Resource Sharing)
+    <span class="md-ellipsis">
+      CORS (Cross Origin Resource Sharing)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xss-cross-site-scripting" class="md-nav__link">
+    <span class="md-ellipsis">
+      XSS (Cross-site scripting)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jwt-flaws" class="md-nav__link">
+    <span class="md-ellipsis">
+      JWT Flaws
+    </span>
   </a>
   
 </li>
@@ -1042,13 +949,14 @@
     </li>
   
 
-    
-      
-      
+              
+            
+              
+                
   
   
   
-    
+  
     
     
     
@@ -1056,6 +964,349 @@
     <li class="md-nav__item md-nav__item--nested">
       
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    godot
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            godot
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../godot/godot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Godot 4 (Game Engine)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../godot/physics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Godot Physics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../godot/tiling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Godot Tiling
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../computer-graphics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Computer graphics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../android-glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Android glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cpp11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    New features of C++11 I should be starting to use:
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deeplearning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deep learning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../godot.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    None
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ip6" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IPv6
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../specs-pdf/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Specs pdf
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../timewarrior/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TimeWarrior
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xpxplained/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    XP Explained (Extracto del libro)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../branching-patterns/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Branching Patterns
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
@@ -1084,6 +1335,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../math/mates-fundation/" class="md-nav__link">
         
@@ -1101,6 +1353,7 @@
             
               
                 
+  
   
   
   
@@ -1124,6 +1377,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../math/math-halfderivatives/" class="md-nav__link">
         
@@ -1141,6 +1395,7 @@
             
               
                 
+  
   
   
   
@@ -1164,6 +1419,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../math/math-wavelets/" class="md-nav__link">
         
@@ -1181,6 +1437,7 @@
             
               
                 
+  
   
   
   
@@ -1204,6 +1461,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../math/math-binary/" class="md-nav__link">
         
@@ -1221,6 +1479,7 @@
             
               
                 
+  
   
   
   
@@ -1251,14 +1510,13 @@
   
   
   
-    
+  
     
     
     
     
     <li class="md-nav__item md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
@@ -1287,6 +1545,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../music/music-harmony/" class="md-nav__link">
         
@@ -1304,6 +1563,7 @@
             
               
                 
+  
   
   
   
@@ -1327,6 +1587,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../music/guitar-technics/" class="md-nav__link">
         
@@ -1344,6 +1605,7 @@
             
               
                 
+  
   
   
   
@@ -1367,6 +1629,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../music/pentatonicas.txt" class="md-nav__link">
         
@@ -1384,6 +1647,7 @@
             
               
                 
+  
   
   
   
@@ -1407,6 +1671,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../music/ukelele/" class="md-nav__link">
         
@@ -1427,6 +1692,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../music/drums/" class="md-nav__link">
         
@@ -1444,6 +1710,7 @@
             
               
                 
+  
   
   
   
@@ -1474,14 +1741,13 @@
   
   
   
-    
+  
     
     
     
     
     <li class="md-nav__item md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
@@ -1510,6 +1776,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../lang/consonantes-afi.png" class="md-nav__link">
         
@@ -1527,6 +1794,7 @@
             
               
                 
+  
   
   
   
@@ -1550,6 +1818,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../lang/arabic-alphabet/" class="md-nav__link">
         
@@ -1567,6 +1836,7 @@
             
               
                 
+  
   
   
   
@@ -1590,6 +1860,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../lang/deutsch/" class="md-nav__link">
         
@@ -1607,6 +1878,28 @@
             
               
                 
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/japan/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Japanese
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
   
   
   
@@ -1630,6 +1923,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../lang/english-old-pronoums/" class="md-nav__link">
         
@@ -1647,6 +1941,7 @@
             
               
                 
+  
   
   
   
@@ -1670,6 +1965,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../lang/english-tenses/" class="md-nav__link">
         
@@ -1687,6 +1983,7 @@
             
               
                 
+  
   
   
   
@@ -1710,6 +2007,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../lang/vocabulary-edibles/" class="md-nav__link">
         
@@ -1727,6 +2025,7 @@
             
               
                 
+  
   
   
   
@@ -1750,6 +2049,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../lang/spanish/" class="md-nav__link">
         
@@ -1767,6 +2067,7 @@
             
               
                 
+  
   
   
   
@@ -1797,14 +2098,13 @@
   
   
   
-    
+  
     
     
     
     
     <li class="md-nav__item md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
@@ -1830,6 +2130,7 @@
             
               
                 
+  
   
   
   
@@ -1860,8 +2161,9 @@
   
   
   
+  
     <li class="md-nav__item">
-      <a href="../../economics/" class="md-nav__link">
+      <a href="../../varios/economics/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1879,7 +2181,7 @@
   
   
   
-    
+  
     
     
     
@@ -1888,11 +2190,73 @@
       
         
         
-        
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
         
           
           <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Psicology
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Psicology
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../varios/porque-creemos-en-mierdas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Porque creemos en mierdas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1903,8 +2267,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
             <span class="md-nav__icon md-icon"></span>
             3D
           </label>
@@ -1912,6 +2276,7 @@
             
               
                 
+  
   
   
   
@@ -1932,6 +2297,7 @@
             
               
                 
+  
   
   
   
@@ -1962,7 +2328,7 @@
   
   
   
-    
+  
     
     
     
@@ -1971,11 +2337,10 @@
       
         
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
         
           
-          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1986,8 +2351,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_9">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
             <span class="md-nav__icon md-icon"></span>
             Laboral
           </label>
@@ -1995,6 +2360,7 @@
             
               
                 
+  
   
   
   
@@ -2018,12 +2384,13 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../laboral/lideratges-autogestionat/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Eines d'auto-gestió
+    Lideratges autogestionat
   </span>
   
 
@@ -2035,6 +2402,7 @@
             
               
                 
+  
   
   
   
@@ -2087,22 +2455,55 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#glossary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Glossary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#csrf-cross-site-request-forgery" class="md-nav__link">
-    CSRF (Cross Site Request Forgery)
+    <span class="md-ellipsis">
+      CSRF (Cross Site Request Forgery)
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#sql-injection-code-injection" class="md-nav__link">
-    SQL Injection, Code Injection
+    <span class="md-ellipsis">
+      SQL Injection, Code Injection
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#cors-cross-origin-resource-sharing" class="md-nav__link">
-    CORS (Cross Origin Resource Sharing)
+    <span class="md-ellipsis">
+      CORS (Cross Origin Resource Sharing)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xss-cross-site-scripting" class="md-nav__link">
+    <span class="md-ellipsis">
+      XSS (Cross-site scripting)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jwt-flaws" class="md-nav__link">
+    <span class="md-ellipsis">
+      JWT Flaws
+    </span>
   </a>
   
 </li>
@@ -2133,6 +2534,45 @@ El contingut canviarà a mida que vagi entenent millor els conceptes,
 partint de que, segurament, ara no els estic entenent del tot bé.
 Igual que la resta d'apunts d'aquesta pàgina,
 però com aquest és un tema especialment sensible, calia dir-ho.</p>
+<h2 id="glossary">Glossary</h2>
+<ul>
+<li>Resource origin: From its url, the combination of schema + hostname + port.<ul>
+<li>Ignore path, query parameters...</li>
+<li>Implicit port considered (https is 443, http is 80)</li>
+<li>Same origin: https://www.example.com:443/a/path and https://www.example.com/other/path<ul>
+<li>Cambia el path, ignorado, i el puerto, pero usa el explícito</li>
+</ul>
+</li>
+<li>Cross origin: http://sell.example.com and https://www.example.com<ul>
+<li>Cambia el protocolo, el puerto y el subdominio, cualquiera de los tres bastaría.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Resource site: From its url, schema + eTLD + next domain level<ul>
+<li>No tiene en cuenta el subdominio ni el puerto</li>
+<li>El dominio es un nivel más del eTLD<ul>
+<li>TLD toplevel domain .com, .org...</li>
+<li>eTLD efective public domain: .co.uk, github.io...<ul>
+<li>Lista en: <a href="https://publicsuffix.org/list/public_suffix_list.dat">https://publicsuffix.org/list/public_suffix_list.dat</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>El subdominio es todo lo que valla más allá.</li>
+<li>Same-site: https://sell.example.com vs https://www.example.com</li>
+<li>Cross-site: https://vokimon.github.io vs https://som-eneriga.github.io</li>
+</ul>
+</li>
+<li>Schemeless same-site: no tiene en cuenta el protocolo</li>
+<li>Se aplica<ul>
+<li>A transiciones de pagina: url de la original y la de destino</li>
+<li>A contenido incrustado (iframes, imágenes, popups...)</li>
+<li>A peticiones fetch: url del recurso que genera la peticion (js, html, css) vs a donde va la petición</li>
+<li>A cookies: url del recurso que la crea, url de la petición que se hace que podria o no enviarla</li>
+</ul>
+</li>
+</ul>
 <h2 id="csrf-cross-site-request-forgery">CSRF (Cross Site Request Forgery)</h2>
 <p>https://owasp.org/www-project-code-review-guide/reviewing-code-for-csrf-issues</p>
 <p>https://scotthelme.co.uk/csrf-is-dead/</p>
@@ -2277,6 +2717,114 @@ https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS</p>
 La situació per defecte es que una pàgina web tè confiança en els recursos
 (same-origin policy)</p>
 <p>Succeeix quan una web maliciosa fa servir recursos (imatges, javascripts...) </p>
+<h2 id="xss-cross-site-scripting">XSS (Cross-site scripting)</h2>
+<p>Injectar contingut maliciós en un lloc web de confiança.
+Normalment és contingut que el site permet afegir als usuaris,
+o que s'obté d'un altre site/api,
+que, en renderitzar-ho,
+es converteix en codi executable, normalement al navegador.</p>
+<p>Igual que altres injeccions la solució passa per sanejar
+tot el contingut alié al codi de l'aplicació.
+Normalment hi ha contingut, html, javascript,
+que provenen del desenvolupador i es considera confiable,
+volem que s'envii al navegador tal qual.
+Seria no confiable tot el contingut que prové de l'usuari
+o de fonts externes.</p>
+<p>El problema d'aplicar sanejament a tot el contingut no confiable,
+sempre acaba passant que hi ha un contingut no confiable
+que ens oblidem de sanejar.</p>
+<p>Per això els frameworks están adoptant la estratègia de sanejar per defecte,
+i només en els casos que el desenvolupador especifiqui molt explícitament
+que el contingut es confiable, esquivar el sanejament.</p>
+<p>Exemple, en React, tot el contingut que s'insereix en el JSX
+es sanititza per defecte sense dir res.
+Si volem interpretar un cert text com a HTML, hem de fer servir
+l'atribut <code>dangerouslySetInnerHTML</code> en el tag contenidor.</p>
+<h2 id="jwt-flaws">JWT Flaws</h2>
+<p>https://portswigger.net/web-security/jwt</p>
+<ul>
+<li>Ficar informació personal al token<ul>
+<li>El token està codificat (base64), no pas xifrat.</li>
+<li>La clau es per signar, no xifra pas.</li>
+<li>Qualsevol pot llegir el contingut sense cap tipus de clau.</li>
+<li>Per això, cal evitar posar cap informació que es pugui considerar sensible (correu)</li>
+<li>Si l'identificador d'usuari és el correu, considerar algun tipus de hash</li>
+</ul>
+</li>
+<li>No tenir o no comprovar la data d'expiració o que sigui massa llarga<ul>
+<li>Una data d'expiració curta redueix el temps d'exposició davant un token substret</li>
+<li>En obtindre el token donar un segon refresh token per demanar l'actualització</li>
+</ul>
+</li>
+<li>No incloure <code>aud</code> (audience) field o no validar-ho (si diversos serveis comparteixen secret)<ul>
+<li>Un token obtingut en un servei, es podria fer servir per accedir a l'altre si comparteixen clau</li>
+<li>Pe. Dos instàncies d'una aplicació i ens oblidem de canviar la clau.</li>
+</ul>
+</li>
+<li>No permetre els usuaris revocar els tokens (en sortir)<ul>
+<li>Es menja l'avantatge dels jwt respecte a les sessions, de que no requereix enmagatzematge de sessió al servidor</li>
+<li>Es pot fer positiu (enmagatzemar només les revocades no caducades)</li>
+</ul>
+</li>
+<li>Enmagatzemament insegur al client<ul>
+<li>Cookies caca<ul>
+<li><code>HttpOnly</code>: Assegura que no està disponible des del javascript, només s'envia, evita atacs XSS per obtindre el token.</li>
+<li><code>Secure</code>: No s'envia amb http, només amb https</li>
+<li><code>SameSite=strict</code>: Només s'envia al site del contingut que ha generat la request</li>
+<li>TODO: que hacer con el token de renovacion? (no hay que enviarlo cada vez, si no, pierde sentido)</li>
+</ul>
+</li>
+<li>Local storage caca</li>
+<li>TODO: ¿entonces que?</li>
+</ul>
+</li>
+<li>Decodificar pero no validar<ul>
+<li>La majoria de llibreries tenen dos accions, una per decodificar i obtindre el contingut (decode) i una altra per validar la signatura (verify).</li>
+<li>Cal assegurar que estem verificant el token</li>
+</ul>
+</li>
+<li>Fer servir l'algoritme que ve a l'atribut <code>alg</code> del token.<ul>
+<li>Alguns algoritmes no es basen en una clau privada. Notablement l'algoritme <code>none</code>.</li>
+<li>Un atacant podría fabricar un token amb un d'aquests algoritmes i no es validaria la signatura.</li>
+<li>Usa una llibreria que ignori aquest camp, o com a minim que permeti especificar explicitament l'algoritme i fer-ho.</li>
+<li>Al final l'algoritme el definim nosaltres quan generem el token,</li>
+<li>i no hi ha cap motiu per confiar en el que ens ve amb el token de l'usuari.</li>
+</ul>
+</li>
+<li>Permetre claus incrustades amb jwk<ul>
+<li>L'estàndard JWK permet inserir la clau (<code>kid</code>, <code>jwk</code>) al propi token.</li>
+<li>Un atacant podria fabricar un token amb la seva propia clau.</li>
+<li>Hem d'especificar la clau de forma explicita i vigilar que la llibreria</li>
+<li>fa servir la nostra i no la incrustada.</li>
+</ul>
+</li>
+<li>Permetre claus linkades amb jku<ul>
+<li>El mateix que l'anterior pero la clau es proveeix amb un enllaç</li>
+<li>L'enllaç es un json amb els jwk a dintre</li>
+</ul>
+</li>
+<li>Permetre claus per id amb kid<ul>
+<li>kid es un id d'una clau interna pero també pot ser un path al servidor</li>
+<li>si l'atacant puja, pe, un adjunt amb la clau, podria referenciar el fitxer adjunt</li>
+<li>També podria fer un sql injection si l'id es un camp a la base de dades.</li>
+</ul>
+</li>
+<li>Secret dèbil<ul>
+<li>La seguretat del jwt depén de que el secret amb el que es signa no sigui obtenible</li>
+<li><code>hashcat -a 0 -m 16500 &lt;jwt&gt; &lt;wordlist&gt;</code></li>
+</ul>
+</li>
+</ul>
+<p>TODO: Es recomana moure el refresh token a tokens i el token a estat de l'aplicacio,
+pero en aquest cas, tot i que protegim el token refresh de XSS, estariem enviat el refresh token tota l'estona.
+O es que amb https, el punt debil deixa de ser la xarxa i esdeve el propi navegador?</p>
+
+
+
+
+
+
+
 
 
 
@@ -2287,6 +2835,7 @@ La situació per defecte es que una pàgina web tè confiança en els recursos
             </div>
           
           
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
       </main>
@@ -2315,10 +2864,10 @@ La situació per defecte es que una pàgina web tè confiança en els recursos
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.aecac24b.min.js"></script>
+      <script src="../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
       
     
   </body>

@@ -1,0 +1,3601 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Apunts i notes de coses que aprenc">
+      
+      
+        <meta name="author" content="vokimon">
+      
+      
+        <link rel="canonical" href="https://vokimon.github.io/apunts/computers/time/time/">
+      
+      
+        <link rel="prev" href="../../rest/">
+      
+      
+        <link rel="next" href="../../security/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>Representando el tiempo - Apunts</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../css/figure.css">
+    
+      <link rel="stylesheet" href="../../../css/linkcard.css">
+    
+      <link rel="stylesheet" href="../../../css/videowrapper.css">
+    
+      <link rel="stylesheet" href="../../../None">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#representando-el-tiempo" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Apunts" class="md-header__button md-logo" aria-label="Apunts" data-md-component="logo">
+      
+  <img src="../../../img/logo-customblocks-white.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Apunts
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Representando el tiempo
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/vokimon/apunts" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Apunts" class="md-nav__button md-logo" aria-label="Apunts" data-md-component="logo">
+      
+  <img src="../../../img/logo-customblocks-white.svg" alt="logo">
+
+    </a>
+    Apunts
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/vokimon/apunts" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    README
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Computers
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Computers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    web
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            web
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_1" id="__nav_2_1_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    css
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            css
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../css-basics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CSS: Conceptes bàsics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../css/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CSS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../css-design-principles/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CSS: Principios de diseño
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../css-boxmodel/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CSS: El modelo de caja
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../css-normalflow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CSS Normal Flow
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../css-flexbox/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CSS Flexbox
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../css-grid/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CSS Grid
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../css-animations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CSS: Animaciones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../css-typography/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CSS Typografy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../css-methodologies-architectures/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CSS: Metodologías y arquitecturas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_2" id="__nav_2_1_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    javascript
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            javascript
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jsecosystem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Jsecosystem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jsonschema/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Jsonschema
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../react-formik/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    React formik
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../react/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    React / Redux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../d3/00-d3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducción
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rest/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REST APIs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fastapi/fastapi.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    None
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Representando el tiempo
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Representando el tiempo
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#conceptos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conceptos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Conceptos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tldr" class="md-nav__link">
+    <span class="md-ellipsis">
+      TL;DR
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hora-solar-media-mean-solar-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hora solar media (Mean solar time)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hora-estandard-standard-time-y-zona-horaria-time-zone" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hora estándard (Standard Time) y Zona horaria (Time Zone)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#utc-y-offsets" class="md-nav__link">
+    <span class="md-ellipsis">
+      UTC y offsets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#husos-horarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Husos horarios
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#denominacion-militarradiofonica-de-los-husos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Denominación militar/radiofónica de los husos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zonas-horaria-modernas-time-zones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Zonas horaria modernas (time zones)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#daylight-saving-time-dst" class="md-nav__link">
+    <span class="md-ellipsis">
+      Daylight saving time (DST)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hora-local-local-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hora local (local time)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#europemadrid" class="md-nav__link">
+    <span class="md-ellipsis">
+      Europe/Madrid
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#historia-de-europemadrid" class="md-nav__link">
+    <span class="md-ellipsis">
+      Historia de Europe/Madrid
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ambiguedades-y-convenciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ambiguedades y convenciones
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ambiguedades y convenciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estrategia-del-sandwich" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estratégia del sandwich 🍔
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ambiguedad-de-las-horas-naive" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ambigüedad de las horas naive
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ambiguedad-debido-al-dst" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ambiguedad debido al DST
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mutabilidad-de-la-hora-local" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mutabilidad de la hora local
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#naividad-de-las-fechas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Naividad de las fechas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#representaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Representaciones
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Representaciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#texto-iso-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      Texto ISO Format
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timestamp-or-time-since-epoch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Timestamp or time since Epoch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tupla-tiempo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tupla tiempo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Security problems
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    godot
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            godot
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../godot/godot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Godot 4 (Game Engine)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../godot/physics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Godot Physics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../godot/tiling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Godot Tiling
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computer-graphics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Computer graphics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android-glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Android glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cpp11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    New features of C++11 I should be starting to use:
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deeplearning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deep learning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../godot.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    None
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ip6" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IPv6
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specs-pdf/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Specs pdf
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../timewarrior/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TimeWarrior
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../xpxplained/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    XP Explained (Extracto del libro)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../branching-patterns/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Branching Patterns
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Math
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Math
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../math/mates-fundation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Math Foundations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../math/stats/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Statistics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../math/math-halfderivatives/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Half Derivatives
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../math/math-quadraticformula-alternative/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quadratic Formula
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../math/math-wavelets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wavelets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../math/math-3n1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Collatz Conjecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../math/math-binary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Binary math
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../math/math-geometric-algebra/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Geometric Algebra
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Music
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Music
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../music/music-harmony/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Harmony: Notes, Scales and Chords 🎶
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../music/music-harmony-scales/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Harmony: Scales 🎶
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../music/guitar-technics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Técnica de Guitarra 🎸
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../music/guitar-fret-navigation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Navegación en el mástil
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../music/pentatonicas.txt" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pentatonicas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../music/songs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Songs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../music/ukelele/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ukelele
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../music/drums/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Drum line composition (for non drummers)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../music/online-resources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Online resources
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Languages
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Languages
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lang/consonantes-afi.png" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phonetics Consonants
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lang/vowels.jpg" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phonetics Vowels
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lang/arabic-alphabet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arabic script
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lang/arabic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arabic
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lang/deutsch/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deutsch
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lang/japan/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Japanese
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lang/english-expresions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    English expresions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lang/english-old-pronoums/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    English old pronoums
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lang/english-prepositions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    English prepositions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lang/english-tenses/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    English tenses
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lang/vocabulary-somenergia/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    English Vocabulary for SE enterviews
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lang/vocabulary-edibles/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vocabulary edibles
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lang/ruso-alphabet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ruso alphabet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lang/spanish/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Spanish
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lang/stylistic-figures/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Retorical figures
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    History
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            History
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../history/cristianismo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    História del cristianismo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../varios/economics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Economics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Psicology
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Psicology
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../varios/porque-creemos-en-mierdas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Porque creemos en mierdas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    3D
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            3D
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../3d/3d-production-pipeline/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3D animation pipeline
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../3d/blender-materials/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Blender material
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Laboral
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Laboral
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../laboral/comunicacio_de_crisi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Comunicacio de crisi
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../laboral/lideratges-autogestionat/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lideratges autogestionat
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../laboral/reunionseficients/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Reunions eficients
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#conceptos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conceptos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Conceptos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tldr" class="md-nav__link">
+    <span class="md-ellipsis">
+      TL;DR
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hora-solar-media-mean-solar-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hora solar media (Mean solar time)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hora-estandard-standard-time-y-zona-horaria-time-zone" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hora estándard (Standard Time) y Zona horaria (Time Zone)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#utc-y-offsets" class="md-nav__link">
+    <span class="md-ellipsis">
+      UTC y offsets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#husos-horarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Husos horarios
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#denominacion-militarradiofonica-de-los-husos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Denominación militar/radiofónica de los husos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zonas-horaria-modernas-time-zones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Zonas horaria modernas (time zones)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#daylight-saving-time-dst" class="md-nav__link">
+    <span class="md-ellipsis">
+      Daylight saving time (DST)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hora-local-local-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hora local (local time)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#europemadrid" class="md-nav__link">
+    <span class="md-ellipsis">
+      Europe/Madrid
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#historia-de-europemadrid" class="md-nav__link">
+    <span class="md-ellipsis">
+      Historia de Europe/Madrid
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ambiguedades-y-convenciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ambiguedades y convenciones
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ambiguedades y convenciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estrategia-del-sandwich" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estratégia del sandwich 🍔
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ambiguedad-de-las-horas-naive" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ambigüedad de las horas naive
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ambiguedad-debido-al-dst" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ambiguedad debido al DST
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mutabilidad-de-la-hora-local" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mutabilidad de la hora local
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#naividad-de-las-fechas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Naividad de las fechas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#representaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Representaciones
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Representaciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#texto-iso-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      Texto ISO Format
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timestamp-or-time-since-epoch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Timestamp or time since Epoch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tupla-tiempo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tupla tiempo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="representando-el-tiempo">Representando el tiempo</h1>
+<p>Existen diversas convenciones y formatos para representar el tiempo.
+Hay que tenerlas en cuenta cuando las usamos para no introducir bugs.
+Esta guía pretende clarificar conceptos y establecer ciertas convenciones y prácticas
+que faciliten la manipulación de marcas temporales.</p>
+<h2 id="conceptos">Conceptos</h2>
+<h3 id="tldr">TL;DR</h3>
+<ul>
+<li><strong>UTC (Universal Time Clock):</strong> Hora de referencia internacional. La antigua hora solar media de Greenwich (GMT) pero definida más precisamente. </li>
+<li><strong>UTC Offset:</strong> Diferencia de un sistema horario con UTC. Se expresa UTC+-HH:MM</li>
+<li><strong>Huso horario:</strong> UTF offsets en horas enteras. De UTC-12 a UTC+12. Hay unos pocos estándares con offsets no de horas enteras.</li>
+<li><strong>Standard Time (ST):</strong> Sincronización de los relojes en una región (WET, CET, PST, WAT, CAT...), se corresponde con un UTC offset.</li>
+<li><strong>Daylight Saving Time (DST):</strong> Alteración de un Standard Time para el periodo de verano (WEST, CEST, PDT, WAST, CAST...)</li>
+<li><strong>Time Zone (TZ):</strong> Zona en la que se aplica un Standard Time (y su pareja DST, si toca)</li>
+<li><strong>Local time:</strong> Hora que se aplica oficialmente en una ciudad de referencia en cada momento.<ul>
+<li>Cambios en la oficialidad de un sitio implica cambios en como obtener la hora local.</li>
+</ul>
+</li>
+<li><strong>Europe/Madrid:</strong> Es nuestro local time.<ul>
+<li>Actualmente CET(UTC+1)/CEST(UTC+2) con cambio de horario el último domingo de octubre y de marzo a la 01:00 UTC.</li>
+<li>Históricamente ha cambiado y puede cambiar: Fue WET/WEST, DST se ha aplicado de forma intermitente, y ha habido otros criterios para el momento del cambio DST.</li>
+<li>Africa/Ceuta es igual que Europe/Madrid</li>
+<li>Atlantic/Canary que es WET(UTC+0)/WEST(UTC+1). Cambia a DST simultaneamente, a la 1:00 UTC (1:00 local en vez de 2:00)</li>
+</ul>
+</li>
+<li><strong>IANA TZ Database:</strong> Compilación histórica de los sistemas horarios que se aplican a ciertas ciudades de referencia.</li>
+</ul>
+<p>El siguiente apartado explica la historia y el porqué de estos conceptos.
+Sigue leyendo si te interesa, o puedes saltar al apartado de <em>Ambiguedades y convenciones</em>.</p>
+<h3 id="hora-solar-media-mean-solar-time">Hora solar media (Mean solar time)</h3>
+<p>En el siglo XIX funcionabamos con la hora solar media de cada ciudad.
+La <strong>hora solar media</strong> es la que sincroniza las 12h del mediodía con el apogeo del sol.
+Le llamamos <em>media</em>, porque el movimiento relativo entre la tierra y el sol
+avanza o atrasa el apogeo dependiendo de la época del año,
+así que se toma la hora promedio.</p>
+<p><img alt="Desplazamiento del apogeo solar a lo largo del año" src="../Tijdvereffening-equation_of_time-en.jpg" /></p>
+<p>Con hora solar media,
+era necesario ir ajustando el reloj a poco que nos movamos al este o al oeste.
+Por ejemplo, entre la hora solar de Girona y la de Lleida,
+el desfase es de casi 9 minutos, 1 minuto cada 20km en esa latitud.</p>
+<h3 id="hora-estandard-standard-time-y-zona-horaria-time-zone">Hora estándard (Standard Time) y Zona horaria (Time Zone)</h3>
+<p>A la que aparecieron los trenes, con sus horarios de paso,
+y las comunicaciones a distancia como el telégrafo y el teléfono,
+esa asincronía se volvio insostenible.
+Por eso se establecieron regiones (<strong>zonas horarias</strong>)
+en la que todos los relojes están sincronizados a una misma <strong>hora estándar</strong> (Standard time).
+Dentro de una zona horaria ya no haría falta ajustar el reloj, sólo cuando pasases de una zona a otra.</p>
+<h3 id="utc-y-offsets">UTC y offsets</h3>
+<p>Las primeras horas estándar, a finales del siglo XIX,
+eran propias de cada país, y usaban como referencia,
+el tiempo solar medio de su capital o de su centro geográfico.
+Ajustar el horario entre paises era un horror.
+Por ejemplo, entre Irán y Reino Unido, el desfase era de +03:25:44.</p>
+<p>Enseguida se propuso
+fijar una referencia universal y saltos de horas enteras en regiones llamadas husos horarios.
+La propuesta la hizo el canadiense Sandford Fleming en 1883, y,
+aunque no se aprobó internacionalmente hasta 1912,
+en 1900 ya la habían adoptado la mayoría de paises, entre ellos, España.</p>
+<p>Como referencia de tiempo universal se adoptó el estándar inglés:
+La hora solar media en el observatorio de Greenwich, en Londres,
+el <strong>Greenwich Mean Time (GMT)</strong>. También es el meridiano origen de la longitud.
+En la actualidad, usamos el <strong>UTC (Universal Time Coordinated)</strong> que es una redefinición más precisa del GMT.</p>
+<p>La diferencia de un estándard horario con UTC la llamamos <strong>desplazamiento UTC</strong> (UTC offset) y se expresa <code>UTC+-HH</code>.
+Podemos añadir minutos y segundos al offset si hiciera falta.
+El antiguo Tehran Mean Time era <code>UTC+03:25:44</code>.</p>
+<h3 id="husos-horarios">Husos horarios</h3>
+<p>La otra aportación de Fleming fueron los <strong>husos horarios</strong>.
+Son franjas terrestres de 15 grados de longitud
+(el giro de la tierra en una hora)
+a las que corresponderia un offset UTC de horas enteras.
+Ello limitaría, dentro de un huso,
+la divergencia con la hora solar a media hora más o menos.</p>
+<ul>
+<li>El huso de referencia, centrado en el meridiano de Greenwich tiene la hora UTC+00.</li>
+<li>Los husos al este desfasan una hora más cada uno UTC+1, UTC+2..., UTC+12.</li>
+<li>Los husos al oeste defasan una hora menos cada uno UTC-1, UTC-2..., UTC-12.</li>
+<li>Los husos UTC+12 y UTC-12 son la mitad de anchos, y los separa el anti-meridiano de Greenwich que define el cambio internacional de dia.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>No es 'uso' de 'usar' sino huso (con hache) de hilar en la rueca.
+Es por la forma que tiene las franjas en el globo,
+Aunque en la proyección Mercator aparezcan rectangulares.
+acaban en punta en los polos y son mas anchas en el equador.
+<img alt="Imagen de un huso de rueca " src="../museo-ancud-huso71A.jpg" /></p>
+</div>
+<p>Si observas el mapa actual de zonas horarias,
+verás que los husos como delimitación geográfica
+apenas se usan en tierra, sólo en alta mar.
+Si que triunfó la idea de offsets enteros
+que se aplica en todos sitios menos en las zonas ralladas.</p>
+<p><img alt="" src="../World_Time_Zones_Map.png" /></p>
+<h3 id="denominacion-militarradiofonica-de-los-husos">Denominación militar/radiofónica de los husos</h3>
+<p>La propuesta de Flemming asignaba a cada huso una letra del abecedario.
+Aunque esa parte de la propuesta no se aceptó,
+aún se usa en ambitos donde premia la comunicación por radio,
+como el militar, naval o aviación.
+De hecho es comun usar <a href="https://en.wikipedia.org/wiki/NATO_phonetic_alphabet">la palabra internacional de deletreo de esa letra</a>:
+(Alpha, Bravo, Charlie, Delta...)</p>
+<ul>
+<li>Z para UTC+00 (Zulú)</li>
+<li>hacia el este A=UTC+1 (Alpha) hasta M=UTC+12 (Mike), saltandose la J</li>
+<li>hacia el oeste N=UTC-1 (November) hasta Y=UTC-12 (Yankee)</li>
+<li>La J (Juliet) es para designar la hora local cuando es común entre las partes</li>
+</ul>
+<p>Algunos estándares informáticos usan la Z para referirse a UTC.
+Las demás letras no se usan tanto.</p>
+<h3 id="zonas-horaria-modernas-time-zones">Zonas horaria modernas (time zones)</h3>
+<p>Aunque las naciones vieron con buenos ojos los defases en horas enteras de una hora universal,
+no triunfó tanto la idea de delimitar las zonas horarias con meridianos.
+Era preferible hacerlos coincidir con los límites políticos existentes: paises, provincias o zonas económicas.</p>
+<ul>
+<li>Por un lado es más fácil saber cuando cambias de zona horaria si coincide con un límite ya conocido.</li>
+<li>Por otro, se vió más útil mantener una hora comun con los vecinos que limitar el desajuste solar a media hora.</li>
+</ul>
+<p>Por eso gran parte de la Europa occidental, incluida España, Francia y el Benelux, usa un huso horario que no le corresponde, el de Alemania.
+Por eso Galicia, comparte hora con el resto de España peninsular aunque le corresponda el siguiente huso.
+Al final, Galicia y el este de Polonia comparten zona horaria
+aunque la diferencia solar entre ellas sea de 2 horas y cuarto.</p>
+<p>No todos los paises están en un huso horario de horas enteras respecto a UTC.
+Algunos paises que quedaban partidos en dos husos,
+decidieron adoptar un desfase a la media hora para todo el país.
+Tal es el caso, por ejemplo, de la India (+5:30) e Iran (+3:30),
+y durante algunos años, Venezuela (-04:30 en vez del -4 actual).</p>
+<p>Las horas estándares que se definieron,
+ya con UTC como referencia,
+tienen nombres estandarizados que referencian su zona de aplicación
+y también se refieren por sus siglas.</p>
+<ul>
+<li>West Europe Time (WET) UTF+00</li>
+<li>Central Europe Time (CET) UTF+01</li>
+<li>Central African Time (CAT) UTF+01</li>
+<li>Pacific Standard Time (PST) UTF-08</li>
+<li>Atlantic Standard Time (AST) UTF-05</li>
+<li>...</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Es peligroso usar las siglas para identificar la hora estandard. ¡No son unicas!</p>
+<ul>
+<li>AST: Arabian Standard Time o Atlantic Daylight/Standard Time</li>
+<li>AMT: Amazon ime o Armenia Time</li>
+<li>CST: Cuba Standard Time o Central Standard Time o China Standard Time</li>
+<li>GST: Gulf Standard Time o South Georgia Time</li>
+<li>IST: Irish Standard Time, India Standard Time o Israel Standard Time</li>
+<li>...</li>
+</ul>
+</div>
+<h3 id="daylight-saving-time-dst">Daylight saving time (DST)</h3>
+<p>En las sociedades rurales, el inicio diario de la actividad humana se vinculaba al amanecer.
+En contraste, las sociedades industriales, vinculan el inicio de la actividad a un horario.
+El uso de la hora solar media, ancló el horario al mediodía,
+haciendo que la hora del amanecer divergiera mucho entre verano e invierno,
+y con ello las horas de provecho de la luz solar.
+Para reducir esta variación de la hora del amanecer
+algunos paises empezaron a establecer el horario de verano,
+durante el cual se adelanta el reloj una hora.</p>
+<figure><a href="../Bilba-Luz-del-D%C3%ADa-2009.png" target="_blank"><img src="../Bilba-Luz-del-D%C3%ADa-2009.png" /></a><figcaption>
+<p>Efecto de el DST en la hora del amanecer en Bilbo</p>
+</figcaption>
+</figure>
+<p>En general, estas medidas se han introducido
+en tiempos de guerra o en crisis energéticas o por presión industrial.
+Hoy en día, se discute su utilidad energética.</p>
+<p>Cada horario estándar (<em>standard time</em>),
+puede tener aparejado una horario de verano (<em>daylight saving time</em> o <em>summer time</em>):</p>
+<ul>
+<li>West Europe Time (WET) -&gt; West Europe Summer Time (WEST)</li>
+<li>Pacific Standard Time (PST) -&gt; Pacific Daylight saving Time (PDT)</li>
+<li>...</li>
+</ul>
+<p>Normalmente se mantienen nombres diferentes aunque CET (Central European Time)
+y WEST (West European Summer Time) sean ambos equivalentes a UTC+01.</p>
+<p>Algunos paises, notablemente en Rusia y en los paises de Norte América,
+no usan dos designaciones distintas para Standard y DST.
+En estos paises, la designacion de la hora estandard incluye ambos offsets.
+Por ello, saber la designación estàndard no es suficiénte
+para conocer si aplica o no DST.</p>
+<p>Otro aspecto fácil de olvidar es que verano y invierno estan invertidos
+en el hemisferio norte y en el sur.
+Dos paises en el mismo huso horario pero cada uno en un hemisferio,
+aplicaran el DST en momentos inversos.</p>
+<p>Y por útlimo, y más importante,
+son los gobiernos los que definen el momento en que se hacen los cambios DST
+en una región, o incluso si se aplica DST o no.
+Para dolor de cabeza nuestro,
+normalmente dicho criterio va cambiando a lo largo del tiempo.</p>
+<h3 id="hora-local-local-time">Hora local (<em>local time</em>)</h3>
+<p>Aunque los estándares horarios están bien definidos,
+en una región concreta se puede cambiar a otro estándar horario.
+De hecho pueden decidir:</p>
+<ul>
+<li>Cambiar a otro estándar horario</li>
+<li>Aplicar o no aplicar DST</li>
+<li>Modificar los periódos en que se aplica DST</li>
+</ul>
+<p>Por eso es importante el concepto de hora local:
+La hora oficial que se aplica en una ciudad de referencia
+a través de todos esos cambios en el tiempo.</p>
+<p>La IANA mantiene una base de datos con las horas locales
+para ciudades y territorios de referencia y todos sus cambios desde 1970.
+Las ciudades de referencia tienen identificadores tipo:
+<code>Africa/Algiers</code>, <code>Antarctica/Macquarie</code>, <code>Pacific/Canary</code>, <code>Europe/Berlin</code>...
+La primera parte es el ámbito continental o oceánico.
+Estas bases de datos nos permiten calcular la hora local equivalente de una hora UTC.</p>
+<p>Lamentablemente, en las librerías se llama normalmente Time Zone
+a conceptos esencialmente diferentes:</p>
+<ul>
+<li>A los husos horarios o UTC offsets (Zulu, UTC+02...)</li>
+<li>A una hora estándard o una hora DST concreta aplicada a una zona (CET, CEST, WET, WEST...)</li>
+<li>A la zona donde se aplican una pareja de horas standard/DST (CET/CEST, WET/WEST, Pacific...)</li>
+<li>A la oficialidad de un lugar (Europe/Madrid) que hoy puede ser CET/CEST pero que mañana puede cambiar a WET/WEST o WET, o pueden establecer dias diferentes de transicion DST.</li>
+</ul>
+<h3 id="europemadrid">Europe/Madrid</h3>
+<p>Nuestra hora local oficial es la hora de Madrid (Europe/Madrid).
+La compartimos con Paris, Berlin, Varsovia...
+Cuando hablemos de hora local nos referiremos a esta.</p>
+<p>Tenemos dos TZ diferentes en verano y en invierno:</p>
+<ul>
+<li>CET (Central European Time, UTC+1)</li>
+<li>CEST (Central European Summer Time, UTC+2)</li>
+</ul>
+<p>El cambio DST se hace</p>
+<ul>
+<li>Último domingo de Marzo a la 1:00 UTC</li>
+<li>Último domingo de Octubre a la 1:00 UTC</li>
+</ul>
+<p>No siempre ha sido así, y puede cambiar,
+así que no se puede tomar como regla general.
+Hay que confiar en las implementaciones de tz's que
+consideran los cambios históricos y
+se actualizarán con los cambios futuros.</p>
+<p>Tambien existen las horas locales de Africa/Ceuta, que coincide con Europe/Madrid,
+y Atlantic/Canary.
+Atlantic/Canary usa WET(UTC+0)/WEST(UTC+1) como st y dst
+Hace los cambios a UTC simultaneamente con Madrid a la misma hora UTC (a diferente hora local!)
+de forma que siempre hay un offset de una hora entre Canary y Madrid.
+Esto quiere decir que el canvio ST-DST se hace a las 2 en peninsula y a la 1 en Canarias.</p>
+<h3 id="historia-de-europemadrid">Historia de Europe/Madrid</h3>
+<p>España estandarizó su hora para península y baleares en 1900,
+adoptando GMT+00 al ser el huso predominante en la península (el oeste de Galicia le hubiera tocado GMT-01).
+Canarias estandarizó su hora poco despues a GMT-01.
+El 16 marzo de 1940, España sincronizó la hora con la de Alemania,
+igual que hicieron los territorios ocupados de Francia y Benelux durante la IIGM.
+Desde entonces todos esos paises usamos CET en vez de el WET que nos tocaría por huso.</p>
+<p><img alt="" src="../Cambio-de-hora-en-Espana-en-1940-publicado-en-el-Boletin-Oficial-del-Estado.webp" /></p>
+<p>A pesar del desfase horario, muchas costumbres como las comidas
+o incluso los horarios laborales estan desplazados en el horario para ajustarlo al ritmo solar.</p>
+<p>En España tenemos DST desde la crisis del petróleo del 78.
+Pero ya habíamos coqueteado con la idea varias veces durante los últimos siglos.
+Hasta </p>
+<p><a href="https://en.wikipedia.org/wiki/Time_in_Spain#Dates_of_Daylight_Saving_Time_and_other_changes">Histórico de cambios de horario en España</a></p>
+<h2 id="ambiguedades-y-convenciones">Ambiguedades y convenciones</h2>
+<h3 id="estrategia-del-sandwich">Estratégia del sandwich 🍔</h3>
+<p>La <em>estragégia del Sandwich</em> es una estrategia general,
+no solo para formatos de tiempo,
+para lidiar con datos
+que pueden representarse de formas diferentes y, a veces, ambiguas.</p>
+<p>Consiste en uniformar internamente una convención única y universal,
+idealmente, que no pierda información respecto a las otras,
+y gestionar la heterogeneidad, vía conversiones,
+en las interfícies con las fuentes de dicha heterogeneidad.</p>
+<p>Tiene estos beneficios:</p>
+<ul>
+<li>El código interno es más simple, pues sólo gestiona una convención.</li>
+<li>Limitamos las conversiones que tenemos que implementar: De todas a la lengua franca y al reves y no todas con todas. (O(N) vs O(N²))</li>
+<li>En los puntos frontera es donde es más probable que conozcamos las convenciones externas que se usa en cada elemento externo y por tanto la conversión a usar.</li>
+</ul>
+<p>Por ejemplo, en el caso de texto internacional, podemos tener
+una representación interna UTF8 y,
+tener en cuenta que codificacion usa una fuente de datos para convertirlo a UTF8.
+Contra más capas de nuestro sistema cruce ese dato sin convertirse a la lengua franca,
+mas capas tendran que gestionar esos multiples formatos y
+más probable es que perdamos la informació sobre cual era el formato original.</p>
+<h3 id="ambiguedad-de-las-horas-naive">Ambigüedad de las horas naive</h3>
+<p>Una <strong>representación horaria naive</strong>
+es la que no aporta información explícita
+sobre a qué estándar de hora o offset UTC se refiere.
+Lo contrario es una representación con TZ explícito.</p>
+<p>Las representaciones naive son ambiguas
+y necesitan convenciones o información adicional para desambiguarlas.
+Usando la estrategia sandwich,
+averiguaremos la convención que usa la fuente
+para convertirlas en tiempos con tz explicitos
+tan pronto lleguen al sistema.</p>
+<h3 id="ambiguedad-debido-al-dst">Ambiguedad debido al DST</h3>
+<p>Debido al DST, la hora local es ambigua aunque se nos diga que es de Europe/Madrid.</p>
+<ul>
+<li>Hay una hora local que no existe: de 2:00 a 3:00 del ultimo domingo de marzo</li>
+<li>Hay una hora local repetida: de 2:00 a 3:00 del ultimo domingo de octubre</li>
+</ul>
+<p>Cuando recibimos un tiempo en local time,
+deberíamos recibirlo, bien con el timezone informado,
+o bien con un flag de DST.
+En el segundo caso, aplicando sandwich, lo convertimos a time zone informado.</p>
+<h3 id="mutabilidad-de-la-hora-local">Mutabilidad de la hora local</h3>
+<p>Históricamente los criterios para determinar la hora local han variado.</p>
+<ul>
+<li>El offset standard (Madrid cambió de WET a CET en 1940 y hay propuestas de restablecer WET)</li>
+<li>Si hay o no DST (cambió 6 veces en el siglo XX, y hay propuestas de eliminarlo)</li>
+<li>Cuando se produce el cambio de hora (el criterio actual se estableció en 1996)</li>
+</ul>
+<p>Por ello, se recomienda no programar explícitamente estos criterios
+y delegar en librerías especializadas, que mantienen la base de datos
+de timezones.</p>
+<p>También se recomienda cuando convirtamos a hora local,
+normalmente para presentarla al usuario,
+no conviene averiguar nosotros si toca CET o CEST para aplicar el offset,
+sinó usar la hora local <em>Europe/Madrid</em>
+y la libreria de TZ ya nos indicara el offset o el standard time para una hora UTC.</p>
+<h3 id="naividad-de-las-fechas">Naividad de las fechas</h3>
+<p>Podríamos pensar que las fechas, puesto que no indican hora,
+no tienen problema de timezone, ni de dst.
+Y así lo podemos considerar mientras solo operemos con fechas.</p>
+<p>Pero una fecha es un intervalo temporal de las 00h a las 24h,
+y ese intervalo es diferente, otra vez, dependiendo de la hora local.
+Esto cobra importancia cuando empezamos a mezclar fechas con horas.</p>
+<p>En ese sentido hay que considerar las fechas como tiempos naive.</p>
+<p><img alt="" src="../naivedates.png" /></p>
+<p>Normalmente, cuando una usuaria indica una fecha,
+se refiere no a la hora UTC sinó a la local.</p>
+<p>Por ejemplo, el día 2022-03-05 en Madrid empieza a las <code>2022-03-0 23:00 CET</code> que corresponde a <code>2022-03-04 23:00Z</code>.</p>
+<p>Cuando vayamos a usar fechas para compararlas con datetimes,
+necesitamos saber que convencion se usa en las fechas.
+Normalmente se referiran al día en la hora local, aunque no está de más comprobarlo.
+Además ¿qué hora local? ¿la del usuario? ¿la del servidor? ¿la del lugar de la recogida de datos?</p>
+<p>Imaginate un usuario de viaje en Nueva York (navegador),
+que se conecta a un servidor en Californa (backend),
+para consultar las curvas de una planta en Canarias (recogida)
+y nosotros hemos guardado las curvas en hora local de Madrid.
+La hora local ha de ser una decisión muy consciente.</p>
+<p>Una buena aproximación es convertir la fecha a la hora 00:00:00 local del día en cuestión.
+Nos sirve para comparar con fechas anteriores o posteriores e iguales.</p>
+<div class="highlight"><pre><span></span><code>Comprobar si un tiempo es anterior a una fecha:
+    2020-03-04T23:59:59CET &lt; 2020-03-05?
+        2020-03-05 -&gt; 2020-03-05T00:00:00CET # Convertimos a localtime a las 00:00
+        2020-03-04T23:59:59CET &lt; 2020-03-05T00:00:00CET # Comparamos
+
+Comprobar si un tiempo es posterior o igual a una fecha:
+    2020-03-04T23:59:59CET &gt;= 2020-03-05?
+        2020-03-05 -&gt; 2020-03-05T00:00:00CET # Convertimos a localtime a las 00:00
+        2020-03-04T23:59:59CET &gt;= 2020-03-05T00:00:00CET # Comparamos
+</code></pre></div>
+<p>Sin embargo, para comparar tiempos posteriores o menores e iguales a una fecha,
+deberíamos añadirle un día antes de convertirlo a local.
+Un día y no 24h porque hay dias que por el DST tiene 23 o 25 horas.</p>
+<div class="highlight"><pre><span></span><code>Comprobar si un tiempo es posterior a una fecha:
+    2020-03-04T23:59:59CET &gt; 2020-03-05?
+        2020-03-05 -&gt; 2020-03-06 # Añadimos un dia a la fecha (que no 24h por que hay dias de 23 y 25)
+        2020-03-06 -&gt; 2020-03-06T00:00:00CET # Convertimos a localtime a las 00:00
+        2020-03-04T23:59:59CET &lt; 2020-03-06T00:00:00CET # Comparamos
+
+Comprobar si un tiempo es anterior o igual a una fecha:
+    2020-03-04T23:59:59CET &lt;= 2020-03-05?
+        2020-03-05 -&gt; 2020-03-05T00:00:00CET # Convertimos a localtime a las 00:00
+        2020-03-04T23:59:59CET &lt;= 2020-03-05T00:00:00CET # Comparamos
+</code></pre></div>
+<p><img alt="" src="../comparing-dates-and-datetimes.png" /></p>
+<p>Dado que la fecha no tiene informado el TZ,
+¿necesitamos indicar el DST para convertirla en tiempo local con TZ informado?
+No, porque a las 00:00 locales no hay ambiguedad, por la fecha sabremos si es DST o no.</p>
+<h2 id="representaciones">Representaciones</h2>
+<h3 id="texto-iso-format">Texto ISO Format</h3>
+<p>El estándard <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a>
+establece una forma uniforme de representar el tiempo <strong>como texto</strong>.
+No substituye a la representación en lenguaje natural como "3 de mayo de 2020",
+pero si uniformiza las diferentes convenciones para representar fechas y horas.</p>
+<p>Tiene la interesante propiedad que si dos objetos son del mismo tipo
+y de la misma zona horaria,
+coincide el orden cronologico y el lexicografico.</p>
+<ul>
+<li>ISO dates: "YYYY-MM-DD"</li>
+<li>Naive ISO datetimes: "YYYY-MM-DD hh:mm:ss"</li>
+<li>UTC ISO datetimes: "YYYY-MM-DD hh:mm:ssZ" or "YYYY-MM-DD hh:mm:ss+00:00"</li>
+<li>TZ iso datetimes: ""YYYY-MM-DD hh:mm:ss+02:00"</li>
+</ul>
+<p>Convenciones:</p>
+<ul>
+<li>Naive iso datetimes son ambiguas<ul>
+<li>El estandard dice que si no hay TZ, es local/juliet</li>
+<li>Si es local, hay que convenir qué local es (usuario, servidor, lugar de obtención...)</li>
+<li>Si es local, a parte se necesita información adicional de DST</li>
+<li>Algunos entornos consideran la convencion que Naive es UTC para desambiguarlas</li>
+<li>En general, se recomienda no usar naives para no tener que usar convenciones adicionales</li>
+</ul>
+</li>
+<li>Fechas naive se consideran 00:00 localtime, no hay ambiguedad de DST pero requiere convencion de qué es Juliet<ul>
+<li>Adición de dias en isodate se ha de hacer en dias no en horas puesto que las horas del dia local varian entre 23 y 25.</li>
+<li>Peligro: Cuando comparamos como texto isodates, si no son del mismo tipo<ul>
+<li>Comparing with an UTC datetime, the first hours of the day in UTC are less than the date <ul>
+<li><code>"2022-08-01 23:30Z" &lt; "2022-08-02"</code> but <code>isodatetimetz("2022-08-01 23:30Z")&gt;localisodate("2022-08-02")</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>El uso de separadores '-' y ':' es opcional pero recomendado por legibilidad. Nosotros lo forzamos por eso mismo.</li>
+<li>También se permite 'T' o espacios como separador entre dia y hora.<ul>
+<li>JSON requiere 'T'. yamlns usa espacio.</li>
+</ul>
+</li>
+<li>UTC can be marked either as Z or as offset +00, -00:00</li>
+<li>Smaller time elements can be dropped, meaning 00</li>
+<li>Smaller timezone elements can be dropped, meaning 00</li>
+</ul>
+<p>La especificación permite duraciones, intervalos, repeticiones, semanas del año, dias del año y la semana...
+De momento no cubrimos nada de eso.</p>
+<h3 id="timestamp-or-time-since-epoch">Timestamp or time since Epoch</h3>
+<p>Tiempo desde epoch (o también (UNIX/POSIX) timestamp)
+es una representación <strong>numérica</strong> del tiempo mediante, por ejemplo,
+los segundos transcurridos desde una momento de referencia o epoch.</p>
+<p>Es un numero dificil de interpretar, pero fácil de obtener, comparar, restar...</p>
+<p>Internamente en POSIX y por extension en otros sistemas,
+el tiempo se representa numéricamente
+como los segundos transcurridos desde el EPOCH UNIX (1970-01-01 00:00+00).</p>
+<p>A determinar:</p>
+<ul>
+<li>Importante: Las unidades: segundos, milisegundos, microsegundos...</li>
+<li>La representación puede ser entera o float<ul>
+<li>Float permite granularidad menor pero manteniendo compatibilidad en unidades.</li>
+<li>Ojo con los ints y el oferflow (efecto 2038 si seusan 32 bits)</li>
+<li>Ojo con los floats y la precisión (a menudo que el numero se hace grande baja en precision)</li>
+</ul>
+</li>
+<li>Las 00:00 de referencia del EPOCH pueden ser UTC... o no<ul>
+<li>Se recomienda UTC pero no tiene porqué ni hay forma de indicarlo</li>
+<li>Por desgracia, algunos entornos se usa el EPOCH local, eso tiene todas los problemas que comentabamos arriba.</li>
+<li>En esos caso hay que aclarar qué local se usa y desambiguar el DST</li>
+</ul>
+</li>
+</ul>
+<h3 id="tupla-tiempo">Tupla tiempo</h3>
+<p>Otra representación típica es una tupla o estructura
+que contiene númericamente los diferentes niveles de tiempo:
+año, mes...</p>
+<p>Es conveniente para hacer manipulaciones semánticas.
+Por ejemplo, 
+incrementar en un dia (con el DST), una semana, un año (con los bisiestos)</p>
+<h1 id="wip-a-partir-de-aqui-es-work-in-progress">WIP - A partir de aquí es Work In Progress</h1>
+<h3 id="python">Python</h3>
+<p>A parte de las representaciones en string y timestamp numérico,
+existen los objetos del paquete <code>datetime</code>.</p>
+<ul>
+<li>isodate</li>
+<li>isodatetime naive</li>
+<li>isodatetime tz</li>
+<li>utc timestamp ms</li>
+<li>date</li>
+<li>datetime naive</li>
+<li>datetime con tzinfo</li>
+</ul>
+<p>Conversions:</p>
+<ul>
+<li><code>utctimestamp_s(utctimestamp_s)</code>: utctimestamp_s -&gt; utcdatetime</li>
+<li><code>as_utctimestamp_s(utcdatetime)</code>: utcdatetime -&gt; utctimestamp_s</li>
+<li><code>as_utctimestamp_s(localdatetime)</code>: localdatetime -&gt; utctimestamp_s</li>
+<li><code>as_utctimestamp_s(naivedatetime)</code>: naivedatetime (utc) -&gt; utctimestamp_s</li>
+<li><code>localtimestamp_s(localtimestamp_s)</code>: localtimestamp -&gt; localdatetime</li>
+<li><code>as_localtimestamp_s(localdatetime)</code>: localdatetime -&gt; localtimestamp_s</li>
+<li><code>as_localtimestamp_s(utcdatetime)</code>: localdatetime -&gt; utcdatetime -&gt; localtimestamp_s</li>
+<li><code>isodate(isodate)</code>: isodate -&gt; date</li>
+<li><code>date_as_localdatetime(date)</code>: date (local) -&gt; localdatetime</li>
+<li>localdatetime -&gt; date (local)</li>
+<li><code>as_utc(localdatetime)</code> localdatetime -&gt; utcdatetime (conversion)</li>
+<li><code>as_utc(naivedatetime)</code>: naivedatetime (utc) -&gt; utcdatetime (reinterpret)</li>
+<li><code>as_local(utcdatetime)</code>: utcdatetime -&gt; localdatetime (conversion)</li>
+<li><code>as_local(naivedatetime, dst)</code>: naivedatetime (local) + dst -&gt; localdatetime (reinterpret)</li>
+<li><code>isodatetime(naiveisodatetime)</code>: naiveisodatetime -&gt; naivedatetime</li>
+<li><code>isodatetime(tzisodatetime)</code>: tzisodatetime -&gt; local/utcdatetime</li>
+<li><code>as_isodate(utcdatetime)</code>: utcdatetime -&gt; localdatetime -&gt; date</li>
+<li><code>as_isodate(localdatetime)</code>: localdatetime -&gt; date</li>
+<li><code>as_isodate(naivedatetime)</code>: naivedatetime (local) -&gt; date (takes the date pare as it were local????)</li>
+<li>naiveisodatetime + dst -&gt; localdatetime</li>
+<li>utc/localisodatetime -&gt; localdatetime</li>
+<li>localdatetime -&gt; naivedatetime + dst</li>
+</ul>
+<h3 id="javascript">Javascript</h3>
+<p>Representaciones posibles</p>
+<ul>
+<li>new Date</li>
+<li>momentjs</li>
+<li>dayjs</li>
+<li>strings ISO</li>
+</ul>
+<h4 id="standard-js-date">Standard JS Date</h4>
+<p>A diferencia del <code>datetime</code> de Python,
+<code>Date</code> de Javascript no tiene una versión naive.
+Siempre representa un instante UTC.</p>
+<p>Sin embargo tenemos que ir con cuidado
+puesto que la interfaz es dual,
+y a veces usa hora local y a veces hora UTC.</p>
+<p>Además, cuando usamos la hora local,
+se usa la <strong>hora local del Navegador!</strong>
+lo que da al desarrollador muy poco control
+sobre lo que pasa.</p>
+<ul>
+<li>Los accesores set/getMinutes/Hours/Days... consideran la hora local</li>
+<li>Tenemos los accesores set/getUTCMinutes/Hours/Days... que consideran hora UTC</li>
+<li>Si lo mostramos por consola, imprimirá la hora local.</li>
+</ul>
+<p>El problema es:</p>
+<ul>
+<li>La hora local depende del navegador</li>
+<li>No hay utilidades estandard para obtener otras representaciones.</li>
+</ul>
+<p>Para nosotros se nos manifiesta el problema cuando:</p>
+<ul>
+<li>la usuaria no esta en el país o está en Canarias, o por lo que sea tiene el ordenador configurado en otra zona horaria</li>
+<li>queremos representar cosas (produccion de plantas, consumos de suministros) de Canarias</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// El Epoch es Unix time UTC 1970-01-01T00:00:00Z</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="o">&gt;&gt;</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">(</span><span class="mf">0</span><span class="p">)</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nb">Date</span><span class="w"> </span><span class="nx">Thu</span><span class="w"> </span><span class="nx">Jan</span><span class="w"> </span><span class="mo">01</span><span class="w"> </span><span class="mf">1970</span><span class="w"> </span><span class="mo">01</span><span class="o">:</span><span class="mo">00</span><span class="o">:</span><span class="mo">00</span><span class="w"> </span><span class="nx">GMT</span><span class="o">+</span><span class="mo">0100</span><span class="w"> </span><span class="p">(</span><span class="nx">Hora</span><span class="w"> </span><span class="nx">estàndard</span><span class="w"> </span><span class="nx">del</span><span class="w"> </span><span class="nx">Centre</span><span class="w"> </span><span class="nx">d</span><span class="err">’</span><span class="nx">Europa</span><span class="p">)</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1">// Y en milisegundos</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="o">&gt;&gt;</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">(</span><span class="mf">10</span><span class="o">*</span><span class="mf">1000</span><span class="p">)</span><span class="w"> </span><span class="c1">// 10 seconds after epoch</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="nb">Date</span><span class="w"> </span><span class="nx">Thu</span><span class="w"> </span><span class="nx">Jan</span><span class="w"> </span><span class="mo">01</span><span class="w"> </span><span class="mf">1970</span><span class="w"> </span><span class="mo">01</span><span class="o">:</span><span class="mo">00</span><span class="o">:</span><span class="mf">10</span><span class="w"> </span><span class="nx">GMT</span><span class="o">+</span><span class="mo">0100</span><span class="w"> </span><span class="p">(</span><span class="nx">Hora</span><span class="w"> </span><span class="nx">estàndard</span><span class="w"> </span><span class="nx">del</span><span class="w"> </span><span class="nx">Centre</span><span class="w"> </span><span class="nx">d</span><span class="err">’</span><span class="nx">Europa</span><span class="p">)</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="c1">// Las fechas ISO naive se suponen UTC, NO LOCALES!!</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="c1">// Cuando comparamos fechas, normalmente nos interesan las de Europe/Madrid o Pacific/Canary</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="o">&gt;&gt;</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">(</span><span class="s2">&quot;2023-02-02&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="nb">Date</span><span class="w"> </span><span class="nx">Thu</span><span class="w"> </span><span class="nx">Feb</span><span class="w"> </span><span class="mo">02</span><span class="w"> </span><span class="mf">2023</span><span class="w"> </span><span class="mo">01</span><span class="o">:</span><span class="mo">00</span><span class="o">:</span><span class="mo">00</span><span class="w"> </span><span class="nx">GMT</span><span class="o">+</span><span class="mo">0100</span><span class="w"> </span><span class="p">(</span><span class="nx">Hora</span><span class="w"> </span><span class="nx">estàndard</span><span class="w"> </span><span class="nx">del</span><span class="w"> </span><span class="nx">Centre</span><span class="w"> </span><span class="nx">d</span><span class="err">’</span><span class="nx">Europa</span><span class="p">)</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="c1">// En cambio, si indicamos la hora sin TZ, se supone la local del navegador!!</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="o">&gt;&gt;</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">(</span><span class="s2">&quot;2023-02-02T00:00:00&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="nb">Date</span><span class="w"> </span><span class="nx">Thu</span><span class="w"> </span><span class="nx">Feb</span><span class="w"> </span><span class="mo">02</span><span class="w"> </span><span class="mf">2023</span><span class="w"> </span><span class="mo">00</span><span class="o">:</span><span class="mo">00</span><span class="o">:</span><span class="mo">00</span><span class="w"> </span><span class="nx">GMT</span><span class="o">+</span><span class="mo">0100</span><span class="w"> </span><span class="p">(</span><span class="nx">Hora</span><span class="w"> </span><span class="nx">estàndard</span><span class="w"> </span><span class="nx">del</span><span class="w"> </span><span class="nx">Centre</span><span class="w"> </span><span class="nx">d</span><span class="err">’</span><span class="nx">Europa</span><span class="p">)</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="c1">// Para indicar UTC, añadir Zulu</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="o">&gt;&gt;</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">(</span><span class="s2">&quot;2023-02-02T00:00:00Z&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="nb">Date</span><span class="w"> </span><span class="nx">Thu</span><span class="w"> </span><span class="nx">Feb</span><span class="w"> </span><span class="mo">02</span><span class="w"> </span><span class="mf">2023</span><span class="w"> </span><span class="mo">01</span><span class="o">:</span><span class="mo">00</span><span class="o">:</span><span class="mo">00</span><span class="w"> </span><span class="nx">GMT</span><span class="o">+</span><span class="mo">0100</span><span class="w"> </span><span class="p">(</span><span class="nx">Hora</span><span class="w"> </span><span class="nx">estàndard</span><span class="w"> </span><span class="nx">del</span><span class="w"> </span><span class="nx">Centre</span><span class="w"> </span><span class="nx">d</span><span class="err">’</span><span class="nx">Europa</span><span class="p">)</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="c1">// Las fechas se serializan en ISO UTC</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="o">&gt;&gt;</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">(</span><span class="s2">&quot;2023-02-02T00:00:00&quot;</span><span class="p">))</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="s1">&#39;&quot;2023-02-01T23:00:00.000Z&quot;&#39;</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="c1">// Pero se deserializan como strings!!!</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="o">&gt;&gt;</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="s1">&#39;&quot;2023-02-01T23:00:00.000Z&quot;&#39;</span><span class="p">)</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="s2">&quot;2023-02-01T23:00:00.000Z&quot;</span>
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="o">&gt;&gt;</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">(</span><span class="nb">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="s1">&#39;&quot;2023-02-01T23:00:00.000Z&quot;&#39;</span><span class="p">))</span>
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>
+<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="o">&gt;&gt;</span><span class="w"> </span><span class="nb">Date</span><span class="p">.</span><span class="nx">UTC</span><span class="p">(</span><span class="mf">2020</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">)</span><span class="w"> </span><span class="c1">// default month=1, date=1, hour=0, minutes=0, seconds=0</span>
+<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>
+<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="c1">// OJO: si nos olvidamos `new` devuelve un string no manipulable de la fecha local actual</span>
+<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="o">&gt;&gt;</span><span class="w"> </span><span class="nb">Date</span><span class="p">(</span><span class="s2">&quot;2020-03-02T00:00:00Z&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a><span class="s2">&quot;Wed Jul 17 2024 02:47:40 GMT+0200 (Hora d’estiu del Centre d’Europa)&quot;</span>
+<a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a><span class="c1">// Nada que ver con el parámetro</span>
+</code></pre></div>
+<p>TODO: Aritmetica temporal</p>
+<ul>
+<li>
+<p>Obtener el inicio de la fecha local
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">localDateStart</span><span class="p">(</span><span class="nx">date</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">(</span><span class="nx">date</span><span class="p">)</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="nx">d</span><span class="p">.</span><span class="nx">setHours</span><span class="p">(</span><span class="mf">0</span><span class="p">)</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="nx">d</span><span class="p">.</span><span class="nx">setMinutes</span><span class="p">(</span><span class="mf">0</span><span class="p">)</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="nx">d</span><span class="p">.</span><span class="nx">setSeconds</span><span class="p">(</span><span class="mf">0</span><span class="p">)</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="nx">d</span><span class="p">.</span><span class="nx">setMilliseconds</span><span class="p">(</span><span class="mf">0</span><span class="p">)</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">d</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="p">}</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>Como añadir dias locales</p>
+<ul>
+<li>No sumar 24h por dia: Hay cambios de DST!!</li>
+<li><code>new Date(new Date(d).setDate(d.getDate() + daysOffset))</code>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">addDays</span><span class="p">(</span><span class="nx">d</span><span class="p">,</span><span class="w"> </span><span class="nx">ndays</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">(</span><span class="nx">d</span><span class="p">).</span><span class="nx">setDate</span><span class="p">(</span><span class="nx">d</span><span class="p">.</span><span class="nx">getDate</span><span class="p">()</span><span class="o">+</span><span class="nx">ndays</span><span class="p">))</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">}</span>
+</code></pre></div></li>
+<li>Manejar en lo posible fechas a las 00:00 local</li>
+<li>Esto se hace en hora local del navegador</li>
+</ul>
+</li>
+<li>Como añadir años<ul>
+<li>No sumar 365 dias, hay años bisiestos!</li>
+<li>`new Date(new Date(d).setFullYear(d.getFullYear() + yearsOffset))</li>
+<li>Ajusta a los bisiestos:<ul>
+<li>El 29 de febrero bisiesto lo mueve al 1 de Marzo en años no bisiestos.</li>
+<li>El resto de fechas las mueve a la misma fecha.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Como añadir meses<ul>
+<li>No sumar 30 dias... pues claro.</li>
+<li>new Date(new Date(d).setMonth(d.getMonth()+2)).toISOString()</li>
+<li>Dias 29, 30 o 31 que no existen en el mes destino, pasa los dias sobrantes al siguiente mes.<ul>
+<li>2020-01-31T10:00Z -&gt; +1mes -&gt; 2020-03-03T10:00:00Z</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Como ubicar tiempos en intervalos de fechas locales<ul>
+<li>Como vienen las fechas, en local o en UTC?<ul>
+<li>Normalmente queremos ubicar dias locales</li>
+<li>Las fechas ISO se traducen a UTC (00:00Z)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1">// Local month offset beyond month</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="o">&gt;&gt;</span><span class="w"> </span><span class="nx">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">(</span><span class="s2">&quot;2021-01-31T10:00Z&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="o">&gt;&gt;</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">(</span><span class="nx">d</span><span class="p">).</span><span class="nx">setMonth</span><span class="p">(</span><span class="nx">d</span><span class="p">.</span><span class="nx">getMonth</span><span class="p">()</span><span class="o">+</span><span class="mf">1</span><span class="p">)).</span><span class="nx">toISOString</span><span class="p">()</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="s2">&quot;2020-03-03T10:00:00.000Z&quot;</span>
+</code></pre></div>
+<p>TODO: Libreria momentjs</p>
+<p>TODO: Libreria dayjs</p>
+<p>dayjs(utc_timestamp_ms) -&gt; local datetime</p>
+<p>Yup <code>date</code> valida y convierte ISO strings en Date. Para obtenerlo. <code>schema.cast(JSON.parse(jsonstring))</code>
+- <code>yup.string().datetime() ([doc](https://github.com/jquense/yup?tab=readme-ov-file#stringdatetimeoptions-message-string--function-allowoffset-boolean-precision-number))
+    - No convierte a Date, solo parsea y valida, lo mantiene como string
+    - Solo acepta Zulus, no naives ni otros tz
+-</code>yup.date()<code>- Convierte a Date si hacemos</code>schema.cast(jsondata)`</p>
+<p>Zod
+- <code>z.date()</code>
+    - Por defecto solo acepta <code>Date</code>
+    - Para hacer conversion: <code>z.coerce.Date</code>, pasa el campo por el constructor de <code>Date</code>
+    - En ese caso, acepta formatos no ISO como el constructor de Date
+- <code>z.string().datetime()</code> (<a href="https://zod.dev/?id=datetimes">doc</a>)
+    - Soporta solo Zulus no otros offsets, o naives
+    - Se come cosas invalidas (no comprueba fechas imposibles)
+    - No convierte, sigue siendo un string
+- Como parsear solo iso y obtener Dates??</p>
+<h3 id="erp">ERP</h3>
+<h3 id="postgresql">Postgresql</h3>
+<ul>
+<li>Mogrifying dates (query search)</li>
+<li>Inserting data</li>
+<li>Extracting data</li>
+</ul>
+<h3 id="json">JSON</h3>
+<p>El tiempo no tienen representación nativa en JSON.
+Se suelen representar por una string ISO en UTC pero es un string.
+Javascript, por ejemplo, serializa Dates como strings iso en zulu pero despues no las deserializa.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="o">&gt;</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">(</span><span class="s2">&quot;2022-01-01T22:00+01:00&quot;</span><span class="p">).</span><span class="nx">toJSON</span><span class="p">()</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="s1">&#39;2022-01-01T21:00:00.000Z&#39;</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="o">&gt;</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">(</span><span class="s2">&quot;2022-01-01T22:00+01:00&quot;</span><span class="p">).</span><span class="nx">toISOString</span><span class="p">()</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="s1">&#39;2022-01-01T21:00:00.000Z&#39;</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="o">&gt;</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">(</span><span class="s2">&quot;2022-01-01T22:00+01:00&quot;</span><span class="p">))</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="s1">&#39;&quot;2022-01-01T21:00:00.000Z&quot;&#39;</span><span class="w"> </span><span class="c1">// note the quotes</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="o">&gt;</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="s1">&#39;&quot;2022-01-01T22:00:00.000Z&quot;&#39;</span><span class="p">)</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="s1">&#39;2022-01-01T22:00:00.000Z&#39;</span><span class="w">  </span><span class="c1">// just string, must call  new Date() to get the date.</span>
+</code></pre></div>
+<p>Otra representación típica es con los milisegundos despues del Epoch UTC.
+En cualquier caso, ha de ser una convención.</p>
+<h3 id="yaml">YAML</h3>
+<p>YAML si que tiene formato de tiempo definido. https://yaml.org/type/timestamp.html
+Usa formato ISO con las siguientes consideraciones:</p>
+<ul>
+<li>Les corresponde el tag <code>!!timestamp</code><ul>
+<li>no se indica ya que es uno de los tags detectados por defecto</li>
+<li>al reves si quisieramos representar un string iso como string añadiriamos <code>!!str</code></li>
+</ul>
+</li>
+<li>El formato canónico es YYYY-MM-DDTHH:MM:SSZ, opcionalmente con milisegundos</li>
+<li>Formatos no canónicos aceptados:<ul>
+<li>En vez de <code>T</code>, <code>t</code> (minúscula) o uno o varios espacios o tabuladores.</li>
+<li>Separar opcionalmente el TZ con espacios</li>
+<li>No especificar la hora, se supone 00:00:00Z</li>
+<li>No especificar el TZ, se supone Z</li>
+</ul>
+</li>
+</ul>
+<p><strong>Ojo:</strong> Una fecha sin TZ en YAML se considera Zulu, una fecha sin TZ en JS se considera Juliet</p>
+<h3 id="mongo">Mongo</h3>
+<h1 id="discusion-inicial">Discusion inicial</h1>
+<p>naive: no incluye el timezone (datetimes, isodatetime) necesitamos saber que es para interpretarlo.</p>
+<p>tz: incluye el timezone (datetimes, isodatetime) es implicito que es.</p>
+<p>Semantica:</p>
+<div class="highlight"><pre><span></span><code>- local: la hora local, en nuestro código, es Madrid
+    - si es un formato naive, necesitamos un season para
+      identificar la hora real (hay horas en el cambio
+      de horario que se duplican)
+- utc: hora zulu, Tiempo Universal Coordinado
+</code></pre></div>
+<p>Formatos:</p>
+<div class="highlight"><pre><span></span><code>- date: datetime.date(y,m,d)
+- isodate: &quot;YYYY-MM-DD&quot;
+    - Cuando comparamos fechas con tiempo, se le supone 00:00:00
+    seria un naive, y habria que interpretarlo como tz con
+    la semantica que tenga (usualmente local, no utc)
+- naive_datetime: datetime.datetime(y,m,d,h,m,s)
+- tz_datetime: datetime.datetime(y,m,d,h,m,s,zone_info=tz)
+- isodatetime: &quot;YYYY-MM-DD HH:MM:SS&quot;
+- tz_isodatetime: &quot;YYYY-MM-DD HH:MM:SS+02:00&quot;
+- timestamp: miliseconds or seconds since epoch (1 enero 1970)
+    - Puede ser local o utc
+    - Puede estar en milisegundos o en segundos
+    - Puede ser entero o float
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+    
+  </body>
+</html>

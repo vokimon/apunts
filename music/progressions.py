@@ -1,4 +1,4 @@
-import mingus
+#import mingus
 
 note_names = "C C#/Db D D#/Eb E F F#/Gb G G#/Ab A A#/Bb B".split()
 
@@ -47,9 +47,9 @@ def solveRoot(chord):
     >>> solveRoot('III'
     """
     offset = 0
-    if chord[0] = 'b':
+    if chord[0] == 'b':
         offset = -1
-    if chord[0] = '#':
+    if chord[0] == '#':
         offset = +1
 
     if offset: chord=chord[1:]

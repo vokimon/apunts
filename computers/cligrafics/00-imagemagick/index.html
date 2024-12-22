@@ -1,0 +1,3074 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Apunts i notes de coses que aprenc">
+      
+      
+        <meta name="author" content="vokimon">
+      
+      
+        <link rel="canonical" href="https://vokimon.github.io/apunts/computers/cligrafics/00-imagemagick/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>Intro - Apunts</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../css/figure.css">
+    
+      <link rel="stylesheet" href="../../../css/linkcard.css">
+    
+      <link rel="stylesheet" href="../../../css/videowrapper.css">
+    
+      <link rel="stylesheet" href="../../../None">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#intro" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Apunts" class="md-header__button md-logo" aria-label="Apunts" data-md-component="logo">
+      
+  <img src="../../../img/logo-customblocks-white.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Apunts
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Intro
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/vokimon/apunts" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Apunts" class="md-nav__button md-logo" aria-label="Apunts" data-md-component="logo">
+      
+  <img src="../../../img/logo-customblocks-white.svg" alt="logo">
+
+    </a>
+    Apunts
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/vokimon/apunts" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    README
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Computers
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Computers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    web
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            web
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_1" id="__nav_2_1_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    css
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            css
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../css-basics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CSS: Conceptes bàsics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../css/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CSS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../css-design-principles/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CSS: Principios de diseño
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../css-boxmodel/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CSS: El modelo de caja
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../css-normalflow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CSS Normal Flow
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../css-flexbox/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CSS Flexbox
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../css-grid/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CSS Grid
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../css-animations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CSS: Animaciones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../css-typography/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CSS Typografy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../css-methodologies-architectures/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CSS: Metodologías y arquitecturas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_2" id="__nav_2_1_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    javascript
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            javascript
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jsecosystem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Jsecosystem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jsonschema/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Jsonschema
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../react-formik/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    React formik
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../react/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    React / Redux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../d3/00-d3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducción
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rest/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REST APIs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fastapi/fastapi.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    None
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../time/time/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Representando el tiempo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Security problems
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    godot
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            godot
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../godot/godot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Godot 4 (Game Engine)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../godot/physics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Godot Physics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../godot/tiling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Godot Tiling
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computer-graphics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Computer graphics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android-glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Android glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cpp11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    New features of C++11 I should be starting to use:
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deeplearning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deep learning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../godot.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    None
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ip6" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IPv6
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specs-pdf/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Specs pdf
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../timewarrior/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TimeWarrior
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../xpxplained/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    XP Explained (Extracto del libro)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../branching-patterns/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Branching Patterns
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Math
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Math
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../math/mates-fundation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Math Foundations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../math/stats/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Statistics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../math/math-halfderivatives/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Half Derivatives
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../math/math-quadraticformula-alternative/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quadratic Formula
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../math/math-wavelets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wavelets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../math/math-3n1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Collatz Conjecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../math/math-binary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Binary math
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../math/math-geometric-algebra/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Geometric Algebra
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Music
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Music
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../music/music-harmony/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Harmony: Notes, Scales and Chords 🎶
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../music/music-harmony-scales/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Harmony: Scales 🎶
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../music/guitar-technics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Técnica de Guitarra 🎸
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../music/guitar-fret-navigation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Navegación en el mástil
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../music/pentatonicas.txt" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pentatonicas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../music/songs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Songs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../music/ukelele/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ukelele
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../music/drums/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Drum line composition (for non drummers)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../music/online-resources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Online resources
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Languages
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Languages
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lang/consonantes-afi.png" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phonetics Consonants
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lang/vowels.jpg" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phonetics Vowels
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lang/arabic-alphabet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arabic script
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lang/arabic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arabic
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lang/deutsch/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deutsch
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lang/japan/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Japanese
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lang/english-expresions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    English expresions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lang/english-old-pronoums/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    English old pronoums
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lang/english-prepositions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    English prepositions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lang/english-tenses/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    English tenses
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lang/vocabulary-somenergia/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    English Vocabulary for SE enterviews
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lang/vocabulary-edibles/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vocabulary edibles
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lang/ruso-alphabet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ruso alphabet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lang/spanish/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Spanish
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lang/stylistic-figures/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Retorical figures
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    History
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            History
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../history/cristianismo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    História del cristianismo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../varios/economics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Economics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Psicology
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Psicology
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../varios/porque-creemos-en-mierdas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Porque creemos en mierdas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    3D
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            3D
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../3d/3d-production-pipeline/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3D animation pipeline
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../3d/blender-materials/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Blender material
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Laboral
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Laboral
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../laboral/comunicacio_de_crisi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Comunicacio de crisi
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../laboral/lideratges-autogestionat/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lideratges autogestionat
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../laboral/reunionseficients/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Reunions eficients
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#graficos-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Gráficos CLI?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#herramientas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Herramientas
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="intro">Intro</h1>
+<h2 id="graficos-cli">¿Gráficos CLI?</h2>
+<p>Habiendo <strong>Grafic</strong> User Interfaces (GUI),\
+¿para qué quiero un Command Line Interface?\
+¿No es un <strong>oxímoron</strong>?</p>
+<p><strong>Automatización con scripts:</strong></p>
+<p>El original se actualiza y hay que reprocesar\
+Hay muchos originales que procesar igual\
+Los parámetros del procesado cambian</p>
+<p><strong>Conversiones rápidas</strong></p>
+<h2 id="herramientas">Herramientas</h2>
+<p><strong>Pandoc:</strong> Conversión de documentos de texto</p>
+<p><strong>Imagemagick:</strong> Procesado de imagen</p>
+<p><strong>sox:</strong> Procesado de audio</p>
+<p><strong>ffmpeg:</strong> Procesado de video</p>
+<p><strong>PDFtk:</strong> Manipulación de PDF's</p>
+<h1 id="imagemagick">ImageMagick</h1>
+<h2 id="que-es">¿Qué es?</h2>
+<p>Herramienta de manipulación de imágenes
+por línea de comandos.</p>
+<p>Conjunto de utilidades CLI</p>
+<p><code>animate</code>,
+<code>compare</code>,
+<code>composite</code>,
+<code>conjure</code>,
+<code>convert</code>,
+<code>display</code>,
+<code>identify</code>,
+<code>import</code>,
+<code>mogrify</code>,
+<code>montage</code>,
+<code>stream</code>...</p>
+<p>Se puede hacer todo con <code>convert</code>,
+los otros son alias para indicar
+entradas, salidas o opciones.</p>
+<div class="notes"></div>
+<p>Incluye una interfaz GUI, bastante cutre.</p>
+<p>También hay una libreria C (con bindings Python y demás)</p>
+<ul>
+<li><code>convert</code>: Pipe simple entrada salida</li>
+<li><code>display</code>: Visualiza la imagen en el GUI</li>
+<li><code>animate</code>: Visualiza una imagen con animacion en el GUI</li>
+<li><code>import</code>: Captura la pantalla</li>
+<li><code>identify</code>: Identifica el tipo de imagen</li>
+<li><code>mogrify</code>: Modifica una imagen inplace (resize, rotate...)</li>
+<li><code>composite</code>: Combina imágenes una encima de otra</li>
+<li><code>compare</code>: Crea la diferencia de varias imágenes</li>
+<li><code>montage</code>: Genera un montage de varias imágenes dispuestas</li>
+<li><code>stream</code>: Procesa linea a linea. útil para imágenes grandes</li>
+<li><code>conjure</code>: Interpreta scripts complejos (lenguage msl)
+:::</li>
+</ul>
+<h2 id="ejemplos-simples">Ejemplos simples</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Convertir un png en jpg</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>convert<span class="w"> </span>imagen.png<span class="w"> </span>imagen.jpg
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># Varios pngs en un gif animado</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>convert<span class="w"> </span>imagen_*.png<span class="w"> </span>imagen.gif
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c1"># Juntar varios pngs como paginas de un pdf</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>convert<span class="w"> </span>imagen_*.png<span class="w"> </span>imagen.pdf
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="c1"># Renderizar las paginas del pdf por separado</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>convert<span class="w"> </span>documeto.pdf<span class="w"> </span>documento-pagina.png
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="c1"># Genera documento-pagina-N.png, donde N es la página</span>
+</code></pre></div>
+<div class="notes"></div>
+<p><strong>Ojo:</strong>
+Para partir las páginas de un pdf,
+normalmente queremos mantener el pdf vectorial.
+PDFtk para eso.
+Imagemagic renderiza el raster.
+:::</p>
+<h2 id="se-puede-complicar">Se puede complicar</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>convert<span class="w"> </span>-size<span class="w"> </span>120x160<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span>-style<span class="w"> </span>italic<span class="w"> </span>-weight<span class="w"> </span><span class="m">600</span><span class="w"> </span>label:A<span class="w">  </span>-negate<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="se">\(</span><span class="w"> </span>+clone<span class="w">  </span>-shade<span class="w"> </span>110x90<span class="w"> </span>-normalize<span class="w"> </span>-negate<span class="w"> </span>+clone<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">        </span>-compose<span class="w"> </span>Plus<span class="w"> </span>-composite<span class="w"> </span><span class="se">\)</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="se">\(</span><span class="w"> </span>-clone<span class="w"> </span><span class="m">0</span><span class="w"> </span>-shade<span class="w"> </span>110x50<span class="w"> </span>-normalize<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">        </span>-channel<span class="w"> </span>BG<span class="w"> </span>-fx<span class="w"> </span><span class="m">0</span><span class="w"> </span>+channel<span class="w"> </span>-matte<span class="w"> </span><span class="se">\)</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span>-delete<span class="w"> </span><span class="m">0</span><span class="w"> </span>+swap<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span>-compose<span class="w"> </span>Multiply<span class="w"> </span>-composite<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span>button.gif
+</code></pre></div>
+<div class="notes"></div>
+<p>La documentación explica mucho de cada opción
+pero es complicado de encontrar la explicación
+general de como juntar las opciones.</p>
+<p>La clave es entender que hay diferentes tipos de opciones
+y de que tipo es cada una.
+:::</p>
+<h2 id="elementos-de-la-cli">Elementos de la CLI</h2>
+<p>Entradas y salidas</p>
+<p>Parámetros de configuración</p>
+<p>Operadores de imagen</p>
+<p>Operadores de múltiples imágenes</p>
+<p>Operaciones de pila</p>
+<p>Operaciones de canal</p>
+<div class="notes"></div>
+<p>Las <strong>entradas y salida</strong> especifican las fuentes y el destino de imágenes.
+Pueden ser ficheros o otras cosas.
+El último parámetro se supone la salida.</p>
+<p>Para algunos subcomandos, entrada o salida es implícita
+y no se indica (<code>import</code>, <code>display</code>, <code>mogrify</code>...)</p>
+<p>Los <strong>operadores de imagen</strong> modifican las entradas especificadas con anterioridad al operador</p>
+<p>Los <strong>operadores de múltiples imagenes</strong>,
+juntan de una manera o otra
+todas las entradas especificadas con anterioridad en una sola imagen.</p>
+<p>Las <strong>operaciones de pila</strong>, permiten acceder a las imágenes anteriores, cambiar su orden...</p>
+<p>Los <code>\(</code> paréntesis escapados <code>\)</code> son útiles para limitar las imágenes afectadas 
+por los operadores.</p>
+<p>Las <strong>opciones de configuración</strong>, modifican valores de parámetros.
+Afecta a entradas, salidas y operadores especificadas después en la línia de comandos.
+No les afectan los paréntesis.
+:::</p>
+<h2 id="entradas">Entradas</h2>
+<div class="notes"></div>
+<p>Se añaden a la pila de imagenes.</p>
+<p>Lo normal es que sean ficheros de imagen.</p>
+<p>Pueden ser dispositivos, entradas virtuales, tener modificadores...</p>
+<p>Pueden ser ficheros multiframe (videos o animaciones) o multi-página (pdf's),
+en ese caso se añade a la pila una imagen por frame/página.</p>
+<p>Se puede seleccionar en la entrada un recorte o un frame/página.</p>
+<p><strong>Importante:</strong> La primera imagen fija los valores por defecto para la mayoría de parámetros:
+tamaño, profundidad, espacio de colores...
+:::</p>
+<p><img alt="" src="images/imagemagick-input.svg" /></p>
+<h2 id="salida">Salida</h2>
+<p><img alt="" src="images/imagemagick-output.svg" /></p>
+<div class="notes"></div>
+<p>El último parámetro.</p>
+<p>Puede ser fichero o otras cosas también:</p>
+<p><code>x:</code> lo muestra por pantalla</p>
+<p><code>-</code> lo envia por salida estandard</p>
+<p><code>printer:</code> lo imprime por la impresora</p>
+<p><code>null</code> ignora la salida</p>
+<p>Si el formato de salida soporta múltiples imagenes como frames o páginas (GIF, PDF...)
+genera un solo fichero.</p>
+<p>Si no, genera un fichero por imagen con un sufijo.
+:::</p>
+<h2 id="operadores-de-imagen">Operadores de imagen</h2>
+<p><img alt="" src="images/imagemagick-singleop.svg" /></p>
+<div class="notes"></div>
+<p>Son filtros que se aplican imagen a imagen.</p>
+<p>Se aplican a todas las imagenes que tengamos en la pila
+generando nuevas versiones de éstas.
+:::</p>
+<h2 id="aplicacion-parcial">Aplicación parcial</h2>
+<p><img alt="" src="images/imagemagick-partialapply.svg" /></p>
+<div class="notes"></div>
+<p>Los operadores se aplican solo a las entradas
+especificadas antes en la línia de comandos.</p>
+<p>En este ejemplo:</p>
+<ul>
+<li>El <code>-operador1</code>, en naranja, no se aplica al <code>input3</code></li>
+<li>En cambio, el <code>-operador2</code>, en azul, se aplica a todos
+:::</li>
+</ul>
+<h2 id="parentesis">Paréntesis</h2>
+<p><img alt="" src="images/imagemagick-parenthesis.svg" /></p>
+<div class="notes"></div>
+<p>Se pueden usar los paréntesis
+(escapados con contrabarras en <code>bash</code>)
+para limitar hacia atrás el alcance de los operadores.</p>
+<p>En este otro ejemplo:</p>
+<ul>
+<li>El <code>-operador1</code>, en naranja, no se aplica al <code>input1</code></li>
+<li>En cambio, el <code>-operador2</code>, en azul, una vez cerrado el paréntesis ya se aplica a todos
+:::</li>
+</ul>
+<h2 id="ops-multi-imagen">Ops Multi-imagen</h2>
+<p><img alt="" src="images/imagemagick-multiop.svg" /></p>
+<div class="notes"></div>
+<p>Colapsan las imagenes en una (por justaposición, composición...)</p>
+<p>Si están dentro de paréntesis, sólo ve las imágenes que también están dentro.</p>
+<p>Podemos aplicar más de uno pero necesitaremos más inputs después de aplicar el primero.
+:::</p>
+<h2 id="operadores-de-pila">Operadores de pila</h2>
+<p><img alt="" src="images/imagemagick-stack.svg" /></p>
+<div class="notes"></div>
+<p>A menudo el orden de pila es demasiado extricto.</p>
+<p>Los operadores de pila alteran la pila directamente, no el contenido de las imágenes.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>-clone<span class="w"> </span>&lt;indexes&gt;<span class="w"> </span><span class="c1"># Crea duplicados encima</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>-delete<span class="w"> </span>&lt;indexes&gt;<span class="w"> </span><span class="c1">#  Borra de la pila</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>-insert<span class="w"> </span>&lt;index&gt;<span class="w"> </span><span class="c1"># Mueve el -1 a &lt;index&gt;</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>-swap<span class="w"> </span>&lt;index&gt;,&lt;index&gt;<span class="w"> </span><span class="c1"># Intercambia imagenes</span>
+</code></pre></div>
+<p>Indices en 0 desde abajo; negativos por arriba.</p>
+<p>Secuencias <code>0,3,7</code>, intérvalos <code>2-7</code>, por la cola <code>-2</code></p>
+<p><code>+clone</code>, <code>+delete</code>, <code>+swap</code> es como indicar el o los últimos.</p>
+<p>seguiran siendo clones por que les aplicaremos los mismos efectos.
+:::</p>
+<h2 id="operadores-de-canal">Operadores de canal</h2>
+<p>TODO: Aún no los he entendido</p>
+<h2 id="configuracion">Configuración</h2>
+<p>Parametrizan la lectura y escritura de imágenes
+y la aplicación de efectos.</p>
+<p>Afectan a los input, outputs, operadores, que aparezcan detrás
+en la línia de commandos</p>
+<p>No hacen nada a la imagen de por sí</p>
+<div class="notes"></div>
+<ul>
+<li><code>‑region &lt;geometry&gt;</code> Limita el efecto de subsiguientes operadores, <code>+region</code> la elimina</li>
+<li><code>‑adjoin</code></li>
+<li><code>‑affine</code></li>
+<li><code>‑alpha</code></li>
+<li><code>‑antialias</code></li>
+<li><code>‑authenticate</code></li>
+<li><code>‑background</code></li>
+<li><code>‑bias</code></li>
+<li><code>‑black‑point‑compensation</code></li>
+<li><code>‑blue‑primary</code></li>
+<li><code>‑bordercolor</code></li>
+<li><code>‑caption</code></li>
+<li><code>‑channel</code></li>
+<li><code>‑comment</code></li>
+<li><code>‑compress</code></li>
+<li><code>‑debug</code></li>
+<li><code>‑define</code></li>
+<li><code>‑delay</code></li>
+<li><code>‑density</code></li>
+<li><code>‑depth</code></li>
+<li><code>‑direction</code></li>
+<li><code>‑display</code></li>
+<li><code>‑dispose</code></li>
+<li><code>‑dither</code></li>
+<li><code>‑encoding</code></li>
+<li><code>‑endian</code></li>
+<li><code>‑extract</code></li>
+<li><code>‑family</code></li>
+<li><code>‑fill</code></li>
+<li><code>‑filter</code></li>
+<li><code>‑font</code></li>
+<li><code>‑format</code></li>
+<li><code>‑fuzz</code></li>
+<li><code>‑geometry</code></li>
+<li><code>‑gravity</code></li>
+<li><code>‑green‑primary</code></li>
+<li><code>‑interlace</code></li>
+<li><code>‑intent</code></li>
+<li><code>‑interpolate</code></li>
+<li><code>‑label</code></li>
+<li><code>‑limit</code></li>
+<li><code>‑linewidth</code></li>
+<li><code>‑log</code></li>
+<li><code>‑loop</code></li>
+<li><code>‑mattecolor</code></li>
+<li><code>‑monitor</code></li>
+<li><code>‑orient</code></li>
+<li><code>‑page</code></li>
+<li><code>‑pointsize</code></li>
+<li><code>‑preview</code></li>
+<li><code>‑quality</code></li>
+<li><code>‑quiet</code></li>
+<li><code>‑read‑mask</code></li>
+<li><code>‑red‑primary</code></li>
+<li><code>‑render</code></li>
+<li><code>‑repage</code></li>
+<li><code>‑sampling‑factor</code></li>
+<li><code>‑scene</code></li>
+<li><code>‑seed</code></li>
+<li><code>‑size</code></li>
+<li><code>‑stretch</code></li>
+<li><code>‑stroke</code></li>
+<li><code>‑strokewidth</code></li>
+<li><code>‑style</code></li>
+<li><code>‑texture</code></li>
+<li><code>‑tile</code></li>
+<li><code>‑transparent‑color</code></li>
+<li><code>‑treedepth</code></li>
+<li><code>‑type</code></li>
+<li><code>‑undercolor</code></li>
+<li><code>‑units</code></li>
+<li><code>‑verbose</code></li>
+<li><code>‑virtual‑pixel</code></li>
+<li><code>‑weight</code></li>
+<li><code>‑write‑mask</code>
+:::</li>
+</ul>
+<h1 id="entradas-y-salida">Entradas y Salida</h1>
+<h2 id="tipos">Tipos</h2>
+<p>Ficheros (globs y formateo)</p>
+<p>Imágenes y patrones built-in</p>
+<p>Dispositivos: stdio, pantalla, scanner, impresora...</p>
+<p>Frame/página o recorte escogido</p>
+<p>Entrada reescalada</p>
+<p>Ficheros con formato explicito</p>
+<p>Índice de ficheros</p>
+<div class="notes"></div>
+<p>Los ficheros de entrada pueden indicarse con globing (<code>frame*.png</code>) que se resuelve a parte del propio globbing de <code>bash</code>.</p>
+<p>Por eso, si añadimos modificadores de entrada al fichero, el globbing sigue funcionando.</p>
+<p>Los ficheros de salida pueden ir con template de formateo tipo <code>printf</code> (<code>frame_%03d.jpg</code>) para las salidas múltiples.</p>
+<p>Por defecto si la salida es <code>frame.jpg</code> y hay más de una entrada, genera los nombres con <code>frame-%d.jpg</code>,
+sin cero padding que es complicado de ordenar.
+:::</p>
+<h2 id="imagenes-built-in">Imágenes built-in</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>convert<span class="w"> </span>logo:<span class="w"> </span>logo-imagemagick.svg
+</code></pre></div>
+<p><img alt="" src="images/logo-imagemagick.svg" />{style="width:40%"}</p>
+<div class="notes"></div>
+<p>Muy útiles para hacer pruebas.</p>
+<ul>
+<li><code>logo:</code> el logo de imagemagick</li>
+<li><code>rose:</code> una foto de una rosa</li>
+<li><code>granite:</code> una textura</li>
+<li><code>netscape:</code> paleta de colores seguros de netscape</li>
+<li>
+<p><code>wizard:</code> otra imagen de la mascota</p>
+</li>
+<li>
+<p><code>pattern:checkerboard</code> cuadros ajedrez</p>
+</li>
+<li><code>pattern:bricks</code> ladrillos</li>
+<li><code>canvas:&lt;color&gt;</code> todo de un color (necesita -size)</li>
+<li><code>gradient:[&lt;color&gt;-&lt;color&gt;]</code> gradiente vertical (necesita -size)a</li>
+<li><code>radial-gradient:[&lt;color&gt;-&lt;color&gt;]</code> grandiente </li>
+<li><code>fractal:[&lt;color&gt;-&lt;color&gt;]</code> generador texturas (necesita -size)</li>
+<li><code>plasma:</code> generador texturas (el mismo que <code>fractal</code>?)</li>
+<li><code>label:&lt;text&gt;</code> linia de texto</li>
+<li><code>caption:&lt;text&gt;</code> texto wrappeado</li>
+<li><code>tile:&lt;image&gt;</code> Expande la imagen al size replicándola
+:::</li>
+</ul>
+<h2 id="dispositivos">Dispositivos</h2>
+<p><code>-</code> stdin/out</p>
+<p><code>x:</code> de input captura la pantalla (como <code>import</code>)</p>
+<p><code>x:</code> de output muestra por pantalla (como <code>display</code>)</p>
+<p><code>scan:</code> entrada desde el scaner</p>
+<p><code>printer:</code> salida a impresora</p>
+<p><code>fd:&lt;n&gt;</code> file descriptor</p>
+<p><code>null</code> salida ignorada</p>
+<h2 id="formato-explicito">Formato Explícito</h2>
+<p>Normalmente se interpreta por el MAGIC de la entrada
+o por la extensión de la salida.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># saca por pantalla formato XPM</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="c1"># (Codigo C valido en el que se &#39;ve&#39; la imagen en asci art)</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>convert<span class="w"> </span>rose:<span class="w"> </span>xpm:-
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="c1"># Para ver los formatos soportados</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>convert<span class="w"> </span>-list<span class="w"> </span>format
+</code></pre></div>
+<div class="notes"></div>
+<p>El MAGIC es una cadena de texto identificadora
+que incluyen la mayoria de formatos modernos
+para identificar el formato:
+GIF, BMP, PNG...</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># Lista de MAGICS</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>convert<span class="w"> </span>-list<span class="w"> </span>magic
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="c1"># Lista de formatos soportados</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>convert<span class="w"> </span>-list<span class="w"> </span>format
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="c1"># Lista de listas</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>convert<span class="w"> </span>-list<span class="w"> </span>list
+</code></pre></div>
+:::</p>
+<h2 id="cropresizeframing">Crop/Resize/Framing</h2>
+<p>Se puede hacer después con operadores</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># Resize</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>convert<span class="w"> </span><span class="s1">&#39;*.jpg[120x120]&#39;</span><span class="w"> </span>thumbnail.png
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="c1"># Subimagen con offset</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>convert<span class="w"> </span><span class="s1">&#39;*.jpg[200x200+100+900]&#39;</span><span class="w"> </span>thumbnail.png
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="c1"># Escoger los frames</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>convert<span class="w"> </span><span class="s1">&#39;*.gif[1,3-6]&#39;</span><span class="w"> </span>thumbnail.png
+</code></pre></div>
+<p>Pero es mas rápido hacerlo al leer</p>
+<div class="notes"></div>
+<p><strong>Detalle:</strong> los cochetes planos son símbolos especiales en bash y hay que usar comillas simples o dobles.</p>
+<p><strong>Detalle 2:</strong> En bash las comillas simples evitan el globing. Es ImageMagick, no bash, quien hace el globbing.
+Bash no sabría con los modificadores ahí.
+Tampoco con prefijos de formato explícito.
+:::</p>
+<h2 id="fichero-con-lista-de-nombres">Fichero con lista de nombres</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>cat<span class="w"> </span>&gt;<span class="w"> </span>ficheros.txt<span class="w"> </span><span class="o">&lt;&lt;&lt;</span>EOF
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>fichero1.jpg
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>fichero2.jpg
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>otrofichero.jpg
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>EOF
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>convert<span class="w"> </span>@ficheros.txt<span class="w"> </span>-o<span class="w"> </span>salida.gif
+</code></pre></div>
+<div class="notes"></div>
+<h1 id="opciones">Opciones</h1>
+<h2 id="tipos-de-opciones">Tipos de opciones</h2>
+<p>Configuración</p>
+<p>Operadores de imagen</p>
+<p>Operadores multi-imagen</p>
+<p>Operadores de pila</p>
+<h2 id="configuracion_1">Configuración</h2>
+<p>Parametrizan la lectura y escritura de imágenes
+y la aplicación de efectos.</p>
+<p>Afectan a los input, outputs, operadores, que aparezcan detrás
+en la línia de commandos</p>
+<p>No hacen nada a la imagen de por sí</p>
+<div class="notes"></div>
+<p>‑adjoin
+‑affine
+‑alpha
+‑antialias
+‑authenticate
+‑background
+‑bias
+‑black‑point‑compensation
+‑blue‑primary
+‑bordercolor
+‑caption
+‑channel
+‑comment
+‑compress
+‑debug
+‑define
+‑delay
+‑density
+‑depth
+‑direction
+‑display
+‑dispose
+‑dither
+‑encoding
+‑endian
+‑extract
+‑family
+‑fill
+‑filter
+‑font
+‑format
+‑fuzz
+‑geometry
+‑gravity
+‑green‑primary
+‑interlace
+‑intent
+‑interpolate
+‑label
+‑limit
+‑linewidth
+‑log
+‑loop
+‑mattecolor
+‑monitor
+‑orient
+‑page
+‑pointsize
+‑preview
+‑quality
+‑quiet
+‑read‑mask
+‑red‑primary
+‑region
+‑render
+‑repage
+‑sampling‑factor
+‑scene
+‑seed
+‑size
+‑stretch
+‑stroke
+‑strokewidth
+‑style
+‑texture
+‑tile
+‑transparent‑color
+‑treedepth
+‑type
+‑undercolor
+‑units
+‑verbose
+‑virtual‑pixel
+‑weight
+‑write‑mask 
+:::</p>
+<h2 id="operaciones-de-imagen">Operaciones de imagen</h2>
+<p>Filtros: modifican una imagen generando otra</p>
+<p>Se aplica a todas las entradas especificadas antes\
+(si no está dentro de un parèntesis)</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>$<span class="w"> </span>convert<span class="w"> </span>input1<span class="w"> </span>-op1<span class="w"> </span>input2<span class="w"> </span>-op2<span class="w"> </span>...
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="c1"># src0: input1 | op1 | op2</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="c1"># src1: input2 | op2</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>$<span class="w"> </span>convert<span class="w"> </span>input1<span class="w"> </span>-op1<span class="w"> </span><span class="se">\(</span><span class="w"> </span>input2<span class="w"> </span>-op2<span class="w"> </span><span class="se">\)</span><span class="w"> </span>-op3<span class="w"> </span>...
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="c1"># src0: input1 | op1 | op3</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="c1"># src1: input2 | op2 | op3</span>
+</code></pre></div>
+<div class="notes"></div>
+<p>‑annotate
+‑black‑threshold
+‑blur
+‑border
+‑charcoal
+‑chop
+‑clip
+‑clip‑path
+‑clip‑mask
+‑colors
+‑colorize
+‑colorspace
+‑compose
+‑contrast
+‑convolve
+‑crop
+‑cycle
+‑despeckle
+‑draw
+‑edge
+‑emboss
+‑enhance
+‑equalize
+‑evaluate
+‑extent
+‑flip
+‑flop
+‑floodfill
+‑frame
+‑gamma
+‑gaussian‑blur
+‑grayscale
+‑implode
+‑lat
+‑level
+‑map
+‑median
+‑modulate
+‑monochrome
+‑negate
+‑noise
+‑normalize
+‑opaque
+‑ordered‑dither
+‑paint
+‑posterize
+‑raise
+‑profile
+‑radial‑blur
+‑raise
+‑random‑threshold
+‑resample
+‑resize
+‑roll
+‑rotate
+‑sample
+‑scale
+‑sepia‑tone
+‑segment
+‑shade
+‑shadow
+‑sharpen
+‑shave
+‑shear
+‑sigmoidal‑contrast
+‑solarize
+‑splice
+‑spread
+‑strip
+‑swirl
+‑threshold
+‑transparent
+‑thumbnail
+‑tint
+‑transform
+‑trim
+‑unsharp
+‑version
+‑wave
+‑white‑point
+‑white‑threshold
+:::</p>
+<h2 id="oper-multi-imagen">Oper. Multi-imàgen</h2>
+<p>¿Qué hacemos con múltiples entradas?</p>
+<p>Por defecto, 
+Junta las entradas anteriores en una.
+Indican que hacer con múltiples entradas.</p>
+<p>Por defecto si es un gif, pdf o video,
+los toma como frames o páginas, si no,
+genera múltiples ficheros con sufijo numérico.</p>
+<p><code>-append</code>: junta las imagenes de norte a sur\
+<code>+append</code>: junta las imagenes de izquierda a derecha\
+<code>-composite</code>: mezcla las imagenes con el setting <code>-compose</code></p>
+<div class="notes"></div>
+<p>‑append
+‑affinity
+‑average
+‑clut
+‑coalesce
+‑combine
+‑compare
+‑complex
+‑composite
+‑copy
+‑crop
+‑debug
+‑deconstruct
+‑delete
+‑evaluate‑sequence
+‑fft
+‑flatten
+‑fx
+‑hald‑clut
+‑ift
+‑identify
+‑insert
+‑layers
+‑limit
+‑map
+‑maximum
+‑minimum
+‑morph
+‑mosaic
+‑optimize
+‑print
+‑process
+‑quiet
+‑swap
+‑write
+:::</p>
+<h2 id="operaciones-de-pila">Operaciones de pila</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>-clone<span class="w"> </span>&lt;indexes&gt;<span class="w"> </span><span class="c1"># Duplica las imagenes, +clone la última</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>-delete<span class="w"> </span>&lt;indexes&gt;<span class="w"> </span><span class="c1"># </span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>-insert<span class="w"> </span>&lt;indexes&gt;<span class="w"> </span><span class="c1"># </span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>-swap<span class="w"> </span>&lt;index&gt;,&lt;index&gt;<span class="w"> </span><span class="c1"># Intercambia imagenes, +swap las dos ultimas</span>
+</code></pre></div>
+<p>secuencias <code>1,3,7</code>, intérvalos <code>2-7</code>, por la cola <code>-2</code></p>
+<p><code>+operador</code> implica <code>-1</code>, la útlima imagen</p>
+<div class="notes"></div>
+<p>Los otros operadores cogen la última imagen o las últimas imagenes.</p>
+<p>Estos se saltan la lógica de pila y acceden directamente a su contenido.</p>
+<p><code>+clone</code> y <code>+swap</code> dentro de paréntesis para procesar múltiples veces una imagen</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>convert<span class="w"> </span>rose:<span class="w"> </span><span class="se">\(</span>+clone<span class="w"> </span>-flip<span class="w"> </span>+swap<span class="o">)</span><span class="w"> </span><span class="se">\(</span>+clone<span class="w"> </span>-rotate<span class="w"> </span>+swap<span class="o">)</span><span class="w"> </span>
+</code></pre></div>
+:::</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+    
+  </body>
+</html>
