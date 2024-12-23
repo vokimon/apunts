@@ -992,6 +992,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Godot Shaders
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1001,6 +1012,103 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#intro" class="md-nav__link">
+    <span class="md-ellipsis">
+      Intro
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Intro">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parallel-execution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parallel execution
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#writing-shaders" class="md-nav__link">
+    <span class="md-ellipsis">
+      Writing shaders
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input-and-outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Input and outputs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uniforms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uniforms
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spatial-shaders" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spatial Shaders
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#glsl-vs-gdshader" class="md-nav__link">
+    <span class="md-ellipsis">
+      GLSL vs gdShader
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2427,6 +2535,92 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#intro" class="md-nav__link">
+    <span class="md-ellipsis">
+      Intro
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Intro">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parallel-execution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parallel execution
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#writing-shaders" class="md-nav__link">
+    <span class="md-ellipsis">
+      Writing shaders
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input-and-outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Input and outputs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uniforms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uniforms
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spatial-shaders" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spatial Shaders
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#glsl-vs-gdshader" class="md-nav__link">
+    <span class="md-ellipsis">
+      GLSL vs gdShader
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2444,9 +2638,123 @@
 
 
 <h1 id="godot-shaders">Godot Shaders</h1>
-<p>A shaders contains code that is executed in the graphics card.
-It helps to customize the renderization pipeline.</p>
-<p>[Original Geometry]  -&gt; Vertext Shaders -&gt; [Modified Geometry] -&gt; Rasterization -&gt;  [Fragments] -&gt; Fragment Shader -&gt; [Final output]</p>
+<h2 id="references">References</h2>
+<ul>
+<li>https://thebookofshaders.com/</li>
+<li>https://docs.godotengine.org/en/stable/tutorials/shaders/index.html</li>
+</ul>
+<h2 id="intro">Intro</h2>
+<h3 id="parallel-execution">Parallel execution</h3>
+<p>A shaders contains code that is executed in the graphics card (GPU)
+in contrast to code that is run in the CPU.
+They are useful to customize the renderization pipeline
+benefiting of the parallelization capabilities of graphics cards.
+For example,
+instead of writing a double loop to change the value of every pixel,
+we write a function that writes a single pixel and the graphic card
+runs it for every pixel in parallel.</p>
+<p>There are many places where you can insert those parallel computations.
+For example: When processing the geometry (vertex) or when rastering
+the final pixels (fragments).</p>
+<p>Because all the computations run in parallel every unit cannot access
+the results of the others.
+Also they cannot keep any internal memory from
+one frame to the next (although there are tricks).</p>
+<h3 id="writing-shaders">Writing shaders</h3>
+<p>Most platforms use GLSL language for shaders.
+Godot may use it but also provides two alternatives:</p>
+<ul>
+<li>gdshader language: close to GLSL but with convieniences</li>
+<li>visual shader: a visual processing graph</li>
+</ul>
+<p>A simplified view of the render pipeline:</p>
+<div class="highlight"><pre><span></span><code>[Original Geometry]
+  Vertex Shaders
+[Modified Geometry] 
+  Rasterization 
+   [Fragments]
+ Fragment Shader
+  [Final output]
+</code></pre></div>
+<p><strong>Vertex shaders</strong> modify the geometry of the vertex of the geometry,
+while <strong>fragment shaders</strong> define how to draw each pixel.
+Not exactly pixels, they are called <strong>fragments</strong> because
+they carry much more information than color in the screen.
+Fragments are a future pixels and carry all the info
+to endup computing that color in the screen:
+normals, textures, albedo color, metalicity, light...</p>
+<p>You can create several kind of shaders:</p>
+<ul>
+<li><strong>Spacial shader:</strong><ul>
+<li>Material of any 3D object</li>
+<li>Directive: <code>shader_type spatial;</code></li>
+<li>Entry points: <code>vertex()</code>, <code>fragment()</code>, <code>ligth()</code></li>
+</ul>
+</li>
+<li><strong>CanvasItem shaders:</strong><ul>
+<li>Material of any 2D/Canvas item</li>
+<li>Directive: <code>shader_type canvas_item;</code></li>
+<li>Entry points: <code>vertex()</code>, <code>fragment()</code>, <code>ligth()</code></li>
+</ul>
+</li>
+<li><strong>Particle shaders:</strong><ul>
+<li>Directive: <code>shader_type particles</code></li>
+<li>Used to compute the particle properties when they are generated they are computed before the pipeline</li>
+<li>Entry points: <code>start()</code>, <code>process()</code></li>
+</ul>
+</li>
+<li><strong>Sky shaders:</strong>s<ul>
+<li>Directive: <code>shader_type sky;</code></li>
+<li>Entry points: <code>sky()</code></li>
+</ul>
+</li>
+<li><strong>Fog shaders</strong> <ul>
+<li>Directive: <code>shader_type fog;</code></li>
+<li>Entry points: <code>fog()</code></li>
+</ul>
+</li>
+<li><strong>Compute shaders:</strong><ul>
+<li>glsl</li>
+<li>Directive: <code>#[compute]</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Compose shader:</strong></p>
+<ul>
+<li>glsl</li>
+</ul>
+</li>
+<li>
+<p><code>vertex()</code>: runs over all the vertices in the mesh and sets their positions and some other per-vertex variables</p>
+</li>
+<li><code>fragment()</code> runs for every pixel covered by the mesh (similar parameters than the vertex but interpolated)</li>
+<li><code>light()</code> for every pixel, for every light</li>
+<li><code>start()</code> for every particle at its begining</li>
+<li><code>process()</code> for every particle for each frame</li>
+<li><code>fog()</code> for every 'fogxel' volumetric buffer</li>
+</ul>
+<p>Shaders are inserted as materials.
+Indeed standard material result in shaders as well.
+Indeed you can take a standard material tweek parameters,
+convert it into a shader and see how it works.</p>
+<h2 id="input-and-outputs">Input and outputs</h2>
+<p>The pipeline provides the shader a set of input data
+and gives the option to set a set of output data.
+These are accessed as they were global variables.
+Many input variables are in fact global,
+but most input and all outputs are local
+to the processed element: a vertex, a fragment, a particle...</p>
+<h2 id="uniforms">Uniforms</h2>
+<p>Uniforms are data that is injected by the CPU into the GPU:</p>
+<ul>
+<li>Floating point parameters</li>
+<li>Colors</li>
+<li>Textures</li>
+<li>...</li>
+</ul>
+<h2 id="spatial-shaders">Spatial Shaders</h2>
+<p>https://docs.godotengine.org/en/stable/tutorials/shaders/shader_reference/spatial_shader.html</p>
+<p>Spatial Shader for 3D materials</p>
 <ul>
 <li>Fragments are not called Pixels because they have lots of more information:<ul>
 <li>Color</li>
@@ -2460,9 +2768,25 @@ It helps to customize the renderization pipeline.</p>
 </ul>
 <p>In Godot, we can use either a shader node editor (<code>VisualShader</code>) or shader code (<code>Shader</code>).</p>
 <p>Create a resource, choose either <code>Shader</code> or <code>VisualShader</code>, drag the file as material of the target object.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>By creating a standard material you can modify it and later save it as an equivalent shader.</p>
+</div>
 <p>For VisualShader, a node editor will open with an output node.
 Input nodes have to be added by hand.
 Change the shader type (vertex, fragment...) with the dropdown selector.</p>
+<p>Exponer valores con <code>uniform</code>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>uniform float myparameter = 3
+</code></pre></div>
+<h2 id="glsl-vs-gdshader">GLSL vs gdShader</h2>
+<ul>
+<li>joined programs:<ul>
+<li>GLSL have several programs (vertex, fragment) with a main()</li>
+<li>gdShader have a single program with several functions vertex() fragment()</li>
+</ul>
+</li>
+<li></li>
+</ul>
 
 
 

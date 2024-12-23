@@ -1046,6 +1046,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#smartshape2d" class="md-nav__link">
+    <span class="md-ellipsis">
+      SmartShape2D
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2625,6 +2634,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#smartshape2d" class="md-nav__link">
+    <span class="md-ellipsis">
+      SmartShape2D
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2830,10 +2848,51 @@ you must add Sprite2D as child.</p>
 <li>Above one will give the impression that is passed closer to the camera than the main object.</li>
 </ul>
 </li>
-<li>
-<p>Since layers are just containers, we can add any kind of node as child.</p>
+<li>Since layers are just containers, we can add any kind of node as child.</li>
+</ul>
+<h2 id="smartshape2d">SmartShape2D</h2>
+<p>Is an addon that overcomes the limitations of the tile grid.</p>
+<ul>
+<li>You can create arbitrary  shapes with splines<ul>
+<li>Those shapes will be filled with a texture that can be big, reducing repetition</li>
+<li>A tool button creates automatically a collision shape for the shape</li>
+</ul>
 </li>
-<li></li>
+<li>You can also define textures for borders<ul>
+<li>Those textures will adapt to the slope of the shape border</li>
+<li>Requires at least two edge texture and an inner texture</li>
+<li>You can add severak borders, they will overlap</li>
+<li>You can also specify slope range for each border texture<ul>
+<li>Ex. Grass on the top, stones on the bottom.</li>
+</ul>
+</li>
+<li>Offset: useful to align the border texture.</li>
+</ul>
+</li>
+<li>You can define sprites to decorate the shape<ul>
+<li>This tiles can be placed arbitrarily, not limited to a grid</li>
+<li>They can overlap</li>
+</ul>
+</li>
+<li>Even though the atlas has a base shape,
+    some sprites can be defined to expan several "tiles"</li>
+</ul>
+<p>Process example: https://www.youtube.com/watch?v=r-pd2yuNPvA</p>
+<ul>
+<li>From a small filling texture, and a border, create a decently big shape, snapshot to the bitmap editor, then:</li>
+<li>Take a bigger chunk of the filling and create anomalies to break up symmetries, then take that chunk and set it as the new filling tile.</li>
+<li>Let the chunk on a back layer and draw complementary sprites that integrate properly</li>
+<li>Make all the complements to fit in the grid (can expand more than one tile)<ul>
+<li>Tip: make variations on the components but not too unique</li>
+<li>You can use mirroring and rotations when you use them to create more variation</li>
+</ul>
+</li>
+<li>Arrange all the complements and the fillings inside a grid and save the atlas.</li>
+<li>Back in godot use z index to overlap the components</li>
+<li>Add parallax background to bring several depth levels</li>
+<li>Use canvas modulation to unify lighting</li>
+<li>Add vertex shaders to emulate wind effects on the complements</li>
+<li>Add particles objects to emulate dust, leaves...</li>
 </ul>
 
 
