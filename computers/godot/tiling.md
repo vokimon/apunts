@@ -180,11 +180,39 @@ you must add Sprite2D as child.
 - Since layers are just containers, we can add any kind of node as child.
 
 
-- 
+## SmartShape2D
 
+Is an addon that overcomes the limitations of the tile grid.
 
+- You can create arbitrary  shapes with splines
+	- Those shapes will be filled with a texture that can be big, reducing repetition
+	- A tool button creates automatically a collision shape for the shape
+- You can also define textures for borders
+	- Those textures will adapt to the slope of the shape border
+	- Requires at least two edge texture and an inner texture
+	- You can add severak borders, they will overlap
+	- You can also specify slope range for each border texture
+		- Ex. Grass on the top, stones on the bottom.
+	- Offset: useful to align the border texture.
+- You can define sprites to decorate the shape
+	- This tiles can be placed arbitrarily, not limited to a grid
+	- They can overlap
+- Even though the atlas has a base shape,
+	some sprites can be defined to expan several "tiles"
 
+Process example: https://www.youtube.com/watch?v=r-pd2yuNPvA
 
-
+- From a small filling texture, and a border, create a decently big shape, snapshot to the bitmap editor, then:
+- Take a bigger chunk of the filling and create anomalies to break up symmetries, then take that chunk and set it as the new filling tile.
+- Let the chunk on a back layer and draw complementary sprites that integrate properly
+- Make all the complements to fit in the grid (can expand more than one tile)
+	- Tip: make variations on the components but not too unique
+	- You can use mirroring and rotations when you use them to create more variation
+- Arrange all the complements and the fillings inside a grid and save the atlas.
+- Back in godot use z index to overlap the components
+- Add parallax background to bring several depth levels
+- Use canvas modulation to unify lighting
+- Add vertex shaders to emulate wind effects on the complements
+- Add particles objects to emulate dust, leaves...
 
 

@@ -589,8 +589,10 @@ Better? would takes the viewport, not the window viewport:  `get_viewport().size
 	- Single payment for "small studio"
 - https://www.fab.com  (Old Sketchfab)
 	- Colaborativo (usuarios suben modelos y ponen precio o no)
-
-
+- https://www.shadertoy.com/
+	- Compartición de shaders (gsgl)
+	- https://docs.godotengine.org/en/stable/tutorials/shaders/converting_glsl_to_godot_shaders.html
+- https://webgl-shaders.com/
 
 
 
