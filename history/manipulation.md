@@ -230,7 +230,9 @@ Cuando se castigan o recompensan activamente las actitudes que se quieren elimin
 
 ## Oversimplification
 
-ACAB
+- Esto es por culpa del X
+- Todos los X son iguales
+- Esto se arregla con X
 
 ## Paltering
 
@@ -297,102 +299,5 @@ sin realmente contraargumentar la primera acusación.
 ## Mal uso de las estadisticas
 
 Explicar las estadísticas de tal manera que parezca que apoyan una tesis que no apoyan.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
 
 
