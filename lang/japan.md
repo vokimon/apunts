@@ -30,7 +30,7 @@ Este es el resumen de lo aprendido.
 		- za, **ji*, zu, ze, zo (j catalana)
 		- ta, **chi**, **tsu**, te, to (ch castellana, tsu de tsunami)
 		- da, **dji**, **dju**, de, do (dj catalana)
-		- ha, hi, **fu**, ho, hu (h es hache aspirada inglesa)
+		- ha, hi, **fu**, he, ho (h es hache aspirada inglesa)
 	- Se predispone la boca como la vocal que viene, y eso modifica la consonante
 - Consonantes sonoras
 	- Los símbolos de las consonantes sordas se reusan para las equivalentes sonoras añadiendo 'acentos'
@@ -73,6 +73,10 @@ Este es el resumen de lo aprendido.
 	- TODO: Se supone que hay ciertas claves para saber donde hay que poner acento
 	- Tokyo pitch accent
 		- Hay dos tonos, alto y bajo
+		- Primera y segunda mora cambian tono
+			- Si empieza alto cambia a bajo y al revés
+		- En una palabra solo se sube una vez el tono (sirve para marcarlas)
+		- En una palabra solo se baja una vez el tono
 		- Si laSi empieza alto en
 		- First and second moras exchange pitch
 			- (start low -> follows high, start high follows low)

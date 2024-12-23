@@ -2,7 +2,7 @@
 
 https://www.youtube.com/watch?v=sybo484veJY
 
-## Agenda setting (Estabecimiento de la agenda()
+## Agenda setting (Estabecimiento de la agenda)
 
 Capacidad de los medios para repetir y dar importancia a un tema
 para que éste se convierta en la principal preocupación de su audiencia.

@@ -162,4 +162,29 @@ You can define them and assign to tiles by drawing, like with terrains.
 Instead of using an image you can use a scene as a tile.
 You have all the functionality of scenes replicated as tiles.
 
+## Parallax layers
+
+A Parallax background is a good complement to a tile set based scenario.
+Great effect with small effort.
+
+ParallaxBackground has to be the root of your ParallaxLayer
+ParallaxLayers do not have images by themselves,
+you must add Sprite2D as child.
+
+- Sprite / Centering: Uncheck so that the top left corner
+- ParallaxLayer / Mirroring, for a continuous 
+- ParallaxLayer / Scale: Speed factor relative to the camera movement
+	- One follows the camera movement, 0 is stopped
+	- Below one will give the impression of distance
+	- Above one will give the impression that is passed closer to the camera than the main object.
+- Since layers are just containers, we can add any kind of node as child.
+
+
+- 
+
+
+
+
+
+
 

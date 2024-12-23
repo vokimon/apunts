@@ -182,3 +182,5 @@ TSWLatexianTemp*
 *~[0-9]*
 
 site
+
+.venv

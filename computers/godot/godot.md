@@ -22,6 +22,7 @@
 - [Tiling](tiling.md)
 - [Physics](physics.md)
 - [UI](ui.md)
+- [Shaders](shaders.md)
 
 ## The node tree
 
@@ -256,8 +257,6 @@ Object of class can be casted as the subclass
 
 TODO: checked in runtime?
 
-
-
 ## Input and actions
 
 - Action: Interaction event that can be bound to device actions (mouse, joystick, keyboard...)
@@ -277,41 +276,6 @@ TODO: checked in runtime?
 	- If you know the receiver do not use signals
 - Ex. Timer nodes have a signal `timeout` you can bind to a method of your node when it expires.
 - In the editor, slots are marked with a green icon
-
-## Physics
-
-- Area2D: Can be checked on whether another body enters (changes position, orientation...)
-	- Signal: `on_area2d_entered`
-	- Signal: `on_area2d_entered`
-- CollitionBody3D:
-	- Defines a list of CollitionPolygon or PolygonShape to check collisions
-	- StaticBody2D: A moveable body that other bodies collides with (static)
-	- RigidBody2D: Moving body that moves according physics (projectils...)
-	- CharacterBody2D: Moves controlled by code (players, enemies...)
-		- attribute velocity (Vector2D)
-		- `move_and_slide()` Updates position accordint to velocity avoiding getting into static body areas by slipping on the border
-		- `move_and_collide()` 
-
-## Shaders
-
-[Original Geometry]  -> Vertext Shaders -> [Modified Geometry] -> Rasterization ->  [Fragments] -> Fragment Shader -> [Final output]
-
-
-- Fragments are not called Pixels because they have lots of more information:
-	- Color
-	- Screen location
-	- UV coordinates
-	- Normals
-	- Light information
-	- ....
-
-In Godot, we can use either a shader node editor (`VisualShader`) or shader code (`Shader`).
-
-Create a resource, choose either `Shader` or `VisualShader`, drag the file as material of the target object.
-
-For VisualShader, a node editor will open with an output node.
-Input nodes have to be added by hand.
-Change the shader type (vertex, fragment...) with the dropdown selector.
 
 ## Coroutines: await, yield
 

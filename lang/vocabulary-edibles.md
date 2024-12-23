@@ -92,7 +92,7 @@ lat: Morus alba
 
 ## Cereales
 
-::: figure trigo_cebada_centeno_avena.jpg
+::: figure edibles/trigo_cebada_centeno_avena.jpg
 	Diferencias fisicas entre cereales
 
 lat: Avena sativa
