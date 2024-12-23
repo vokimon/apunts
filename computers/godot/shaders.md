@@ -2,8 +2,8 @@
 
 ## References
 
-- https://thebookofshaders.com/
-- https://docs.godotengine.org/en/stable/tutorials/shaders/index.html
+- <https://thebookofshaders.com/>
+- <https://docs.godotengine.org/en/stable/tutorials/shaders/index.html>
 
 ## Intro
 
@@ -102,6 +102,9 @@ Many input variables are in fact global,
 but most input and all outputs are local
 to the processed element: a vertex, a fragment, a particle...
 
+In glsl those variables are prefixed `gl_`.
+In gdshader those variables are `UPPERCASED`.
+
 ## Uniforms
 
 Uniforms are data that is injected by the CPU into the GPU:
@@ -111,11 +114,14 @@ Uniforms are data that is injected by the CPU into the GPU:
 - Textures
 - ...
 
+## Uniform hints
+
+
 
 
 ## Spatial Shaders
 
-https://docs.godotengine.org/en/stable/tutorials/shaders/shader_reference/spatial_shader.html
+<https://docs.godotengine.org/en/stable/tutorials/shaders/shader_reference/spatial_shader.html>
 
 Spatial Shader for 3D materials
 

@@ -1,6 +1,6 @@
 # Godot Tiling
 
-https://www.youtube.com/watch?v=2o_IiotMnls
+<https://www.youtube.com/watch?v=2o_IiotMnls>
 
 ## Concepts
 
@@ -184,6 +184,9 @@ you must add Sprite2D as child.
 
 Is an addon that overcomes the limitations of the tile grid.
 
+<https://github.com/SirRamEsq/SmartShape2D>
+
+
 - You can create arbitrary  shapes with splines
 	- Those shapes will be filled with a texture that can be big, reducing repetition
 	- A tool button creates automatically a collision shape for the shape
@@ -200,7 +203,7 @@ Is an addon that overcomes the limitations of the tile grid.
 - Even though the atlas has a base shape,
 	some sprites can be defined to expan several "tiles"
 
-Process example: https://www.youtube.com/watch?v=r-pd2yuNPvA
+Process example: <https://www.youtube.com/watch?v=r-pd2yuNPvA>
 
 - From a small filling texture, and a border, create a decently big shape, snapshot to the bitmap editor, then:
 - Take a bigger chunk of the filling and create anomalies to break up symmetries, then take that chunk and set it as the new filling tile.
@@ -211,8 +214,11 @@ Process example: https://www.youtube.com/watch?v=r-pd2yuNPvA
 - Arrange all the complements and the fillings inside a grid and save the atlas.
 - Back in godot use z index to overlap the components
 - Add parallax background to bring several depth levels
+- Add translucent parallax foreground to bring even more depth
 - Use canvas modulation to unify lighting
+- Add emisive sprites out of the modulation
 - Add vertex shaders to emulate wind effects on the complements
 - Add particles objects to emulate dust, leaves...
 
+![SmartShape2D example](images/smartshape-process-result.png)
 
