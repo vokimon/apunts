@@ -108,7 +108,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../../.." title="Apunts" class="md-header__button md-logo" aria-label="Apunts" data-md-component="logo">
       
-  <img src="../../../img/logo-customblocks-white.svg" alt="logo">
+  <img src="../../../apunts.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -250,7 +250,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../../.." title="Apunts" class="md-nav__button md-logo" aria-label="Apunts" data-md-component="logo">
       
-  <img src="../../../img/logo-customblocks-white.svg" alt="logo">
+  <img src="../../../apunts.svg" alt="logo">
 
     </a>
     Apunts
@@ -1074,24 +1074,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#physics" class="md-nav__link">
-    <span class="md-ellipsis">
-      Physics
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#shaders" class="md-nav__link">
-    <span class="md-ellipsis">
-      Shaders
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#coroutines-await-yield" class="md-nav__link">
     <span class="md-ellipsis">
       Coroutines: await, yield
@@ -1277,6 +1259,27 @@
   
   <span class="md-ellipsis">
     Godot UI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shaders/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Godot Shaders
   </span>
   
 
@@ -2842,24 +2845,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#physics" class="md-nav__link">
-    <span class="md-ellipsis">
-      Physics
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#shaders" class="md-nav__link">
-    <span class="md-ellipsis">
-      Shaders
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#coroutines-await-yield" class="md-nav__link">
     <span class="md-ellipsis">
       Coroutines: await, yield
@@ -3021,6 +3006,7 @@ but explains some of the differences</p>
 <li><a href="../tiling/">Tiling</a></li>
 <li><a href="../physics/">Physics</a></li>
 <li><a href="../ui/">UI</a></li>
+<li><a href="../shaders/">Shaders</a></li>
 </ul>
 <h2 id="the-node-tree">The node tree</h2>
 <ul>
@@ -3355,44 +3341,6 @@ Object of class can be casted as the subclass</p>
 <li>Ex. Timer nodes have a signal <code>timeout</code> you can bind to a method of your node when it expires.</li>
 <li>In the editor, slots are marked with a green icon</li>
 </ul>
-<h2 id="physics">Physics</h2>
-<ul>
-<li>Area2D: Can be checked on whether another body enters (changes position, orientation...)<ul>
-<li>Signal: <code>on_area2d_entered</code></li>
-<li>Signal: <code>on_area2d_entered</code></li>
-</ul>
-</li>
-<li>CollitionBody3D:<ul>
-<li>Defines a list of CollitionPolygon or PolygonShape to check collisions</li>
-<li>StaticBody2D: A moveable body that other bodies collides with (static)</li>
-<li>RigidBody2D: Moving body that moves according physics (projectils...)</li>
-<li>CharacterBody2D: Moves controlled by code (players, enemies...)<ul>
-<li>attribute velocity (Vector2D)</li>
-<li><code>move_and_slide()</code> Updates position accordint to velocity avoiding getting into static body areas by slipping on the border</li>
-<li><code>move_and_collide()</code> </li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="shaders">Shaders</h2>
-<p>[Original Geometry]  -&gt; Vertext Shaders -&gt; [Modified Geometry] -&gt; Rasterization -&gt;  [Fragments] -&gt; Fragment Shader -&gt; [Final output]</p>
-<ul>
-<li>Fragments are not called Pixels because they have lots of more information:<ul>
-<li>Color</li>
-<li>Screen location</li>
-<li>UV coordinates</li>
-<li>Normals</li>
-<li>Light information</li>
-<li>....</li>
-</ul>
-</li>
-</ul>
-<p>In Godot, we can use either a shader node editor (<code>VisualShader</code>) or shader code (<code>Shader</code>).</p>
-<p>Create a resource, choose either <code>Shader</code> or <code>VisualShader</code>, drag the file as material of the target object.</p>
-<p>For VisualShader, a node editor will open with an output node.
-Input nodes have to be added by hand.
-Change the shader type (vertex, fragment...) with the dropdown selector.</p>
 <h2 id="coroutines-await-yield">Coroutines: await, yield</h2>
 <p><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">func</span><span class="w"> </span><span class="n">myregularfunciton</span><span class="p">():</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;before&quot;</span><span class="p">)</span>

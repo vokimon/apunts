@@ -108,7 +108,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../../.." title="Apunts" class="md-header__button md-logo" aria-label="Apunts" data-md-component="logo">
       
-  <img src="../../../img/logo-customblocks-white.svg" alt="logo">
+  <img src="../../../apunts.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -250,7 +250,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../../.." title="Apunts" class="md-nav__button md-logo" aria-label="Apunts" data-md-component="logo">
       
-  <img src="../../../img/logo-customblocks-white.svg" alt="logo">
+  <img src="../../../apunts.svg" alt="logo">
 
     </a>
     Apunts
@@ -1037,6 +1037,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#parallax-layers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parallax layers
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1079,6 +1088,27 @@
   
   <span class="md-ellipsis">
     Godot UI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shaders/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Godot Shaders
   </span>
   
 
@@ -2586,6 +2616,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#parallax-layers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parallax layers
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2776,6 +2815,26 @@ and godot will pick the appropiate tile, which is super handy.</p>
 <h2 id="scene-tiles">Scene tiles</h2>
 <p>Instead of using an image you can use a scene as a tile.
 You have all the functionality of scenes replicated as tiles.</p>
+<h2 id="parallax-layers">Parallax layers</h2>
+<p>A Parallax background is a good complement to a tile set based scenario.
+Great effect with small effort.</p>
+<p>ParallaxBackground has to be the root of your ParallaxLayer
+ParallaxLayers do not have images by themselves,
+you must add Sprite2D as child.</p>
+<ul>
+<li>Sprite / Centering: Uncheck so that the top left corner</li>
+<li>ParallaxLayer / Mirroring, for a continuous </li>
+<li>ParallaxLayer / Scale: Speed factor relative to the camera movement<ul>
+<li>One follows the camera movement, 0 is stopped</li>
+<li>Below one will give the impression of distance</li>
+<li>Above one will give the impression that is passed closer to the camera than the main object.</li>
+</ul>
+</li>
+<li>
+<p>Since layers are just containers, we can add any kind of node as child.</p>
+</li>
+<li></li>
+</ul>
 
 
 
