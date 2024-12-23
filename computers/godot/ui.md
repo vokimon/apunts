@@ -5,6 +5,10 @@
 UI in Godot are also composed of nodes.
 Most nodes derive from Node -> CanvasItem -> Control
 
+Related videos:
+
+- [Godotneers - Godot UI Basics](https://www.youtube.com/watch?v=1_OFJLyqlXI9)
+
 ## Creating a UI scene
 
 TODO: How to combine IU with other 2D and 3D scenes.
@@ -23,6 +27,12 @@ Transform properties (Control/Layout/Transform)
 - Scale: Not size, will affect all the inner elements, will keep the pivot at center
 - Rotation: Also will use the pivot as anchor.
 
+::: figure images/godot-ui-markers.png
+	The orange square and the round handles represent the control position and size.
+	Because the control is toplevel the parent is the viewport represented by a purple box.
+	Anchors are the green arrows see below.
+	The orange hair cross is the pivot for rotation and scaling.
+
 Problems: Absolute positioning relative to the origin breaks interfaces.
 
 - Different window sizes or devices may left out elements or decenter centered elements.
@@ -37,7 +47,6 @@ not just the origin like in absoute positioning.
 They are represented as the four green arrows,
 by default pointing to the parent origin.
 
-![Anchor arrows]()
 
 Top and bottom anchors are specified as a factor (0 to 1) of parent's width,
 and left and right anchors as a factor of parent's heigth.
@@ -53,20 +62,31 @@ is equivalent to the absolute positioning:
 all is specified as offsets from that origin.
 
 For convenience, Godot provides some common presets
-for anchoring, available also in the editor as tool:
+for anchoring, available also in the editor as tool.
+
+::: figure images/godot-ui-anchorpresets.png
+	Tool to choose anchoring presets.
 
 - 4 corners
-- Centered in each 4 sides
+- 4 sides centered
 - Fully centered
 - Vertically expanded left, center, right
 - Horizontally expended top, center, bottom
 - Fully expanded
 
+The presets are only the combinations of values
+0.0, 0.5 and 1.0 for the anchors.
+
 Both anchors and offsets are not constrained to the parent.
 Anchors can go beyond 0 and 1.
 
-Usually you place your root control with anchors,
-but then organize the children with containers.
+Placing a single component within its parent with anchor
+is palatable.
+When you start combining componets, it quickly becomes
+chaotic.
+
+Usually we use anchors to place a single component in the window,
+and use Containers to organize its children.
 
 ### Containers (Layouts)
 
@@ -103,7 +123,75 @@ some control:
     so the parent will give double extra space to B
 
 
-## UI Nodes
+::: figure images/godot-ui-containersizing.png
+	Tool for the placements of an object within a container
+	Given the space provided by the container where
+	the child will positon or expand.
+
+::: figure images/godot-ui-containersize-properties.png
+
+
+## Theming
+
+Every control class may add themable properties.
+This means that those properties can be set globally.
+This is quite convenient to achieve a coherent
+look and feel and change all of them in a centralized form.
+
+If we tweek those parameters in every component
+it would be pretty hard to maintain or change it.
+
+Themes can be set at project level from the settings,
+or at any level of the node tree, afecting the children
+of the node setting it.
+
+Component adds an special attribute "Theme Overrides"
+enabling to make changes local to the component.
+
+This means a property that can be set globally by a theme.
+A theme is a set of values for those properties
+specified per class.
+For example, buttons have this font,
+every control has this background...
+Yes you can use inheritance for that.
+
+A theme is a resource, you can setthe theme in a node and all children
+will be affected.
+
+You can also set the theme globally
+in the project settings.
+
+### Theme Overrides
+
+All those properties available for theming
+are also available on the widget properties
+to override the theme in "Component/Theme Overrides" section.
+
+Notice that
+because every class in the hierarchy can add theme attributes,
+Those overrides can be spread
+on properties for the different subclasses.
+They alwa
+
+### Style box
+
+::: figure images/godot-ui-stylebox.png
+	A panel with custom style box parameters.
+
+The style box are a set of themable properties
+for the base Control so they can be set in every control.
+It offers css box like properties:
+background, border, padding, margin, shadow...
+
+Stylebox definitions are shareable resources.
+You can reuse them.
+Indeed if you copy a control, the copy will share the style box.
+Changes in one control will change also the other.
+If you don't what that to happen, right click on the style box
+and select to make it unique.
+
+
+## UI Nodes Catalog
 
 https://www.youtube.com/watch?v=sPfoZy-cW-E
 
@@ -182,35 +270,3 @@ Common control attributes:
 - Input
 	- Shortcut context:
 - Theme:
-
-## Theming
-
-A theme is a resource that specifies
-parameters for each kind of control.
-
-## Overrides
-
-Each component offers properties
-that can be specified in the theme
-but also can be overriden as properties
-in Theme Overrides.
-
-Notice that
-because every class can add theme attributes,
-Those overrides can be spread
-on properties for the different subclasses.
-
-### Style box
-
-A control style override which provides css box like properties:
-
-- Background
-- Margin
-- Border
-
-Stylebox definitions are shareable resources.
-
-
-
-
-
