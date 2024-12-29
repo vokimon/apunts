@@ -38,6 +38,12 @@
 	- 彼女等kanojora "elles"
 	- 我等-われらwarera
 
+	     masculine   femenine
+	I    ore-wa      watashi-wa
+	my   ore-no      watashi-no
+	me   ore-ni      watashi-ni
+	mine ore-nomono  watashi-nomono
+
 
 # verb conjugation
 
@@ -756,7 +762,12 @@ debiddu san no,
 - he[e]: preceeding as target location of physical movementa (identical to ni on locations)
 
 
+## Insultos
 
+- Baka Stupid
+- Bakayarou Arsehole
+- chipatama  Dickhead
+- 
 
 
 
