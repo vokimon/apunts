@@ -16,368 +16,17 @@
 - Interesting plugin SmartShape2D and usage: https://www.youtube.com/watch?v=r-pd2yuNPvA
 - Character creation Blender + Godot: https://www.youtube.com/watch?v=dd6G2S6MQ6U
 - Depth based outline with gdshaders that work in compatible mode: https://www.youtube.com/watch?v=-SXJvpbFJ7M
+- Channel on 3d games effects with godot: https://www.youtube.com/@Le_x_Lu
+- Realist environment parametrization (cielo, sol, sombras, niebla. Impresionante) https://www.youtube.com/watch?v=PmiMUuFvxzg
 
 ## Extracted topics
 
+- [Concepts](concepts.md)
 - [Tiling](tiling.md)
 - [Physics](physics.md)
 - [UI](ui.md)
 - [Shaders](shaders.md)
-
-## The node tree
-
-- Node: Any element of the game is a Node in a tree. Shape, skeleton, 2D/3DNodes, Sprites, Timer...
-- Node Type: Each node has a type which defines its behavior and and the set of properties it has.
-- Properties: Named values whose values can be set differently for each node.
-- Inheritance: A type of node can inherit from other type
-	- Properties are inherited
-	- Default properties values can be set differently
-	- They can extend with new properties
-	- You can add/modify childs
-- Node composition (Composition hierarchy != Inheritance hierarchy):
-	- Modifications on the parent (scaling, rotating, positioning, skew, groups...) affect their children
-	- Siblings order has effects on the drawing order
-- Scene: Tree of composed nodes with a single root
-	- Whatever you display in godot has to be a scene
-	- You can also nest scenes inside others to compose complex scenes
-		- Make a set of nodes a scene for reuse and encapsulation
-	- Useful operations:
-		- Import a scene inside another
-		- Extract a subtree as independent scene
-	- Scenes are stored as .tscn files
-- Root node types:
-	- Node2D: 2D scene to organize objects in a 2D canvas
-	- UI: Control node (a Node2D it self) but organizes controls in layouts
-	- Node3D: 3D scene to organice object in a 3D world
-- Some useful node types:
-	- Node2D: A 2D point bearing 2D transformations to its children
-	- Sprite2D: An 2D image (also a Node2d)
-- A node can be bound to a script
-	- Normally you bound to a type (which has its own behaviour)
-	- When you bind a script you are defining a new type by extending the asigned one
-
-## Scripting (GDScript) for Pythoners
-
-### Languages in Godot
-
-- Scripts in Godot may be written in several languages
-	- Godot provides a C interface for any language to interact with
-- Indeed you can use that interface to write extensions directly in C++ or C
-	- [C](https://docs.godotengine.org/en/3.5/tutorials/scripting/gdnative/gdnative_c_example.html)
-	  [C++](https://docs.godotengine.org/en/3.5/tutorials/scripting/gdnative/gdnative_cpp_example.html)
-	  But there is no Editor integration AFAIK so they are used mostly to write native extensions later integrated into a project
-- Officially suported languages: GDScript (own) and C#
-- C#
-	- Welcome path to developers coming from widely used game engines like Unity and Unreal
-	- Also because M$ donates to the port
-	- Problems with Garbage Collector
-- GDScript is similar to Python (yahoo) but it has many differences (oops)
-	- Unlike Python, no Global Thread Lock!! You have real Multithreading!
-	- Like Python: Ref counted object instead Garbage Collection
-	- Instead quack typing, uses **gradual typing**: Some variables are statically typed others dynamically typed
-- [Many others](https://github.com/Vivraan/godot-lang-support) comunity driven
-	- [godot-python](https://github.com/touilleMan/godot-python)
-		- Currently (2023-01) rewritting it for Godot 4
-		- Unmature: Even in Godot 3, limitations and flaws
-- So, the recommended path for pythoners is to use GDScript
-- False friends: Whenever you jump across two "similar" languanges you start fast but end getting stuck in your falses expentances
-	- ie. Javascript coming from C about var scoping, casting...
-
-### GDScript (vs Python)
-
-- Every script defines a class
-	- Most tutorials i saw avoid explaining this up front
-		- they consider classes are an advanced topic for non-programmers
-		- you have them in the first page, so you have to deal with them
-		- you come from Python, so, come on
-- Any function, variable, constant... defined at the top level of the script will be class members (methods and properties)
-	- Unlike Python you don't need to specify `class MyClass:` and have all members indented inside
-	- Indeed if you do, you will be defining what in Python is an inner class (see below)
-- Classes are by default unnamed, they are refered by their script path
-	- `const MyClass = preload("./path/to/myscript.gd")`
-	- You could explicitly name them adding this clause: `class_name MyClass`
-	- Then the symbol is globally accessible
-	- But there are no namespaces so explicit names crowds the global scope
-	- TOCHECK: Why autoload modules? Has the modules be loaded by any other to be available? -> They make an instance not a class globally available
-	- Still, `preload` is not that far from import clauses in other languages (javascript)
-- Inheritance:
-	- Add the line `extends OtherClass` to specify the base class in the hierarchy
-		- This is done from the editor, you can change the default superclass from the dialog
-	- Usually the superclass is a standard Node type or resource type
-	- You can use filepath for unnamed `extends "res://path/to/superclass"`
-	- Tree/scene hierarchy (composition) vs. class hierarchy (inheritance)
-	- By default, `extends RefCounted`, not `Object` like in Python.
-	- Multiple inheritance not allowed!! Party!! Use composition!
-- Variables (var) and constants (const)
-	- Unlike Python you have to declare variables
-	- Top level are class attributes, inside a function they are locals
-	- `var name: type = initialvalue` <- Static type variable
-	- `var name` <- Uninitialized vars point to `null` (Python `None`)
-	- `var name = initialvalue` <- Dynamic type variable
-	- `var name := value` - Static type variable, but type implied by the value type
-	- `const name: type = value` <- Constant
-	- Unlike Python, type binding is enforced in compilation and run time
-	- Dubt: Dynamic typing is just defaulting Static typing with Variant type??
-- Functions, just like python but `def` -> `func`, indented blocks...
-	- Parameters and return value can be dynamically or statically binded.
-	- Returning a type binded value: `func f() -> int: `
-	- Type binding parameter: `f(param: int)`
-	- Optional parameters with default: `f(param = 100):`
-	- Combining both:  `func f(param: int = 100):`
-	- Or implied: `func f(param := 100):`
-	- You cannot use Python keyword parameter binding in calls :-(
-	- A method can refer attributes and other methods (own or inherited) 
-	- Methods can use attribute or other methods directly (no need to prepend `self.`)
-- Refering script classes:
-	- Script classes are unamed by default
-		- Referred by the path to the script:
-			- Absolute: `"res://path/to/myclass.gd"`
-			- Relative `"../utils/hex.gd"` or `"./subitem.gd"`
-		- In other scripts: `const MyClass = preload("res://path/to/my_class.gd")`
-		- On demand: `var MyClass = ResourceLoader.load('./my_class.gd')`
-			- When you want to control in memory resources
-			- Global `load` function but this does not work as expected: `var MyClass = load("res://path/to/myclass")` Use `ResourceLoader`. Why?
-	- Named class, if specified:
-		- The line `class_name Myclass` to the script (top line, usually for clarity)
-		- The name will be available globally to other scripts
-		- Use it carefully, it polutes the global scope (no namespaces in GDScript)
-	
-- Godot editor integration:
-	- Editable properties
-		- By default, properties (top level `var`) are not available in the editor to edit
-		- Prepend the declaration with `@export`
-		- Types helps to better edit the object
-		- If no type specified, Variant will be used (user can select any type among available for the editor)
-		- Normally you don't want that but often (dictionaries) you have no option to type inner types
-		- `@export_*` variations to specify how to edit the attribute
-	- Class icon: `@icon("res://path/to/myclass.svg")`
-		- Helps to identify better the nodes in the tree, and in the node type selector
-		- By default, takes superclass icon
-	- `@onready`: Prefixed to a var to delay its initialization from `_init` to `_ready`
-	- `@rpc`: Prefixed to a func enables it for remote call (multiplayer)
-	- `@static_unload`: to a script deinstantiate its variables as soon as all reference are removed, instantiates again if a new reference appear.
-	- `@tool`: to a script to make it run by the editor
-- Instanciating:
-	- `var myinstance: MyClass = MyClass.new(params)`
-	- `var myinstance := MyClass.new(params)` ?? Is this working?
-- Overrides
-	- Godot overridable functions have a prefixed `_`
-	- TOSOLVE: Is this a godot only thing or a GDScript thing
-	- Call same function from parent with `super(params)`
-	- Unlike Python, super() is not the receiver object but the overriden function itself
-	- Call other function from parent when overriden with `super.otherfunction(params)`
-- Inner classes
-	- Defined like in Python but using `extends` instead of parenthesis
-	- `class MyInnerClass extends InnerSuperClass:`
-	- Referring from other classes if unnamed: `extends "./script.gd".MyInnerClass`
-- Dynamic type checking:
-	- `myvar is MyClass` checks is instance (same class or subclass)
-	- warning: `typeof(x)`, just says it is a `TYPE_OBJECT`, not the class
-- Basic datatypes: int, float, bool, String, dict, Array, Array[T], Null
-	- note that list and tuple -> Array
-	- Custom Types: Vector2, Vector3, Color, Angle...
-- accessing members:
-	- inherited and own members can be accessed as local variables
-		- but you can explicitly use `self.` (ie. when scoped out)
-		- when overriden you can use parent class member with `super.`
-	- builtin methods, starting with `_`
-		- `_init`: Constructor
-		- `_ready`: run when node added to a tree
-		- `_process(delta)`: run every tick, delta is floating point seconds since last tick
-	- Referenced as `res://path/from/root/mynode.`
-- Getting other nodes from the tree:
-	- `get_node("../scene/path")`
-	- `$../scene/path`
-	- `%UniqueNodeName` (You have to activate that for the node)
-	- `get_parent()` or `$".."`
-	- `add_sibbling(newSib)`
-	- `add_child(newKid)`
-- Debugging
-	- We can use `print` function
-
-### Lifecycle
-
-- `_init` called from root to leaves order within the tree
-- `_ready` called from leaves to root within the tree (your children should be available)
-
-Recursive hollywood calls:
-
-- parent first: `_init`, `_process`, `_draw`...
-- child first: `_ready` (when we run `_ready`, children already are ready)
-- inverse (of parent first): `_input`, `_exit_tree`
-
-
-### Encapsulating attributes
-
-- define accessors to be used when accessing attributes
-- keeps syntax nice for class users
-
-```gdscript
-var my_mar := 100:
-	set(value):
-		do whatever with value
-	get:
-		return the value
-var other_var setget mysetter, mygetter # both are functions in class
-var other_var setget mysetter # both are functions in class
-```
-- Pitfall: they won't be used from class code!!
-	- They require the dot notations to activate `my_attribute = 100` won't trigger accessor
-	- You must use `self.my_attribute = 100` for that
-	- This enables the class access to the inner representation so it can be used for encapsulation
-
-## Scripts
-
-GD Scripts work like classes.
-
-- Variables `var` and constants `const` are attributes of the class
-- Functions `func` are methods of the class
-- Adding a script is subclassing the type you selected for the node
-- You specify the base class at the top with `extends BaseClass`
-- Any `var`, you prefix with `@export` will be shown on the inspector and can be modified from outside.
-- You can also declare a `signal` you can emit at the class root, just name it `signal mysignalHappened`
-- Members (inherited or not)  are accessible without `self.` but you can explicitly use `self.member` if the name is shadowed by a local variable.
-- Children nodes can be accessed by prepending `$` to their name
-- Node types and types can be accessed by name (`Vector2D`, `Input`, `CollisionObject2D`...), no import required (also means, names must be unique)
-- Also scripts with `classname MyClass` directive will be available by name
-- Built-in methods starts with `_`
-
-### Typed variables
-
-If not specified, variables are untyped.
-You can enforce a type for a variable like:
-
-Unlike Python, type declaration are enforced if defined.
-In compile time and in run-time.
-
-Values can be casted to a type with the `myvalue as MyType` expresion
-
-TODO: Implications on conversions, reinterpretations...?
-Object of class can be casted as the subclass
-
-TODO: checked in runtime?
-
-## Input and actions
-
-- Action: Interaction event that can be bound to device actions (mouse, joystick, keyboard...)
-	- Actions are semantic: 'fire', 'left'...
-		- Godot defines a convenient set of default actions
-		- Game designers can define their own actions and default bindings
-		- Althought actions may specify their default bindings, users can configure them
-	- `if Input.action_pressed('myaction'): ...`
-	- Direction actions can conveniently use `Input.get_vector('left', 'right', 'up', 'down')` to add it to the position
-
-## Signals
-
-- Signal are events that may trigger function execution on other objects
-- They are a low coupling call mechanism
-	- Mainly to decouple emitter and receiver
-	- Warning, too many low coupling might lead to hard to trace code
-	- If you know the receiver do not use signals
-- Ex. Timer nodes have a signal `timeout` you can bind to a method of your node when it expires.
-- In the editor, slots are marked with a green icon
-
-## Coroutines: await, yield
-
-```gdscript
-func myregularfunciton():
-	print("before")
-	mycorutine()
-	print("after")
-
-func mycorutine():
-	print("entering")
-	await get_tree().create_timer(1.0).timeout # timeout is a signal
-	print("exiting")
-# Outputs before-entering-after-exiting
-```
-`await` returns to the caller, the corutine is remumed once the signal is emited
-
-Note: `yield` is Godot 3.x. Deprecated in Godot 4.x
-
-Doubt: how to map yield functionality to await?
-
-La funcion `yield()` (sin parametros) en cambio permite al llamador de la corutina
-controlar cuando continua ejecutandose.
-
-```gdscript
-func myregularfunciton():
-	print("before")
-	y = mycorutine()
-	print("after", )
-	y.resume("value for yield")
-
-func mycorutine():
-	print("entering")
-	value = yield()
-	print("received", value)
-
-# Outputs before-entering-after-exiting
-```
-
-## PackedScene
-
-https://gamedevacademy.org/packedscene-in-godot-complete-guide/
-
-A PackedScene is a tree of nodes stored as a file with extension `.tscn`
-(for "text-based scene", you can also use binaries) 
-
-```gdscript
-var subscene_pack = load("res://scenes/my_subscene.tscn") # could be any path in the project
-var subscene = subscene_pack.instance()
-subscene.attribute = "value # Changing original attributes if needed
-get_node("/root/Main").add_child(enemy_instance)
-```
-
-Instantiating PackedScene returns the root node.
-
-Pitfall: When you add a script to the root node of a scene, you are creating a class.
-When instanciating that class with `new()` the node will be created but the children in the scene won't.
-How to encapsulate a bunch of nodes in an abstract class?
-
-- Creating the children programmatically
-- ??? 
-
-Doubt: for later instances is duplicate() faster than instantiate()?
-
-
-## Texturas
-
-- Texture2D
-	- GradientTexture2D: Values are obtained from a gradient
-	- GradientTexture1D: Like 2D one but only provides variation in one coordinate
-	- NoiseTexture2D: Values are obtained from a noise generator (See Noise)
-	- ImageTexture: Values are taken from an Image
-	- MeshTexture: Still an image but aplies to meshes?? https://gamedevacademy.org/meshtexture-in-godot-complete-guide/
-	- PortableCompressedTexture2D
-	- CompressedTexture2D: loaded from a ctex file
-	- CanvasTexture: Physical properties (difuse, specular, normal...) for 2D objects (CanvasItem) with Light2D (Use Materials for 3D)
-		- Should be a Material2D since it has several Textures inside
-		- `difusse_texture`, `normal_texture`, `specular_texture`. Specular and Diffuse have color. 
-	- ViewPortTexture: Sets a ViewPort as the source of dynamic data for the texture
-	- CameraTexture: Maps image from a camera (not godot camera, but a physical camera device)
-	- CurveTexture: Curve stored as a 1D sequence of data (A sampled 1D function)
-	- CurveTextureXYZ: Like CurveTexture but uses each channel for a different curve
-	- AtlasTexture: Texture cuted from another Texture2D (its atlas) by defining a region and a margin.
-		- Reusing the same atlas for different textures optimizes video memory
-	- AnimatedTexture: Deprecated
-- TextureLayered: N layers of textures of the same size
-	- CubeMap: Environment mapping for reflections each layer for a side of an covering cube. See ReflectionProbe
-	- CubeMapArray: CubeMaps packed in a single texture for faster GPU upload and caching
-	- Texture2DArray: Array of independent textures of same size and mipmap for GPU upload and caching efficiency
-- Texture3D: Line N layers but enables interpolation between layers
-	- CompressedTexture3D, ImageTexture3D, NoiseTexture3D, PlaceholderTexture3D, Texture3DRD
-- GLFTTexture: Texture from standard file format (represents the object, not the texture you may use) (usually written glFT) for physics based shading
-- PlaceholderTextureXXX: No textures (Error or no need in a client server environ)
-
-
-## Debugging
-
-- `push_error/warning()`: enables a stacktrace besides the error message
-- When in run, the running scene tree is availabe as 'Remote' tab in the scenen tree docker.
-	- You can fix it as the default shown in project settings.
-- "Always on top" option is good to keey the game in front and still being able to manipulate and inspect the editor interface.
-
+- [Addons](addons.md)
 
 
 
@@ -544,7 +193,8 @@ Better? would takes the viewport, not the window viewport:  `get_viewport().size
 
 ## Extensiones recomendadas
 
-- Globalize Plugins: Install plugins to all projects
+- Globalize Plugins: (deprecated by Global Project) Install plugins to all projects
+- Godot Global Project: Successoror the former
 - DRY
 	- Basic FPS player: Dont reinvent the wheel
 	- Phantom camera: Camara con targets, movimientos con easing, evita obstaculos... (2D y 3D)
@@ -553,15 +203,21 @@ Better? would takes the viewport, not the window viewport:  `get_viewport().size
 	- BulletUpHell: gestiona proyectiles masivos
 - Asset editors/generators
 	- Cyclops: Editor de escenarios 3D al estilo del de Quake
-	- Dialogic: Creador de un sistema de dialogos. Logica
+	- Dialogic: Creador de un sistema de dialogos.
 	- CGS Toolbox: Modelado CGS visual
 	- Smartshape 2D: Definir volumenes en vez de tile a tile, formas no cuadriculadas...
 	- Gaia: Procedural generation
 	- Hoodie: Procedural geometries
+	- Anima: Makes complex animations simpler. Many presets.
+	- TreeGenerator: Proceduraly generated trees (dev version)
+	- Volumetrics: Fog, particles...
+	- VPainter: Vertex painter inside the editor
+	- Godot LOD: Adapts level of detail with distance, a node which contains several meshes to use
 - Smart Agents:
 	- RL Agents: Entrenador de IA's para bots.
 	- LimboAI
 - Dev tools
+	- GDUnit3: Unit testing
 	- ScripIDE: IDe mejor
 	- Signal visualizer: Muestra las connexiones de signals como graph editable, tambe fa log
 	- Runtime Debug tools: Free cameras, wireframe mode, runtime object selector...
@@ -570,16 +226,24 @@ Better? would takes the viewport, not the window viewport:  `get_viewport().size
 	- Tracy Profiler: Graphical profiler
 	- EmbedGame: Permite Ver el juego ejecutandose en el IDE
 	- Orchestrator: Visual modular programing
+	- Godot SQLite: integracion de bases de datos.
+	- Beehave: Behaviour definition logic as node trees (actions, conditions, compositors, decorators...). https://www.youtube.com/watch?v=n0gVEA1dyPQ
 - Fisicas
 	- Jolt Physics: Motor de fisica 3D mas potente y optimizado que el de serie
 	- Box 23: Motor de física 2d
-	- Water way: Para generar y simular rios y aguas corrientes en 3D.
+	- Waterways: Para generar y simular rios y aguas corrientes en 3D.
 	- OceanWaves: Simulates ocean waves
 	- DistanceJoin2D: Rigid join to keep two object at a distance without elasticity
 	- SmashTheMesh: rompe objetos 3d
+	- Concave Mesh slicer: Permite partir objectos con un plano
+	- Polygon Fracture: Rompe objetos 2D
 	- Shaker: Emula sacudidas y temblores en los objetos 3d
 	- SoftBody2D: Emula cuerpos blandos (deforma, flexiona, parte...) tambien en 2D
-	- Concave Mesh slicer: Permite partir objectos con un plano
+	- GPUTrail: Hace lineas cinéticas de colorainas, para 
+- Others:
+	- Mixing Desk: Context aware music and sound effects
+	- Godot Virtual Jostick: Joystick emulator for touch screens (mobile)
+
 
 ## Asset repositories
 
@@ -593,6 +257,40 @@ Better? would takes the viewport, not the window viewport:  `get_viewport().size
 	- Compartición de shaders (gsgl)
 	- https://docs.godotengine.org/en/stable/tutorials/shaders/converting_glsl_to_godot_shaders.html
 - https://webgl-shaders.com/
+- https://kenney.nl/assets Kenney Assets
+	- 3D, 2D and isometric assets, audio, cursors, ui...
+	- Free, optional donations
+
+
+## Texturas
+
+- Texture2D
+	- GradientTexture2D: Values are obtained from a gradient
+	- GradientTexture1D: Like 2D one but only provides variation in one coordinate
+	- NoiseTexture2D: Values are obtained from a noise generator (See Noise)
+	- ImageTexture: Values are taken from an Image
+	- MeshTexture: Still an image but aplies to meshes?? https://gamedevacademy.org/meshtexture-in-godot-complete-guide/
+	- PortableCompressedTexture2D
+	- CompressedTexture2D: loaded from a ctex file
+	- CanvasTexture: Physical properties (difuse, specular, normal...) for 2D objects (CanvasItem) with Light2D (Use Materials for 3D)
+		- Should be a Material2D since it has several Textures inside
+		- `difusse_texture`, `normal_texture`, `specular_texture`. Specular and Diffuse have color. 
+	- ViewPortTexture: Sets a ViewPort as the source of dynamic data for the texture
+	- CameraTexture: Maps image from a camera (not godot camera, but a physical camera device)
+	- CurveTexture: Curve stored as a 1D sequence of data (A sampled 1D function)
+	- CurveTextureXYZ: Like CurveTexture but uses each channel for a different curve
+	- AtlasTexture: Texture cuted from another Texture2D (its atlas) by defining a region and a margin.
+		- Reusing the same atlas for different textures optimizes video memory
+	- AnimatedTexture: Deprecated
+- TextureLayered: N layers of textures of the same size
+	- CubeMap: Environment mapping for reflections each layer for a side of an covering cube. See ReflectionProbe
+	- CubeMapArray: CubeMaps packed in a single texture for faster GPU upload and caching
+	- Texture2DArray: Array of independent textures of same size and mipmap for GPU upload and caching efficiency
+- Texture3D: Line N layers but enables interpolation between layers
+	- CompressedTexture3D, ImageTexture3D, NoiseTexture3D, PlaceholderTexture3D, Texture3DRD
+- GLFTTexture: Texture from standard file format (represents the object, not the texture you may use) (usually written glFT) for physics based shading
+- PlaceholderTextureXXX: No textures (Error or no need in a client server environ)
+
 
 
 

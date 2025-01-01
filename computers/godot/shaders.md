@@ -3,7 +3,8 @@
 ## References
 
 - <https://thebookofshaders.com/>
-- <https://docs.godotengine.org/en/stable/tutorials/shaders/index.html>
+- [](https://docs.godotengine.org/en/stable/tutorials/shaders/index.html_)
+- [Godot shading language](https://docs.godotengine.org/en/3.0/tutorials/shading/shading_language.html)
 
 ## Intro
 

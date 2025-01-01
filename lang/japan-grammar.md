@@ -378,6 +378,8 @@ Van al final de la frase
 - よyo - indica confianza el lo que se esta diciendo, o que se provee nueva informacion
 - ねne - busca la confirmación de la audiencia (catalan "oi?")
 
+
+
 ## Polite present
 
 Masu stem + ますmasu
