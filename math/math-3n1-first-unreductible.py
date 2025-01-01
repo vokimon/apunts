@@ -124,8 +124,8 @@ for bit in range(0, 32):
 	print(f"## Bit {bit}")
 	next_solutions = []
 	for solution in solutions:
-		next_solutions.append(solution.expand(0))
 		next_solutions.append(solution.expand(1))
+		next_solutions.append(solution.expand(0))
 	printSolutions(next_solutions)
 	solutions = list(filter(lambda s: s.is_viable, next_solutions))
 

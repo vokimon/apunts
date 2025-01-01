@@ -920,6 +920,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../concepts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Godot Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../tiling/" class="md-nav__link">
         
   
@@ -1068,32 +1089,23 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ui-nodes" class="md-nav__link">
-    <span class="md-ellipsis">
-      UI Nodes
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#theming" class="md-nav__link">
     <span class="md-ellipsis">
       Theming
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#overrides" class="md-nav__link">
+    <nav class="md-nav" aria-label="Theming">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#theme-overrides" class="md-nav__link">
     <span class="md-ellipsis">
-      Overrides
+      Theme Overrides
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Overrides">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#style-box" class="md-nav__link">
@@ -1106,6 +1118,15 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ui-nodes-catalog" class="md-nav__link">
+    <span class="md-ellipsis">
+      UI Nodes Catalog
+    </span>
+  </a>
   
 </li>
       
@@ -2626,32 +2647,23 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ui-nodes" class="md-nav__link">
-    <span class="md-ellipsis">
-      UI Nodes
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#theming" class="md-nav__link">
     <span class="md-ellipsis">
       Theming
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#overrides" class="md-nav__link">
+    <nav class="md-nav" aria-label="Theming">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#theme-overrides" class="md-nav__link">
     <span class="md-ellipsis">
-      Overrides
+      Theme Overrides
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Overrides">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#style-box" class="md-nav__link">
@@ -2664,6 +2676,15 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ui-nodes-catalog" class="md-nav__link">
+    <span class="md-ellipsis">
+      UI Nodes Catalog
+    </span>
+  </a>
   
 </li>
       
@@ -2689,6 +2710,10 @@
 <h2 id="basics">Basics</h2>
 <p>UI in Godot are also composed of nodes.
 Most nodes derive from Node -&gt; CanvasItem -&gt; Control</p>
+<p>Related videos:</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=1_OFJLyqlXI9">Godotneers - Godot UI Basics</a></li>
+</ul>
 <h2 id="creating-a-ui-scene">Creating a UI scene</h2>
 <p>TODO: How to combine IU with other 2D and 3D scenes.</p>
 <h2 id="ui-positioning">UI Positioning</h2>
@@ -2707,6 +2732,13 @@ Most nodes derive from Node -&gt; CanvasItem -&gt; Control</p>
 <li>Scale: Not size, will affect all the inner elements, will keep the pivot at center</li>
 <li>Rotation: Also will use the pivot as anchor.</li>
 </ul>
+<figure><a href="../images/godot-ui-markers.png" target="_blank"><img src="../images/godot-ui-markers.png" /></a><figcaption>
+<p>The orange square and the round handles represent the control position and size.
+Because the control is toplevel the parent is the viewport represented by a purple box.
+Anchors are the green arrows see below.
+The orange hair cross is the pivot for rotation and scaling.</p>
+</figcaption>
+</figure>
 <p>Problems: Absolute positioning relative to the origin breaks interfaces.</p>
 <ul>
 <li>Different window sizes or devices may left out elements or decenter centered elements.</li>
@@ -2718,7 +2750,6 @@ which still is the base and it is good to know</p>
 not just the origin like in absoute positioning.
 They are represented as the four green arrows,
 by default pointing to the parent origin.</p>
-<p><img alt="Anchor arrows" src="" /></p>
 <p>Top and bottom anchors are specified as a factor (0 to 1) of parent's width,
 and left and right anchors as a factor of parent's heigth.
 So, 0.5 will be always in the middle which ever the parent size.</p>
@@ -2730,19 +2761,29 @@ the default,
 is equivalent to the absolute positioning:
 all is specified as offsets from that origin.</p>
 <p>For convenience, Godot provides some common presets
-for anchoring, available also in the editor as tool:</p>
+for anchoring, available also in the editor as tool.</p>
+<figure><a href="../images/godot-ui-anchorpresets.png" target="_blank"><img src="../images/godot-ui-anchorpresets.png" /></a><figcaption>
+<p>Tool to choose anchoring presets.</p>
+</figcaption>
+</figure>
 <ul>
 <li>4 corners</li>
-<li>Centered in each 4 sides</li>
+<li>4 sides centered</li>
 <li>Fully centered</li>
 <li>Vertically expanded left, center, right</li>
 <li>Horizontally expended top, center, bottom</li>
 <li>Fully expanded</li>
 </ul>
+<p>The presets are only the combinations of values
+0.0, 0.5 and 1.0 for the anchors.</p>
 <p>Both anchors and offsets are not constrained to the parent.
 Anchors can go beyond 0 and 1.</p>
-<p>Usually you place your root control with anchors,
-but then organize the children with containers.</p>
+<p>Placing a single component within its parent with anchor
+is palatable.
+When you start combining componets, it quickly becomes
+chaotic.</p>
+<p>Usually we use anchors to place a single component in the window,
+and use Containers to organize its children.</p>
 <h3 id="containers-layouts">Containers (Layouts)</h3>
 <p>Containers are controls that organize
 the children positioning with certain criteria.
@@ -2776,7 +2817,61 @@ some control:</p>
 <li>children A has 3 and children B has 6,
     so the parent will give double extra space to B</li>
 </ul>
-<h2 id="ui-nodes">UI Nodes</h2>
+<figure><a href="../images/godot-ui-containersizing.png" target="_blank"><img src="../images/godot-ui-containersizing.png" /></a><figcaption>
+<p>Tool for the placements of an object within a container
+Given the space provided by the container where
+the child will positon or expand.</p>
+</figcaption>
+</figure>
+<figure><a href="../images/godot-ui-containersize-properties.png" target="_blank"><img src="../images/godot-ui-containersize-properties.png" /></a><figcaption></figcaption>
+</figure>
+<h2 id="theming">Theming</h2>
+<p>Every control class may add themable properties.
+This means that those properties can be set globally.
+This is quite convenient to achieve a coherent
+look and feel and change all of them in a centralized form.</p>
+<p>If we tweek those parameters in every component
+it would be pretty hard to maintain or change it.</p>
+<p>Themes can be set at project level from the settings,
+or at any level of the node tree, afecting the children
+of the node setting it.</p>
+<p>Component adds an special attribute "Theme Overrides"
+enabling to make changes local to the component.</p>
+<p>This means a property that can be set globally by a theme.
+A theme is a set of values for those properties
+specified per class.
+For example, buttons have this font,
+every control has this background...
+Yes you can use inheritance for that.</p>
+<p>A theme is a resource, you can setthe theme in a node and all children
+will be affected.</p>
+<p>You can also set the theme globally
+in the project settings.</p>
+<h3 id="theme-overrides">Theme Overrides</h3>
+<p>All those properties available for theming
+are also available on the widget properties
+to override the theme in "Component/Theme Overrides" section.</p>
+<p>Notice that
+because every class in the hierarchy can add theme attributes,
+Those overrides can be spread
+on properties for the different subclasses.
+They alwa</p>
+<h3 id="style-box">Style box</h3>
+<figure><a href="../images/godot-ui-stylebox.png" target="_blank"><img src="../images/godot-ui-stylebox.png" /></a><figcaption>
+<p>A panel with custom style box parameters.</p>
+</figcaption>
+</figure>
+<p>The style box are a set of themable properties
+for the base Control so they can be set in every control.
+It offers css box like properties:
+background, border, padding, margin, shadow...</p>
+<p>Stylebox definitions are shareable resources.
+You can reuse them.
+Indeed if you copy a control, the copy will share the style box.
+Changes in one control will change also the other.
+If you don't what that to happen, right click on the style box
+and select to make it unique.</p>
+<h2 id="ui-nodes-catalog">UI Nodes Catalog</h2>
 <p>https://www.youtube.com/watch?v=sPfoZy-cW-E</p>
 <ul>
 <li>ContainerNode: Layout childs<ul>
@@ -2881,26 +2976,6 @@ some control:</p>
 </li>
 <li>Theme:</li>
 </ul>
-<h2 id="theming">Theming</h2>
-<p>A theme is a resource that specifies
-parameters for each kind of control.</p>
-<h2 id="overrides">Overrides</h2>
-<p>Each component offers properties
-that can be specified in the theme
-but also can be overriden as properties
-in Theme Overrides.</p>
-<p>Notice that
-because every class can add theme attributes,
-Those overrides can be spread
-on properties for the different subclasses.</p>
-<h3 id="style-box">Style box</h3>
-<p>A control style override which provides css box like properties:</p>
-<ul>
-<li>Background</li>
-<li>Margin</li>
-<li>Border</li>
-</ul>
-<p>Stylebox definitions are shareable resources.</p>
 
 
 

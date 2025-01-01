@@ -12,7 +12,7 @@
         <meta name="author" content="vokimon">
       
       
-        <link rel="canonical" href="https://vokimon.github.io/apunts/computers/branching-patterns/00-advanced-git/">
+        <link rel="canonical" href="https://vokimon.github.io/apunts/computers/godot/addons/">
       
       
       
@@ -22,7 +22,7 @@
     
     
       
-        <title>Introducció - Apunts</title>
+        <title>Addons - Apunts</title>
       
     
     
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introduccio" class="md-skip">
+        <a href="#addons" class="md-skip">
           Skip to content
         </a>
       
@@ -121,7 +121,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Introducció
+              Addons
             
           </span>
         </div>
@@ -891,7 +891,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../godot/godot/" class="md-nav__link">
+      <a href="../godot/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -912,7 +912,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../godot/concepts/" class="md-nav__link">
+      <a href="../concepts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -933,7 +933,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../godot/tiling/" class="md-nav__link">
+      <a href="../tiling/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -954,7 +954,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../godot/physics/" class="md-nav__link">
+      <a href="../physics/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -975,7 +975,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../godot/ui/" class="md-nav__link">
+      <a href="../ui/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -996,7 +996,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../godot/shaders/" class="md-nav__link">
+      <a href="../shaders/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1235,7 +1235,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../../branching-patterns/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2437,29 +2437,107 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#objectius" class="md-nav__link">
+  <a href="#using-addons" class="md-nav__link">
     <span class="md-ellipsis">
-      Objectius
+      Using Addons
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#base" class="md-nav__link">
+  <a href="#creating" class="md-nav__link">
     <span class="md-ellipsis">
-      Base
+      Creating
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#roadmap" class="md-nav__link">
+  <a href="#whats-wrong-about-godot-addon-system" class="md-nav__link">
     <span class="md-ellipsis">
-      Roadmap
+      What's wrong about Godot addon system
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="What's wrong about Godot addon system">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#first-of-all-what-is-good" class="md-nav__link">
+    <span class="md-ellipsis">
+      First of all, what is good
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file-layout-and-plain-file-dump-installs" class="md-nav__link">
+    <span class="md-ellipsis">
+      File layout and plain file dump installs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resource-reallocation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resource reallocation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#name-collisions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Name collisions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-hosting" class="md-nav__link">
+    <span class="md-ellipsis">
+      git hosting
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plugin-identifier-names" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plugin identifier names
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#categories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Categories
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proposal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Proposal
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2481,34 +2559,126 @@
   
 
 
-<h1 id="introduccio">Introducció</h1>
-<h2 id="objectius">Objectius</h2>
-<p>Unificar coneixements sobre usos avançats de Git</p>
-<p>Establir vocabulari comú</p>
-<p>Reflexionar sobre les forces dels diferent fluxes de treball</p>
-<h2 id="base">Base</h2>
-<p>Què donem com a sapigut</p>
-<p>Si no, pregunteu</p>
-<h2 id="roadmap">Roadmap</h2>
+<h1 id="addons">Addons</h1>
+<h2 id="using-addons">Using Addons</h2>
+<p>Addons in Godot are managed in a simple way.
+They are zip files that are uncompressed usually in the root directory.
+You can either use the Asset Lib tab or just download a zip and import.</p>
+<h2 id="creating">Creating</h2>
+<h2 id="whats-wrong-about-godot-addon-system">What's wrong about Godot addon system</h2>
+<h3 id="first-of-all-what-is-good">First of all, what is good</h3>
+<p>We all love and hate Godot's addon system.
+On one side it has many benefits:</p>
 <ul>
-<li>tig (manejo general, tree)</li>
-<li>definir alias (lola…)</li>
-<li>tags</li>
-<li>rebase vs merge</li>
-<li>resolucion de conflictos</li>
-<li>cherry pick (con tig)</li>
-<li>rebase interactivo</li>
-<li>reescritura de historia</li>
-<li>patrones (problema, definicion y fuerzas)</li>
-<li>workflows<ul>
-<li>git flow</li>
-<li>github flow</li>
-<li>trunk develompent (CICD)</li>
+<li>Many plugins available</li>
+<li>Power: you can do many things with plugins</li>
+<li>Flexibility: Being the editor a Godot application itself, plugins can modify its guts</li>
+<li>Same set of skills: Being the editor a Godot application, you use similar skill to create plugins than to make games.</li>
+<li>Simplicity for plugin developer: no installers, no configuration, no... well indeed, from this simplicity for the developer it has become hard for plugin users.</li>
+</ul>
+<p>So, lets talk about what can be improved.</p>
+<h3 id="file-layout-and-plain-file-dump-installs">File layout and plain file dump installs</h3>
+<p>Because installing a plugin usually means dumping the zip over the root of your project
+this often ends up in overwritting user files.
+There is no standarization so some plugin developers use a zero level layout,
+while others follow the suggestion of creating <code>addons/myplugin</code>.
+But even if they follow that suggestion,
+if users forget to unselect the rest of direactories,
+they will end up overwritting their README, LICENSE and project.godot files
+which are files that exist on every project.</p>
+<p>Many addon developers explain what users have to activate and deactivate from the zip and where to put it in.
+Still this is error prone and also many addon developers don't do that.</p>
+<p>Two derivated problems also arise:</p>
+<ul>
+<li>Asset developers have to duplicate some stuff in their project root and in assets/myplugin: README, LICENSE... if they want to be present in end projects.
+  Indeed plugin.cfg metadata is quite similar to the one in project.godot. Maintaining duplicated metadata is APITA.</li>
+<li>There is no convention about examples/demos directory, documentation...
+  and other directories that users may want to install along addons directory.</li>
+</ul>
+<h3 id="resource-reallocation">Resource reallocation</h3>
+<p>Because there is no namespaces,
+and plugins refer to the root of the project likewise user files,
+depending on how users install the plugin, it may not work.
+scripts/classes, scenes...
+If resources are so dependant on its own location,
+the paths should be fixed in some way.</p>
+<p>This can be softened by using relative paths for plugin components to refer each other.
+Now this strategy works well with files refered from scripts,
+but resources are written automatically by Godot using project root relative paths.</p>
+<h3 id="name-collisions">Name collisions</h3>
+<p>Same as path references and file locations, when you drop a plugin in an existing
+project, if the plugin defines class names, #references... they could collide
+with the ones in the project or other plugins.
+Several namespacing proposals try to address that.</p>
+<h3 id="git-hosting">git hosting</h3>
+<p>Because the plugins have to be phisically in the user project directory,
+developers follow different approaches to manage their repositories.
+Some create git subtrees of the plugin, others copy the directory.</p>
+<p>My opinion is that plugins should be away at least from the repository.
+Replicating third-party code in a repository is a bad decission.
+In order not to replicate thirdparty code that could eventually diverge.
+with a clear automated specification on which are the dependencies
+and which versions to use.</p>
+<h3 id="plugin-identifier-names">Plugin identifier names</h3>
+<p>Plugins do no have a referable name. 
+We have a db number for the asset which is indeed fragile,
+and hard to refer as dependency.</p>
+<p>We also have the reponame (project-user/repo) and repo provider,
+which could be nicer but will give problems if eventually
+the project decides to switch platform.</p>
+<p>A transition to a Asset Library unique names,
+could led to a name war and even malicious replacements.
+Basing the transition on reponames and prioritizing lesser addon numerical ids
+in case of collision (different projects or even git providers).</p>
+<h3 id="categories">Categories</h3>
+<p>The current plugin categories are quite vage.
+It is hard to look for comparable plugins or
+being sure that the plugin you didn't found really does not exists.</p>
+<p>Having together plugins for a same purpose could help to compare them.
+Materials, the behaviour of the player, the behaviour of enemies,
+the camera, visual effects, audio effects, environment building...</p>
+<h3 id="proposal">Proposal</h3>
+<ul>
+<li>Addon metadata<ul>
+<li>Add a identificator name besides the human readable "title"</li>
+<li>Improve the category system. Identify more useful categories.</li>
+<li>Add dependencies to the plugin and to the project which could be different</li>
 </ul>
 </li>
-<li>debates:</li>
-<li>quin workflow?</li>
-<li>tag i branch naming</li>
+<li>Dependencies management<ul>
+<li>Install should be user wide and inactive by default<ul>
+<li>Inactive should mean the project does not even scan them<ul>
+<li>Global project does and makes it unusable when you install big dependencies</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>The plugins should be installed apart from the project, in a user directory</li>
+<li>Different versions of the same project should install side to side</li>
+<li>Installation is not activation, activation should be project wise</li>
+<li>Activated plugins and versions should be part of the project definition</li>
+<li>Plugins should also have their own dependencies, maybe separated from the plugin project to discard development tooling</li>
+<li>The project configuration should be able to detect installed and newly available versions, install them, activate them for the project and switch between versions</li>
+<li>Each version of the addon should be installed </li>
+<li>Only the directories becoming part of the distribution will be incorporated to the project.</li>
+<li>I would prefer that those directories would be fully standardized to avoid collisions<ul>
+<li>assets/myplugin (enforce current recommendation)</li>
+<li>examples/myplugin (optional install not in the current documentation)</li>
+<li>docs/myplugin (not even mentioned, and i don't know really if required)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Namespaces<ul>
+<li>Having a different root like res:// for addons and project files would not be necessary if the layout is standardized.</li>
+<li>Still collisions may raise on classnames, #hashids, globals...<ul>
+<li>Local hashids to refer nodes within an scene not colliding with others</li>
+<li>Namespaced classnames and globalsa</li>
+<li>TODO: automatic plugin namespace? alias?</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
 
