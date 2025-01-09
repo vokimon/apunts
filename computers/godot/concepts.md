@@ -1,4 +1,4 @@
-# Godot Introduction
+# Godot Introduction (for Pythoners)
 
 This is a compilation of the concepts I needed to organize
 in my mind to start developing in Godot.
@@ -9,7 +9,7 @@ So what follows are the organized notes i took while
 watching, first, this tutorial, and, then, the documentation
 and some other complementary videos i will quote.
 
-::: link https://www.youtube.com/watch?v=nAh_Kx5Zh5Q
+::: linkcard https://www.youtube.com/watch?v=nAh_Kx5Zh5Q
 	The ultimate introduction to Godot 4
 
 ## The node tree
@@ -54,9 +54,7 @@ and some other complementary videos i will quote.
 	- When you create a node in the tree normally, you create it of a type, for instance, Sprite2D
 	- Adding an script creates an (annonymous) subclass which extends the behaviour of the original one (a subclass of Sprite2D)
 
-## Scripting (GDScript) for Pythoners
-
-### Languages in Godot
+## Languages in Godot
 
 - Scripts in Godot may be written in several languages
 	- Godot provides a C interface for any language to interact with
@@ -83,7 +81,7 @@ and some other complementary videos i will quote.
 - False friends: Whenever you jump across two "similar" languanges you start fast but end getting stuck in your falses expentances
 	- ie. Javascript coming from C about var scoping, casting...
 
-### GDScript (vs Python)
+## GDScript (vs Python)
 
 - Every script defines a class
 	- Most tutorials i saw avoid explaining this up front
@@ -206,6 +204,9 @@ and some other complementary videos i will quote.
 	- If no type specified, Variant will be used (user has to select select one of the many available types)
 	- Normally you don't want that but often (dictionaries) you have no option to type inner types
 	- `@export_*` variations to specify how to edit the attribute
+- Organize properties
+	- `@export_category('My Category')` Banner in property editor (like the ones for each super class)
+	- `@export_group('My Group')/@export_subgroup("Subgroup")` Collapsable group of properties
 - Class icon: `@icon("res://path/to/myclass.svg")`
 	- Helps to identify better the nodes in the tree, and in the node type selector
 	- By default, takes superclass icon
@@ -213,8 +214,10 @@ and some other complementary videos i will quote.
 - `@rpc`: Prefixed to a func enables it for remote call (multiplayer)
 - `@static_unload`: to a script deinstantiate its variables as soon as all reference are removed, instantiates again if a new reference appear.
 - `@tool`: to a script to make it run by the editor
+- Documentation
 
 ## Formatting
+
 
 ## Enums
 
@@ -232,6 +235,8 @@ They work very different as named or unnamed!!
 		- `Named.keys()` returns a dictionary name -> value
 		- `Named.values()` returns just the values
 	- Accessed `Named.THING_1` or from outside `MyClass.Named.THING_1`
+
+Named enums allow more introspection, still print will show the value not the label.
 
 ## Encapsulating attributes
 
@@ -257,8 +262,7 @@ var another_var setget mysetter # mysetter is an existing class method
 	If other method does, it will call the setter again
 	resulting in an infinite loop.
 
-
-## Advanced language features
+## Other less used advanced language features
 
 - Singletons/Autoload:
 	- Instance objects that are loaded outside of the scene and are available by a global name
@@ -308,15 +312,36 @@ Typical resources are Textures, Materials, Meshes, Shaders, and indeed Scenes...
 
 Resources can be serialized in a file.
 In that case `load(resourcepath)` obtains it.
+By default, they are stored along the scene,
+unless you specify them to be in a separate file.
+In this case, usual extension is `.tres`.
 
+
+## File system
+
+- Use unix slashes, case sensitive.
+	- If original development is done in windows, may cause problems
+	- Convention: always use lower case for files (naming and refering)
+- `res://' root for project resources.
+	- Whenever the `project.godot` is.
+	- `/` alias for `res://`
+	- This enables packaging, resources could be not in the system filesystem but in a tmp or memory.
+	- Read only in runtime (not developing)
+- `user://'
+	- Writable location for user files in the system
+	- In Linux: /home/myuser/.local/share/godot/myproject
+	- In Windows: %APPDATA%/myproject
 
 ## Debugging
 
 - We can use `print` function
+- `prints()` automatically separates parameters with spaces (like python print)
+- `print_rich()` uses bbcode to add ansi: `[b] [color=red] [/color] [/b]`
 - `push_error/warning()`: enables a stacktrace besides the error message
 - When in run, the running scene tree is availabe as 'Remote' tab in the scenen tree docker.
 	- You can fix it as the default shown in project settings.
 - "Always on top" option is good to keey the game in front and still being able to manipulate and inspect the editor interface.
+- `OS.is_debug_build():` to conditionally activate debug tools
 
 
 

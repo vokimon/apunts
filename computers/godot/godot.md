@@ -2,22 +2,26 @@
 
 ## Tutorials
 
-::: link https://www.youtube.com/watch?v=nAh_Kx5Zh5Q
+::: linkcard https://www.youtube.com/watch?v=nAh_Kx5Zh5Q
 	The ultimate introduction to Godot 4
-	
-	Develops 
 
-::: link https://www.youtube.com/watch?v=9LaB6wbZepg&list=PLJ690cxlZTgL4i3sjTPRQTyrJ5TTkYJ2_&index=0
+	Develops a 2D game showing most of the Godot features.
+
+::: linkcard https://www.youtube.com/watch?v=9LaB6wbZepg&list=PLJ690cxlZTgL4i3sjTPRQTyrJ5TTkYJ2_&index=0
 	Playlist GDScript from scratch. From very scratch, even programming concepts,
 	but explains some of the differences
 
 ## Interesting videos
 
-- Interesting plugin SmartShape2D and usage: https://www.youtube.com/watch?v=r-pd2yuNPvA
-- Character creation Blender + Godot: https://www.youtube.com/watch?v=dd6G2S6MQ6U
-- Depth based outline with gdshaders that work in compatible mode: https://www.youtube.com/watch?v=-SXJvpbFJ7M
-- Channel on 3d games effects with godot: https://www.youtube.com/@Le_x_Lu
-- Realist environment parametrization (cielo, sol, sombras, niebla. Impresionante) https://www.youtube.com/watch?v=PmiMUuFvxzg
+- [Interesting plugin SmartShape2D and workflow](https://www.youtube.com/watch?v=r-pd2yuNPvA)
+- [Character creation Blender + Godot](https://www.youtube.com/watch?v=dd6G2S6MQ6U)
+- [Character Riging Blender + Godot](https://www.youtube.com/watch?v=VasHZZyPpYU)
+- [3D character movement](https://www.youtube.com/watch?v=UpF7wm0186Q)
+- [GDQuest: Smooth 3D Character Movement with drone camera](https://www.youtube.com/watch?v=JlgZtOFMdfc)
+- [Depth based outline with gdshaders that work in compatible mode](https://www.youtube.com/watch?v=-SXJvpbFJ7M)
+- [Le x Lu: Channel on 3d games effects with godot](https://www.youtube.com/@Le_x_Lu)
+- [Realist environment parametrization (cielo, sol, sombras, niebla. Impresionante)](https://www.youtube.com/watch?v=PmiMUuFvxzg)
+- [Animation tree (blending animations together)](https://www.youtube.com/watch?v=n872lbC-_BU)
 
 ## Extracted topics
 
@@ -26,8 +30,8 @@
 - [Physics](physics.md)
 - [UI](ui.md)
 - [Shaders](shaders.md)
+- [Particles](particles.md)
 - [Addons](addons.md)
-
 
 
 ## Node catalog
@@ -206,6 +210,7 @@ Better? would takes the viewport, not the window viewport:  `get_viewport().size
 	- Dialogic: Creador de un sistema de dialogos.
 	- CGS Toolbox: Modelado CGS visual
 	- Smartshape 2D: Definir volumenes en vez de tile a tile, formas no cuadriculadas...
+	- [Goshapes](https://github.com/daleblackwood/goshapes): Seria el equivalente de Smartshape para 3D. Defines formas que se auto texturan o rellenan con otros assets.
 	- Gaia: Procedural generation
 	- Hoodie: Procedural geometries
 	- Anima: Makes complex animations simpler. Many presets.
@@ -247,6 +252,10 @@ Better? would takes the viewport, not the window viewport:  `get_viewport().size
 
 ## Asset repositories
 
+- [GDQuest 3D Animated Characters](https://github.com/gdquest-demos/godot-4-3D-Characters)
+- [GDQuest FPS arms](https://github.com/gdquest-demos/godot-4-FPS-arms)
+- [GDQuest Shader Library](https://github.com/gdquest-demos/godot-shaders])
+- [GDQuest 2D Visual Effects](https://github.com/gdquest-demos/godot-visual-effects)
 - https://syntystore.com/ by [Synty Studios](https://www.syntystudios.com/)
 	- Propietario, de pago
 	- Low poly assets for realtime
@@ -261,8 +270,22 @@ Better? would takes the viewport, not the window viewport:  `get_viewport().size
 	- 3D, 2D and isometric assets, audio, cursors, ui...
 	- Free, optional donations
 
+## Resource Catalog
 
-## Texturas
+### Mallas
+
+Meshes define 3D shapes as polygons define 2D shapes.
+
+- PointMesh: Single visible point
+
+
+
+
+### Texturas
+
+Abstracting the concept of texture enables many cool features.
+They can be obtained/generated in many ways
+and they are used extensively in the framework as source of data.
 
 - Texture2D
 	- GradientTexture2D: Values are obtained from a gradient
@@ -290,15 +313,6 @@ Better? would takes the viewport, not the window viewport:  `get_viewport().size
 	- CompressedTexture3D, ImageTexture3D, NoiseTexture3D, PlaceholderTexture3D, Texture3DRD
 - GLFTTexture: Texture from standard file format (represents the object, not the texture you may use) (usually written glFT) for physics based shading
 - PlaceholderTextureXXX: No textures (Error or no need in a client server environ)
-
-
-
-
-
-
-
-
-
 
 
 

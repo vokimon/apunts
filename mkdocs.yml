@@ -36,6 +36,8 @@ nav:
         - computers/godot/physics.md
         - computers/godot/ui.md
         - computers/godot/shaders.md
+        - computers/godot/particles.md
+        - computers/godot/addons.md
     - computers/cligrafics/00-imagemagick.md
     - computers/computer-graphics.md
     - computers/android-glossary.md

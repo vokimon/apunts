@@ -441,10 +441,6 @@ Masu steam reused in many other conjugations
 	- kai-ri-mashite (podrias ir a casa)
 	- mi-mashite (podrias mirar)
 	- te form of the polite form (masu -> mashite)
-- 
-
-
-
 
 
 ## Polite invitations
