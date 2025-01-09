@@ -242,10 +242,81 @@ This constrain could be useful in two fronts:
 The fk sequence of A could have two patterns
 
 - It could be a loop, either having A in the loop or being a precursor of it (A is not repeated).
-- It could be a infinite sequence not repeating any number. That will have tendency to go up because lower numbers (and none are finite
+- It could be an infinite sequence not repeating any number. That will have tendency to go up because lower numbers (and none are finite
 
-A first result, because the first generation of an even number
-is always lesser, A cannot be even.
+### Shallow discards
+
+As preliminary results, we can discard much of the candidates for A:
+
+Collorary: An even number cannot be the first non-reductible number
+
+	f0 = n = 2m
+	f1 = m = n / 2 < n
+
+Because f1 < n, n is not the first irreductible number
+
+Collorary: A number $ n mod 4 = 1 $, cannot be the first irreductible number
+
+	f0 = n = 4 m + 1
+	f1 = (3(4m +1) +1)/2
+	f1 = (12m + 4)/2
+	f1 = 6m + 2; which is even
+	f2 = 3m + 1 < 4m +1 = f0
+
+Being even, corresponds with $A mod 4 = 0$ and $A mod 4 = 2$,
+so, the only possibility left if A exist is $ A mod 4 = 3 $.
+
+Sadly, beyond k=2, cases start to expand instead of shrinking.
+Still if we look to the possible predecessor instead of the successors,
+we can find other quick restriction.
+
+Collorary: A number $n mod 3 = 2$ is not the first irreductible number
+
+One number can have two precedecessors a lesser and a greater one.
+Every number has a greater one: $ 2n $.
+But not all numbers can have a lesser predecesor.
+Only those having the following structure:
+
+Let be m the lesser prececessor of n.
+As such, n = (3m+1)/2, and m should be odd, m=2l+1.
+Combining both expressions:
+
+	n = (3m+1)/2 ; m is the lesser predecesor of n
+	m = 2l+1 ; m needs to be odd
+	n = (6l+3+1)/2 = 3l + 2
+
+Since such a number has a predecesor and any predecesor is reductible, n is reductible.
+
+Collorary: A number 
+2n = 3 f-1 + 1
+f-1 = (2 n - 1) / 3
+
+f-1 = 2n
+f-2 =  (4n - 1) / 3 < n
+4n -1 < 3n
+
+f-3 = ((8n-2/3) -1 )/3
+f-3 = (8n-5)/9 < n
+(8n-5) < 9n
+-5 < n
+true
+
+2n=foo(2l + 1) =
+2n=fo((6l + 3 +1)/2)
+2n=fo(3l + 2) l odd -> l = 2k+1
+2n=fo(3(2k+1) + 2)
+2n=fo(6k+5)
+2n=(3(6k+5)+1)/2 = (18k + 15 + 1)/2 = 9k + 8
+
+
+
+
+
+
+
+
+
+
 
 ### Binary implementation
 
