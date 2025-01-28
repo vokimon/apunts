@@ -668,12 +668,19 @@ Ejemplos:
 		- 映ei proyeccion (parece un proyector y una pantalla, o una persona y un espejo
 		- 画ga imagen/pintura/pelicula... Imagen contenida en un marco
 
+## Preguntas
 
+だれ dare who/quién
+なに nani what/qué
+どこ doko where/dónde
+いつ itsu when/cuándo
+なぜ naze why/porque
+どぅ dou how/cómo
+いくら ikura how much/cuánto
+どちら dochira which
+だれの dare no whose (quien de)
 
-
-
-
-
+TODO: Como se usan?
 
 ## Demostrativos
 
@@ -707,8 +714,6 @@ Adverbs
 - あぞこazoko: alli
 	- OJO: no es ako, azoko
 - どこdoko: where?
-
-
 
 
 ikura - how much

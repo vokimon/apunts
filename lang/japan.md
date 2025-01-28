@@ -825,6 +825,17 @@ Examples
 	- takaranai (neg inf) -> takari-masen
 	- takara-nakatta (neg pas) -> takari-masen deshita)
 
+### Vestir/llevar/ponerse
+
+kiru: por encima de la cintura: fuku o kiru - ponerse ropa (en el torso)
+haku: por debajo de la cintura: zubon o haku - vestir unos pantalones
+suru: accesorios: piasu o suru - ponerse/llevar unos pendientes
+kaburu: en la cabeza sombreros, capuchas...: boushi o kaburu - ponerse un sombrero
+kakeru: para gafas - megane o kakero - ponerse gafas
+
+
+
+
 
 
 
