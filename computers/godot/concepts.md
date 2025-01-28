@@ -214,7 +214,10 @@ and some other complementary videos i will quote.
 - `@rpc`: Prefixed to a func enables it for remote call (multiplayer)
 - `@static_unload`: to a script deinstantiate its variables as soon as all reference are removed, instantiates again if a new reference appear.
 - `@tool`: to a script to make it run by the editor
-- Documentation
+- Documentation `##` will generate documentation.
+	- Above @export is shown in the hover of the property
+	- Uses bbcode to format
+	- 
 
 ## Formatting
 
@@ -336,11 +339,14 @@ In this case, usual extension is `.tres`.
 
 - We can use `print` function
 - `prints()` automatically separates parameters with spaces (like python print)
+- `printt()` like prints but uses tabs to separate
+- `print_stack()` prints the stack trace
+- `print_debug()` Shows the file and line
 - `print_rich()` uses bbcode to add ansi: `[b] [color=red] [/color] [/b]`
 - `push_error/warning()`: enables a stacktrace besides the error message
 - When in run, the running scene tree is availabe as 'Remote' tab in the scenen tree docker.
 	- You can fix it as the default shown in project settings.
-- "Always on top" option is good to keey the game in front and still being able to manipulate and inspect the editor interface.
+- KWin "Always on top" option is good to keep the game in front and still being able to manipulate and inspect the editor interface.
 - `OS.is_debug_build():` to conditionally activate debug tools
 
 

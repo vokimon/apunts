@@ -22,6 +22,7 @@
 - [Le x Lu: Channel on 3d games effects with godot](https://www.youtube.com/@Le_x_Lu)
 - [Realist environment parametrization (cielo, sol, sombras, niebla. Impresionante)](https://www.youtube.com/watch?v=PmiMUuFvxzg)
 - [Animation tree (blending animations together)](https://www.youtube.com/watch?v=n872lbC-_BU)
+- [Hand draw 3d Shader](https://www.youtube.com/watch?v=4dfADUfyKTA)
 
 ## Extracted topics
 
@@ -205,6 +206,7 @@ Better? would takes the viewport, not the window viewport:  `get_viewport().size
 	- Scene Manager: Transiciones entre escenas
 	- Delta Rollback: Saves game
 	- BulletUpHell: gestiona proyectiles masivos
+	- Instant Realistic Lighting: Cambia los valores por defecto para que se vea luz y environment realista de exteriores
 - Asset editors/generators
 	- Cyclops: Editor de escenarios 3D al estilo del de Quake
 	- Dialogic: Creador de un sistema de dialogos.
@@ -256,6 +258,7 @@ Better? would takes the viewport, not the window viewport:  `get_viewport().size
 - [GDQuest FPS arms](https://github.com/gdquest-demos/godot-4-FPS-arms)
 - [GDQuest Shader Library](https://github.com/gdquest-demos/godot-shaders])
 - [GDQuest 2D Visual Effects](https://github.com/gdquest-demos/godot-visual-effects)
+- [PolyHaven](https://polyhaven.com/): Blender assets, mostly: materials, environments, models
 - https://syntystore.com/ by [Synty Studios](https://www.syntystudios.com/)
 	- Propietario, de pago
 	- Low poly assets for realtime
