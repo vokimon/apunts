@@ -171,7 +171,9 @@ Cocinados
 - pot (US): olla
 - casserole dish
 - pan: cacerola
-- saucepan: olla, cazo
+- saucepan (UK): olla, cazo
+- cooker: olla
+- pressure cooker: olla a pression
 - frying pan: sarten
 - stir-fry-pan: sarten de saltear
 - glass roaster: 
@@ -180,14 +182,23 @@ Cocinados
 - baking tray: bandeja de horno
 - baking sheet: bandeja de horno
 - loaf tin: molde de horno
-- glass roaster: 
+- glass roaster: bandeja de horno de cristal
 
 ## Utensilios
 
-- kitchenware: utensilios de cocina
-- cookware: utensilios para cocinar (no servir)
-- dinnerware: 
-- bakeware: 
+- Generic names:
+    - Utensil: genericamente utensilios de cocina (lo que se maneja, no los platos ni las ollas?)
+    - kitchenware: utensilios de cocina (preparacion y servir)
+        - Llistat: https://en.wikipedia.org/wiki/Kitchenware
+    - cookware: utensilios para cocinar (no servir) encima del fuego
+    - bakeware: utensilios para cocinar (no servir) en el horno (bandejas, moldes...)
+    - tableware: utensilios de mesa para servir o comer (no cocinar)
+    - dinnerware: vajilla para servir o comer (platos, bandejas de servir...)
+    - crockery: vajilla de ceramica
+    - cutlery: cuberteria para servir y comer (no cocinar)
+    - silverware: cuberteria de plata (en US, cuberteria)
+    - drinkware: vessels from which people drink
+    - glassware: tableware made of glass (glasses, cups, jars...)
 - cutlery(UK)/silverware(USA): cubertería
 	- chopsticks: palillos (chinos)
 	- fork: tenedor
@@ -217,28 +228,37 @@ Cocinados
 	- turner: espumadera??
 	- pastry brush: Pincel de pasteleria
 	- cookie cutters: recorta galletas
-- dining set: servicio (utensilios por persona para comer)
-- dinner plate: plate for the main dish
-- side plate: plate for the starter/salad/cereals
-- bowl: plato ondo o cuenco
-- cup: taza
-- saucer: platillo (de debajo de una taza)
-- mug: taza (especial para mantener el calor)
-- dish: plato (contenedor y contenido)
-- plate: plato (contenedor)
-- glass: copa
-- jar: pote
-- jug: jarra
+- crockery: vajilla (platos)
+    - dining set: servicio (utensilios por persona para comer)
+    - dinner plate: plate for the main dish
+    - side plate: plate for the starter/salad/cereals
+    - bowl: plato ondo o cuenco
+    - saucer: platillo (de debajo de una taza)
+    - dish: plato (contenedor y contenido)
+    - plate: plato (contenedor)
+- glassware: cristaleria
+    - glass: vaso
+    - glass cup: taza (de vidreo)
+    - jar: pote
+    - cup: taza
+    - mug: taza (especial para mantener el calor)
+    - tankard: tanque (jarra grande de material no transparente, para beber no para servir)
+    - jug: jarro, recipiente de servicio grande con asa y boca para verter
+    - pitcher: (jug, american)
 - sifter: tamizador
 - tray: bandeja
 - bread basket: panera
+- basket: cesta
 - measuring cup: taza de medir
 - measuring spoons: cucharas de medir
 - apron: delantal
 - timer: temporizador
 - chopping board: tabla de cortar
 - grater: rallador
-- colander: colador
+- mandolin: mandolina (cortador de laminas)
+- meat slicer: loncheadora
+- colander: colador (de asas)
+- strainer: colador (de mano)
 - steak hammer: martillo de ablandar la carne
 - cooling rack: salvamanteles
 - oven glove: guantes horno
@@ -263,6 +283,5 @@ while the meat is from romanic origin.
 - Lamb -> Lamb (no changes) (cordero)
 - Goat -> Chevon
 - Deer -> Venison
-
 
 
