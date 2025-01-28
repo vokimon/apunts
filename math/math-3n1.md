@@ -270,22 +270,142 @@ Sadly, beyond k=2, cases start to expand instead of shrinking.
 Still if we look to the possible predecessor instead of the successors,
 we can find other quick restriction.
 
-Collorary: A number $n mod 3 = 2$ is not the first irreductible number
+We could also apply restrictions to predecessors.
+A predecessor is a number p so that there is a k,
+for which fk(p)=A, being A the first irreductible number.
+Because A is irreductible, so has to be any predecessor.
+Because all numbers below A are reductible,
+any predecessor p has to be greater or equal than A.
 
-One number can have two precedecessors a lesser and a greater one.
-Every number has a greater one: $ 2n $.
-But not all numbers can have a lesser predecesor.
-Only those having the following structure:
+So, given a candidate to be A if it has a predecessor
+which is minor it can be discarded as the first irreductible number.
 
-Let be m the lesser prececessor of n.
-As such, n = (3m+1)/2, and m should be odd, m=2l+1.
+Collorary: The first irreductible number n is not $n mod 3 = 2$.
+
+Every number $n$ has a even direct predecesor $pe = 2n$ which is clearly greater.
+But they could also have an odd direct predecesor $pe = (2*n - 1) / 3$,
+which is lesser.
+Not all numbers have a lesser predecessor, just those
+for which $2*n -1$ is divisible by 3.
+
+Let be po the lesser prececessor of n.
+$n = (3po+1)/2$.
+Also p should be odd, so, po=2l+1 being a natural.
 Combining both expressions:
 
-	n = (3m+1)/2 ; m is the lesser predecesor of n
+	n = (3po+1)/2 ; m is the lesser predecesor of n
 	m = 2l+1 ; m needs to be odd
 	n = (6l+3+1)/2 = 3l + 2
 
-Since such a number has a predecesor and any predecesor is reductible, n is reductible.
+Since p is lesser, under the assumption that n is the FIN,
+p should be reductible, but this contradict the assumption.
+So, if n can be expressed as 3l+2, it is not the FIN.
+
+
+TODO: Check how far we can go with predecessors.
+
+Let's go for further predecessors.
+Still we have $pe = 2n$.
+
+	pee = 4n > n -> no worries yet
+	peo = (4n-1)/3 > n given that n>1 which we know FIN is
+	still for this number to be negative let's see the structure for the number to take that path
+	peo = 2l+1
+	4n-1 = 6l+3
+	4n = 6l+4
+	2n = 3l + 2
+	n = 3l/2 + 1
+	because n is integer lets say l=2m
+	n = 3m+1
+
+so this path, peo, is conditioned to $n mod 3 = 1$
+
+	peoo = (2(4n-1)/3 -1)/3
+	peoo = (8n-2-3)/9
+	peoo = (8n-5)/9
+	<n?
+	8n-5<9n
+	n>5 this is true because n is far beyond 5 so yes this will discard n as FIN
+	In order to take this branch peoo = 2l +1
+	peoo = (8n-5)/9 = 2l + 1
+	8n-5 = 18l + 9
+	8n = 18l + 4
+	4n = 9l + 2
+	l=4m+2
+	n = (36m+18+2)/4
+	n = 9m+5
+
+In summary:
+
+	po = (2n-1)/3 < n -> Discarded as FIN
+		condition (2n-1)/3 = 2i+1
+			2n-1 = 6i + 3
+			2n = 6i + 4
+			n = 3i + 2
+			n mod 3 = 2
+		$n mod 3 = 2$ -> n is not FIN
+	pe = 2n > n -> still feasible
+		peo = (2(2n)-1)/3 = (4n-1)/3 > n -> still feasible
+			condition (4n-1)/3 = 2i+1
+				4n-1 = 6i + 3
+				4n = 6i + 4
+				2n = 3i + 2
+				n = 3j + 1  (i = 2j)
+				n mod 3 = 1
+			peoo = (2*(4n-1)-1*3)/9 = (8n-5)/9 < n
+				condition (8n-5)/9 = 2i+1
+				8n-5 = 18i+9
+				8n = 18i+16
+				4n = 9i+16
+				n = 9j+4 (i=2j)
+				n mod 9 = 4
+				FIN can not be mod 9 = 4 (congruent with mod3=1)
+			peoe = (8n-2)/3 > n -> still feasible
+				peoeo = (2*(8n-2) -3 )/9 = (16n-7)/9 > n still feasible
+					condition (16n-7)/9 = 2i+1
+					16n - 7 = 18i + 9
+					16n = 18i + 16
+					8n = 9i + 8
+					n = 9j + 1 (j=8i)
+					n mod 9 = 1 (congruent with mod3=1)
+					peoeoo = (2(16n-7) -3)/27 = (32n-17)/3
+						condition (32n-14)/27 = 2i+1
+						32n - 14 = 2*27i + 27
+						32n = 2*27i + 44 (i = 16 
+						16n = 27i + 22 
+						8n = 
+				peoee
+		pee = 4n-2 > n -> still feasible
+
+
+	(P2 n - r)/P3 = 2i +1
+	P2 n - r = 2 P3 i + P3
+	P2 n = 2 P3 i + P3 + r
+	n = (2 P3 i + P3 + r)/P2
+	i = P2 j - 2/j - r/P3/j
+	n = 2 P3 P2 j + P3 + r
+
+
+
+
+
+
+
+
+In summary, numbers n such that $n mod 9 = 5$, can not be FIN.
+Still we have the path open for pee and peoe.
+
+
+
+
+
+
+
+
+
+
+
+
 
 Collorary: A number 
 2n = 3 f-1 + 1
