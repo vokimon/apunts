@@ -23,6 +23,7 @@
 - [Realist environment parametrization (cielo, sol, sombras, niebla. Impresionante)](https://www.youtube.com/watch?v=PmiMUuFvxzg)
 - [Animation tree (blending animations together)](https://www.youtube.com/watch?v=n872lbC-_BU)
 - [Hand draw 3d Shader](https://www.youtube.com/watch?v=4dfADUfyKTA)
+- [How to make 3d games in godot](https://www.youtube.com/watch?v=ke5KpqcoiIU) Buen resumen del transito de 2D a 3D
 
 ## Extracted topics
 
