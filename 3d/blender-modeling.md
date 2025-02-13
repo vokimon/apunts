@@ -15,9 +15,11 @@ MB -> Orbitar (rotar alrededor del centro de la vista)
 Sh+MB -> Panning (changes the orbit center
 Cn+MB -> Zoom
     Also Numpad +-
-    Also mouse wheel
+    Also mouse wheeL
+Alt+MB drag -> Isometric axis view closer in drag direction
+Alt+MB click -> Center pan on click
 
-Numpad 5 -> Togle Isometric - Perspective
+Numpad 5 -> Toggle Isometric - Perspective
 Numpad 7-1-3: View from axis X Y Z
 Numpad 9: View from the other side (z up unless actually z)
 Numpad .: Adapt view to selected objects
@@ -42,8 +44,8 @@ W cicla modo seleccion:
 Modificadores de seleccion:
 
 - Por defecto, substituye la seleccion anterior
-- Control: Toggle selection keeps previous
-- Shift: 
+- Shift: add or remove (toggle)
+- Control: Shortest path ???
 
 Seleccion vs Activo
 
@@ -57,7 +59,7 @@ Lista de objetos
 
 El nombre sale en el color del outline. Fondo azul.
 
-## Adding object
+## Object mode
 
 Sh+A -> add an object
 
@@ -65,7 +67,7 @@ Cursor: Es un punto de referencia que se usa para varias cosas.
 De entrada como punto de inserción de los nuevos objetos.
 Por defecto esta en el origen.
 
-
+- Sh-RB Set Cursor
 
 ## Transformaciones 
 
@@ -101,7 +103,6 @@ En la parte superior hay un toolbar con modificadores de las transformaciones.
 
 - Sh D: duplicar, a continuacion podemos aplicar transformaciones (por defecto empieza en Grab)
 - Sh R: repetir operacion (por ejemplo si duplicamos con transformacion, volvera a transforma para hacer arrays y demas)
-- Cn J: Join, junta punts seleccionats amb un vertex
 
 ## Visualización
 
@@ -121,15 +122,106 @@ en la esquina superior derecha esta el toolbar de visualizacion
 
 # Edit mode
 
-- Tab switches object and edit mode (also Sh-R?)
-- Transformations are similar 
+- Tab o Sh-R intercambia entre object mode y edit mode
+- Edit mode es para modificar la geometria que tiene tres niveles de objetos
+- 1 vertices 2 segmentos 3 caras (seleccionamos con 1, 2 y 3)
+- RB Menu del nivel seleccionado (vertex, edge, face)
+    - Tambien Cn-V, Cn-E, C-F)
+- l (linked) selecciona toda la geometria enlazada a la selección
+- Transformaciones (GSR) se aplican de forma similar.
+    - Diferencias?
 - Alt-S - scale along normals
+- GG - los mueve dentro del objeto superior
+    - Si esta activado el automerge, cuando arrastras a otro vertice/arista los fusiona
+    - Options Transform en el toolbar arriba a la derecha
+    - Explicitamente M (merge) en edit mode
+- Escala es juntar o separar, mejor que trasladar uno a uno
+- Cn J: Join, junta punts seleccionats amb un vertex
+- Alt-click: Select loop
+- Alt-Z: See through (tambien para seleccionar ocultos)
+
+Compte: Se propaga en coordenadas de vertice: suele ser bueno aplicar antes transformaciones
+    Cn-A en modo objeto aplica transformaciones a los vertices, reseteando las transformaciones de objeto.
 
 
+## Edicion proporcional
+
+- O (o en el toolbar) - Intercambia modo Transformacion proporcional
+    - Las transformaciones afectan fuera de la seleccion a la geometria conectada
+    - genera cambios mas orgánicos
+    - Podemos definir area de afectación
+    - PgUp PgDn o en el toolbar o con wheel
+
+## Subdivide
+
+- Cn-R Subdivide
+    - Tienen que ser quads y no tener "cosas raras"
+    - Primero indicamos el eje, aproximando al segmento que queremos partir
+        - AvPag/RePag: numero de segmentos
+        - (LB/return para confirmar, RB/ESC para cancelar)
+    - Despues entramos en el modo de transformacion de las divisiones por defecto una translación siguiendo el eje cortado
+        - Podemos aplicar R y S
+        - ESC/RB para dejarlo por defecto
+    - Click para confirmar, si hacemos RB, dividira en el centro
+    - Aun asi despues podemos controlar desde el panel de tool options los parametros
+
+## Cut
+
+- Last resource when subdivide is not the option
+    - Mas control, pero menos regular, puede derivar en mayas menos manipulables
+- K - Cut
+    - C cut through, la linia atraviesa el otro lado (recomendado)
+    - Arrastrar: Freehand
+    - click: pivot para cortar con linia
+    - click on point: set the point as pivot
+    - Sh middle point cut
+    - Cn ignore snap
+    - RB-ESC undo last step
+    - Podemos hacer panning con las combinaciones de (Cn-Sh-Alt)MB
+
+## Extrusion
+
+Alt-E: Menu extrusió
+
+- E Extrude Face/Vertex/Edge
+    - 
+- Extrude along normals no same direction as E does
+- Extrude individually, break connections
+- Extrude manifold, fusiona y divide con lo que genera
+- Extrude repeat, crece en segmentos, podemos añadir un step
 
 
+## Inset
 
+I - Crea nodes en l'area interior
 
+## Bevel
+
+Dos tipos diferentes de bevel
+
+- CnSh-B Vertex Bevel
+- Cn-B Segment Bevel
+- Aun podemos pasar de uno a otro con V
+
+Mecanica
+
+- Cuando empieza controlamos la extension con la distancia al centro de la pantalla
+    - A area (default)
+    - P profile, concavidad/convexidad
+    - S segments, subdivisiones
+- Con la rueda o PgUp/PgDn controlamos el numero de segmentos
+- Al confirmar con RB o Return podemos aun alterar los parametros en el panel de operacion abajo izquierda (puede estar colapsado)
+
+Truco: De vertice a redonda. Vertex Bevel dependiendo del perfil, genera estrellas, redondas, rombos
+
+Truco: Si aplicamos un Edge Bevel a todo el loop, mantendremos la topologia.
+Y al revés si no lo hacemos en todo el loop o si lo hacemos de vertice la rompemos.
+
+## Unir geometrias
+
+- F Fill cavity
+- J Join vertex
+- (Face Menu) Poke face: crea un vertice en el medio y lo enlaza con los vertices de la face
 
 
 
