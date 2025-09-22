@@ -478,3 +478,94 @@ How to encapsulate a bunch of nodes in an abstract class?
 
 Doubt: for later instances is duplicate() faster than instantiate()?
 
+
+## Importing from blender
+
+You can import blend files directly but Godot will require Blender installed to export gltf.
+Gltf/glb is the recomended export format.
+
+It includes Mesh (vertex, edges, faces, normals, colors...), Materials Rigging, Animations
+
+Import Tab: Defines many options on how to import the selected asset
+
+Interesting ones:
+
+- Root Scale
+
+"Advanced" Button: Shows more details on how the scene is composed
+and allows to visualize the import changes while changing the same options,
+and some options to be changed per part.
+Also how to import the materials to each part or whether to assing your own.
+
+Gltf are imported as read only scenes.
+But we might want to alter them.
+There are different strategies for that:
+
+- Inherit:
+    - How: Open the scene, choose "New inherited"
+    - Allows:
+        - Modifying properties of existing nodes (materials, position...)
+        - Adding scripts to the existing elements
+        - Accessing the elements separatelly by node name
+        - Adding elements to the scene
+    - But you cannot alter the original hierarchy elements which are marked in yellow
+    - Warn: changes to the element properties might be lost if on import the hierarchy changes
+- Nest:
+    - How:
+        - Creating a empty scene and dragging the gltf
+    - Stable to reimports
+    - We cannot access to the inners unless:
+        - Right click the imported element and chose "Make Editable children"
+        - With editable children, they are no more read only and you can even modify the hierarchy
+        - Don't think on reimport once you make them editable
+        - Consider splitting in multiple gltf
+- Local:
+    - How:
+        - Create a wraper scene
+        - Drag the gltf into it
+        - Right click and "Make local"
+    - We can alter the scende freely, even split the members as scenes
+    - All the data is incorporated into the scenes making them larger
+
+Animations: gltf might contain animations,
+either linked to their model and rig,
+or separated as reusable Animation Library.
+This is useful for retargeting animation
+as such in mixamo website.
+
+
+https://docs.godotengine.org/en/stable/tutorials/assets_pipeline/importing_3d_scenes/node_type_customization.html
+
+Import suffixes in blender objects alter how godot import them
+
+    - `-noimp` exclude node from import
+    - `-col` autogenerates a collider using the same mesh (Concave, acurate but slow)
+    - `-convcol` autogenerate the convex hull as collision (
+    - `-colonly` import as a colision mesh, not as visual mesh
+    - `-convcolonly` import as a colision mesh but the convex hull
+    - `-occ` Defines an occlusion mesh with the same geometry
+    - `-occonly` Defines the object as occlusion mesh
+    - `-navmesh` Defines the object as navmesh (works like the only above, not creating the mesh)
+    - `-rigid` Imported as RigidBody3D instead of Node3d.
+    - `-loop` in animations auto loop them
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

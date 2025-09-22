@@ -30,6 +30,7 @@ what's up? zup
 already -> od-ree /odri/
 a will ask her -> allasker
 do you know -> djono /djunou/
+what you may call it? -> uatxumacolet
 
 
 

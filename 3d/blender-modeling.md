@@ -1,4 +1,4 @@
-# Modelado con Blender
+# Curso Blender
 
 Introducción: https://www.youtube.com/watch?v=2f5RaH5UCmo&list=PLRfbgTMylROJvWR5IbrF6ZMSTKJ4ToJRV
 Modelado: https://www.youtube.com/playlist?list=PLRfbgTMylROKqXDVVCHobVyM-rVNUFH80
@@ -876,11 +876,343 @@ Se puede seleccionar geometria en modo edicion ir a modo weight y activar mascar
 
 alt p ctr p
 
+TODO: Inverse kinematics
+TODO: Constraints
+
+### Creando acciones
+
+Las acciones permiten abstraer animaciones a un más alto nivel: correr, disparar, saltar, agacharse, mirar...
+Son muy utiles para juegos, normalmente van asociadas a los estados del personaje.
+Pero tambien para animación ya que permiten abstraerlas y solo ir al detalle para hacer micro ajustes.
+Además existen librerias que ya contienen acciones animadas hechas.
+
+* Selecciona el tab Animation.
+* En el panel inferior cambiar Dope Sheet -> Action Editor
+* Clica en New y pon un nombre a la accion 
+  * "default" sera la pose que se vea cuando cargas el asset en Godot
+  * si acaba en "loop" Godot lo interpretara como una animación en bucle
+* Clica en el Shield para que la animacion no se borre aunque no este usada
+* Desde el panel en modo Pose selecciona todos los huesos (o al menos los relevantes para la pose)
+* Presiona 'i' para insertar las modificaciones en el keyframe
+* Atajos 
+  * Click en los puntos selecciona (todos) los valores del keyframe
+  * Sh-chilc añade a la seleccion
+  * Wheel -> zoom
+  * MB drag -> pan
+  * Space play
+  * Left-Right move frame
+  * Sh-Left rebobina
+  * Sh-Rigth ff
+  * Cnt-Ini Setea el loop de reproduccion
+  * Cnt-Fin Setea el fin del loop de reproduccion
+  * G mueve el key frame en el tiempo
+
+https://github.com/dynamic-X-LAB/DynamicPose
+
 ## Texture painting
 
 freestylized.com
+
+* Partimos de geometrias simples: 
+  * Cubos escalados, aplicar escala y hacer bebel minimo en las aristas.
+  * Lo mismo con cilindros
+* Mas adelante podriamos aplicar detalles, estilizar, subdividir... ahora mantenerlo simple, muchos detalles los haremos con la textura
+* Marcar cortes de la geometria para estirarlo 
+  * Seleccionar vertices
+  * Marcarlo como seam: U (UV) / Mark seams
+  * Queda marcado en rojo (en modo solido)
+  * Seleccionamos todo
+  * U / Unwrapp / angle based
+  * Ojo con las opciones de unwrap: 
+    * margin: sensible a la resolucion de la imagen para que haya pixeles de separacion (unidades 1 = ancho/alto)
+  * F Cambia tamaño pluma (movemos raton y click para selecccionar
+  * Sh-F Camba strength
+  * Pipeta Cnt-Sh-X (Si ademas haces click lo añades a la paleta)
+  * Crear una textura nueva 
+    * Camino node: añadimos un Texture image y asignamos imagen nueva
+    * Camino uv editor:
+
+Almacenaje externo de texturas
+
+Consejo: una carpeta con texturas al nivel del archivo blender, indicar los encaminamientos relativos
+
+Encaminamientos relativos permiten relocalizar el proyecto
+
+File/external data / Make path relative
+
+Solo pinta en el objeto activo
+
+Altq para cambiar de pieza mientras estamos en texture-painting
+
+Panel de herramienta en la derecha replicado arriba en el toolbar y en el desplegable tool del panel.
+
+## Extension Univ
+
+* Quadrify: convertir los cuads en rectangulos
+* Si la textura es tileable podemos hacer que los uv salgan de la textura.
+* Componentes de texturas 
+  * Ambient oclusion
+  * Displacement map (Hay que activarlo en el render)
+  * Normal (GL, y DirectX)
+  * Roughness
+  * Metalic
+  * Albedo/Base Color
+* CnSh-T Seleccionamos todos los mapas y los mapea a el principal
+* AltS invierte los puertos de entrada (mixer)
+* UV / Pack island: reposiciona las pieles en la textura
+* Stack: poner objetos similares encima unos de otros para aprovechar la misma textura.
+
+### Texturas complejas
+
+* Com aplicar Ambient occlusion correctamente: https://www.youtube.com/watch?v=AguPCHZuF88
+
+### Técnicas
+
+* Mascaras: usar una textura  como "factor" para mezclar otras dos con un "Mix" 
+  * La idea es reaprovechar la textura original para otros objetos
+* Proyecciond de plano shrinkwrap envuelve una maya sobre otro objeto aplicando el material 
+  * Crear un plano
+  * Hacer las subdivisiones (se necesita una malla detallada)
+  * Aplicar una textura con alpha
+  * Modificador shrinkwrap en el objeto
+  * Aplicar offset para que quede por encima
+* Vertex painting 
+  * Usar colores para marcar la geometria y usarlo para separar materiales
+
+### Plantas (texturas con alpha)
+
+* Son planos con una textura con alphas
+* Usar un formato de fichero que soporte alphas (png, webp...)
+* Usar un programa de dibujo a parte
+* eliminar el fondo o desactivarlo para tenerlo como referencia visual
+* en la capa superior, seleccionar la forma de la planta
+* crear el canal como alpha..
+* Truco, poner un fondo de color un poco mas oscuro que el color base del borde para suavizarlo
+* En blender conectar el alpha de la textura a el puerto alpha del bsdf
+* Nos tenemos que asegurar que el backface culling esta desactivado
+* Truco: dividir el plano y separar (V) las hojas y montar una planta mas 3d deformando y transformando las hojas 
+  * Si movemos los nodos se deformara la Para mover los nodos con GG para no modificar las V's
+* Truco, repetir el mismo plano a diferentes escalas y rotado
+
+### Vertex painting
+
+Tecnica usada por ejemplo para caracterizar terrenos, se añaden atributos adicionales a los vertices que se usan en los shaders para tomar decisiones, por canal rgb. Lo obtenemos con el modulo Color Attribute. Se pueden pintar los vertices en el modo Vertex Painting de forma similar a como pintabamos el weight.
+
+Grupos: abstraer una serie de nodos como un solo nodo.
+
+custom Attribute, podemos pintar el attributo
+
+Tipo shader, lleva todo los atributos de salida (albedo, metalic heigth...)
+
+Mix shader: Para mezclar
+
+Creando attributos de color:
+
+* Attribute: Data / Color Attributes -> +
+* Cambiar el nombre para hacer referencia
+* Modo Vertex Paint
+* Para ver los colores ir al modo solido y ver Modo: Attribute 
+  * Util para debug y para hacer pick de color
+
+### Agrupar nodos
+
+Cnt-J mete en una caja para organizar visualmente pero no encapsula.
+Encapsular permite abstraer ocultando un monton de modulos como si fueran uno solo.
+Ademas el modulo nuevo estara disponible cuando haces sh-A.
+
+Para crear un grupo:
+
+* Seleccionar lo que queremos meter en un grupo y Cnt-G
+* Ponerle un nombre con F2
+* Entrar y salir del grupo con la tecla tab. (Analogo a Object-Edit modelando)
+* Cnt-Alt-G desagrupa
+* Puertos externos 
+  * Dentro del grupo hay dos nodos nuevos: Group input y Group output
+  * Todas las conexiones con modulos que quedaran, apareceran como puertos de esos modulos.
+  * Ambos tienen un puerto vacio para exportar nuevos puertos externos
+  * Añadimos nuevos modules arrastrando una connexión al puerto vacio.
+  * En propiedades podemos cambiar nombre, tipo, valor por defecto...
+  * Desde fuera se ve como un parametro (los inputs)
+
+### Agua estilizada
+
+Muy artificial
+
+* Metalic 1
+* rougnes bajo
+* textura de ruido en las normales: ruido -> normal map -> normal
+* escala
+
+### Escultura
+
+* Shift y control para que sea para dentro y fuera
+* grab tiramos de un punto
+* elastic grab: igual pero tira de la pieza
+
+### Tronco
+
+Con curvas para construir el tronco
+
+### Particulas para hojas
+
+* Creamos la particula
+  * plano aprox medio metro, aplicar escala
+  * shading nuevo material para el plano,
+    * cargamos la imagen (con ojas superpuestas negras)  control t
+    * lo conenctamos en el apha como alpha
+    * Le damos un color plano de momento
+    * Podriamos poner el color de una textura pintada para hojas de diferentes colores
+  * Le damos un poco de forma dandole un poco de curbatura al plano para que no sea tan plano
+* Para la copa del arbol
+  * cubo esferizado con subdivision surface
+  * le cortamos la parte de abajo
+  * seleccionamos la copa
+  * Aseguramos que la escala aplicada
+  * Añadimos Mod Geometry Nodes
+  * "dp" distribute points on faces: genera puntos en las caras de la geometria de entrada
+    * Controlar la densidad
+  * iop instance on points: crea objetos en el punto
+  * arrastamos instance, oi (object info)
+    * podemos coger con la pipeta la particula
+  * Alinear la particula con la normal sobre la que se a
+    * conectar la rotacion de points on faces, a  rotation de instance on points
+  * Darle rotacion aleatoria
+    * Rotation instance entre instance on points y la salid
+    * Añadimos un random value  y lo ponemos en rotations
+    * Gira pero poco porque esta en radianes
+    * seleccionar los max i insertamos tau (2pi)
+* Exponer controles
+  * Igual que con los grupos de shaders
+    * conectar los puertos con el node de entrada para que se vea como control en cada objeto y poder cambiar parametros de forma diferente en las instancias.
+    * A la N para abrir podemos editar los nombres y los tipos de los puertos
+      * Nombre, tipo, valor por defecto...
+      * Util si queremos propagar por ejemplo un float a los tres componentes
+* Para transferir las texturas Cn-L Transfer Modifiers
+* Colection info, nos pasa todos los objetos que estan en una coleccion
+* 
+
+## Assets library
 
 ## TODO
 
 * Pintar curva para colgante
 * Mandibula
+
+## Cosas a mirarme
+
+* Agrupar modulos shaders para reuso
+* Parametrizar modulos shaders
+* Definir Acciones
+* Como animar la capa al tiempo que el personaje en una acción
+
+## Animando
+
+### Pasos de la animación
+
+* Shoot reference: Partir siempre de un video de referencia, si cal, de nosotros mismos.
+* Golden poses: Poses que hacen la historia entendible, las que cuentan la historia, las saldrian en viñetas de un comic para entender lo que pasa. Dedicar tiempo a que estas poses esten bien. 
+  * Anticipation: aquellos movimientos que se hacen para acumular energia. Se suelen incluir como golden poses.
+* Blocking: Sin que el ordenador interpole añadir nuevos keyframes intermedios para que el movimiento parezca completo 
+  * Leading: aquellas partes inician el movimiento o se mueven primero: la mirada o un cambio de contrapeso 
+    * Los introduciremos en las intermedias mas cercanas a la pose origen
+  * Dragging: aquellas partes que siguen el movimiento con retraso, arrastradas 
+    * Los introduciremos en las intermecias mas cercana a la pose final
+  * Overshoot: aquellas partes que se pasan de tirada 
+    * Las añadiremos pasada la pose final, para que no quede frenada de golpe
+* Splining: Generar la interpolacion con el ordenador. Esta interpolacion no suele ser buena de entrada.
+* Smoothing: Improve the computer interpolation to feel more natural. Usually change timing and interpolation functions, adding follow ups, anticipations...
+* Adding life: Usually exagerating some movements, or adding expressions, errors...
+
+### Anticipation
+
+El personaje o objeto acomula energia antes de la acción se ejecute.
+Normalmente con un movimiento opuesto al deseado para generar una reacción.
+
+* Doblar las piernas o atrasar los brazos antes de un salto
+
+### Follow through and overlap
+
+Inercia de las partes no rigidas del objeto:
+
+* Cuando la acción principal empieza se resisten a moverse
+* Cuando la accion principal acaba siguen moviendose
+
+Se puede exagerar para emfatizar el movimiento.
+
+## References
+
+Hay que usarlas: Obtenerlas, estudiarlas y aplicarlas.
+De memoria nos perdemos sutilezas que hacen la animación mucho mas creible.
+
+### Not Early Splining
+
+Keep adding keyframes until the action
+
+### Ejercicios standard de Animacion
+
+* Ball bounce in place
+* Ball bounce across the screen
+* Ball falling off of the shelf
+* Pendulum
+* Hand slaping a table
+* Animating objects made of different materials and weights
+* Character weight shift
+* Walk cycle
+* Run cycle
+* Head turn
+
+Timing
+Spacing
+Squash and stretch
+Overshot
+
+### Non robotic movement
+
+* Using arcs for movements, not linear
+* Cada parte del cuerpo entra en movimiento en diferentes momentos, primero cargamos peso con el hombro y la cintura y despues movemos la pierna
+* Movimientos no simetricos: Normalmente un lado lidera y el otro sigue en tiempo y posicion, al saltar, al caer, al equilibrar...
+
+## Tutorials
+
+* Generative Stylized Grass 
+  * Taiwan Sunflower: Hair + Geometry nodes + Plane + Wind 
+    * Part 1: https://www.youtube.com/watch?v=F7_btP0Vhzo
+    * Part 2: https://www.youtube.com/watch?v=Uh-kkZBQEO0
+  * Retro Shaper: Geometry nodes + Vector groups 
+    * https://www.youtube.com/watch?v=Im1qPlaYBaw
+  * Simon 3D: Grass reacting to objects. using hair, vector groups, dynamic paint modifier on weight 
+    * https://www.youtube.com/watch?v=YTu1ntau43I
+  * Trungduyng (demo incluida) vertex color, object scattering/geometry nodes 
+    * https://www.youtube.com/watch?v=M4kMri55rdE
+    * Tutorial and files: https://trungduyng.gumroad.com/l/animegrassblender
+  * baeac: geometry nodes, wind, clear and bend grass arround objects, color control 
+    * https://www.youtube.com/watch?v=MZskE3qd3g8
+  * TooEazyCG: billboarding grass (rotation follows camera) 
+    * https://www.youtube.com/watch?v=hx8m9w4YyNo
+* Realistic Grass 
+  * MorganVincent: Realistic Grass 
+    * https://www.youtube.com/watch?v=BEW3NguW3Nw
+  * Ryan King: Realistic Grass 
+    * Part1: https://www.youtube.com/watch?v=bG1GsK_g7oc
+    * Part2: https://www.youtube.com/watch?v=WBhchj-WoQg
+* Generative Stylized trees 
+  * Trungduyng: Copa de arboles estilizada 
+    * https://www.youtube.com/watch?v=52sTppv7Y-E
+  * LilPuf: 
+    * https://www.youtube.com/watch?v=byUj5cdx5wE
+* Stylized water 
+  * crzyzhaa: Water Cascade 
+    * https://www.youtube.com/watch?v=25kwDu3OPmM
+* Stylized sky 
+  * Kristof Dedene: Anime style clouds and starry nightsky 
+    * https://www.youtube.com/watch?v=m4aOZm6auxQ
+* Geometry nodes
+  * Joey Carlino
+    * Getting started: https://www.youtube.com/watch?v=szTYXk0t09A
+    * Instances: https://www.youtube.com/watch?v=JvbppmT0ILY
+   
+## Geometry nodes
+
+
+
+   

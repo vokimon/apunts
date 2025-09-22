@@ -24,6 +24,8 @@
 - [Animation tree (blending animations together)](https://www.youtube.com/watch?v=n872lbC-_BU)
 - [Hand draw 3d Shader](https://www.youtube.com/watch?v=4dfADUfyKTA)
 - [How to make 3d games in godot](https://www.youtube.com/watch?v=ke5KpqcoiIU) Buen resumen del transito de 2D a 3D
+- [IA generated assets](https://www.youtube.com/watch?v=zEfBPmPDUVc)
+- [GPU Programing hystory and state of the art](https://www.youtube.com/watch?v=9-DiGrnz8l8)
 
 ## Extracted topics
 

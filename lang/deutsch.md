@@ -246,7 +246,6 @@ heiß: llamarse
 schmeck: saber (gusto)
 brauch: need
 trag: wear, carry (trägt)
-spiel: play
 mach: make  
 schlaf: sleep (schläft)
 hör: hear
@@ -826,6 +825,7 @@ die Biene: bee
 die Spinne: spider
 die Fliege: mosca
 die Schneke: snail
+die Gans: ganso
 
 
 ## Objects
@@ -835,6 +835,7 @@ das Buch: book (n)
 das Zeug: stuff
 das Feuerzeug: lighter
 das Spielzeug: toy
+das Videspiel: videojuego
 das Fahrzeug: vehicle
 das Flugzeug: aeronave
 das Werkzeug: tool
@@ -925,6 +926,7 @@ der Senf: mustard
 der Knoblauch: garlic
 der Kuchen: cake
 der Spargel: aparagus
+die Traub: uva (pl Trauben)
 
 das Messer: knife
 der Löffel: spoon
@@ -1356,8 +1358,8 @@ die Krankenversicherung: health insurance
 der Unfall: accident
 der Notfall: emergency case (Not/emergency-Fall/case)
 das Opfer: victim
-der Zahnarzt: dentist (m)
-die Zahnärztin: dentist (f)
+der Zahnarzt: dentist (m) (zahn diente, arzt doctor)
+die Zahnärztin: dentist (f) (zahn diente, arztin doctora)
 die Klinik: clinic
 die Therapie: therapy
 der Alkohol: alcohol

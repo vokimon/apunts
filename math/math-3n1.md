@@ -78,10 +78,10 @@ we can represent boolean operations with integer algebra like this:
 - not: not a = 1-a
 - and: a and b = (a*b)
     - Properties:
-        - a*1 = a
-        - a*0 = 0
-        - a*a = a   --- because both 1 and 0 multiplied by themselves return themselves
-        - a*(1-a) = a - a*a = a - a = 0
+        - a and 1 = a*1 = a
+        - a and 0 = a*0 = 0
+        - a and a = a*a = a   --- because both 1 and 0 multiplied by themselves return themselves
+        - a and not a = a * (1-a) = a - a*a = a - a = 0
 - or: a or b = (a + b - a*b)
     - Properties:
         -  a or 1 = a + 1 - 1*a = 1
@@ -98,7 +98,7 @@ Other derived operators
     - a xor not a = (a - (1-a))^2 = (2*a-1)^2 = 4*a + 1 - 4*a = 1
 - eq: a eq b = a*b + (1-a)*(1-b) = 2*a*b -a -b +1 = 1 - (a-b)^2 = not (a xor b)
 
-Be careful that a+b-ab is an OR while a+b-2ab is an XOR.
+Notice that a+b-ab is an OR while a+b-2ab is an XOR.
 
 Those operations ensure a closure among booleans integers.
 Meaning that while the operands are 0 or 1, the result will be also 0 or 1.
@@ -209,14 +209,38 @@ Depending on the oddity of the previous result,
 we are adding or substracting half of the sequence value,
 rounding up for odds.
 
-### Binary computation approach
+### Binary implementation
 
-Imagine a computer that operates binary natural numbers of infinite precission.
+The binary implementation of the additive/substractive view,
+is quite cheap computational but also provides some insights.
 
-Lets define the down shift `a >> i` as the integer division by 2.
+    fk += (fk>>1) + (fk&1) if fk&1 else - (fk>>1)
+
+If fk is even,
+that is, the least significant bit of fk is zero,
+we are substracting to fk, fk shifted down a bit.
+Because fk is even, the shift down is just fk/2
+because the shifted out bit is zero.
+
+For odd fk, the least significant bit
+which woud be lost after the integer shift,
+it is just added.
+Instead of shifting out the ones are accomulating.
+This this is just equivalent t o `fk/2 + 1/2`.
+
+For the sake of symmetry, we can say that we compute the step:
+
+    step = (fk>>1) + (fk&1)
+
+Since the second term will be zero for the even case.
+And then, depending on the oddity,
+we are adding or substracting that "same" step.
+
+    fk+1 = fk + [ (fk>>1) + (fk&1) ]   (odd)
+    fk+1 = fk - [ (fk>>1) + (fk&1) ]   (even)
 
 
-
+## First non-reductible number
 
 ### Hypothesis of the first non-reductible number
 
@@ -244,7 +268,7 @@ The fk sequence of A could have two patterns
 - It could be a loop, either having A in the loop or being a precursor of it (A is not repeated).
 - It could be an infinite sequence not repeating any number. That will have tendency to go up because lower numbers (and none are finite
 
-### Shallow discards
+### Shallow discards due to lesser successors
 
 As preliminary results, we can discard much of the candidates for A:
 
@@ -270,6 +294,8 @@ Sadly, beyond k=2, cases start to expand instead of shrinking.
 Still if we look to the possible predecessor instead of the successors,
 we can find other quick restriction.
 
+## Shallow discards due to lesser predecessors
+
 We could also apply restrictions to predecessors.
 A predecessor is a number p so that there is a k,
 for which fk(p)=A, being A the first irreductible number.
@@ -278,19 +304,19 @@ Because all numbers below A are reductible,
 any predecessor p has to be greater or equal than A.
 
 So, given a candidate to be A if it has a predecessor
-which is minor it can be discarded as the first irreductible number.
+which is lesser than A it can be discarded as the first irreductible number.
 
 Collorary: The first irreductible number n is not $n mod 3 = 2$.
 
 Every number $n$ has a even direct predecesor $pe = 2n$ which is clearly greater.
-But they could also have an odd direct predecesor $pe = (2*n - 1) / 3$,
+But they could also have an odd direct predecesor $pe = (2n - 1) / 3$,
 which is lesser.
 Not all numbers have a lesser predecessor, just those
-for which $2*n -1$ is divisible by 3.
+for which $2n -1$ is divisible by 3.
 
 Let be po the lesser prececessor of n.
 $n = (3po+1)/2$.
-Also p should be odd, so, po=2l+1 being a natural.
+Also po should be odd, so, po=2l+1 being l a natural.
 Combining both expressions:
 
 	n = (3po+1)/2 ; m is the lesser predecesor of n
@@ -301,8 +327,7 @@ Since p is lesser, under the assumption that n is the FIN,
 p should be reductible, but this contradict the assumption.
 So, if n can be expressed as 3l+2, it is not the FIN.
 
-
-TODO: Check how far we can go with predecessors.
+WIP: Check how far we can go with predecessors.
 
 Let's go for further predecessors.
 Still we have $pe = 2n$.
@@ -400,13 +425,6 @@ Still we have the path open for pee and peoe.
 
 
 
-
-
-
-
-
-
-
 Collorary: A number 
 2n = 3 f-1 + 1
 f-1 = (2 n - 1) / 3
@@ -429,44 +447,6 @@ true
 2n=(3(6k+5)+1)/2 = (18k + 15 + 1)/2 = 9k + 8
 
 
-
-
-
-
-
-
-
-
-
-### Binary implementation
-
-The binary implementation of the additive/substractive view,
-is quite cheap computational but also provides some insights.
-
-    fk += (fk>>1) + (fk&1) if fk&1 else - (fk>>1)
-
-If fk is even,
-that is, the least significant bit of fk is zero,
-we are substracting to fk, fk shifted down a bit.
-Because fk is even, the shift down is just fk/2
-because the shifted out bit is zero.
-
-For odd fk, the least significant bit
-which woud be lost after the integer shift,
-it is just added.
-Instead of shifting out the ones are accomulating.
-This this is just equivalent t o `fk/2 + 1/2`.
-
-For the sake of symmetry, we can say that we compute the step:
-
-    step = (fk>>1) + (fk&1)
-
-Since the second term will be zero for the even case.
-And then, depending on the oddity,
-we are adding or substracting that "same" step.
-
-    fk+1 = fk + [ (fk>>1) + (fk&1) ]   (odd)
-    fk+1 = fk - [ (fk>>1) + (fk&1) ]   (even)
 
 ### Oddity of fk(n) dependens just on the k+1 lower bytes of n
 
@@ -1695,6 +1675,105 @@ Theorem: If the kth iteration of a number is a power of 2, sequence converges
             = 2^p+2 -> converges again
         gp+1(2^p+1) =
             = gp(2^p+1) +  2*Op(2^p+1) * gp(2^p+1) + 2^p * Op(2^p+1)
+
+
+## Solution structure
+
+Lets expand some terms:
+
+    fk+1
+        = ( 3^Ok * fk + Ok ) / 2
+
+    f1 = (3^O0 * n + O0) / 2
+    f2 =
+        = ( 3^O1 * f1 + O1 ) / 2
+        = ( 3^O1 * ((3^O0 * n + O0) / 2) + O1 ) / 2
+        = ( ((3^O1 * 3^O0 * n + 3^O1 * O0) / 2) + O1 ) / 2
+        = ( (3^O1 * 3^O0 * n + 3^O1 * O0 + 2^1 * O1 ) / 2) ) / 2
+        = (3^O1 * 3^O0 * n + 3^O1 * O0 + 2^1 * O1 ) / 2^2
+        = (3^(O1+O0) * n + O0 * 3^O1 + O1 * 2^1 ) / 2^2
+    f3 =
+        = ( 3^O2 * f2 + O2 ) / 2
+        = ( 3^O2 * ((3^(O1+O0) * n + O0 * 3^O1 + O1 * 2^1 ) / 2^2) + O2 ) / 2
+        = ( ((3^O2 * 3^(O1+O0) * n + O0 * 3^O2 * 3^O1 + O1 * 3^O2 * 2^1 ) / 2^2) + O2 ) / 2
+        = ( ((3^(O2+O1+O0) * n + O0 * 3^(O2+O1) + O1 * 3^O2 * 2^1 ) / 2^2) + O2 ) / 2
+        = ( (3^(O2+O1+O0) * n + O0 * 3^(O2+O1) + O1 * 3^O2 * 2^1 + O2 * 2^2) / 2^2) / 2
+        = ( 3^(O2+O1+O0) * n + O0 * 3^(O2+O1) + O1 * 3^O2 * 2^1 + O2 * 2^2 ) / 2^3
+        = ( 3^(O2+O1+O0) * n
+            + O0 * 2^0 * 3^(O2+O1) 
+            + O1 * 2^1 * 3^O2
+            + O2 * 2^2 
+            ) / 2^3
+
+From those preliminar expansions we hypotesize that fk can be expressed as:
+
+    fk = (3^ak * n + bk) / 2^k
+
+Were ak and bk are positive integers.
+
+For f0:
+
+    a0 = 0
+    b0 = 0
+    f0 = (3^0 n + 0) / 2^0 = n
+
+For later f's
+
+    fk+1 =
+        = ( 3^Ok * fk + Ok ) / 2                        # fk unbranched formula
+        = ( 3^Ok * ((3^ak * n + bk) / 2^k) + Ok ) / 2   # inline fk hypothesis
+        = ( ((3^Ok * 3^ak * n + 3^Ok * bk) / 2^k) + Ok ) / 2   # distribute 3^Ok
+        = ( (3^Ok * 3^ak * n + 3^Ok * bk + 2^k * Ok) / 2^k) / 2   # Ok term inside 2^k fraction
+        = (3^Ok * 3^ak * n + 3^Ok * bk + 2^k * Ok) / 2^k+1   # join 2 factors
+        = (3^(ak +Ok) * n + (3^Ok * bk + Ok * 2^k)) / 2^k+1   # join ak+1 and bk+1
+
+To match the hypothesis:
+
+    ak+1 = ak + Ok
+    bk+1 = 3^Ok * bk + Ok * 2^k
+
+Lets remove the recursion on ak and bk:
+
+    Hypothesis on ak
+        ak = sum[0<=i<k](Oi)
+    Demonstration
+        a0 = sum[0<=i<0](Oi) = 0
+        ak+1 =
+            = sum[0<=i<k+1](Oi)
+            = sum[0<=i<k](Oi) + Ok     # extract the last term i=k
+            = ak + Ok
+    Sense: 3 powered to the number of times the sequence has gone up
+
+    Hypotesis on bk
+        bk = sum[0<=i<k]( Oi * 2^i * 3^(sum[i+1<=j<k](Oj)) )
+    Demonstration:
+        b0 = sum[0<=i<0]( Oi * 2^i * 3^(sum[i+1<=j<0](Oj)) ) = 0
+        bk+1 =
+            = sum[0<=i<k+1]( Oi * 2^i * 3^(sum[i+1<=j<k+1](Oj)) )
+            = sum[0<=i<k]( Oi * 2^i * 3^sum[i+1<=j<k+1](Oj) ) + Ok * 2^k * 3^(sum[k+1<=j<k+1](Oj)) ) # extract i=k
+            = sum[0<=i<k]( Oi * 2^i * 3^sum[i+1<=j<k+1](Oj) ) + Ok * 2^k           # empty sumatory
+            = sum[0<=i<k]( Oi * 2^i * 3^(sum[i+1<=j<k](Oj) + Ok) ) + Ok * 2^k      # extrack j=k
+            = sum[0<=i<k]( Oi * 2^i * 3^Ok * 3^sum[i+1<=j<k](Oj) ) + Ok * 2^k     # sum exp -> power product
+            = 3^Ok * sum[0<=i<k]( Oi * 2^i * 3^sum[i+1<=j<k](Oj) ) + Ok * 2^k     # common factor outside sum
+            = 3^Ok * bk + Ok * 2^k                                                # bk hypothesis
+    Alternative using ak
+        bk =
+            = sum[0<=i<k]( Oi * 2^i * 3^(sum[i+1<=j<k](Oj)) )
+            = sum[0<=i<k]( Oi * 2^i * 3^(sum[0<=j<k](Oj)-sum[0<=j<i+1](Oj) ) )
+            = sum[0<=i<k]( Oi * 2^i * 3^(ak - ai+1) )
+
+Insights
+- bk is bounded to `sum[0<=i<k]( 2^i * 3^(k-i) )` for the case where every Oi is 1.
+
+    odd(fk) = odd(sum[0<=i<k]( Oi * 2^i / 2^k * 3^ak / 3^ai))
+
+    fk = (3^ak * n + bk) / 2^k < n
+    
+    3^ak * n + bk < n 2^k
+    n > bk / (3^ak - 2^k)
+    
+
+
 
 
 

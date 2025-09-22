@@ -51,3 +51,14 @@ que da un tono un tanto apocaliptico e insistente a toda la canción.
 
 Las cejillas se pone en:  10 9 7 7  y repetir hasta el final del estribillo en que se hace el siguiente break: 10 7 5 2 3 3 3 3 7 7 7 7
 
+
+
+## The passenger - Iggy Pop
+
+Ritmo: up down up stop  Pararap pararap pararap pararap...
+Am F C G Am F C E
+F C y G se hacen como un C moviendo hacia arriba.
+Para que suenen F y G:
+F sin las dos de arriba, la cejilla solo cubre las dos agudas.
+G se hace sin la cuerda de abajo
+
