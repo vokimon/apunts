@@ -1,0 +1,3913 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Apunts i notes de coses que aprenc">
+      
+      
+        <meta name="author" content="vokimon">
+      
+      
+        <link rel="canonical" href="https://vokimon.github.io/apunts/3d/blender-modeling/">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Curso Blender - Apunts</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/figure.css">
+    
+      <link rel="stylesheet" href="../../css/linkcard.css">
+    
+      <link rel="stylesheet" href="../../css/videowrapper.css">
+    
+      <link rel="stylesheet" href="../../None">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#curso-blender" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Apunts" class="md-header__button md-logo" aria-label="Apunts" data-md-component="logo">
+      
+  <img src="../../apunts.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Apunts
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Curso Blender
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/vokimon/apunts" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Apunts" class="md-nav__button md-logo" aria-label="Apunts" data-md-component="logo">
+      
+  <img src="../../apunts.svg" alt="logo">
+
+    </a>
+    Apunts
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/vokimon/apunts" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    README
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Computers
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Computers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    web
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            web
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_1" id="__nav_2_1_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    css
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            css
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/css-basics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CSS: Conceptes bàsics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/css/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CSS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/css-design-principles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CSS: Principios de diseño
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/css-boxmodel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CSS: El modelo de caja
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/css-normalflow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CSS Normal Flow
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/css-flexbox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CSS Flexbox
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/css-grid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CSS Grid
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/css-animations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CSS: Animaciones
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/css-typography/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CSS Typografy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/css-methodologies-architectures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CSS: Metodologías y arquitecturas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_2" id="__nav_2_1_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    javascript
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            javascript
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/jsecosystem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Jsecosystem
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/jsonschema/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Jsonschema
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/react-formik/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    React formik
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/react/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    React / Redux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/d3/00-d3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introducción
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/rest/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    REST APIs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/fastapi/fastapi.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    None
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/time/time/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Representando el tiempo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Security problems
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    godot
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            godot
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/godot/godot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Godot 4 (Game Engine)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/godot/concepts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Godot Introduction (for Pythoners)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/godot/tiling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Godot Tiling
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/godot/physics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Godot Physics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/godot/ui/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Godot UI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/godot/shaders/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Godot Shaders (es)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/godot/particles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Godot: Particles
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/godot/addons.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    None
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/cligrafics/00-imagemagick/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ImageMagick: Graficos con CLI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/computer-graphics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Computer graphics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/android-glossary.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    None
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/cpp11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    New features of C++11 I should be starting to use:
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/deeplearning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Deep learning
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/docker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Docker
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/ip6" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    IPv6
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/specs-pdf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Specs pdf
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/timewarrior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    TimeWarrior
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/xpxplained/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    XP Explained (Extracto del libro)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/branching-patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Branching Patterns
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Math
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Math
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/math-fundation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Math Foundations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/stats/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Statistics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/math-halfderivatives/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Half Derivatives
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/math-quadraticformula-alternative/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quadratic Formula
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/math-wavelets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Wavelets
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/math-3n1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Collatz Conjecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/math-binary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Binary math
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/math-geometric-algebra/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Geometric Algebra
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Music
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Music
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../music/music-harmony/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Harmony: Notes, Scales and Chords 🎶
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../music/music-harmony-scales/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Harmony: Scales 🎶
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../music/guitar-technics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Técnica de Guitarra 🎸
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../music/guitar-fret-navigation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Navegación en el mástil
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../music/pentatonicas.txt" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pentatonicas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../music/songs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Songs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../music/ukelele/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ukelele
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../music/drums/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Drum line composition (for non drummers)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../music/online-resources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Online resources
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Languages
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Languages
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/consonantes-afi.png" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Phonetics Consonants
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/vowels.jpg" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Phonetics Vowels
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/arabic-alphabet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Arabic script
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/arabic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Arabic
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/deutsch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Deutsch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/japan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Japanese
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/english-expresions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    English expresions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/english-old-pronoums/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    English old pronoums
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/english-prepositions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    English prepositions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/english-tenses/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    English tenses
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/vocabulary-somenergia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    English Vocabulary for SE enterviews
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/vocabulary-edibles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Vocabulary edibles
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/ruso-alphabet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ruso alphabet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/spanish/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Spanish
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/stylistic-figures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Retorical figures
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    History
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            History
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../history/cristianismo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    História del cristianismo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../history/manipulation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Técnicas de manipulación mediàtica
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../varios/economics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Economics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Psicology
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Psicology
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../varios/porque-creemos-en-mierdas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Porque creemos en mierdas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    3D
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            3D
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3d-production-pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3D animation pipeline
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blender-materials/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Blender material
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Laboral
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Laboral
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../laboral/comunicacio_de_crisi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Comunicacio de crisi
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../laboral/lideratges-autogestionat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lideratges autogestionat
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../laboral/reunionseficients/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Reunions eficients
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#preguntas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preguntas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#abreviaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Abreviaciones
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#glossario" class="md-nav__link">
+    <span class="md-ellipsis">
+      Glossario
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#navegacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Navegación
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Selection
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#object-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Object mode
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transformaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transformaciones
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visualizacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visualización
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proceso-de-produccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Proceso de producción
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="curso-blender">Curso Blender</h1>
+<p>Introducción: https://www.youtube.com/watch?v=2f5RaH5UCmo&amp;list=PLRfbgTMylROJvWR5IbrF6ZMSTKJ4ToJRV
+Modelado: https://www.youtube.com/playlist?list=PLRfbgTMylROKqXDVVCHobVyM-rVNUFH80
+Modificadores: https://www.youtube.com/playlist?list=PLRfbgTMylROKYYtPTxfqvTuTcQx8Bjzp_
+Ejemplos de Modelado Low-Poly: https://www.youtube.com/playlist?list=PLRfbgTMylROIE0G62Mi-PerWehj_AdEwi
+Iluminación: https://www.youtube.com/playlist?list=PLRfbgTMylROLeFQ52aIvtWtPovVKUhedV
+Materiales: https://youtu.be/jZQ8CE8MYgw</p>
+<h2 id="preguntas">Preguntas</h2>
+<ul>
+<li>Lattice deformation y el centro del objeto.</li>
+</ul>
+<h2 id="abreviaciones">Abreviaciones</h2>
+<ul>
+<li>Sh (Mayusculas)</li>
+<li>Cn (Control)</li>
+<li>Alt (Alt)</li>
+<li>RB/MB/LB Right/Middle/Left Mouse Button</li>
+</ul>
+<h2 id="glossario">Glossario</h2>
+<ul>
+<li>Objeto: Sujeto de transformaciones 3D.</li>
+<li>Object Origin/Center: Punto de referencia de las transfromaciones y de las coordenadas locales del objeto.</li>
+<li>Colleccion: Elemento organizativo que incluye otros objetos.</li>
+<li>Parent/Child: Un objeto es hijo de otro si hereda todas las transformaciones del padre</li>
+<li>Pivot point: Punto de referencia de la interficie con diversos usos </li>
+<li>Situar los objetos nuevos</li>
+<li>Punto fijo de trasformaciones afines (escalado, rotación...)</li>
+<li>Vertice (vertex): punto en el espacio que forma parte de una geometría</li>
+<li>Arista/Segmento (edge): segmento que une dos vértices como parte de una geometría</li>
+<li>Cara/Poligono (face): Area delimitada por segmentos</li>
+<li>Malla (mesh): Un objeto definido por un conjunto de caras, aristas y vertices que definen una superficie compleja.</li>
+<li>Quad: Cara delimitada por cuatro segmentos.</li>
+<li>Tri: Cara delimitada por tres segmentos.</li>
+<li>N-gon: Cara delimitada por mas de 4 segmentos.</li>
+<li>Polo: Vertice en el que convergen 3, 5 o mas vertices. Si convergen 1, 2, o 4, no es polo.</li>
+<li>Concave face: Cara definida por vertices no coplanares</li>
+<li>Crease: Sharpenes of an edge/vertex</li>
+<li>Face Loop: Sequencia de quads adyacentes por segmentos opuestos </li>
+<li>Se para cuando un vertice no tiene 4 segmentos.</li>
+<li>Edge Loop: Sequencia de segmentos adyacentes</li>
+<li>Edge Ring: Sequencia de segmentos que conectan dos edgeloops adjacentes</li>
+<li>Empty: objeto sin geometria pero al que afectan las transformaciones</li>
+<li>Topology: Disposicion de los Vertex-Edges-Faces para dar forma a una malla.</li>
+<li>Manyfold: Superficie cerrada sin intersecciones con ella misma.</li>
+<li>Primitiva: Objeto básico que se usa para modelar objetos mas complejos.</li>
+<li>Curve: Object defined as a line interpolated between several control vertices </li>
+<li>Poly(line): Puntos connectados por lineas rectas</li>
+<li>Path: Pasa por los puntos de forma suave</li>
+<li>Bézier: Nodos por donde pasa con control points para controlar las derivadas</li>
+<li>Nurbs: Non uniform rational basis spline: solo pasan por el primer y ultimo punto, el resto controlan la curbatura, conteniendola</li>
+<li>Control vertice:</li>
+<li>Curve segment: the interpolated object between two concurrent control points</li>
+<li>Cyclic curve: having the last control point connected to the first one</li>
+<li>Active object: Last selected object (even if later unselected). Single object ops and ops that take a distinctive object in a group.</li>
+<li>Selected objects:</li>
+</ul>
+<h2 id="navegacion">Navegación</h2>
+<p>MB -&gt; Orbitar (rotar alrededor del centro de la vista)
+Also numpad arrows
+Sh+MB -&gt; Panning (changes the orbit center
+Cn+MB -&gt; Zoom
+Also Numpad +-
+Also mouse wheeL
+Alt+MB drag -&gt; Isometric axis view closer in drag direction
+Alt+MB click -&gt; Center pan on click</p>
+<p>Numpad 5 -&gt; Toggle Isometric - Perspective
+Numpad 7-1-3: View from axis X Y Z
+Numpad 9: View from the other side (z up unless actually z)
+Numpad .: Adapt view to selected objects
+Numpad 0: Camera view
+Home: View all
+Numpad /: Isolate object (para editarlo sin ruido de los otros objetos)</p>
+<p>Para mayor control se aconseja manipular los objetos en vistas
+ortogonales alineadas a cada eje.</p>
+<h2 id="selection">Selection</h2>
+<p>T: para ver el panel de herramientas
+Por defecto esta en la herramienta de seleccion modo cuadro.</p>
+<p>W cicla modo seleccion:</p>
+<ul>
+<li>Click o cuadro (Recomendado por defecto)</li>
+<li>Circulo (con radio configurable)</li>
+<li>Selector por lazo</li>
+<li>Seleccion y mueve (en segun que contextos mas rapido, pero error prone)</li>
+</ul>
+<p>Modificadores de seleccion:</p>
+<ul>
+<li>Por defecto, substituye la seleccion anterior</li>
+<li>Shift: add or remove (toggle)</li>
+<li>Control: Shortest path ???</li>
+</ul>
+<p>Seleccion vs Activo</p>
+<p>El activo es el ultimo seleccionado, outline amarillo,
+a diferencia de los otros seleccionados que aparecen en naranja.</p>
+<p>Al lado del icono de seleccion aparece el activo
+Vemos la ultima seleccion al lado del icono y en la lista de objetos.</p>
+<p>Lista de objetos</p>
+<p>El nombre sale en el color del outline. Fondo azul.</p>
+<p>Selecciones inteligentes:</p>
+<ul>
+<li>Alt-click: selecciona un loop</li>
+<li>Cnt-Alt-click: selecciona un ring</li>
+<li>ShCn-Numpad+: Repite seleccion con intercalado</li>
+<li>CN-J join selected objects (el activo mantiene el punto origen)</li>
+<li>Sh-R Repetir la ultima operación</li>
+</ul>
+<h2 id="object-mode">Object mode</h2>
+<p>Sh+A -&gt; add an object</p>
+<p>Cursor: Es un punto de referencia que se usa para varias cosas.
+De entrada como punto de inserción de los nuevos objetos.
+Por defecto esta en el origen.</p>
+<ul>
+<li>Sh-RB Set Cursor (podemos arrastrar) </li>
+<li>Si mientras arrastramos presionamos Cn (no antes) hara snap</li>
+<li>CnSh-R posiciona el cursor en el medio de la geometria seleccionada</li>
+</ul>
+<h2 id="transformaciones">Transformaciones</h2>
+<ul>
+<li><strong>G</strong>rab</li>
+<li><strong>R</strong>otate</li>
+<li><strong>S</strong>cale</li>
+</ul>
+<p>Se entra en modo transformación,
+se acaba aceptandola on return o LB o abortandola con ESC o RB.
+Entre medias podemos hacer diferentes cosas.</p>
+<ul>
+<li>Mover el raton para controlar la transformación</li>
+<li>por defecto se limita al plano perpendicular de la vista</li>
+<li>Pulsar x y o z para limitar la transforamción a ese eje</li>
+<li>Pulsar X Y o Z para limitar la transformacion al plano perpendicular al eje</li>
+<li>Si repetimos xyzXYZ se referiran a las coordenadas locales en vez de las globales</li>
+<li>Indicar numericamente el valor de la transformación </li>
+<li>Numero de grados</li>
+<li>Arrastrando con MB, limita al eje mas cercano</li>
+<li>Arrastrando con Sh-MB, limita al plano mas cercano</li>
+<li>Sh en modo precision</li>
+<li>Cn invierte el modo snap (si esta habilitado, lo deshabilita y alreves)</li>
+<li>Si pulsamos B podemos escoger el elemento de snap.</li>
+</ul>
+<p>En la parte superior hay un toolbar con modificadores de las transformaciones.</p>
+<ul>
+<li>Ejes de referencia: Global, local, normales...</li>
+<li>Pivote para la transformacion: Centro del objeto, origen, cursor, el elemento activo </li>
+<li>El elemento activo es interesante para una selección múltiple que se transforme de forma solidaria, si no cada uno rotara sobre si mismo</li>
+<li>Modo snap. Que puede estar activo o no por defecto </li>
+<li>Recomendado desactivarlo y activarlo con Cn cuando se requiera.</li>
+<li>Desplegable para escoger que se usa como snap (vertice, arista, plano,</li>
+<li>Sh D: duplicar, a continuacion podemos aplicar transformaciones (por defecto empieza en Grab)</li>
+<li>Sh R: repetir operacion (por ejemplo si duplicamos con transformacion, volvera a transforma para hacer arrays y demas)</li>
+</ul>
+<h2 id="visualizacion">Visualización</h2>
+<p>en la esquina superior derecha esta el toolbar de visualizacion</p>
+<ul>
+<li>Que tipo de objetos ver y poder interacturar</li>
+<li>Que gizmos (elementos de control) ver</li>
+<li>Que overlays ver (ejes, rejilla...)</li>
+<li>Como renderizar los objetos (wireframe, sombreado, goroud...)</li>
+</ul>
+<h2 id="proceso-de-produccion">Proceso de producción</h2>
+<ul>
+<li>Layout: Encuadre de los elementos de la escena </li>
+<li>Se puede hacer con primitivas simples</li>
+</ul>
+<h1 id="edit-mode">Edit mode</h1>
+<ul>
+<li>Tab o Sh-R intercambia entre object mode y edit mode</li>
+<li>Edit mode es para modificar la geometria que tiene tres niveles de objetos</li>
+<li>1 vertices 2 segmentos 3 caras (seleccionamos con 1, 2 y 3)</li>
+<li>RB Menu del nivel seleccionado (vertex, edge, face) </li>
+<li>Tambien Cn-V, Cn-E, C-F)</li>
+<li>l (linked) selecciona toda la geometria enlazada a la selección</li>
+<li>Transformaciones (GSR) se aplican de forma similar. </li>
+<li>Diferencias?</li>
+<li>Alt-S - scale along normals</li>
+<li>GG - los mueve dentro del objeto superior </li>
+<li>Si esta activado el automerge, cuando arrastras a otro vertice/arista los fusiona</li>
+<li>Options Transform en el toolbar arriba a la derecha</li>
+<li>Explicitamente M (merge) en edit mode</li>
+<li>Dentro de una G de vertice, C permite extender el segmento, no solo acortarlo como GG.</li>
+<li>Escala es juntar o separar, mejor que trasladar uno a uno</li>
+<li>Cn J: Join, junta punts seleccionats amb un vertex</li>
+<li>Alt-click: Select loop</li>
+<li>Alt-Z: See through (tambien para seleccionar ocultos)</li>
+</ul>
+<p>Compte: Se propaga en coordenadas de vertice: suele ser bueno aplicar antes transformaciones
+Cn-A en modo objeto aplica transformaciones a los vertices, reseteando las transformaciones de objeto.</p>
+<h2 id="edicion-proporcional">Edicion proporcional</h2>
+<ul>
+<li>O (o en el toolbar) - Intercambia modo Transformacion proporcional </li>
+<li>Las transformaciones afectan fuera de la seleccion a la geometria conectada</li>
+<li>genera cambios mas orgánicos</li>
+<li>Podemos definir area de afectación</li>
+<li>PgUp PgDn o en el toolbar o con wheel</li>
+</ul>
+<h2 id="subdivide">Subdivide</h2>
+<ul>
+<li>Cn-R Subdivide </li>
+<li>Tienen que ser quads y no tener "cosas raras"</li>
+<li>Primero indicamos el eje, aproximando el cursor al segmento que queremos partir</li>
+<li>Una vez visualice el eje: <ul>
+<li>AvPag/RePag: numero de segmentos</li>
+<li>Tambien podemos escribir el numero de segmentos con numeros</li>
+<li>(LB/return para confirmar, RB/ESC para cancelar)</li>
+</ul>
+</li>
+<li>Despues entramos en el modo de transformacion de las divisiones por defecto una translación siguiendo el eje cortado <ul>
+<li>Podemos aplicar R y S</li>
+<li>ESC/RB para dejarlo por defecto en el medio</li>
+<li>Click para confirmar</li>
+</ul>
+</li>
+<li>Hasta que selecionemos otra cosa tendremos el Panel de Accion abierto para alterar los parametros anteriores y otros</li>
+</ul>
+<h2 id="cut">Cut</h2>
+<ul>
+<li>Last resource when subdivide is not the option </li>
+<li>Mas control, pero menos regular, puede derivar en mayas menos manipulables</li>
+<li>K - Cut </li>
+<li>C cut through, la linia atraviesa el otro lado (recomendado)</li>
+<li>Arrastrar: Freehand</li>
+<li>click: pivot para cortar con linia</li>
+<li>click on point: set the point as pivot</li>
+<li>Sh middle point cut</li>
+<li>Cn ignore snap</li>
+<li>RB-ESC undo last step</li>
+<li>Podemos hacer panning con las combinaciones de (Cn-Sh-Alt)MB</li>
+</ul>
+<h2 id="extrusion">Extrusion</h2>
+<p>Extruir es extender una geometria en una dirección.
+Hay muchas variaciones de como hacerlo.</p>
+<p>Alt-E: Menu extrusiones disponibles para las primitivas seleccionadas</p>
+<ul>
+<li>E Extrude Face/Vertex/Edge</li>
+<li>Extrude along normals no same direction as E does</li>
+<li>Extrude individually, break connections</li>
+<li>Extrude manifold, fusiona y divide con lo que genera </li>
+<li>Super util cuando extruimos para dentro y se generan planos bordeando la extrusion</li>
+<li>Extrude repeat, crece en segmentos, podemos añadir un step</li>
+</ul>
+<p>Ojo: si extruimos y cancelamos, lo que cancelamos es la transformación.
+La geometria queda duplicada, y eso genera ruido para otras operaciones.
+Para deshacer la extrusion de forma efectiva, Cn-Z.
+Si no nos hemos dado cuenta, M Merge by distance. Abajo deberia decir que ha eliminado geometria.</p>
+<p>Ojo: Muy sensible a la escala, normalmente querremos aplicar escala (Cn-A)
+antes de aplicar un bevel.</p>
+<h2 id="inset">Inset</h2>
+<p>Se aplica a faces (Se puede aplicar a segmentos cerrados?)</p>
+<p>I - Crea nodes en l'area interior a una distancia controlable con el raton
+- Consejo: aleja el raton antes de pulsar I para tener espacio de control
+- I - Individual (inset per face en vez de todo)
+- O - Outset: el espacio lo crea fuera
+- Cnt - Con el raton profundiza o
+- ESC/RB - Cancel
+- Return/LB - Acepta y
+- Queda seleccionado con las opciones de accion
+- Edge Rail: si hay una arista de un inset anterior, la sigue, ideal si queremos hacer insets concentricos
+- Offset even: Activado calcula distancia a las aristas en vez de a los vertices, que suele ser mas natural. (Deduzco por lo que hace. Se ve cuando incluyes varias faces)</p>
+<h2 id="bevel">Bevel</h2>
+<p>Dos tipos diferentes de bevel</p>
+<ul>
+<li>CnSh-B Vertex Bevel</li>
+<li>Cn-B Segment Bevel</li>
+<li>Aun podemos pasar de uno a otro con V</li>
+</ul>
+<p>Mecanica</p>
+<ul>
+<li>Cuando empieza controlamos la extension con la distancia al centro de la pantalla </li>
+<li>A area (default)</li>
+<li>P profile, concavidad/convexidad</li>
+<li>S segments, subdivisiones</li>
+<li>Con la rueda o PgUp/PgDn controlamos el numero de segmentos</li>
+<li>Al confirmar con RB o Return podemos aun alterar los parametros en el panel de operacion abajo izquierda (puede estar colapsado)</li>
+</ul>
+<p>Truco: De vertice a redonda. Vertex Bevel dependiendo del perfil, genera estrellas, redondas, rombos</p>
+<p>Truco: Si aplicamos un Edge Bevel a todo el loop, mantendremos la topologia.
+Y al revés si no lo hacemos en todo el loop o si lo hacemos de vertice la rompemos.</p>
+<h2 id="unir-geometrias">Unir geometrias</h2>
+<ul>
+<li>Cn-X disolver (eliminar geometria pero sin generar vacio)</li>
+<li>JF Fill cavity</li>
+<li>J Join vertex (en orden de selección)</li>
+<li>(Face Menu) Poke face: crea un vertice en el medio y lo enlaza con los vertices de la face</li>
+</ul>
+<h2 id="symmetrize">Symmetrize</h2>
+<p>Menu Mesh/Symmetrize:</p>
+<p>Compara las geometrias seleccionadas a uno y otro lado de un eje,
+y hace que la una sea igual que la otra. pe. +X -&gt; -X.
+Lo no seleccionado lo mantiene.
+Quiere decir que segun lo que tengamos seleccionado
+en uno o otro lado, podemos, no intencionadamente, perder geometrias o duplicarlas.</p>
+<h2 id="conectar-o-penetrar-geometrias">Conectar (o penetrar) geometrias</h2>
+<p>Menu Edge / Bridge Edge Loops</p>
+<p>Seleccionados dos grupos de aristas inconexos entre ellos,
+genera geometria para conectar uno con otro.
+J une dos vertices de la misma geometria.</p>
+<h2 id="organizando-los-modelos">Organizando los modelos</h2>
+<p>M mueve a la coleccion existente o nueva
+Aparecen en el panel con la estructura de la escena a la derecha.</p>
+<ul>
+<li>Cn-P: Establece relacion padre (activo) y hijo (selecionados no activos) </li>
+<li>Los hijos heredan las transformaciones 3D del padre, las suyas locales</li>
+<li>Cuando establecemos la relacion, podemos mantener o no las transformaciones absolutas <ul>
+<li>Si las mantenemos, se traduciran a transformaciones respecto al padre</li>
+<li>Si no, las locales se aplicarán encima del padre.</li>
+<li>Ojo si hay transformaciones no aplicadas.</li>
+</ul>
+</li>
+</ul>
+<h2 id="otros-objetos">Otros Objetos</h2>
+<h3 id="curvas">Curvas</h3>
+<p>Una curva es un objeto creado a partir de una secuencia
+de puntos que se conectan por segmentos usando diferentes
+tipos de interpolación.</p>
+<ul>
+<li>Radius: A cada punto podemos darle un grosor</li>
+<li>Weight: TODO</li>
+<li>Tilt:</li>
+<li>Hook:</li>
+</ul>
+<p>Alt-S Cambia el radio del punto seleccionado
+El radio de todos los puntos se controla
+desde las propiedades.</p>
+<ul>
+<li>E Extrude point and move</li>
+<li>F Fill connect disconnected points</li>
+<li>x borrar</li>
+<li>Cn-T Node Tilt</li>
+<li>Alt-T Clear Node Till</li>
+<li>V Toggle Node type</li>
+<li>Sh-N</li>
+</ul>
+<p>Herramienta de dibujar</p>
+<ul>
+<li>Cursor en le plano perpendicular que pasa por el cursor</li>
+<li>Surface, plano encima de la superficie que encuentra. </li>
+<li>Util para cables y raices</li>
+</ul>
+<h3 id="redes-3d-lattice">Redes 3D (Lattice)</h3>
+<p>Una red 3D es una matriz de puntos con 8 vecinos cada uno.</p>
+<h3 id="latices">Latices</h3>
+<h2 id="geometry-modifiers">Geometry modifiers</h2>
+<p>Los modificadores per</p>
+<p><strong>Generate/Mirror:</strong> Genera geometria simétrica a origen de coordenadas.</p>
+<ul>
+<li>Alternativa al simetrize, pero en vez de puntual lo aplica continuamente.</li>
+<li>La geometria espejo no existe realmente hasta que no aplicamos el modificadores con lo cual se genera la geometria y se pierde el modificador.</li>
+<li>Hay que marcar la opcion de cliping para que no cruzar el plano de reflexion.</li>
+</ul>
+<p><strong>Generate/Solidify:</strong> Da grosor a una superficie creando una superficie paralela y cerrandola si quedase abierta.</p>
+<ul>
+<li>Offset hacia donde crece la cara: -1 interno, 0 igual, +1 externo</li>
+</ul>
+<p><strong>Generate/Array:</strong> Repite una geometria.</p>
+<ul>
+<li>Alternativa al Sh-R</li>
+<li>Offset para cada eje </li>
+<li>Relative: Factor relativo del tamaño del objeto</li>
+<li>Constant: independiente de la medida del objeto en parametros</li>
+<li>Object: Especificamos un objeto la transformacion del cual se aplica repetidamente <ul>
+<li>Se suele usar con un objeto Empty</li>
+<li>Permite hacer rotaciones y escalados</li>
+</ul>
+</li>
+</ul>
+<p><strong>Generate/Screw:</strong> Genera un objeto por revolución de otro</p>
+<ul>
+<li>Eje</li>
+<li>Steps de revolucion</li>
+<li>Angulos de inicio y final</li>
+<li>Desplazamiento por vuelta para hacer espirales</li>
+</ul>
+<p><strong>Deform/Curve:</strong></p>
+<p><strong>Deform/Lattice:</strong> Deformacion respecto a un laticce regular.</p>
+<h2 id="materiales">Materiales</h2>
+<p>Propiedades</p>
+<p>Transmisivos</p>
+<p>Activar transmisivo</p>
+<p>Ponerle un grosor</p>
+<p>Cn L / Link Materials (Pasar un material del objeto activo a los seleccionados)</p>
+<h2 id="organizacion-y-limpieza">Organización y limpieza</h2>
+<p>Cosas que tenemos que limpiar:</p>
+<ul>
+<li>Eliminar geometrias duplicadas o superfluas</li>
+<li>Aplicar modificadores de geometria</li>
+<li>Convertir Curvas -&gt; A malla</li>
+<li>Coherencia en las normales</li>
+<li>Agrupar sub-objetos en objetos</li>
+<li>Aplicar la escala y rotación</li>
+<li>Origen de los objetos en el punto de aplicación</li>
+<li>Nombrar los assets</li>
+</ul>
+<p>CnJ Unir objetos</p>
+<p>Transformar curvas</p>
+<p>Consejo: Mantener un objeto duplicado de trabajo y otro convertido en mesh para usar</p>
+<p>Cn . Move el punto de origen</p>
+<h3 id="normales">Normales:</h3>
+<p>Ver Normales: Toolbar overlays / Face Orientation</p>
+<p>Sh-N recalcula normales automaticamente</p>
+<p>TODO: Invertir una concreta</p>
+<p>F2: renombrar objeto</p>
+<p>Object/Asset/Mark as asset</p>
+<h2 id="iluminacion">Iluminación</h2>
+<h3 id="environment">Environment</h3>
+<p>https://www.youtube.com/watch?v=IXeOQLvbvhI&amp;list=PLRfbgTMylROLeFQ52aIvtWtPovVKUhedV&amp;index=3</p>
+<p>El environment es clave para dar naturalidad a la iluminación.</p>
+<ul>
+<li>Tono para la luz difusa</li>
+<li>Fondo para los reflejos</li>
+</ul>
+<p>Pestaña de propiedades World.
+Tambien lo podemos editar como un material modular en el Shader Editor (o Pestaña layout Shader)
+En el Shader Editor en vez de Object seleccionamos World para ver el material.</p>
+<p>El shader de world tiene dos salidas: Surface y Volumen</p>
+<p>Por defecto Volumen desconectado y Surface esta conectado a un Background.
+Podemos poner el background a un color plano y ya tenemos efecto.
+Strength hace que el color tenga mas efecto en el modelo.</p>
+<p>Podemos conectar el color a otro modulo por ejemplo un environment texture.
+Las Environment texture son imagenes que se mapean a coordenadas polares (.exr).
+Muchos exr en dominio publico en https://polyhaven.com</p>
+<p>Como otros shaders se evaluan para cada punto, en este caso de la esfera.
+Ese punto viene dado por un vector que es el input de 'vector' de "Environment Texture".
+Podemos transformar el exr (rotar, desplazar, escalar...)
+aplicando un Mapping al vector que entonces lo tenemos que tomar de "TextureCoordinates:Generated".</p>
+<p>Podemos modular el color de la textura interponiendo un Hue/Saturation/Value y cambiandole el Hue.
+Podemos augmentar el contraste para darle dramatismo mas a los reflejos.</p>
+<h2 id="luces-puntuales">Luces puntuales</h2>
+<p>Se pueden añadir luces omni añadiendolas como objeto.
+Son luces que decrecen con la distancia.
+Tienen un color y un radio de emision (cuan grande es la fuente).
+El radio afecta a los bordes de las sombras que se veran mas difuminados si es grande,
+y a los objetos que estan dentro del radio que se visualizaran sin sombra.</p>
+<h2 id="luces-solares-direccionales">Luces solares (direccionales)</h2>
+<p>DUDA: Porque no me hacen efecto?</p>
+<h2 id="motor-de-renderizado">Motor de renderizado</h2>
+<p>Propiedades de "Render" icono Camara.
+Motor de renderizado EEVEE (Real-time)</p>
+<p>Mil formas de hacer y mejorar outlines en Blender: https://www.youtube.com/watch?v=cnQu1kMs49s</p>
+<h2 id="asset-library">Asset library</h2>
+<p>Menu Object/Asset</p>
+<p>Cuando arrastramos un asset a una escena busca una superficie donde soportarlo adaptando la orientacion si la superficie no es plana.</p>
+<p>Modificador Boleanos</p>
+<p>Especificamos otro objeto que recorta. Si modificamos el objeto, se modifica el recorte.</p>
+<p>Normalmente no queremos ver los recortadores. DUDA: Como?</p>
+<p>Si hay mas de un recortador hay que crear un modificador con el nuevo objeto.</p>
+<p>Seleccionar random</p>
+<p>Substituir objeto Link Object data: Substituye un objeto por</p>
+<h2 id="camara">Camara</h2>
+<p>La camara se añade como objeto</p>
+<p>CnAlt Numpad 0 Pon la camara en la vista</p>
+<p>Numpad 0 Va a la vista de camara (o el icono de la camara debajo de los ejes)</p>
+<p>El candado debajo de los ejes permite arrastrar la camara con la vista.</p>
+<p>El icono de la camara.</p>
+<h2 id="iluminacion_1">Iluminación</h2>
+<p>Los materiales emisivos afectan a los otros objetos.</p>
+<p>Pestaña propiedados World</p>
+<p>Si creamos uno, creara un gris homogeneo. Shading.</p>
+<p>Podemos dar un hdi (polyhaven.com).</p>
+<p>Activar Propiedades Render / Raytracing</p>
+<p>Fast GI Aproximation:</p>
+<p>TODO: Como activar sobras por oclusion??</p>
+<p>En el modo Shading</p>
+<p>Si no queremos que se vea el hdr solo que de color, Render Film Transparent</p>
+<p>Añadir un TextureCoords y un Vector Mapping para manipular el mapeo polar.</p>
+<p>Alt arrastrar lo desconecta.</p>
+<p>Mix Color: Combina dos fuentes de color</p>
+<p>Plano invisible: Bloquea luz pero no aparece. Opciones de objeto: visibility / camera.</p>
+<p>Point lights: Para puntos de luz (bombillas, velas...)</p>
+<ul>
+<li>Radio: zona  de emision</li>
+</ul>
+<p>Consejo: si hay un grupo de luces, no es necesario una luz por fuente, hacer una fuente con radio amplio.</p>
+<h3 id="gloom">Gloom</h3>
+<p>Workspace Compositing</p>
+<p>Glare type Bloom</p>
+<h2 id="atmosfera-nieblapolvo">Atmosfera: Niebla/Polvo</h2>
+<ul>
+<li>Creamos un objeto que defina el volumen</li>
+<li>Quitarle el surface</li>
+<li>Añadirle volumen</li>
+<li>Bajamos density</li>
+<li>Hay que activar el aspecto 'volumen' en la luz</li>
+<li>En "render" hay opciones de calidad (rsolucion) pra volumen</li>
+<li>La niebla tiene color, por defecto neutro</li>
+</ul>
+<p>Shaders:</p>
+<p>Density:</p>
+<p>Emision: luz interna de la 'niebla'</p>
+<p>Coordenadas:</p>
+<ul>
+<li>generated: respecto a las dimensiones del objeto</li>
+<li>uv: el mapeo que hagas</li>
+<li>normal, camera, object, window, reflection?</li>
+</ul>
+<h2 id="renderizado">Renderizado</h2>
+<p>- hdri</p>
+<h1 id="modelado-personaje">Modelado personaje</h1>
+<h2 id="herramientas-subdivision-surface">Herramientas: Subdivision Surface</h2>
+<p>Subdivision surface: modifier que altera una geometria subdividiendo y suavizando</p>
+<p>Como modificacor en Generator/SubdivisionSurface pero tambien con Cn1, Cn2, Cn3...Cn5</p>
+<p>Hay un nivel diferente para render y para viewport (diseño)</p>
+<p>Catmul clark es el algoritmo, simple no deforma</p>
+<p>Queda todo muy suavizado, podemos hacer loops extra para marcar mas las formas con Subdivide, Inset o Extrude.</p>
+<p>Modos de visualizacion:</p>
+<ul>
+<li>On cage: proyecta la geometria real a la interpolada</li>
+<li>Los otros son para ver el interpolado en Edit, object o render.</li>
+</ul>
+<p>Control click derecho en modo edicion con plano seleccionado</p>
+<p>Marcar segmentos como creasing haces que sea una arista fuerte.</p>
+<ul>
+<li>Equivalente a la</li>
+</ul>
+<h2 id="carga-de-referencias">Carga de referencias</h2>
+<p>Imagen de referencia sirve para</p>
+<p>Sh-A / Image / Reference o Mesh plane</p>
+<p>Reference: mas brillante</p>
+<p>Mesh plane: podemos recortarlo alterando la geometria</p>
+<ul>
+<li>Centrar el origen en los pies</li>
+<li>Escalar la imagen al tamaño real</li>
+</ul>
+<p>Grid field (para cerrar puntas)</p>
+<p>Inset con symmetry si es en el centro para que junte los dos lados 'B' o boundary en el panel de tool.</p>
+<h2 id="cuerpo">Cuerpo</h2>
+<h2 id="manos">Manos</h2>
+<ul>
+<li>Cubo</li>
+<li>Escalamos a la palma</li>
+<li>Dividimos en tres: molla, pulgar, tarso</li>
+<li>Dividimos los 4 dedos</li>
+<li>Ajustamos el tamaño de cada dedo</li>
+<li>Con edicion proporcional deformamos la salida de los dedos para que esten avanzados el medio i anular. Tambien hara que las normales diverjan</li>
+<li>Extruimos los dedos por separado</li>
+<li>Reducimos las esquinas de los quads de los extremos en la muñeca</li>
+<li>Extruimos la muñeca de los cuads del medio</li>
+<li>Extruimos el pulgar, movemos a y y escalamos</li>
+<li>Damos mas geometria para las falanges (loop cut en 3 segmentos</li>
+<li>Añadimos dos loop cuts en los tarsos</li>
+<li>Ajustamos la geometria</li>
+<li>Cn-1 para aplicar subsurface</li>
+<li>En las uniones de los dedos quedara un polo de 6 puntos que conviene corregir </li>
+<li>para corregirlo hacemos un bevel de los segmentos que separan y la primera continuacion por ambos lados</li>
+<li>Dividimos el bevel por el medio</li>
+<li>Del bevel quedara una por cada lado, gg para fusionarla al anterior vertice, y borrar el segmento de enmedio</li>
+<li>Esta bien si solo hay vertices con 4, 3 o 5</li>
+<li>Para que la muñeca coincida con los 8 vertices del cuerpo añadir un loop cut transversal</li>
+<li>Relax de la muñeca para juntarlo con el cuerpo</li>
+<li>Copiarlo al cuerpo</li>
+</ul>
+<h2 id="ropa">Ropa</h2>
+<ul>
+<li>Sh-D Duplicar</li>
+<li>P para separar en otro objeto</li>
+<li>Alt-S para inflar o reducir</li>
+<li>Modelamos o ajustamos </li>
+<li>Cuellos y mangas</li>
+<li>Solidify al acabar (si hiciera falta</li>
+</ul>
+<h2 id="rostro">Rostro</h2>
+<p>Si modelamos la cara  con geometria:</p>
+<ul>
+<li>Ojos </li>
+<li>Normalmente en los ojos y las cabidades tenemos un inset que los envuelve.</li>
+<li>Dejar un quadentre los ojos y el centro. Al juntarse los dos insets de los ojos deja un vertice de 6, mala topologia</li>
+<li>DUDA: Como repartir los loops?</li>
+<li>Profundicar la cuenca</li>
+<li>Mover el cursor al centro del parpado</li>
+<li>insertar una uvsfere, rotarla para que el polo quede en el centro</li>
+<li>Suavizar</li>
+<li>Modifier Mirror pero tomando la cabeza como punto de referencia</li>
+<li>Nariz </li>
+<li>como esta en el eje, hacemos un inset con boundary activado (B mientras lo arrastramos)</li>
+<li>Extrude para darle volumen, mover los vertices para darle la caracteristica</li>
+<li>Boca </li>
+<li>Seleccionamos dos linias horizontales de quads</li>
+<li>inset con boundary</li>
+<li>borrar el interior de la boca</li>
+<li></li>
+<li>marcar los labios con un loop extra</li>
+<li>cerrar la cavidad de la boca por dentro</li>
+<li>Dientes y lengua </li>
+<li>Tomamos un loop de abajo de la boca y lo extruimpos</li>
+<li>Orejas </li>
+<li>construirlas afuera con geometria similar en el punto de inserción</li>
+<li>Cabello </li>
+<li>Corto: Seleccionar la zona, duplicar i inflate o extrude along the normals</li>
+<li>Largo liso: partir de un plano subdividir, modelar y solidify</li>
+<li>No pasa nada si entra en el cuerpo</li>
+</ul>
+<p>Con el mouse encima del modificador, en modo objeto, Cnt-A lo aplica</p>
+<p>Para recortar visualmente, en modo objeto, Alt b para hacer un corte visual y cnt-alt-b par adeshacerlo</p>
+<ul>
+<li>Cabello largo con mechones: </li>
+<li>Añadir curva tipo path</li>
+<li>Escalar , pero <strong>en modo edicion</strong> para evitar problemas, de 4 metos</li>
+<li>Rotar para orientarlo en z (el primer mechon para trabajarlo bien)</li>
+<li>Curva tipo path porque es mas facil de manipular y tenemos que manipular muchos</li>
+<li>Añadimos una curba tipo circulo para la sección (no mesh/Circle)</li>
+<li>Escalamos tambien en modo edicion pero la dejamos en el plano xy podemos rotar en modo objeto pero en modo edicion tiene que seguir en xy locales. puede ir bien rotarlo en objeto para editar a la vez el perfil y la longitudinal.</li>
+<li>En la primera curva  ponemos la segunda como seccion: Geometry/Bebel/Object</li>
+<li>Ajustamos la segunda para ajustar el perfil del mechon</li>
+<li>Controlamos el grosor del mechon con el radio de los nodos del path longitudinal con Alt-S</li>
+<li>A partir de ahi deformamos el mechon y copiamos y pegamos</li>
+<li>Consejo: mechones gruesos de bulto para la forma basta y mechones mas finos de detalle</li>
+<li>Consejo: combinar diferentes secciones</li>
+<li>Consejo: Mechones que ya tengan el aspecto de varios para simplificar</li>
+<li>Cnt-T Twist (giro del perfil respecto a la curva</li>
+</ul>
+<h1 id="materiales-procedurales">Materiales procedurales</h1>
+<p>Extension: NodeWrangler para manejar mejor los grafos</p>
+<ul>
+<li>Cn-Sh-click sobre un nodo envia el nodo a la salida de color. Se usa para debugar nodos intermedios.</li>
+<li>Para añadir una textura, seleccionar el PrincipleBDF y Cnt-T. Crea una textura el mapeo afin y la inyección de coordenadas.</li>
+<li>Cnt-Arrastra RB para cortar conexiones</li>
+</ul>
+<p>Texture Coordinate:</p>
+<ul>
+<li>UV: Coordenadas de textura editables</li>
+<li>Generated:  Ajusta la imagen a las dimensiones del objeto</li>
+<li>Object: Se mapea la textura a coordenadas de objeto, un metro de espacio de objeto a partir del punto de origen del objeto. (Ojo si aplicamos transformaciones, cambiaran)</li>
+<li>...</li>
+</ul>
+<p>No tener nada conectado a un vector equivale a Generated</p>
+<p>Con el nodewrangler si cortamos un cable con shift y arrastrar creamos un nodo vacio para hacer connexiones</p>
+<ul>
+<li>Mapping: Transformaciones afines</li>
+<li>ColorRamp: degradados de color</li>
+<li>Mix: balancea entre os coloreas A y B segun un Factor (A y B pueden ser texturas o otra fuente de color) </li>
+<li>Metodo de composicion: Mix, multiply...</li>
+<li>Adopta el nombre del metodo pero lo buscamos como Mix</li>
+<li>Math: (Add, multiply,...) Cambia de nombre a la op pero lo buscamos como Math</li>
+<li>SeparateXYZ</li>
+<li>Gabor (mirarlo en casa)</li>
+<li>Gradient Texture: Permite hacer radiales, esferical, conical...</li>
+<li>Texturas procedurales: Voronoi, FractalNoise, Wave, Checker, Gradien  (Spherical, radial, linear)</li>
+<li>TextureImage: </li>
+<li>Projection: <ul>
+<li>Flat: x,y a 0..1 de la imagen y repite en z</li>
+<li>Cube: escoge el eje que se usa para proyectar dependiendo de la orientacion de la cara</li>
+<li>Sphere, Tube: Desde esos objetos usando la z como control</li>
+</ul>
+</li>
+<li>How to extend beyond 0..1: Repeat, Extend, Repeat...</li>
+</ul>
+<h3 id="cuero">Cuero</h3>
+<p>Objetivo, micro proturberancias reflectivas.
+De base un material de color marron poco rugoso (para generar reflexion),
+y aplicaremos a la altura ruido voronoi suave.</p>
+<ul>
+<li>BSDF con color marron oscuro(ie #6D2C00FF), rougness a 0.25</li>
+<li>A la normal, Bump con strength 0.075</li>
+<li>Al height del Bump (no a la normal), color ramp </li>
+<li>Gradient: Blanco a negro -&gt; Negro a Blanco (invertir puntos)</li>
+<li>interpolacion Linear -&gt; Ease</li>
+<li>Al Fac del Bump, un Math power, con base 2.5</li>
+<li>A la Base de Exponent, el Distance de Voronoi Texture </li>
+<li>Voronoi calcula la distancia a una serie de puntos colocados al azar</li>
+<li>Feature: Smoothed F1 <ul>
+<li>si f1 es la ditancia al punto generador mas cercano, el smoothed es la suma ponderada a los puntos mas cercanos</li>
+</ul>
+</li>
+<li>Scale: 5 -&gt; 250 para que sean pequños</li>
+<li>Random: 1 -&gt; .8 (No tiene mucho efecto)</li>
+<li>Vector de Voronoi a Object coordinates</li>
+</ul>
+<h3 id="tejido">Tejido</h3>
+<ul>
+<li>Object Coords -&gt; Magic Texture </li>
+<li>Genera un patron reticular cuya R se parece a un tejido cruzado</li>
+<li>Scale: 100</li>
+<li>Magic.color -&gt; Factor de Ramp </li>
+<li>Bajar el blanco para crear una meseta blanca al final</li>
+<li>Crear un gris y subirlo para que tenga mas grises intermedios</li>
+<li>Ramp.Result -&gt; Mix.Factor </li>
+<li>A: Color de base</li>
+<li>B: Color contratejido</li>
+<li>TODO: en el ejemplo no seteados</li>
+<li>Mix.Result -&gt; Mix/Overlay.A</li>
+<li>Noise </li>
+<li>Generara un poco de variacion en el patron</li>
+<li>Scale 1 -&gt; 10</li>
+<li>Detail: 2 -&gt; 5</li>
+<li>Roughtness: .5 -&gt; 1</li>
+<li>Noise.Color -&gt; Mix/Overlay.B </li>
+<li>Factor .25</li>
+<li>Mix/Overlay.Result -&gt; Surface</li>
+<li>Ramp.Result -&gt; Bump.Height </li>
+<li>Strength 1.0 -&gt; 0.075</li>
+<li>Ramp.Normal -&gt; Normal</li>
+</ul>
+<h3 id="madera">Madera🚨</h3>
+<p>Coordenadas Objeto -&gt; estiradas en una dimension -&gt; NoiseTexture scale 0.5 -&gt; Noise Texture scale 5.0 -&gt; Color ramp para contraste -&gt; Color ramp para colores de vetas -&gt; Surface color</p>
+<p>Si queremos la parte de anillos de la madera: Wave con distorsion y ajustando Detail</p>
+<h3 id="metal">Metal 🤘</h3>
+<h3 id="baking-procedural-materials">Baking procedural materials</h3>
+<p>Crear una imagen de textura a partir de un material procedural. Para optimizar</p>
+<p>A partir de las uv de un objeto. Creamos un nodo TextureImage y una imagen nueva.</p>
+<p>En Render/Bake, seleccionar</p>
+<h3 id="rigging">Rigging</h3>
+<p>Add Armature: Crea un hueso</p>
+<p>(Para humanoides, mas practico usar un addon que te los crea ya)</p>
+<p>En el modo edicion editamos los cabos. Con extrude creamos</p>
+<p>Control tab para entrar en el modo pose.</p>
+<p>En modo Objeto, seleccionamos el skiin  y el bone como activo: Cnt-P  Armature with automatic weights</p>
+<p>Pesos: influencia que tiene cada objeto en  cada elemento de la geometria</p>
+<p>Modo Weight paint permite ver y editar los pesos, una vez vinculado</p>
+<p>Lo hace via vertex groups. el vinculo con el hueso se hace via nombre del grupo, si renombramos lo rompemos.</p>
+<p>Desconect bone: sigue estando vinculado pero no</p>
+<p>Los huesos fluyen en y, usar doble xx yy zz para rotar en los ejes locales.</p>
+<p>Para los dedos rotar en z con individual origins.</p>
+<p>Simetria: Poner nombre a los huesos con left o right en el nombre. Seleccionar los que necesitan simetrico y seleccionar simetrize.</p>
+<p>Objetos auxiliares, hacemos tambien parent a pero sin pesos y en modo pose.</p>
+<p>Vincular a un solo hueso:</p>
+<ul>
+<li>En modo objeto, seleccionar el objeto y la armadura, la ultima como activa</li>
+<li>Entrar en modo pose</li>
+<li>Seleccionar el hueso</li>
+<li>Ctr-P / Bone</li>
+</ul>
+<h4 id="animando-la-ropa">Animando la ropa</h4>
+<p>Ropa, hay mas distancia entre el hueso y la ropa que al cuerpo. Eso hace que los pesos automaticos no apliquen la misma intensidad.</p>
+<p>Seleccionamos ropa y esqueleto: empty loops. Asigna los grupos pero no asigna peso.</p>
+<p>Modificador data transfer.  Como source el cuerpo, marcamos vertex data y dentro, vertex group, Nearest vertex. A veces al cambiar la pose canvia el nearest y genera artefactos. Queremos aplicar el modificador en la rest pose para que se quede fijo.</p>
+<p>Aquellas partes que no se mueven solidarias podemos pintarles los pesos para borrarlas.</p>
+<p>Para editar los pesos: seleccionamos los huesos y el activo es el skin. Con alt-click cambiamos de hueso.</p>
+<p>Se puede seleccionar geometria en modo edicion ir a modo weight y activar mascara (donde?)</p>
+<p>alt p ctr p</p>
+<p>TODO: Inverse kinematics
+TODO: Constraints</p>
+<h3 id="creando-acciones">Creando acciones</h3>
+<p>Las acciones permiten abstraer animaciones a un más alto nivel: correr, disparar, saltar, agacharse, mirar...
+Son muy utiles para juegos, normalmente van asociadas a los estados del personaje.
+Pero tambien para animación ya que permiten abstraerlas y solo ir al detalle para hacer micro ajustes.
+Además existen librerias que ya contienen acciones animadas hechas.</p>
+<ul>
+<li>Selecciona el tab Animation.</li>
+<li>En el panel inferior cambiar Dope Sheet -&gt; Action Editor</li>
+<li>Clica en New y pon un nombre a la accion </li>
+<li>"default" sera la pose que se vea cuando cargas el asset en Godot</li>
+<li>si acaba en "loop" Godot lo interpretara como una animación en bucle</li>
+<li>Clica en el Shield para que la animacion no se borre aunque no este usada</li>
+<li>Desde el panel en modo Pose selecciona todos los huesos (o al menos los relevantes para la pose)</li>
+<li>Presiona 'i' para insertar las modificaciones en el keyframe</li>
+<li>Atajos </li>
+<li>Click en los puntos selecciona (todos) los valores del keyframe</li>
+<li>Sh-chilc añade a la seleccion</li>
+<li>Wheel -&gt; zoom</li>
+<li>MB drag -&gt; pan</li>
+<li>Space play</li>
+<li>Left-Right move frame</li>
+<li>Sh-Left rebobina</li>
+<li>Sh-Rigth ff</li>
+<li>Cnt-Ini Setea el loop de reproduccion</li>
+<li>Cnt-Fin Setea el fin del loop de reproduccion</li>
+<li>G mueve el key frame en el tiempo</li>
+</ul>
+<p>https://github.com/dynamic-X-LAB/DynamicPose</p>
+<h2 id="texture-painting">Texture painting</h2>
+<p>freestylized.com</p>
+<ul>
+<li>Partimos de geometrias simples: </li>
+<li>Cubos escalados, aplicar escala y hacer bebel minimo en las aristas.</li>
+<li>Lo mismo con cilindros</li>
+<li>Mas adelante podriamos aplicar detalles, estilizar, subdividir... ahora mantenerlo simple, muchos detalles los haremos con la textura</li>
+<li>Marcar cortes de la geometria para estirarlo </li>
+<li>Seleccionar vertices</li>
+<li>Marcarlo como seam: U (UV) / Mark seams</li>
+<li>Queda marcado en rojo (en modo solido)</li>
+<li>Seleccionamos todo</li>
+<li>U / Unwrapp / angle based</li>
+<li>Ojo con las opciones de unwrap: <ul>
+<li>margin: sensible a la resolucion de la imagen para que haya pixeles de separacion (unidades 1 = ancho/alto)</li>
+</ul>
+</li>
+<li>F Cambia tamaño pluma (movemos raton y click para selecccionar</li>
+<li>Sh-F Camba strength</li>
+<li>Pipeta Cnt-Sh-X (Si ademas haces click lo añades a la paleta)</li>
+<li>Crear una textura nueva <ul>
+<li>Camino node: añadimos un Texture image y asignamos imagen nueva</li>
+<li>Camino uv editor:</li>
+</ul>
+</li>
+</ul>
+<p>Almacenaje externo de texturas</p>
+<p>Consejo: una carpeta con texturas al nivel del archivo blender, indicar los encaminamientos relativos</p>
+<p>Encaminamientos relativos permiten relocalizar el proyecto</p>
+<p>File/external data / Make path relative</p>
+<p>Solo pinta en el objeto activo</p>
+<p>Altq para cambiar de pieza mientras estamos en texture-painting</p>
+<p>Panel de herramienta en la derecha replicado arriba en el toolbar y en el desplegable tool del panel.</p>
+<h2 id="extension-univ">Extension Univ</h2>
+<ul>
+<li>Quadrify: convertir los cuads en rectangulos</li>
+<li>Si la textura es tileable podemos hacer que los uv salgan de la textura.</li>
+<li>Componentes de texturas </li>
+<li>Ambient oclusion</li>
+<li>Displacement map (Hay que activarlo en el render)</li>
+<li>Normal (GL, y DirectX)</li>
+<li>Roughness</li>
+<li>Metalic</li>
+<li>Albedo/Base Color</li>
+<li>CnSh-T Seleccionamos todos los mapas y los mapea a el principal</li>
+<li>AltS invierte los puertos de entrada (mixer)</li>
+<li>UV / Pack island: reposiciona las pieles en la textura</li>
+<li>Stack: poner objetos similares encima unos de otros para aprovechar la misma textura.</li>
+</ul>
+<h3 id="texturas-complejas">Texturas complejas</h3>
+<ul>
+<li>Com aplicar Ambient occlusion correctamente: https://www.youtube.com/watch?v=AguPCHZuF88</li>
+</ul>
+<h3 id="tecnicas">Técnicas</h3>
+<ul>
+<li>Mascaras: usar una textura  como "factor" para mezclar otras dos con un "Mix" </li>
+<li>La idea es reaprovechar la textura original para otros objetos</li>
+<li>Proyecciond de plano shrinkwrap envuelve una maya sobre otro objeto aplicando el material </li>
+<li>Crear un plano</li>
+<li>Hacer las subdivisiones (se necesita una malla detallada)</li>
+<li>Aplicar una textura con alpha</li>
+<li>Modificador shrinkwrap en el objeto</li>
+<li>Aplicar offset para que quede por encima</li>
+<li>Vertex painting </li>
+<li>Usar colores para marcar la geometria y usarlo para separar materiales</li>
+</ul>
+<h3 id="plantas-texturas-con-alpha">Plantas (texturas con alpha)</h3>
+<ul>
+<li>Son planos con una textura con alphas</li>
+<li>Usar un formato de fichero que soporte alphas (png, webp...)</li>
+<li>Usar un programa de dibujo a parte</li>
+<li>eliminar el fondo o desactivarlo para tenerlo como referencia visual</li>
+<li>en la capa superior, seleccionar la forma de la planta</li>
+<li>crear el canal como alpha..</li>
+<li>Truco, poner un fondo de color un poco mas oscuro que el color base del borde para suavizarlo</li>
+<li>En blender conectar el alpha de la textura a el puerto alpha del bsdf</li>
+<li>Nos tenemos que asegurar que el backface culling esta desactivado</li>
+<li>Truco: dividir el plano y separar (V) las hojas y montar una planta mas 3d deformando y transformando las hojas </li>
+<li>Si movemos los nodos se deformara la Para mover los nodos con GG para no modificar las V's</li>
+<li>Truco, repetir el mismo plano a diferentes escalas y rotado</li>
+</ul>
+<h3 id="vertex-painting">Vertex painting</h3>
+<p>Tecnica usada por ejemplo para caracterizar terrenos, se añaden atributos adicionales a los vertices que se usan en los shaders para tomar decisiones, por canal rgb. Lo obtenemos con el modulo Color Attribute. Se pueden pintar los vertices en el modo Vertex Painting de forma similar a como pintabamos el weight.</p>
+<p>Grupos: abstraer una serie de nodos como un solo nodo.</p>
+<p>custom Attribute, podemos pintar el attributo</p>
+<p>Tipo shader, lleva todo los atributos de salida (albedo, metalic heigth...)</p>
+<p>Mix shader: Para mezclar</p>
+<p>Creando attributos de color:</p>
+<ul>
+<li>Attribute: Data / Color Attributes -&gt; +</li>
+<li>Cambiar el nombre para hacer referencia</li>
+<li>Modo Vertex Paint</li>
+<li>Para ver los colores ir al modo solido y ver Modo: Attribute </li>
+<li>Util para debug y para hacer pick de color</li>
+</ul>
+<h3 id="agrupar-nodos">Agrupar nodos</h3>
+<p>Cnt-J mete en una caja para organizar visualmente pero no encapsula.
+Encapsular permite abstraer ocultando un monton de modulos como si fueran uno solo.
+Ademas el modulo nuevo estara disponible cuando haces sh-A.</p>
+<p>Para crear un grupo:</p>
+<ul>
+<li>Seleccionar lo que queremos meter en un grupo y Cnt-G</li>
+<li>Ponerle un nombre con F2</li>
+<li>Entrar y salir del grupo con la tecla tab. (Analogo a Object-Edit modelando)</li>
+<li>Cnt-Alt-G desagrupa</li>
+<li>Puertos externos </li>
+<li>Dentro del grupo hay dos nodos nuevos: Group input y Group output</li>
+<li>Todas las conexiones con modulos que quedaran, apareceran como puertos de esos modulos.</li>
+<li>Ambos tienen un puerto vacio para exportar nuevos puertos externos</li>
+<li>Añadimos nuevos modules arrastrando una connexión al puerto vacio.</li>
+<li>En propiedades podemos cambiar nombre, tipo, valor por defecto...</li>
+<li>Desde fuera se ve como un parametro (los inputs)</li>
+</ul>
+<h3 id="agua-estilizada">Agua estilizada</h3>
+<p>Muy artificial</p>
+<ul>
+<li>Metalic 1</li>
+<li>rougnes bajo</li>
+<li>textura de ruido en las normales: ruido -&gt; normal map -&gt; normal</li>
+<li>escala</li>
+</ul>
+<h3 id="escultura">Escultura</h3>
+<ul>
+<li>Shift y control para que sea para dentro y fuera</li>
+<li>grab tiramos de un punto</li>
+<li>elastic grab: igual pero tira de la pieza</li>
+</ul>
+<h3 id="tronco">Tronco</h3>
+<p>Con curvas para construir el tronco</p>
+<h3 id="particulas-para-hojas">Particulas para hojas</h3>
+<ul>
+<li>Creamos la particula</li>
+<li>plano aprox medio metro, aplicar escala</li>
+<li>shading nuevo material para el plano,<ul>
+<li>cargamos la imagen (con ojas superpuestas negras)  control t</li>
+<li>lo conenctamos en el apha como alpha</li>
+<li>Le damos un color plano de momento</li>
+<li>Podriamos poner el color de una textura pintada para hojas de diferentes colores</li>
+</ul>
+</li>
+<li>Le damos un poco de forma dandole un poco de curbatura al plano para que no sea tan plano</li>
+<li>Para la copa del arbol</li>
+<li>cubo esferizado con subdivision surface</li>
+<li>le cortamos la parte de abajo</li>
+<li>seleccionamos la copa</li>
+<li>Aseguramos que la escala aplicada</li>
+<li>Añadimos Mod Geometry Nodes</li>
+<li>"dp" distribute points on faces: genera puntos en las caras de la geometria de entrada<ul>
+<li>Controlar la densidad</li>
+</ul>
+</li>
+<li>iop instance on points: crea objetos en el punto</li>
+<li>arrastamos instance, oi (object info)<ul>
+<li>podemos coger con la pipeta la particula</li>
+</ul>
+</li>
+<li>Alinear la particula con la normal sobre la que se a<ul>
+<li>conectar la rotacion de points on faces, a  rotation de instance on points</li>
+</ul>
+</li>
+<li>Darle rotacion aleatoria<ul>
+<li>Rotation instance entre instance on points y la salid</li>
+<li>Añadimos un random value  y lo ponemos en rotations</li>
+<li>Gira pero poco porque esta en radianes</li>
+<li>seleccionar los max i insertamos tau (2pi)</li>
+</ul>
+</li>
+<li>Exponer controles</li>
+<li>Igual que con los grupos de shaders<ul>
+<li>conectar los puertos con el node de entrada para que se vea como control en cada objeto y poder cambiar parametros de forma diferente en las instancias.</li>
+<li>A la N para abrir podemos editar los nombres y los tipos de los puertos</li>
+<li>Nombre, tipo, valor por defecto...</li>
+<li>Util si queremos propagar por ejemplo un float a los tres componentes</li>
+</ul>
+</li>
+<li>Para transferir las texturas Cn-L Transfer Modifiers</li>
+<li>Colection info, nos pasa todos los objetos que estan en una coleccion</li>
+<li></li>
+</ul>
+<h2 id="assets-library">Assets library</h2>
+<h2 id="todo">TODO</h2>
+<ul>
+<li>Pintar curva para colgante</li>
+<li>Mandibula</li>
+</ul>
+<h2 id="cosas-a-mirarme">Cosas a mirarme</h2>
+<ul>
+<li>Agrupar modulos shaders para reuso</li>
+<li>Parametrizar modulos shaders</li>
+<li>Definir Acciones</li>
+<li>Como animar la capa al tiempo que el personaje en una acción</li>
+</ul>
+<h2 id="animando">Animando</h2>
+<h3 id="pasos-de-la-animacion">Pasos de la animación</h3>
+<ul>
+<li>Shoot reference: Partir siempre de un video de referencia, si cal, de nosotros mismos.</li>
+<li>Golden poses: Poses que hacen la historia entendible, las que cuentan la historia, las saldrian en viñetas de un comic para entender lo que pasa. Dedicar tiempo a que estas poses esten bien. </li>
+<li>Anticipation: aquellos movimientos que se hacen para acumular energia. Se suelen incluir como golden poses.</li>
+<li>Blocking: Sin que el ordenador interpole añadir nuevos keyframes intermedios para que el movimiento parezca completo </li>
+<li>Leading: aquellas partes inician el movimiento o se mueven primero: la mirada o un cambio de contrapeso <ul>
+<li>Los introduciremos en las intermedias mas cercanas a la pose origen</li>
+</ul>
+</li>
+<li>Dragging: aquellas partes que siguen el movimiento con retraso, arrastradas <ul>
+<li>Los introduciremos en las intermecias mas cercana a la pose final</li>
+</ul>
+</li>
+<li>Overshoot: aquellas partes que se pasan de tirada <ul>
+<li>Las añadiremos pasada la pose final, para que no quede frenada de golpe</li>
+</ul>
+</li>
+<li>Splining: Generar la interpolacion con el ordenador. Esta interpolacion no suele ser buena de entrada.</li>
+<li>Smoothing: Improve the computer interpolation to feel more natural. Usually change timing and interpolation functions, adding follow ups, anticipations...</li>
+<li>Adding life: Usually exagerating some movements, or adding expressions, errors...</li>
+</ul>
+<h3 id="anticipation">Anticipation</h3>
+<p>El personaje o objeto acomula energia antes de la acción se ejecute.
+Normalmente con un movimiento opuesto al deseado para generar una reacción.</p>
+<ul>
+<li>Doblar las piernas o atrasar los brazos antes de un salto</li>
+</ul>
+<h3 id="follow-through-and-overlap">Follow through and overlap</h3>
+<p>Inercia de las partes no rigidas del objeto:</p>
+<ul>
+<li>Cuando la acción principal empieza se resisten a moverse</li>
+<li>Cuando la accion principal acaba siguen moviendose</li>
+</ul>
+<p>Se puede exagerar para emfatizar el movimiento.</p>
+<h2 id="references">References</h2>
+<p>Hay que usarlas: Obtenerlas, estudiarlas y aplicarlas.
+De memoria nos perdemos sutilezas que hacen la animación mucho mas creible.</p>
+<h3 id="not-early-splining">Not Early Splining</h3>
+<p>Keep adding keyframes until the action</p>
+<h3 id="ejercicios-standard-de-animacion">Ejercicios standard de Animacion</h3>
+<ul>
+<li>Ball bounce in place</li>
+<li>Ball bounce across the screen</li>
+<li>Ball falling off of the shelf</li>
+<li>Pendulum</li>
+<li>Hand slaping a table</li>
+<li>Animating objects made of different materials and weights</li>
+<li>Character weight shift</li>
+<li>Walk cycle</li>
+<li>Run cycle</li>
+<li>Head turn</li>
+</ul>
+<p>Timing
+Spacing
+Squash and stretch
+Overshot</p>
+<h3 id="non-robotic-movement">Non robotic movement</h3>
+<ul>
+<li>Using arcs for movements, not linear</li>
+<li>Cada parte del cuerpo entra en movimiento en diferentes momentos, primero cargamos peso con el hombro y la cintura y despues movemos la pierna</li>
+<li>Movimientos no simetricos: Normalmente un lado lidera y el otro sigue en tiempo y posicion, al saltar, al caer, al equilibrar...</li>
+</ul>
+<h2 id="tutorials">Tutorials</h2>
+<ul>
+<li>Generative Stylized Grass </li>
+<li>Taiwan Sunflower: Hair + Geometry nodes + Plane + Wind <ul>
+<li>Part 1: https://www.youtube.com/watch?v=F7_btP0Vhzo</li>
+<li>Part 2: https://www.youtube.com/watch?v=Uh-kkZBQEO0</li>
+</ul>
+</li>
+<li>Retro Shaper: Geometry nodes + Vector groups <ul>
+<li>https://www.youtube.com/watch?v=Im1qPlaYBaw</li>
+</ul>
+</li>
+<li>Simon 3D: Grass reacting to objects. using hair, vector groups, dynamic paint modifier on weight <ul>
+<li>https://www.youtube.com/watch?v=YTu1ntau43I</li>
+</ul>
+</li>
+<li>Trungduyng (demo incluida) vertex color, object scattering/geometry nodes <ul>
+<li>https://www.youtube.com/watch?v=M4kMri55rdE</li>
+<li>Tutorial and files: https://trungduyng.gumroad.com/l/animegrassblender</li>
+</ul>
+</li>
+<li>baeac: geometry nodes, wind, clear and bend grass arround objects, color control <ul>
+<li>https://www.youtube.com/watch?v=MZskE3qd3g8</li>
+</ul>
+</li>
+<li>TooEazyCG: billboarding grass (rotation follows camera) <ul>
+<li>https://www.youtube.com/watch?v=hx8m9w4YyNo</li>
+</ul>
+</li>
+<li>Realistic Grass </li>
+<li>MorganVincent: Realistic Grass <ul>
+<li>https://www.youtube.com/watch?v=BEW3NguW3Nw</li>
+</ul>
+</li>
+<li>Ryan King: Realistic Grass <ul>
+<li>Part1: https://www.youtube.com/watch?v=bG1GsK_g7oc</li>
+<li>Part2: https://www.youtube.com/watch?v=WBhchj-WoQg</li>
+</ul>
+</li>
+<li>Generative Stylized trees </li>
+<li>Trungduyng: Copa de arboles estilizada <ul>
+<li>https://www.youtube.com/watch?v=52sTppv7Y-E</li>
+</ul>
+</li>
+<li>LilPuf: <ul>
+<li>https://www.youtube.com/watch?v=byUj5cdx5wE</li>
+</ul>
+</li>
+<li>Stylized water </li>
+<li>crzyzhaa: Water Cascade <ul>
+<li>https://www.youtube.com/watch?v=25kwDu3OPmM</li>
+</ul>
+</li>
+<li>Stylized sky </li>
+<li>Kristof Dedene: Anime style clouds and starry nightsky <ul>
+<li>https://www.youtube.com/watch?v=m4aOZm6auxQ</li>
+</ul>
+</li>
+<li>Geometry nodes</li>
+<li>Joey Carlino<ul>
+<li>Getting started: https://www.youtube.com/watch?v=szTYXk0t09A</li>
+<li>Instances: https://www.youtube.com/watch?v=JvbppmT0ILY</li>
+</ul>
+</li>
+</ul>
+<h2 id="geometry-nodes">Geometry nodes</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

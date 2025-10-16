@@ -22,15 +22,15 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
     
     
       
-        <title>Godot Introduction - Apunts</title>
+        <title>Godot Introduction (for Pythoners) - Apunts</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.6f8fc17f.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.84d31ad4.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
@@ -86,7 +86,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#godot-introduction" class="md-skip">
+        <a href="#godot-introduction-for-pythoners" class="md-skip">
           Skip to content
         </a>
       
@@ -125,7 +125,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Godot Introduction
+              Godot Introduction (for Pythoners)
             
           </span>
         </div>
@@ -173,11 +173,13 @@
     
     
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
@@ -209,13 +211,14 @@
     </div>
   </div>
 </div>
+      
     
     
       <div class="md-header__source">
         <a href="https://github.com/vokimon/apunts" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -260,7 +263,7 @@
       <a href="https://github.com/vokimon/apunts" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -280,8 +283,10 @@
       <a href="../../.." class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     README
+    
   </span>
   
 
@@ -302,6 +307,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
@@ -312,8 +318,10 @@
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Computers
+    
   </span>
   
 
@@ -337,6 +345,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -347,8 +356,10 @@
           <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     web
+    
   </span>
   
 
@@ -372,6 +383,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -382,8 +394,10 @@
           <label class="md-nav__link" for="__nav_2_1_1" id="__nav_2_1_1_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     css
+    
   </span>
   
 
@@ -407,8 +421,10 @@
       <a href="../../css-basics/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     CSS: Conceptes bàsics
+    
   </span>
   
 
@@ -428,8 +444,10 @@
       <a href="../../css/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     CSS
+    
   </span>
   
 
@@ -449,8 +467,10 @@
       <a href="../../css-design-principles/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     CSS: Principios de diseño
+    
   </span>
   
 
@@ -470,8 +490,10 @@
       <a href="../../css-boxmodel/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     CSS: El modelo de caja
+    
   </span>
   
 
@@ -491,8 +513,10 @@
       <a href="../../css-normalflow/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     CSS Normal Flow
+    
   </span>
   
 
@@ -512,8 +536,10 @@
       <a href="../../css-flexbox/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     CSS Flexbox
+    
   </span>
   
 
@@ -533,8 +559,10 @@
       <a href="../../css-grid/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     CSS Grid
+    
   </span>
   
 
@@ -554,8 +582,10 @@
       <a href="../../css-animations/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     CSS: Animaciones
+    
   </span>
   
 
@@ -575,8 +605,10 @@
       <a href="../../css-typography/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     CSS Typografy
+    
   </span>
   
 
@@ -596,8 +628,10 @@
       <a href="../../css-methodologies-architectures/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     CSS: Metodologías y arquitecturas
+    
   </span>
   
 
@@ -625,6 +659,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -635,8 +670,10 @@
           <label class="md-nav__link" for="__nav_2_1_2" id="__nav_2_1_2_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     javascript
+    
   </span>
   
 
@@ -660,8 +697,10 @@
       <a href="../../jsecosystem/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Jsecosystem
+    
   </span>
   
 
@@ -681,8 +720,10 @@
       <a href="../../jsonschema/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Jsonschema
+    
   </span>
   
 
@@ -702,8 +743,10 @@
       <a href="../../react-formik/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     React formik
+    
   </span>
   
 
@@ -723,8 +766,10 @@
       <a href="../../react/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     React / Redux
+    
   </span>
   
 
@@ -744,8 +789,10 @@
       <a href="../../d3/00-d3/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Introducción
+    
   </span>
   
 
@@ -773,8 +820,10 @@
       <a href="../../rest/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     REST APIs
+    
   </span>
   
 
@@ -794,8 +843,10 @@
       <a href="../../fastapi/fastapi.md" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     None
+    
   </span>
   
 
@@ -815,8 +866,10 @@
       <a href="../../time/time/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Representando el tiempo
+    
   </span>
   
 
@@ -836,8 +889,10 @@
       <a href="../../security/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Security problems
+    
   </span>
   
 
@@ -867,6 +922,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
@@ -877,8 +933,10 @@
           <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     godot
+    
   </span>
   
 
@@ -902,8 +960,10 @@
       <a href="../godot/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Godot 4 (Game Engine)
+    
   </span>
   
 
@@ -932,8 +992,10 @@
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
+  
   <span class="md-ellipsis">
-    Godot Introduction
+    Godot Introduction (for Pythoners)
+    
   </span>
   
 
@@ -943,8 +1005,10 @@
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
+  
   <span class="md-ellipsis">
-    Godot Introduction
+    Godot Introduction (for Pythoners)
+    
   </span>
   
 
@@ -975,16 +1039,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#scripting-gdscript-for-pythoners" class="md-nav__link">
-    <span class="md-ellipsis">
-      Scripting (GDScript) for Pythoners
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Scripting (GDScript) for Pythoners">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#languages-in-godot" class="md-nav__link">
     <span class="md-ellipsis">
       Languages in Godot
@@ -992,18 +1046,13 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#gdscript-vs-python" class="md-nav__link">
     <span class="md-ellipsis">
       GDScript (vs Python)
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1044,9 +1093,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#advanced-language-features" class="md-nav__link">
+  <a href="#other-less-used-advanced-language-features" class="md-nav__link">
     <span class="md-ellipsis">
-      Advanced language features
+      Other less used advanced language features
     </span>
   </a>
   
@@ -1056,6 +1105,15 @@
   <a href="#resources" class="md-nav__link">
     <span class="md-ellipsis">
       Resources
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      File system
     </span>
   </a>
   
@@ -1145,6 +1203,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#importing-from-blender" class="md-nav__link">
+    <span class="md-ellipsis">
+      Importing from blender
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1164,8 +1231,10 @@
       <a href="../tiling/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Godot Tiling
+    
   </span>
   
 
@@ -1185,8 +1254,10 @@
       <a href="../physics/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Godot Physics
+    
   </span>
   
 
@@ -1206,8 +1277,10 @@
       <a href="../ui/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Godot UI
+    
   </span>
   
 
@@ -1227,8 +1300,56 @@
       <a href="../shaders/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Godot Shaders
+    Godot Shaders (es)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../particles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Godot: Particles
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../addons.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    None
+    
   </span>
   
 
@@ -1256,8 +1377,10 @@
       <a href="../../cligrafics/00-imagemagick/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     ImageMagick: Graficos con CLI
+    
   </span>
   
 
@@ -1277,8 +1400,10 @@
       <a href="../../computer-graphics/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Computer graphics
+    
   </span>
   
 
@@ -1295,11 +1420,13 @@
   
   
     <li class="md-nav__item">
-      <a href="../../android-glossary/" class="md-nav__link">
+      <a href="../../android-glossary.md" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Android glossary
+    None
+    
   </span>
   
 
@@ -1319,8 +1446,10 @@
       <a href="../../cpp11/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     New features of C++11 I should be starting to use:
+    
   </span>
   
 
@@ -1340,8 +1469,10 @@
       <a href="../../deeplearning/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Deep learning
+    
   </span>
   
 
@@ -1361,8 +1492,10 @@
       <a href="../../docker/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Docker
+    
   </span>
   
 
@@ -1382,8 +1515,10 @@
       <a href="../../ip6" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     IPv6
+    
   </span>
   
 
@@ -1403,8 +1538,10 @@
       <a href="../../specs-pdf/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Specs pdf
+    
   </span>
   
 
@@ -1424,8 +1561,10 @@
       <a href="../../timewarrior/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     TimeWarrior
+    
   </span>
   
 
@@ -1445,8 +1584,10 @@
       <a href="../../xpxplained/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     XP Explained (Extracto del libro)
+    
   </span>
   
 
@@ -1466,8 +1607,10 @@
       <a href="../../branching-patterns/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Branching Patterns
+    
   </span>
   
 
@@ -1494,6 +1637,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -1504,8 +1648,10 @@
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Math
+    
   </span>
   
 
@@ -1529,8 +1675,10 @@
       <a href="../../../math/math-fundation/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Math Foundations
+    
   </span>
   
 
@@ -1550,8 +1698,10 @@
       <a href="../../../math/stats/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Statistics
+    
   </span>
   
 
@@ -1571,8 +1721,10 @@
       <a href="../../../math/math-halfderivatives/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Half Derivatives
+    
   </span>
   
 
@@ -1592,8 +1744,10 @@
       <a href="../../../math/math-quadraticformula-alternative/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Quadratic Formula
+    
   </span>
   
 
@@ -1613,8 +1767,10 @@
       <a href="../../../math/math-wavelets/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Wavelets
+    
   </span>
   
 
@@ -1634,8 +1790,10 @@
       <a href="../../../math/math-3n1/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Collatz Conjecture
+    
   </span>
   
 
@@ -1655,8 +1813,10 @@
       <a href="../../../math/math-binary/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Binary math
+    
   </span>
   
 
@@ -1676,8 +1836,10 @@
       <a href="../../../math/math-geometric-algebra/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Geometric Algebra
+    
   </span>
   
 
@@ -1704,6 +1866,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -1714,8 +1877,10 @@
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Music
+    
   </span>
   
 
@@ -1739,8 +1904,10 @@
       <a href="../../../music/music-harmony/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Harmony: Notes, Scales and Chords 🎶
+    
   </span>
   
 
@@ -1760,8 +1927,10 @@
       <a href="../../../music/music-harmony-scales/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Harmony: Scales 🎶
+    
   </span>
   
 
@@ -1781,8 +1950,10 @@
       <a href="../../../music/guitar-technics/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Técnica de Guitarra 🎸
+    
   </span>
   
 
@@ -1802,8 +1973,10 @@
       <a href="../../../music/guitar-fret-navigation/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Navegación en el mástil
+    
   </span>
   
 
@@ -1823,8 +1996,10 @@
       <a href="../../../music/pentatonicas.txt" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Pentatonicas
+    
   </span>
   
 
@@ -1844,8 +2019,10 @@
       <a href="../../../music/songs/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Songs
+    
   </span>
   
 
@@ -1865,8 +2042,10 @@
       <a href="../../../music/ukelele/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Ukelele
+    
   </span>
   
 
@@ -1886,8 +2065,10 @@
       <a href="../../../music/drums/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Drum line composition (for non drummers)
+    
   </span>
   
 
@@ -1907,8 +2088,10 @@
       <a href="../../../music/online-resources/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Online resources
+    
   </span>
   
 
@@ -1935,6 +2118,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -1945,8 +2129,10 @@
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Languages
+    
   </span>
   
 
@@ -1970,8 +2156,10 @@
       <a href="../../../lang/consonantes-afi.png" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Phonetics Consonants
+    
   </span>
   
 
@@ -1991,8 +2179,10 @@
       <a href="../../../lang/vowels.jpg" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Phonetics Vowels
+    
   </span>
   
 
@@ -2012,8 +2202,10 @@
       <a href="../../../lang/arabic-alphabet/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Arabic script
+    
   </span>
   
 
@@ -2033,8 +2225,10 @@
       <a href="../../../lang/arabic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Arabic
+    
   </span>
   
 
@@ -2054,8 +2248,10 @@
       <a href="../../../lang/deutsch/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Deutsch
+    
   </span>
   
 
@@ -2075,8 +2271,10 @@
       <a href="../../../lang/japan/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Japanese
+    
   </span>
   
 
@@ -2096,8 +2294,10 @@
       <a href="../../../lang/english-expresions/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     English expresions
+    
   </span>
   
 
@@ -2117,8 +2317,10 @@
       <a href="../../../lang/english-old-pronoums/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     English old pronoums
+    
   </span>
   
 
@@ -2138,8 +2340,10 @@
       <a href="../../../lang/english-prepositions/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     English prepositions
+    
   </span>
   
 
@@ -2159,8 +2363,10 @@
       <a href="../../../lang/english-tenses/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     English tenses
+    
   </span>
   
 
@@ -2180,8 +2386,10 @@
       <a href="../../../lang/vocabulary-somenergia/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     English Vocabulary for SE enterviews
+    
   </span>
   
 
@@ -2201,8 +2409,10 @@
       <a href="../../../lang/vocabulary-edibles/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Vocabulary edibles
+    
   </span>
   
 
@@ -2222,8 +2432,10 @@
       <a href="../../../lang/ruso-alphabet/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Ruso alphabet
+    
   </span>
   
 
@@ -2243,8 +2455,10 @@
       <a href="../../../lang/spanish/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Spanish
+    
   </span>
   
 
@@ -2264,8 +2478,10 @@
       <a href="../../../lang/stylistic-figures/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Retorical figures
+    
   </span>
   
 
@@ -2292,6 +2508,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -2302,8 +2519,10 @@
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     History
+    
   </span>
   
 
@@ -2327,8 +2546,10 @@
       <a href="../../../history/cristianismo/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     História del cristianismo
+    
   </span>
   
 
@@ -2348,8 +2569,10 @@
       <a href="../../../history/manipulation/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Técnicas de manipulación mediàtica
+    
   </span>
   
 
@@ -2376,8 +2599,10 @@
       <a href="../../../varios/economics/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Economics
+    
   </span>
   
 
@@ -2396,6 +2621,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -2406,8 +2632,10 @@
           <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Psicology
+    
   </span>
   
 
@@ -2431,8 +2659,10 @@
       <a href="../../../varios/porque-creemos-en-mierdas/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Porque creemos en mierdas
+    
   </span>
   
 
@@ -2459,6 +2689,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -2469,8 +2700,10 @@
           <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     3D
+    
   </span>
   
 
@@ -2494,8 +2727,10 @@
       <a href="../../../3d/3d-production-pipeline/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     3D animation pipeline
+    
   </span>
   
 
@@ -2515,8 +2750,10 @@
       <a href="../../../3d/blender-materials/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Blender material
+    
   </span>
   
 
@@ -2543,6 +2780,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -2553,8 +2791,10 @@
           <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Laboral
+    
   </span>
   
 
@@ -2578,8 +2818,10 @@
       <a href="../../../laboral/comunicacio_de_crisi/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Comunicacio de crisi
+    
   </span>
   
 
@@ -2599,8 +2841,10 @@
       <a href="../../../laboral/lideratges-autogestionat/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Lideratges autogestionat
+    
   </span>
   
 
@@ -2620,8 +2864,10 @@
       <a href="../../../laboral/reunionseficients/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Reunions eficients
+    
   </span>
   
 
@@ -2674,16 +2920,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#scripting-gdscript-for-pythoners" class="md-nav__link">
-    <span class="md-ellipsis">
-      Scripting (GDScript) for Pythoners
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Scripting (GDScript) for Pythoners">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#languages-in-godot" class="md-nav__link">
     <span class="md-ellipsis">
       Languages in Godot
@@ -2691,18 +2927,13 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#gdscript-vs-python" class="md-nav__link">
     <span class="md-ellipsis">
       GDScript (vs Python)
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2743,9 +2974,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#advanced-language-features" class="md-nav__link">
+  <a href="#other-less-used-advanced-language-features" class="md-nav__link">
     <span class="md-ellipsis">
-      Advanced language features
+      Other less used advanced language features
     </span>
   </a>
   
@@ -2755,6 +2986,15 @@
   <a href="#resources" class="md-nav__link">
     <span class="md-ellipsis">
       Resources
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      File system
     </span>
   </a>
   
@@ -2844,6 +3084,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#importing-from-blender" class="md-nav__link">
+    <span class="md-ellipsis">
+      Importing from blender
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2858,11 +3107,12 @@
                 
                   
 
+
   
   
 
 
-<h1 id="godot-introduction">Godot Introduction</h1>
+<h1 id="godot-introduction-for-pythoners">Godot Introduction (for Pythoners)</h1>
 <p>This is a compilation of the concepts I needed to organize
 in my mind to start developing in Godot.
 It could be as useful to you as you share background with me:
@@ -2870,8 +3120,27 @@ mostly OOP and Python.</p>
 <p>So what follows are the organized notes i took while
 watching, first, this tutorial, and, then, the documentation
 and some other complementary videos i will quote.</p>
-<div class="link https://www.youtube.com/watch?v=nAh_Kx5Zh5Q">
+<div class="linkcard">
+<div class="linkcard-featured-image">
+<a href="https://www.youtube.com/watch?v=nAh_Kx5Zh5Q" target="_blank">
+<img src="https://i.ytimg.com/vi/nAh_Kx5Zh5Q/maxresdefault.jpg" />
+</a>
+</div>
+<p class="linkcard-heading"><a href="https://www.youtube.com/watch?v=nAh_Kx5Zh5Q" target="_blank">The ultimate introduction to Godot 4</a></p>
+<div class="linkcard-excerpt">
 <p>The ultimate introduction to Godot 4</p>
+<span class="linkcard-more"><a href="https://www.youtube.com/watch?v=nAh_Kx5Zh5Q" target="_blank">Read more</a></span>
+</div>
+<div class="linkcard-footer">
+<div class="linkcard-site-title">
+<a href="https://www.youtube.com" target="_blank">
+<img class="linkcard-site-icon" height="32" src="https://www.youtube.com/s/desktop/870920bf/img/favicon.ico" width="32" />
+<span>YOUTUBE</span>
+</a>
+</div>
+<div class="linkcard-meta">
+</div>
+</div>
 </div>
 <h2 id="the-node-tree">The node tree</h2>
 <ul>
@@ -2937,8 +3206,7 @@ and some other complementary videos i will quote.</p>
 </ul>
 </li>
 </ul>
-<h2 id="scripting-gdscript-for-pythoners">Scripting (GDScript) for Pythoners</h2>
-<h3 id="languages-in-godot">Languages in Godot</h3>
+<h2 id="languages-in-godot">Languages in Godot</h2>
 <ul>
 <li>Scripts in Godot may be written in several languages<ul>
 <li>Godot provides a C interface for any language to interact with</li>
@@ -2979,7 +3247,7 @@ and some other complementary videos i will quote.</p>
 </ul>
 </li>
 </ul>
-<h3 id="gdscript-vs-python">GDScript (vs Python)</h3>
+<h2 id="gdscript-vs-python">GDScript (vs Python)</h2>
 <ul>
 <li>Every script defines a class<ul>
 <li>Most tutorials i saw avoid explaining this up front<ul>
@@ -3162,6 +3430,11 @@ and some other complementary videos i will quote.</p>
 <li><code>@export_*</code> variations to specify how to edit the attribute</li>
 </ul>
 </li>
+<li>Organize properties<ul>
+<li><code>@export_category('My Category')</code> Banner in property editor (like the ones for each super class)</li>
+<li><code>@export_group('My Group')/@export_subgroup("Subgroup")</code> Collapsable group of properties</li>
+</ul>
+</li>
 <li>Class icon: <code>@icon("res://path/to/myclass.svg")</code><ul>
 <li>Helps to identify better the nodes in the tree, and in the node type selector</li>
 <li>By default, takes superclass icon</li>
@@ -3171,6 +3444,12 @@ and some other complementary videos i will quote.</p>
 <li><code>@rpc</code>: Prefixed to a func enables it for remote call (multiplayer)</li>
 <li><code>@static_unload</code>: to a script deinstantiate its variables as soon as all reference are removed, instantiates again if a new reference appear.</li>
 <li><code>@tool</code>: to a script to make it run by the editor</li>
+<li>Documentation <code>##</code> will generate documentation.<ul>
+<li>Above @export is shown in the hover of the property</li>
+<li>Uses bbcode to format</li>
+<li></li>
+</ul>
+</li>
 </ul>
 <h2 id="formatting">Formatting</h2>
 <h2 id="enums">Enums</h2>
@@ -3197,6 +3476,7 @@ and some other complementary videos i will quote.</p>
 </ul>
 </li>
 </ul>
+<p>Named enums allow more introspection, still print will show the value not the label.</p>
 <h2 id="encapsulating-attributes">Encapsulating attributes</h2>
 <ul>
 <li>Centralizes attribute changes and accessing</li>
@@ -3222,7 +3502,7 @@ and some other complementary videos i will quote.</p>
     If other method does, it will call the setter again
     resulting in an infinite loop.</li>
 </ul>
-<h2 id="advanced-language-features">Advanced language features</h2>
+<h2 id="other-less-used-advanced-language-features">Other less used advanced language features</h2>
 <ul>
 <li>Singletons/Autoload:<ul>
 <li>Instance objects that are loaded outside of the scene and are available by a global name</li>
@@ -3285,16 +3565,46 @@ but they are not themselves nodes.
 Resources have to be serializable.
 Typical resources are Textures, Materials, Meshes, Shaders, and indeed Scenes...</p>
 <p>Resources can be serialized in a file.
-In that case <code>load(resourcepath)</code> obtains it.</p>
+In that case <code>load(resourcepath)</code> obtains it.
+By default, they are stored along the scene,
+unless you specify them to be in a separate file.
+In this case, usual extension is <code>.tres</code>.</p>
+<h2 id="file-system">File system</h2>
+<ul>
+<li>Use unix slashes, case sensitive.<ul>
+<li>If original development is done in windows, may cause problems</li>
+<li>Convention: always use lower case for files (naming and refering)</li>
+</ul>
+</li>
+<li>`res://' root for project resources.<ul>
+<li>Whenever the <code>project.godot</code> is.</li>
+<li><code>/</code> alias for <code>res://</code></li>
+<li>This enables packaging, resources could be not in the system filesystem but in a tmp or memory.</li>
+<li>Read only in runtime (not developing)</li>
+</ul>
+</li>
+<li>`user://'<ul>
+<li>Writable location for user files in the system</li>
+<li>In Linux: /home/myuser/.local/share/godot/myproject</li>
+<li>In Windows: %APPDATA%/myproject</li>
+</ul>
+</li>
+</ul>
 <h2 id="debugging">Debugging</h2>
 <ul>
 <li>We can use <code>print</code> function</li>
+<li><code>prints()</code> automatically separates parameters with spaces (like python print)</li>
+<li><code>printt()</code> like prints but uses tabs to separate</li>
+<li><code>print_stack()</code> prints the stack trace</li>
+<li><code>print_debug()</code> Shows the file and line</li>
+<li><code>print_rich()</code> uses bbcode to add ansi: <code>[b] [color=red] [/color] [/b]</code></li>
 <li><code>push_error/warning()</code>: enables a stacktrace besides the error message</li>
 <li>When in run, the running scene tree is availabe as 'Remote' tab in the scenen tree docker.<ul>
 <li>You can fix it as the default shown in project settings.</li>
 </ul>
 </li>
-<li>"Always on top" option is good to keey the game in front and still being able to manipulate and inspect the editor interface.</li>
+<li>KWin "Always on top" option is good to keep the game in front and still being able to manipulate and inspect the editor interface.</li>
+<li><code>OS.is_debug_build():</code> to conditionally activate debug tools</li>
 </ul>
 <h3 id="lifecycle">Lifecycle</h3>
 <ul>
@@ -3405,6 +3715,81 @@ How to encapsulate a bunch of nodes in an abstract class?</p>
 <li>??? </li>
 </ul>
 <p>Doubt: for later instances is duplicate() faster than instantiate()?</p>
+<h2 id="importing-from-blender">Importing from blender</h2>
+<p>You can import blend files directly but Godot will require Blender installed to export gltf.
+Gltf/glb is the recomended export format.</p>
+<p>It includes Mesh (vertex, edges, faces, normals, colors...), Materials Rigging, Animations</p>
+<p>Import Tab: Defines many options on how to import the selected asset</p>
+<p>Interesting ones:</p>
+<ul>
+<li>Root Scale</li>
+</ul>
+<p>"Advanced" Button: Shows more details on how the scene is composed
+and allows to visualize the import changes while changing the same options,
+and some options to be changed per part.
+Also how to import the materials to each part or whether to assing your own.</p>
+<p>Gltf are imported as read only scenes.
+But we might want to alter them.
+There are different strategies for that:</p>
+<ul>
+<li>Inherit:<ul>
+<li>How: Open the scene, choose "New inherited"</li>
+<li>Allows:<ul>
+<li>Modifying properties of existing nodes (materials, position...)</li>
+<li>Adding scripts to the existing elements</li>
+<li>Accessing the elements separatelly by node name</li>
+<li>Adding elements to the scene</li>
+</ul>
+</li>
+<li>But you cannot alter the original hierarchy elements which are marked in yellow</li>
+<li>Warn: changes to the element properties might be lost if on import the hierarchy changes</li>
+</ul>
+</li>
+<li>Nest:<ul>
+<li>How:<ul>
+<li>Creating a empty scene and dragging the gltf</li>
+</ul>
+</li>
+<li>Stable to reimports</li>
+<li>We cannot access to the inners unless:<ul>
+<li>Right click the imported element and chose "Make Editable children"</li>
+<li>With editable children, they are no more read only and you can even modify the hierarchy</li>
+<li>Don't think on reimport once you make them editable</li>
+<li>Consider splitting in multiple gltf</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Local:<ul>
+<li>How:<ul>
+<li>Create a wraper scene</li>
+<li>Drag the gltf into it</li>
+<li>Right click and "Make local"</li>
+</ul>
+</li>
+<li>We can alter the scende freely, even split the members as scenes</li>
+<li>All the data is incorporated into the scenes making them larger</li>
+</ul>
+</li>
+</ul>
+<p>Animations: gltf might contain animations,
+either linked to their model and rig,
+or separated as reusable Animation Library.
+This is useful for retargeting animation
+as such in mixamo website.</p>
+<p>https://docs.godotengine.org/en/stable/tutorials/assets_pipeline/importing_3d_scenes/node_type_customization.html</p>
+<p>Import suffixes in blender objects alter how godot import them</p>
+<div class="highlight"><pre><span></span><code>- `-noimp` exclude node from import
+- `-col` autogenerates a collider using the same mesh (Concave, acurate but slow)
+- `-convcol` autogenerate the convex hull as collision (
+- `-colonly` import as a colision mesh, not as visual mesh
+- `-convcolonly` import as a colision mesh but the convex hull
+- `-occ` Defines an occlusion mesh with the same geometry
+- `-occonly` Defines the object as occlusion mesh
+- `-navmesh` Defines the object as navmesh (works like the only above, not creating the mesh)
+- `-rigid` Imported as RigidBody3D instead of Node3d.
+- `-loop` in animations auto loop them
+</code></pre></div>
 
 
 
@@ -3451,10 +3836,12 @@ How to encapsulate a bunch of nodes in an abstract class?</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
     
   </body>
