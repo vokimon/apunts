@@ -223,6 +223,7 @@ Better? would takes the viewport, not the window viewport:  `get_viewport().size
 	- Volumetrics: Fog, particles...
 	- VPainter: Vertex painter inside the editor
 	- Godot LOD: Adapts level of detail with distance, a node which contains several meshes to use
+    - [Spatial Gardener](https://github.com/dreadpon/godot_spatial_gardener) place 3D objects by painting in godot.
 - Smart Agents:
 	- RL Agents: Entrenador de IA's para bots.
 	- LimboAI

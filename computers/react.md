@@ -95,7 +95,7 @@ root.render(<MyComponent/>);
 - JSX parsing starts is when a starting `<` is found until the element is closed.
 - That parsing returns an object representing a React element.
 - Because of the parsing, a single root element is required
-- If you want a fragment with more than one element, you have to enclose them inside inside a void element `<>whatever</>`.
+- If you want a fragment with more than one element, you have to enclose them inside inside a void element `< >whatever< / >`.
 - If the html goes for several lines it is nice to wrap the jsx expresion by parenthesis, not required though
 
 Some naming conventions:

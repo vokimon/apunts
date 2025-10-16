@@ -1,4 +1,4 @@
-# CSS Typografy
+# CSS Typography
 
 <https://www.youtube.com/watch?v=agbh1wbfJt8>
 
@@ -27,7 +27,6 @@ Font face features affecting Legibility:
 - Baseline: Serves as common reference for reading line where the lines rest.
 - Cap-height: Height of the capital letters from the base line.
 - X-height: The height of most lowercase, the higher the more legible
-- Descender/ascenders: Letters that go down the baseline
 - Descender: Letters that go down the baseline: q, p, g...
 - Ascender: Letters that go up of the x-height: d, b, l, t...
 - Matching Cap-height and ascenders might affect readability: Ill.
@@ -36,7 +35,7 @@ Font face features affecting Legibility:
 - Stroke contrast: diference in stroke thicknes depending on the orientation
 - Counters: closed or semi-closed negative shapes. The smaller the harder to read.
 - Adornments: Might distract from the character identification
-- Density, quantity of ink in the paper
+- Density: quantity of ink in the paper
 - Weight: both extreme light and extreme heavy weights are hard to read
 
 Text features affecting Readability:

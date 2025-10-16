@@ -222,6 +222,11 @@ Ho fa el gradle, no hem de crear source-sets
 per les combinacions.
 Exemple: paidRelease
 
+Gradle, a part de les tasques globals
+(build, test, install, lint...)
+genera targets específics per cada variant:
+`testFlavor1Debug` nomes testejaria el flavor1 en versió de debug.
+
 **Dimensions de varietats (flavor dimensions):**
 Per defecte les varietats son mutuament exclusives.
 Si volem combinar-les, cal definir dimensions.
@@ -267,23 +272,24 @@ Per referenciar un recurs dins del codi,
 fem servir el paquet `R` dins del namespace
 del projecte (`import com.example.myapp.R`)
 
-    R.type.id
+    R.<type>.<id>
     R.mipmap.ic_launcher
 
-Si és un recurs d'un altre mòdul podem explicitar el mòdul:
+Si és un recurs d'un altre mòdul podem explicitar el mòdul
+amb el seu identificador únic:
 
-    explicit.module.R.type.id
+    com.explicit.module.R.type.id
 
-El mòdul R retorna un enter que representa un id numèric intern pel recurs
-que nosaltres hauriem de fer servir de forma transparent.
-Normalment per fer servir el recurs farem servir funcions que reben aquest enter
-i el recuperen segons el tipus de recurs.
+Com a detall d'implementació que a vegades apareix,
+l'expressió retorna un id numèric intern pel recurs.
+Normalment fem servir funcions o atributs que acepten aquest sencer
+i de forma transparent el fan servir per obtenir l'objecte concret.
+Per exemple, `getText(Int)` per obtindre el text traduit.
 
-Des d'un xml es referencia com `@type/id` si es al mateix mòdul
-o sinó, `@explicit_module:type/id`.
+Des d'un xml, un recurs es referencia com `@type/id` si es al mateix mòdul
+o sinó, `@com.explicit.module:type/id`.
+Els podem fer servir com a valors dels atributs quan siguin del tipus correcte.
  
-TODO: `explicit_module` es defineix com namespace o es un dot separated path?
-
 ### Creant versions dels recursos
 
 https://developer.android.com/guide/topics/resources/providing-resources#AlternativeResources

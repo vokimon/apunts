@@ -3,15 +3,107 @@
 ## Què és?
 
 Llenguatge pensat per substituir Java com a llenguatge multiplataforma.
-Te caracteristiques modernes pero compila a ByteCode de JVM.
-També pot cridar funcions de java com si fossin natives.
+Te caracteristiques més modernes com a llenguatge
+però compila igualment a ByteCode de JVM.
+Com comparteixen el format binari, ambdós llenguatges
+es poden cridar entre ells com si fossin crides natives,
+el que els fa totalment interoperables.
+
+## Fortament tipat pero automàtic
+
+Les variables són fortament tipades com el Java.
+Pero no és necesari declarar els tipus sempre.
+Sovint els tipus es poden deduir del context.
+
+```kotlin
+var a = 1
+var b: Int = 1
+```
+
+Explicit casts `y.asX()`
+
+Smart casts: Si abans d'un bloc de codi, ens assegurem que sigui quelcom ho sera
+```
+var a: A = whatever
+if (a is B) {
+    Aquí podem fer servir a com si fos un B.
+}
+
+var optional: A? = whatever
+if (a != null) {
+    Aquí podem fer servir a sense que sigui A i no A?
+}
+```
+
+## Tipus bàsics
+
+## Numèrics
+
+Només els literals es converteixen de forma implicita
+a un altre tipus numèric.
+Per convertir dos variables o expressions
+cal cridar el mètode `.toType` corresponent.
+On Type seria qualsevols dels tipus:
+
+- Sencers: `Byte` (8b), `Short` (16b), `Int` (32b), `Long` (64b)
+- Positius: `UByte` (8b), `UShort` (16b), `UInt` (32b), `ULong` (64b) (Kotlin>=1.5)
+- Decimals: `Float`, `Double`
+
+Podem fer servir suffixos per forçar el tipus del literal.
+
+- `l` força Long
+- `u` força Unsinged
+- `f` força Float (a un Double)
+
+Es pot fer servir l'underline com a separador de millars o bytes
+
+Es poden fer servir prefixos `0b` o `0x` per binari i hexadecimal.
+
+Només els literals es converteixen de forma implícita perque
+es comproven en complilació.
+En altres escenarios s'ha de fer de forma explícita amb els
+metodes `.toType()`: `toInt()`, `toByte()`...
+
+
+`Integer` és el tipus java encapsulat.
+Els nadius es mencionen com kotlin.Int,
+els de java com a java.Integer.
+TODO: Conversió implícita?
+
+Els operadors de bitwise son operadors infixos amb nom.
+`shl`, `shr`, `ushl`, `inv`, `
+
+### Boleans
+
+- El tipus es `Boolean`
+- Els literals son `true` y `false`.
+- Els operadors, els de C: `&&`, `||` y `!`.
+
+### String
+
+- Els literals per caracters `Char` van entre cometes simples `'a'`.
+- Els literals per textos `String` van entre cometes dobles `"text"`.
+- Es poden fer interpolacions amb `"$variable"` o d'expresions amb `"${3+3}"`.
+- Un string es pot sumar `+` amb qualsevol cosa que tingui `toString`.
+- Les cometres dobles triples es fan servir per literals multi linia.
+- Utilitat `.trimMargin(delimiter="|") es pot fer servir per ignorar l'indentat.
+- TODO: Hi havia un altre per simplement treure la indentació sense signe.
+- Prefix dolars a un text serveix per dir quants dolars calen per activar l'interpolacio.
+    `$$"$${aixo s'interpola} $aixo no"` `$$$"$${aixo tampoc}"
+- `"%+05.3d".format(1.432)` `"%s capitalized is %1\$S".format("hola")`
+
+
+
+
+
+
+
 
 
 
 
 
 ## Null safety
-
 
 - Tipus nulables:
     - `String` no pot ser `null`, `String?` pot ser-ho.

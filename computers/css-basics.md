@@ -59,8 +59,14 @@ Aquest document explica els conceptes bàsics sobre CSS
 Altres apunts expliquen altres aspectes:
 
 - [Novetats](css.md)
-- [Principis de dissen](css-design-principles.md)
-
+- [Principis de disseny](css-design-principles.md)
+- [Metodologies i arquitectures](css-methodologies-architectures.md)
+- [Model de caixa](css-boxmodel.md)
+- [Fluxe normal](css-normalflow.md)
+- [Flexbox](css-flexbox.md)
+- [Grid](css-grid.md)
+- [Typografia](css-grid.md)
+- [Animacions](css-animations.md)
 
 ## Anatomia d'un full d'estil
 
@@ -594,6 +600,114 @@ Procés de càlcul
 - Canvis especificats -> **Computed Value** (ex. L'especificació diu que si un span en mode absolut, canvia el seu display a block)
 - Aplicació dels layouts -> **Used Value** (ex. Molts valors es dedueixen d'aplicar els layouts)
 - Limitacions del entorn -> **Actual value** (ex. Discretització a pixel o a les fonts disponibles)
+
+
+## Units
+
+Absolute lengths:
+
+- cm: centimeters
+- mm: milimeters 0.1cm
+- Q: quarter milimeters 0.025cm
+- in: inches 2.54cm
+- px: pixels 1/96in 1/243.8cm (cannonical unit)
+  - Not a device pixel! At the time of the standard, monitors where 96 DPI in 1024x798
+  - Distance to the screen also counts.
+    - Reference pixel, defined by the angle at arm length distance 71cmi s .26mm
+    - Thus, closer screens (mobiles) have smaller px and further screens (tv's, projectors) have wider px
+  - in screens also the distance to the screen counts, so it is the angle compared to that size at the arm distance
+- pt: points 1/72in 1/182.88cm 1.333px
+  - often used for absolute font sizes
+- pc: picas 1/6in 16px 4.2mm
+- lh: line height, altura de linia del elemento (ideal para alturas donde quepan n lineas)
+- rlh: root line height, altura de linea del elemento raiz
+
+Rules of thumb for sizes:
+
+https://www.youtube.com/watch?v=N5wpD9Ov_To
+
+Font sizes: use rem. To adapt the settings of the user
+
+Width
+
+- percentance with max-min with as limit, in px/rem
+- ch per controlar el nombre aproximat de characters
+
+Height
+
+- let it flow min-height and relative to the viewport
+
+Padding or margin: rem or em
+
+- rem para distancias consistentes
+- em para adaptarse a la fuente del elemento
+
+px for small gaps, shadows...
+
+media queries: em for consistency among browsers
+
+
+Font relatives:
+
+- ch: advance measure of a '0' zero of the current typeface. The advance measure of the font is the spacing with the next letter (text orientation is taken into account)
+- ex: height of an 'x' of the current typeface (or the parent if it is used to change font-size).  Used to compute interline spacings and margins
+- em: width of an 'm' of the current typeface  (or the parent if it is used to change font-size)
+  - being m the wider letter, ensures that at least those letters will be in
+  - matches the font size (a 10pt font size, 1em is 3.5mm)
+- rem: root em, em of the root element, not the current or the parent (Takes into account user's and system preferences)
+
+Parent relative lengths:
+
+- %: percent relative to the parent's size
+- fr: fraction of leftover space
+
+Viewport relative lengths:
+
+- vw: percent relative to the view port width
+- vh: percent relative to the view port height
+- vi: percent relative to the view port line axis (horizontal for most, but vertical for some asian scripts)
+- vb: percent relative to the view port block axis (vertical for most, but horizontal for some asian scripts)
+- vmin: percent relative to the view port min axis (height or width)
+- vmax: percent relative to the view port max axis (height or width)
+
+Container query relative lengths:
+
+- cqw: container query width per cent
+- cqh: container query height per cent
+- cqi: container query inline size (in ltr width, but changes with direction)
+- cqb: container query block size (in ltr height, but changes with direction)
+- cpmin: container query min of width and height
+- cpmax: container query max of width and height
+
+Angles:
+
+- turn: full turn
+- deg: degrees 360 per turn (canonical unit)
+- grad: gradians 400 per turn
+- rad: radians 2pi per turn
+
+Rotations are clockwise
+
+When stating a direction 0 is north and 90deg is right/east
+
+Time
+
+- s: seconds
+- ms: miliseconds
+
+Frequency
+
+- Hz: 1/s
+- kHz: 1000/s
+
+
+Resolution:
+
+The size of a real pixel (dot) in the device
+
+dpi: dots per inch
+dpcm: dots per cm
+dppx: dots per pixel unit
 
 
 ## At-rules
