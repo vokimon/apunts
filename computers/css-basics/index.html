@@ -739,6 +739,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#units" class="md-nav__link">
+    <span class="md-ellipsis">
+      Units
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#at-rules" class="md-nav__link">
     <span class="md-ellipsis">
       At-rules
@@ -918,7 +927,7 @@
   
   
   <span class="md-ellipsis">
-    CSS
+    CSS Recursos i Novetats
     
   </span>
   
@@ -1079,7 +1088,7 @@
   
   
   <span class="md-ellipsis">
-    CSS Typografy
+    CSS Typography
     
   </span>
   
@@ -1103,6 +1112,29 @@
   
   <span class="md-ellipsis">
     CSS: Metodologías y arquitecturas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../css-frameworks-preprocessors.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    None
     
   </span>
   
@@ -3492,6 +3524,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#units" class="md-nav__link">
+    <span class="md-ellipsis">
+      Units
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#at-rules" class="md-nav__link">
     <span class="md-ellipsis">
       At-rules
@@ -4181,6 +4222,102 @@ La primera component es menys específica.</p>
 <li>Aplicació dels layouts -&gt; <strong>Used Value</strong> (ex. Molts valors es dedueixen d'aplicar els layouts)</li>
 <li>Limitacions del entorn -&gt; <strong>Actual value</strong> (ex. Discretització a pixel o a les fonts disponibles)</li>
 </ul>
+<h2 id="units">Units</h2>
+<p>Absolute lengths:</p>
+<ul>
+<li>cm: centimeters</li>
+<li>mm: milimeters 0.1cm</li>
+<li>Q: quarter milimeters 0.025cm</li>
+<li>in: inches 2.54cm</li>
+<li>px: pixels 1/96in 1/243.8cm (cannonical unit)</li>
+<li>Not a device pixel! At the time of the standard, monitors where 96 DPI in 1024x798</li>
+<li>Distance to the screen also counts.<ul>
+<li>Reference pixel, defined by the angle at arm length distance 71cmi s .26mm</li>
+<li>Thus, closer screens (mobiles) have smaller px and further screens (tv's, projectors) have wider px</li>
+</ul>
+</li>
+<li>in screens also the distance to the screen counts, so it is the angle compared to that size at the arm distance</li>
+<li>pt: points 1/72in 1/182.88cm 1.333px</li>
+<li>often used for absolute font sizes</li>
+<li>pc: picas 1/6in 16px 4.2mm</li>
+<li>lh: line height, altura de linia del elemento (ideal para alturas donde quepan n lineas)</li>
+<li>rlh: root line height, altura de linea del elemento raiz</li>
+</ul>
+<p>Rules of thumb for sizes:</p>
+<p>https://www.youtube.com/watch?v=N5wpD9Ov_To</p>
+<p>Font sizes: use rem. To adapt the settings of the user</p>
+<p>Width</p>
+<ul>
+<li>percentance with max-min with as limit, in px/rem</li>
+<li>ch per controlar el nombre aproximat de characters</li>
+</ul>
+<p>Height</p>
+<ul>
+<li>let it flow min-height and relative to the viewport</li>
+</ul>
+<p>Padding or margin: rem or em</p>
+<ul>
+<li>rem para distancias consistentes</li>
+<li>em para adaptarse a la fuente del elemento</li>
+</ul>
+<p>px for small gaps, shadows...</p>
+<p>media queries: em for consistency among browsers</p>
+<p>Font relatives:</p>
+<ul>
+<li>ch: advance measure of a '0' zero of the current typeface. The advance measure of the font is the spacing with the next letter (text orientation is taken into account)</li>
+<li>ex: height of an 'x' of the current typeface (or the parent if it is used to change font-size).  Used to compute interline spacings and margins</li>
+<li>em: width of an 'm' of the current typeface  (or the parent if it is used to change font-size)</li>
+<li>being m the wider letter, ensures that at least those letters will be in</li>
+<li>matches the font size (a 10pt font size, 1em is 3.5mm)</li>
+<li>rem: root em, em of the root element, not the current or the parent (Takes into account user's and system preferences)</li>
+</ul>
+<p>Parent relative lengths:</p>
+<ul>
+<li>%: percent relative to the parent's size</li>
+<li>fr: fraction of leftover space</li>
+</ul>
+<p>Viewport relative lengths:</p>
+<ul>
+<li>vw: percent relative to the view port width</li>
+<li>vh: percent relative to the view port height</li>
+<li>vi: percent relative to the view port line axis (horizontal for most, but vertical for some asian scripts)</li>
+<li>vb: percent relative to the view port block axis (vertical for most, but horizontal for some asian scripts)</li>
+<li>vmin: percent relative to the view port min axis (height or width)</li>
+<li>vmax: percent relative to the view port max axis (height or width)</li>
+</ul>
+<p>Container query relative lengths:</p>
+<ul>
+<li>cqw: container query width per cent</li>
+<li>cqh: container query height per cent</li>
+<li>cqi: container query inline size (in ltr width, but changes with direction)</li>
+<li>cqb: container query block size (in ltr height, but changes with direction)</li>
+<li>cpmin: container query min of width and height</li>
+<li>cpmax: container query max of width and height</li>
+</ul>
+<p>Angles:</p>
+<ul>
+<li>turn: full turn</li>
+<li>deg: degrees 360 per turn (canonical unit)</li>
+<li>grad: gradians 400 per turn</li>
+<li>rad: radians 2pi per turn</li>
+</ul>
+<p>Rotations are clockwise</p>
+<p>When stating a direction 0 is north and 90deg is right/east</p>
+<p>Time</p>
+<ul>
+<li>s: seconds</li>
+<li>ms: miliseconds</li>
+</ul>
+<p>Frequency</p>
+<ul>
+<li>Hz: 1/s</li>
+<li>kHz: 1000/s</li>
+</ul>
+<p>Resolution:</p>
+<p>The size of a real pixel (dot) in the device</p>
+<p>dpi: dots per inch
+dpcm: dots per cm
+dppx: dots per pixel unit</p>
 <h2 id="at-rules">At-rules</h2>
 <p>Les at-rules son sentencies especials que podem introduir en el full d'estils per diferents funcions.</p>
 <h3 id="import"><code>@import</code></h3>
