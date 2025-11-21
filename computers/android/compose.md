@@ -3,7 +3,9 @@
 És una forma declarativa i reactiva de definir les interfícies.
 Similar a React i a QML.
 
-## Funcions composables
+## Conceptes bàsics
+
+### Funcions composables
 
 Una funcio composable declara l'estructura d'una interfície similarment a com ho faría React.
 
@@ -14,19 +16,21 @@ fun Greeting(name: String) {
 }
 ```
 
+A React seria:
+
 ```jsx
 function Greeting({ name }) {
   return <p>Hola {name}!</p>;
 }
 ```
 
-Igual que React, el component es recalcula
+Igual que a React, el component es recalcula
 quan (i només quan) canvien els paràmetres/attributs o l'estat.
 
 
-## Estat permanent
+### Estat persistent
 
-Els components poden tenir un estat permanent
+Els components poden tenir un estat persistent
 que son els remembers.
 L'equivalent amb React seria el `useState`.
 
@@ -38,11 +42,13 @@ var count by remember { mutableStateOf(0) }
 const [count, setCount] = useState(9)
 ```
 
-Com s'aconsella que l'estat estigui el més amunt possible,
-es fan servir sovint block de callback com a parametres
-per pujar l'estat (`onClick`...) .
+S'aconsella que l'estat estigui el més amunt possible.
+Quan els fills necessiten modificar estat,
+ofereixen parametres per passar-los callbacks (blocs de codi)
+on el pare pot inserir codi per a que els fills canviin el seu estat.
+(`onClick`...) .
 
-## Layouts i modifiers
+### Layouts via modifiers
 
 El Modifier es un objecte que accepten la majoria de composables
 que especifica parametres comuns, normalment de layout
@@ -90,10 +96,10 @@ Paral·lelisme total amb useEffect de React.
     }
 ```
 
-## Estat permanent centralitzat (ViewModel)
+## Estat persistent centralitzat (ViewModel)
 
-https://developer.android.com/jetpack/compose/state#viewmodel-state
-https://developer.android.com/topic/libraries/architecture/viewmodel
+<https://developer.android.com/jetpack/compose/state#viewmodel-state>
+<https://developer.android.com/topic/libraries/architecture/viewmodel>
 
 Similar al Context de React.
 Sense scope??
@@ -116,9 +122,13 @@ fun Screen(viewModel: MyViewModel = viewModel()) {
 - Complica l'anàlisi de side effects, tot i que marca on es produeixen
 - Persisteix després de recomposicions i reconfiguracions (rotacio, tema, idioma...)
 
-## derivedStateOf
+### Estat derivat `derivedStateOf`
 
-Equivalent al useMemo
+Per no duplicar estat, cal calcular l'estat que s'en deriva de l'estat del pare a cada composició.
+Això pot ser car,
+en aquest cas es pot fer servir `derivedStateOf`.
+
+Equivalent al useMemo.
 
 ### Corutines LaunchedEffect
 
@@ -137,6 +147,7 @@ Pot sortir de la composició la corutina si en una composició no s'executa.
 La cancel·lació es produeix llençant un `CancellationException`.
 Podem capturar-ho a la corutina si volem fer res en sortir.
 
+
 ### SideEffect
 
 S'executen incondicionalment després de cada composició.
@@ -153,7 +164,7 @@ També per sincronitzar amb sistemes externs.
 https://developer.android.com/jetpack/compose/state
 
 Les crides a la funció declarativa son stateless.
-Sovint cal mantenir un cert estat permanent.
+Sovint cal mantenir un cert estat persistent.
 Es proporcionen els mecanismes per mantenir aquest estat:
 
 - `remember { }` crea una variable que es mantè entre crides.
