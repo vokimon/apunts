@@ -18,7 +18,7 @@ nav:
         - computers/css-animations.md
         - computers/css-typography.md
         - computers/css-methodologies-architectures.md
-        - computers/css-frameworks-preprocessors.md
+        - computers/css-frameworks.md
       - javascript:
         - computers/jsecosystem.md
         - computers/jsonschema.md
@@ -43,6 +43,7 @@ nav:
     - Android:
         - computers/android/android-glossary.md
         - computers/android/kotlin.md
+        - computers/android/compose.md
     - computers/cpp11.md
     - computers/deeplearning.md
     - computers/docker.md

@@ -8,6 +8,10 @@ Instead of solving it by the formula, here there is a rememberable procedure:
    - Then `x² + b' x  + c = 0 = (x -m -d)(x -m +d) = x² -2mx + (m² - d²)`
    - Then `m = -b'/2` and `d² = m²-c`
 
+Other way:
+`m` is also the `x` for the maxima/minima of the cuadratic,
+so `f'(x) = 2x + b'; f'(m) = 0; m = -b'/2`
+
 Example with two real solutions:
 ```
 2x² - 22x - 28 = 0
@@ -45,11 +49,10 @@ Deducing the classic formula
 x = m +- d
   = m +- sqrt(m²-c')                 # d²=m²-c'
   = -b'/2 +- sqrt(b'²/4 - c')        # m = -b/2
-  = -b/2a +- sqrt(b²/4a² - c/a)      # m = -b/2
+  = -b/2a +- sqrt(b²/4a² - c/a)      # b' = b/a; c'=c/a
   = -b/2a +- sqrt(b²/4a² - 4ac/4a²)  # multipy and divide c/a by 4a
   = -b/2a +- sqrt(b² - 4ac)/2a       # extract 1/4a² out of the sqrt as 1/2a
   = (-b +- sqrt(b² - 4ac))/2a        # common divisor 2a
-  = (b +- sqrt(b² - 4ac))/-2a        # sign moved to denominator (+- of second term unaltered)
 ```
 
 

@@ -15,6 +15,54 @@
 - [Layout Generator](https://layout.bradwoods.io/customize)
   Generador de layouts CSS
 
+## Novetats 2025
+
+### Declarative popovers
+
+https://developer.mozilla.org/en-US/docs/Web/API/Popover_API/Using
+
+Html declaration:
+
+- In the popover add `popover` attribute with an `id`
+- In the target add `popovertarget="myid"` this will make the popover visible on target (Button)
+- `popovertargetaction` default `toggle` can also be `hide` or `show`
+
+CSS styling:
+
+Si a l'html tenimem el target es el popover, normalment l'estil
+posicionarà el popover respecte a una ancla (anchor).
+
+- Com que `popover` no es pas un element sinó un atribut,
+els podem seleccionar `[popover]`.
+- Pero com alguns estils són específics per quan estan oberts (sobretot `display`)
+també fem servir la pseudo class `:popover-open`
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_anchor_positioning
+
+Com posicionar-lo respecte l'element que dispara (anchor)?
+
+Podem relacionar el popup i el seu anchor amb 
+definint al css de l'anchor `anchor-name: --my-anchor` a l'anchor i
+al css del popup `position-anchor: --my-anchor`.
+En el cas dels popovers, aquesta relació s'estableix automàticament
+amb l'element que el dispara.
+
+
+
+
+
+
+`anchor(top)` retorna la posicio de 
+
+- `anchor-name: 
+
+`@position-try`
+`position-area`
+`position-fallbacks`
+
+
+
+
 
 ## Novetats 2024
 

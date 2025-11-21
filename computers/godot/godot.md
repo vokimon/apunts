@@ -20,6 +20,8 @@
 - [GDQuest: Smooth 3D Character Movement with drone camera](https://www.youtube.com/watch?v=JlgZtOFMdfc)
 - [Depth based outline with gdshaders that work in compatible mode](https://www.youtube.com/watch?v=-SXJvpbFJ7M)
 - [Le x Lu: Channel on 3d games effects with godot](https://www.youtube.com/@Le_x_Lu)
+    - [Blood Effects](https://www.youtube.com/watch?v=GEN6yFIXeW4)
+    - [Earth Magic effects](https://www.youtube.com/watch?v=fe1bjORXeBg)
 - [Realist environment parametrization (cielo, sol, sombras, niebla. Impresionante)](https://www.youtube.com/watch?v=PmiMUuFvxzg)
 - [Animation tree (blending animations together)](https://www.youtube.com/watch?v=n872lbC-_BU)
 - [Hand draw 3d Shader](https://www.youtube.com/watch?v=4dfADUfyKTA)
