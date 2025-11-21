@@ -1286,6 +1286,29 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/android/compose/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Jetpack Compose
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2798,6 +2821,9 @@
 <li>Then <code>x² + b' x  + c = 0 = (x -m -d)(x -m +d) = x² -2mx + (m² - d²)</code></li>
 <li>Then <code>m = -b'/2</code> and <code>d² = m²-c</code></li>
 </ol>
+<p>Other way:
+<code>m</code> is also the <code>x</code> for the maxima/minima of the cuadratic,
+so <code>f'(x) = 2x + b'; f'(m) = 0; m = -b'/2</code></p>
 <p>Example with two real solutions:
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>2x² - 22x - 28 = 0
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>x² - 11x - 14 = 0
@@ -2825,11 +2851,10 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>x = m +- d
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>  = m +- sqrt(m²-c&#39;)                 # d²=m²-c&#39;
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>  = -b&#39;/2 +- sqrt(b&#39;²/4 - c&#39;)        # m = -b/2
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>  = -b/2a +- sqrt(b²/4a² - c/a)      # m = -b/2
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>  = -b/2a +- sqrt(b²/4a² - c/a)      # b&#39; = b/a; c&#39;=c/a
 <a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>  = -b/2a +- sqrt(b²/4a² - 4ac/4a²)  # multipy and divide c/a by 4a
 <a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>  = -b/2a +- sqrt(b² - 4ac)/2a       # extract 1/4a² out of the sqrt as 1/2a
 <a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>  = (-b +- sqrt(b² - 4ac))/2a        # common divisor 2a
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>  = (b +- sqrt(b² - 4ac))/-2a        # sign moved to denominator (+- of second term unaltered)
 </code></pre></div>
 
 

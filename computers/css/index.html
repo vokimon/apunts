@@ -504,6 +504,30 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#novetats-2025" class="md-nav__link">
+    <span class="md-ellipsis">
+      Novetats 2025
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Novetats 2025">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#declarative-popovers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Declarative popovers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#novetats-2024" class="md-nav__link">
     <span class="md-ellipsis">
       Novetats 2024
@@ -1389,6 +1413,29 @@
   
   <span class="md-ellipsis">
     Kotlin
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../android/compose/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Jetpack Compose
     
   </span>
   
@@ -2891,6 +2938,30 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#novetats-2025" class="md-nav__link">
+    <span class="md-ellipsis">
+      Novetats 2025
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Novetats 2025">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#declarative-popovers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Declarative popovers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#novetats-2024" class="md-nav__link">
     <span class="md-ellipsis">
       Novetats 2024
@@ -2976,6 +3047,38 @@
 <li><a href="https://layout.bradwoods.io/customize">Layout Generator</a>
   Generador de layouts CSS</li>
 </ul>
+<h2 id="novetats-2025">Novetats 2025</h2>
+<h3 id="declarative-popovers">Declarative popovers</h3>
+<p>https://developer.mozilla.org/en-US/docs/Web/API/Popover_API/Using</p>
+<p>Html declaration:</p>
+<ul>
+<li>In the popover add <code>popover</code> attribute with an <code>id</code></li>
+<li>In the target add <code>popovertarget="myid"</code> this will make the popover visible on target (Button)</li>
+<li><code>popovertargetaction</code> default <code>toggle</code> can also be <code>hide</code> or <code>show</code></li>
+</ul>
+<p>CSS styling:</p>
+<p>Si a l'html tenimem el target es el popover, normalment l'estil
+posicionarà el popover respecte a una ancla (anchor).</p>
+<ul>
+<li>Com que <code>popover</code> no es pas un element sinó un atribut,
+els podem seleccionar <code>[popover]</code>.</li>
+<li>Pero com alguns estils són específics per quan estan oberts (sobretot <code>display</code>)
+també fem servir la pseudo class <code>:popover-open</code></li>
+</ul>
+<p>https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_anchor_positioning</p>
+<p>Com posicionar-lo respecte l'element que dispara (anchor)?</p>
+<p>Podem relacionar el popup i el seu anchor amb 
+definint al css de l'anchor <code>anchor-name: --my-anchor</code> a l'anchor i
+al css del popup <code>position-anchor: --my-anchor</code>.
+En el cas dels popovers, aquesta relació s'estableix automàticament
+amb l'element que el dispara.</p>
+<p><code>anchor(top)</code> retorna la posicio de </p>
+<ul>
+<li>`anchor-name: </li>
+</ul>
+<p><code>@position-try</code>
+<code>position-area</code>
+<code>position-fallbacks</code></p>
 <h2 id="novetats-2024">Novetats 2024</h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">orphans</span><span class="o">:</span><span class="w"> </span><span class="nt">n</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="nt">Number</span><span class="w"> </span><span class="nt">of</span><span class="w"> </span><span class="nt">lonely</span><span class="w"> </span><span class="nt">lines</span><span class="w"> </span><span class="nt">at</span><span class="w"> </span><span class="nt">the</span><span class="w"> </span><span class="nt">end</span><span class="w"> </span><span class="nt">of</span><span class="w"> </span><span class="nt">a</span><span class="w"> </span><span class="nt">page</span><span class="o">/</span><span class="nt">column</span><span class="o">/</span><span class="nt">region</span><span class="w"> </span><span class="o">(</span><span class="nt">fragmentation</span><span class="w"> </span><span class="nt">break</span><span class="o">)</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nt">widows</span><span class="o">:</span><span class="w"> </span><span class="nt">n</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="nt">Number</span><span class="w"> </span><span class="nt">of</span><span class="w"> </span><span class="nt">lonely</span><span class="w"> </span><span class="nt">lines</span><span class="w"> </span><span class="nt">at</span><span class="w"> </span><span class="nt">the</span><span class="w"> </span><span class="nt">begining</span><span class="w"> </span><span class="nt">of</span><span class="w"> </span><span class="nt">a</span><span class="w"> </span><span class="nt">page</span><span class="o">/</span><span class="nt">column</span><span class="o">/</span><span class="nt">region</span><span class="w"> </span><span class="o">(</span><span class="nt">fragmentation</span><span class="w"> </span><span class="nt">break</span><span class="o">)</span>
