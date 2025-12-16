@@ -195,3 +195,24 @@ Después de una consonante con enfasis faringeo, o velar o una r, las vocales se
 - / æ / -> / ɑ / (La mas perceptible, tambien en su versión larga)
 - Las otras tambien se modifican pero sale natural (dice el video)
 
+
+## Sol y luna
+
+Las letras se identifican de sol y luna según
+si, al principio de palabra,
+asimilan el artículo "al",
+siendo las de sol las que lo hacen.
+
+Eliminan el sonido l del artículo y generan una geminacion. ar-rus, as-sam, ad-deran...
+
+Cuales son las de sol?
+Las que se articulan con la lengua delante:
+
+t   th  d   dh  r   z   s   sh  qs  qd  qt  qz  l   n
+ت 	ث 	د 	ذ 	ر 	ز 	س 	ش 	ص 	ض 	ط 	ظ 	ل 	ن
+
+Excepcion: ج djin, actualmente se pronuncia con la lengua delatne
+pero antiguamente se pronunciaba detrás: gin.
+
+
+
