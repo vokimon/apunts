@@ -475,11 +475,36 @@ res/mipmap-anydpi/ic_launcher.xml
 ```
 
 
+## The context
 
- 
+TODO: This might be Android related?
 
+Get app info
 
-    
+val packageName = context.packageName
+val appInfo = context.applicationInfo
+
+Acces resources:
+
+val appName = context.getString(R.string.app_name)
+val color = ContextCompat.getColor(context, R.color.primary)
+
+Start activities:
+
+val intent = Intent(context, SettingsActivity::class.java)
+context.startActivity(intent)
+
+Access preferences
+
+val prefs = context.getSharedPreferences("app_settings", Context.MODE_PRIVATE)
+val darkMode = prefs.getBoolean("dark_mode", false)
+
+Inflate layouts
+
+val view = LayoutInflater.from(context).inflate(R.layout.item_station, parent, false)
+
+val locationManager = context.getSystemService(Context.LOCATION_SERVICE) as LocationManager
+val vibrator = context.getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
 
 
 
