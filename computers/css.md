@@ -15,7 +15,13 @@
 - [Layout Generator](https://layout.bradwoods.io/customize)
   Generador de layouts CSS
 
+## Novetats 2026
+
+- `.nth-child(2 of selector)`: permet filtar el compte amb un selector https://caniuse.com/?search=css-nth-child-of-s
+
+
 ## Novetats 2025
+
 
 ### Declarative popovers
 
