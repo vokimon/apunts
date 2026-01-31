@@ -458,6 +458,27 @@ Considerations:
 	- In C Major scale: D is _II_ and Am is _vi_
 	- In A minor scale: D is _VI_ and Am is _i_
 
+- In a Major Scale
+    - I (C) completion/resolution
+    - V (G) ask for fast resolution to I (twist and shout beatles, cuando añaden voces de V para resolver en I)
+    - IV (F) ask for eventual resolution, but also release (Walk of the wild side, I-V loop)
+    - vi (Am) resolves but in a darker place (Stand by me I - iv - ...)
+    - ii (Dm) minor version of the IV (estrofa time after time: loop I - ii)
+    - iii (Em) mix of tension and resolution (estrofa de Space Oddity loop I - iii)
+- Out of the key root
+    - bVII (Bb - D F) epic open sound (intro Dont you forget about me, simple minds D-E )
+    - bIII (Eb - G Bb) Puente entre escalas menor y mayor tiene la tercera menor de la dominante (Love Shack B52)
+    - bVI (Ab - C Eb)  (Poison Alice Cooper en el opening)
+    - bII (Db F Ab) exotic arabesque
+    - bV (Gb Bb Db) 
+- Non diatonic versions (major scale chords but changing major <-> minor)
+    - i (Cm)
+    - III (E)
+    - II (D)
+    - VI (A) tendency to resolve to ii (i get around - beach boys
+    - VII (B) not common (Radio Head KArma police (C-D-G-F# IV-V-I-VII)
+    - v (g) reflective, nostalgic (ColdPlay Clocks)
+
 
 ## Common Pop chord progressions
 
@@ -472,7 +493,6 @@ https://en.wikipedia.org/wiki/I%E2%80%93V%E2%80%93vi%E2%80%93IV_progression#Song
 Instances:
 
 - C - G - a - F
-
 
 Examples
 

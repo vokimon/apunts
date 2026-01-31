@@ -677,10 +677,17 @@ Ejemplos:
 なぜ naze why/porque
 どぅ dou how/cómo
 いくら ikura how much/cuánto
+    ikura - how much. kono hom ikura des ka? how much is this book?
 どちら dochira which
 だれの dare no whose (quien de)
 
 TODO: Como se usan?
+
+Las particulas de pregunta son elementos vacios
+(no se quien, no se que, no se donde...)
+que al poner el _ka_ al final se pide
+rellenar al interlocutor.
+Tambien se pueden usar asi, como _no sé quién_ sin pregunta.
 
 ## Demostrativos
 
@@ -716,9 +723,27 @@ Adverbs
 - どこdoko: where?
 
 
-ikura - how much
+de _nani_ what
+zembu everything
+nanika something, anything?
+nandemo anything (negative)
+nanimo 
+nanimonai nothing
 
-kono hom ikura des ka? how much is this book?
+de _dare_ who
+minna
+dareka
+daredemo
+daremonai
+
+de _doko_ where
+doko
+dokoka
+dokodemo
+doko ni demo
+doko e demo
+    
+
 
 
 # Formulas comunes
@@ -764,13 +789,13 @@ debiddu san no,
 	- amerika ni ikimas i go to america
 - he[e]: preceeding as target location of physical movementa (identical to ni on locations)
 
-
 ## Insultos
 
 - Baka Stupid
 - Bakayarou Arsehole
 - chipatama  Dickhead
-- 
+
+
 
 
 

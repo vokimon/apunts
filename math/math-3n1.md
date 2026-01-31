@@ -937,6 +937,16 @@ Then the l-th trit tl is given by:
 
     tl = ( 2^((k + m + 1) mod 2) * (1 - 2^((m + 1) mod 2) * qα) ) mod 3
 
+### Lemma (Trinary prefix discard)
+
+A given trinary prefix can be discarded if any predecessor exists
+that corresponds to that prefix and 
+
+    pα < n
+
+
+
+    
 ----
 
 ## Old

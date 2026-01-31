@@ -199,7 +199,7 @@ Propietats relacionades:
     - U+2764 ♥ però U+2764 U+FE0F ❤️ 
     - U+1F600 😄pero U+1F600 U+FE0E 
 - Banderes nacionals: U+1F1E6..U+1F1FF representen les lletres pel codi de nació
-    - U+1F1EA U+1F1F8 -> E+S -> 🇪
+    - U+1F1EA U+1F1F8 -> E+S -> 
 - To de pell: Base (usually hard yellow) + To de pell
     - La base ha de tenir la propietat `Emoji_Modifier_Base = Yes`
     - Normalment son persones o parts de persones o animals humanitzats 👍
@@ -405,6 +405,8 @@ Printables (Utf-8 valido y visible):
     U+200B - U+200F (Zero Width Space, etc.), 3 bytes.
     U+2028 - U+202F (Line Separator, Narrow No-Break Space), 3 bytes.              
 
+
+```C
 /* . == #x0A */
 (str[offset] == 0x0A)
 
@@ -520,3 +522,5 @@ if (c < 0x20) {
         ((string).pointer[offset+1] == 0xBF &&                              \
          (((string).pointer[offset+2] & 0xFE) == 0xBE))
     )))
+```
+
