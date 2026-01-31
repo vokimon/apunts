@@ -12,25 +12,106 @@ $$
 
 Notice that, even though, the original Collatz formulation,
 defines the odd branch as $3n+1$,
-the result is always even, and the next step always $n/2$.
+the result is always even, and the next step is always $n/2$.
 In this formulation, both steps are collapsed into one.
 
 Consider also the kth application of $f$ as $f^k(n)$. By definition $f^0(n) = n$
 
-Let's define that a number n is _reductible_ if it exist a finite $k$ so that $f^k(n)=1$
+Let's define that a number n is _reducible_ if it exist a finite $k$ so that $f^k(n)=1$
 
-By brute force we know that all the first checked natural numbers are reductible.
+By brute force we know that all the first checked natural numbers are reducible.
 As for today this has been proved until 2^68 (David Bařina https://github.com/hellpig/collatz).
 
-The Collatz conjecture states that: all natural numbers are reductible.
+The Collatz conjecture states that: all natural numbers are reducible.
+
+### Concepts
+
+**Definition (Full trajectory):**
+The full (Collatz) trajectory of a number is the infinite sequence of numbers including the original number and successive applications of `f`.
+
+    Traj_full(n) = (f^k(n))_{k≥0}
+
+**Definition (Transient trajectory):**
+The transient trajectory of a number is the full trajectory sequence
+stopping the sequence before the first repeated element.
+
+**Convention (Transient trajectory by default):**
+From now on, when we will refer to the Trajectory of a number,
+we mean the transient trajectory unless otherwise stated.
+
+**Definition (Orbit):**
+The (Collatz) orbit is the set of numbers in a trajectory.
+
+    Orb(n) = {f^k(n)}_{k≥0}
+
+**Remark:** Both trajectories and orbits include the original number which is f0(n).
+
+**Definition (Successor):**
+A number `s` is a **successor** of `n` if there exists an integer `k>0` such that `f^k(n) = s`
+
+**Definition (Predecessor):**
+A number `p` is a **predecessor** of `n` if there exists an integer `k>0` such that `f^k(p) = n`
+
+**Proposition (Loop-or-unbound dicotomy):**
+Any full trajectory of a map (either Collatz or any other deterministic one)
+follows one of two patterns:
+
+- It enters a loop starting at the first repeated number `l`. 
+- It is an infinite, unbounded sequence of distinct numbers.
+
+**Proof:**
+
+- **Case A: Repeated numbers exists.**
+Supose some number `l` appears twice in the trajectory.
+Because `f` is deterministic and gives the same result
+to the same inputs, the subsequence between the repetions
+will repeat indefinitelly.
+
+- **Case B: No repetition occurs:**
+When no number repeats, it forms an infinite sequence of distinct numbers.
+Since there are only finitely many natural numbers under any number,
+the sequence must eventually exceed any previously occurring value.
+Hence the trajectory is an infinite, unbounded sequence of distinct numbers.
+
+All empirically checked cases for the Collatz function,
+follow the loop pattern with the (4,2,1) loop.
+Any hypothetical irreducible number disproving the conjecture,
+should either be an unbounded infinite sequence or conform
+a different loop than (4,2,1).
 
 ## Summary of achievements until now
 
-- Unbranched formulations, which makes derivations more manegeable
-- Bitwise computation, which provides an spacial insight on what is happening
-- Hypotesis of the first non reductible number, which provides either falsability conditions for rejection or a path to search such a number
-- Demonstrated Theorem: The oddity of fk(n) depends only on the kth lower bits of n, and it is independent of the upper ones.
+These has been achievements on my own path.
+Partial review of the state of the art already shows that many of those
+concepts have been already introduced by other authors.
+So I am not claiming to be the first of achieving any of these,
+but those are conclusions i got by my own effort.
+
+- Loop or unbound dicotomy: any trajectory should be either a loop or a infinite and unbound sequence of non repeating numbers.
+- **Unbranched formulas** by introducing integer-value indicators `Ok(n) = odd(fk(n))`, which makes derivations more manegeable.
+- Binary representation and bitwise computation, which provides fastest computation and also a visual/spacial insight on what is happening
+- **Minimal counter example hypotesis**: Exists a first irreducible number (FIR), not any counter example.
+  Being the first implies that all lower numbers are reductable, useful to discard one number to be the minimal counter example.
+- Descendent Collorary: If `fk(n)<n` then n is not FIR because lower values are reducible.
+- Ascendent Collorary: : If `fk(m)=n` being `m<n`, n is not FIR, this enables FIR discarding by inverse steps
+- **Demonstrated Theorem: The kth odity Ok(n) depends only on the kth lower bits of n, and it is independent of the upper ones.**
+- Collorary: All numbers with same k lower bits will have same up/down pattern on the first k steps. This enables discarding FIR candidates as a class and not one by one.
+- **Demonstrated Theorem: `fk(n) = `**
 - Demonstrated Theorem: If the most significant bit of fk(n) is the ith, fk+1(n) is up-bounded  to (2^i+1 + 2^i)
+
+## Ongoing review on existing literature
+
+- Stérin: https://arxiv.org/pdf/1907.00775
+    Patters on parity depending on patterns on bits (not sure if it the relation is the same one i reached.
+- https://www.collatztool.com/main.html
+    Describes findings on assigning patterns of bits to parity
+
+## Paths still to explore
+
+- Being n finite, at some point we are only feeding zeros to the Oddity function.
+  Intuition: Studying this steady state could lead to some conclusions on how FIR work if it does.
+  Empirical observation given the number of significant bits, a number continuous zeros ends up reducting.
+  Hypothesis, this is a deductable limit.
 
 
 ## Toolbox
@@ -65,13 +146,93 @@ We can also relate powers of 3 in terms of powers of 2 by using the binomial the
     3^n = sum[0<=i<=n]( 2^i * n! / (n-i)! / i! )
     3^n = sum[0<=i<=n]( 2^i * bincoef(i,n) )
 
+
+
+### Mutual Modular Inverses of Powers of 2 and Powers of 3
+
+We frequently encounter congruences of the form
+
+    2^k * n ≡ C (mod 3^l)   or   3^l * m ≡ D (mod 2^k)
+
+so it is useful to have explicit formulas for multiplicative inverses.
+
+#### Definition (Modular inverse)
+
+The **multiplicative modular inverse** of a number `a` modulo `m` is an integer `b` such that a * b ≡ 1 (mod m).
+For short, we call it the _modular inverse_.
+
+**Definition.**
+For integers `a,m` with `gcd(a,m)=1`, we denote by
+
+    inv_m(a)
+
+the unique integer `b` modulo `m` such that
+
+    a * b ≡ 1 (mod m).
+
+#### Lemma (Modular inverse of 2 modulo 3^l)
+
+For every l ≥ 1,
+
+    inv_{3^l} (2) = (3^l + 1)/2
+
+**Check:**
+    m is the multiplicative inverse of a modulo 
+
+    2 * ((3^l + 1)/2) = 3^l + 1 ≡ 1 (mod 3^l)
+
+#### Corollary (Modular inverse of 2^k modulo 3^l)
+
+For any integers k ≥ 0, l ≥ 1,
+
+    inv_{ 3^l} (2^k)^(-1) = ((3^l + 1)/2)^k
+
+So a congruence
+
+    2^k * n ≡ C (mod 3^l)
+
+can be solved as
+
+    n ≡ ((3^l + 1)/2)^k * C  (mod 3^l)
+
+
+#### Lemma (Modular inverse of 3 modulo 2^k)
+
+For every k ≥ 1, 3 is invertible modulo 2^k. Explicitly, let
+
+    3^(-1) ≡ x  (mod 2^k)
+
+where x satisfies 3 * x ≡ 1 (mod 2^k). This can be computed iteratively or via
+Hensel's lemma:
+
+- Base: 3^(-1) ≡ 1 (mod 2)
+- Lift: if 3 * x ≡ 1 (mod 2^i), then 3 * (x + 2^i) ≡ 1 (mod 2^(i+1))  
+
+#### Corollary (Modular inverse of 3^l modulo 2^k)
+
+Similarly,
+
+    (3^l)^(-1) ≡ (3^(-1))^l   (mod 2^k)
+
+So a congruence
+
+    3^l * m ≡ D (mod 2^k)
+
+can be solved as
+
+    m ≡ (3^(-1))^l * D   (mod 2^k)
+
+
+
 ### Boolean with integer arithmetics
+
+- Walter Rudin, _Principles of Mathematical Analysis_, §1 (indicator functions)
+- Graham, Knuth, Patashnik, _Concrete Mathematics_
 
 Expressing boolean values and operators with integer aritmethics,
 will be useful to eliminate formula branching for ods and even.
 
-Let's define a boolean integer as B€[0,1]
-
+We can use B∈{0,1} as a Boolean ring with addition e defined as `a⊕b=a+b−2ab` and multiplicaton as `ab`.
 Being a,b,c... boolean integers,
 we can represent boolean operations with integer algebra like this:
 
@@ -139,7 +300,7 @@ Powers of odd bases are always odd.
 
 Powers of even bases are even unless the power is 0.
 
-    odd((2*a)**b) = (b==0?1:0)   --- TODO: which aritmetic opp gives this?
+    odd((2*a)**b) = (b==0?1:0) = ð0(b)  --- TODO: which aritmetic opp gives this?
 
 ## Reformulating Collatz
 
@@ -209,7 +370,7 @@ Depending on the oddity of the previous result,
 we are adding or substracting half of the sequence value,
 rounding up for odds.
 
-### Binary implementation
+### (Cheap) binary implementation
 
 The binary implementation of the additive/substractive view,
 is quite cheap computational but also provides some insights.
@@ -239,47 +400,56 @@ we are adding or substracting that "same" step.
     fk+1 = fk + [ (fk>>1) + (fk&1) ]   (odd)
     fk+1 = fk - [ (fk>>1) + (fk&1) ]   (even)
 
+Or even
 
-## First non-reductible number
+    fk += (fk+1)>>1 (odd)
+    fk -= (fk+1)>>1 (even)
 
-### Hypothesis of the first non-reductible number
 
-Hypothesis: There exists a first finite number A that is not reductible.
+## First irreducible number
 
-Many non reductible numbers might exist,
-but if there are many, there would be certainly a first one.
+### Hypothesis of the first irreducible number (minimal counter example)
 
-Because that number is the first reductible one,
-all numbers `x; x<A` are reductible.
+If we assume that irreducible numbers exists,
+there will be a least irreducible number, denoted `A`.
 
-If the fk sequence of a number includes a reductible number
-the number would be reductible as well.
-So, the sequence of A cannot contain any number below A.
+Because that number is the first reducible one,
+all lesser numbers `m; m<A` are reducible.
 
-    f_k(A)>=A; for all k
+**Lemma: No lesser numbers in orbits including A**
+`A` has no successor or predecessor that is lesser than A.
+
+    ∀k≥1, fk(A) ≥ A
+    ∀n∈N,(∃k ≥ 1 such that fk(n)=A) ⇒ n ≥ A
+
+**Proof**
+Since reducibility is invariant along Collatz orbits,
+all numbers in an orbit containing `A` cannot be reducible.
+Since lesser numbers are reducible,
+no element of a orbit including `A` can be smaller than `A`.
+In particular, `A` has neither a predecessor nor a successor smaller than itself.
 
 This constrain could be useful in two fronts:
 
-- to falsify the hypothesis, if we cannot find such a number
-- to discard candidates of being A or even find a smarter algorithm to find it
-
-The fk sequence of A could have two patterns
-
-- It could be a loop, either having A in the loop or being a precursor of it (A is not repeated).
-- It could be an infinite sequence not repeating any number. That will have tendency to go up because lower numbers (and none are finite
+- to discard candidates for A
+- to falsify the hypothesis, if we can demonstrate that there is not such a number
 
 ### Shallow discards due to lesser successors
 
-As preliminary results, we can discard much of the candidates for A:
+Let's apply the no lesser successor criteria to discard some candidates by structure.
 
-Collorary: An even number cannot be the first non-reductible number
+**Lemma:** An even number cannot be the first irreducible number
+
+**Proof:**
 
 	f0 = n = 2m
 	f1 = m = n / 2 < n
 
-Because f1 < n, n is not the first irreductible number
+Because f1 < n, n is not the first irreducible number QED
 
-Collorary: A number $ n mod 4 = 1 $, cannot be the first irreductible number
+**Lemma:** A number $ n mod 4 = 1 $, cannot be the first irreducible number
+
+**Proof:**
 
 	f0 = n = 4 m + 1
 	f1 = (3(4m +1) +1)/2
@@ -287,165 +457,489 @@ Collorary: A number $ n mod 4 = 1 $, cannot be the first irreductible number
 	f1 = 6m + 2; which is even
 	f2 = 3m + 1 < 4m +1 = f0
 
-Being even, corresponds with $A mod 4 = 0$ and $A mod 4 = 2$,
+
+**Collorary:** A number with $ A mod 4 <> 3 $ can not be the FIR.
+
+**Proof**
+Being even, corresponds with $A mod 4 = 0$ or $A mod 4 = 2$,
 so, the only possibility left if A exist is $ A mod 4 = 3 $.
 
 Sadly, beyond k=2, cases start to expand instead of shrinking.
 Still if we look to the possible predecessor instead of the successors,
 we can find other quick restriction.
 
-## Shallow discards due to lesser predecessors
+### Discards due to lesser predecessors
 
-We could also apply restrictions to predecessors.
-A predecessor is a number p so that there is a k,
-for which fk(p)=A, being A the first irreductible number.
-Because A is irreductible, so has to be any predecessor.
-Because all numbers below A are reductible,
-any predecessor p has to be greater or equal than A.
+Let's apply the no lesser predecessor criteria to discard some candidates by structure.
 
-So, given a candidate to be A if it has a predecessor
-which is lesser than A it can be discarded as the first irreductible number.
+#### Lemma (Direct predecessors)
 
-Collorary: The first irreductible number n is not $n mod 3 = 2$.
+A number `n` has at most two direct predecessors `p` such that `f(p)=n`,
 
-Every number $n$ has a even direct predecesor $pe = 2n$ which is clearly greater.
-But they could also have an odd direct predecesor $pe = (2n - 1) / 3$,
-which is lesser.
-Not all numbers have a lesser predecessor, just those
-for which $2n -1$ is divisible by 3.
+1. an even predecesor `pe = 2n` which exist for every number
+2. an odd predecessor `po = (2n-1)/3` which exists if and only if `n ≡ 2 (mod 3)`.
 
-Let be po the lesser prececessor of n.
-$n = (3po+1)/2$.
-Also po should be odd, so, po=2l+1 being l a natural.
-Combining both expressions:
+No other direct predecessor exist.
 
-	n = (3po+1)/2 ; m is the lesser predecesor of n
-	m = 2l+1 ; m needs to be odd
-	n = (6l+3+1)/2 = 3l + 2
+**Proof:**
 
-Since p is lesser, under the assumption that n is the FIN,
-p should be reductible, but this contradict the assumption.
-So, if n can be expressed as 3l+2, it is not the FIN.
+Let `p` be such that `f(p) = n`.
 
-WIP: Check how far we can go with predecessors.
+If `p` is even, denote it by `pe`:
 
-Let's go for further predecessors.
-Still we have $pe = 2n$.
+    n = f(pe) = pe/2
+    pe = 2n
 
-	pee = 4n > n -> no worries yet
-	peo = (4n-1)/3 > n given that n>1 which we know FIN is
-	still for this number to be negative let's see the structure for the number to take that path
-	peo = 2l+1
-	4n-1 = 6l+3
-	4n = 6l+4
-	2n = 3l + 2
-	n = 3l/2 + 1
-	because n is integer lets say l=2m
-	n = 3m+1
+Thus the even predecessor always exists.
 
-so this path, peo, is conditioned to $n mod 3 = 1$
+If `p` is odd, denote it by `po`:
 
-	peoo = (2(4n-1)/3 -1)/3
-	peoo = (8n-2-3)/9
-	peoo = (8n-5)/9
-	<n?
-	8n-5<9n
-	n>5 this is true because n is far beyond 5 so yes this will discard n as FIN
-	In order to take this branch peoo = 2l +1
-	peoo = (8n-5)/9 = 2l + 1
-	8n-5 = 18l + 9
-	8n = 18l + 4
-	4n = 9l + 2
-	l=4m+2
-	n = (36m+18+2)/4
-	n = 9m+5
+    n = f(po) = (3po+1)/2
+    2n = 3po + 1
 
-In summary:
+Since `po` is odd, there exists a natural number `l` such that:
 
-	po = (2n-1)/3 < n -> Discarded as FIN
-		condition (2n-1)/3 = 2i+1
-			2n-1 = 6i + 3
-			2n = 6i + 4
-			n = 3i + 2
-			n mod 3 = 2
-		$n mod 3 = 2$ -> n is not FIN
-	pe = 2n > n -> still feasible
-		peo = (2(2n)-1)/3 = (4n-1)/3 > n -> still feasible
-			condition (4n-1)/3 = 2i+1
-				4n-1 = 6i + 3
-				4n = 6i + 4
-				2n = 3i + 2
-				n = 3j + 1  (i = 2j)
-				n mod 3 = 1
-			peoo = (2*(4n-1)-1*3)/9 = (8n-5)/9 < n
-				condition (8n-5)/9 = 2i+1
-				8n-5 = 18i+9
-				8n = 18i+16
-				4n = 9i+16
-				n = 9j+4 (i=2j)
-				n mod 9 = 4
-				FIN can not be mod 9 = 4 (congruent with mod3=1)
-			peoe = (8n-2)/3 > n -> still feasible
-				peoeo = (2*(8n-2) -3 )/9 = (16n-7)/9 > n still feasible
-					condition (16n-7)/9 = 2i+1
-					16n - 7 = 18i + 9
-					16n = 18i + 16
-					8n = 9i + 8
-					n = 9j + 1 (j=8i)
-					n mod 9 = 1 (congruent with mod3=1)
-					peoeoo = (2(16n-7) -3)/27 = (32n-17)/3
-						condition (32n-14)/27 = 2i+1
-						32n - 14 = 2*27i + 27
-						32n = 2*27i + 44 (i = 16 
-						16n = 27i + 22 
-						8n = 
-				peoee
-		pee = 4n-2 > n -> still feasible
+    po = 2l + 1
+
+Substituting:
+
+    2n = 3(2l + 1) + 1
+    2n = 6l + 4
+    n = 3l + 2
+
+Thus `n ≡ 2 (mod 3)`.
+
+Conversely, if `n ≡ 2 (mod 3)`, then `n = 3l + 2` for some `l`,
+and defining:
+
+    po = 2l + 1
+
+gives an odd integer satisfying `f(po) = n`.
+
+Since every integer is either even or odd, no other direct predecessors exist. QED
 
 
-	(P2 n - r)/P3 = 2i +1
-	P2 n - r = 2 P3 i + P3
-	P2 n = 2 P3 i + P3 + r
-	n = (2 P3 i + P3 + r)/P2
-	i = P2 j - 2/j - r/P3/j
-	n = 2 P3 P2 j + P3 + r
+#### Definition (k-level predecessor notation)
+
+Let n be a number. Let α = α1 α2 … αk ∈ {e,o}^k be a sequence of choices (even = e, odd = o).  
+Then the k-level predecessor `p_α(n)` is the number reached by applying the corresponding sequence of direct predecessors:
+
+- αk predecessor of ( … (α2 predecessor of (α1 predecessor of n) … ))
+
+**Example:** `peo(n)` is the odd predecessor of the even predecessor of `n`
+
+**Convention:**  
+When the root `n` (or A) is clear from context, we elide it:
+
+    pe ≡ pe(n),  peo ≡ peo(n),  pooo ≡ pooo(n), etc.
+
+#### Convention (Empty predecessor sequence)
+
+The empty sequence `α = ∅` represents no predecessor application, and we set:
+
+    p∅(n) = n
+
+#### Definition (Existence condition of a predecessor)
+
+Let `pα(n)` be a k-level predecessor of `n`, as defined above.
+The **existence condition** `E_α(n)` is the conjunction of all constraints on `n`
+required for `p_α(n)` to be well-defined as an integer predecessor under the
+Collatz map.
+
+That is, `E_α(n)` holds if and only if every odd-predecessor step appearing in
+the sequence `α` is admissible.
+
+#### Lemma (Recursive construction of predecessors and their existence)
+
+Let n be a number and α = α1 α2 … αk ∈ {e,o}^k a sequence of choices (even = e, odd = o).
+Then the (k+1)-level predecessors of `n` corresponding to the extended sequences
+`αe` and `αo` are obtained recursively as follows:
+
+**Even extension:**
+
+    pαe(n) = 2 * pα(n)
+    Eαe(n) = Eα(n)
+
+**Odd extension:**
+
+    pαo(n) = (2 * pα(n) - 1) / 3
+    Eαo(n) = Eα(n) ∧ (2 * pα(n) - 1 ≡ 0 (mod 3))
+
+No other direct extensions exist.
+
+#### Lemma (General algebraic form of predecessors)
+
+Every predecessor index `α ∈ {e,o}^k`
+can be expressed in the form
+
+    pα(n) = (2^k * n - Cα) / 3^lα
+
+where `lα` is the number of occurrences of `o` in `α`,
+and the constant `Cα` is a non-negative integer given explicitly by
+
+    Cα = ∑_{i : α_i = o} 2^(k-i) * 3^l_i
+
+with `l_i` denoting the number of occurrences of `o`
+among `α_1, …, α_{i-1}`.
+
+
+**Proof (by induction on α)**
+
+
+**Base case (α = ∅):**  
+
+For the empty sequence `α = ∅`, the predecessor is the number itself:
+
+    p∅(n) = n
+
+This can be written as
+
+    p∅(n) = (2^0 * n - 0) / 3^0
+
+so `C∅ = 0` and `l∅ = 0`.  
+The explicit formula for `Cα` is an empty sum and also gives `0`.
+
+
+**Inductive hypothesis:**
+
+Suppose that for some `k ≥ 0` and every `α ∈ {e,o}^k`,
+
+    pα(n) = (2^k * n - Cα) / 3^lα
+
+and that
+
+    Cα = ∑_{i : α_i = o} 2^(k-i) * 3^l_i
+
+
+**Inductive step:**
+
+Let `α ∈ {e,o}^k`. We consider the two possible extensions.
+
+
+**1. Even extension (`αe`):**
+
+By the predecessor recursion:
+
+    pαe(n) = 2 * pα(n)
+
+Substituting the inductive form:
+
+    pαe(n) = (2^(k+1) * n - 2 * Cα) / 3^lα
+
+Thus the form is preserved by setting
+
+    Cαe := 2 * Cα
+    lαe := lα
+
+Since no new odd step is added, each existing term in the sum for `Cα`
+is multiplied by `2`, giving
+
+    Cαe = ∑_{i : α_i = o} 2^((k+1)-i) * 3^l_i
+
+which matches the stated formula.
+
+
+**2. Odd extension (`αo`):**
+
+By the predecessor recursion:
+
+    pαo(n) = (2 * pα(n) - 1) / 3
+
+Substituting the inductive form:
+
+    pαo(n)
+      = (2^(k+1) * n - (2 * Cα + 3^lα)) / 3^(lα + 1)
+
+Thus the form is preserved by setting
+
+    Cαo := 2 * Cα + 3^lα
+    lαo := lα + 1
+
+In the explicit sum, all existing terms are multiplied by `2`,
+and the new odd step at position `i = k+1` contributes
+
+    2^((k+1)-(k+1)) * 3^lα = 3^lα
+
+so
+
+    Cαo = ∑_{i : α_i = o} 2^((k+1)-i) * 3^l_i
+
+as claimed.
+
+
+**Conclusion:**  
+
+For every sequence `α ∈ {e,o}^k`, the k-level predecessor admits the algebraic form
+
+    pα(n) = (2^k * n - Cα) / 3^lα
+
+where `lα` is the number of odd predecessors in `α`,
+and `Cα` is given explicitly by
+
+    Cα = ∑_{i : α_i = o} 2^(k-i) * 3^l_i
+
+Q.E.D.
+
+
+#### Lemma (Odd predecessor existence induces a power-of-3 congruence)
+
+Let `α ∈ {e,o}^k` be a predecessor index, and let `l` denote the number of
+occurrences of `o` in `α`.
+
+The odd predecessor `pα(n)` can be taken **only if** `n` satisfies a congruence
+modulo `3^l` of the form
+
+    n ≡ Kα  (mod 3^l)
+
+where the residue `Kα` is given explicitly by
+
+    Kα ≡ ∑_{i : α_i = o} ((3^l + 1) / 2)^i · 3^{l_i}   (mod 3^l)
+
+and `l_i` denotes the number of occurrences of `o` among
+`α_1, …, α_{i-1}`.
+
+
+**Proof.**
+
+From the previous lemma (General algebraic form of predecessors), we have
+
+    pα(n) = (2^k · n − Cα) / 3^l
+
+with
+
+    Cα = ∑_{i : α_i = o} 2^{k−i} · 3^{l_i}.
+
+For `pα(n)` to exist as an integer (and hence be a valid predecessor),
+the numerator must be divisible by `3^l`, which is equivalent to
+
+    2^k · n ≡ Cα   (mod 3^l).
+
+Since `gcd(2^k, 3^l) = 1`, the power `2^k` admits a modular inverse modulo `3^l`.
+A convenient explicit representative is
+
+    (2^k)^(-1) ≡ ((3^l + 1) / 2)^k   (mod 3^l),
+
+because `(3^l + 1) ≡ 1 (mod 3^l)`.
+
+Multiplying both sides of the congruence by this inverse gives
+
+    n ≡ ((3^l + 1) / 2)^k · Cα   (mod 3^l).
+
+Substituting the explicit expression for `Cα` yields
+
+    n ≡ ∑_{i : α_i = o}
+          ((3^l + 1) / 2)^k · 2^{k−i} · 3^{l_i}
+        (mod 3^l).
+
+Using the identity
+
+    ((3^l + 1) / 2)^k · 2^{k−i}
+      = (3^l + 1)^k · 2^{-i}
+      ≡ 2^{-i}   (mod 3^l),
+
+and noting that `2^{-i}` denotes the modular inverse of `2^i` modulo `3^l`,
+which is explicitly
+
+    2^{-i} ≡ ((3^l + 1) / 2)^i   (mod 3^l),
+
+we obtain
+
+    n ≡ ∑_{i : α_i = o} ((3^l + 1) / 2)^i · 3^{l_i}   (mod 3^l).
+
+This proves the stated congruence.
+
+Q.E.D.
+
+#### Corollary (Congruence condition guarantees oddness of predecessor)
+
+Given a possible predecessor path `α` for `n` where the last step is `αk = 'o'`,
+the restriction of `pα` being a well defined integer implies the restriction of `pα` being and odd number
+and thus only the well defined integer condition is required to determine its existence.
+
+**Proof:**
+
+From the general algebraic form of the predecessor:
+
+    pα(n) = (2^k * n - Cα) / 3^l
+
+Then:
+
+    Odd(pα(n)) = 
+        = Odd((2^k * n -Cα) / 3^l)  # inline  pα(n) = (2^k * n - Cα) / 3^l
+        = Odd(2^k * n -Cα)          # 3^l is odd and numerator is divisible by 3^l
+        = Odd(-Cα)                  # 2^k * n is even
+        = Odd(Cα)                   # sign parity invariance
+        = Odd(∑_{i : α_i = o} 2^(k-i) * 3^l_i)    # Cα = ∑_{i : α_i = o} 2^(k-i) * 3^l_i
+        = Odd(3^l_k)                # all terms multiplied by a power of 2 are even but k=i and αk = 'o'
+        = 1                         # non-zero power of odd is odd
+
+QED
+
+
+#### Lemma (Compatibility of odd predecessor congruences)
+
+Let α = βo be a predecessor path obtained by appending an odd step to β.
+Let lβ be the number of odd steps in β, so lα = lβ + 1.
+
+Then the residues satisfy:
+
+    Kα ≡ Kβ  (mod 3^lβ)
+
+Consequently, any n satisfying n ≡ Kα (mod 3^(lβ+1))
+automatically satisfies n ≡ Kβ (mod 3^lβ).
+
+**Proof:**
+
+Let |β| = k. From the recursive construction:
+
+    pα(n) = (2 * pβ(n) - 1) / 3
+
+Using the algebraic form pβ(n) = (2^k * n - Cβ) / 3^lβ:
+
+    pα(n) = (2^(k+1) * n - (2 * Cβ + 3^lβ)) / 3^(lβ + 1)
+
+The existence condition Eα(n) requires:
+
+    2^(k+1) * n ≡ 2 * Cβ + 3^lβ  (mod 3^(lβ + 1))
+
+Reducing modulo 3^lβ:
+
+    2^(k+1) * n ≡ 2 * Cβ  (mod 3^lβ)
+
+Since gcd(2, 3^lβ) = 1, multiply by the modular inverse of 2:
+
+    2^k * n ≡ Cβ  (mod 3^lβ)
+
+This is precisely the existence condition Eβ(n), i.e., n ≡ Kβ (mod 3^lβ).
+But Eα(n) also implies n ≡ Kα (mod 3^(lβ+1)), hence:
+
+    Kα ≡ Kβ  (mod 3^lβ)
+
+QED
+
+
+#### Remark (Single congruence suffices for all odd steps)
+
+Let α contain l odd steps, indexed 1 through l in order of appearance.
+The integrality condition for the l-th odd step—namely n ≡ Kα (mod 3^l)—
+implies the integrality conditions for the j-th odd step for every j < l.
+Therefore, verifying the congruence modulo 3^l alone guarantees integrality
+at all odd steps along α; separate checks for lower-indexed odd steps are
+unnecessary.
 
 
 
+#### Definition (Ternary digits)
+
+For any integer n ≥ 0, write its ternary expansion as:
+
+    n = t0 + t1 * 3 + t2 * 3^2 + …   with ti ∈ {0,1,2}
+
+where t0 is the least significant trit (units digit), t1 the next, etc.
+
+#### Corollary (Trit-fixing interpretation)
+
+Let α ∈ {e,o}^k with lα ≥ 1 odd steps.
+The existence condition Eα(n) ⇔ n ≡ Kα (mod 3^lα)
+is equivalent to fixing the lowest lα ternary digits:
+
+    ti = (Kα / 3^i) mod 3   for all 0 ≤ i < lα
+
+In particular, appending an odd step (α → αo) fixes exactly one additional trit tlα,
+while appending an even step (α → αe) fixes no new trit.
+
+**Proof:**
+
+The congruence n ≡ Kα (mod 3^lα) uniquely determines the residues of n
+modulo 3, 3^2, …, 3^lα. These residues are precisely the partial sums
+t0, t0 + t1*3, …, ∑_{i=0}^{lα-1} ti * 3^i, which uniquely determine
+t0, t1, …, t_{lα-1}. The compatibility lemma guarantees that extending α
+by an odd step preserves these lower trits while adding constraint tlα. QED
+
+#### Lemma (Gap determines next trit modulo 2)
+
+Let α be a predecessor path with k steps and l ≥ 0 odd steps.
+Let m ≥ 0 be the number of even steps inserted before the next odd step.
+Denote by tl the l-th trit of n (i.e., n = Kα + 3^l * tl + higher terms).
+
+Then tl is determined modulo 2 by the gap m:
+
+    tl ≡ aα * 2^m + bα   (mod 3)
+
+where aα, bα ∈ {0,1,2} are constants depending only on α.
+Consequently:
+
+  • tl(m + 2) = tl(m) for all m ≥ 0  (period 2)
+  • As m varies, tl takes exactly two distinct values in {0,1,2}
+  • The third value is unreachable for any extension of prefix α
+
+**Proof:**
+
+From the algebraic form:
+
+    pα(n) = (2^k * n - Cα) / 3^l
+
+After m even steps:
+
+    pα e^m(n) = 2^m * pα(n) = (2^(k+m) * n - 2^m * Cα) / 3^l
+
+For the subsequent odd step to exist we require:
+
+    2 * pα e^m(n) ≡ 1   (mod 3)
+    ⇔  2^(k+m+1) * n - 2^(m+1) * Cα ≡ 3^l   (mod 3^(l+1))
+
+Write n = Kα + 3^l * tl where Kα satisfies 2^k * Kα ≡ Cα (mod 3^l).
+Then 2^k * Kα - Cα = Qα * 3^l for some integer Qα.
+
+Substituting:
+
+    2^(k+m+1) * (Kα + 3^l * tl) - 2^(m+1) * Cα
+        = 2^(m+1) * (2^k * Kα - Cα) + 2^(k+m+1) * 3^l * tl
+        = 2^(m+1) * Qα * 3^l + 2^(k+m+1) * 3^l * tl
+
+The congruence becomes:
+
+    3^l * (2^(m+1) * Qα + 2^(k+m+1) * tl) ≡ 3^l   (mod 3^(l+1))
+
+Dividing by 3^l (valid modulo 3):
+
+    2^(m+1) * Qα + 2^(k+m+1) * tl ≡ 1   (mod 3)
+
+Solve for tl. Since 2^(-1) ≡ 2 (mod 3), we have 2^(-r) ≡ 2^r (mod 3):
+
+    tl ≡ 2^(k+m+1) * (1 - 2^(m+1) * Qα)   (mod 3)
+       ≡ 2^(k+1) * 2^m * (1 - 2 * 2^m * Qα)   (mod 3)
+       ≡ aα * 2^m + bα   (mod 3)
+
+where aα = -2^(k+2) * Qα (mod 3) and bα = 2^(k+1) (mod 3) depend only on α.
+
+Since 2^m mod 3 has period 2 (2^m ≡ 1 if m even, 2 if m odd),
+tl(m) also has period 2 and can take at most two distinct values.
+Because the codomain {0,1,2} has three elements, exactly one value is excluded. QED    
 
 
+#### Formula (Trit value from gap and prefix parameters)
 
+Let α be a predecessor path with:
+  • k = |α| total steps
+  • l odd steps (fixing trits t0 … t_{l-1})
+  • Kα = residue for existence (n ≡ Kα (mod 3^l))
+  • Cα = constant from algebraic form pα(n) = (2^k * n - Cα) / 3^l
 
+Let m ≥ 0 be the number of even steps before the next odd step.
 
-In summary, numbers n such that $n mod 9 = 5$, can not be FIN.
-Still we have the path open for pee and peoe.
+Define:
 
+    Qα = (2^k * Kα - Cα) / 3^l          # exact integer (by construction)
+    qα = Qα mod 3                        # state of prefix modulo 3
 
+Then the l-th trit tl is given by:
 
+    tl = ( 2^((k + m + 1) mod 2) * (1 - 2^((m + 1) mod 2) * qα) ) mod 3
 
+----
 
-
-Collorary: A number 
-2n = 3 f-1 + 1
-f-1 = (2 n - 1) / 3
-
-f-1 = 2n
-f-2 =  (4n - 1) / 3 < n
-4n -1 < 3n
-
-f-3 = ((8n-2/3) -1 )/3
-f-3 = (8n-5)/9 < n
-(8n-5) < 9n
--5 < n
-true
-
-2n=foo(2l + 1) =
-2n=fo((6l + 3 +1)/2)
-2n=fo(3l + 2) l odd -> l = 2k+1
-2n=fo(3(2k+1) + 2)
-2n=fo(6k+5)
-2n=(3(6k+5)+1)/2 = (18k + 15 + 1)/2 = 9k + 8
-
+## Old
 
 
 ### Oddity of fk(n) dependens just on the k+1 lower bytes of n
@@ -453,7 +947,7 @@ true
 Theorem: The oddity of the kth member of the sequence for n
 is determined by just the k+1 least significative bits of n.
 
-Demonstration:
+Proof:
 
 Let's ni be the ith least significative bit of n.
 
@@ -530,7 +1024,7 @@ and, during the matching, the coincidence
 This opens several oportunities:
 
 - Lower bits are shared by many numbers of different scales.
-  Maybe we can combine that with the first irreductible A hypothesis to discard many lower bits patterns instead of discarding numbers one by one.
+  Maybe we can combine that with the first irreducible A hypothesis to discard many lower bits patterns instead of discarding numbers one by one.
 - Because A has to be finite, at some point, only zero bits are incorporated
 
 ## Upper bits propagation
@@ -630,7 +1124,6 @@ Given Ok, what it is Ok+1?
 
 
 
-
 ## Constructive strategy
 
 Another strategy to explore is the following one:
@@ -658,11 +1151,11 @@ In ths case we have no problem, whichever integer can be doubled.
 
 ## Strategies
 
-Hypothesis: Exists a first natural number A that it is not reductible.
+Hypothesis: Exists a first natural number A that it is not reducible.
 
 **Strategy 1:** 
-If exists a first non reductible natural A implies that any `n<A` is reductible.
-Because A is not reductible, `f_k(A)>=A` for all k.
+If exists a first irreducible natural A implies that any `n<A` is reducible.
+Because A is not reducible, `f_k(A)>=A` for all k.
 Having `f_k(A)<A` will contradict the hypothesis.
 If the hypothesis is true, it could lead to a search algorithm for A.
 
@@ -1100,8 +1593,8 @@ Also Nk=1, Ni = 0 for `i>k`.
 
     fk(Lk) = Ck
 
-Let's be N0 the first unreductible natural number.
-Because Lk = N0 - 2^k < N0, both Lk and Ck are reductible
+Let's be N0 the first unreducible natural number.
+Because Lk = N0 - 2^k < N0, both Lk and Ck are reducible
 
 
     fk+1 = (Nk+1)*3^Bk + Ck+1 = Ck+1
@@ -1250,7 +1743,7 @@ A odd means that bit 0 is 1.
 And then f^1(A) = 3A+1/2 = (6B+3+1)/2 = 3B + 2
 
 a_1=0 B even?
-If B was even, then f^2(A)=(3A+1)/4 >= A (for A>1) and A would be reductible.
+If B was even, then f^2(A)=(3A+1)/4 >= A (for A>1) and A would be reducible.
 So B is odd, lets B=2C+1; A = 2(2C+1)+1 = 4C+3
 B odd means that bit 1 is 1.
 f^2(A) = 3((3A+1)/2)+1 = (9A+3)/2+1 = (9A+5)/2 = 18C + 16  so even
@@ -1336,7 +1829,7 @@ feven^-1 = 2*n
 
 ## Limiting factor
 
-N0 will be reductible if for any k
+N0 will be reducible if for any k
 
 N0 > 3^Bk*Nk + Ck
 Nk*2^k + sum(ni * 2^i)(0=i<k) > 3^Bk*Nk + Ck
@@ -1736,7 +2229,7 @@ Lets remove the recursion on ak and bk:
 
     Hypothesis on ak
         ak = sum[0<=i<k](Oi)
-    Demonstration
+    Proof
         a0 = sum[0<=i<0](Oi) = 0
         ak+1 =
             = sum[0<=i<k+1](Oi)
@@ -1746,7 +2239,7 @@ Lets remove the recursion on ak and bk:
 
     Hypotesis on bk
         bk = sum[0<=i<k]( Oi * 2^i * 3^(sum[i+1<=j<k](Oj)) )
-    Demonstration:
+    Proof:
         b0 = sum[0<=i<0]( Oi * 2^i * 3^(sum[i+1<=j<0](Oj)) ) = 0
         bk+1 =
             = sum[0<=i<k+1]( Oi * 2^i * 3^(sum[i+1<=j<k+1](Oj)) )
