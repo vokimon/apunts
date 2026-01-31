@@ -60,6 +60,8 @@
     
       <link rel="stylesheet" href="../../None">
     
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -884,29 +886,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../computers/time/time/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Representando el tiempo
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../computers/security/" class="md-nav__link">
         
   
@@ -1168,6 +1147,52 @@
   
   
     <li class="md-nav__item">
+      <a href="../../computers/time/time/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Representando el tiempo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/unicode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Unicode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../computers/cligrafics/00-imagemagick/" class="md-nav__link">
         
   
@@ -1222,10 +1247,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" >
         
           
-          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
             
   
   
@@ -1238,8 +1263,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_5">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
             <span class="md-nav__icon md-icon"></span>
             Android
           </label>
@@ -1281,6 +1306,52 @@
   
   <span class="md-ellipsis">
     Kotlin
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/android/kotlin-corutines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kotlin: Corutines
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computers/android/viewmodel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Android ViewModel
     
   </span>
   
@@ -1398,7 +1469,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../computers/ip6" class="md-nav__link">
+      <a href="../../computers/ip6/" class="md-nav__link">
         
   
   
@@ -4323,9 +4394,39 @@ Named because the notation: C/G means inversion with G as the bass note.</p>
 <li>Different chord progressions provides different feelings to the piece</li>
 <li>Two transposed chord progressions provide a similar feeling</li>
 <li>Because of that we characterize chords in a chord progression with the intervals to their roots from the key/scale root.</li>
-<li>We represent the chords with roman numerals, upper case if Major, lower case if minor<ul>
+<li>
+<p>We represent the chords with roman numerals, upper case if Major, lower case if minor</p>
+<ul>
 <li>In C Major scale: D is <em>II</em> and Am is <em>vi</em></li>
 <li>In A minor scale: D is <em>VI</em> and Am is <em>i</em></li>
+</ul>
+</li>
+<li>
+<p>In a Major Scale</p>
+<ul>
+<li>I (C) completion/resolution</li>
+<li>V (G) ask for fast resolution to I (twist and shout beatles, cuando añaden voces de V para resolver en I)</li>
+<li>IV (F) ask for eventual resolution, but also release (Walk of the wild side, I-V loop)</li>
+<li>vi (Am) resolves but in a darker place (Stand by me I - iv - ...)</li>
+<li>ii (Dm) minor version of the IV (estrofa time after time: loop I - ii)</li>
+<li>iii (Em) mix of tension and resolution (estrofa de Space Oddity loop I - iii)</li>
+</ul>
+</li>
+<li>Out of the key root<ul>
+<li>bVII (Bb - D F) epic open sound (intro Dont you forget about me, simple minds D-E )</li>
+<li>bIII (Eb - G Bb) Puente entre escalas menor y mayor tiene la tercera menor de la dominante (Love Shack B52)</li>
+<li>bVI (Ab - C Eb)  (Poison Alice Cooper en el opening)</li>
+<li>bII (Db F Ab) exotic arabesque</li>
+<li>bV (Gb Bb Db) </li>
+</ul>
+</li>
+<li>Non diatonic versions (major scale chords but changing major &lt;-&gt; minor)<ul>
+<li>i (Cm)</li>
+<li>III (E)</li>
+<li>II (D)</li>
+<li>VI (A) tendency to resolve to ii (i get around - beach boys</li>
+<li>VII (B) not common (Radio Head KArma police (C-D-G-F# IV-V-I-VII)</li>
+<li>v (g) reflective, nostalgic (ColdPlay Clocks)</li>
 </ul>
 </li>
 </ul>
@@ -4719,6 +4820,12 @@ C</p>
     
     
       <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="../../javascripts/katex.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
       
     
   </body>

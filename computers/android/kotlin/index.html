@@ -18,7 +18,7 @@
         <link rel="prev" href="../android-glossary/">
       
       
-        <link rel="next" href="../compose/">
+        <link rel="next" href="../kotlin-corutines/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -59,6 +59,8 @@
       <link rel="stylesheet" href="../../../css/videowrapper.css">
     
       <link rel="stylesheet" href="../../../None">
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
     
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -886,29 +888,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../time/time/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Representando el tiempo
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../security/" class="md-nav__link">
         
   
@@ -1170,6 +1149,52 @@
   
   
     <li class="md-nav__item">
+      <a href="../../time/time/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Representando el tiempo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unicode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Unicode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../cligrafics/00-imagemagick/" class="md-nav__link">
         
   
@@ -1226,10 +1251,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" checked>
         
           
-          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
             
   
   
@@ -1242,8 +1267,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2_5">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_7">
             <span class="md-nav__icon md-icon"></span>
             Android
           </label>
@@ -1347,23 +1372,32 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#tipus-basics" class="md-nav__link">
+  <a href="#opcionalitat" class="md-nav__link">
     <span class="md-ellipsis">
-      Tipus bàsics
+      Opcionalitat
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
+  <a href="#tipus-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tipus bàsics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tipus bàsics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#numerics" class="md-nav__link">
     <span class="md-ellipsis">
       Numèrics
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Numèrics">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#boleans" class="md-nav__link">
@@ -1378,6 +1412,24 @@
   <a href="#string" class="md-nav__link">
     <span class="md-ellipsis">
       String
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ranges" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ranges
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#collections" class="md-nav__link">
+    <span class="md-ellipsis">
+      Collections
     </span>
   </a>
   
@@ -1407,6 +1459,24 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#scope-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scope functions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extensions-infixos-i-operadors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extensions, infixos i operadors
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#puzzling-syntax-twist" class="md-nav__link">
     <span class="md-ellipsis">
       Puzzling syntax twist
@@ -1425,33 +1495,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#coroutines" class="md-nav__link">
-    <span class="md-ellipsis">
-      Coroutines
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#the-context" class="md-nav__link">
-    <span class="md-ellipsis">
-      The context
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#flow" class="md-nav__link">
-    <span class="md-ellipsis">
-      Flow
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#unit" class="md-nav__link">
     <span class="md-ellipsis">
       Unit
@@ -1460,10 +1503,116 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#generics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Generics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#genericos-vs-templates-vs-ducktyping" class="md-nav__link">
+    <span class="md-ellipsis">
+      Genericos vs Templates vs DuckTyping
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#declaracions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Declaracions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ús
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#constriccions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Constriccións
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#varianca" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variança
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kotlin-corutines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kotlin: Corutines
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../viewmodel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Android ViewModel
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1576,7 +1725,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ip6" class="md-nav__link">
+      <a href="../../ip6/" class="md-nav__link">
         
   
   
@@ -2993,23 +3142,32 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#tipus-basics" class="md-nav__link">
+  <a href="#opcionalitat" class="md-nav__link">
     <span class="md-ellipsis">
-      Tipus bàsics
+      Opcionalitat
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
+  <a href="#tipus-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tipus bàsics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tipus bàsics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#numerics" class="md-nav__link">
     <span class="md-ellipsis">
       Numèrics
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Numèrics">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#boleans" class="md-nav__link">
@@ -3024,6 +3182,24 @@
   <a href="#string" class="md-nav__link">
     <span class="md-ellipsis">
       String
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ranges" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ranges
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#collections" class="md-nav__link">
+    <span class="md-ellipsis">
+      Collections
     </span>
   </a>
   
@@ -3053,6 +3229,24 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#scope-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scope functions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extensions-infixos-i-operadors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extensions, infixos i operadors
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#puzzling-syntax-twist" class="md-nav__link">
     <span class="md-ellipsis">
       Puzzling syntax twist
@@ -3071,38 +3265,71 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#coroutines" class="md-nav__link">
-    <span class="md-ellipsis">
-      Coroutines
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#the-context" class="md-nav__link">
-    <span class="md-ellipsis">
-      The context
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#flow" class="md-nav__link">
-    <span class="md-ellipsis">
-      Flow
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#unit" class="md-nav__link">
     <span class="md-ellipsis">
       Unit
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Generics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#genericos-vs-templates-vs-ducktyping" class="md-nav__link">
+    <span class="md-ellipsis">
+      Genericos vs Templates vs DuckTyping
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#declaracions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Declaracions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ús
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#constriccions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Constriccións
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#varianca" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variança
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3128,7 +3355,7 @@
 <h1 id="kotlin">Kotlin</h1>
 <h2 id="que-es">Què és?</h2>
 <p>Llenguatge pensat per substituir Java com a llenguatge multiplataforma.
-Te caracteristiques més modernes com a llenguatge
+Té caracteristiques més modernes com a llenguatge
 però compila igualment a ByteCode de JVM.
 Com comparteixen el format binari, ambdós llenguatges
 es poden cridar entre ells com si fossin crides natives,
@@ -3137,23 +3364,49 @@ el que els fa totalment interoperables.</p>
 <p>Les variables són fortament tipades com el Java.
 Pero no és necesari declarar els tipus sempre.
 Sovint els tipus es poden deduir del context.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">var</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kd">var</span><span class="w"> </span><span class="nv">b</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">var</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="w">  </span><span class="c1">// Implícit</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kd">var</span><span class="w"> </span><span class="nv">b</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="w">  </span><span class="c1">// Explícit</span>
 </code></pre></div>
-<p>Explicit casts <code>y.asX()</code></p>
-<p>Smart casts: Si abans d'un bloc de codi, ens assegurem que sigui quelcom ho sera
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>var a: A = whatever
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>if (a is B) {
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    Aquí podem fer servir a com si fos un B.
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>}
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>var optional: A? = whatever
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>if (a != null) {
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    Aquí podem fer servir a sense que sigui A i no A?
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>}
-</code></pre></div></p>
+<p>Downcast segur (assignar una expressió d'un tipus derivat a una variable (o paràmetre) de tipus base).
+No cal fer res, sempre és segur.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">// Downcast: sempre segur</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kd">val</span><span class="w"> </span><span class="nv">pet</span><span class="p">:</span><span class="w"> </span><span class="n">Animal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Dog</span><span class="p">()</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1">// Upcast: l&#39;objecte apuntat pot no ser l&#39;esperat</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="kd">val</span><span class="w"> </span><span class="nv">dog</span><span class="p">:</span><span class="w"> </span><span class="n">Dog</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mypet</span><span class="w"> </span><span class="c1">// Could be a cat! it won&#39;t compile!</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="c1">// Upcast requires to be explicit</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="c1">// Explicit unsafe cast, raises if not a dog</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="kd">val</span><span class="w"> </span><span class="nv">dog</span><span class="p">:</span><span class="w"> </span><span class="n">Dog</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mypet</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">Dog</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="c1">// Explicit safe cast, returns null if not a dog</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="kd">val</span><span class="w"> </span><span class="nv">dog</span><span class="p">:</span><span class="w"> </span><span class="n">Dog? </span><span class="o">=</span><span class="w"> </span><span class="n">mypet</span><span class="w"> </span><span class="k">as?</span><span class="w"> </span><span class="n">Dog</span>
+</code></pre></div>
+<p>Smart casts: Si abans d'un bloc de codi, ens assegurem que sigui quelcom ho sera</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>var a: A = whatever
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>if (a is B) {
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    Aquí podem fer servir a com si fos un B.
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>}
+</code></pre></div>
+<p>Funciona amb sentències de control, condicionals amb drecera...</p>
+<h2 id="opcionalitat">Opcionalitat</h2>
+<p>Si un valor pot ser null, forma part del tipus.
+S'indica afegint un <code>?</code> al tipus de base quan no és <code>null</code>: <code>String?</code>.
+Sintàcticament ens obliga a gestionar apropiadament la possibilitat de que sigui null.
+Fa que en temps de compilació estem assegurant la correcció de la gestió de nulls.</p>
+<p>Podem asignar un no nullable a un nullable, però no a l'inrevés </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">nullable</span><span class="p">:</span><span class="w"> </span><span class="kt">String?</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;value&quot;</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kd">val</span><span class="w"> </span><span class="nv">nonnullable</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nullable</span><span class="w"> </span><span class="c1">// ERROR de compilació</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="kd">val</span><span class="w"> </span><span class="nv">nonnullable</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nullable</span><span class="w"> </span><span class="o">?:</span><span class="w"> </span><span class="s">&quot;Empty&quot;</span><span class="w"> </span><span class="c1">// L&#39;operador ?: retorna el segon paràmetre si el primer es null</span>
+</code></pre></div>
+<p>Al igual que els smarts casts, si hem assegurat abans que no es null,
+el compilador considera que ja està comprovat i ho considera non-nullable a partir d'aquell punt..</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">var</span><span class="w"> </span><span class="nv">optional</span><span class="p">:</span><span class="w"> </span><span class="n">A? </span><span class="o">=</span><span class="w"> </span><span class="n">whatever</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="n">Aquí</span><span class="w"> </span><span class="n">podem</span><span class="w"> </span><span class="n">fer</span><span class="w"> </span><span class="n">servir</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">sense</span><span class="w"> </span><span class="n">que</span><span class="w"> </span><span class="n">sigui</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="n">no</span><span class="w"> </span><span class="n">A?</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="p">}</span>
+</code></pre></div>
 <h2 id="tipus-basics">Tipus bàsics</h2>
-<h2 id="numerics">Numèrics</h2>
+<h3 id="numerics">Numèrics</h3>
 <p>Només els literals es converteixen de forma implicita
 a un altre tipus numèric.
 Per convertir dos variables o expressions
@@ -3164,14 +3417,18 @@ On Type seria qualsevols dels tipus:</p>
 <li>Positius: <code>UByte</code> (8b), <code>UShort</code> (16b), <code>UInt</code> (32b), <code>ULong</code> (64b) (Kotlin&gt;=1.5)</li>
 <li>Decimals: <code>Float</code>, <code>Double</code></li>
 </ul>
-<p>Podem fer servir suffixos per forçar el tipus del literal.</p>
+<p>Si un literal numèric te decimals, per defecte sera <code>Double</code>,
+si no en té, sera <code>Int</code>.
+La resta de tipus s'expliciten amb sufixos:</p>
 <ul>
 <li><code>l</code> força Long</li>
 <li><code>u</code> força Unsinged</li>
-<li><code>f</code> força Float (a un Double)</li>
+<li><code>f</code> força Float (si hi ha decimals per defecte es Double)</li>
 </ul>
 <p>Es pot fer servir l'underline com a separador de millars o bytes</p>
-<p>Es poden fer servir prefixos <code>0b</code> o <code>0x</code> per binari i hexadecimal.</p>
+<p>Es poden fer servir prefixos <code>0b</code> o <code>0x</code> per binari i hexadecimal.
+No hi ha octals.
+Podem fer servir <code>_</code> per separar milers, bytes, nibbles...</p>
 <p>Només els literals es converteixen de forma implícita perque
 es comproven en complilació.
 En altres escenarios s'ha de fer de forma explícita amb els
@@ -3187,6 +3444,7 @@ TODO: Conversió implícita?</p>
 <li>El tipus es <code>Boolean</code></li>
 <li>Els literals son <code>true</code> y <code>false</code>.</li>
 <li>Els operadors, els de C: <code>&amp;&amp;</code>, <code>||</code> y <code>!</code>.</li>
+<li>Compte Pythoners: els infixos <code>or</code>, <code>and</code>, <code>not</code> son els operadors bitwise, no pas els lògics.</li>
 </ul>
 <h3 id="string">String</h3>
 <ul>
@@ -3198,8 +3456,32 @@ TODO: Conversió implícita?</p>
 <li>Utilitat `.trimMargin(delimiter="|") es pot fer servir per ignorar l'indentat.</li>
 <li>TODO: Hi havia un altre per simplement treure la indentació sense signe.</li>
 <li>Prefix dolars a un text serveix per dir quants dolars calen per activar l'interpolacio.
-    <code>$$"$${aixo s'interpola} $aixo no"</code> `$$$"$${aixo tampoc}"</li>
+    <code>$$"$${aixo s'interpola} $aixo no"</code> `$<span class="arithmatex">\(<span class="arithmatex">\("\)</span>\)</span>{aixo tampoc}"</li>
 <li><code>"%+05.3d".format(1.432)</code> <code>"%s capitalized is %1\$S".format("hola")</code></li>
+</ul>
+<h3 id="ranges">Ranges</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1">// definició</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">range</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1.</span><span class="p">.</span><span class="m">10</span><span class="w"> </span><span class="c1">// inclusiu, 10 esta inclòs</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="n">xrange</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1.</span><span class="p">.</span><span class="o">&lt;</span><span class="m">10</span><span class="w"> </span><span class="c1">// exclusiu, 10 no està inclós</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="m">11</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">range</span><span class="w"> </span><span class="c1">// false</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="m">11</span><span class="w"> </span><span class="k">!in</span><span class="w"> </span><span class="n">range</span><span class="w"> </span><span class="c1">// true</span>
+</code></pre></div>
+<h3 id="collections">Collections</h3>
+<p><code>Array</code>.
+<code>List</code>.
+...</p>
+<ul>
+<li><code>emptyX()</code> creates an <code>x</code> without elements</li>
+<li><code>xOf(e1, e2, ...)</code> creates <code>x</code> including e1, e2...</li>
+<li><code>xOfNulls(N)</code> creates an array with N positions but null objects</li>
+</ul>
+<p>Mutability: Most collections are inmutable.
+That means that modification operators are not available
+changes can be done by creating a new collection or
+use <code>x.asMutable()</code> to obtain a mutable version.</p>
+<ul>
+<li><code>x.forEach { it }</code></li>
 </ul>
 <h2 id="null-safety">Null safety</h2>
 <ul>
@@ -3222,6 +3504,8 @@ TODO: Conversió implícita?</p>
 <li>Idioma <code>.?let {...}</code><ul>
 <li>el block s'executa només si el receptor no es null</li>
 <li>El receptor dintre del block es pot referir com a <code>it</code></li>
+<li>Podem explicitar un nom diferent amb <code>{ name -&gt; ... }</code></li>
+<li>Retorna el resultat de la lambda</li>
 </ul>
 </li>
 </ul>
@@ -3242,86 +3526,119 @@ TODO: Conversió implícita?</p>
 <p><code>object.apply(f)</code>: runs f with the object as this (so any variable is an attribute and function a method)</p>
 </li>
 </ul>
+<h2 id="scope-functions">Scope functions</h2>
+<p>Son molt similars.
+Difereixen en com rep el bloc el context, i en què retornen:</p>
+<p>El bloc pot rebre context com a paràmetre del bloc (per defecte <code>it</code>)
+o com a this.
+Si ho rebem com a <code>this</code> és com si el bloc fós un mètode de l'objecte,
+podem fer servir els atributs i mètodes sense prefixar <code>receiver.</code>.
+Per un altre banda podem retornar el resultat del bloc o recuperar el <code>receiver</code>.</p>
+<ul>
+<li><code>receiver.let {...}</code><ul>
+<li>Rep <code>it</code>, retorna el resultat.</li>
+<li>Ús: Per executar blocs assegurant-nos de que no es null amb <code>?.</code></li>
+<li>Ús: Donar nom al resultat d'una expressió dins d'un bloc.</li>
+</ul>
+</li>
+<li>`receiver.run {...}<ul>
+<li>Rep <code>this</code> retorna el resultat</li>
+<li>Ús: Quan cridem molts mètodes o atributs d'un objecte</li>
+</ul>
+</li>
+<li>
+<p><code>receiver.apply {...}</code></p>
+<ul>
+<li>Rep <code>this</code>, retorna <code>receiver</code></li>
+<li>Ús: Configuració de l'objecte. Podem aplicar-ho al constructor, applicar setters i el resultat assignar-ho.</li>
+</ul>
+<p><code>``kotlin
+val person = Person().apply {
+    name = "Pepito"
+    age = 12
+    isStudent = true
+}
+-</code>receiver.also {...}<code>- Rep</code>it<code>, retorna</code>receiver`
+- Ideal per fer coses addicionals a l'objecte pero acabant retornar sempre l'objecte (side effects)</p>
+</li>
+</ul>
+<p>Altres similars</p>
+<ul>
+<li><code>with(context) {...}</code><ul>
+<li>Com <code>run</code> pero més idiomàtic fent servir el parametre en comptes de receptor.</li>
+</ul>
+</li>
+<li><code>run {...}</code><ul>
+<li>Funció lliure no hi ha receptor</li>
+<li>Retorna el resultat del block</li>
+<li>Ús: Quan volem executar diverses sentències on sictàcticament hi va una expressió.</li>
+</ul>
+</li>
+</ul>
+<p>| returns  | <code>it</code>    | <code>this</code> |
++----------+---------+--------+
+| block    | <code>.let</code>  | <code>.run</code> |
+| receiver | <code>.apply</code>| <code>.also</code>|</p>
+<p>Tambe tenim les condicionals que retornen els objectes o null segons la condició del bloc.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">object</span><span class="p">.</span><span class="na">takeIf</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">condition</span><span class="w"> </span><span class="p">}</span><span class="w"> </span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">object</span><span class="p">.</span><span class="na">takeUnless</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">condition</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+<p>Ens permeten tornar els casos excepcionals en <code>null</code> i,
+a partir d'aquest punt, gestionar el cas excepcional
+fent servir els mecanismes de gestió de nulls.</p>
+<h2 id="extensions-infixos-i-operadors">Extensions, infixos i operadors</h2>
+<p>Les extensions son mètodes que definim a posteriori
+Permeten definir nous mètodes a classes ja definides, fins i tot les estàndars.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kd">fun</span><span class="w"> </span><span class="n">ExistingClass</span><span class="p">.</span><span class="nf">newMethod</span><span class="p">(...):</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+<p>Els infixos son paraules que podem insertar entre mig de dos objectes.
+Semblants als operadors <code>or</code>, <code>and</code>, <code>not</code> de Python.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1">// definition:</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="kd">infix</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="n">ReceiverClass</span><span class="p">.</span><span class="nf">myinfix</span><span class="p">(</span><span class="n">parameter</span><span class="p">:</span><span class="w"> </span><span class="n">ParameterClass</span><span class="p">):</span><span class="w"> </span><span class="n">ResultType</span><span class="w"> </span><span class="p">{...}</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="c1">// usage:</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="n">receiver</span><span class="w"> </span><span class="n">myinfix</span><span class="w"> </span><span class="n">parameter</span>
+</code></pre></div>
+<p>De forma similar es poden definir operadors, fent servir noms donats i
+la paraula clau <code>operator</code>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1">// definition:</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="kd">infix</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="n">ReceiverClass</span><span class="p">.</span><span class="nf">plus</span><span class="p">(</span><span class="n">parameter</span><span class="p">:</span><span class="w"> </span><span class="n">ParameterClass</span><span class="p">):</span><span class="w"> </span><span class="n">ResultType</span><span class="w"> </span><span class="p">{...}</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="c1">// usage:</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="n">receiver</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">parameter</span>
+</code></pre></div>
+<p>Per a fer servir una extensió <strong>cal importar-la des del mòdul on es defineix</strong>.</p>
+<p>Des de Java, equivalen a una crida a mètode stàtic.
+Els operadors són funcions amb el nom de l'operador (plus, minus...).
+Es pot canviar el nom de la classe que inclou el mètode estatic
+amb la directiva <code>@file:JvmName("MyStaticClass")</code></p>
 <h2 id="puzzling-syntax-twist">Puzzling syntax twist</h2>
-<p><code>X.method({})</code> can be rewriten as <code>X method {}</code>
-only if method has a single parameter and the parameter is a block.
-thats why we find code like:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">a</span><span class="w"> </span><span class="p">{}</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="p">{}</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="p">{}</span>
+<p><code>X.method({})</code> can be rewriten as <code>X.method {}</code>
+only if method has a single parameter and the parameter is a block.</p>
+<p>Likewise infix methods appear without the <code>.</code>.</p>
+<p>Thats why we find code like:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">a</span><span class="w"> </span><span class="p">{}</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="p">{}</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="p">{}</span>
 </code></pre></div>
 <h2 id="full-featured-enums-sealed-classes">Full featured enums: Sealed classes</h2>
 <ul>
 <li><code>sealed class</code> restricts inheritance to the subclases defined within its body.
 It can be used as power enums having attributes.</li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">sealed</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nc">Event</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="kd">object</span><span class="w"> </span><span class="nc">Started</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Event</span><span class="p">()</span><span class="w"> </span><span class="c1">// singleton class</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="kd">object</span><span class="w"> </span><span class="nc">Ready</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Event</span><span class="p">()</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="kd">data</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nc">Failed</span><span class="p">(</span><span class="kd">val</span><span class="w"> </span><span class="nv">error</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Event</span><span class="p">()</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="p">}</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="kd">val</span><span class="w"> </span><span class="nv">event1</span><span class="p">:</span><span class="w"> </span><span class="n">Event</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Event</span><span class="p">.</span><span class="na">Started</span>
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="kd">val</span><span class="w"> </span><span class="nv">event2</span><span class="p">:</span><span class="w"> </span><span class="n">Event</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Event</span><span class="p">.</span><span class="na">Ready</span>
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="kd">val</span><span class="w"> </span><span class="nv">event3</span><span class="p">:</span><span class="w"> </span><span class="n">Event</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Event</span><span class="p">.</span><span class="na">Failed</span><span class="p">(</span><span class="s">&quot;An error&quot;</span><span class="p">)</span>
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">event3</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">Event</span><span class="p">.</span><span class="na">Ready</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="n">event3</span><span class="p">.</span><span class="na">error</span><span class="p">)</span><span class="w"> </span><span class="c1">// Safe cast! kotlin knows you checked already the type</span>
-<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="p">}</span>
-<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="p">(</span><span class="n">event3</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">Event</span><span class="p">.</span><span class="na">Failed</span><span class="p">).</span><span class="na">error</span><span class="w"> </span><span class="c1">// &#39;as&#39; will raise if bad cast</span>
-<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="n">event3</span><span class="w"> </span><span class="k">as?</span><span class="w"> </span><span class="n">Event</span><span class="p">.</span><span class="na">Failed</span><span class="p">).</span><span class="o">?</span><span class="n">let</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nb">it</span><span class="p">.</span><span class="na">error</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="c1">// &#39;as?&#39; returns null on bad cast</span>
-<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>
-<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="n">RepositoryEvent</span><span class="p">.</span><span class="na">UpdateReady</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kd">sealed</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nc">Event</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">    </span><span class="kd">object</span><span class="w"> </span><span class="nc">Started</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Event</span><span class="p">()</span><span class="w"> </span><span class="c1">// singleton class</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">    </span><span class="kd">object</span><span class="w"> </span><span class="nc">Ready</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Event</span><span class="p">()</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">    </span><span class="kd">data</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nc">Failed</span><span class="p">(</span><span class="kd">val</span><span class="w"> </span><span class="nv">error</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Event</span><span class="p">()</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="p">}</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="kd">val</span><span class="w"> </span><span class="nv">event1</span><span class="p">:</span><span class="w"> </span><span class="n">Event</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Event</span><span class="p">.</span><span class="na">Started</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="kd">val</span><span class="w"> </span><span class="nv">event2</span><span class="p">:</span><span class="w"> </span><span class="n">Event</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Event</span><span class="p">.</span><span class="na">Ready</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="kd">val</span><span class="w"> </span><span class="nv">event3</span><span class="p">:</span><span class="w"> </span><span class="n">Event</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Event</span><span class="p">.</span><span class="na">Failed</span><span class="p">(</span><span class="s">&quot;An error&quot;</span><span class="p">)</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">event3</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">Event</span><span class="p">.</span><span class="na">Ready</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="n">event3</span><span class="p">.</span><span class="na">error</span><span class="p">)</span><span class="w"> </span><span class="c1">// Safe cast! kotlin knows you checked already the type</span>
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="p">}</span>
+<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a><span class="p">(</span><span class="n">event3</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">Event</span><span class="p">.</span><span class="na">Failed</span><span class="p">).</span><span class="na">error</span><span class="w"> </span><span class="c1">// &#39;as&#39; will raise if bad cast</span>
+<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a><span class="n">event3</span><span class="w"> </span><span class="k">as?</span><span class="w"> </span><span class="n">Event</span><span class="p">.</span><span class="na">Failed</span><span class="p">).</span><span class="o">?</span><span class="n">let</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nb">it</span><span class="p">.</span><span class="na">error</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="c1">// &#39;as?&#39; returns null on bad cast</span>
+<a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a>
+<a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a><span class="n">RepositoryEvent</span><span class="p">.</span><span class="na">UpdateReady</span>
 </code></pre></div>
-<h2 id="coroutines">Coroutines</h2>
-<p>Coroutines are task to be run within threads.
-Let you write async non-blocking code in a sequential style (or not so...)</p>
-<p>Coroutine Scope:</p>
-<ul>
-<li>A manager for a set of coroutines.</li>
-<li>Defines a context.</li>
-<li>
-<p>Defines it's life cycle.</p>
-</li>
-<li>
-<p><code>launch {}</code> starts the block as a new coroutine</p>
-<ul>
-<li>TOASK: is a method of a Scope</li>
-</ul>
-</li>
-<li>
-<p>Dispatcher decide a que thread van ciertas coroutinas</p>
-<ul>
-<li>
-<p>TOASK: Relacion entre dispatcher y scope</p>
-</li>
-<li>
-<p>Dispatchers.Main — runs on Android’s main UI thread.</p>
-</li>
-<li>Dispatchers.IO — optimized for blocking IO tasks (network, file).</li>
-<li>Dispatchers.Default — for CPU-intensive tasks.</li>
-<li>Unconfined — starts coroutine in current thread but can resume in different thread.</li>
-<li>Test dispatcher — special dispatcher used in tests (runTest), controlling virtual time and execution order.</li>
-<li>Funcion <code>suspend</code> </li>
-<li><code>withContext(Dispatchers.Default) {}</code> Ejecuta el bloque en un grupo de threads concretos</li>
-</ul>
-</li>
-</ul>
-<h2 id="the-context">The context</h2>
-<p>Get app info</p>
-<p>val packageName = context.packageName
-val appInfo = context.applicationInfo</p>
-<p>Acces resources:</p>
-<p>val appName = context.getString(R.string.app_name)
-val color = ContextCompat.getColor(context, R.color.primary)</p>
-<p>Start activities:</p>
-<p>val intent = Intent(context, SettingsActivity::class.java)
-context.startActivity(intent)</p>
-<p>Access preferences</p>
-<p>val prefs = context.getSharedPreferences("app_settings", Context.MODE_PRIVATE)
-val darkMode = prefs.getBoolean("dark_mode", false)</p>
-<p>Inflate layouts</p>
-<p>val view = LayoutInflater.from(context).inflate(R.layout.item_station, parent, false)</p>
-<p>val locationManager = context.getSystemService(Context.LOCATION_SERVICE) as LocationManager
-val vibrator = context.getSystemService(Context.VIBRATOR_SERVICE) as Vibrator</p>
-<h2 id="flow">Flow</h2>
 <h2 id="unit">Unit</h2>
 <p>Unit is like None in python.
 - A void value but you can pass it, return it...</p>
@@ -3331,6 +3648,87 @@ Not Unit. We use <code>null</code> for that.</p>
 <li><code>null</code> missing optional object</li>
 <li><code>Unit</code> no meaningfull value</li>
 </ul>
+<h2 id="generics">Generics</h2>
+<h3 id="genericos-vs-templates-vs-ducktyping">Genericos vs Templates vs DuckTyping</h3>
+<p>Els templates de C++
+i el duck typing de Python permeten
+fer servir el mateix codi per més d'un
+tipus d'objecte encara que no siguin de la mateixa
+jerarquia d'objectes,
+simplement que tinguin les operacións i metodes que es fan servir.</p>
+<p>C++  en temps de compilació,
+genera codi per cadascun dels tipus
+pels qual el template s'instancia (fa servir).
+En fer-ho simplement comprova que el tipus
+instanciat funciona bé amb la definició:
+Té els mètodes i operadors que es fan servir...</p>
+<p>Python en canvi ho comprova en temps d'execució
+cada cop que es criden a mètodes o operadors,
+es comprova si l'objecte els te.</p>
+<p>Per objectes de la mateixa jerarquia podem fer servir polimorfisme.
+Es genera una sola implementació i es fa servir la interfície comuna.</p>
+<p>Els generics, de fet es una encapsulació del polimorfisme
+i nomes es poden definir amb tipu parametres
+pertanyents a una jerarquia.</p>
+<p>Tanto los templates de C++ en tiempo de compilación
+como el Ducktyping de Python en tiempo de ejecucion,
+permiten reaprovechar el mismo código para diferentes
+tipos de objetos siempre que soporten los metodos y
+operadores que se usan en el codigo comun.</p>
+<p>Això no passa amb els genèrics.
+Els tipus paramètrics dels genèrics
+sempre parteixen d'un tipus base
+i generen codi polimorfic,</p>
+<p>els casts automatics al tipus.</p>
+<p>Los genericos no permiten implementaciones generalizables
+como los templates de C++ o el DuckTyping</p>
+<h3 id="declaracions">Declaracions</h3>
+<p>Permeten declarar coses deixant d'especificar un tipus.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kd">fun</span><span class="w"> </span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">genericFunction</span><span class="p">(</span><span class="n">value</span><span class="p">:</span><span class="w"> </span><span class="n">Array</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">):</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">....</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="kd">fun</span><span class="w"> </span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">Array</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">.</span><span class="na">extensionFunction</span><span class="p">():</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">....</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="kd">class</span><span class="w"> </span><span class="err">&lt;</span><span class="nc">T</span><span class="p">,</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="o">&gt;</span><span class="w"> </span><span class="n">GenericClass</span><span class="p">(...)</span><span class="w"> </span><span class="p">{...}</span><span class="w"> </span><span class="c1">// Using more than one type</span>
+</code></pre></div>
+<h3 id="us">Ús</h3>
+<p>Es fan servir posant el tipus concret entre <code>&lt;&gt;</code> despres del nom.
+Tot i que podem obviar-ho si es deduible dels paràmetres.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">genericFunction</span><span class="o">&lt;</span><span class="kt">Int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">myIntArray</span><span class="p">)</span><span class="w"> </span><span class="c1">// explicit</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="n">genericFunction</span><span class="p">(</span><span class="n">myIntArray</span><span class="p">)</span><span class="w"> </span><span class="c1">// implícit</span>
+</code></pre></div></p>
+<h3 id="constriccions">Constriccións</h3>
+<p>Dintre del cos de la funció es pot usar T com si fos
+<code>Any?</code>, el tipus base de tots els objectes i a més opcional.
+Si volem fer-ho servir per alguna cosa més
+caldrà restringir el tipus.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="kd">fun</span><span class="w"> </span><span class="o">&lt;</span><span class="n">N</span><span class="p">:</span><span class="w"> </span><span class="n">Number</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">genericFunction</span><span class="p">(</span><span class="n">array</span><span class="p">:</span><span class="w"> </span><span class="n">Array</span><span class="o">&lt;</span><span class="n">N</span><span class="o">&gt;</span><span class="p">):</span><span class="w"> </span><span class="n">N</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">result</span><span class="p">:</span><span class="w"> </span><span class="n">N</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="w">    </span><span class="n">foreach</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">array</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="w">        </span><span class="c1">// Com es un Number els podem sumar</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="w">        </span><span class="n">result</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">n</span>
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">n</span>
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="p">}</span>
+</code></pre></div>
+<ul>
+<li>No, no hi ha comprovacio en instanciació com fa C++.</li>
+<li>Si volem que no sigui opcional hem de posar <code>Any</code></li>
+<li>Oximoron: Si no 'restringeixes' el tipus, no pots fer les coses del tipus</li>
+</ul>
+<h3 id="varianca">Variança</h3>
+<p>La variança defineix com es comporten
+des del punt de vista de la jerarquia de classes
+les classes templatitzades.
+Es a dir si les classes templatitzades
+reprodueixen o no la jerarquia dels paràmetres.</p>
+<p>Exemple, si tenim <code>Any -&gt; Number -&gt; Int</code>,
+es compleix la jerarquia <code>Array&lt;Any&gt; -&gt; Array&lt;Number&gt; -&gt; Array&lt;Int&gt;</code>?</p>
+<p>Perqué es important?</p>
+<p>Determina si una classe templatitzada es subtipus d'una altra
+ens permet saber si podem assignar un valor d'un tipus a una variable d'un altre.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">super</span><span class="p">:</span><span class="w"> </span><span class="n">MyTemplate</span><span class="o">&lt;</span><span class="n">Super</span><span class="o">&gt;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MyTemplate</span><span class="o">&lt;</span><span class="n">Sub</span><span class="o">&gt;</span><span class="p">()</span><span class="w"> </span><span class="c1">// nomes si T es out, variança</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="kd">var</span><span class="w"> </span><span class="nv">sub</span><span class="p">:</span><span class="w"> </span><span class="n">MyTemplate</span><span class="o">&lt;</span><span class="n">Sub</span><span class="o">&gt;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MyTemplate</span><span class="o">&lt;</span><span class="n">Super</span><span class="o">&gt;</span><span class="p">()</span><span class="w"> </span><span class="c1">// Nomes si T es in, contravariança</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="kd">var</span><span class="w"> </span><span class="nv">a</span><span class="p">:</span><span class="w"> </span><span class="n">MyTemplate</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MyTemplate</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span><span class="p">()</span><span class="w"> </span><span class="c1">// La unica que pots fer si no es ni in, ni out</span>
+</code></pre></div>
+<p>TODO: No he acabat d'entendre l'efecte ni el sentit.</p>
 
 
 
@@ -3383,6 +3781,12 @@ Not Unit. We use <code>null</code> for that.</p>
     
     
       <script src="../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="../../../javascripts/katex.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
       
     
   </body>

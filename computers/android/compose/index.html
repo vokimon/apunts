@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://vokimon.github.io/apunts/computers/android/compose/">
       
       
-        <link rel="prev" href="../kotlin/">
+        <link rel="prev" href="../viewmodel/">
       
       
         <link rel="next" href="../../cpp11/">
@@ -59,6 +59,8 @@
       <link rel="stylesheet" href="../../../css/videowrapper.css">
     
       <link rel="stylesheet" href="../../../None">
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
     
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -886,29 +888,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../time/time/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Representando el tiempo
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../security/" class="md-nav__link">
         
   
@@ -1170,6 +1149,52 @@
   
   
     <li class="md-nav__item">
+      <a href="../../time/time/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Representando el tiempo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unicode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Unicode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../cligrafics/00-imagemagick/" class="md-nav__link">
         
   
@@ -1226,10 +1251,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" checked>
         
           
-          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
             
   
   
@@ -1242,8 +1267,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2_5">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_7">
             <span class="md-nav__icon md-icon"></span>
             Android
           </label>
@@ -1285,6 +1310,52 @@
   
   <span class="md-ellipsis">
     Kotlin
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kotlin-corutines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kotlin: Corutines
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../viewmodel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Android ViewModel
     
   </span>
   
@@ -1352,6 +1423,16 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#conceptes-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conceptes bàsics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Conceptes bàsics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#funcions-composables" class="md-nav__link">
     <span class="md-ellipsis">
       Funcions composables
@@ -1359,52 +1440,78 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#estat-permanent" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#compte-amb-els-falsos-amics" class="md-nav__link">
     <span class="md-ellipsis">
-      Estat permanent
+      Compte amb els falsos amics
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#layouts-i-modifiers" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#estat-persistent" class="md-nav__link">
     <span class="md-ellipsis">
-      Layouts i modifiers
+      Estat persistent
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#disposableeffect" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#maquetacio-amb-modificadors" class="md-nav__link">
     <span class="md-ellipsis">
-      DisposableEffect
+      Maquetació amb modificadors
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#estat-permanent-centralitzat-viewmodel" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#efectes-disposables-disposableeffect" class="md-nav__link">
     <span class="md-ellipsis">
-      Estat permanent centralitzat (ViewModel)
+      Efectes disposables DisposableEffect
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#derivedstateof" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#efectes-laterals-sideeffect" class="md-nav__link">
     <span class="md-ellipsis">
-      derivedStateOf
+      Efectes laterals SideEffect
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="derivedStateOf">
-      <ul class="md-nav__list">
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estat-derivat-derivedstateof" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estat derivat derivedStateOf
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estat-produit-producestate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estat produit produceState
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estat-persistent-centralitzat-viewmodel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estat persistent centralitzat (ViewModel)
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#corutines-launchedeffect" class="md-nav__link">
@@ -1415,10 +1522,52 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#sideeffect" class="md-nav__link">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#catalog-de-composables" class="md-nav__link">
     <span class="md-ellipsis">
-      SideEffect
+      Catàlog de composables
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Catàlog de composables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estructuralslayouts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estructurals/Layouts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#widgets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Widgets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modificadors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modificadors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#material-3-androidxcomposematerial3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Material 3 androidx.compose.material3
     </span>
   </a>
   
@@ -1630,6 +1779,42 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#otros" class="md-nav__link">
+    <span class="md-ellipsis">
+      Otros
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stability
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scopes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scopes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regles-dencadenat" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regles d'encadenat
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1723,7 +1908,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ip6" class="md-nav__link">
+      <a href="../../ip6/" class="md-nav__link">
         
   
   
@@ -3122,6 +3307,16 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#conceptes-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conceptes bàsics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Conceptes bàsics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#funcions-composables" class="md-nav__link">
     <span class="md-ellipsis">
       Funcions composables
@@ -3129,52 +3324,78 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#estat-permanent" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#compte-amb-els-falsos-amics" class="md-nav__link">
     <span class="md-ellipsis">
-      Estat permanent
+      Compte amb els falsos amics
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#layouts-i-modifiers" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#estat-persistent" class="md-nav__link">
     <span class="md-ellipsis">
-      Layouts i modifiers
+      Estat persistent
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#disposableeffect" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#maquetacio-amb-modificadors" class="md-nav__link">
     <span class="md-ellipsis">
-      DisposableEffect
+      Maquetació amb modificadors
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#estat-permanent-centralitzat-viewmodel" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#efectes-disposables-disposableeffect" class="md-nav__link">
     <span class="md-ellipsis">
-      Estat permanent centralitzat (ViewModel)
+      Efectes disposables DisposableEffect
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#derivedstateof" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#efectes-laterals-sideeffect" class="md-nav__link">
     <span class="md-ellipsis">
-      derivedStateOf
+      Efectes laterals SideEffect
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="derivedStateOf">
-      <ul class="md-nav__list">
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estat-derivat-derivedstateof" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estat derivat derivedStateOf
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estat-produit-producestate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estat produit produceState
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estat-persistent-centralitzat-viewmodel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estat persistent centralitzat (ViewModel)
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#corutines-launchedeffect" class="md-nav__link">
@@ -3185,10 +3406,52 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#sideeffect" class="md-nav__link">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#catalog-de-composables" class="md-nav__link">
     <span class="md-ellipsis">
-      SideEffect
+      Catàlog de composables
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Catàlog de composables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estructuralslayouts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estructurals/Layouts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#widgets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Widgets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modificadors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modificadors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#material-3-androidxcomposematerial3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Material 3 androidx.compose.material3
     </span>
   </a>
   
@@ -3400,6 +3663,42 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#otros" class="md-nav__link">
+    <span class="md-ellipsis">
+      Otros
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stability
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scopes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scopes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regles-dencadenat" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regles d'encadenat
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3422,33 +3721,101 @@
 <h1 id="jetpack-compose">Jetpack Compose</h1>
 <p>És una forma declarativa i reactiva de definir les interfícies.
 Similar a React i a QML.</p>
-<h2 id="funcions-composables">Funcions composables</h2>
-<p>Una funcio composable declara l'estructura d'una interfície similarment a com ho faría React.</p>
+<h2 id="conceptes-basics">Conceptes bàsics</h2>
+<h3 id="funcions-composables">Funcions composables</h3>
+<p>Una funció composable declara l'estructura d'una interfície similarment a com ho faria React.
+Retorna una estructura de components amb crides a d'altres composables.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nd">@Composable</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">Greeting</span><span class="p">(</span><span class="n">name</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="n">Text</span><span class="p">(</span><span class="s">&quot;Hola </span><span class="si">$</span><span class="n">name</span><span class="s">!&quot;</span><span class="p">)</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">}</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="n">Column</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">        </span><span class="n">Text</span><span class="p">(</span><span class="s">&quot;Hola </span><span class="si">$</span><span class="n">name</span><span class="s">!&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">        </span><span class="n">Text</span><span class="p">(</span><span class="s">&quot;This is Compose!&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">}</span>
 </code></pre></div>
+<p>L'equivalent a React seria:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">Greeting</span><span class="p">({</span><span class="w"> </span><span class="nx">name</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span><span class="nx">Hola</span><span class="w"> </span><span class="p">{</span><span class="nx">name</span><span class="p">}</span><span class="o">!</span><span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;;</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="p">}</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="p">&lt;</span><span class="nt">Column</span><span class="p">&gt;</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">        </span><span class="p">&lt;</span><span class="nt">Text</span><span class="p">&gt;</span><span class="nx">Hola</span><span class="w"> </span><span class="p">{</span><span class="nx">name</span><span class="p">}</span><span class="o">!</span><span class="p">&lt;/</span><span class="nt">Text</span><span class="p">&gt;</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">        </span><span class="p">&lt;</span><span class="nt">Text</span><span class="p">&gt;</span><span class="nx">This</span><span class="w"> </span><span class="nx">is</span><span class="w"> </span><span class="nx">Compose</span><span class="o">!</span><span class="p">&lt;/</span><span class="nt">Text</span><span class="p">&gt;</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="p">&lt;/</span><span class="nt">Column</span><span class="p">&gt;</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="p">}</span>
 </code></pre></div>
-<p>Igual que React, el component es recalcula
-quan (i només quan) canvien els paràmetres/attributs o l'estat.</p>
-<h2 id="estat-permanent">Estat permanent</h2>
-<p>Els components poden tenir un estat permanent
-que son els remembers.
-L'equivalent amb React seria el <code>useState</code>.</p>
+<p>També igual que React, la funció es crida,
+en inserir el component en l'arbre (composició)
+i després (recomposicions) només quan canvien les seves dependències,
+que venen per diferents vies.</p>
+<h3 id="compte-amb-els-falsos-amics">Compte amb els falsos amics</h3>
+<p>Molts conceptes i mecanismes de React i Compose s'assemblen,
+pero això ens pot arribar a portar a errors per falsa expectativa.</p>
+<p>Faig compilació de les falses expectatives que m'he trobat:</p>
+<p>A diferencia de React, els paràmetres no són dependències implícites.
+Els paràmetres o qualsevol valor que pugui generar una reacció
+al seu canvi, ha d'estar declarat explicitament com a tal.</p>
+<p>El redibuixos són molt estrictes,
+un valor propagat com a paràmetre,
+encara que estigui declarat per generar reacció,
+afecta només al lloc final on es fa servir el valor.
+Les funcions composables intermitges que el propaguen no es reexecuten.</p>
+<p>Una altra diferència notable son les inner functions
+que sovint es fan servir de callback amb nom o lambdas.
+A Javascript una funció interna es un objecte different
+a cada execució de la funcio continent, es a dir, a cada redibuixada.
+Per tant, quan accedeixen a les variables locals de la funció continent,
+agafen el valor de la darrera execució.</p>
+<p>A Compose l'scope es defineix a la primera cridada de cada instància,
+i els valors de les variables als que accedeix son els de la primera execució de cada instància.
+Si volem accedir al valor actualitzat del darrer render,
+cal definir un wrapper que contingui el valor i de forma persistent.
+El wrapper serà el mateix entre crides,
+inclosa la primera crida a la que accedeix la inner function,
+pero el contingut del wrapper canviarà.</p>
+<h3 id="estat-persistent">Estat persistent</h3>
+<p>Quan tornem a fer una recomposició, tornem a cridar la funció.
+Com podem recuperar els valors que teníem a la crida anterior?
+Creant un estat persistent entre recomposicions.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">var</span><span class="w"> </span><span class="nv">count</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">remember</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">mutableStateOf</span><span class="p">(</span><span class="m">0</span><span class="p">)</span><span class="w"> </span><span class="p">}</span>
 </code></pre></div>
+<p>L'equivalent a React seria el <code>useState</code>.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">count</span><span class="p">,</span><span class="w"> </span><span class="nx">setCount</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useState</span><span class="p">(</span><span class="mf">9</span><span class="p">)</span>
 </code></pre></div>
-<p>Com s'aconsella que l'estat estigui el més amunt possible,
-es fan servir sovint block de callback com a parametres
-per pujar l'estat (<code>onClick</code>...) .</p>
-<h2 id="layouts-i-modifiers">Layouts i modifiers</h2>
-<p>El Modifier es un objecte que accepten la majoria de composables
-que especifica parametres comuns, normalment de layout
+<p>Podem fer-ho servir com a conjur, però,
+sintàcticament té molta manteca:</p>
+<ul>
+<li>
+<p><code>remember</code> és una funció de Compose que
+crea un slot a la instància del component
+per guardar el valor entre crides.
+Aquests slots s'identifiquen per l'index o sigui que
+és molt important mantenir l'ordre dels estats entre crides (ifs, loops...)</p>
+</li>
+<li>
+<p><code>mutableStateOf</code> es un delegat que notifica a Compose
+cada vegada que algú el canvia el valor.
+Aquesta notificació serveix per marcar el component
+com a brut per la següent recomposició.</p>
+</li>
+<li>
+<p><code>by</code> declara una delegació, això vol dir que mutableStateOf
+implementa <code>setValue</code> i <code>getValue</code>,
+quan asignem o fem servir el valor,
+estarem cridant a aquests mètodes.</p>
+</li>
+<li>
+<p>El 0 es el valor inicial, de la primera vegada que s'executi per la instància del composable.</p>
+</li>
+</ul>
+<p>TODO: This paragraph does not go here</p>
+<p>S'aconsella que l'estat estigui el més amunt possible en l'arbre.
+Quan els fills necessiten modificar estat,
+ofereixen paràmetres per passar-los callbacks (blocs de codi)
+on el pare pot inserir codi per a que els fills canviin el seu estat.
+(<code>onClick</code>...).</p>
+<h3 id="maquetacio-amb-modificadors">Maquetació amb modificadors</h3>
+<p>La majoría de composables, per convenció,
+accepten com a primer paràmetre opcional un objecte Modifier.
+Aquest especifica parametres comuns, normalment de layout
 pero també alguns de comportament.</p>
 <p>Normalment s'omplen cridant mètodes setters en cascada.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">Text</span><span class="p">(</span>
@@ -3459,75 +3826,355 @@ pero també alguns de comportament.</p>
 <a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">        </span><span class="p">.</span><span class="na">fillMaxWidth</span><span class="p">()</span>
 <a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="p">)</span>
 </code></pre></div>
-<p>En aquest cas, que estem setejant attributs de layout
-el paral·lelisme amb React serien els estils,
-però també es fa servir el modifier per a establir
-paràmetres d'interactivitat (disabled, clickable, scrollable...),
-callbacks de resposta a esdeveniments,
-atributs d'accessibilitat...</p>
-<h2 id="disposableeffect">DisposableEffect</h2>
+<p>Aquest idioma construeix una llista de instancies de subclases de Modifier.</p>
+<p>Hi ha diversos tipus:</p>
+<ul>
+<li><code>LayoutModifier</code>: <code>padding</code>, <code>fillMaxWidth</code>, <code>size</code></li>
+<li><code>DrawModifier</code>: <code>background</code>, <code>border</code>, <code>clip</code></li>
+<li><code>PointerInputModifier</code>: <code>clickable</code>, <code>draggable</code></li>
+<li><code>SemanticModifier</code>: <code>semmantics = { contentDescription = ""... }</code></li>
+</ul>
+<p>https://developer.android.com/develop/ui/compose/modifiers-list</p>
+<p>També podem definir els nostres propis pels nostres components.
+Els components reben tots els tipus, però cadascun decideix a quins fa cas.</p>
+<p><strong>Compte: No funcionen com els atributs CSS o HTML.</strong>
+Aplicant-los dues vegades no descartem la primera s'apliquen els dos additivament.
+També l'ordre en que els apliquem es significatiu.
+La llista de modificadors s'aplica en ordre
+com si fossin decorators i l'efecte es additiu.</p>
+<p>Si appliquem dos vegades padding, farà dos paddings.
+Si apliquem un background entre mig dels dos, s'aplicarà només al primer.</p>
+<p>Com combinar modifiers locals amb els especificats pel pare?</p>
+<p>Si el pare crida <code>Fill(modifier = Modifier.a.b)</code>,
+el fill pot fer <code>modifier.c.d</code> i la cadena sera <code>a.b.c.d</code>.
+Si el fill fa <code>modifier.then(Modifier.c.d)</code>, la cadena serà <code>c.d.a.b</code>.</p>
+<p>Com passar modifiers a diferents nets?</p>
+<p>La convencío diu que el paràmetre es <code>modifier</code> pero si
+call aplicar aquests modifiers a dos net,
+el fill pot exposar dos paràmetres <code>modifierNet1</code> i <code>modifierNet2</code>.</p>
+<h3 id="efectes-disposables-disposableeffect">Efectes disposables <code>DisposableEffect</code></h3>
 <p>Un DisposableEffect permet insertar codi que s'executa:
-- quan hi ha certs canvis, o
+- quan el composable entre a l'arbre
+- quan canvien certs valors (observables), o
 - quan el composable surt de l'arbre.</p>
 <p>Paral·lelisme total amb useEffect de React.</p>
 <ul>
-<li>Els objectes observats són els primers paràmetres de la funció.</li>
-<li>Si és <code>Unit</code> només s'executa un cop, en entrar a l'arbre.</li>
+<li>Els objectes observats són els primers paràmetres de la funció</li>
+<li>Si l'únic paràmetre és <code>Unit</code> només s'executa un cop, en entrar a l'arbre.</li>
 <li>El darrer paràmetre es el bloc de codi que s'executa</li>
-<li>El context te un métode <code>onDispose</code> que si el cridem amb un altre block s'executarà en sortir de l'arbre.</li>
+<li>El context té un métode <code>onDispose</code> que si el cridem amb un altre block s'executarà quan el composable surti de l'arbre.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="w">    </span><span class="c1">// dins d&#39;una funció composable</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="n">DisposableEffect</span><span class="p">(</span><span class="kt">Unit</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// or observables</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">        </span><span class="c1">// init code goes here (or update code if observables)</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">        </span><span class="n">onDispose</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">            </span><span class="c1">// cleanup code goes here</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="n">DisposableEffect</span><span class="p">(</span><span class="kt">Unit</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// Unit o valors observables</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">        </span><span class="c1">// Codi per inicialitzar o bé actualitzar coses pels canvis als observables</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">        </span><span class="n">legacy</span><span class="p">.</span><span class="na">start</span><span class="p">()</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">        </span><span class="n">onDispose</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">            </span><span class="c1">// Codi per netejar</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">            </span><span class="n">legacy</span><span class="p">.</span><span class="na">stop</span><span class="p">()</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">    </span><span class="p">}</span>
 </code></pre></div>
-<h2 id="estat-permanent-centralitzat-viewmodel">Estat permanent centralitzat (ViewModel)</h2>
-<p>https://developer.android.com/jetpack/compose/state#viewmodel-state
-https://developer.android.com/topic/libraries/architecture/viewmodel</p>
-<p>Similar al Context de React.
-Sense scope??</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">MyViewModel</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">ViewModel</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nv">counter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mutableStateOf</span><span class="p">(</span><span class="m">0</span><span class="p">)</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="p">}</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="nd">@Composable</span>
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">Screen</span><span class="p">(</span><span class="n">viewModel</span><span class="p">:</span><span class="w"> </span><span class="n">MyViewModel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">viewModel</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">count</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">viewModel</span><span class="p">.</span><span class="na">counter</span>
-<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">    </span><span class="n">Button</span><span class="p">(</span><span class="n">onClick</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">viewModel</span><span class="p">.</span><span class="na">counter</span><span class="p">.</span><span class="na">value</span><span class="o">++</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">        </span><span class="n">Text</span><span class="p">(</span><span class="s">&quot;Count: </span><span class="si">$</span><span class="n">count</span><span class="s">&quot;</span><span class="p">)</span>
-<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="p">}</span>
+<p>Es fa servir sobretot per a mantenir elements externs sincronitzats amb el composable
+o per mantenir el cicle de vida d'altres recursos aliniat amb el del composable.</p>
+<p>Amb <code>Unit</code> es equivalent a <code>useEffect</code> amb una llista de dependències buida.
+Amb observables es equivalent a <code>useEffect</code> amb una llista de dependencies plena.
+<code>onDispose</code> es equivalent al callback que retorna <code>useEffect</code>.</p>
+<p><code>useEffect</code> amb null (s'executa incondicionalment cada composició,
+no es pot fer amb DisposableEffect, sinó amb  <code>SideEffect</code></p>
+<h3 id="efectes-laterals-sideeffect">Efectes laterals <code>SideEffect</code></h3>
+<p>S'executen incondicionalment després de cada composició.
+Equivalent a <code>useEffect</code> de React sense dependencies (null, no pas array buit).</p>
+<p>És útil per sincronitzar elements legacy (Views).
+També per sincronitzar amb sistemes externs.</p>
+<p>https://developer.android.com/develop/ui/compose/side-effects#remembercoroutinescope</p>
+<h3 id="estat-derivat-derivedstateof">Estat derivat <code>derivedStateOf</code></h3>
+<p>Hi ha estat que deriva d'un altre estat, en diem estat derivat.
+Com és derivat, es redundant, enmagatzemar-ho implica una duplicació.
+Ho evitarem, i sempre que poguem el recalculem en cada composition a partir de l'estat original.</p>
+<p>Normalment aquest recàlcul és trivial, però a vegades te un cert impacte en l'eficiència.
+Per evitar aquest impacte farem servir el <code>derivedStateOf</code>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">import</span><span class="w"> </span><span class="nn">androidx.compose.runtime.derivedStateOf</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="nd">@Composable</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">myComponent</span><span class="p">(</span><span class="n">state1</span><span class="p">:</span><span class="w"> </span><span class="n">int</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">state2</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">rememmer</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">mutableState</span><span class="p">(</span><span class="m">3</span><span class="p">)</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">derived</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">remember</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">derivedStateOf</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">recompute</span><span class="p">(</span><span class="n">state1</span><span class="p">,</span><span class="w"> </span><span class="n">state2</span><span class="p">)</span><span class="w"> </span><span class="p">}}</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">    </span><span class="n">subComponent</span><span class="p">(</span><span class="n">derived</span><span class="p">)</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="p">}</span>
+</code></pre></div>
+<p>Compose detecta les dependències i recalcularà només quan es modifiquin.</p>
+<p>Com havia dit abans, si el recàlcul no és molt car,
+potser paga la pena el cost de comparar les dependències
+i enmagatzemar el darrer estat.</p>
+<p>Equivalent al <code>useMemo</code> de React.</p>
+<h3 id="estat-produit-producestate">Estat produit <code>produceState</code></h3>
+<p>Converteix estat no composable en composable.
+Per exemple, pero no limitat a, estat provinent d'un Flow o LiveData.</p>
+<p>`produceState<T>(initialValue: T, dependencies..., producer: suspend T ()): State<T>``</p>
+<p>Sovint es fa servir en combinació amb la classe <code>Result</code> que ve a ser una promesa.</p>
+<ul>
+<li><code>Result.Loading</code> es un resultat pendent.</li>
+<li><code>Result.Success(value)</code> la resol favorablement</li>
+<li><code>Result.Error</code> la resol amb error</li>
+</ul>
+<h3 id="estat-persistent-centralitzat-viewmodel">Estat persistent centralitzat (ViewModel)</h3>
+<p><a href="https://developer.android.com/jetpack/compose/state#viewmodel-state">https://developer.android.com/jetpack/compose/state#viewmodel-state</a>
+<a href="https://developer.android.com/topic/libraries/architecture/viewmodel">https://developer.android.com/topic/libraries/architecture/viewmodel</a></p>
+<p>Un ViewModel es un lloc centralitzat
+tenir i accedir a l'estat compartit.
+A més es persisteix als canvis de configuracio
+(rotacions, canvis de idioma...)
+No persisteix a sortir de l'activity i tornar a entrar.
+Tenim el problema que quan cambiem la configuració i recreem la interficie
+perdem l'estat que hi havia als components, <code>remember</code> no és prou.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">MyViewModel</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">ViewModel</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nv">counter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mutableStateOf</span><span class="p">(</span><span class="m">0</span><span class="p">)</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="p">}</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="nd">@Composable</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">Screen</span><span class="p">(</span><span class="n">viewModel</span><span class="p">:</span><span class="w"> </span><span class="n">MyViewModel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">viewModel</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">count</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">viewModel</span><span class="p">.</span><span class="na">counter</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">    </span><span class="n">Button</span><span class="p">(</span><span class="n">onClick</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">viewModel</span><span class="p">.</span><span class="na">counter</span><span class="p">.</span><span class="na">value</span><span class="o">++</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">        </span><span class="n">Text</span><span class="p">(</span><span class="s">&quot;Count: </span><span class="si">$</span><span class="n">count</span><span class="s">&quot;</span><span class="p">)</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="p">}</span>
 </code></pre></div>
 <ul>
 <li>Simplifica fluxe d'informació</li>
 <li>Complica l'anàlisi de side effects, tot i que marca on es produeixen</li>
 <li>Persisteix després de recomposicions i reconfiguracions (rotacio, tema, idioma...)</li>
 </ul>
-<h2 id="derivedstateof">derivedStateOf</h2>
-<p>Equivalent al useMemo</p>
 <h3 id="corutines-launchedeffect">Corutines LaunchedEffect</h3>
 <p>Si hem de executar coses en paral·lel o més enllà de la composició.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">LaunchedEffect</span><span class="p">(</span><span class="kt">Unit</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="n">viewModel</span><span class="p">.</span><span class="na">loadData</span><span class="p">()</span>
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">LaunchedEffect</span><span class="p">(</span><span class="kt">Unit</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span><span class="n">viewModel</span><span class="p">.</span><span class="na">loadData</span><span class="p">()</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="p">}</span>
 </code></pre></div>
 <p>Es cancel·la la corutina si canvien les dependencies o surt de la composició.</p>
 <p>Pot sortir de la composició la corutina si en una composició no s'executa.</p>
 <p>La cancel·lació es produeix llençant un <code>CancellationException</code>.
 Podem capturar-ho a la corutina si volem fer res en sortir.</p>
-<h3 id="sideeffect">SideEffect</h3>
-<p>S'executen incondicionalment després de cada composició.
-Equivalent a <code>useEffect</code> de React sense dependencies (null, no array buit).</p>
-<p>És útil per sincronitzar elements legacy (Views).
-També per sincronitzar amb sistemes externs.</p>
+<h2 id="catalog-de-composables">Catàlog de composables</h2>
+<h3 id="estructuralslayouts">Estructurals/Layouts</h3>
+<ul>
+<li>
+<p>androidx.compose.foundation.layout</p>
+<ul>
+<li>Box: Acomoda els components lliurement per posició amb z-index</li>
+<li>BoxWithConstraints: Acomoda els components en referència al pare i els germans</li>
+<li>Column: Acomoda els components verticalment</li>
+<li>Row: Acomoda els components horitzontalment</li>
+<li>FlowRow/Column: Quan esgoten l'espai fan wrapping en la seguent row/column</li>
+<li>Spacer: Element buit</li>
+<li>Divider: Línia sense estil</li>
+</ul>
+</li>
+<li>
+<p>androidx.compose.foundation.lazy</p>
+<ul>
+<li>LazyColumn/Row: No renderitzen tots els fills, només els visibles</li>
+</ul>
+</li>
+</ul>
+<h3 id="widgets">Widgets</h3>
+<ul>
+<li>
+<p>androidx.compose.foundation</p>
+<ul>
+<li>Image</li>
+<li>Camvas</li>
+</ul>
+</li>
+<li>
+<p>androidx.compose.foundation.text</p>
+<ul>
+<li>BasicText</li>
+<li>BasicTextField</li>
+</ul>
+</li>
+</ul>
+<h3 id="modificadors">Modificadors</h3>
+<p>Els imports extenen Modifier per afegir els mètodes:</p>
+<ul>
+<li>Interacció: androidx.compose.foundation<ul>
+<li>clickable(onClick={}): Simple click event</li>
+<li>combinedClickable(onClick, onLongClick, onDoubleClick...)</li>
+<li>focusGroup() def</li>
+<li>focusable() </li>
+<li>hoverable() responds to pointer hovering</li>
+<li>indication() marks interaction occurring</li>
+<li>horizontalScroll() fes desplaçable </li>
+<li>verticalScroll() enables v scrolling when surpassing v constraintsa</li>
+<li>overScroll(overScrollEffect) </li>
+<li>scrollableArea() shortcut per tots els parametres d'scroll</li>
+<li>basicMarquee() Anima el desplaçament del contingut quan no hi cap</li>
+<li>magnifier ???</li>
+<li>preferKeepClear() marca zona de no oclusió per a popups</li>
+</ul>
+</li>
+<li>Semantica<ul>
+<li>progressSemantics() Indica que el component es un indicador de progrés</li>
+</ul>
+</li>
+<li>Visualització<ul>
+<li>background(color, shape)</li>
+<li>border(width, shape)</li>
+</ul>
+</li>
+<li>Ui: androidx.compose.ui<ul>
+<li>padding(length), padding(t,b,l,r)</li>
+<li>paddingFromBaseLine(top, bottom)</li>
+<li>offset(x=0, y=0)</li>
+<li>size(width, height), width(), height(): preferred size/width/height</li>
+<li>requiredSize/Width/Height(): size regardless the constraints</li>
+<li>fillMaxHeight/Width/Size()</li>
+<li>absoluteOffset(x, y)</li>
+<li>aspectRatio(ratio)</li>
+<li>captionBarPadding() adds padding to accomodate caption bar insets</li>
+<li>consumeWindowInsets(insets)</li>
+</ul>
+</li>
+</ul>
+<h3 id="material-3-androidxcomposematerial3">Material 3 <code>androidx.compose.material3</code></h3>
+<ul>
+<li>MaterialTheme</li>
+<li>Surface</li>
+<li>Scafold: estructura para una pantalla material: barra superior</li>
+<li></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Composable</th>
+<th>Qué hace / cuándo usarlo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>AppBar / TopAppBar</strong></td>
+<td>Barra de aplicación superior para título, navegación, acciones. Material 3 tiene varias versiones (CenterAligned, TwoRows, etc.). (<a href="https://composables.com/material3?utm_source=chatgpt.com" title="Material 3 Compose API Reference – Material 3 Compose">Composables</a>)</td>
+</tr>
+<tr>
+<td><strong>Button</strong> / <strong>ElevatedButton</strong> / <strong>FilledButton</strong> / <strong>OutlinedButton</strong></td>
+<td>Botones con diferentes estilos (relleno, tono, contorno…).</td>
+</tr>
+<tr>
+<td><strong>FloatingActionButton (FAB)</strong></td>
+<td>Botón flotante para acción principal. También hay variantes extendidas.</td>
+</tr>
+<tr>
+<td><strong>Card</strong></td>
+<td>Tarjeta para agrupar contenido con elevación y forma. En M3, <code>Card</code> requiere un <code>ColumnScope</code> para su contenido. (<a href="https://stackoverflow.com/questions/77772184/why-does-the-jetpack-compose-material-3-card-composable-require-a-columnscope-fo?utm_source=chatgpt.com" title="Why does the Jetpack Compose Material 3 Card composable require a ColumnScope for its content? - Stack Overflow">Stack Overflow</a>)</td>
+</tr>
+<tr>
+<td><strong>Text</strong></td>
+<td>Para mostrar texto con estilo de tema.</td>
+</tr>
+<tr>
+<td><strong>Icon</strong> / <strong>IconButton</strong></td>
+<td>Iconos y botones con icono. Material 3 provee íconos coherentes con el tema.</td>
+</tr>
+<tr>
+<td><strong>Checkbox</strong>, <strong>RadioButton</strong>, <strong>Switch</strong>, <strong>TriStateCheckbox</strong></td>
+<td>Componentes de selección.</td>
+</tr>
+<tr>
+<td><strong>Chip</strong> (AssistChip, FilterChip, SuggestionChip, etc.)</td>
+<td>Pequeños elementos interactivos tipo “etiqueta” que pueden tener acciones o estados. (<a href="https://composables.com/material3?utm_source=chatgpt.com" title="Material 3 Compose API Reference – Material 3 Compose">Composables</a>)</td>
+</tr>
+<tr>
+<td><strong>ProgressIndicator</strong> (circular, linear, wavy)</td>
+<td>Indicadores de progreso.</td>
+</tr>
+<tr>
+<td><strong>Slider</strong>, <strong>RangeSlider</strong></td>
+<td>Controles deslizables para seleccionar valores.</td>
+</tr>
+<tr>
+<td><strong>TextField</strong>, <strong>OutlinedTextField</strong>, <strong>SecureTextField</strong></td>
+<td>Campos de texto para entrada, con variantes. (<a href="https://composables.com/material3?utm_source=chatgpt.com" title="Material 3 Compose API Reference – Material 3 Compose">Composables</a>)</td>
+</tr>
+<tr>
+<td><strong>Dialog / AlertDialog</strong></td>
+<td>Ventanas modales para alertas, confirmaciones, diálogos de material.</td>
+</tr>
+<tr>
+<td><strong>DropdownMenu</strong> / <strong>DropdownMenuItem</strong></td>
+<td>Menús desplegables.</td>
+</tr>
+<tr>
+<td><strong>NavigationBar</strong>, <strong>NavigationRail</strong>, <strong>NavigationDrawer</strong></td>
+<td>Componentes de navegación: barra inferior, rail lateral o cajón (“drawer”). (<a href="https://composables.com/material3?utm_source=chatgpt.com" title="Material 3 Compose API Reference – Material 3 Compose">Composables</a>)</td>
+</tr>
+<tr>
+<td><strong>Snackbar</strong> / <strong>SnackbarHost</strong></td>
+<td>Mensajes que aparecen temporalmente desde la parte inferior.</td>
+</tr>
+<tr>
+<td><strong>DatePicker</strong>, <strong>TimePicker</strong>, <strong>DateRangePicker</strong></td>
+<td>Selectores de fecha y hora en Material 3. (<a href="https://composables.com/material3?utm_source=chatgpt.com" title="Material 3 Compose API Reference – Material 3 Compose">Composables</a>)</td>
+</tr>
+<tr>
+<td><strong>PullToRefreshBox</strong></td>
+<td>Para realizar “pull to refresh” con Material 3. (<a href="https://composables.com/material3?utm_source=chatgpt.com" title="Material 3 Compose API Reference – Material 3 Compose">Composables</a>)</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>App and Navigation<ul>
+<li><code>AppBar</code>, <code>TopAppBar</code>, <code>BottomAppBar?</code>: Barres d'applicació superior i inferior M3</li>
+<li><code>CenterAlignedTopAppBar</code>: App bar amb títol centrat</li>
+<li><code>BottomAppBar</code>: Barra inferior M3</li>
+<li><code>Scaffold</code>: Layout bàsic amb top/bottom bars i floating action button</li>
+</ul>
+</li>
+<li>Text<ul>
+<li><code>Text</code>: Text amb estil i color de M3</li>
+<li><code>TextField</code>: Camp de text amb estil M3</li>
+<li><code>OutlinedTextField</code>: TextField amb border M3             |</li>
+</ul>
+</li>
+<li>Visual<ul>
+<li><code>MaterialTheme</code>: Conté colorScheme, typography, shapes</li>
+<li><code>ColorScheme</code>: Colors principals i secundaris M3</li>
+<li><code>Shapes</code>: Cantonades, radii de M3</li>
+</ul>
+</li>
+<li>Buttons<ul>
+<li><code>Button</code>: Botó elevat M3</li>
+<li><code>OutlinedButton</code>: Botó amb border</li>
+<li><code>TextButton</code>: Botó de text</li>
+<li><code>IconButton</code>: Botó amb icona</li>
+</ul>
+</li>
+<li>Selectors<ul>
+<li><code>Checkbox</code>: Checkbox M3</li>
+<li><code>RadioButton</code>: Botó radio M3</li>
+<li><code>Switch</code>: Switch M3</li>
+</ul>
+</li>
+<li>Surfaces<ul>
+<li><code>Card</code>: Container amb elevació i cantonades M3</li>
+<li><code>Surface</code>: Base estilitzada per colors i shapes</li>
+</ul>
+</li>
+<li>Popups<ul>
+<li><code>AlertDialog</code>: Diàleg M3</li>
+<li><code>DropdownMenu</code>: Menú desplegable</li>
+<li><code>ModalBottomSheet</code>: Full de tipus bottom sheet M3</li>
+</ul>
+</li>
+<li>Decorations<ul>
+<li><code>Icon</code>: Mostra un vector drawable o M3 icon</li>
+<li><code>Badge</code>: Petit indicador de notificació </li>
+<li><code>FilterChip</code>, <code>InputChip</code>, <code>SuggestionChip</code> : Composables tipus chip amb estil M3</li>
+</ul>
+</li>
+</ul>
 <h2 id="patrons">Patrons</h2>
 <h3 id="state-snapshot-state">State: Snapshot state</h3>
 <p>https://developer.android.com/jetpack/compose/state</p>
 <p>Les crides a la funció declarativa son stateless.
-Sovint cal mantenir un cert estat permanent.
+Sovint cal mantenir un cert estat persistent.
 Es proporcionen els mecanismes per mantenir aquest estat:</p>
 <ul>
 <li><code>remember { }</code> crea una variable que es mantè entre crides.</li>
@@ -3546,7 +4193,7 @@ Els canvis li arriben al pare via callbacks que passem com a paràmetres al fill
 <p>Problema: Dispersió del coneixement -&gt; Complexitat de sincronització
 Problema2: Recreació dels components (rotacio, tema, idioma...), recomposició...</p>
 <p>L'estat s'agafa del view model.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">uiState</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">viewModel</span><span class="p">.</span><span class="na">uiState</span><span class="p">.</span><span class="na">collectAsState</span><span class="p">()</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">uiState</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">viewModel</span><span class="p">.</span><span class="na">uiState</span><span class="p">.</span><span class="na">collectAsState</span><span class="p">()</span>
 </code></pre></div>
 <h3 id="state-derive-state">State: Derive state</h3>
 <p>https://developer.android.com/jetpack/compose/state#derivedstateof</p>
@@ -3575,7 +4222,7 @@ el components petits parla de estructura i tamany.</p>
 D'aquesta manera el pare del component decideix coses com ara la disposició, el coixí, el marge...</p>
 <h3 id="composicio-no-side-effects">Composició: No side effects</h3>
 <p>https://developer.android.com/jetpack/compose/side-effects</p>
-<p>Problema: El cos d'una funcio composable
+<p>Problema: El cos d'una funció composable
 s'executa múltiples vegades i d'una forma que el programador no pot controlar.
 Si cal generar efectes laterals (Toast, Logs, canvis a la BBDD...),
 ho hem de fer de forma controlada.</p>
@@ -3589,27 +4236,28 @@ ho hem de fer de forma controlada.</p>
 <p>https://developer.android.com/jetpack/compose/layouts/basics#slot-apis</p>
 <p>Problema: Un component que té la UI interna fixa es menys reutilitzable.</p>
 <p>Solució: Permetre passar per paràmetres parts de la UI (slots) per a que el pare pugui definir-la.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nd">@Composable</span>
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">Card</span><span class="p">(</span>
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">    </span><span class="n">header</span><span class="p">:</span><span class="w"> </span><span class="nd">@Composable</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="kt">Unit</span><span class="p">,</span>
-<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">    </span><span class="n">content</span><span class="p">:</span><span class="w"> </span><span class="nd">@Composable</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="kt">Unit</span>
-<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">    </span><span class="n">Column</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="w">        </span><span class="n">header</span><span class="p">()</span>
-<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="w">        </span><span class="n">content</span><span class="p">()</span>
-<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="p">}</span>
-<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>
-<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="nd">@Composable</span>
-<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">Example</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a><span class="w">    </span><span class="n">Card</span><span class="p">(</span>
-<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a><span class="w">        </span><span class="n">header</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">Text</span><span class="p">(</span><span class="s">&quot;Capçalera&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">},</span>
-<a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a><span class="w">        </span><span class="n">content</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">Text</span><span class="p">(</span><span class="s">&quot;Cos de la card&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">}</span>
-<a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a><span class="w">    </span><span class="p">)</span>
-<a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nd">@Composable</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">Card</span><span class="p">(</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">    </span><span class="n">header</span><span class="p">:</span><span class="w"> </span><span class="nd">@Composable</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="kt">Unit</span><span class="p">,</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">    </span><span class="n">content</span><span class="p">:</span><span class="w"> </span><span class="nd">@Composable</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="kt">Unit</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">    </span><span class="n">Column</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="w">        </span><span class="n">header</span><span class="p">()</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="w">        </span><span class="n">content</span><span class="p">()</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="p">}</span>
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="nd">@Composable</span>
+<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">Example</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="w">    </span><span class="n">Card</span><span class="p">(</span>
+<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="w">        </span><span class="n">header</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">Text</span><span class="p">(</span><span class="s">&quot;Capçalera&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a><span class="w">        </span><span class="n">content</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">Text</span><span class="p">(</span><span class="s">&quot;Cos de la card&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="w">    </span><span class="p">)</span>
+<a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a><span class="p">}</span>
 </code></pre></div>
 <h3 id="composicio-unidirectional-data-flow-udf">Composició: Unidirectional Data Flow (UDF)</h3>
 <p>https://developer.android.com/jetpack/compose/architecture#udf</p>
+<p>L'estat viatja cap avall. Els esdeveniments viatjen cap amunt.</p>
 <h3 id="mvvm-compose">MVVM + Compose</h3>
 <p>https://developer.android.com/topic/architecture
 https://developer.android.com/jetpack/compose/architecture</p>
@@ -3620,46 +4268,46 @@ https://developer.android.com/jetpack/compose/architecture</p>
 <h2 id="interoperabilitat">Interoperabilitat</h2>
 <h3 id="composable-dintre-dun-layout-xml">Composable dintre d'un layout XML</h3>
 <p>Al layout inserim un <code>ComposeView</code></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nt">&lt;androidx.compose.ui.platform.ComposeView</span>
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">    </span><span class="na">android:id=</span><span class="s">&quot;@+id/composeView&quot;</span>
-<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">    </span><span class="na">android:layout_width=</span><span class="s">&quot;match_parent&quot;</span>
-<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">    </span><span class="na">android:layout_height=</span><span class="s">&quot;wrap_content&quot;</span><span class="nt">/&gt;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nt">&lt;androidx.compose.ui.platform.ComposeView</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">    </span><span class="na">android:id=</span><span class="s">&quot;@+id/composeView&quot;</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">    </span><span class="na">android:layout_width=</span><span class="s">&quot;match_parent&quot;</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">    </span><span class="na">android:layout_height=</span><span class="s">&quot;wrap_content&quot;</span><span class="nt">/&gt;</span>
 </code></pre></div>
 <p>Al codi de l'activity, recuperem el <code>ComposeView</code>
 li cridem al mètode <code>setContent</code> passant-li el composable.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">MainActivity</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">AppCompatActivity</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">    </span><span class="kd">override</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">:</span><span class="w"> </span><span class="n">Bundle?)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">        </span><span class="k">super</span><span class="p">.</span><span class="na">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">)</span>
-<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">        </span><span class="n">setContentView</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">layout</span><span class="p">.</span><span class="na">main_layout</span><span class="p">)</span>
-<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>
-<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="w">        </span><span class="kd">val</span><span class="w"> </span><span class="nv">composeView</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">findViewById</span><span class="o">&lt;</span><span class="n">ComposeView</span><span class="o">&gt;</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">id</span><span class="p">.</span><span class="na">composeView</span><span class="p">)</span>
-<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="w">        </span><span class="n">composeView</span><span class="p">.</span><span class="na">setContent</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="w">            </span><span class="n">Greeting</span><span class="p">(</span><span class="s">&quot;Marc&quot;</span><span class="p">)</span>
-<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">MainActivity</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">AppCompatActivity</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">    </span><span class="kd">override</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">:</span><span class="w"> </span><span class="n">Bundle?)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">        </span><span class="k">super</span><span class="p">.</span><span class="na">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">)</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">        </span><span class="n">setContentView</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">layout</span><span class="p">.</span><span class="na">main_layout</span><span class="p">)</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="w">        </span><span class="kd">val</span><span class="w"> </span><span class="nv">composeView</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">findViewById</span><span class="o">&lt;</span><span class="n">ComposeView</span><span class="o">&gt;</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">id</span><span class="p">.</span><span class="na">composeView</span><span class="p">)</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="w">        </span><span class="n">composeView</span><span class="p">.</span><span class="na">setContent</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="w">            </span><span class="n">Greeting</span><span class="p">(</span><span class="s">&quot;Marc&quot;</span><span class="p">)</span>
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="p">}</span>
 </code></pre></div>
 <h3 id="composable-com-a-fragment">Composable com a fragment</h3>
 <p>També podem crear un fragment basat en el Composable
 i fer-ho servir com a tal a la nostra vista clàssica.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">ComposeFragment</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Fragment</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">    </span><span class="kd">override</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">onCreateView</span><span class="p">(</span><span class="n">inflater</span><span class="p">:</span><span class="w"> </span><span class="n">LayoutInflater</span><span class="p">,</span><span class="w"> </span><span class="n">container</span><span class="p">:</span><span class="w"> </span><span class="n">ViewGroup?,</span><span class="w"> </span><span class="n">savedInstanceState</span><span class="p">:</span><span class="w"> </span><span class="n">Bundle?)</span><span class="p">:</span><span class="w"> </span><span class="n">View</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">ComposeView</span><span class="p">(</span><span class="n">requireContext</span><span class="p">()).</span><span class="na">apply</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">            </span><span class="n">setContent</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="w">                </span><span class="n">MyComposable</span><span class="p">()</span>
-<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="w">            </span><span class="p">}</span>
-<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">ComposeFragment</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Fragment</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">    </span><span class="kd">override</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">onCreateView</span><span class="p">(</span><span class="n">inflater</span><span class="p">:</span><span class="w"> </span><span class="n">LayoutInflater</span><span class="p">,</span><span class="w"> </span><span class="n">container</span><span class="p">:</span><span class="w"> </span><span class="n">ViewGroup?,</span><span class="w"> </span><span class="n">savedInstanceState</span><span class="p">:</span><span class="w"> </span><span class="n">Bundle?)</span><span class="p">:</span><span class="w"> </span><span class="n">View</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">ComposeView</span><span class="p">(</span><span class="n">requireContext</span><span class="p">()).</span><span class="na">apply</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">            </span><span class="n">setContent</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="w">                </span><span class="n">MyComposable</span><span class="p">()</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="p">}</span>
 </code></pre></div>
 <h3 id="composable-com-a-item-dun-recyclerview">Composable com a Item d'un RecyclerView</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">ComposeViewHolder</span><span class="p">(</span><span class="kd">val</span><span class="w"> </span><span class="nv">composeView</span><span class="p">:</span><span class="w"> </span><span class="n">ComposeView</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">RecyclerView</span><span class="p">.</span><span class="na">ViewHolder</span><span class="p">(</span><span class="n">composeView</span><span class="p">)</span>
-<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>
-<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="kd">override</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">onBindViewHolder</span><span class="p">(</span><span class="n">holder</span><span class="p">:</span><span class="w"> </span><span class="n">ComposeViewHolder</span><span class="p">,</span><span class="w"> </span><span class="n">position</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">    </span><span class="n">holder</span><span class="p">.</span><span class="na">composeView</span><span class="p">.</span><span class="na">setContent</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="w">        </span><span class="n">ItemCard</span><span class="p">(</span><span class="n">itemList</span><span class="o">[</span><span class="n">position</span><span class="o">]</span><span class="p">)</span>
-<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">ComposeViewHolder</span><span class="p">(</span><span class="kd">val</span><span class="w"> </span><span class="nv">composeView</span><span class="p">:</span><span class="w"> </span><span class="n">ComposeView</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">RecyclerView</span><span class="p">.</span><span class="na">ViewHolder</span><span class="p">(</span><span class="n">composeView</span><span class="p">)</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="kd">override</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">onBindViewHolder</span><span class="p">(</span><span class="n">holder</span><span class="p">:</span><span class="w"> </span><span class="n">ComposeViewHolder</span><span class="p">,</span><span class="w"> </span><span class="n">position</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="w">    </span><span class="n">holder</span><span class="p">.</span><span class="na">composeView</span><span class="p">.</span><span class="na">setContent</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="w">        </span><span class="n">ItemCard</span><span class="p">(</span><span class="n">itemList</span><span class="o">[</span><span class="n">position</span><span class="o">]</span><span class="p">)</span>
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="p">}</span>
 </code></pre></div>
 <h3 id="view-dintre-dun-composable">View dintre d'un Composable</h3>
 <p>AndroidView és una funció embolcall de Views clàssiques.
@@ -3667,25 +4315,130 @@ Té dos paràmetres: <code>factory</code> i <code>update</code>.</p>
 <p><code>factory</code> es un callback que donat un context, crea la vista i la inicialitza,
 semblant al que faría un <code>onCreate</code>.</p>
 <p><code>update</code> rep la vista com a paràmetre i es crida cada cop que la vista s'actualitza.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="nd">@Composable</span>
-<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">LegacyViewInsideCompose</span><span class="p">(</span><span class="n">state</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="w">    </span><span class="n">AndroidView</span><span class="p">(</span>
-<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="w">        </span><span class="n">factory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">context</span><span class="w"> </span><span class="o">-&gt;</span>
-<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="w">            </span><span class="n">TextView</span><span class="p">(</span><span class="n">context</span><span class="p">).</span><span class="na">apply</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="w">                </span><span class="n">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Hola des d&#39;una View!&quot;</span>
-<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="w">                </span><span class="n">textSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">20f</span>
-<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="w">            </span><span class="p">}</span>
-<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="w">        </span><span class="p">},</span>
-<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="w">        </span><span class="n">update</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">view</span><span class="w"> </span><span class="o">-&gt;</span>
-<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a><span class="w">            </span><span class="n">view</span><span class="p">.</span><span class="na">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Text actualitzat </span><span class="si">${</span><span class="n">state</span><span class="si">}</span><span class="s">!&quot;</span>
-<a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a><span class="w">    </span><span class="p">)</span>
-<a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="nd">@Composable</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">LegacyViewInsideCompose</span><span class="p">(</span><span class="n">state</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">    </span><span class="n">AndroidView</span><span class="p">(</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="w">        </span><span class="n">factory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">context</span><span class="w"> </span><span class="o">-&gt;</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="w">            </span><span class="n">TextView</span><span class="p">(</span><span class="n">context</span><span class="p">).</span><span class="na">apply</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="w">                </span><span class="n">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Hola des d&#39;una View!&quot;</span>
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="w">                </span><span class="n">textSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">20f</span>
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="w">        </span><span class="p">},</span>
+<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a><span class="w">        </span><span class="n">update</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">view</span><span class="w"> </span><span class="o">-&gt;</span>
+<a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a><span class="w">            </span><span class="n">view</span><span class="p">.</span><span class="na">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Text actualitzat </span><span class="si">${</span><span class="n">state</span><span class="si">}</span><span class="s">!&quot;</span>
+<a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a><span class="w">    </span><span class="p">)</span>
+<a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a><span class="p">}</span>
 </code></pre></div>
 <h3 id="comunicacio">Comunicació</h3>
 <h3 id="cicle-de-vida">Cicle de vida</h3>
 <p>Si la vista legacy necessita fer crides de cicle de vida,
 cal fer un DisposableEffect </p>
+<h2 id="otros">Otros</h2>
+<p><code>rememberSaveable</code> survives configuration changes and process</p>
+<ul>
+<li>
+<p>Language (single language):
+  <code>import androidx.compose.ui.platform.LocalContext</code>
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">context</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LocalContext</span><span class="p">.</span><span class="na">current</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nv">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">context</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">string</span><span class="p">.</span><span class="na">string_id</span><span class="p">)</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>Orientation dependencies:
+  <code>import androidx.compose.ui.platform.LocalConfiguration</code>
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">configuration</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LocalConfiguration</span><span class="p">.</span><span class="na">current</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">isLandscape</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">configuration</span><span class="p">.</span><span class="na">orientation</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">Configuration</span><span class="p">.</span><span class="na">ORIENTATION_LANDSCAPE</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">isLandscape</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="w">        </span><span class="n">Row</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="w">        </span><span class="n">Column</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="w">    </span><span class="p">}</span>
+</code></pre></div></p>
+</li>
+<li>Language (with language changes):</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="kd">fun</span><span class="w"> </span><span class="n">Context</span><span class="p">.</span><span class="nf">updateLocale</span><span class="p">(</span><span class="n">newLocale</span><span class="p">:</span><span class="w"> </span><span class="n">Locale</span><span class="p">):</span><span class="w"> </span><span class="n">Context</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">configuration</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">resources</span><span class="p">.</span><span class="na">configuration</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="w">    </span><span class="n">configuration</span><span class="p">.</span><span class="na">setLocale</span><span class="p">(</span><span class="n">newLocale</span><span class="p">)</span>
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">createConfigurationContext</span><span class="p">(</span><span class="n">configuration</span><span class="p">)</span>
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a><span class="p">}</span>
+<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a><span class="kd">class</span><span class="w"> </span><span class="nc">MainActivity</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">ComponentActivity</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">val</span><span class="w"> </span><span class="nv">localeState</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mutableStateOf</span><span class="p">(</span><span class="n">Locale</span><span class="p">.</span><span class="na">getDefault</span><span class="p">())</span>
+<a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a>
+<a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a><span class="w">    </span><span class="kd">override</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">:</span><span class="w"> </span><span class="n">Bundle?)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a><span class="w">        </span><span class="k">super</span><span class="p">.</span><span class="na">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">)</span>
+<a id="__codelineno-18-11" name="__codelineno-18-11" href="#__codelineno-18-11"></a>
+<a id="__codelineno-18-12" name="__codelineno-18-12" href="#__codelineno-18-12"></a><span class="w">        </span><span class="n">setContent</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-18-13" name="__codelineno-18-13" href="#__codelineno-18-13"></a><span class="w">            </span><span class="kd">val</span><span class="w"> </span><span class="nv">locale</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">localeState</span><span class="p">.</span><span class="na">value</span>
+<a id="__codelineno-18-14" name="__codelineno-18-14" href="#__codelineno-18-14"></a><span class="w">            </span><span class="kd">val</span><span class="w"> </span><span class="nv">context</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LocalContext</span><span class="p">.</span><span class="na">current</span><span class="p">.</span><span class="na">updateLocale</span><span class="p">(</span><span class="n">locale</span><span class="p">)</span>
+<a id="__codelineno-18-15" name="__codelineno-18-15" href="#__codelineno-18-15"></a>
+<a id="__codelineno-18-16" name="__codelineno-18-16" href="#__codelineno-18-16"></a><span class="w">            </span><span class="n">CompositionLocalProvider</span><span class="p">(</span><span class="n">LocalContext</span><span class="w"> </span><span class="n">provides</span><span class="w"> </span><span class="n">context</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-18-17" name="__codelineno-18-17" href="#__codelineno-18-17"></a><span class="w">                </span><span class="n">MyApp</span><span class="p">()</span>
+<a id="__codelineno-18-18" name="__codelineno-18-18" href="#__codelineno-18-18"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-18-19" name="__codelineno-18-19" href="#__codelineno-18-19"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-18-20" name="__codelineno-18-20" href="#__codelineno-18-20"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-18-21" name="__codelineno-18-21" href="#__codelineno-18-21"></a>
+<a id="__codelineno-18-22" name="__codelineno-18-22" href="#__codelineno-18-22"></a><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">changeAppLanguage</span><span class="p">(</span><span class="n">newLocale</span><span class="p">:</span><span class="w"> </span><span class="n">Locale</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-18-23" name="__codelineno-18-23" href="#__codelineno-18-23"></a><span class="w">        </span><span class="n">localeState</span><span class="p">.</span><span class="na">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">newLocale</span>
+<a id="__codelineno-18-24" name="__codelineno-18-24" href="#__codelineno-18-24"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-18-25" name="__codelineno-18-25" href="#__codelineno-18-25"></a><span class="p">}</span>
+<a id="__codelineno-18-26" name="__codelineno-18-26" href="#__codelineno-18-26"></a><span class="k">import</span><span class="w"> </span><span class="nn">androidx.compose.ui.res.stringResource</span>
+<a id="__codelineno-18-27" name="__codelineno-18-27" href="#__codelineno-18-27"></a>
+<a id="__codelineno-18-28" name="__codelineno-18-28" href="#__codelineno-18-28"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">myComponent</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-18-29" name="__codelineno-18-29" href="#__codelineno-18-29"></a><span class="w">    </span><span class="n">Text</span><span class="p">(</span><span class="n">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">stringResource</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">string</span><span class="p">.</span><span class="na">greeting</span><span class="p">,</span><span class="w"> </span><span class="n">userName</span><span class="p">,</span><span class="w"> </span><span class="n">messageCount</span><span class="p">))</span>
+<a id="__codelineno-18-30" name="__codelineno-18-30" href="#__codelineno-18-30"></a><span class="p">}</span>
+</code></pre></div>
+<p><code>key(id)</code> es un composable que serveix per identificar els fills del mateix tipus quan hi ha més d'un.
+Equivalent a la funció que fa el parametre <code>key</code> a React.</p>
+<p>Alguns contenidors ja tenen la key integrada:
+<code>LazyColumn{ items(persons, key=functor) { person -&gt;  DetailView(person) }</code></p>
+<p><code>val movableContent = remember(content) { movableContentOf(content) }</code>
+Declara una part del tree que es mourà de lloc depenent del contexte
+pero volem tenir aquesta part identificada sent la mateixa en els dos contextes.
+Per exemple, els mateixos elements d'una llista que estaran en Row en apaisat, i Column en vertical.</p>
+<h2 id="stability">Stability</h2>
+<p>L'estabilitat és una caractarística dels tipus de dades.
+Un tipus és estable, bé si és immutable
+o si és mutable però compose té una forma de saber si el contingut
+ha canviat entre recomposicions.</p>
+<p>TODO: Com ha de saber compose que ha canviat?</p>
+<h2 id="scopes">Scopes</h2>
+<p>Els scopes són una técnica útil per fer disponibles mètodes d'ús exclusiu
+dintre del block de contingut d'un composable contenidor concret.</p>
+<p>Per fer-ho, cal definir el contingut, no pas com a funció composable de primer nivell,
+sinó com a extensió d'una interfície que al mateix temps podem extendre amb
+les extensions que volguem afegir.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="kd">interface</span><span class="w"> </span><span class="nc">MyContainerScope</span><span class="w"> </span><span class="p">{}</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="kd">class</span><span class="w"> </span><span class="nc">MyContainer</span><span class="p">(</span>
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="w">    </span><span class="p">...</span>
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="w">    </span><span class="n">content</span><span class="p">:</span><span class="w"> </span><span class="nd">@Composable</span><span class="w"> </span><span class="n">MyContainerScope</span><span class="p">.()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="kt">Unit</span><span class="p">,</span>
+<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a><span class="w">    </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a><span class="w">        </span><span class="p">...</span>
+<a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a><span class="w">        </span><span class="kd">val</span><span class="w"> </span><span class="nv">scope</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">object</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nc">MyContainerScope</span><span class="w"> </span><span class="p">{}</span>
+<a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a><span class="w">        </span><span class="n">scope</span><span class="p">.</span><span class="na">content</span><span class="p">()</span>
+<a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a><span class="w">        </span><span class="p">...</span>
+<a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a><span class="p">}</span>
+<a id="__codelineno-19-13" name="__codelineno-19-13" href="#__codelineno-19-13"></a>
+<a id="__codelineno-19-14" name="__codelineno-19-14" href="#__codelineno-19-14"></a><span class="c1">/// This method will be available inside MyContainer content</span>
+<a id="__codelineno-19-15" name="__codelineno-19-15" href="#__codelineno-19-15"></a><span class="kd">fun</span><span class="w"> </span><span class="n">MyContainerScope</span><span class="p">.</span><span class="nf">myExtension</span><span class="p">(...)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-19-16" name="__codelineno-19-16" href="#__codelineno-19-16"></a><span class="w">    </span><span class="p">...</span>
+<a id="__codelineno-19-17" name="__codelineno-19-17" href="#__codelineno-19-17"></a><span class="p">}</span>
+<a id="__codelineno-19-18" name="__codelineno-19-18" href="#__codelineno-19-18"></a>
+<a id="__codelineno-19-19" name="__codelineno-19-19" href="#__codelineno-19-19"></a><span class="c1">/// So you can use</span>
+<a id="__codelineno-19-20" name="__codelineno-19-20" href="#__codelineno-19-20"></a><span class="n">MyContainer</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-19-21" name="__codelineno-19-21" href="#__codelineno-19-21"></a><span class="w">    </span><span class="n">myExtension</span><span class="p">....</span>
+<a id="__codelineno-19-22" name="__codelineno-19-22" href="#__codelineno-19-22"></a><span class="p">}</span>
+</code></pre></div>
+<p>Alguns usos típics son per definir amb un sol content differents placeholders,
+definir subcomponents que només tenen sentit dintre d'un contenidor,
+o definir modificadors que els passa el mateix.</p>
+<p>Els mètodes d'scope que retornen un modifier estan disponibles
+com a modificadors a dintre de l'scope per les regles d'encadentat.</p>
+<h2 id="regles-dencadenat">Regles d'encadenat</h2>
+<p>Podem aplicar <code>.metode()</code> a un objecte si retornen modifier.</p>
 
 
 
@@ -3738,6 +4491,12 @@ cal fer un DisposableEffect </p>
     
     
       <script src="../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="../../../javascripts/katex.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
       
     
   </body>
