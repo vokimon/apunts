@@ -115,6 +115,7 @@ nav:
     - history/2025-discoveries.md
   - Economics:
       - varios/economics.md
+      - economics.md
   - Psicology:
       - varios/porque-creemos-en-mierdas.md
   - 3D:
@@ -157,6 +158,7 @@ extra_css:
   - https://unpkg.com/katex@0/dist/katex.min.css # katex
 theme:
   logo: apunts.svg
+  favicon: apunts.svg
   name: material
   language: en
   extra:
