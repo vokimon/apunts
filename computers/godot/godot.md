@@ -37,7 +37,7 @@
 - [UI](ui.md)
 - [Shaders](shaders.md)
 - [Particles](particles.md)
-- [Addons](addons.md)
+- [Addons](new-addons.md)
 
 
 ## Node catalog

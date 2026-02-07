@@ -30,7 +30,7 @@ Principales autores:
 - Tomas de Mercado
 - Jean Bodin
 
-Propuesta
+Ideas:
 
 - Visión nacional de la economía.
 - Bullionismo: La prosperidad de una nacion depende del el capital disponible (metales preciosos)

@@ -36,7 +36,6 @@ nav:
         - computers/godot/ui.md
         - computers/godot/shaders.md
         - computers/godot/particles.md
-        - computers/godot/addons.md
         - computers/godot/lighting.md
         - computers/godot/new-addons.md
     - Android:
@@ -115,7 +114,7 @@ nav:
     - history/2025-discoveries.md
   - Economics:
       - varios/economics.md
-      - economics.md
+      - varios/economics-schools.md
   - Psicology:
       - varios/porque-creemos-en-mierdas.md
   - 3D:
@@ -163,6 +162,8 @@ theme:
   language: en
   extra:
     include_toc: true
+  #features:
+  #  - navigation.sections
   highlightjs: true
   hljs_languages:
     - yaml
@@ -191,9 +192,9 @@ theme:
 extra:
   version:
     provider: mike
-  features:
-    - navigation.instant # load content instead of refreshing the page
-    - navigation.sections
+  #features:
+    #- navigation.instant # load content instead of refreshing the page
+    #- navigation.sections
   plugins:
     - mike:
         # these fields are all optional; the defaults are as below...
